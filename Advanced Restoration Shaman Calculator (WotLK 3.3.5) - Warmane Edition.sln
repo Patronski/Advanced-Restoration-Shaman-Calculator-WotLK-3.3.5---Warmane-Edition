@@ -6,9 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8046AF25-7E14-450A-BF03-0F7F5D342E70}"
+	ProjectSection(SolutionItems) = preProject
+		Requirements\Spell_shaman_giftearthmother.ico = Requirements\Spell_shaman_giftearthmother.ico
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{A60E9B74-5079-495C-B5C3-4312E8CF92D9}"
 	ProjectSection(SolutionItems) = preProject
+		Requirements\Earth Shield.png = Requirements\Earth Shield.png
 		Requirements\HST.png = Requirements\HST.png
 		Requirements\Riptide.png = Requirements\Riptide.png
 	EndProjectSection
