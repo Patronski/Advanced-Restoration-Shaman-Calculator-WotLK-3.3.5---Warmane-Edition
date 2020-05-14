@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
             this.comboBoxSpell = new System.Windows.Forms.ComboBox();
