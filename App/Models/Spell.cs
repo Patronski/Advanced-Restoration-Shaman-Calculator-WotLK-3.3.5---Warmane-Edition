@@ -18,7 +18,7 @@ namespace App.Models
             this.PlayerSpellPower = spellPower;
         }
 
-        public static string Name { get; protected set; }
+        public string Name { get; protected set; }
 
         public List<double> Multipliers { get; set; }
 
@@ -40,7 +40,7 @@ namespace App.Models
 
         public override string ToString()
         {
-            return $"{this.GetType().Name}(Rank 1 - {RanksCount})";
+            return $"{this.Name}";
         }
     }
 }

@@ -63,6 +63,7 @@ namespace App
             this.comboBoxRanks.Items.Clear();
             this.comboBoxRanks.Items.AddRange(objects);
             this.comboBoxRanks.Enabled = true;
+            this.labelRank.Enabled = true;
         }
     }
 }
