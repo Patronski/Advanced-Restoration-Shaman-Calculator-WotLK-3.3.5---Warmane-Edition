@@ -7,25 +7,13 @@ using System.Threading.Tasks;
 
 namespace App.Models
 {
-    public class Player
+    public sealed class Player
     {
         private Player() { }
 
-        private static Player instance = null;
-        private static readonly object padlock = new object();
+        private static readonly Lazy<Player> lazyInstance = new Lazy<Player>();
 
-        public static Player Instance 
-        { 
-            get
-            {
-                lock (padlock)
-                {
-                    if (instance == null)
-                        instance = new Player();
-                    return instance;
-                }
-            }
-        }
+        public static Player Instance { get { return lazyInstance.Value; } } // thread safe
 
         public int SpellPower { get; set; }
 
