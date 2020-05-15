@@ -7,7 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8046AF25-7E14-450A-BF03-0F7F5D342E70}"
 	ProjectSection(SolutionItems) = preProject
-		Requirements\Spell_shaman_giftearthmother.ico = Requirements\Spell_shaman_giftearthmother.ico
+		Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg = Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg
+		Resourses\Spell_shaman_giftearthmother.ico = Resourses\Spell_shaman_giftearthmother.ico
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{A60E9B74-5079-495C-B5C3-4312E8CF92D9}"

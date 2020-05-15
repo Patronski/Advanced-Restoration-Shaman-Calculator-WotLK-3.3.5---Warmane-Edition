@@ -12,6 +12,7 @@ namespace App.Models.Spells
         {
             Name = "Chain Heal";
             RanksCount = 7;
+            this.CriticalMultiplier = 1.5;
         }
 
         public ChainHeal(int spellPower) : base(spellPower) { }

@@ -50,6 +50,7 @@
             // textBoxSpellPower
             // 
             this.textBoxSpellPower.Location = new System.Drawing.Point(111, 12);
+            this.textBoxSpellPower.MaxLength = 9;
             this.textBoxSpellPower.Name = "textBoxSpellPower";
             this.textBoxSpellPower.Size = new System.Drawing.Size(77, 20);
             this.textBoxSpellPower.TabIndex = 1;
@@ -100,6 +101,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelRank);
             this.Controls.Add(this.labelSpell);

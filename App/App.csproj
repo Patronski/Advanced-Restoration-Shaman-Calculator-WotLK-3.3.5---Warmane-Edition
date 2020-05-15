@@ -52,6 +52,8 @@
     <Compile Include="Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\Multiplier.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Rank.cs" />
     <Compile Include="Models\Spell.cs" />

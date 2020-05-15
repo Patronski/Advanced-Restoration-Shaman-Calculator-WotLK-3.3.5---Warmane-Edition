@@ -11,6 +11,8 @@ namespace App.Models
         public Spell()
         {
             this.Ranks = new List<Rank>();
+            this.Multipliers = new List<Multiplier>();
+            this.CriticalMultiplier = 1;
         }
 
         public Spell(int spellPower) : this()
@@ -20,9 +22,9 @@ namespace App.Models
 
         public string Name { get; protected set; }
 
-        public List<double> Multipliers { get; set; }
+        public List<Multiplier> Multipliers { get; set; }
 
-        public double Critical { get; set; }
+        public double CriticalMultiplier { get; set; }
 
         public int RanksCount { get; set; }
 
@@ -34,7 +36,7 @@ namespace App.Models
 
         public abstract int CalculateRank(int rankNum, Rank rank);
 
-        public abstract int CalculateHot(int rankNum, Rank rank);
+        public abstract int CalculateHot(int rankNum, Rank rank); // HealingOverTime
 
         public abstract int CalculateAstralAwakening(int rankNum, Rank rank);
 
