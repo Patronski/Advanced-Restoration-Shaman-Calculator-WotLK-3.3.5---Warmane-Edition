@@ -1,5 +1,6 @@
 ﻿using App.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +19,10 @@ namespace App
         {
             InitializeComponent();
             InitialiseComboBoxSpell();
+
         }
 
-        public void InitialiseComboBoxSpell()
+        private void InitialiseComboBoxSpell()
         {
             var spellType = typeof(Spell);
             var spellTypes = Assembly.GetExecutingAssembly().GetTypes()
@@ -43,10 +45,24 @@ namespace App
 
         private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+
+            var objects = Enumerable
+                .Range(1, selectedSpell.RanksCount)
+                .Select(x => x as object)
+                .ToArray();
+
+            this.comboBoxRanks.Items.Clear();
+            this.comboBoxRanks.Items.AddRange(objects);
+            this.comboBoxRanks.Enabled = true;
         }
     }
 }
