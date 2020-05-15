@@ -53,8 +53,15 @@
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Rank.cs" />
     <Compile Include="Models\Spell.cs" />
+    <Compile Include="Models\Spells\ChainHeal.cs" />
+    <Compile Include="Models\Spells\Earthliving.cs" />
+    <Compile Include="Models\Spells\EarthShield.cs" />
     <Compile Include="Models\Spells\Healing Stream Totem.cs" />
+    <Compile Include="Models\Spells\HealingWave.cs" />
+    <Compile Include="Models\Spells\LesserHealingWave.cs" />
+    <Compile Include="Models\Spells\Riptide.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calculator.resx">

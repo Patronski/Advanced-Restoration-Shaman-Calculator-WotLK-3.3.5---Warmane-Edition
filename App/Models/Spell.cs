@@ -28,17 +28,11 @@ namespace App.Models
 
         public bool IsDamageVarying { get; set; }
 
-        public abstract int Calculate(Rank rank);
+        public abstract int CalculateRank(int rankNum, Rank rank);
 
-        public class Rank
-        {
-            public double Num1 { get; set; }
+        public abstract int CalculateHot(int rankNum, Rank rank);
 
-            public int NumFrom { get; set; }
+        public abstract int CalculateAstralAwakening(int rankNum, Rank rank);
 
-            public int NumTo { get; set; }
-
-            public int Divider { get; set; }
-        }
     }
 }

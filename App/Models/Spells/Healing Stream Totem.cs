@@ -23,7 +23,18 @@ namespace App.Models.Spells
             Ranks.Add(new Rank { Num1 = 12.408, NumFrom = 3450, Divider = 150 });
             Ranks.Add(new Rank { Num1 = 12.408, NumFrom = 3750, Divider = 150 });
         }
-        public override int Calculate(Rank rank)
+
+        public override int CalculateAstralAwakening(int rankNum, Rank rank)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int CalculateHot(int rankNum, Rank rank)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int CalculateRank(int rankNum, Rank rank)
         {
             int rounded = (int)(rank.Num1 * PlayerSpellPower) + rank.NumFrom;
 
