@@ -8,10 +8,13 @@ namespace App.Models.Spells
 {
     public class ChainHeal : Spell
     {
-        public ChainHeal(int spellPower) : base(spellPower)
+        public ChainHeal() : base()
         {
-
+            Name = "Chain Heal";
+            RanksCount = 7;
         }
+
+        public ChainHeal(int spellPower) : base(spellPower) { }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {

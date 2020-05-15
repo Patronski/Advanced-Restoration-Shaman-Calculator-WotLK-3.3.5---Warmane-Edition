@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace App.Models.Spells
 {
-    public class Healing_Stream_Totem : Spell
+    public class HealingStreamTotem : Spell
     {
-        public Healing_Stream_Totem(int spellPower) 
-            : base(spellPower)
+        public HealingStreamTotem() : base()
         {
+            Name = "Healing Stream Totem";
+
             RanksCount = 9;
 
             Ranks.Add(new Rank { Num1 = 12.408, NumFrom = 900, Divider = 150 });
@@ -23,6 +24,8 @@ namespace App.Models.Spells
             Ranks.Add(new Rank { Num1 = 12.408, NumFrom = 3450, Divider = 150 });
             Ranks.Add(new Rank { Num1 = 12.408, NumFrom = 3750, Divider = 150 });
         }
+
+        public HealingStreamTotem(int spellPower): base(spellPower) { }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {
@@ -39,11 +42,6 @@ namespace App.Models.Spells
             int rounded = (int)(rank.Num1 * PlayerSpellPower) + rank.NumFrom;
 
             return rounded / rank.Divider;
-        }
-
-        public override string ToString()
-        {
-            return $"{base.ToString()}(Rank 1 - {RanksCount})";
         }
     }
 }

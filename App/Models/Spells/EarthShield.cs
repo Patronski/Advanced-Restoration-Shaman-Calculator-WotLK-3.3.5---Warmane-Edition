@@ -8,10 +8,13 @@ namespace App.Models.Spells
 {
     public class EarthShield : Spell
     {
-        public EarthShield(int spellPower) : base(spellPower)
+        public EarthShield() : base()
         {
-
+            Name = "Earth Shield";
+            RanksCount = 5;
         }
+
+        public EarthShield(int spellPower) : base(spellPower) { }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {

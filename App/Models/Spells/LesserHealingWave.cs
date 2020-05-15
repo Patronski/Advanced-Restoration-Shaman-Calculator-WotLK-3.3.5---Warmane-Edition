@@ -8,10 +8,13 @@ namespace App.Models.Spells
 {
     public class LesserHealingWave : Spell
     {
-        public LesserHealingWave(int spellPower) : base(spellPower)
+        public LesserHealingWave() : base()
         {
-
+            Name = "Lesser Healing Wave";
+            RanksCount = 9;
         }
+
+        public LesserHealingWave(int spellPower) : base(spellPower) { }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {

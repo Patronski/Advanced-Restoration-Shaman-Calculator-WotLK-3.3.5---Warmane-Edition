@@ -58,7 +58,7 @@
     <Compile Include="Models\Spells\ChainHeal.cs" />
     <Compile Include="Models\Spells\Earthliving.cs" />
     <Compile Include="Models\Spells\EarthShield.cs" />
-    <Compile Include="Models\Spells\Healing Stream Totem.cs" />
+    <Compile Include="Models\Spells\HealingStreamTotem.cs" />
     <Compile Include="Models\Spells\HealingWave.cs" />
     <Compile Include="Models\Spells\LesserHealingWave.cs" />
     <Compile Include="Models\Spells\Riptide.cs" />

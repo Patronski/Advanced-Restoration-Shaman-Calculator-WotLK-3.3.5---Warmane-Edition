@@ -8,10 +8,13 @@ namespace App.Models.Spells
 {
     public class Riptide : Spell
     {
-        public Riptide(int spellPower) : base(spellPower)
+        public Riptide() : base()
         {
-
+            Name = "Riptide";
+            RanksCount = 4;
         }
+
+        public Riptide(int spellPower) : base(spellPower) { }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {

@@ -8,13 +8,17 @@ namespace App.Models
 {
     public abstract class Spell
     {
-        public Spell(int spellPower)
+        public Spell()
         {
             this.Ranks = new List<Rank>();
+        }
+
+        public Spell(int spellPower) : this()
+        {
             this.PlayerSpellPower = spellPower;
         }
 
-        public string Name { get; set; }
+        public static string Name { get; protected set; }
 
         public List<double> Multipliers { get; set; }
 
@@ -34,5 +38,9 @@ namespace App.Models
 
         public abstract int CalculateAstralAwakening(int rankNum, Rank rank);
 
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}(Rank 1 - {RanksCount})";
+        }
     }
 }
