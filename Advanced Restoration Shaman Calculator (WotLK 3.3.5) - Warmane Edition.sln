@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 		Requirements\HST.png = Requirements\HST.png
 		Requirements\HW.png = Requirements\HW.png
 		Requirements\LHW.png = Requirements\LHW.png
+		Requirements\LHW_new.png = Requirements\LHW_new.png
+		Requirements\Nachalen.png = Requirements\Nachalen.png
 		Requirements\Riptide.png = Requirements\Riptide.png
 	EndProjectSection
 EndProject
