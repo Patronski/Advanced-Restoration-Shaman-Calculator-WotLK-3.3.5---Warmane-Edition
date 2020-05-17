@@ -6,10 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8046AF25-7E14-450A-BF03-0F7F5D342E70}"
-	ProjectSection(SolutionItems) = preProject
-		Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg = Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg
-		Resourses\Spell_shaman_giftearthmother.ico = Resourses\Spell_shaman_giftearthmother.ico
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{A60E9B74-5079-495C-B5C3-4312E8CF92D9}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,9 +15,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 		Requirements\HST.png = Requirements\HST.png
 		Requirements\HW.png = Requirements\HW.png
 		Requirements\LHW.png = Requirements\LHW.png
-		Requirements\LHW_new.png = Requirements\LHW_new.png
 		Requirements\Nachalen.png = Requirements\Nachalen.png
 		Requirements\Riptide.png = Requirements\Riptide.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{EDF33193-9239-48E8-91B1-458528A5589A}"
+	ProjectSection(SolutionItems) = preProject
+		Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg = Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg
+		Resourses\pic1.png = Resourses\pic1.png
+		Resourses\pic2.png = Resourses\pic2.png
+		Resourses\pic3.png = Resourses\pic3.png
+		Resourses\Spell_shaman_giftearthmother.ico = Resourses\Spell_shaman_giftearthmother.ico
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "new", "new", "{CAF6CA0E-CD15-42A9-BB6D-BFDD17B0D859}"
+	ProjectSection(SolutionItems) = preProject
+		Requirements\new\Earthliving.png = Requirements\new\Earthliving.png
+		Requirements\new\ES.png = Requirements\new\ES.png
+		Requirements\new\HST.png = Requirements\new\HST.png
+		Requirements\new\HW.png = Requirements\new\HW.png
+		Requirements\new\LHW.png = Requirements\new\LHW.png
+		Requirements\new\Riptide.png = Requirements\new\Riptide.png
 	EndProjectSection
 EndProject
 Global
@@ -40,6 +54,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A60E9B74-5079-495C-B5C3-4312E8CF92D9} = {8046AF25-7E14-450A-BF03-0F7F5D342E70}
+		{EDF33193-9239-48E8-91B1-458528A5589A} = {8046AF25-7E14-450A-BF03-0F7F5D342E70}
+		{CAF6CA0E-CD15-42A9-BB6D-BFDD17B0D859} = {A60E9B74-5079-495C-B5C3-4312E8CF92D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9E47966-CD39-45DC-839A-A508D21883DD}
