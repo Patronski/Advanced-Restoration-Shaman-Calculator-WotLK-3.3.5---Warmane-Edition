@@ -96,6 +96,7 @@
             this.Controls.Add(this.labelSpellPower);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
             this.ResumeLayout(false);
             this.PerformLayout();

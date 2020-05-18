@@ -29,8 +29,11 @@ namespace App
 
         private void buttonTier10_Click(object sender, EventArgs e)
         {
+            var location = this.DesktopLocation;
+
             this.Hide();
             var calculator = new Calculator();
+            calculator.DesktopLocation = location;
             calculator.ShowDialog();
             this.Close();
         }

@@ -19,7 +19,12 @@ namespace App
         {
             InitializeComponent();
             InitialiseComboBoxSpell();
+        }
 
+        public Calculator(Point locationPoint)
+        {
+            InitializeComponent();
+            InitialiseComboBoxSpell();
         }
 
         private void InitialiseComboBoxSpell()
