@@ -26,5 +26,13 @@ namespace App
         {
 
         }
+
+        private void buttonTier10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var calculator = new Calculator();
+            calculator.ShowDialog();
+            this.Close();
+        }
     }
 }

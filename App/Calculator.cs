@@ -55,15 +55,15 @@ namespace App
         {
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
-            var objects = Enumerable
-                .Range(1, selectedSpell.RanksCount)
-                .Select(x => x as object)
-                .ToArray();
-
-            this.comboBoxRanks.Items.Clear();
-            this.comboBoxRanks.Items.AddRange(objects);
-            this.comboBoxRanks.Enabled = true;
-            this.labelRank.Enabled = true;
+            //var objects = Enumerable
+            //    .Range(1, selectedSpell.RanksCount)
+            //    .Select(x => x as object)
+            //    .ToArray();
+            //
+            //this.comboBoxRanks.Items.Clear();
+            //this.comboBoxRanks.Items.AddRange(objects);
+            //this.comboBoxRanks.Enabled = true;
+            //this.labelRank.Enabled = true;
         }
     }
 }

@@ -56,6 +56,7 @@
             this.buttonTier10.TabIndex = 0;
             this.buttonTier10.Text = "TIER 10";
             this.buttonTier10.UseVisualStyleBackColor = false;
+            this.buttonTier10.Click += new System.EventHandler(this.buttonTier10_Click);
             // 
             // pictureBox1
             // 
