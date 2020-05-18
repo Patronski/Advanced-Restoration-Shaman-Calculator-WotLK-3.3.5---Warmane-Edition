@@ -60,6 +60,8 @@ namespace App
         {
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
+            selectedSpell.LoadModifiers(this.flowLayoutPanelModifiers);
+            
             //var objects = Enumerable
             //    .Range(1, selectedSpell.RanksCount)
             //    .Select(x => x as object)

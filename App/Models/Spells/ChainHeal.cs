@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace App.Models.Spells
 {
@@ -28,6 +29,11 @@ namespace App.Models.Spells
         }
 
         public override int CalculateRank(int rankNum, Rank rank)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void LoadModifiers(FlowLayoutPanel parentPanel)
         {
             throw new NotImplementedException();
         }

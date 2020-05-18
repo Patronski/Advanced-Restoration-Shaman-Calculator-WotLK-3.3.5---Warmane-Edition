@@ -32,8 +32,7 @@
             this.labelSpellPower = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
             this.comboBoxSpell = new System.Windows.Forms.ComboBox();
-            this.labelSpell = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelModifiers = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -57,40 +56,29 @@
             // 
             // comboBoxSpell
             // 
+            this.comboBoxSpell.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxSpell.FormattingEnabled = true;
             this.comboBoxSpell.Location = new System.Drawing.Point(12, 12);
             this.comboBoxSpell.Name = "comboBoxSpell";
-            this.comboBoxSpell.Size = new System.Drawing.Size(131, 21);
+            this.comboBoxSpell.Size = new System.Drawing.Size(200, 21);
             this.comboBoxSpell.TabIndex = 2;
             this.comboBoxSpell.Text = "Select spell";
             this.comboBoxSpell.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpell_SelectedIndexChanged);
             // 
-            // labelSpell
+            // flowLayoutPanel1
             // 
-            this.labelSpell.AutoSize = true;
-            this.labelSpell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSpell.Location = new System.Drawing.Point(360, 71);
-            this.labelSpell.Name = "labelSpell";
-            this.labelSpell.Size = new System.Drawing.Size(39, 13);
-            this.labelSpell.TabIndex = 4;
-            this.labelSpell.Text = "Spell:";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(386, 157);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 235);
-            this.panel1.TabIndex = 6;
+            this.flowLayoutPanelModifiers.Location = new System.Drawing.Point(12, 87);
+            this.flowLayoutPanelModifiers.Name = "flowLayoutPanel1";
+            this.flowLayoutPanelModifiers.Size = new System.Drawing.Size(233, 330);
+            this.flowLayoutPanelModifiers.TabIndex = 7;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelSpell);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1061, 450);
+            this.Controls.Add(this.flowLayoutPanelModifiers);
             this.Controls.Add(this.comboBoxSpell);
             this.Controls.Add(this.textBoxSpellPower);
             this.Controls.Add(this.labelSpellPower);
@@ -108,8 +96,7 @@
         private System.Windows.Forms.Label labelSpellPower;
         private System.Windows.Forms.TextBox textBoxSpellPower;
         private System.Windows.Forms.ComboBox comboBoxSpell;
-        private System.Windows.Forms.Label labelSpell;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelModifiers;
     }
 }
 

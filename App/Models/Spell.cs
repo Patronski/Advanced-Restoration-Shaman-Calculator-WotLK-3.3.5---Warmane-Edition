@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace App.Models
 {
@@ -11,7 +12,7 @@ namespace App.Models
         public Spell()
         {
             this.Ranks = new List<Rank>();
-            this.Multipliers = new List<Multiplier>();
+            this.Modifiers = new List<Modifier>();
             this.CriticalMultiplier = 1;
         }
 
@@ -22,7 +23,7 @@ namespace App.Models
 
         public string Name { get; protected set; }
 
-        public List<Multiplier> Multipliers { get; set; }
+        public List<Modifier> Modifiers { get; set; }
 
         public double CriticalMultiplier { get; set; }
 
@@ -42,7 +43,9 @@ namespace App.Models
 
         public override string ToString()
         {
-            return $"{this.Name}";
+            return $"{this.Name} (Rank {this.RanksCount})";
         }
+
+        public abstract void LoadModifiers(FlowLayoutPanel parentPanel);
     }
 }
