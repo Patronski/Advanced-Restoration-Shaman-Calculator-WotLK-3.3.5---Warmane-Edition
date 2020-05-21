@@ -55,6 +55,7 @@
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\Enums\ModifierType.cs" />
     <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Modifiers\HealingModifier.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Rank.cs" />
     <Compile Include="Models\Spell.cs" />

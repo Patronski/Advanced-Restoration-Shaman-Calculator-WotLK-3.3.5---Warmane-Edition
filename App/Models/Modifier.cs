@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace App.Models
 {
-    public class Modifier
+    public abstract class Modifier
     {
         public ModifierType Type { get; set; }
 
@@ -18,8 +18,10 @@ namespace App.Models
 
         public bool UseExtraNumber { get; set; }
 
-        public int NumberY { get; set; } // * (1 + (Y / 10)) - Y is from 0 to 100
+        //public int NumberY { get; set; } // * (1 + (Y / 10)) - Y is from 0 to 100
 
-        public Control Control { get; set; }
+        public CheckBox CheckBox { get; set; }
+
+        public abstract int Modify();
     }
 }

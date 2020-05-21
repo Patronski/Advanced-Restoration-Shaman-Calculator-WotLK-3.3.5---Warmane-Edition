@@ -11,7 +11,6 @@ namespace App.Models
     {
         public Spell()
         {
-            this.Ranks = new List<Rank>();
             this.Modifiers = new List<Modifier>();
             this.CriticalMultiplier = 1;
         }
@@ -31,7 +30,7 @@ namespace App.Models
 
         public int PlayerSpellPower { get; set; }
 
-        public List<Rank> Ranks { get; set; }
+        public Rank CurrentRank { get; set; }
 
         public bool IsDamageVarying { get; set; }
 
