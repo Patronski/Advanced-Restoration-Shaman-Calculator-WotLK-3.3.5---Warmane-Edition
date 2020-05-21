@@ -13,9 +13,23 @@ namespace App.Models
 
         private static readonly Lazy<Player> lazyInstance = new Lazy<Player>();
 
-        public static Player Instance { get { return lazyInstance.Value; } } // thread safe
+        public static Player Instance { get 
+            { return lazyInstance.Value; } } // thread safe
 
         public int SpellPower { get; set; }
+
+        public int Hit { get; set; }
+
+        public int HasteRating { get; set; }
+
+        public double HastePercent { 
+            get
+            {
+                return Math.Round(HasteRating / 32.79);
+            }
+        }
+
+        public double CriticalChance { get; set; }
 
         public bool IsEquipedMetagemForCrit { get; set; }
     }

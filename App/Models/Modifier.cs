@@ -10,6 +10,11 @@ namespace App.Models
 {
     public abstract class Modifier
     {
+        public Modifier()
+        {
+            this.CheckBox = new System.Windows.Forms.CheckBox();
+        }
+
         public ModifierType Type { get; set; }
 
         public double Value { get; set; }
@@ -17,8 +22,6 @@ namespace App.Models
         public string Display { get; set; }
 
         public bool UseExtraNumber { get; set; }
-
-        //public int NumberY { get; set; } // * (1 + (Y / 10)) - Y is from 0 to 100
 
         public CheckBox CheckBox { get; set; }
 

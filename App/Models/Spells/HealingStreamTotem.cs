@@ -78,7 +78,7 @@ namespace App.Models.Spells
         {
             parentPanel.Controls.Clear();
 
-            parentPanel.Controls.Add(new Label() { Text = "HEALING MODIFIERS" });
+            parentPanel.Controls.Add(new Label() { Text = "HEALING MODIFIERS", AutoSize = true });
 
             var m1 = new CheckBox()
             {
