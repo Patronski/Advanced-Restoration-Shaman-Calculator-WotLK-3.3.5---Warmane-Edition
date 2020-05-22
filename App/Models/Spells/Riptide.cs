@@ -20,12 +20,12 @@ namespace App.Models.Spells
             throw new NotImplementedException();
         }
 
-        public override int CalculateHit()
+        public override int CalculateHitFrom()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateRank()
+        public override int? CalculateHitTo()
         {
             throw new NotImplementedException();
         }

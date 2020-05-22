@@ -36,14 +36,18 @@ namespace App.Models.Spells
             throw new NotImplementedException();
         }
 
-        public override int CalculateHit()
+        public override int CalculateHitFrom()
         {
-            throw new NotImplementedException();
+            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1055) * 1.32);
+
+            return rounded;
         }
 
-        public override int CalculateRank()
+        public override int? CalculateHitTo()
         {
-            throw new NotImplementedException();
+            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1205) * 1.32);
+
+            return rounded;
         }
 
         public override void LoadModifiers(FlowLayoutPanel parentPanel)

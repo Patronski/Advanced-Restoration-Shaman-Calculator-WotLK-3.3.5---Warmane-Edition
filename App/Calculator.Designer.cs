@@ -39,7 +39,9 @@
             this.labelHaste = new System.Windows.Forms.Label();
             this.table = new System.Windows.Forms.TableLayoutPanel();
             this.labelHit = new System.Windows.Forms.Label();
-            this.textBoxHit = new System.Windows.Forms.TextBox();
+            this.textBoxHitFrom = new System.Windows.Forms.TextBox();
+            this.labelDash = new System.Windows.Forms.Label();
+            this.textBoxHitTo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -141,13 +143,28 @@
             this.labelHit.TabIndex = 0;
             this.labelHit.Text = "Hit:";
             // 
-            // textBoxHit
+            // textBoxHitFrom
             // 
-            this.textBoxHit.Location = new System.Drawing.Point(361, 85);
-            this.textBoxHit.Name = "textBoxHit";
-            this.textBoxHit.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHit.TabIndex = 13;
-            this.textBoxHit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHit_KeyPress);
+            this.textBoxHitFrom.Location = new System.Drawing.Point(361, 85);
+            this.textBoxHitFrom.Name = "textBoxHitFrom";
+            this.textBoxHitFrom.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitFrom.TabIndex = 13;
+            // 
+            // labelDash
+            // 
+            this.labelDash.AutoSize = true;
+            this.labelDash.Location = new System.Drawing.Point(467, 88);
+            this.labelDash.Name = "labelDash";
+            this.labelDash.Size = new System.Drawing.Size(13, 13);
+            this.labelDash.TabIndex = 15;
+            this.labelDash.Text = "—";
+            // 
+            // textBoxHitTo
+            // 
+            this.textBoxHitTo.Location = new System.Drawing.Point(486, 85);
+            this.textBoxHitTo.Name = "textBoxHitTo";
+            this.textBoxHitTo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitTo.TabIndex = 16;
             // 
             // Calculator
             // 
@@ -155,7 +172,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1061, 450);
-            this.Controls.Add(this.textBoxHit);
+            this.Controls.Add(this.textBoxHitTo);
+            this.Controls.Add(this.labelDash);
+            this.Controls.Add(this.textBoxHitFrom);
             this.Controls.Add(this.labelHit);
             this.Controls.Add(this.table);
             this.Controls.Add(this.textBoxHaste);
@@ -187,7 +206,9 @@
         private System.Windows.Forms.Label labelHaste;
         private System.Windows.Forms.TableLayoutPanel table;
         private System.Windows.Forms.Label labelHit;
-        private System.Windows.Forms.TextBox textBoxHit;
+        private System.Windows.Forms.TextBox textBoxHitFrom;
+        private System.Windows.Forms.Label labelDash;
+        private System.Windows.Forms.TextBox textBoxHitTo;
     }
 }
 

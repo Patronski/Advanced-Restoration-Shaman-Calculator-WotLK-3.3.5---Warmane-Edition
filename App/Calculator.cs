@@ -21,12 +21,6 @@ namespace App
             InitialiseComboBoxSpell();
         }
 
-        public Calculator(Point locationPoint)
-        {
-            InitializeComponent();
-            InitialiseComboBoxSpell();
-        }
-
         private void InitialiseComboBoxSpell()
         {
             var spellType = typeof(Spell);
@@ -56,21 +50,33 @@ namespace App
             }
         }
 
+        private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
+        {
+            int spellPower = 0;
+            if (!int.TryParse(this.textBoxSpellPower.Text, out spellPower))
+            {
+                this.textBoxSpellPower.Text = "";
+            }
+            Player.Instance.SpellPower = spellPower;
+
+            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+            var hitFrom = selectedSpell?.CalculateHitFrom();
+            this.textBoxHitFrom.Text = hitFrom?.ToString();
+
+            var hitTo = selectedSpell?.CalculateHitTo();
+            this.textBoxHitTo.Text = hitTo?.ToString();
+        }
+
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
             selectedSpell.LoadModifiers(this.flowLayoutPanelModifiers);
-            var hit = selectedSpell.CalculateHit();
-            this.textBoxHit.Text = hit.ToString();
-        }
+            var hitFrom = selectedSpell.CalculateHitFrom();
+            this.textBoxHitFrom.Text = hitFrom.ToString();
 
-        private void textBoxHit_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            var hitTo = selectedSpell.CalculateHitTo();
+            this.textBoxHitTo.Text = hitTo.ToString();
         }
 
         private void textBoxHaste_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,20 +93,6 @@ namespace App
             {
                 e.Handled = true;
             }
-        }
-
-        private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
-        {
-            int spellPower = 0;
-            if (!int.TryParse(this.textBoxSpellPower.Text, out spellPower))
-            {
-                this.textBoxSpellPower.Text = "0";
-            }
-            Player.Instance.SpellPower = spellPower;
-
-            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
-            var hit = selectedSpell?.CalculateHit();
-            this.textBoxHit.Text = hit?.ToString();
         }
     }
 }

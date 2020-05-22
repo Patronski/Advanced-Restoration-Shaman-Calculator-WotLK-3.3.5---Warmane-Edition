@@ -23,13 +23,9 @@ namespace App.Models
 
         public int RanksCount { get; set; }
 
-        public Rank CurrentRank { get; set; }
+        public abstract int CalculateHitFrom();
 
-        public bool IsDamageVarying { get; set; }
-
-        public abstract int CalculateRank();
-
-        public abstract int CalculateHit();
+        public abstract int? CalculateHitTo();
 
         public abstract int CalculateAstralAwakening();
 

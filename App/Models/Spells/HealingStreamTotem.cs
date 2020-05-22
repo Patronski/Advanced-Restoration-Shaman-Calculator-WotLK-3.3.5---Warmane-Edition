@@ -16,8 +16,6 @@ namespace App.Models.Spells
 
             RanksCount = 9;
 
-            CurrentRank = new Rank { Num1 = 12.408, NumFrom = 3750, Divider = 150 };
-
             this.Modifiers.Add(treeOfLife);
             this.Modifiers.Add(hellscreamsWarsong);
             this.Modifiers.Add(emeraldVigor);
@@ -48,18 +46,16 @@ namespace App.Models.Spells
             throw new NotImplementedException();
         }
 
-        public override int CalculateHit()
+        public override int CalculateHitFrom()
         {
-            int rounded = (int)(CurrentRank.Num1 * Player.Instance.SpellPower) + CurrentRank.NumFrom;
+            int rounded = (int)(12.408 * Player.Instance.SpellPower) + 3750;
 
-            return rounded / CurrentRank.Divider;
+            return rounded / 150;
         }
 
-        public override int CalculateRank()
+        public override int? CalculateHitTo()
         {
-            int rounded = (int)(CurrentRank.Num1 * Player.Instance.SpellPower) + CurrentRank.NumFrom;
-
-            return rounded / CurrentRank.Divider;
+            return null;
         }
     }
 }
