@@ -8,6 +8,15 @@ namespace App.Models.Modifiers
 {
     public class SwiftRetribution : Modifier
     {
+        public SwiftRetribution()
+        {
+            Display = "Swift Retribution";
+
+            Value = 1.03;
+
+            this.InitCheckBox();
+        }
+
         public override int Modify()
         {
             Player.Instance.HasteRating = (int)(Player.Instance.HasteRating * 1.03);

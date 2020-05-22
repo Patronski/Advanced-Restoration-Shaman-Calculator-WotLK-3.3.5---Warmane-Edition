@@ -8,9 +8,18 @@ namespace App.Models.Modifiers
 {
     public class MoonkinForm : Modifier
     {
+        public MoonkinForm()
+        {
+            Display = "Moonkin Form Elemental Oath";
+
+            Value = 5;
+
+            this.InitCheckBox();
+        }
+
         public override int Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 5;
+            Player.Instance.CriticalChance = Player.Instance.CriticalChance + Value;
             if (Player.Instance.CriticalChance > 100)
             {
                 Player.Instance.CriticalChance = 100;

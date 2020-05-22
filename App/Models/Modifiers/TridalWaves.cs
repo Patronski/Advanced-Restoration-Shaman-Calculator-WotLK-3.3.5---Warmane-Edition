@@ -8,6 +8,15 @@ namespace App.Models.Modifiers
 {
     public class TridalWaves : Modifier
     {
+        public TridalWaves()
+        {
+            Display = "Tridal Waves";
+
+            Value = 25;
+
+            this.InitCheckBox();
+        }
+
         public override int Modify()
         {
             Player.Instance.CriticalChance = Player.Instance.CriticalChance + 25;

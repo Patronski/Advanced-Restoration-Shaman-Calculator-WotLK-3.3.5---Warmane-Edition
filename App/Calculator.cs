@@ -72,5 +72,7 @@ namespace App
             //this.comboBoxRanks.Enabled = true;
             //this.labelRank.Enabled = true;
         }
+
+
     }
 }

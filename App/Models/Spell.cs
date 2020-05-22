@@ -15,11 +15,6 @@ namespace App.Models
             this.CriticalMultiplier = 1;
         }
 
-        public Spell(int spellPower) : this()
-        {
-            this.PlayerSpellPower = spellPower;
-        }
-
         public string Name { get; protected set; }
 
         public List<Modifier> Modifiers { get; set; }
@@ -27,8 +22,6 @@ namespace App.Models
         public double CriticalMultiplier { get; set; }
 
         public int RanksCount { get; set; }
-
-        public int PlayerSpellPower { get; set; }
 
         public Rank CurrentRank { get; set; }
 

@@ -8,6 +8,15 @@ namespace App.Models.Modifiers
 {
     public class TridalMastery : Modifier
     {
+        public TridalMastery()
+        {
+            Display = "Tridal Mastery";
+
+            Value = 5;
+
+            this.InitCheckBox();
+        }
+
         public override int Modify()
         {
             Player.Instance.CriticalChance = Player.Instance.CriticalChance + 5;

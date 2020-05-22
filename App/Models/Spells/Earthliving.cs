@@ -15,8 +15,6 @@ namespace App.Models.Spells
             RanksCount = 6;
         }
 
-        public Earthliving(int spellPower) : base(spellPower) { }
-
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {
             throw new NotImplementedException();

@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class Rapid_Currents : Modifier
+    public class RapidCurrents : Modifier
     {
+        public RapidCurrents()
+        {
+            Display = "Rapid Currents";
+
+            Value = 1.2;
+
+            this.InitCheckBox();
+        }
+
         public override int Modify()
         {
             Player.Instance.HasteRating = (int)(Player.Instance.HasteRating * 1.2);

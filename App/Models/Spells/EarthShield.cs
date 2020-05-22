@@ -15,8 +15,6 @@ namespace App.Models.Spells
             RanksCount = 5;
         }
 
-        public EarthShield(int spellPower) : base(spellPower) { }
-
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
         {
             throw new NotImplementedException();

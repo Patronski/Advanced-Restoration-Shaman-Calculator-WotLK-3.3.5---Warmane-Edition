@@ -58,10 +58,12 @@
     <Compile Include="Models\Modifiers\BloodlustHeroism.cs" />
     <Compile Include="Models\Modifiers\EmeraldVigor.cs" />
     <Compile Include="Models\Modifiers\GlyphLesserHealingWave.cs" />
+    <Compile Include="Models\Modifiers\GlyphOfHealingStreamTotem.cs" />
     <Compile Include="Models\Modifiers\HealingModifier.cs" />
     <Compile Include="Models\Modifiers\HellscreamsWarsong.cs" />
     <Compile Include="Models\Modifiers\MoonkinForm.cs" />
-    <Compile Include="Models\Modifiers\Rapid Currents.cs" />
+    <Compile Include="Models\Modifiers\RapidCurrents.cs" />
+    <Compile Include="Models\Modifiers\RiptidesConsumption.cs" />
     <Compile Include="Models\Modifiers\SwiftRetribution.cs" />
     <Compile Include="Models\Modifiers\TreeOfLife.cs" />
     <Compile Include="Models\Modifiers\TridalMastery.cs" />

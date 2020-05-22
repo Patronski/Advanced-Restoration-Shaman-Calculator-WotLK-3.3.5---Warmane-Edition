@@ -7,19 +7,20 @@ using System.Windows.Forms;
 
 namespace App.Models.Modifiers
 {
-    public class BloodlustHeroism : Modifier
+    public class GlyphOfHealingStreamTotem : Modifier
     {
-        public BloodlustHeroism()
+        public GlyphOfHealingStreamTotem()
         {
-            Display = "Bloodlust Heroism";
-            Value = 1.3;
+            Display = "Glyph Of Healing Stream Totem";
+            Value = 1.2;
+
             InitCheckBox();
         }
 
         public override int Modify()
         {
-            Player.Instance.HasteRating = (int)(Player.Instance.HasteRating * Value);
-            return Player.Instance.HasteRating;
+            Player.Instance.Hit = (int)(Player.Instance.Hit * Value);
+            return Player.Instance.Hit;
         }
     }
 }

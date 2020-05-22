@@ -24,86 +24,23 @@ namespace App.Models.Spells
             this.Modifiers.Add(glyphOfHealingStreamTotem);
         }
 
-        public HealingStreamTotem(int spellPower): base(spellPower) { }
+        private Modifier treeOfLife { get; set; } = new TreeOfLife();
 
-        private HealingModifier treeOfLife { get; set; } = new HealingModifier
+        private Modifier hellscreamsWarsong { get; set; } = new HellscreamsWarsong();
+
+        private Modifier emeraldVigor { get; set; } = new EmeraldVigor();
+
+        private Modifier glyphOfHealingStreamTotem { get; set; } = new GlyphOfHealingStreamTotem();
+
+        public override void LoadModifiers(FlowLayoutPanel panel)
         {
-            Display = "Tree of Life Improved Devotion Aura",
-            Type = Enums.ModifierType.HealingModifier,
-            Value = 1.06,
-            CheckBox = new CheckBox
-            {
-                AutoSize = true,
-                Text = "Tree of Life Improved Devotion Aura"
-            }
-        };
+            panel.Controls.Clear();
 
-        private HealingModifier hellscreamsWarsong { get; set; } = new HealingModifier
-        {
-            Display = "Hellscream's Warsong Strength of Wrynn",
-            Type = Enums.ModifierType.HealingModifier,
-            Value = 1.3,
-            CheckBox = new CheckBox
-            {
-                AutoSize = true,
-                Text = "Hellscream's Warsong Strength of Wrynn"
-            }
-        };
-
-        private HealingModifier emeraldVigor { get; set; } = new HealingModifier
-        {
-            Display = "Emerald Vigor",
-            Type = Enums.ModifierType.HealingModifier,
-            UseExtraNumber = true,
-            CheckBox = new CheckBox
-            {
-                AutoSize = true,
-                Text = "Emerald Vigor"
-            }
-        };
-
-        private HealingModifier glyphOfHealingStreamTotem { get; set; } = new HealingModifier
-        {
-            Display = "Glyph of Healing Stream Totem",
-            Type = Enums.ModifierType.HealingModifier,
-            Value = 1.2,
-            CheckBox = new CheckBox
-            {
-                AutoSize = true,
-                Text = "Glyph of Healing Stream Totem"
-            }
-        };
-
-        public override void LoadModifiers(FlowLayoutPanel parentPanel)
-        {
-            parentPanel.Controls.Clear();
-
-            parentPanel.Controls.Add(new Label() { Text = "HEALING MODIFIERS", AutoSize = true });
-
-            var m1 = new CheckBox()
-            {
-                Text = "Tree of Life Improved Devotion Aura",
-                AutoSize = true
-            };
-            var m2 = new CheckBox()
-            {
-                Text = "Hellscream's Warsong Strength of Wrynn",
-                AutoSize = true
-            };
-            var m3 = new CheckBox()
-            {
-                Text = "Emerald Vigor",
-                AutoSize = true
-            };
-            var m4 = new CheckBox()
-            {
-                Text = "Glyph of Healing Stream Totem",
-                AutoSize = true
-            };
-            parentPanel.Controls.Add(m1);
-            parentPanel.Controls.Add(m2);
-            parentPanel.Controls.Add(m3);
-            parentPanel.Controls.Add(m4);
+            panel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
+            panel.Controls.Add(treeOfLife.CheckBox);
+            panel.Controls.Add(this.hellscreamsWarsong.CheckBox);
+            panel.Controls.Add(emeraldVigor.CheckBox);
+            panel.Controls.Add(glyphOfHealingStreamTotem.CheckBox);
         }
 
         public override int CalculateAstralAwakening(int rankNum, Rank rank)
@@ -118,7 +55,7 @@ namespace App.Models.Spells
 
         public override int CalculateRank(int rankNum, Rank rank)
         {
-            int rounded = (int)(rank.Num1 * PlayerSpellPower) + rank.NumFrom;
+            int rounded = (int)(rank.Num1 * Player.Instance.SpellPower) + rank.NumFrom;
 
             return rounded / rank.Divider;
         }
