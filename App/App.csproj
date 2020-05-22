@@ -58,6 +58,7 @@
     <Compile Include="Models\Modifiers\BloodlustHeroism.cs" />
     <Compile Include="Models\Modifiers\EmeraldVigor.cs" />
     <Compile Include="Models\Modifiers\GlyphLesserHealingWave.cs" />
+    <Compile Include="Models\Modifiers\GlyphOfEarthShield.cs" />
     <Compile Include="Models\Modifiers\GlyphOfHealingStreamTotem.cs" />
     <Compile Include="Models\Modifiers\HealingModifier.cs" />
     <Compile Include="Models\Modifiers\HellscreamsWarsong.cs" />

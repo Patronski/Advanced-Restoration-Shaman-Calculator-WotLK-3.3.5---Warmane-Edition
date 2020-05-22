@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class TridalWaves : Modifier
+    public class TidalWaves : Modifier
     {
-        public TridalWaves()
+        public TidalWaves()
         {
             Display = "Tridal Waves";
 

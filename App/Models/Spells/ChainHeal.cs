@@ -27,7 +27,7 @@ namespace App.Models.Spells
         private Modifier rapidCurrents { get; set; } = new RapidCurrents();
         private Modifier bloodlustHeroism { get; set; } = new BloodlustHeroism();
 
-        private Modifier tridalMastery { get; set; } = new TridalMastery();
+        private Modifier tridalMastery { get; set; } = new TidalMastery();
         private Modifier moonkinForm { get; set; } = new MoonkinForm();
 
 
@@ -56,7 +56,7 @@ namespace App.Models.Spells
 
             parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
             parentPanel.Controls.Add(treeOfLife.CheckBox);
-            parentPanel.Controls.Add(this.hellscreamsWarsong.CheckBox);
+            parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
             parentPanel.Controls.Add(emeraldVigor.CheckBox);
             parentPanel.Controls.Add(riptidesConsumption.CheckBox);
 

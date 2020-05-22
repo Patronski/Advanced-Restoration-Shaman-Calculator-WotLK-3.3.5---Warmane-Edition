@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App.Models.Modifiers
 {
-    public class GlyphOfLesserHealingWave : Modifier
+    public class GlyphOfEarthShield : Modifier
     {
-        public GlyphOfLesserHealingWave()
+        public GlyphOfEarthShield()
         {
-            Display = "Glyph Lesser Healing Wave";
+            Display = "Glyph Of Earth Shield";
             Value = 1.2;
 
             InitCheckBox();
