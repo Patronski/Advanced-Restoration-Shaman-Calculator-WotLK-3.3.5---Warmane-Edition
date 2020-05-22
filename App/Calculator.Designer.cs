@@ -37,6 +37,9 @@
             this.labelCrit = new System.Windows.Forms.Label();
             this.textBoxHaste = new System.Windows.Forms.TextBox();
             this.labelHaste = new System.Windows.Forms.Label();
+            this.table = new System.Windows.Forms.TableLayoutPanel();
+            this.labelHit = new System.Windows.Forms.Label();
+            this.textBoxHit = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -56,6 +59,7 @@
             this.textBoxSpellPower.Name = "textBoxSpellPower";
             this.textBoxSpellPower.Size = new System.Drawing.Size(77, 20);
             this.textBoxSpellPower.TabIndex = 1;
+            this.textBoxSpellPower.TextChanged += new System.EventHandler(this.textBoxSpellPower_TextChanged);
             this.textBoxSpellPower.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSpellPower_KeyPress);
             // 
             // comboBoxSpell
@@ -83,6 +87,7 @@
             this.textBoxCrit.Name = "textBoxCrit";
             this.textBoxCrit.Size = new System.Drawing.Size(88, 20);
             this.textBoxCrit.TabIndex = 9;
+            this.textBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCrit_KeyPress);
             // 
             // labelCrit
             // 
@@ -101,6 +106,7 @@
             this.textBoxHaste.Name = "textBoxHaste";
             this.textBoxHaste.Size = new System.Drawing.Size(99, 20);
             this.textBoxHaste.TabIndex = 11;
+            this.textBoxHaste.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHaste_KeyPress);
             // 
             // labelHaste
             // 
@@ -112,12 +118,46 @@
             this.labelHaste.TabIndex = 10;
             this.labelHaste.Text = "Haste Rating:";
             // 
+            // table
+            // 
+            this.table.ColumnCount = 2;
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.01942F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.98058F));
+            this.table.Location = new System.Drawing.Point(334, 276);
+            this.table.Name = "table";
+            this.table.RowCount = 3;
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.table.Size = new System.Drawing.Size(515, 141);
+            this.table.TabIndex = 12;
+            // 
+            // labelHit
+            // 
+            this.labelHit.AutoSize = true;
+            this.labelHit.Location = new System.Drawing.Point(331, 87);
+            this.labelHit.Name = "labelHit";
+            this.labelHit.Size = new System.Drawing.Size(23, 13);
+            this.labelHit.TabIndex = 0;
+            this.labelHit.Text = "Hit:";
+            // 
+            // textBoxHit
+            // 
+            this.textBoxHit.Location = new System.Drawing.Point(361, 85);
+            this.textBoxHit.Name = "textBoxHit";
+            this.textBoxHit.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHit.TabIndex = 13;
+            this.textBoxHit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHit_KeyPress);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1061, 450);
+            this.Controls.Add(this.textBoxHit);
+            this.Controls.Add(this.labelHit);
+            this.Controls.Add(this.table);
             this.Controls.Add(this.textBoxHaste);
             this.Controls.Add(this.labelHaste);
             this.Controls.Add(this.textBoxCrit);
@@ -145,6 +185,9 @@
         private System.Windows.Forms.Label labelCrit;
         private System.Windows.Forms.TextBox textBoxHaste;
         private System.Windows.Forms.Label labelHaste;
+        private System.Windows.Forms.TableLayoutPanel table;
+        private System.Windows.Forms.Label labelHit;
+        private System.Windows.Forms.TextBox textBoxHit;
     }
 }
 

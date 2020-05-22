@@ -11,7 +11,7 @@ namespace App.Models
     {
         private Player() { }
 
-        private static readonly Lazy<Player> lazyInstance = new Lazy<Player>();
+        private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
 
         public static Player Instance { get 
             { return lazyInstance.Value; } } // thread safe

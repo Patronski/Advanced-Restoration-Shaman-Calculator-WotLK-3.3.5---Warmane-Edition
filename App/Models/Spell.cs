@@ -27,11 +27,11 @@ namespace App.Models
 
         public bool IsDamageVarying { get; set; }
 
-        public abstract int CalculateRank(int rankNum, Rank rank);
+        public abstract int CalculateRank();
 
-        public abstract int CalculateHot(int rankNum, Rank rank); // HealingOverTime
+        public abstract int CalculateHit();
 
-        public abstract int CalculateAstralAwakening(int rankNum, Rank rank);
+        public abstract int CalculateAstralAwakening();
 
         public override string ToString()
         {

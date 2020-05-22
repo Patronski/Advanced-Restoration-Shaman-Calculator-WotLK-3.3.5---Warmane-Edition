@@ -43,21 +43,23 @@ namespace App.Models.Spells
             panel.Controls.Add(glyphOfHealingStreamTotem.CheckBox);
         }
 
-        public override int CalculateAstralAwakening(int rankNum, Rank rank)
+        public override int CalculateAstralAwakening()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateHot(int rankNum, Rank rank)
+        public override int CalculateHit()
         {
-            throw new NotImplementedException();
+            int rounded = (int)(CurrentRank.Num1 * Player.Instance.SpellPower) + CurrentRank.NumFrom;
+
+            return rounded / CurrentRank.Divider;
         }
 
-        public override int CalculateRank(int rankNum, Rank rank)
+        public override int CalculateRank()
         {
-            int rounded = (int)(rank.Num1 * Player.Instance.SpellPower) + rank.NumFrom;
+            int rounded = (int)(CurrentRank.Num1 * Player.Instance.SpellPower) + CurrentRank.NumFrom;
 
-            return rounded / rank.Divider;
+            return rounded / CurrentRank.Divider;
         }
     }
 }

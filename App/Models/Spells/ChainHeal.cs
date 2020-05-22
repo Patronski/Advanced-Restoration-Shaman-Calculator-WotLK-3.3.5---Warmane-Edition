@@ -31,17 +31,17 @@ namespace App.Models.Spells
         private Modifier moonkinForm { get; set; } = new MoonkinForm();
 
 
-        public override int CalculateAstralAwakening(int rankNum, Rank rank)
+        public override int CalculateAstralAwakening()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateHot(int rankNum, Rank rank)
+        public override int CalculateHit()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateRank(int rankNum, Rank rank)
+        public override int CalculateRank()
         {
             throw new NotImplementedException();
         }

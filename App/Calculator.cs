@@ -61,18 +61,46 @@ namespace App
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
             selectedSpell.LoadModifiers(this.flowLayoutPanelModifiers);
-            
-            //var objects = Enumerable
-            //    .Range(1, selectedSpell.RanksCount)
-            //    .Select(x => x as object)
-            //    .ToArray();
-            //
-            //this.comboBoxRanks.Items.Clear();
-            //this.comboBoxRanks.Items.AddRange(objects);
-            //this.comboBoxRanks.Enabled = true;
-            //this.labelRank.Enabled = true;
+            var hit = selectedSpell.CalculateHit();
+            this.textBoxHit.Text = hit.ToString();
         }
 
+        private void textBoxHit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void textBoxHaste_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxCrit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
+        {
+            int spellPower = 0;
+            if (!int.TryParse(this.textBoxSpellPower.Text, out spellPower))
+            {
+                this.textBoxSpellPower.Text = "0";
+            }
+            Player.Instance.SpellPower = spellPower;
+
+            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+            var hit = selectedSpell?.CalculateHit();
+            this.textBoxHit.Text = hit?.ToString();
+        }
     }
 }
