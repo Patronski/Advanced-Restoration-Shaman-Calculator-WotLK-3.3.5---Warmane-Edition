@@ -54,7 +54,8 @@ namespace App.Models.Spells
         {
             parentPanel.Controls.Clear();
 
-            parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
+            parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true, Enabled = false });
+            treeOfLife.CheckBox.Enabled = false;
             parentPanel.Controls.Add(treeOfLife.CheckBox);
             parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
             parentPanel.Controls.Add(emeraldVigor.CheckBox);

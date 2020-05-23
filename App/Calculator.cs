@@ -71,7 +71,6 @@ namespace App
         {
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
-            selectedSpell.LoadModifiers(this.flowLayoutPanelModifiers);
             var hitFrom = selectedSpell.CalculateHitFrom();
             this.textBoxHitFrom.Text = hitFrom.ToString();
 
