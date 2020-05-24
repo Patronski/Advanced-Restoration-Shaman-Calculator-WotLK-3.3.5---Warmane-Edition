@@ -11,7 +11,7 @@ namespace App.Models.Modifiers
     {
         public BloodlustHeroism()
         {
-            Display = "Bloodlust Heroism";
+            Display = Constants.ModBloodlust;
             Value = 1.3;
             InitCheckBox();
         }

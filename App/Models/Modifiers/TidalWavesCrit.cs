@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class MoonkinForm : Modifier
+    public class TidalWavesCrit : Modifier
     {
-        public MoonkinForm()
-        {
-            Display = Constants.ModMoonkin;
+        public TidalWavesCrit()
+        {   
+            Display = Constants.ModTidalWavesCrit;
 
-            Value = 5;
+            Value = 25;
 
             this.InitCheckBox();
         }
 
         public override int Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + Value;
+            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 25;
             if (Player.Instance.CriticalChance > 100)
             {
                 Player.Instance.CriticalChance = 100;

@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public WrathOfTheAirTotem()
         {
-            Display = "Wrath Of The Air Totem";
+            Display = Constants.ModWrathOfTheAirTotem;
 
             Value = 1.05;
 

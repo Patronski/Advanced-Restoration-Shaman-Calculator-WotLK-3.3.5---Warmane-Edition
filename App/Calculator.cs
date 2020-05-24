@@ -15,10 +15,55 @@ namespace App
 {
     public partial class Calculator : Form
     {
+        private List<CheckBox> checks;
+
         public Calculator()
         {
             InitializeComponent();
+            AdjustComponentProperties();
+            AddControllsToList();
             InitialiseComboBoxSpell();
+        }
+
+        private void AdjustComponentProperties()
+        {
+            this.checkBoxBloodlust.Text = Constants.ModBloodlust;
+            this.checkBoxEmeraldVigor.Text = Constants.ModEmeraldVigor;
+            this.checkBoxGlyphOfEarthShield.Text = Constants.ModGlyphESH;
+            this.checkBoxGlyphOfLHW.Text = Constants.ModGlyphLHW;
+            this.checkBoxGyphOfHST.Text = Constants.ModGlyphHST;
+            this.checkBoxHellscream.Text = Constants.ModHellscream;
+            this.checkBoxMoonkinForm.Text = Constants.ModMoonkin;
+            this.checkBoxRapidCurrents.Text = Constants.ModRapidCurrents;
+            this.checkBoxRiptidesConsumption.Text = Constants.ModRapidConsumption;
+            this.checkBoxSwiftRetribution.Text = Constants.ModSwiftRetrubution;
+            this.checkBoxTidalMastery.Text = Constants.ModTidalMastery;
+            this.checkBoxTidalWaves.Text = Constants.ModTidalWavesHaste;
+            this.checkBoxTidalWavesCrit.Text = Constants.ModTidalWavesCrit;
+            this.checkBoxTreeOfLife.Text = Constants.ModTreeOfLife;
+            this.checkBoxWrathOfTheAirTotem.Text = Constants.ModWrathOfTheAirTotem;
+        }
+
+        private void AddControllsToList()
+        {
+            checks = new List<CheckBox>()
+            {
+                this.checkBoxTreeOfLife,
+                this.checkBoxHellscream,
+                this.checkBoxEmeraldVigor,
+                this.checkBoxRiptidesConsumption,
+                this.checkBoxGlyphOfEarthShield,
+                this.checkBoxGyphOfHST,
+                this.checkBoxGlyphOfLHW,
+                this.checkBoxWrathOfTheAirTotem,
+                this.checkBoxSwiftRetribution,
+                this.checkBoxBloodlust,
+                this.checkBoxRapidCurrents,
+                this.checkBoxTidalWaves,
+                this.checkBoxTidalMastery,
+                this.checkBoxMoonkinForm,
+                this.checkBoxTidalWavesCrit
+            };
         }
 
         private void InitialiseComboBoxSpell()
@@ -60,6 +105,7 @@ namespace App
             Player.Instance.SpellPower = spellPower;
 
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+
             var hitFrom = selectedSpell?.CalculateHitFrom();
             this.textBoxHitFrom.Text = hitFrom?.ToString();
 
@@ -70,6 +116,11 @@ namespace App
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+
+            selectedSpell.EnableDisableModifiers(checks);
+
+            //TODO get name of checked modifiers
+            //TODO selectedSpell.LoadModifiers();
 
             var hitFrom = selectedSpell.CalculateHitFrom();
             this.textBoxHitFrom.Text = hitFrom.ToString();

@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public GlyphOfEarthShield()
         {
-            Display = "Glyph Of Earth Shield";
+            Display = Constants.ModGlyphESH;
             Value = 1.2;
 
             InitCheckBox();

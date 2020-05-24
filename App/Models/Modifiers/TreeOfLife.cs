@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public TreeOfLife()
         {
-            Display = "Tree Of Life";
+            Display = Constants.ModTreeOfLife;
 
             Value = 1.06;
 

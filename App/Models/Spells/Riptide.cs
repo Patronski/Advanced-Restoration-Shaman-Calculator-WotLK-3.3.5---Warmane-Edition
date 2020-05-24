@@ -12,8 +12,16 @@ namespace App.Models.Spells
     {
         public Riptide() : base()
         {
-            Name = "Riptide";
+            Name = Constants.SpellRiptide;
             RanksCount = 4;
+
+            this.Modifiers.Add(new TreeOfLife());
+            this.Modifiers.Add(new HellscreamsWarsong());
+            this.Modifiers.Add(new EmeraldVigor());
+            this.Modifiers.Add(new TidalMastery());
+            this.Modifiers.Add(new MoonkinForm());
+
+            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
         private Modifier treeOfLife { get; set; } = new TreeOfLife();
@@ -48,16 +56,16 @@ namespace App.Models.Spells
 
         public override void LoadModifiers(FlowLayoutPanel parentPanel)
         {
-            parentPanel.Controls.Clear();
+            //parentPanel.Controls.Clear();
 
-            parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
-            parentPanel.Controls.Add(treeOfLife.CheckBox);
-            parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
-            parentPanel.Controls.Add(emeraldVigor.CheckBox);
+            //parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
+            //parentPanel.Controls.Add(treeOfLife.CheckBox);
+            //parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
+            //parentPanel.Controls.Add(emeraldVigor.CheckBox);
 
-            parentPanel.Controls.Add(new Label() { Text = "---HASTE MODIFIERS---", AutoSize = true });
-            parentPanel.Controls.Add(tidalMastery.CheckBox);
-            parentPanel.Controls.Add(moonkinForm.CheckBox);
+            //parentPanel.Controls.Add(new Label() { Text = "---HASTE MODIFIERS---", AutoSize = true });
+            //parentPanel.Controls.Add(tidalMastery.CheckBox);
+            //parentPanel.Controls.Add(moonkinForm.CheckBox);
         }
     }
 }

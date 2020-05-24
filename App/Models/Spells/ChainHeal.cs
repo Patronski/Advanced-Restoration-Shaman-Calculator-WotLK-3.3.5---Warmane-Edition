@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +13,27 @@ namespace App.Models.Spells
     {
         public ChainHeal() : base()
         {
-            Name = "Chain Heal";
+            Name = Constants.SpellChainHeal;
             RanksCount = 7;
             this.CriticalMultiplier = 1.5;
+
+            var modifierFields = this.GetType().GetFields(
+                BindingFlags.NonPublic |
+                BindingFlags.Instance)
+                .Where(x => x.FieldType.IsAssignableFrom(typeof(Modifier)));
+
+            this.Modifiers.Add(new TreeOfLife());
+            this.Modifiers.Add(new HellscreamsWarsong());
+            this.Modifiers.Add(new EmeraldVigor());
+            this.Modifiers.Add(new RiptidesConsumption());
+            this.Modifiers.Add(new WrathOfTheAirTotem());
+            this.Modifiers.Add(new SwiftRetribution());
+            this.Modifiers.Add(new RapidCurrents());
+            this.Modifiers.Add(new BloodlustHeroism());
+            this.Modifiers.Add(new TidalMastery());
+            this.Modifiers.Add(new MoonkinForm());
+
+            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
         private Modifier treeOfLife { get; set; } = new TreeOfLife();
@@ -52,24 +71,24 @@ namespace App.Models.Spells
 
         public override void LoadModifiers(FlowLayoutPanel parentPanel)
         {
-            parentPanel.Controls.Clear();
+            //parentPanel.Controls.Clear();
 
-            parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true, Enabled = false });
-            treeOfLife.CheckBox.Enabled = false;
-            parentPanel.Controls.Add(treeOfLife.CheckBox);
-            parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
-            parentPanel.Controls.Add(emeraldVigor.CheckBox);
-            parentPanel.Controls.Add(riptidesConsumption.CheckBox);
+            //parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true, Enabled = false });
+            //treeOfLife.CheckBox.Enabled = false;
+            //parentPanel.Controls.Add(treeOfLife.CheckBox);
+            //parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
+            //parentPanel.Controls.Add(emeraldVigor.CheckBox);
+            //parentPanel.Controls.Add(riptidesConsumption.CheckBox);
 
-            parentPanel.Controls.Add(new Label() { Text = "---HASTE MODIFIERS---", AutoSize = true });
-            parentPanel.Controls.Add(wrathOfTheAirTotem.CheckBox);
-            parentPanel.Controls.Add(swiftRetribution.CheckBox);
-            parentPanel.Controls.Add(rapidCurrents.CheckBox);
-            parentPanel.Controls.Add(bloodlustHeroism.CheckBox);
+            //parentPanel.Controls.Add(new Label() { Text = "---HASTE MODIFIERS---", AutoSize = true });
+            //parentPanel.Controls.Add(wrathOfTheAirTotem.CheckBox);
+            //parentPanel.Controls.Add(swiftRetribution.CheckBox);
+            //parentPanel.Controls.Add(rapidCurrents.CheckBox);
+            //parentPanel.Controls.Add(bloodlustHeroism.CheckBox);
 
-            parentPanel.Controls.Add(new Label() { Text = "---CRIT MODIFIERS---", AutoSize = true });
-            parentPanel.Controls.Add(tridalMastery.CheckBox);
-            parentPanel.Controls.Add(moonkinForm.CheckBox);
+            //parentPanel.Controls.Add(new Label() { Text = "---CRIT MODIFIERS---", AutoSize = true });
+            //parentPanel.Controls.Add(tridalMastery.CheckBox);
+            //parentPanel.Controls.Add(moonkinForm.CheckBox);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace App.Models.Modifiers
 
         public EmeraldVigor()
         {
-            Display = "Emerald Vigor";
+            Display = Constants.ModEmeraldVigor;
             UseExtraNumber = true;
 
             InitCheckBox();

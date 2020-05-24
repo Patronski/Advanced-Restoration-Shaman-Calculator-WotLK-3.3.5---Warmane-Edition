@@ -11,7 +11,7 @@ namespace App.Models.Modifiers
     {
         public HellscreamsWarsong()
         {
-            Display = "Hellscream's Warsong Strength of Wrynn";
+            Display = Constants.ModHellscream;
 
             Value = 1.3;
 

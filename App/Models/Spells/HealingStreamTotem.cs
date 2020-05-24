@@ -12,14 +12,16 @@ namespace App.Models.Spells
     {
         public HealingStreamTotem() : base()
         {
-            Name = "Healing Stream Totem";
+            Name = Constants.SpellHST;
 
             RanksCount = 9;
 
-            this.Modifiers.Add(treeOfLife);
-            this.Modifiers.Add(hellscreamsWarsong);
-            this.Modifiers.Add(emeraldVigor);
-            this.Modifiers.Add(glyphOfHealingStreamTotem);
+            this.Modifiers.Add(new TreeOfLife());
+            this.Modifiers.Add(new HellscreamsWarsong());
+            this.Modifiers.Add(new EmeraldVigor());
+            this.Modifiers.Add(new GlyphOfHealingStreamTotem());
+
+            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
         private Modifier treeOfLife { get; set; } = new TreeOfLife();
@@ -32,13 +34,13 @@ namespace App.Models.Spells
 
         public override void LoadModifiers(FlowLayoutPanel panel)
         {
-            panel.Controls.Clear();
+            //panel.Controls.Clear();
 
-            panel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
-            panel.Controls.Add(treeOfLife.CheckBox);
-            panel.Controls.Add(this.hellscreamsWarsong.CheckBox);
-            panel.Controls.Add(emeraldVigor.CheckBox);
-            panel.Controls.Add(glyphOfHealingStreamTotem.CheckBox);
+            //panel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
+            //panel.Controls.Add(treeOfLife.CheckBox);
+            //panel.Controls.Add(this.hellscreamsWarsong.CheckBox);
+            //panel.Controls.Add(emeraldVigor.CheckBox);
+            //panel.Controls.Add(glyphOfHealingStreamTotem.CheckBox);
         }
 
         public override int CalculateAstralAwakening()

@@ -11,7 +11,7 @@ namespace App.Models.Modifiers
     {
         public GlyphOfLesserHealingWave()
         {
-            Display = "Glyph Lesser Healing Wave";
+            Display = Constants.ModGlyphLHW;
             Value = 1.2;
 
             InitCheckBox();

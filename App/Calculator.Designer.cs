@@ -198,16 +198,17 @@
             // labelHealingModifiers
             // 
             this.labelHealingModifiers.AutoSize = true;
-            this.labelHealingModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHealingModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelHealingModifiers.Location = new System.Drawing.Point(15, 52);
             this.labelHealingModifiers.Name = "labelHealingModifiers";
-            this.labelHealingModifiers.Size = new System.Drawing.Size(144, 18);
+            this.labelHealingModifiers.Size = new System.Drawing.Size(125, 15);
             this.labelHealingModifiers.TabIndex = 22;
             this.labelHealingModifiers.Text = "Healing Modifiers:";
             // 
             // checkBoxTreeOfLife
             // 
             this.checkBoxTreeOfLife.AutoSize = true;
+            this.checkBoxTreeOfLife.Enabled = false;
             this.checkBoxTreeOfLife.Location = new System.Drawing.Point(18, 73);
             this.checkBoxTreeOfLife.Name = "checkBoxTreeOfLife";
             this.checkBoxTreeOfLife.Size = new System.Drawing.Size(206, 17);
@@ -218,6 +219,7 @@
             // checkBoxHellscream
             // 
             this.checkBoxHellscream.AutoSize = true;
+            this.checkBoxHellscream.Enabled = false;
             this.checkBoxHellscream.Location = new System.Drawing.Point(18, 96);
             this.checkBoxHellscream.Name = "checkBoxHellscream";
             this.checkBoxHellscream.Size = new System.Drawing.Size(223, 17);
@@ -228,6 +230,7 @@
             // checkBoxEmeraldVigor
             // 
             this.checkBoxEmeraldVigor.AutoSize = true;
+            this.checkBoxEmeraldVigor.Enabled = false;
             this.checkBoxEmeraldVigor.Location = new System.Drawing.Point(18, 119);
             this.checkBoxEmeraldVigor.Name = "checkBoxEmeraldVigor";
             this.checkBoxEmeraldVigor.Size = new System.Drawing.Size(91, 17);
@@ -238,6 +241,7 @@
             // checkBoxRiptidesConsumption
             // 
             this.checkBoxRiptidesConsumption.AutoSize = true;
+            this.checkBoxRiptidesConsumption.Enabled = false;
             this.checkBoxRiptidesConsumption.Location = new System.Drawing.Point(18, 142);
             this.checkBoxRiptidesConsumption.Name = "checkBoxRiptidesConsumption";
             this.checkBoxRiptidesConsumption.Size = new System.Drawing.Size(130, 17);
@@ -248,6 +252,7 @@
             // checkBoxGlyphOfEarthShield
             // 
             this.checkBoxGlyphOfEarthShield.AutoSize = true;
+            this.checkBoxGlyphOfEarthShield.Enabled = false;
             this.checkBoxGlyphOfEarthShield.Location = new System.Drawing.Point(18, 165);
             this.checkBoxGlyphOfEarthShield.Name = "checkBoxGlyphOfEarthShield";
             this.checkBoxGlyphOfEarthShield.Size = new System.Drawing.Size(125, 17);
@@ -258,6 +263,7 @@
             // checkBoxGyphOfHST
             // 
             this.checkBoxGyphOfHST.AutoSize = true;
+            this.checkBoxGyphOfHST.Enabled = false;
             this.checkBoxGyphOfHST.Location = new System.Drawing.Point(18, 188);
             this.checkBoxGyphOfHST.Name = "checkBoxGyphOfHST";
             this.checkBoxGyphOfHST.Size = new System.Drawing.Size(90, 17);
@@ -268,7 +274,8 @@
             // checkBoxGlyphOfLHW
             // 
             this.checkBoxGlyphOfLHW.AutoSize = true;
-            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(19, 211);
+            this.checkBoxGlyphOfLHW.Enabled = false;
+            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(18, 211);
             this.checkBoxGlyphOfLHW.Name = "checkBoxGlyphOfLHW";
             this.checkBoxGlyphOfLHW.Size = new System.Drawing.Size(93, 17);
             this.checkBoxGlyphOfLHW.TabIndex = 29;
@@ -278,17 +285,18 @@
             // labelHasteModifiers
             // 
             this.labelHasteModifiers.AutoSize = true;
-            this.labelHasteModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHasteModifiers.Location = new System.Drawing.Point(16, 244);
+            this.labelHasteModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHasteModifiers.Location = new System.Drawing.Point(16, 231);
             this.labelHasteModifiers.Name = "labelHasteModifiers";
-            this.labelHasteModifiers.Size = new System.Drawing.Size(132, 18);
+            this.labelHasteModifiers.Size = new System.Drawing.Size(112, 15);
             this.labelHasteModifiers.TabIndex = 30;
             this.labelHasteModifiers.Text = "Haste Modifiers:";
             // 
             // checkBoxWrathOfTheAirTotem
             // 
             this.checkBoxWrathOfTheAirTotem.AutoSize = true;
-            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 265);
+            this.checkBoxWrathOfTheAirTotem.Enabled = false;
+            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 249);
             this.checkBoxWrathOfTheAirTotem.Name = "checkBoxWrathOfTheAirTotem";
             this.checkBoxWrathOfTheAirTotem.Size = new System.Drawing.Size(133, 17);
             this.checkBoxWrathOfTheAirTotem.TabIndex = 31;
@@ -298,7 +306,8 @@
             // checkBoxSwiftRetribution
             // 
             this.checkBoxSwiftRetribution.AutoSize = true;
-            this.checkBoxSwiftRetribution.Location = new System.Drawing.Point(19, 288);
+            this.checkBoxSwiftRetribution.Enabled = false;
+            this.checkBoxSwiftRetribution.Location = new System.Drawing.Point(18, 272);
             this.checkBoxSwiftRetribution.Name = "checkBoxSwiftRetribution";
             this.checkBoxSwiftRetribution.Size = new System.Drawing.Size(223, 17);
             this.checkBoxSwiftRetribution.TabIndex = 32;
@@ -308,7 +317,8 @@
             // checkBoxBloodlust
             // 
             this.checkBoxBloodlust.AutoSize = true;
-            this.checkBoxBloodlust.Location = new System.Drawing.Point(19, 311);
+            this.checkBoxBloodlust.Enabled = false;
+            this.checkBoxBloodlust.Location = new System.Drawing.Point(18, 295);
             this.checkBoxBloodlust.Name = "checkBoxBloodlust";
             this.checkBoxBloodlust.Size = new System.Drawing.Size(110, 17);
             this.checkBoxBloodlust.TabIndex = 33;
@@ -318,7 +328,8 @@
             // checkBoxRapidCurrents
             // 
             this.checkBoxRapidCurrents.AutoSize = true;
-            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(19, 334);
+            this.checkBoxRapidCurrents.Enabled = false;
+            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(18, 318);
             this.checkBoxRapidCurrents.Name = "checkBoxRapidCurrents";
             this.checkBoxRapidCurrents.Size = new System.Drawing.Size(96, 17);
             this.checkBoxRapidCurrents.TabIndex = 34;
@@ -328,7 +339,8 @@
             // checkBoxTidalWaves
             // 
             this.checkBoxTidalWaves.AutoSize = true;
-            this.checkBoxTidalWaves.Location = new System.Drawing.Point(18, 357);
+            this.checkBoxTidalWaves.Enabled = false;
+            this.checkBoxTidalWaves.Location = new System.Drawing.Point(18, 341);
             this.checkBoxTidalWaves.Name = "checkBoxTidalWaves";
             this.checkBoxTidalWaves.Size = new System.Drawing.Size(121, 17);
             this.checkBoxTidalWaves.TabIndex = 35;
@@ -338,17 +350,18 @@
             // labelCritModifiers
             // 
             this.labelCritModifiers.AutoSize = true;
-            this.labelCritModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCritModifiers.Location = new System.Drawing.Point(15, 391);
+            this.labelCritModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCritModifiers.Location = new System.Drawing.Point(15, 361);
             this.labelCritModifiers.Name = "labelCritModifiers";
-            this.labelCritModifiers.Size = new System.Drawing.Size(115, 18);
+            this.labelCritModifiers.Size = new System.Drawing.Size(97, 15);
             this.labelCritModifiers.TabIndex = 36;
             this.labelCritModifiers.Text = "Crit Modifiers:";
             // 
             // checkBoxTidalMastery
             // 
             this.checkBoxTidalMastery.AutoSize = true;
-            this.checkBoxTidalMastery.Location = new System.Drawing.Point(18, 412);
+            this.checkBoxTidalMastery.Enabled = false;
+            this.checkBoxTidalMastery.Location = new System.Drawing.Point(18, 379);
             this.checkBoxTidalMastery.Name = "checkBoxTidalMastery";
             this.checkBoxTidalMastery.Size = new System.Drawing.Size(89, 17);
             this.checkBoxTidalMastery.TabIndex = 37;
@@ -358,7 +371,8 @@
             // checkBoxMoonkinForm
             // 
             this.checkBoxMoonkinForm.AutoSize = true;
-            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(19, 435);
+            this.checkBoxMoonkinForm.Enabled = false;
+            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(18, 402);
             this.checkBoxMoonkinForm.Name = "checkBoxMoonkinForm";
             this.checkBoxMoonkinForm.Size = new System.Drawing.Size(171, 17);
             this.checkBoxMoonkinForm.TabIndex = 38;
@@ -368,7 +382,8 @@
             // checkBoxTidalWavesCrit
             // 
             this.checkBoxTidalWavesCrit.AutoSize = true;
-            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 458);
+            this.checkBoxTidalWavesCrit.Enabled = false;
+            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 425);
             this.checkBoxTidalWavesCrit.Name = "checkBoxTidalWavesCrit";
             this.checkBoxTidalWavesCrit.Size = new System.Drawing.Size(109, 17);
             this.checkBoxTidalWavesCrit.TabIndex = 39;

@@ -19,6 +19,8 @@ namespace App.Models
 
         public List<Modifier> Modifiers { get; set; }
 
+        protected List<string> modifierNames;
+
         public double CriticalMultiplier { get; set; }
 
         public int RanksCount { get; set; }
@@ -35,5 +37,20 @@ namespace App.Models
         }
 
         public abstract void LoadModifiers(FlowLayoutPanel parentPanel);
+
+        public virtual void EnableDisableModifiers(List<CheckBox> checks)
+        {
+            foreach (var check in checks)
+            {
+                if (this.modifierNames.Contains(check.Text))
+                {
+                    check.Enabled = true;
+                }
+                else
+                {
+                    check.Enabled = false;
+                }
+            }
+        }
     }
 }

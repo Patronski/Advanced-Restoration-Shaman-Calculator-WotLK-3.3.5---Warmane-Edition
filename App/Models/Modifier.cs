@@ -15,8 +15,6 @@ namespace App.Models
             
         }
 
-        public ModifierType Type { get; set; }
-
         public double Value { get; set; }
 
         public string Display { get; set; }

@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public SwiftRetribution()
         {
-            Display = "Swift Retribution";
+            Display = Constants.ModSwiftRetrubution;
 
             Value = 1.03;
 

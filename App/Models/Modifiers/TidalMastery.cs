@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class TidalWaves : Modifier
+    public class TidalMastery : Modifier
     {
-        public TidalWaves()
+        public TidalMastery()
         {
-            Display = "Tridal Waves";
+            Display = Constants.ModTidalMastery;
 
-            Value = 25;
+            Value = 5;
 
             this.InitCheckBox();
         }
 
         public override int Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 25;
+            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 5;
             if (Player.Instance.CriticalChance > 100)
             {
                 Player.Instance.CriticalChance = 100;

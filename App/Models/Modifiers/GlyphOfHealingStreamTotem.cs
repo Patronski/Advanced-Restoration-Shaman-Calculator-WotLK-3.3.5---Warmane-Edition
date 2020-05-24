@@ -11,7 +11,7 @@ namespace App.Models.Modifiers
     {
         public GlyphOfHealingStreamTotem()
         {
-            Display = "Glyph Of Healing Stream Totem";
+            Display = Constants.ModGlyphHST;
             Value = 1.2;
 
             InitCheckBox();

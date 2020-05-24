@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public RiptidesConsumption()
         {
-            Display = "Riptides Consumption";
+            Display = Constants.ModRapidConsumption;
 
             Value = 1.25;
 
