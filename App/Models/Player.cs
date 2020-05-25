@@ -18,12 +18,20 @@ namespace App.Models
 
         public int SpellPower { get; set; }
 
-        public int HasteRating { get; set; }
+        public int EmeraldVigorNumber { get; set; }
 
-        public double HastePercent { 
+        public int? HasteRating { get; set; }
+
+        public double? HastePercent 
+        { 
             get
             {
-                return Math.Round(HasteRating / 32.79);
+                if (HasteRating == null)
+                {
+                    return null;
+                }
+                var percent = Math.Round((double)HasteRating / 32.79, 2);
+                return percent;
             }
         }
 

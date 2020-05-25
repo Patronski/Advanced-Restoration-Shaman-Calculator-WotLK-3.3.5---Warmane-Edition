@@ -34,13 +34,13 @@
             this.comboBoxSpell = new System.Windows.Forms.ComboBox();
             this.textBoxCrit = new System.Windows.Forms.TextBox();
             this.labelCrit = new System.Windows.Forms.Label();
-            this.textBoxHaste = new System.Windows.Forms.TextBox();
+            this.textBoxHasteRating = new System.Windows.Forms.TextBox();
             this.labelHaste = new System.Windows.Forms.Label();
             this.labelHit = new System.Windows.Forms.Label();
             this.textBoxHitFrom = new System.Windows.Forms.TextBox();
             this.labelDash = new System.Windows.Forms.Label();
             this.textBoxHitTo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHastePercent = new System.Windows.Forms.TextBox();
             this.labelPercent = new System.Windows.Forms.Label();
             this.labelArrow = new System.Windows.Forms.Label();
             this.labelHealingModifiers = new System.Windows.Forms.Label();
@@ -61,6 +61,10 @@
             this.checkBoxTidalMastery = new System.Windows.Forms.CheckBox();
             this.checkBoxMoonkinForm = new System.Windows.Forms.CheckBox();
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
+            this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownCritPercent = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCritPercent)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -97,11 +101,12 @@
             // 
             // textBoxCrit
             // 
-            this.textBoxCrit.Location = new System.Drawing.Point(761, 31);
+            this.textBoxCrit.Location = new System.Drawing.Point(883, 31);
             this.textBoxCrit.MaxLength = 6;
             this.textBoxCrit.Name = "textBoxCrit";
             this.textBoxCrit.Size = new System.Drawing.Size(88, 20);
             this.textBoxCrit.TabIndex = 9;
+            this.textBoxCrit.TextChanged += new System.EventHandler(this.textBoxCrit_TextChanged);
             this.textBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCrit_KeyPress);
             // 
             // labelCrit
@@ -114,14 +119,15 @@
             this.labelCrit.TabIndex = 8;
             this.labelCrit.Text = "Crit Chance:";
             // 
-            // textBoxHaste
+            // textBoxHasteRating
             // 
-            this.textBoxHaste.Location = new System.Drawing.Point(544, 32);
-            this.textBoxHaste.MaxLength = 6;
-            this.textBoxHaste.Name = "textBoxHaste";
-            this.textBoxHaste.Size = new System.Drawing.Size(39, 20);
-            this.textBoxHaste.TabIndex = 11;
-            this.textBoxHaste.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHaste_KeyPress);
+            this.textBoxHasteRating.Location = new System.Drawing.Point(544, 32);
+            this.textBoxHasteRating.MaxLength = 6;
+            this.textBoxHasteRating.Name = "textBoxHasteRating";
+            this.textBoxHasteRating.Size = new System.Drawing.Size(39, 20);
+            this.textBoxHasteRating.TabIndex = 11;
+            this.textBoxHasteRating.TextChanged += new System.EventHandler(this.textBoxHaste_TextChanged);
+            this.textBoxHasteRating.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHaste_KeyPress);
             // 
             // labelHaste
             // 
@@ -167,13 +173,14 @@
             this.textBoxHitTo.Size = new System.Drawing.Size(100, 20);
             this.textBoxHitTo.TabIndex = 16;
             // 
-            // textBox1
+            // textBoxHastePercent
             // 
-            this.textBox1.Location = new System.Drawing.Point(621, 32);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 17;
+            this.textBoxHastePercent.Location = new System.Drawing.Point(621, 32);
+            this.textBoxHastePercent.MaxLength = 6;
+            this.textBoxHastePercent.Name = "textBoxHastePercent";
+            this.textBoxHastePercent.ReadOnly = true;
+            this.textBoxHastePercent.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHastePercent.TabIndex = 17;
             // 
             // labelPercent
             // 
@@ -405,12 +412,47 @@
             this.checkBoxTidalWavesCrit.UseVisualStyleBackColor = true;
             this.checkBoxTidalWavesCrit.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
+            // numericUpDownEmeraldVigor
+            // 
+            this.numericUpDownEmeraldVigor.Enabled = false;
+            this.numericUpDownEmeraldVigor.Location = new System.Drawing.Point(127, 118);
+            this.numericUpDownEmeraldVigor.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownEmeraldVigor.Name = "numericUpDownEmeraldVigor";
+            this.numericUpDownEmeraldVigor.Size = new System.Drawing.Size(51, 20);
+            this.numericUpDownEmeraldVigor.TabIndex = 40;
+            this.numericUpDownEmeraldVigor.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownEmeraldVigor.ValueChanged += new System.EventHandler(this.numericUpDownEmeraldVigor_ValueChanged);
+            // 
+            // numericUpDownCritPercent
+            // 
+            this.numericUpDownCritPercent.DecimalPlaces = 2;
+            this.numericUpDownCritPercent.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownCritPercent.Location = new System.Drawing.Point(761, 35);
+            this.numericUpDownCritPercent.Name = "numericUpDownCritPercent";
+            this.numericUpDownCritPercent.Size = new System.Drawing.Size(78, 20);
+            this.numericUpDownCritPercent.TabIndex = 41;
+            this.numericUpDownCritPercent.ValueChanged += new System.EventHandler(this.numericUpDownCritPercent_ValueChanged);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1061, 502);
+            this.Controls.Add(this.numericUpDownCritPercent);
+            this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
             this.Controls.Add(this.checkBoxMoonkinForm);
             this.Controls.Add(this.checkBoxTidalMastery);
@@ -431,12 +473,12 @@
             this.Controls.Add(this.labelHealingModifiers);
             this.Controls.Add(this.labelArrow);
             this.Controls.Add(this.labelPercent);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHastePercent);
             this.Controls.Add(this.textBoxHitTo);
             this.Controls.Add(this.labelDash);
             this.Controls.Add(this.textBoxHitFrom);
             this.Controls.Add(this.labelHit);
-            this.Controls.Add(this.textBoxHaste);
+            this.Controls.Add(this.textBoxHasteRating);
             this.Controls.Add(this.labelHaste);
             this.Controls.Add(this.textBoxCrit);
             this.Controls.Add(this.labelCrit);
@@ -447,6 +489,8 @@
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCritPercent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,13 +503,13 @@
         private System.Windows.Forms.ComboBox comboBoxSpell;
         private System.Windows.Forms.TextBox textBoxCrit;
         private System.Windows.Forms.Label labelCrit;
-        private System.Windows.Forms.TextBox textBoxHaste;
+        private System.Windows.Forms.TextBox textBoxHasteRating;
         private System.Windows.Forms.Label labelHaste;
         private System.Windows.Forms.Label labelHit;
         private System.Windows.Forms.TextBox textBoxHitFrom;
         private System.Windows.Forms.Label labelDash;
         private System.Windows.Forms.TextBox textBoxHitTo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHastePercent;
         private System.Windows.Forms.Label labelPercent;
         private System.Windows.Forms.Label labelArrow;
         private System.Windows.Forms.Label labelHealingModifiers;
@@ -486,6 +530,8 @@
         private System.Windows.Forms.CheckBox checkBoxTidalMastery;
         private System.Windows.Forms.CheckBox checkBoxMoonkinForm;
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
+        private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
+        private System.Windows.Forms.NumericUpDown numericUpDownCritPercent;
     }
 }
 

@@ -89,14 +89,6 @@ namespace App
             this.comboBoxSpell.Items.AddRange(spells.ToArray());
         }
 
-        private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
         {
             int spellPower = 0;
@@ -109,9 +101,54 @@ namespace App
             if (selectedSpell != null)
             {
                 selectedSpell.Calculate();
-
-                DisplayHealing();
             }
+
+            DisplayHealing();
+        }
+
+        private void textBoxHaste_TextChanged(object sender, EventArgs e)
+        {
+            int hasteRating = 0;
+            if (!int.TryParse(this.textBoxHasteRating.Text, out hasteRating))
+            {
+                this.textBoxHasteRating.Text = "";
+            }
+            Player.Instance.HasteRating = hasteRating;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+            DisplayHealing();
+        }
+
+        private void textBoxCrit_TextChanged(object sender, EventArgs e)
+        {
+            //double critPercent = 0;
+            //if (!int.TryParse(this.textBoxHasteRating.Text, out critPercent))
+            //{
+            //    this.textBoxHasteRating.Text = "";
+            //}
+            //Player.Instance.HasteRating = critPercent;
+
+            //if (selectedSpell != null)
+            //{
+            //    selectedSpell.Calculate();
+            //}
+            //DisplayHealing();
+        }
+
+        private void numericUpDownCritPercent_ValueChanged(object sender, EventArgs e)
+        {
+            var critPercent = this.numericUpDownCritPercent.Value;
+
+            Player.Instance.CriticalChance = (double)critPercent;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+            DisplayHealing();
         }
 
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,6 +165,39 @@ namespace App
             DisplayHealing();
         }
 
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                var check = sender as CheckBox;
+                if (check.Text == Constants.ModEmeraldVigor)
+                {
+                    if (check.Checked)
+                    {
+                        numericUpDownEmeraldVigor.Enabled = true;
+                    }
+                    else
+                    {
+                        numericUpDownEmeraldVigor.Enabled = false;
+                    }
+                    Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
+                }
+                selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
+                DisplayHealing();
+                return;
+            }
+
+            throw new Exception("Sender is not CheckBox");
+        }
+
+        private void numericUpDownEmeraldVigor_ValueChanged(object sender, EventArgs e)
+        {
+            var number = (int)((NumericUpDown)sender).Value;
+            Player.Instance.EmeraldVigorNumber = number;
+            selectedSpell.Calculate();
+            DisplayHealing();
+        }
+
         private List<string> GetTextOfCheckedModifiers()
         {
             var result = new List<string>();
@@ -139,6 +209,21 @@ namespace App
                 }
             }
             return result;
+        }
+
+        private void DisplayHealing()
+        {
+            this.textBoxHitTo.Text = Player.Instance.HitTo.ToString();
+            this.textBoxHitFrom.Text = Player.Instance.HitFrom.ToString();
+            this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
+        }
+
+        private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void textBoxHaste_KeyPress(object sender, KeyPressEventArgs e)
@@ -155,25 +240,6 @@ namespace App
             {
                 e.Handled = true;
             }
-        }
-
-        private void DisplayHealing()
-        {
-            this.textBoxHitTo.Text = Player.Instance.HitTo.ToString();
-            this.textBoxHitFrom.Text = Player.Instance.HitFrom.ToString();
-        }
-
-        private void CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is CheckBox)
-            {
-                var check = sender as CheckBox;
-                selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
-                DisplayHealing();
-                return;
-            }
-
-            throw new Exception("Sender is not CheckBox");
         }
     }
 }
