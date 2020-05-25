@@ -15,7 +15,9 @@ namespace App
 {
     public partial class Calculator : Form
     {
-        private List<CheckBox> checks;
+        private List<CheckBox> checkBoxes;
+
+        private Spell selectedSpell;
 
         public Calculator()
         {
@@ -46,7 +48,7 @@ namespace App
 
         private void AddControllsToList()
         {
-            checks = new List<CheckBox>()
+            checkBoxes = new List<CheckBox>()
             {
                 this.checkBoxTreeOfLife,
                 this.checkBoxHellscream,
@@ -104,29 +106,39 @@ namespace App
             }
             Player.Instance.SpellPower = spellPower;
 
-            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
 
-            var hitFrom = selectedSpell?.CalculateHitFrom();
-            this.textBoxHitFrom.Text = hitFrom?.ToString();
-
-            var hitTo = selectedSpell?.CalculateHitTo();
-            this.textBoxHitTo.Text = hitTo?.ToString();
+                DisplayHealing();
+            }
         }
 
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+            selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
-            selectedSpell.EnableDisableModifiers(checks);
+            selectedSpell.EnableDisableModifiers(checkBoxes);
 
-            //TODO get name of checked modifiers
-            //TODO selectedSpell.LoadModifiers();
+            var checkedModifiers = GetTextOfCheckedModifiers();
+            selectedSpell.CheckModifiers(checkedModifiers);
 
-            var hitFrom = selectedSpell.CalculateHitFrom();
-            this.textBoxHitFrom.Text = hitFrom.ToString();
+            selectedSpell.Calculate();
 
-            var hitTo = selectedSpell.CalculateHitTo();
-            this.textBoxHitTo.Text = hitTo.ToString();
+            DisplayHealing();
+        }
+
+        private List<string> GetTextOfCheckedModifiers()
+        {
+            var result = new List<string>();
+            foreach (var check in checkBoxes)
+            {
+                if (check.Enabled && check.Checked)
+                {
+                    result.Add(check.Text);
+                }
+            }
+            return result;
         }
 
         private void textBoxHaste_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +155,25 @@ namespace App
             {
                 e.Handled = true;
             }
+        }
+
+        private void DisplayHealing()
+        {
+            this.textBoxHitTo.Text = Player.Instance.HitTo.ToString();
+            this.textBoxHitFrom.Text = Player.Instance.HitFrom.ToString();
+        }
+
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                var check = sender as CheckBox;
+                selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
+                DisplayHealing();
+                return;
+            }
+
+            throw new Exception("Sender is not CheckBox");
         }
     }
 }

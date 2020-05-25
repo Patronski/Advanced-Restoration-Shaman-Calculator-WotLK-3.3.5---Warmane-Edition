@@ -9,7 +9,6 @@ namespace App.Models.Modifiers
 {
     public class EmeraldVigor : Modifier
     {
-
         public EmeraldVigor()
         {
             Display = Constants.ModEmeraldVigor;
@@ -18,7 +17,7 @@ namespace App.Models.Modifiers
             InitCheckBox();
         }
 
-        public override int Modify()
+        public override void Modify()
         {
             throw new NotImplementedException();
         }

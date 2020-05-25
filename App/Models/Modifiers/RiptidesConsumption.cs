@@ -17,10 +17,10 @@ namespace App.Models.Modifiers
             this.InitCheckBox();
         }
 
-        public override int Modify()
+        public override void Modify()
         {
-            Player.Instance.Hit = (int)(Player.Instance.Hit * Value);
-            return Player.Instance.Hit;
+            Player.Instance.HitFrom = (int)(Player.Instance.HitFrom * Value);
+            Player.Instance.HitTo = (int?)(Player.Instance.HitTo * Value);
         }
     }
 }

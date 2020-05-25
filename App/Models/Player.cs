@@ -18,8 +18,6 @@ namespace App.Models
 
         public int SpellPower { get; set; }
 
-        public int Hit { get; set; }
-
         public int HasteRating { get; set; }
 
         public double HastePercent { 
@@ -32,5 +30,9 @@ namespace App.Models
         public double CriticalChance { get; set; }
 
         public bool IsEquipedMetagemForCrit { get; set; }
+
+        public int? HitFrom { get; set; }
+
+        public int? HitTo { get; set; }
     }
 }

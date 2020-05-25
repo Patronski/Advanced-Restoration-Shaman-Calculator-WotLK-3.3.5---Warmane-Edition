@@ -17,10 +17,9 @@ namespace App.Models.Modifiers
             this.InitCheckBox();
         }
 
-        public override int Modify()
+        public override void Modify()
         {
             Player.Instance.HasteRating = (int)(Player.Instance.HasteRating * 1.03);
-            return Player.Instance.HasteRating;
         }
     }
 }

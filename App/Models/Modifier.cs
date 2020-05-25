@@ -25,7 +25,9 @@ namespace App.Models
 
         public CheckBox CheckBox { get; set; }
 
-        public abstract int Modify();
+        public bool IsCheckBoxChecked { get; set; }
+
+        public abstract void Modify();
 
         public void InitCheckBox()
         {

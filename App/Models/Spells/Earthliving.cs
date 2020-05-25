@@ -22,10 +22,6 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        private Modifier treeOfLife { get; set; } = new TreeOfLife();
-        private Modifier hellscreamsWarsong { get; set; } = new HellscreamsWarsong();
-        private Modifier emeraldVigor { get; set; } = new EmeraldVigor();
-
         public override int CalculateAstralAwakening()
         {
             throw new NotImplementedException();
@@ -41,16 +37,6 @@ namespace App.Models.Spells
         public override int? CalculateHitTo()
         {
             return null;
-        }
-
-        public override void LoadModifiers(FlowLayoutPanel parentPanel)
-        {
-            //parentPanel.Controls.Clear();
-
-            //parentPanel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
-            //parentPanel.Controls.Add(treeOfLife.CheckBox);
-            //parentPanel.Controls.Add(hellscreamsWarsong.CheckBox);
-            //parentPanel.Controls.Add(emeraldVigor.CheckBox);
         }
     }
 }

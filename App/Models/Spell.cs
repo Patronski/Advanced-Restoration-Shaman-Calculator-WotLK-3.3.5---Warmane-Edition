@@ -31,12 +31,44 @@ namespace App.Models
 
         public abstract int CalculateAstralAwakening();
 
+        public virtual void Calculate()
+        {
+            Player.Instance.HitFrom = CalculateHitFrom();
+            Player.Instance.HitTo = CalculateHitTo();
+
+            ModifyWithModifiers();
+        }
+
         public override string ToString()
         {
             return $"{this.Name} (Rank {this.RanksCount})";
         }
 
-        public abstract void LoadModifiers(FlowLayoutPanel parentPanel);
+        protected void ModifyWithModifiers()
+        {
+            foreach (var modifier in Modifiers)
+            {
+                if (modifier.IsCheckBoxChecked)
+                {
+                    modifier.Modify();
+                }
+            }
+        }
+
+        public void CheckModifiers(List<string> checkedModifierNames)
+        {
+            foreach (var modifier in this.Modifiers)
+            {
+                if (checkedModifierNames.Contains(modifier.Display))
+                {
+                    modifier.IsCheckBoxChecked = true;
+                }
+                else
+                {
+                    modifier.IsCheckBoxChecked = false;
+                }
+            }
+        }
 
         public virtual void EnableDisableModifiers(List<CheckBox> checks)
         {
@@ -51,6 +83,23 @@ namespace App.Models
                     check.Enabled = false;
                 }
             }
+        }
+
+        public void CalculateOnModifierChange(string name, bool isChecked)
+        {
+            foreach (var modifier in Modifiers)
+            {
+                if (name == modifier.Display)
+                {
+                    if (isChecked != modifier.IsCheckBoxChecked)
+                    {
+                        modifier.IsCheckBoxChecked = isChecked;
+                        break;
+                    }
+                }
+            }
+
+            Calculate();
         }
     }
 }

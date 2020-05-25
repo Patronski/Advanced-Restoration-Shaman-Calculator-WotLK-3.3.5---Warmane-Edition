@@ -215,6 +215,7 @@
             this.checkBoxTreeOfLife.TabIndex = 23;
             this.checkBoxTreeOfLife.Text = "Tree Of Life (Improved Devotion Aura)";
             this.checkBoxTreeOfLife.UseVisualStyleBackColor = true;
+            this.checkBoxTreeOfLife.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxHellscream
             // 
@@ -226,6 +227,7 @@
             this.checkBoxHellscream.TabIndex = 24;
             this.checkBoxHellscream.Text = "Hellscream\'s Warsong(Strength of Wrynn)";
             this.checkBoxHellscream.UseVisualStyleBackColor = true;
+            this.checkBoxHellscream.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxEmeraldVigor
             // 
@@ -237,6 +239,7 @@
             this.checkBoxEmeraldVigor.TabIndex = 25;
             this.checkBoxEmeraldVigor.Text = "Emerald Vigor";
             this.checkBoxEmeraldVigor.UseVisualStyleBackColor = true;
+            this.checkBoxEmeraldVigor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxRiptidesConsumption
             // 
@@ -248,6 +251,7 @@
             this.checkBoxRiptidesConsumption.TabIndex = 26;
             this.checkBoxRiptidesConsumption.Text = "Riptide\'s Consumption";
             this.checkBoxRiptidesConsumption.UseVisualStyleBackColor = true;
+            this.checkBoxRiptidesConsumption.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxGlyphOfEarthShield
             // 
@@ -259,6 +263,7 @@
             this.checkBoxGlyphOfEarthShield.TabIndex = 27;
             this.checkBoxGlyphOfEarthShield.Text = "Glyph of Earth Shield";
             this.checkBoxGlyphOfEarthShield.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfEarthShield.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxGyphOfHST
             // 
@@ -270,6 +275,7 @@
             this.checkBoxGyphOfHST.TabIndex = 28;
             this.checkBoxGyphOfHST.Text = "Glyph of HST";
             this.checkBoxGyphOfHST.UseVisualStyleBackColor = true;
+            this.checkBoxGyphOfHST.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxGlyphOfLHW
             // 
@@ -281,6 +287,7 @@
             this.checkBoxGlyphOfLHW.TabIndex = 29;
             this.checkBoxGlyphOfLHW.Text = "Glyph of LHW";
             this.checkBoxGlyphOfLHW.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfLHW.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelHasteModifiers
             // 
@@ -302,6 +309,7 @@
             this.checkBoxWrathOfTheAirTotem.TabIndex = 31;
             this.checkBoxWrathOfTheAirTotem.Text = "Wrath of the Air Totem";
             this.checkBoxWrathOfTheAirTotem.UseVisualStyleBackColor = true;
+            this.checkBoxWrathOfTheAirTotem.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxSwiftRetribution
             // 
@@ -313,6 +321,7 @@
             this.checkBoxSwiftRetribution.TabIndex = 32;
             this.checkBoxSwiftRetribution.Text = "Swift Retribution(Improved Moonkin Form)";
             this.checkBoxSwiftRetribution.UseVisualStyleBackColor = true;
+            this.checkBoxSwiftRetribution.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxBloodlust
             // 
@@ -324,6 +333,7 @@
             this.checkBoxBloodlust.TabIndex = 33;
             this.checkBoxBloodlust.Text = "Bloodlust Heroism";
             this.checkBoxBloodlust.UseVisualStyleBackColor = true;
+            this.checkBoxBloodlust.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxRapidCurrents
             // 
@@ -335,6 +345,7 @@
             this.checkBoxRapidCurrents.TabIndex = 34;
             this.checkBoxRapidCurrents.Text = "Rapid Currents";
             this.checkBoxRapidCurrents.UseVisualStyleBackColor = true;
+            this.checkBoxRapidCurrents.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxTidalWaves
             // 
@@ -346,6 +357,7 @@
             this.checkBoxTidalWaves.TabIndex = 35;
             this.checkBoxTidalWaves.Text = "Tidal Waves - haste";
             this.checkBoxTidalWaves.UseVisualStyleBackColor = true;
+            this.checkBoxTidalWaves.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelCritModifiers
             // 
@@ -367,6 +379,7 @@
             this.checkBoxTidalMastery.TabIndex = 37;
             this.checkBoxTidalMastery.Text = "Tidal Mastery";
             this.checkBoxTidalMastery.UseVisualStyleBackColor = true;
+            this.checkBoxTidalMastery.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxMoonkinForm
             // 
@@ -378,6 +391,7 @@
             this.checkBoxMoonkinForm.TabIndex = 38;
             this.checkBoxMoonkinForm.Text = "Moonkin Form(Elemental Oath)";
             this.checkBoxMoonkinForm.UseVisualStyleBackColor = true;
+            this.checkBoxMoonkinForm.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxTidalWavesCrit
             // 
@@ -389,6 +403,7 @@
             this.checkBoxTidalWavesCrit.TabIndex = 39;
             this.checkBoxTidalWavesCrit.Text = "Tidal Waves - crit";
             this.checkBoxTidalWavesCrit.UseVisualStyleBackColor = true;
+            this.checkBoxTidalWavesCrit.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // Calculator
             // 

@@ -24,25 +24,6 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        private Modifier treeOfLife { get; set; } = new TreeOfLife();
-
-        private Modifier hellscreamsWarsong { get; set; } = new HellscreamsWarsong();
-
-        private Modifier emeraldVigor { get; set; } = new EmeraldVigor();
-
-        private Modifier glyphOfHealingStreamTotem { get; set; } = new GlyphOfHealingStreamTotem();
-
-        public override void LoadModifiers(FlowLayoutPanel panel)
-        {
-            //panel.Controls.Clear();
-
-            //panel.Controls.Add(new Label() { Text = "---HEALING MODIFIERS---", AutoSize = true });
-            //panel.Controls.Add(treeOfLife.CheckBox);
-            //panel.Controls.Add(this.hellscreamsWarsong.CheckBox);
-            //panel.Controls.Add(emeraldVigor.CheckBox);
-            //panel.Controls.Add(glyphOfHealingStreamTotem.CheckBox);
-        }
-
         public override int CalculateAstralAwakening()
         {
             throw new NotImplementedException();
@@ -52,7 +33,9 @@ namespace App.Models.Spells
         {
             int rounded = (int)(12.408 * Player.Instance.SpellPower) + 3750;
 
-            return rounded / 150;
+            rounded = rounded / 150;
+
+            return rounded;
         }
 
         public override int? CalculateHitTo()

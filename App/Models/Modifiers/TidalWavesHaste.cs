@@ -17,15 +17,13 @@ namespace App.Models.Modifiers
             this.InitCheckBox();
         }
 
-        public override int Modify()
+        public override void Modify()
         {
             Player.Instance.CriticalChance = Player.Instance.CriticalChance + 25;
             if (Player.Instance.CriticalChance > 100)
             {
                 Player.Instance.CriticalChance = 100;
             }
-
-            return (int)Player.Instance.CriticalChance;
         }
     }
 }
