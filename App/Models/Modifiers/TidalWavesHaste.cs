@@ -19,11 +19,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 25;
-            if (Player.Instance.CriticalChance > 100)
-            {
-                Player.Instance.CriticalChance = 100;
-            }
+            Player.Instance.HastePercent = Player.Instance.HastePercent + 25;
         }
     }
 }

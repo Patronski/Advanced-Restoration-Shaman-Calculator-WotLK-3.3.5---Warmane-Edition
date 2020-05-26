@@ -20,7 +20,7 @@ namespace App.Models.Modifiers
         public override void Modify()
         {
             Player.Instance.HitFrom = (int)(Player.Instance.HitFrom * Value);
-            Player.Instance.HitTo = (int)(Player.Instance.HitTo * Value);
+            Player.Instance.HitTo = (int?)(Player.Instance.HitTo * Value);
         }
     }
 }

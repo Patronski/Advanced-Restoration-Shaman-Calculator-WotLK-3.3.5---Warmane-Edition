@@ -20,8 +20,9 @@ namespace App.Models.Modifiers
         public override void Modify()
         {
             var emeraldVigorMultiplier = 1 + (Player.Instance.EmeraldVigorNumber / 10d);
+
             Player.Instance.HitFrom = (int)(emeraldVigorMultiplier * Player.Instance.HitFrom);
-            Player.Instance.HitTo = (int)(emeraldVigorMultiplier * Player.Instance.HitTo);
+            Player.Instance.HitTo = (int?)(emeraldVigorMultiplier * Player.Instance.HitTo);
         }
     }
 }

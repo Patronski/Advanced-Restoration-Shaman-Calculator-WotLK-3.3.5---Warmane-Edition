@@ -18,6 +18,7 @@ namespace App
         private List<CheckBox> checkBoxes;
 
         private Spell selectedSpell;
+        private bool isAfterCritKeyPress;
 
         public Calculator()
         {
@@ -124,31 +125,22 @@ namespace App
 
         private void textBoxCrit_TextChanged(object sender, EventArgs e)
         {
-            //double critPercent = 0;
-            //if (!int.TryParse(this.textBoxHasteRating.Text, out critPercent))
-            //{
-            //    this.textBoxHasteRating.Text = "";
-            //}
-            //Player.Instance.HasteRating = critPercent;
+            if (isAfterCritKeyPress)
+            {
+                isAfterCritKeyPress = false;
 
-            //if (selectedSpell != null)
-            //{
-            //    selectedSpell.Calculate();
-            //}
-            //DisplayHealing();
-        }
-
-        private void numericUpDownCritPercent_ValueChanged(object sender, EventArgs e)
-        {
-            var critPercent = this.numericUpDownCritPercent.Value;
-
-            Player.Instance.CriticalChance = (double)critPercent;
+                double crit = 0;
+                if (double.TryParse(this.textBoxCrit.Text, out crit))
+                {
+                    Player.Instance.CriticalChanceInitial = crit;
+                }
+            }
 
             if (selectedSpell != null)
             {
                 selectedSpell.Calculate();
+                DisplayHealing();
             }
-            DisplayHealing();
         }
 
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
@@ -183,6 +175,7 @@ namespace App
                     Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
                 }
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
+                Player.Instance.IsCritModified = true;
                 DisplayHealing();
                 return;
             }
@@ -216,6 +209,11 @@ namespace App
             this.textBoxHitTo.Text = Player.Instance.HitTo.ToString();
             this.textBoxHitFrom.Text = Player.Instance.HitFrom.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
+            if (Player.Instance.IsCritModified)
+            {
+                Player.Instance.IsCritModified = false;
+                this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
+            }
         }
 
         private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
@@ -236,10 +234,45 @@ namespace App
 
         private void textBoxCrit_KeyPress(object sender, KeyPressEventArgs e)
         {
+            var box = (TextBox)sender;
+            var text = box.Text;
+            var length = box.TextLength;
+            var containsDot = text.Contains('.');
+            
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
+                return;
             }
+            if ((e.KeyChar == '.' && containsDot) || (e.KeyChar == '.' && length == 0))
+            {
+                e.Handled = true;
+                return;
+            }
+            if (containsDot
+                && (length - text.IndexOf('.') > 2)
+                && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            double critChance;
+            if (double.TryParse(text + e.KeyChar, out critChance))
+            {
+                if (critChance > 100 && box.SelectionLength == 0)
+                {
+                    e.Handled = true;
+                }
+            }
+            isAfterCritKeyPress = true;
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            var t = (ToolTip)sender;
+            
         }
     }
 }

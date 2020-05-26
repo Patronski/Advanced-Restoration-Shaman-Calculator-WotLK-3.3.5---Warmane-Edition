@@ -33,6 +33,7 @@ namespace App.Models
 
         public virtual void Calculate()
         {
+            Player.Instance.Recalculate();
             Player.Instance.HitFrom = CalculateHitFrom();
             Player.Instance.HitTo = CalculateHitTo();
 

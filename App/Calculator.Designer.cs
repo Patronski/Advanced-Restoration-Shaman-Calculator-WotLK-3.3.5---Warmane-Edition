@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.labelSpellPower = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
@@ -62,9 +63,8 @@
             this.checkBoxMoonkinForm = new System.Windows.Forms.CheckBox();
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownCritPercent = new System.Windows.Forms.NumericUpDown();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCritPercent)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -101,8 +101,8 @@
             // 
             // textBoxCrit
             // 
-            this.textBoxCrit.Location = new System.Drawing.Point(883, 31);
-            this.textBoxCrit.MaxLength = 6;
+            this.textBoxCrit.Location = new System.Drawing.Point(761, 34);
+            this.textBoxCrit.MaxLength = 5;
             this.textBoxCrit.Name = "textBoxCrit";
             this.textBoxCrit.Size = new System.Drawing.Size(88, 20);
             this.textBoxCrit.TabIndex = 9;
@@ -221,6 +221,7 @@
             this.checkBoxTreeOfLife.Size = new System.Drawing.Size(206, 17);
             this.checkBoxTreeOfLife.TabIndex = 23;
             this.checkBoxTreeOfLife.Text = "Tree Of Life (Improved Devotion Aura)";
+            this.toolTip1.SetToolTip(this.checkBoxTreeOfLife, "dsdssssss");
             this.checkBoxTreeOfLife.UseVisualStyleBackColor = true;
             this.checkBoxTreeOfLife.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
@@ -233,6 +234,7 @@
             this.checkBoxHellscream.Size = new System.Drawing.Size(223, 17);
             this.checkBoxHellscream.TabIndex = 24;
             this.checkBoxHellscream.Text = "Hellscream\'s Warsong(Strength of Wrynn)";
+            this.toolTip1.SetToolTip(this.checkBoxHellscream, "sasasa");
             this.checkBoxHellscream.UseVisualStyleBackColor = true;
             this.checkBoxHellscream.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
@@ -431,19 +433,14 @@
             0});
             this.numericUpDownEmeraldVigor.ValueChanged += new System.EventHandler(this.numericUpDownEmeraldVigor_ValueChanged);
             // 
-            // numericUpDownCritPercent
+            // toolTip1
             // 
-            this.numericUpDownCritPercent.DecimalPlaces = 2;
-            this.numericUpDownCritPercent.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownCritPercent.Location = new System.Drawing.Point(761, 35);
-            this.numericUpDownCritPercent.Name = "numericUpDownCritPercent";
-            this.numericUpDownCritPercent.Size = new System.Drawing.Size(78, 20);
-            this.numericUpDownCritPercent.TabIndex = 41;
-            this.numericUpDownCritPercent.ValueChanged += new System.EventHandler(this.numericUpDownCritPercent_ValueChanged);
+            this.toolTip1.BackColor = System.Drawing.Color.Indigo;
+            this.toolTip1.ForeColor = System.Drawing.Color.DarkRed;
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "ToolTip";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // Calculator
             // 
@@ -451,7 +448,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1061, 502);
-            this.Controls.Add(this.numericUpDownCritPercent);
             this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
             this.Controls.Add(this.checkBoxMoonkinForm);
@@ -490,7 +486,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCritPercent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,7 +526,7 @@
         private System.Windows.Forms.CheckBox checkBoxMoonkinForm;
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
-        private System.Windows.Forms.NumericUpDown numericUpDownCritPercent;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
