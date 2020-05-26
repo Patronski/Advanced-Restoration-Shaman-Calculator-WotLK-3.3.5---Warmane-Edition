@@ -64,15 +64,15 @@
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
             // 
             this.labelSpellPower.AutoSize = true;
-            this.labelSpellPower.Enabled = false;
             this.labelSpellPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSpellPower.Location = new System.Drawing.Point(331, 13);
+            this.labelSpellPower.Location = new System.Drawing.Point(331, 17);
             this.labelSpellPower.Name = "labelSpellPower";
             this.labelSpellPower.Size = new System.Drawing.Size(95, 16);
             this.labelSpellPower.TabIndex = 0;
@@ -80,10 +80,10 @@
             // 
             // textBoxSpellPower
             // 
-            this.textBoxSpellPower.Location = new System.Drawing.Point(334, 35);
+            this.textBoxSpellPower.Location = new System.Drawing.Point(432, 11);
             this.textBoxSpellPower.MaxLength = 6;
             this.textBoxSpellPower.Name = "textBoxSpellPower";
-            this.textBoxSpellPower.Size = new System.Drawing.Size(77, 20);
+            this.textBoxSpellPower.Size = new System.Drawing.Size(52, 20);
             this.textBoxSpellPower.TabIndex = 1;
             this.textBoxSpellPower.TextChanged += new System.EventHandler(this.textBoxSpellPower_TextChanged);
             this.textBoxSpellPower.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSpellPower_KeyPress);
@@ -101,10 +101,10 @@
             // 
             // textBoxCrit
             // 
-            this.textBoxCrit.Location = new System.Drawing.Point(761, 34);
+            this.textBoxCrit.Location = new System.Drawing.Point(895, 10);
             this.textBoxCrit.MaxLength = 5;
             this.textBoxCrit.Name = "textBoxCrit";
-            this.textBoxCrit.Size = new System.Drawing.Size(88, 20);
+            this.textBoxCrit.Size = new System.Drawing.Size(46, 20);
             this.textBoxCrit.TabIndex = 9;
             this.textBoxCrit.TextChanged += new System.EventHandler(this.textBoxCrit_TextChanged);
             this.textBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCrit_KeyPress);
@@ -113,7 +113,7 @@
             // 
             this.labelCrit.AutoSize = true;
             this.labelCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCrit.Location = new System.Drawing.Point(758, 13);
+            this.labelCrit.Location = new System.Drawing.Point(798, 17);
             this.labelCrit.Name = "labelCrit";
             this.labelCrit.Size = new System.Drawing.Size(91, 16);
             this.labelCrit.TabIndex = 8;
@@ -121,7 +121,7 @@
             // 
             // textBoxHasteRating
             // 
-            this.textBoxHasteRating.Location = new System.Drawing.Point(544, 32);
+            this.textBoxHasteRating.Location = new System.Drawing.Point(615, 11);
             this.textBoxHasteRating.MaxLength = 6;
             this.textBoxHasteRating.Name = "textBoxHasteRating";
             this.textBoxHasteRating.Size = new System.Drawing.Size(39, 20);
@@ -133,7 +133,7 @@
             // 
             this.labelHaste.AutoSize = true;
             this.labelHaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHaste.Location = new System.Drawing.Point(552, 13);
+            this.labelHaste.Location = new System.Drawing.Point(507, 17);
             this.labelHaste.Name = "labelHaste";
             this.labelHaste.Size = new System.Drawing.Size(102, 16);
             this.labelHaste.TabIndex = 10;
@@ -175,7 +175,7 @@
             // 
             // textBoxHastePercent
             // 
-            this.textBoxHastePercent.Location = new System.Drawing.Point(621, 32);
+            this.textBoxHastePercent.Location = new System.Drawing.Point(692, 11);
             this.textBoxHastePercent.MaxLength = 6;
             this.textBoxHastePercent.Name = "textBoxHastePercent";
             this.textBoxHastePercent.ReadOnly = true;
@@ -186,7 +186,7 @@
             // 
             this.labelPercent.AutoSize = true;
             this.labelPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPercent.Location = new System.Drawing.Point(677, 35);
+            this.labelPercent.Location = new System.Drawing.Point(748, 14);
             this.labelPercent.Name = "labelPercent";
             this.labelPercent.Size = new System.Drawing.Size(21, 16);
             this.labelPercent.TabIndex = 19;
@@ -196,7 +196,7 @@
             // 
             this.labelArrow.AutoSize = true;
             this.labelArrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrow.Location = new System.Drawing.Point(589, 36);
+            this.labelArrow.Location = new System.Drawing.Point(660, 15);
             this.labelArrow.Name = "labelArrow";
             this.labelArrow.Size = new System.Drawing.Size(26, 16);
             this.labelArrow.TabIndex = 20;
@@ -442,12 +442,23 @@
             this.toolTip1.ToolTipTitle = "ToolTip";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(947, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 16);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "%";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1061, 502);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
             this.Controls.Add(this.checkBoxMoonkinForm);
@@ -527,6 +538,7 @@
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
