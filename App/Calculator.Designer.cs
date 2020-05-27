@@ -38,9 +38,9 @@
             this.textBoxHasteRating = new System.Windows.Forms.TextBox();
             this.labelHaste = new System.Windows.Forms.Label();
             this.labelHit = new System.Windows.Forms.Label();
-            this.textBoxHitFrom = new System.Windows.Forms.TextBox();
-            this.labelDash = new System.Windows.Forms.Label();
-            this.textBoxHitTo = new System.Windows.Forms.TextBox();
+            this.textBoxHit1From = new System.Windows.Forms.TextBox();
+            this.labelDashHit1 = new System.Windows.Forms.Label();
+            this.textBoxHit1To = new System.Windows.Forms.TextBox();
             this.textBoxHastePercent = new System.Windows.Forms.TextBox();
             this.labelPercent = new System.Windows.Forms.Label();
             this.labelArrow = new System.Windows.Forms.Label();
@@ -65,6 +65,56 @@
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.labelArrowHit1 = new System.Windows.Forms.Label();
+            this.textBoxHit1Avg = new System.Windows.Forms.TextBox();
+            this.labelCritMax = new System.Windows.Forms.Label();
+            this.textBoxCrit1Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowcCrit1 = new System.Windows.Forms.Label();
+            this.textBoxCrit1To = new System.Windows.Forms.TextBox();
+            this.labelDashCrit1 = new System.Windows.Forms.Label();
+            this.textBoxCrit1From = new System.Windows.Forms.TextBox();
+            this.labelAvgHot1 = new System.Windows.Forms.Label();
+            this.textBoxAvgHot1 = new System.Windows.Forms.TextBox();
+            this.labelTarget1 = new System.Windows.Forms.Label();
+            this.labelTarget2 = new System.Windows.Forms.Label();
+            this.textBoxAvgHot2 = new System.Windows.Forms.TextBox();
+            this.labelAvgHot2 = new System.Windows.Forms.Label();
+            this.textBoxCrit2Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowcCrit2 = new System.Windows.Forms.Label();
+            this.textBoxCrit2To = new System.Windows.Forms.TextBox();
+            this.labelDashCrit2 = new System.Windows.Forms.Label();
+            this.textBoxCrit2From = new System.Windows.Forms.TextBox();
+            this.textBoxHit2Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowHit2 = new System.Windows.Forms.Label();
+            this.textBoxHit2To = new System.Windows.Forms.TextBox();
+            this.labelDashHit2 = new System.Windows.Forms.Label();
+            this.textBoxHit2From = new System.Windows.Forms.TextBox();
+            this.labelTarget3 = new System.Windows.Forms.Label();
+            this.textBoxAvgHot3 = new System.Windows.Forms.TextBox();
+            this.labelAvgHot3 = new System.Windows.Forms.Label();
+            this.textBoxCrit3Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowcCrit3 = new System.Windows.Forms.Label();
+            this.textBoxCrit3To = new System.Windows.Forms.TextBox();
+            this.labelDashCrit3 = new System.Windows.Forms.Label();
+            this.textBoxCrit3From = new System.Windows.Forms.TextBox();
+            this.textBoxHit3Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowHit3 = new System.Windows.Forms.Label();
+            this.textBoxHit3To = new System.Windows.Forms.TextBox();
+            this.labelDashHit3 = new System.Windows.Forms.Label();
+            this.textBoxHit3From = new System.Windows.Forms.TextBox();
+            this.labelTarget4 = new System.Windows.Forms.Label();
+            this.textBoxAvgHot4 = new System.Windows.Forms.TextBox();
+            this.labelAvgHot4 = new System.Windows.Forms.Label();
+            this.textBoxCrit4Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowcCrit4 = new System.Windows.Forms.Label();
+            this.textBoxCrit4To = new System.Windows.Forms.TextBox();
+            this.labelDashCrit4 = new System.Windows.Forms.Label();
+            this.textBoxCrit4From = new System.Windows.Forms.TextBox();
+            this.textBoxHit4Avg = new System.Windows.Forms.TextBox();
+            this.labelArrowHit4 = new System.Windows.Forms.Label();
+            this.textBoxHit4To = new System.Windows.Forms.TextBox();
+            this.labelDashHit4 = new System.Windows.Forms.Label();
+            this.textBoxHit4From = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,36 +192,38 @@
             // labelHit
             // 
             this.labelHit.AutoSize = true;
-            this.labelHit.Location = new System.Drawing.Point(331, 87);
+            this.labelHit.Location = new System.Drawing.Point(385, 69);
             this.labelHit.Name = "labelHit";
             this.labelHit.Size = new System.Drawing.Size(23, 13);
             this.labelHit.TabIndex = 0;
             this.labelHit.Text = "Hit:";
             // 
-            // textBoxHitFrom
+            // textBoxHit1From
             // 
-            this.textBoxHitFrom.Location = new System.Drawing.Point(361, 85);
-            this.textBoxHitFrom.MaxLength = 10;
-            this.textBoxHitFrom.Name = "textBoxHitFrom";
-            this.textBoxHitFrom.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHitFrom.TabIndex = 13;
+            this.textBoxHit1From.Location = new System.Drawing.Point(361, 85);
+            this.textBoxHit1From.MaxLength = 10;
+            this.textBoxHit1From.Name = "textBoxHit1From";
+            this.textBoxHit1From.ReadOnly = true;
+            this.textBoxHit1From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit1From.TabIndex = 13;
             // 
-            // labelDash
+            // labelDashHit1
             // 
-            this.labelDash.AutoSize = true;
-            this.labelDash.Location = new System.Drawing.Point(467, 88);
-            this.labelDash.Name = "labelDash";
-            this.labelDash.Size = new System.Drawing.Size(13, 13);
-            this.labelDash.TabIndex = 15;
-            this.labelDash.Text = "—";
+            this.labelDashHit1.AutoSize = true;
+            this.labelDashHit1.Location = new System.Drawing.Point(432, 88);
+            this.labelDashHit1.Name = "labelDashHit1";
+            this.labelDashHit1.Size = new System.Drawing.Size(13, 13);
+            this.labelDashHit1.TabIndex = 15;
+            this.labelDashHit1.Text = "—";
             // 
-            // textBoxHitTo
+            // textBoxHit1To
             // 
-            this.textBoxHitTo.Location = new System.Drawing.Point(486, 85);
-            this.textBoxHitTo.MaxLength = 10;
-            this.textBoxHitTo.Name = "textBoxHitTo";
-            this.textBoxHitTo.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHitTo.TabIndex = 16;
+            this.textBoxHit1To.Location = new System.Drawing.Point(451, 84);
+            this.textBoxHit1To.MaxLength = 10;
+            this.textBoxHit1To.Name = "textBoxHit1To";
+            this.textBoxHit1To.ReadOnly = true;
+            this.textBoxHit1To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit1To.TabIndex = 16;
             // 
             // textBoxHastePercent
             // 
@@ -196,7 +248,7 @@
             // 
             this.labelArrow.AutoSize = true;
             this.labelArrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrow.Location = new System.Drawing.Point(660, 15);
+            this.labelArrow.Location = new System.Drawing.Point(660, 11);
             this.labelArrow.Name = "labelArrow";
             this.labelArrow.Size = new System.Drawing.Size(26, 16);
             this.labelArrow.TabIndex = 20;
@@ -452,12 +504,520 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "%";
             // 
+            // labelArrowHit1
+            // 
+            this.labelArrowHit1.AutoSize = true;
+            this.labelArrowHit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowHit1.Location = new System.Drawing.Point(516, 86);
+            this.labelArrowHit1.Name = "labelArrowHit1";
+            this.labelArrowHit1.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowHit1.TabIndex = 42;
+            this.labelArrowHit1.Text = "—>";
+            // 
+            // textBoxHit1Avg
+            // 
+            this.textBoxHit1Avg.Location = new System.Drawing.Point(548, 84);
+            this.textBoxHit1Avg.MaxLength = 10;
+            this.textBoxHit1Avg.Name = "textBoxHit1Avg";
+            this.textBoxHit1Avg.ReadOnly = true;
+            this.textBoxHit1Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit1Avg.TabIndex = 43;
+            // 
+            // labelCritMax
+            // 
+            this.labelCritMax.AutoSize = true;
+            this.labelCritMax.Location = new System.Drawing.Point(660, 69);
+            this.labelCritMax.Name = "labelCritMax";
+            this.labelCritMax.Size = new System.Drawing.Size(25, 13);
+            this.labelCritMax.TabIndex = 44;
+            this.labelCritMax.Text = "Crit:";
+            // 
+            // textBoxCrit1Avg
+            // 
+            this.textBoxCrit1Avg.Location = new System.Drawing.Point(850, 84);
+            this.textBoxCrit1Avg.MaxLength = 10;
+            this.textBoxCrit1Avg.Name = "textBoxCrit1Avg";
+            this.textBoxCrit1Avg.ReadOnly = true;
+            this.textBoxCrit1Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit1Avg.TabIndex = 49;
+            // 
+            // labelArrowcCrit1
+            // 
+            this.labelArrowcCrit1.AutoSize = true;
+            this.labelArrowcCrit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowcCrit1.Location = new System.Drawing.Point(818, 86);
+            this.labelArrowcCrit1.Name = "labelArrowcCrit1";
+            this.labelArrowcCrit1.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowcCrit1.TabIndex = 48;
+            this.labelArrowcCrit1.Text = "—>";
+            // 
+            // textBoxCrit1To
+            // 
+            this.textBoxCrit1To.Location = new System.Drawing.Point(753, 84);
+            this.textBoxCrit1To.MaxLength = 10;
+            this.textBoxCrit1To.Name = "textBoxCrit1To";
+            this.textBoxCrit1To.ReadOnly = true;
+            this.textBoxCrit1To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit1To.TabIndex = 47;
+            // 
+            // labelDashCrit1
+            // 
+            this.labelDashCrit1.AutoSize = true;
+            this.labelDashCrit1.Location = new System.Drawing.Point(734, 88);
+            this.labelDashCrit1.Name = "labelDashCrit1";
+            this.labelDashCrit1.Size = new System.Drawing.Size(13, 13);
+            this.labelDashCrit1.TabIndex = 46;
+            this.labelDashCrit1.Text = "—";
+            // 
+            // textBoxCrit1From
+            // 
+            this.textBoxCrit1From.Location = new System.Drawing.Point(663, 85);
+            this.textBoxCrit1From.MaxLength = 10;
+            this.textBoxCrit1From.Name = "textBoxCrit1From";
+            this.textBoxCrit1From.ReadOnly = true;
+            this.textBoxCrit1From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit1From.TabIndex = 45;
+            // 
+            // labelAvgHot1
+            // 
+            this.labelAvgHot1.AutoSize = true;
+            this.labelAvgHot1.Location = new System.Drawing.Point(928, 87);
+            this.labelAvgHot1.Name = "labelAvgHot1";
+            this.labelAvgHot1.Size = new System.Drawing.Size(61, 13);
+            this.labelAvgHot1.TabIndex = 50;
+            this.labelAvgHot1.Text = "AVG. HOT:";
+            // 
+            // textBoxAvgHot1
+            // 
+            this.textBoxAvgHot1.Location = new System.Drawing.Point(995, 84);
+            this.textBoxAvgHot1.MaxLength = 10;
+            this.textBoxAvgHot1.Name = "textBoxAvgHot1";
+            this.textBoxAvgHot1.ReadOnly = true;
+            this.textBoxAvgHot1.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot1.TabIndex = 51;
+            // 
+            // labelTarget1
+            // 
+            this.labelTarget1.AutoSize = true;
+            this.labelTarget1.Location = new System.Drawing.Point(305, 88);
+            this.labelTarget1.Name = "labelTarget1";
+            this.labelTarget1.Size = new System.Drawing.Size(50, 13);
+            this.labelTarget1.TabIndex = 52;
+            this.labelTarget1.Text = "Target 1:";
+            // 
+            // labelTarget2
+            // 
+            this.labelTarget2.AutoSize = true;
+            this.labelTarget2.Location = new System.Drawing.Point(305, 125);
+            this.labelTarget2.Name = "labelTarget2";
+            this.labelTarget2.Size = new System.Drawing.Size(50, 13);
+            this.labelTarget2.TabIndex = 67;
+            this.labelTarget2.Text = "Target 2:";
+            // 
+            // textBoxAvgHot2
+            // 
+            this.textBoxAvgHot2.Location = new System.Drawing.Point(995, 121);
+            this.textBoxAvgHot2.MaxLength = 10;
+            this.textBoxAvgHot2.Name = "textBoxAvgHot2";
+            this.textBoxAvgHot2.ReadOnly = true;
+            this.textBoxAvgHot2.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot2.TabIndex = 66;
+            // 
+            // labelAvgHot2
+            // 
+            this.labelAvgHot2.AutoSize = true;
+            this.labelAvgHot2.Location = new System.Drawing.Point(928, 124);
+            this.labelAvgHot2.Name = "labelAvgHot2";
+            this.labelAvgHot2.Size = new System.Drawing.Size(61, 13);
+            this.labelAvgHot2.TabIndex = 65;
+            this.labelAvgHot2.Text = "AVG. HOT:";
+            // 
+            // textBoxCrit2Avg
+            // 
+            this.textBoxCrit2Avg.Location = new System.Drawing.Point(850, 121);
+            this.textBoxCrit2Avg.MaxLength = 10;
+            this.textBoxCrit2Avg.Name = "textBoxCrit2Avg";
+            this.textBoxCrit2Avg.ReadOnly = true;
+            this.textBoxCrit2Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit2Avg.TabIndex = 64;
+            // 
+            // labelArrowcCrit2
+            // 
+            this.labelArrowcCrit2.AutoSize = true;
+            this.labelArrowcCrit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowcCrit2.Location = new System.Drawing.Point(818, 123);
+            this.labelArrowcCrit2.Name = "labelArrowcCrit2";
+            this.labelArrowcCrit2.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowcCrit2.TabIndex = 63;
+            this.labelArrowcCrit2.Text = "—>";
+            // 
+            // textBoxCrit2To
+            // 
+            this.textBoxCrit2To.Location = new System.Drawing.Point(753, 121);
+            this.textBoxCrit2To.MaxLength = 10;
+            this.textBoxCrit2To.Name = "textBoxCrit2To";
+            this.textBoxCrit2To.ReadOnly = true;
+            this.textBoxCrit2To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit2To.TabIndex = 62;
+            // 
+            // labelDashCrit2
+            // 
+            this.labelDashCrit2.AutoSize = true;
+            this.labelDashCrit2.Location = new System.Drawing.Point(734, 125);
+            this.labelDashCrit2.Name = "labelDashCrit2";
+            this.labelDashCrit2.Size = new System.Drawing.Size(13, 13);
+            this.labelDashCrit2.TabIndex = 61;
+            this.labelDashCrit2.Text = "—";
+            // 
+            // textBoxCrit2From
+            // 
+            this.textBoxCrit2From.Location = new System.Drawing.Point(663, 122);
+            this.textBoxCrit2From.MaxLength = 10;
+            this.textBoxCrit2From.Name = "textBoxCrit2From";
+            this.textBoxCrit2From.ReadOnly = true;
+            this.textBoxCrit2From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit2From.TabIndex = 60;
+            // 
+            // textBoxHit2Avg
+            // 
+            this.textBoxHit2Avg.Location = new System.Drawing.Point(548, 121);
+            this.textBoxHit2Avg.MaxLength = 10;
+            this.textBoxHit2Avg.Name = "textBoxHit2Avg";
+            this.textBoxHit2Avg.ReadOnly = true;
+            this.textBoxHit2Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit2Avg.TabIndex = 58;
+            // 
+            // labelArrowHit2
+            // 
+            this.labelArrowHit2.AutoSize = true;
+            this.labelArrowHit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowHit2.Location = new System.Drawing.Point(516, 123);
+            this.labelArrowHit2.Name = "labelArrowHit2";
+            this.labelArrowHit2.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowHit2.TabIndex = 57;
+            this.labelArrowHit2.Text = "—>";
+            // 
+            // textBoxHit2To
+            // 
+            this.textBoxHit2To.Location = new System.Drawing.Point(451, 121);
+            this.textBoxHit2To.MaxLength = 10;
+            this.textBoxHit2To.Name = "textBoxHit2To";
+            this.textBoxHit2To.ReadOnly = true;
+            this.textBoxHit2To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit2To.TabIndex = 56;
+            // 
+            // labelDashHit2
+            // 
+            this.labelDashHit2.AutoSize = true;
+            this.labelDashHit2.Location = new System.Drawing.Point(432, 125);
+            this.labelDashHit2.Name = "labelDashHit2";
+            this.labelDashHit2.Size = new System.Drawing.Size(13, 13);
+            this.labelDashHit2.TabIndex = 55;
+            this.labelDashHit2.Text = "—";
+            // 
+            // textBoxHit2From
+            // 
+            this.textBoxHit2From.Location = new System.Drawing.Point(361, 122);
+            this.textBoxHit2From.MaxLength = 10;
+            this.textBoxHit2From.Name = "textBoxHit2From";
+            this.textBoxHit2From.ReadOnly = true;
+            this.textBoxHit2From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit2From.TabIndex = 54;
+            // 
+            // labelTarget3
+            // 
+            this.labelTarget3.AutoSize = true;
+            this.labelTarget3.Location = new System.Drawing.Point(305, 165);
+            this.labelTarget3.Name = "labelTarget3";
+            this.labelTarget3.Size = new System.Drawing.Size(50, 13);
+            this.labelTarget3.TabIndex = 82;
+            this.labelTarget3.Text = "Target 3:";
+            // 
+            // textBoxAvgHot3
+            // 
+            this.textBoxAvgHot3.Location = new System.Drawing.Point(995, 161);
+            this.textBoxAvgHot3.MaxLength = 10;
+            this.textBoxAvgHot3.Name = "textBoxAvgHot3";
+            this.textBoxAvgHot3.ReadOnly = true;
+            this.textBoxAvgHot3.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot3.TabIndex = 81;
+            // 
+            // labelAvgHot3
+            // 
+            this.labelAvgHot3.AutoSize = true;
+            this.labelAvgHot3.Location = new System.Drawing.Point(928, 164);
+            this.labelAvgHot3.Name = "labelAvgHot3";
+            this.labelAvgHot3.Size = new System.Drawing.Size(61, 13);
+            this.labelAvgHot3.TabIndex = 80;
+            this.labelAvgHot3.Text = "AVG. HOT:";
+            // 
+            // textBoxCrit3Avg
+            // 
+            this.textBoxCrit3Avg.Location = new System.Drawing.Point(850, 161);
+            this.textBoxCrit3Avg.MaxLength = 10;
+            this.textBoxCrit3Avg.Name = "textBoxCrit3Avg";
+            this.textBoxCrit3Avg.ReadOnly = true;
+            this.textBoxCrit3Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit3Avg.TabIndex = 79;
+            // 
+            // labelArrowcCrit3
+            // 
+            this.labelArrowcCrit3.AutoSize = true;
+            this.labelArrowcCrit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowcCrit3.Location = new System.Drawing.Point(818, 163);
+            this.labelArrowcCrit3.Name = "labelArrowcCrit3";
+            this.labelArrowcCrit3.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowcCrit3.TabIndex = 78;
+            this.labelArrowcCrit3.Text = "—>";
+            // 
+            // textBoxCrit3To
+            // 
+            this.textBoxCrit3To.Location = new System.Drawing.Point(753, 161);
+            this.textBoxCrit3To.MaxLength = 10;
+            this.textBoxCrit3To.Name = "textBoxCrit3To";
+            this.textBoxCrit3To.ReadOnly = true;
+            this.textBoxCrit3To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit3To.TabIndex = 77;
+            // 
+            // labelDashCrit3
+            // 
+            this.labelDashCrit3.AutoSize = true;
+            this.labelDashCrit3.Location = new System.Drawing.Point(734, 165);
+            this.labelDashCrit3.Name = "labelDashCrit3";
+            this.labelDashCrit3.Size = new System.Drawing.Size(13, 13);
+            this.labelDashCrit3.TabIndex = 76;
+            this.labelDashCrit3.Text = "—";
+            // 
+            // textBoxCrit3From
+            // 
+            this.textBoxCrit3From.Location = new System.Drawing.Point(663, 162);
+            this.textBoxCrit3From.MaxLength = 10;
+            this.textBoxCrit3From.Name = "textBoxCrit3From";
+            this.textBoxCrit3From.ReadOnly = true;
+            this.textBoxCrit3From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit3From.TabIndex = 75;
+            // 
+            // textBoxHit3Avg
+            // 
+            this.textBoxHit3Avg.Location = new System.Drawing.Point(548, 161);
+            this.textBoxHit3Avg.MaxLength = 10;
+            this.textBoxHit3Avg.Name = "textBoxHit3Avg";
+            this.textBoxHit3Avg.ReadOnly = true;
+            this.textBoxHit3Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit3Avg.TabIndex = 73;
+            // 
+            // labelArrowHit3
+            // 
+            this.labelArrowHit3.AutoSize = true;
+            this.labelArrowHit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowHit3.Location = new System.Drawing.Point(516, 163);
+            this.labelArrowHit3.Name = "labelArrowHit3";
+            this.labelArrowHit3.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowHit3.TabIndex = 72;
+            this.labelArrowHit3.Text = "—>";
+            // 
+            // textBoxHit3To
+            // 
+            this.textBoxHit3To.Location = new System.Drawing.Point(451, 161);
+            this.textBoxHit3To.MaxLength = 10;
+            this.textBoxHit3To.Name = "textBoxHit3To";
+            this.textBoxHit3To.ReadOnly = true;
+            this.textBoxHit3To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit3To.TabIndex = 71;
+            // 
+            // labelDashHit3
+            // 
+            this.labelDashHit3.AutoSize = true;
+            this.labelDashHit3.Location = new System.Drawing.Point(432, 165);
+            this.labelDashHit3.Name = "labelDashHit3";
+            this.labelDashHit3.Size = new System.Drawing.Size(13, 13);
+            this.labelDashHit3.TabIndex = 70;
+            this.labelDashHit3.Text = "—";
+            // 
+            // textBoxHit3From
+            // 
+            this.textBoxHit3From.Location = new System.Drawing.Point(361, 162);
+            this.textBoxHit3From.MaxLength = 10;
+            this.textBoxHit3From.Name = "textBoxHit3From";
+            this.textBoxHit3From.ReadOnly = true;
+            this.textBoxHit3From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit3From.TabIndex = 69;
+            // 
+            // labelTarget4
+            // 
+            this.labelTarget4.AutoSize = true;
+            this.labelTarget4.Location = new System.Drawing.Point(305, 201);
+            this.labelTarget4.Name = "labelTarget4";
+            this.labelTarget4.Size = new System.Drawing.Size(50, 13);
+            this.labelTarget4.TabIndex = 96;
+            this.labelTarget4.Text = "Target 4:";
+            // 
+            // textBoxAvgHot4
+            // 
+            this.textBoxAvgHot4.Location = new System.Drawing.Point(995, 197);
+            this.textBoxAvgHot4.MaxLength = 10;
+            this.textBoxAvgHot4.Name = "textBoxAvgHot4";
+            this.textBoxAvgHot4.ReadOnly = true;
+            this.textBoxAvgHot4.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot4.TabIndex = 95;
+            // 
+            // labelAvgHot4
+            // 
+            this.labelAvgHot4.AutoSize = true;
+            this.labelAvgHot4.Location = new System.Drawing.Point(928, 200);
+            this.labelAvgHot4.Name = "labelAvgHot4";
+            this.labelAvgHot4.Size = new System.Drawing.Size(61, 13);
+            this.labelAvgHot4.TabIndex = 94;
+            this.labelAvgHot4.Text = "AVG. HOT:";
+            // 
+            // textBoxCrit4Avg
+            // 
+            this.textBoxCrit4Avg.Location = new System.Drawing.Point(850, 197);
+            this.textBoxCrit4Avg.MaxLength = 10;
+            this.textBoxCrit4Avg.Name = "textBoxCrit4Avg";
+            this.textBoxCrit4Avg.ReadOnly = true;
+            this.textBoxCrit4Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit4Avg.TabIndex = 93;
+            // 
+            // labelArrowcCrit4
+            // 
+            this.labelArrowcCrit4.AutoSize = true;
+            this.labelArrowcCrit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowcCrit4.Location = new System.Drawing.Point(818, 199);
+            this.labelArrowcCrit4.Name = "labelArrowcCrit4";
+            this.labelArrowcCrit4.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowcCrit4.TabIndex = 92;
+            this.labelArrowcCrit4.Text = "—>";
+            // 
+            // textBoxCrit4To
+            // 
+            this.textBoxCrit4To.Location = new System.Drawing.Point(753, 197);
+            this.textBoxCrit4To.MaxLength = 10;
+            this.textBoxCrit4To.Name = "textBoxCrit4To";
+            this.textBoxCrit4To.ReadOnly = true;
+            this.textBoxCrit4To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit4To.TabIndex = 91;
+            // 
+            // labelDashCrit4
+            // 
+            this.labelDashCrit4.AutoSize = true;
+            this.labelDashCrit4.Location = new System.Drawing.Point(734, 201);
+            this.labelDashCrit4.Name = "labelDashCrit4";
+            this.labelDashCrit4.Size = new System.Drawing.Size(13, 13);
+            this.labelDashCrit4.TabIndex = 90;
+            this.labelDashCrit4.Text = "—";
+            // 
+            // textBoxCrit4From
+            // 
+            this.textBoxCrit4From.Location = new System.Drawing.Point(663, 198);
+            this.textBoxCrit4From.MaxLength = 10;
+            this.textBoxCrit4From.Name = "textBoxCrit4From";
+            this.textBoxCrit4From.ReadOnly = true;
+            this.textBoxCrit4From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit4From.TabIndex = 89;
+            // 
+            // textBoxHit4Avg
+            // 
+            this.textBoxHit4Avg.Location = new System.Drawing.Point(548, 197);
+            this.textBoxHit4Avg.MaxLength = 10;
+            this.textBoxHit4Avg.Name = "textBoxHit4Avg";
+            this.textBoxHit4Avg.ReadOnly = true;
+            this.textBoxHit4Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit4Avg.TabIndex = 87;
+            // 
+            // labelArrowHit4
+            // 
+            this.labelArrowHit4.AutoSize = true;
+            this.labelArrowHit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrowHit4.Location = new System.Drawing.Point(516, 199);
+            this.labelArrowHit4.Name = "labelArrowHit4";
+            this.labelArrowHit4.Size = new System.Drawing.Size(26, 16);
+            this.labelArrowHit4.TabIndex = 86;
+            this.labelArrowHit4.Text = "—>";
+            // 
+            // textBoxHit4To
+            // 
+            this.textBoxHit4To.Location = new System.Drawing.Point(451, 197);
+            this.textBoxHit4To.MaxLength = 10;
+            this.textBoxHit4To.Name = "textBoxHit4To";
+            this.textBoxHit4To.ReadOnly = true;
+            this.textBoxHit4To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit4To.TabIndex = 85;
+            // 
+            // labelDashHit4
+            // 
+            this.labelDashHit4.AutoSize = true;
+            this.labelDashHit4.Location = new System.Drawing.Point(432, 201);
+            this.labelDashHit4.Name = "labelDashHit4";
+            this.labelDashHit4.Size = new System.Drawing.Size(13, 13);
+            this.labelDashHit4.TabIndex = 84;
+            this.labelDashHit4.Text = "—";
+            // 
+            // textBoxHit4From
+            // 
+            this.textBoxHit4From.Location = new System.Drawing.Point(361, 198);
+            this.textBoxHit4From.MaxLength = 10;
+            this.textBoxHit4From.Name = "textBoxHit4From";
+            this.textBoxHit4From.ReadOnly = true;
+            this.textBoxHit4From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit4From.TabIndex = 83;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1061, 502);
+            this.ClientSize = new System.Drawing.Size(1270, 502);
+            this.Controls.Add(this.labelTarget4);
+            this.Controls.Add(this.textBoxAvgHot4);
+            this.Controls.Add(this.labelAvgHot4);
+            this.Controls.Add(this.textBoxCrit4Avg);
+            this.Controls.Add(this.labelArrowcCrit4);
+            this.Controls.Add(this.textBoxCrit4To);
+            this.Controls.Add(this.labelDashCrit4);
+            this.Controls.Add(this.textBoxCrit4From);
+            this.Controls.Add(this.textBoxHit4Avg);
+            this.Controls.Add(this.labelArrowHit4);
+            this.Controls.Add(this.textBoxHit4To);
+            this.Controls.Add(this.labelDashHit4);
+            this.Controls.Add(this.textBoxHit4From);
+            this.Controls.Add(this.labelTarget3);
+            this.Controls.Add(this.textBoxAvgHot3);
+            this.Controls.Add(this.labelAvgHot3);
+            this.Controls.Add(this.textBoxCrit3Avg);
+            this.Controls.Add(this.labelArrowcCrit3);
+            this.Controls.Add(this.textBoxCrit3To);
+            this.Controls.Add(this.labelDashCrit3);
+            this.Controls.Add(this.textBoxCrit3From);
+            this.Controls.Add(this.textBoxHit3Avg);
+            this.Controls.Add(this.labelArrowHit3);
+            this.Controls.Add(this.textBoxHit3To);
+            this.Controls.Add(this.labelDashHit3);
+            this.Controls.Add(this.textBoxHit3From);
+            this.Controls.Add(this.labelTarget2);
+            this.Controls.Add(this.textBoxAvgHot2);
+            this.Controls.Add(this.labelAvgHot2);
+            this.Controls.Add(this.textBoxCrit2Avg);
+            this.Controls.Add(this.labelArrowcCrit2);
+            this.Controls.Add(this.textBoxCrit2To);
+            this.Controls.Add(this.labelDashCrit2);
+            this.Controls.Add(this.textBoxCrit2From);
+            this.Controls.Add(this.textBoxHit2Avg);
+            this.Controls.Add(this.labelArrowHit2);
+            this.Controls.Add(this.textBoxHit2To);
+            this.Controls.Add(this.labelDashHit2);
+            this.Controls.Add(this.textBoxHit2From);
+            this.Controls.Add(this.labelTarget1);
+            this.Controls.Add(this.textBoxAvgHot1);
+            this.Controls.Add(this.labelAvgHot1);
+            this.Controls.Add(this.textBoxCrit1Avg);
+            this.Controls.Add(this.labelArrowcCrit1);
+            this.Controls.Add(this.textBoxCrit1To);
+            this.Controls.Add(this.labelDashCrit1);
+            this.Controls.Add(this.textBoxCrit1From);
+            this.Controls.Add(this.labelCritMax);
+            this.Controls.Add(this.textBoxHit1Avg);
+            this.Controls.Add(this.labelArrowHit1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
@@ -481,9 +1041,9 @@
             this.Controls.Add(this.labelArrow);
             this.Controls.Add(this.labelPercent);
             this.Controls.Add(this.textBoxHastePercent);
-            this.Controls.Add(this.textBoxHitTo);
-            this.Controls.Add(this.labelDash);
-            this.Controls.Add(this.textBoxHitFrom);
+            this.Controls.Add(this.textBoxHit1To);
+            this.Controls.Add(this.labelDashHit1);
+            this.Controls.Add(this.textBoxHit1From);
             this.Controls.Add(this.labelHit);
             this.Controls.Add(this.textBoxHasteRating);
             this.Controls.Add(this.labelHaste);
@@ -512,9 +1072,9 @@
         private System.Windows.Forms.TextBox textBoxHasteRating;
         private System.Windows.Forms.Label labelHaste;
         private System.Windows.Forms.Label labelHit;
-        private System.Windows.Forms.TextBox textBoxHitFrom;
-        private System.Windows.Forms.Label labelDash;
-        private System.Windows.Forms.TextBox textBoxHitTo;
+        private System.Windows.Forms.TextBox textBoxHit1From;
+        private System.Windows.Forms.Label labelDashHit1;
+        private System.Windows.Forms.TextBox textBoxHit1To;
         private System.Windows.Forms.TextBox textBoxHastePercent;
         private System.Windows.Forms.Label labelPercent;
         private System.Windows.Forms.Label labelArrow;
@@ -539,6 +1099,56 @@
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelArrowHit1;
+        private System.Windows.Forms.TextBox textBoxHit1Avg;
+        private System.Windows.Forms.Label labelCritMax;
+        private System.Windows.Forms.TextBox textBoxCrit1Avg;
+        private System.Windows.Forms.Label labelArrowcCrit1;
+        private System.Windows.Forms.TextBox textBoxCrit1To;
+        private System.Windows.Forms.Label labelDashCrit1;
+        private System.Windows.Forms.TextBox textBoxCrit1From;
+        private System.Windows.Forms.Label labelAvgHot1;
+        private System.Windows.Forms.TextBox textBoxAvgHot1;
+        private System.Windows.Forms.Label labelTarget1;
+        private System.Windows.Forms.Label labelTarget2;
+        private System.Windows.Forms.TextBox textBoxAvgHot2;
+        private System.Windows.Forms.Label labelAvgHot2;
+        private System.Windows.Forms.TextBox textBoxCrit2Avg;
+        private System.Windows.Forms.Label labelArrowcCrit2;
+        private System.Windows.Forms.TextBox textBoxCrit2To;
+        private System.Windows.Forms.Label labelDashCrit2;
+        private System.Windows.Forms.TextBox textBoxCrit2From;
+        private System.Windows.Forms.TextBox textBoxHit2Avg;
+        private System.Windows.Forms.Label labelArrowHit2;
+        private System.Windows.Forms.TextBox textBoxHit2To;
+        private System.Windows.Forms.Label labelDashHit2;
+        private System.Windows.Forms.TextBox textBoxHit2From;
+        private System.Windows.Forms.Label labelTarget3;
+        private System.Windows.Forms.TextBox textBoxAvgHot3;
+        private System.Windows.Forms.Label labelAvgHot3;
+        private System.Windows.Forms.TextBox textBoxCrit3Avg;
+        private System.Windows.Forms.Label labelArrowcCrit3;
+        private System.Windows.Forms.TextBox textBoxCrit3To;
+        private System.Windows.Forms.Label labelDashCrit3;
+        private System.Windows.Forms.TextBox textBoxCrit3From;
+        private System.Windows.Forms.TextBox textBoxHit3Avg;
+        private System.Windows.Forms.Label labelArrowHit3;
+        private System.Windows.Forms.TextBox textBoxHit3To;
+        private System.Windows.Forms.Label labelDashHit3;
+        private System.Windows.Forms.TextBox textBoxHit3From;
+        private System.Windows.Forms.Label labelTarget4;
+        private System.Windows.Forms.TextBox textBoxAvgHot4;
+        private System.Windows.Forms.Label labelAvgHot4;
+        private System.Windows.Forms.TextBox textBoxCrit4Avg;
+        private System.Windows.Forms.Label labelArrowcCrit4;
+        private System.Windows.Forms.TextBox textBoxCrit4To;
+        private System.Windows.Forms.Label labelDashCrit4;
+        private System.Windows.Forms.TextBox textBoxCrit4From;
+        private System.Windows.Forms.TextBox textBoxHit4Avg;
+        private System.Windows.Forms.Label labelArrowHit4;
+        private System.Windows.Forms.TextBox textBoxHit4To;
+        private System.Windows.Forms.Label labelDashHit4;
+        private System.Windows.Forms.TextBox textBoxHit4From;
     }
 }
 

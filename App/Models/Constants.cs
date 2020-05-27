@@ -26,7 +26,7 @@ namespace App.Models
         public const string ModGlyphESH = "Glyph Of Earth Shield";
         public const string ModGlyphHST = "Glyph Of HST";
         public const string ModHellscream = "Hellscream's Warsong / Strength of Wrynn";
-        public const string ModMoonkin = "Moonkin Form Elemental Oath";
+        public const string ModMoonkin = "Moonkin Form / Elemental Oath";
         public const string ModRapidCurrents = "Rapid Currents";
         public const string ModRapidConsumption = "Riptides Consumption";
         public const string ModSwiftRetrubution = "Swift Retribution / Improved Moonkin Form";

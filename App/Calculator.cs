@@ -206,8 +206,8 @@ namespace App
 
         private void DisplayHealing()
         {
-            this.textBoxHitTo.Text = Player.Instance.HitTo.ToString();
-            this.textBoxHitFrom.Text = Player.Instance.HitFrom.ToString();
+            this.textBoxHit1To.Text = Player.Instance.HitTo.ToString();
+            this.textBoxHit1From.Text = Player.Instance.HitFrom.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
             if (Player.Instance.IsCritModified)
             {
