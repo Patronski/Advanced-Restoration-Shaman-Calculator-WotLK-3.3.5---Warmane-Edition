@@ -22,19 +22,19 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        public override int CalculateAstralAwakening()
+        public override int? CalculateAstralAwakening()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateHitFrom()
+        public override int CalculateTarget1HitFrom()
         {
             int rounded = (int)((int)(0.1692 * Player.Instance.SpellPower + 163) * 1.1);
 
             return rounded;
         }
 
-        public override int? CalculateHitTo()
+        public override int? CalculateTarget1HitTo()
         {
             return null;
         }

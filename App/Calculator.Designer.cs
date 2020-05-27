@@ -64,7 +64,7 @@
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPercentCritChance = new System.Windows.Forms.Label();
             this.labelArrowHit1 = new System.Windows.Forms.Label();
             this.textBoxHit1Avg = new System.Windows.Forms.TextBox();
             this.labelCritMax = new System.Windows.Forms.Label();
@@ -494,15 +494,15 @@
             this.toolTip1.ToolTipTitle = "ToolTip";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // label1
+            // labelPercentCritChance
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(947, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 16);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "%";
+            this.labelPercentCritChance.AutoSize = true;
+            this.labelPercentCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPercentCritChance.Location = new System.Drawing.Point(947, 12);
+            this.labelPercentCritChance.Name = "labelPercentCritChance";
+            this.labelPercentCritChance.Size = new System.Drawing.Size(21, 16);
+            this.labelPercentCritChance.TabIndex = 41;
+            this.labelPercentCritChance.Text = "%";
             // 
             // labelArrowHit1
             // 
@@ -1018,7 +1018,7 @@
             this.Controls.Add(this.labelCritMax);
             this.Controls.Add(this.textBoxHit1Avg);
             this.Controls.Add(this.labelArrowHit1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelPercentCritChance);
             this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
             this.Controls.Add(this.checkBoxMoonkinForm);
@@ -1098,7 +1098,7 @@
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPercentCritChance;
         private System.Windows.Forms.Label labelArrowHit1;
         private System.Windows.Forms.TextBox textBoxHit1Avg;
         private System.Windows.Forms.Label labelCritMax;

@@ -29,12 +29,12 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        public override int CalculateAstralAwakening()
+        public override int? CalculateAstralAwakening()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateHitFrom()
+        public override int CalculateTarget1HitFrom()
         {
             int rounded = (int)(1.811 * Player.Instance.SpellPower) + 3034;
 
@@ -43,7 +43,7 @@ namespace App.Models.Spells
             return rounded;
         }
 
-        public override int? CalculateHitTo()
+        public override int? CalculateTarget1HitTo()
         {
             int rounded = (int)(1.811 * Player.Instance.SpellPower) + 3466;
 

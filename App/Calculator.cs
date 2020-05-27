@@ -149,12 +149,106 @@ namespace App
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
 
+            HideShowControlls(selectedSpell);
+
             var checkedModifiers = GetTextOfCheckedModifiers();
             selectedSpell.CheckModifiers(checkedModifiers);
 
             selectedSpell.Calculate();
 
             DisplayHealing();
+        }
+
+        private void HideShowControlls(Spell selectedSpell)
+        {
+            if (selectedSpell.Name == Constants.SpellChainHeal)
+            {
+                this.labelArrowcCrit2.Show();
+                this.labelArrowHit2.Show();
+                this.labelAvgHot2.Show();
+                this.labelDashCrit2.Show();
+                this.labelDashHit2.Show();
+                this.labelTarget2.Show();
+                this.textBoxAvgHot2.Show();
+                this.textBoxCrit2Avg.Show();
+                this.textBoxCrit2From.Show();
+                this.textBoxCrit2To.Show();
+                this.textBoxHit2Avg.Show();
+                this.textBoxHit2From.Show();
+                this.textBoxHit2To.Show();
+
+                this.labelArrowcCrit3.Show();
+                this.labelArrowHit3.Show();
+                this.labelAvgHot3.Show();
+                this.labelDashCrit3.Show();
+                this.labelDashHit3.Show();
+                this.labelTarget3.Show();
+                this.textBoxAvgHot3.Show();
+                this.textBoxCrit3Avg.Show();
+                this.textBoxCrit3From.Show();
+                this.textBoxCrit3To.Show();
+                this.textBoxHit3Avg.Show();
+                this.textBoxHit3From.Show();
+                this.textBoxHit3To.Show();
+
+                this.labelArrowcCrit4.Show();
+                this.labelArrowHit4.Show();
+                this.labelAvgHot4.Show();
+                this.labelDashCrit4.Show();
+                this.labelDashHit4.Show();
+                this.labelTarget4.Show();
+                this.textBoxAvgHot4.Show();
+                this.textBoxCrit4Avg.Show();
+                this.textBoxCrit4From.Show();
+                this.textBoxCrit4To.Show();
+                this.textBoxHit4Avg.Show();
+                this.textBoxHit4From.Show();
+                this.textBoxHit4To.Show();
+            }
+            else
+            {
+                this.labelArrowcCrit2.Hide();
+                this.labelArrowHit2.Hide();
+                this.labelAvgHot2.Hide();
+                this.labelDashCrit2.Hide();
+                this.labelDashHit2.Hide();
+                this.labelTarget2.Hide();
+                this.textBoxAvgHot2.Hide();
+                this.textBoxCrit2Avg.Hide();
+                this.textBoxCrit2From.Hide();
+                this.textBoxCrit2To.Hide();
+                this.textBoxHit2Avg.Hide();
+                this.textBoxHit2From.Hide();
+                this.textBoxHit2To.Hide();
+
+                this.labelArrowcCrit3.Hide();
+                this.labelArrowHit3.Hide();
+                this.labelAvgHot3.Hide();
+                this.labelDashCrit3.Hide();
+                this.labelDashHit3.Hide();
+                this.labelTarget3.Hide();
+                this.textBoxAvgHot3.Hide();
+                this.textBoxCrit3Avg.Hide();
+                this.textBoxCrit3From.Hide();
+                this.textBoxCrit3To.Hide();
+                this.textBoxHit3Avg.Hide();
+                this.textBoxHit3From.Hide();
+                this.textBoxHit3To.Hide();
+
+                this.labelArrowcCrit4.Hide();
+                this.labelArrowHit4.Hide();
+                this.labelAvgHot4.Hide();
+                this.labelDashCrit4.Hide();
+                this.labelDashHit4.Hide();
+                this.labelTarget4.Hide();
+                this.textBoxAvgHot4.Hide();
+                this.textBoxCrit4Avg.Hide();
+                this.textBoxCrit4From.Hide();
+                this.textBoxCrit4To.Hide();
+                this.textBoxHit4Avg.Hide();
+                this.textBoxHit4From.Hide();
+                this.textBoxHit4To.Hide();
+            }
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -206,9 +300,11 @@ namespace App
 
         private void DisplayHealing()
         {
-            this.textBoxHit1To.Text = Player.Instance.HitTo.ToString();
-            this.textBoxHit1From.Text = Player.Instance.HitFrom.ToString();
+            this.textBoxHit1To.Text = Player.Instance.Hit1To.ToString();
+            this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
+            this.textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
+            this.textBoxHit2To.Text = Player.Instance.Hit2To.ToString();
             if (Player.Instance.IsCritModified)
             {
                 Player.Instance.IsCritModified = false;

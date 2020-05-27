@@ -18,8 +18,8 @@ namespace App.Models.Modifiers
         }
         public override void Modify()
         {
-            Player.Instance.HitFrom = (int)(Player.Instance.HitFrom * 1.06);
-            Player.Instance.HitTo = (int?)(Player.Instance.HitTo * 1.06);
+            Player.Instance.Hit1From = (int)(Player.Instance.Hit1From * 1.06);
+            Player.Instance.Hit1To = (int?)(Player.Instance.Hit1To * 1.06);
         }
     }
 }

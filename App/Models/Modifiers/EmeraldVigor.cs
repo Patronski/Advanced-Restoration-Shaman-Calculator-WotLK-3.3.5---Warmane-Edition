@@ -21,8 +21,8 @@ namespace App.Models.Modifiers
         {
             var emeraldVigorMultiplier = 1 + (Player.Instance.EmeraldVigorNumber / 10d);
 
-            Player.Instance.HitFrom = (int)(emeraldVigorMultiplier * Player.Instance.HitFrom);
-            Player.Instance.HitTo = (int?)(emeraldVigorMultiplier * Player.Instance.HitTo);
+            Player.Instance.Hit1From = (int)(emeraldVigorMultiplier * Player.Instance.Hit1From);
+            Player.Instance.Hit1To = (int?)(emeraldVigorMultiplier * Player.Instance.Hit1To);
         }
     }
 }

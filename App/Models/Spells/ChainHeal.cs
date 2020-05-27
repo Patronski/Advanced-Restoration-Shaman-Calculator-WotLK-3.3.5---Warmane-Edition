@@ -36,23 +36,33 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        public override int CalculateAstralAwakening()
+        public override int? CalculateAstralAwakening()
         {
             throw new NotImplementedException();
         }
 
-        public override int CalculateHitFrom()
+        public override int CalculateTarget1HitFrom()
         {
             int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1055) * 1.32);
 
             return rounded;
         }
 
-        public override int? CalculateHitTo()
+        public override int? CalculateTarget1HitTo()
         {
             int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1205) * 1.32);
 
             return rounded;
+        }
+
+        public override int? CalculateTarget2HitFrom()
+        {
+            return (int)(CalculateTarget1HitFrom() * 0.6);
+        }
+
+        public override int? CalculateTarget2HitTo()
+        {
+            return (int)(CalculateTarget1HitTo() * 0.6);
         }
     }
 }

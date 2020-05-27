@@ -44,9 +44,9 @@ namespace App.Models
         public double? HastePercent { get; set; }
 
         public double? CriticalChance { get; set; }
-        private double? criticalChanceInitial;
         public bool IsCritModified { get; set; }
 
+        private double? criticalChanceInitial;
         public double? CriticalChanceInitial
         {
             get
@@ -60,12 +60,47 @@ namespace App.Models
             }
         }
 
-        public decimal CastingTime { get; set; }
-
         public bool IsEquipedMetagemForCrit { get; set; }
 
-        public int? HitFrom { get; set; }
+        public decimal? CastingTime { get; set; }
 
-        public int? HitTo { get; set; }
+        public int? AvgHPS { get; set; }
+
+        public int? AvgHOT { get; set; }
+
+        public int? Hit1From { get; set; }
+        public int? Hit2From { get; set; }
+        public int? Hit3From { get; set; }
+        public int? Hit4From { get; set; }
+
+        public int? Hit1To { get; set; }
+        public int? Hit2To { get; set; }
+        public int? Hit3To { get; set; }
+        public int? Hit4To { get; set; }
+
+        public double? Crit1From { get; set; }
+        public double? Crit2From { get; set; }
+        public double? Crit3From { get; set; }
+        public double? Crit4From { get; set; }
+        
+        public double? Crit1To { get; set; }
+        public double? Crit2To { get; set; }
+        public double? Crit3To { get; set; }
+        public double? Crit4To { get; set; }
+
+        public int? Hit1Avg { get; set; }
+        public int? Hit2Avg { get; set; }
+        public int? Hit3Avg { get; set; }
+        public int? Hit4Avg { get; set; }
+        
+        public int? Crit1Avg { get; set; }
+        public int? Crit2Avg { get; set; }
+        public int? Crit3Avg { get; set; }
+        public int? Crit4Avg { get; set; }
+        
+        public int? AvgHot1 { get; set; }
+        public int? AvgHot2 { get; set; }
+        public int? AvgHot3 { get; set; }
+        public int? AvgHot4 { get; set; }
     }
 }
