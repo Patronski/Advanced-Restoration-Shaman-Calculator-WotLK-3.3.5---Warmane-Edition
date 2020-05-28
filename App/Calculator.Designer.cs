@@ -78,7 +78,6 @@
             this.labelTarget1 = new System.Windows.Forms.Label();
             this.labelTarget2 = new System.Windows.Forms.Label();
             this.textBoxAvgHot2 = new System.Windows.Forms.TextBox();
-            this.labelAvgHot2 = new System.Windows.Forms.Label();
             this.textBoxCrit2Avg = new System.Windows.Forms.TextBox();
             this.labelArrowcCrit2 = new System.Windows.Forms.Label();
             this.textBoxCrit2To = new System.Windows.Forms.TextBox();
@@ -91,7 +90,6 @@
             this.textBoxHit2From = new System.Windows.Forms.TextBox();
             this.labelTarget3 = new System.Windows.Forms.Label();
             this.textBoxAvgHot3 = new System.Windows.Forms.TextBox();
-            this.labelAvgHot3 = new System.Windows.Forms.Label();
             this.textBoxCrit3Avg = new System.Windows.Forms.TextBox();
             this.labelArrowcCrit3 = new System.Windows.Forms.Label();
             this.textBoxCrit3To = new System.Windows.Forms.TextBox();
@@ -104,7 +102,6 @@
             this.textBoxHit3From = new System.Windows.Forms.TextBox();
             this.labelTarget4 = new System.Windows.Forms.Label();
             this.textBoxAvgHot4 = new System.Windows.Forms.TextBox();
-            this.labelAvgHot4 = new System.Windows.Forms.Label();
             this.textBoxCrit4Avg = new System.Windows.Forms.TextBox();
             this.labelArrowcCrit4 = new System.Windows.Forms.Label();
             this.textBoxCrit4To = new System.Windows.Forms.TextBox();
@@ -115,6 +112,15 @@
             this.textBoxHit4To = new System.Windows.Forms.TextBox();
             this.labelDashHit4 = new System.Windows.Forms.Label();
             this.textBoxHit4From = new System.Windows.Forms.TextBox();
+            this.textBoxCastingTime = new System.Windows.Forms.TextBox();
+            this.labelCastingTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBoxGlyphChainHeal = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +128,7 @@
             // 
             this.labelSpellPower.AutoSize = true;
             this.labelSpellPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSpellPower.Location = new System.Drawing.Point(331, 17);
+            this.labelSpellPower.Location = new System.Drawing.Point(425, 10);
             this.labelSpellPower.Name = "labelSpellPower";
             this.labelSpellPower.Size = new System.Drawing.Size(95, 16);
             this.labelSpellPower.TabIndex = 0;
@@ -130,10 +136,10 @@
             // 
             // textBoxSpellPower
             // 
-            this.textBoxSpellPower.Location = new System.Drawing.Point(432, 11);
+            this.textBoxSpellPower.Location = new System.Drawing.Point(526, 9);
             this.textBoxSpellPower.MaxLength = 6;
             this.textBoxSpellPower.Name = "textBoxSpellPower";
-            this.textBoxSpellPower.Size = new System.Drawing.Size(52, 20);
+            this.textBoxSpellPower.Size = new System.Drawing.Size(48, 20);
             this.textBoxSpellPower.TabIndex = 1;
             this.textBoxSpellPower.TextChanged += new System.EventHandler(this.textBoxSpellPower_TextChanged);
             this.textBoxSpellPower.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSpellPower_KeyPress);
@@ -151,10 +157,10 @@
             // 
             // textBoxCrit
             // 
-            this.textBoxCrit.Location = new System.Drawing.Point(895, 10);
+            this.textBoxCrit.Location = new System.Drawing.Point(1086, 9);
             this.textBoxCrit.MaxLength = 5;
             this.textBoxCrit.Name = "textBoxCrit";
-            this.textBoxCrit.Size = new System.Drawing.Size(46, 20);
+            this.textBoxCrit.Size = new System.Drawing.Size(48, 20);
             this.textBoxCrit.TabIndex = 9;
             this.textBoxCrit.TextChanged += new System.EventHandler(this.textBoxCrit_TextChanged);
             this.textBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCrit_KeyPress);
@@ -163,7 +169,7 @@
             // 
             this.labelCrit.AutoSize = true;
             this.labelCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCrit.Location = new System.Drawing.Point(798, 17);
+            this.labelCrit.Location = new System.Drawing.Point(991, 10);
             this.labelCrit.Name = "labelCrit";
             this.labelCrit.Size = new System.Drawing.Size(91, 16);
             this.labelCrit.TabIndex = 8;
@@ -171,10 +177,10 @@
             // 
             // textBoxHasteRating
             // 
-            this.textBoxHasteRating.Location = new System.Drawing.Point(615, 11);
+            this.textBoxHasteRating.Location = new System.Drawing.Point(761, 9);
             this.textBoxHasteRating.MaxLength = 6;
             this.textBoxHasteRating.Name = "textBoxHasteRating";
-            this.textBoxHasteRating.Size = new System.Drawing.Size(39, 20);
+            this.textBoxHasteRating.Size = new System.Drawing.Size(48, 20);
             this.textBoxHasteRating.TabIndex = 11;
             this.textBoxHasteRating.TextChanged += new System.EventHandler(this.textBoxHaste_TextChanged);
             this.textBoxHasteRating.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHaste_KeyPress);
@@ -183,7 +189,7 @@
             // 
             this.labelHaste.AutoSize = true;
             this.labelHaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHaste.Location = new System.Drawing.Point(507, 17);
+            this.labelHaste.Location = new System.Drawing.Point(653, 10);
             this.labelHaste.Name = "labelHaste";
             this.labelHaste.Size = new System.Drawing.Size(102, 16);
             this.labelHaste.TabIndex = 10;
@@ -192,11 +198,13 @@
             // labelHit
             // 
             this.labelHit.AutoSize = true;
-            this.labelHit.Location = new System.Drawing.Point(385, 69);
+            this.labelHit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHit.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelHit.Location = new System.Drawing.Point(358, 69);
             this.labelHit.Name = "labelHit";
-            this.labelHit.Size = new System.Drawing.Size(23, 13);
+            this.labelHit.Size = new System.Drawing.Size(32, 13);
             this.labelHit.TabIndex = 0;
-            this.labelHit.Text = "Hit:";
+            this.labelHit.Text = "HIT:";
             // 
             // textBoxHit1From
             // 
@@ -204,13 +212,13 @@
             this.textBoxHit1From.MaxLength = 10;
             this.textBoxHit1From.Name = "textBoxHit1From";
             this.textBoxHit1From.ReadOnly = true;
-            this.textBoxHit1From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit1From.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit1From.TabIndex = 13;
             // 
             // labelDashHit1
             // 
             this.labelDashHit1.AutoSize = true;
-            this.labelDashHit1.Location = new System.Drawing.Point(432, 88);
+            this.labelDashHit1.Location = new System.Drawing.Point(425, 88);
             this.labelDashHit1.Name = "labelDashHit1";
             this.labelDashHit1.Size = new System.Drawing.Size(13, 13);
             this.labelDashHit1.TabIndex = 15;
@@ -218,27 +226,27 @@
             // 
             // textBoxHit1To
             // 
-            this.textBoxHit1To.Location = new System.Drawing.Point(451, 84);
+            this.textBoxHit1To.Location = new System.Drawing.Point(444, 85);
             this.textBoxHit1To.MaxLength = 10;
             this.textBoxHit1To.Name = "textBoxHit1To";
             this.textBoxHit1To.ReadOnly = true;
-            this.textBoxHit1To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit1To.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit1To.TabIndex = 16;
             // 
             // textBoxHastePercent
             // 
-            this.textBoxHastePercent.Location = new System.Drawing.Point(692, 11);
+            this.textBoxHastePercent.Location = new System.Drawing.Point(842, 9);
             this.textBoxHastePercent.MaxLength = 6;
             this.textBoxHastePercent.Name = "textBoxHastePercent";
             this.textBoxHastePercent.ReadOnly = true;
-            this.textBoxHastePercent.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHastePercent.Size = new System.Drawing.Size(48, 20);
             this.textBoxHastePercent.TabIndex = 17;
             // 
             // labelPercent
             // 
             this.labelPercent.AutoSize = true;
             this.labelPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPercent.Location = new System.Drawing.Point(748, 14);
+            this.labelPercent.Location = new System.Drawing.Point(896, 10);
             this.labelPercent.Name = "labelPercent";
             this.labelPercent.Size = new System.Drawing.Size(21, 16);
             this.labelPercent.TabIndex = 19;
@@ -248,7 +256,7 @@
             // 
             this.labelArrow.AutoSize = true;
             this.labelArrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrow.Location = new System.Drawing.Point(660, 11);
+            this.labelArrow.Location = new System.Drawing.Point(815, 10);
             this.labelArrow.Name = "labelArrow";
             this.labelArrow.Size = new System.Drawing.Size(26, 16);
             this.labelArrow.TabIndex = 20;
@@ -498,7 +506,7 @@
             // 
             this.labelPercentCritChance.AutoSize = true;
             this.labelPercentCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPercentCritChance.Location = new System.Drawing.Point(947, 12);
+            this.labelPercentCritChance.Location = new System.Drawing.Point(1140, 10);
             this.labelPercentCritChance.Name = "labelPercentCritChance";
             this.labelPercentCritChance.Size = new System.Drawing.Size(21, 16);
             this.labelPercentCritChance.TabIndex = 41;
@@ -508,7 +516,7 @@
             // 
             this.labelArrowHit1.AutoSize = true;
             this.labelArrowHit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowHit1.Location = new System.Drawing.Point(516, 86);
+            this.labelArrowHit1.Location = new System.Drawing.Point(508, 86);
             this.labelArrowHit1.Name = "labelArrowHit1";
             this.labelArrowHit1.Size = new System.Drawing.Size(26, 16);
             this.labelArrowHit1.TabIndex = 42;
@@ -516,36 +524,38 @@
             // 
             // textBoxHit1Avg
             // 
-            this.textBoxHit1Avg.Location = new System.Drawing.Point(548, 84);
+            this.textBoxHit1Avg.Location = new System.Drawing.Point(540, 85);
             this.textBoxHit1Avg.MaxLength = 10;
             this.textBoxHit1Avg.Name = "textBoxHit1Avg";
             this.textBoxHit1Avg.ReadOnly = true;
-            this.textBoxHit1Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit1Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit1Avg.TabIndex = 43;
             // 
             // labelCritMax
             // 
             this.labelCritMax.AutoSize = true;
-            this.labelCritMax.Location = new System.Drawing.Point(660, 69);
+            this.labelCritMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCritMax.ForeColor = System.Drawing.Color.Red;
+            this.labelCritMax.Location = new System.Drawing.Point(642, 69);
             this.labelCritMax.Name = "labelCritMax";
-            this.labelCritMax.Size = new System.Drawing.Size(25, 13);
+            this.labelCritMax.Size = new System.Drawing.Size(40, 13);
             this.labelCritMax.TabIndex = 44;
-            this.labelCritMax.Text = "Crit:";
+            this.labelCritMax.Text = "CRIT:";
             // 
             // textBoxCrit1Avg
             // 
-            this.textBoxCrit1Avg.Location = new System.Drawing.Point(850, 84);
+            this.textBoxCrit1Avg.Location = new System.Drawing.Point(824, 84);
             this.textBoxCrit1Avg.MaxLength = 10;
             this.textBoxCrit1Avg.Name = "textBoxCrit1Avg";
             this.textBoxCrit1Avg.ReadOnly = true;
-            this.textBoxCrit1Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit1Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit1Avg.TabIndex = 49;
             // 
             // labelArrowcCrit1
             // 
             this.labelArrowcCrit1.AutoSize = true;
             this.labelArrowcCrit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowcCrit1.Location = new System.Drawing.Point(818, 86);
+            this.labelArrowcCrit1.Location = new System.Drawing.Point(792, 86);
             this.labelArrowcCrit1.Name = "labelArrowcCrit1";
             this.labelArrowcCrit1.Size = new System.Drawing.Size(26, 16);
             this.labelArrowcCrit1.TabIndex = 48;
@@ -553,17 +563,17 @@
             // 
             // textBoxCrit1To
             // 
-            this.textBoxCrit1To.Location = new System.Drawing.Point(753, 84);
+            this.textBoxCrit1To.Location = new System.Drawing.Point(728, 84);
             this.textBoxCrit1To.MaxLength = 10;
             this.textBoxCrit1To.Name = "textBoxCrit1To";
             this.textBoxCrit1To.ReadOnly = true;
-            this.textBoxCrit1To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit1To.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit1To.TabIndex = 47;
             // 
             // labelDashCrit1
             // 
             this.labelDashCrit1.AutoSize = true;
-            this.labelDashCrit1.Location = new System.Drawing.Point(734, 88);
+            this.labelDashCrit1.Location = new System.Drawing.Point(709, 88);
             this.labelDashCrit1.Name = "labelDashCrit1";
             this.labelDashCrit1.Size = new System.Drawing.Size(13, 13);
             this.labelDashCrit1.TabIndex = 46;
@@ -571,29 +581,31 @@
             // 
             // textBoxCrit1From
             // 
-            this.textBoxCrit1From.Location = new System.Drawing.Point(663, 85);
+            this.textBoxCrit1From.Location = new System.Drawing.Point(645, 85);
             this.textBoxCrit1From.MaxLength = 10;
             this.textBoxCrit1From.Name = "textBoxCrit1From";
             this.textBoxCrit1From.ReadOnly = true;
-            this.textBoxCrit1From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit1From.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit1From.TabIndex = 45;
             // 
             // labelAvgHot1
             // 
             this.labelAvgHot1.AutoSize = true;
-            this.labelAvgHot1.Location = new System.Drawing.Point(928, 87);
+            this.labelAvgHot1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgHot1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelAvgHot1.Location = new System.Drawing.Point(958, 55);
             this.labelAvgHot1.Name = "labelAvgHot1";
-            this.labelAvgHot1.Size = new System.Drawing.Size(61, 13);
+            this.labelAvgHot1.Size = new System.Drawing.Size(66, 13);
             this.labelAvgHot1.TabIndex = 50;
-            this.labelAvgHot1.Text = "AVG. HOT:";
+            this.labelAvgHot1.Text = "AVG HOT:";
             // 
             // textBoxAvgHot1
             // 
-            this.textBoxAvgHot1.Location = new System.Drawing.Point(995, 84);
+            this.textBoxAvgHot1.Location = new System.Drawing.Point(961, 85);
             this.textBoxAvgHot1.MaxLength = 10;
             this.textBoxAvgHot1.Name = "textBoxAvgHot1";
             this.textBoxAvgHot1.ReadOnly = true;
-            this.textBoxAvgHot1.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot1.Size = new System.Drawing.Size(58, 20);
             this.textBoxAvgHot1.TabIndex = 51;
             // 
             // labelTarget1
@@ -616,36 +628,27 @@
             // 
             // textBoxAvgHot2
             // 
-            this.textBoxAvgHot2.Location = new System.Drawing.Point(995, 121);
+            this.textBoxAvgHot2.Location = new System.Drawing.Point(961, 122);
             this.textBoxAvgHot2.MaxLength = 10;
             this.textBoxAvgHot2.Name = "textBoxAvgHot2";
             this.textBoxAvgHot2.ReadOnly = true;
-            this.textBoxAvgHot2.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot2.Size = new System.Drawing.Size(58, 20);
             this.textBoxAvgHot2.TabIndex = 66;
-            // 
-            // labelAvgHot2
-            // 
-            this.labelAvgHot2.AutoSize = true;
-            this.labelAvgHot2.Location = new System.Drawing.Point(928, 124);
-            this.labelAvgHot2.Name = "labelAvgHot2";
-            this.labelAvgHot2.Size = new System.Drawing.Size(61, 13);
-            this.labelAvgHot2.TabIndex = 65;
-            this.labelAvgHot2.Text = "AVG. HOT:";
             // 
             // textBoxCrit2Avg
             // 
-            this.textBoxCrit2Avg.Location = new System.Drawing.Point(850, 121);
+            this.textBoxCrit2Avg.Location = new System.Drawing.Point(824, 122);
             this.textBoxCrit2Avg.MaxLength = 10;
             this.textBoxCrit2Avg.Name = "textBoxCrit2Avg";
             this.textBoxCrit2Avg.ReadOnly = true;
-            this.textBoxCrit2Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit2Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit2Avg.TabIndex = 64;
             // 
             // labelArrowcCrit2
             // 
             this.labelArrowcCrit2.AutoSize = true;
             this.labelArrowcCrit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowcCrit2.Location = new System.Drawing.Point(818, 123);
+            this.labelArrowcCrit2.Location = new System.Drawing.Point(792, 123);
             this.labelArrowcCrit2.Name = "labelArrowcCrit2";
             this.labelArrowcCrit2.Size = new System.Drawing.Size(26, 16);
             this.labelArrowcCrit2.TabIndex = 63;
@@ -653,17 +656,17 @@
             // 
             // textBoxCrit2To
             // 
-            this.textBoxCrit2To.Location = new System.Drawing.Point(753, 121);
+            this.textBoxCrit2To.Location = new System.Drawing.Point(728, 122);
             this.textBoxCrit2To.MaxLength = 10;
             this.textBoxCrit2To.Name = "textBoxCrit2To";
             this.textBoxCrit2To.ReadOnly = true;
-            this.textBoxCrit2To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit2To.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit2To.TabIndex = 62;
             // 
             // labelDashCrit2
             // 
             this.labelDashCrit2.AutoSize = true;
-            this.labelDashCrit2.Location = new System.Drawing.Point(734, 125);
+            this.labelDashCrit2.Location = new System.Drawing.Point(709, 124);
             this.labelDashCrit2.Name = "labelDashCrit2";
             this.labelDashCrit2.Size = new System.Drawing.Size(13, 13);
             this.labelDashCrit2.TabIndex = 61;
@@ -671,27 +674,27 @@
             // 
             // textBoxCrit2From
             // 
-            this.textBoxCrit2From.Location = new System.Drawing.Point(663, 122);
+            this.textBoxCrit2From.Location = new System.Drawing.Point(645, 122);
             this.textBoxCrit2From.MaxLength = 10;
             this.textBoxCrit2From.Name = "textBoxCrit2From";
             this.textBoxCrit2From.ReadOnly = true;
-            this.textBoxCrit2From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit2From.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit2From.TabIndex = 60;
             // 
             // textBoxHit2Avg
             // 
-            this.textBoxHit2Avg.Location = new System.Drawing.Point(548, 121);
+            this.textBoxHit2Avg.Location = new System.Drawing.Point(540, 122);
             this.textBoxHit2Avg.MaxLength = 10;
             this.textBoxHit2Avg.Name = "textBoxHit2Avg";
             this.textBoxHit2Avg.ReadOnly = true;
-            this.textBoxHit2Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit2Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit2Avg.TabIndex = 58;
             // 
             // labelArrowHit2
             // 
             this.labelArrowHit2.AutoSize = true;
             this.labelArrowHit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowHit2.Location = new System.Drawing.Point(516, 123);
+            this.labelArrowHit2.Location = new System.Drawing.Point(508, 123);
             this.labelArrowHit2.Name = "labelArrowHit2";
             this.labelArrowHit2.Size = new System.Drawing.Size(26, 16);
             this.labelArrowHit2.TabIndex = 57;
@@ -699,17 +702,17 @@
             // 
             // textBoxHit2To
             // 
-            this.textBoxHit2To.Location = new System.Drawing.Point(451, 121);
+            this.textBoxHit2To.Location = new System.Drawing.Point(444, 121);
             this.textBoxHit2To.MaxLength = 10;
             this.textBoxHit2To.Name = "textBoxHit2To";
             this.textBoxHit2To.ReadOnly = true;
-            this.textBoxHit2To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit2To.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit2To.TabIndex = 56;
             // 
             // labelDashHit2
             // 
             this.labelDashHit2.AutoSize = true;
-            this.labelDashHit2.Location = new System.Drawing.Point(432, 125);
+            this.labelDashHit2.Location = new System.Drawing.Point(425, 125);
             this.labelDashHit2.Name = "labelDashHit2";
             this.labelDashHit2.Size = new System.Drawing.Size(13, 13);
             this.labelDashHit2.TabIndex = 55;
@@ -721,7 +724,7 @@
             this.textBoxHit2From.MaxLength = 10;
             this.textBoxHit2From.Name = "textBoxHit2From";
             this.textBoxHit2From.ReadOnly = true;
-            this.textBoxHit2From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit2From.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit2From.TabIndex = 54;
             // 
             // labelTarget3
@@ -735,36 +738,27 @@
             // 
             // textBoxAvgHot3
             // 
-            this.textBoxAvgHot3.Location = new System.Drawing.Point(995, 161);
+            this.textBoxAvgHot3.Location = new System.Drawing.Point(961, 162);
             this.textBoxAvgHot3.MaxLength = 10;
             this.textBoxAvgHot3.Name = "textBoxAvgHot3";
             this.textBoxAvgHot3.ReadOnly = true;
-            this.textBoxAvgHot3.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot3.Size = new System.Drawing.Size(58, 20);
             this.textBoxAvgHot3.TabIndex = 81;
-            // 
-            // labelAvgHot3
-            // 
-            this.labelAvgHot3.AutoSize = true;
-            this.labelAvgHot3.Location = new System.Drawing.Point(928, 164);
-            this.labelAvgHot3.Name = "labelAvgHot3";
-            this.labelAvgHot3.Size = new System.Drawing.Size(61, 13);
-            this.labelAvgHot3.TabIndex = 80;
-            this.labelAvgHot3.Text = "AVG. HOT:";
             // 
             // textBoxCrit3Avg
             // 
-            this.textBoxCrit3Avg.Location = new System.Drawing.Point(850, 161);
+            this.textBoxCrit3Avg.Location = new System.Drawing.Point(824, 161);
             this.textBoxCrit3Avg.MaxLength = 10;
             this.textBoxCrit3Avg.Name = "textBoxCrit3Avg";
             this.textBoxCrit3Avg.ReadOnly = true;
-            this.textBoxCrit3Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit3Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit3Avg.TabIndex = 79;
             // 
             // labelArrowcCrit3
             // 
             this.labelArrowcCrit3.AutoSize = true;
             this.labelArrowcCrit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowcCrit3.Location = new System.Drawing.Point(818, 163);
+            this.labelArrowcCrit3.Location = new System.Drawing.Point(792, 163);
             this.labelArrowcCrit3.Name = "labelArrowcCrit3";
             this.labelArrowcCrit3.Size = new System.Drawing.Size(26, 16);
             this.labelArrowcCrit3.TabIndex = 78;
@@ -772,17 +766,17 @@
             // 
             // textBoxCrit3To
             // 
-            this.textBoxCrit3To.Location = new System.Drawing.Point(753, 161);
+            this.textBoxCrit3To.Location = new System.Drawing.Point(728, 162);
             this.textBoxCrit3To.MaxLength = 10;
             this.textBoxCrit3To.Name = "textBoxCrit3To";
             this.textBoxCrit3To.ReadOnly = true;
-            this.textBoxCrit3To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit3To.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit3To.TabIndex = 77;
             // 
             // labelDashCrit3
             // 
             this.labelDashCrit3.AutoSize = true;
-            this.labelDashCrit3.Location = new System.Drawing.Point(734, 165);
+            this.labelDashCrit3.Location = new System.Drawing.Point(709, 165);
             this.labelDashCrit3.Name = "labelDashCrit3";
             this.labelDashCrit3.Size = new System.Drawing.Size(13, 13);
             this.labelDashCrit3.TabIndex = 76;
@@ -790,27 +784,27 @@
             // 
             // textBoxCrit3From
             // 
-            this.textBoxCrit3From.Location = new System.Drawing.Point(663, 162);
+            this.textBoxCrit3From.Location = new System.Drawing.Point(645, 162);
             this.textBoxCrit3From.MaxLength = 10;
             this.textBoxCrit3From.Name = "textBoxCrit3From";
             this.textBoxCrit3From.ReadOnly = true;
-            this.textBoxCrit3From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit3From.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit3From.TabIndex = 75;
             // 
             // textBoxHit3Avg
             // 
-            this.textBoxHit3Avg.Location = new System.Drawing.Point(548, 161);
+            this.textBoxHit3Avg.Location = new System.Drawing.Point(540, 162);
             this.textBoxHit3Avg.MaxLength = 10;
             this.textBoxHit3Avg.Name = "textBoxHit3Avg";
             this.textBoxHit3Avg.ReadOnly = true;
-            this.textBoxHit3Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit3Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit3Avg.TabIndex = 73;
             // 
             // labelArrowHit3
             // 
             this.labelArrowHit3.AutoSize = true;
             this.labelArrowHit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowHit3.Location = new System.Drawing.Point(516, 163);
+            this.labelArrowHit3.Location = new System.Drawing.Point(508, 163);
             this.labelArrowHit3.Name = "labelArrowHit3";
             this.labelArrowHit3.Size = new System.Drawing.Size(26, 16);
             this.labelArrowHit3.TabIndex = 72;
@@ -818,17 +812,17 @@
             // 
             // textBoxHit3To
             // 
-            this.textBoxHit3To.Location = new System.Drawing.Point(451, 161);
+            this.textBoxHit3To.Location = new System.Drawing.Point(444, 161);
             this.textBoxHit3To.MaxLength = 10;
             this.textBoxHit3To.Name = "textBoxHit3To";
             this.textBoxHit3To.ReadOnly = true;
-            this.textBoxHit3To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit3To.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit3To.TabIndex = 71;
             // 
             // labelDashHit3
             // 
             this.labelDashHit3.AutoSize = true;
-            this.labelDashHit3.Location = new System.Drawing.Point(432, 165);
+            this.labelDashHit3.Location = new System.Drawing.Point(425, 165);
             this.labelDashHit3.Name = "labelDashHit3";
             this.labelDashHit3.Size = new System.Drawing.Size(13, 13);
             this.labelDashHit3.TabIndex = 70;
@@ -840,13 +834,13 @@
             this.textBoxHit3From.MaxLength = 10;
             this.textBoxHit3From.Name = "textBoxHit3From";
             this.textBoxHit3From.ReadOnly = true;
-            this.textBoxHit3From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit3From.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit3From.TabIndex = 69;
             // 
             // labelTarget4
             // 
             this.labelTarget4.AutoSize = true;
-            this.labelTarget4.Location = new System.Drawing.Point(305, 201);
+            this.labelTarget4.Location = new System.Drawing.Point(305, 237);
             this.labelTarget4.Name = "labelTarget4";
             this.labelTarget4.Size = new System.Drawing.Size(50, 13);
             this.labelTarget4.TabIndex = 96;
@@ -854,36 +848,27 @@
             // 
             // textBoxAvgHot4
             // 
-            this.textBoxAvgHot4.Location = new System.Drawing.Point(995, 197);
+            this.textBoxAvgHot4.Location = new System.Drawing.Point(961, 234);
             this.textBoxAvgHot4.MaxLength = 10;
             this.textBoxAvgHot4.Name = "textBoxAvgHot4";
             this.textBoxAvgHot4.ReadOnly = true;
-            this.textBoxAvgHot4.Size = new System.Drawing.Size(50, 20);
+            this.textBoxAvgHot4.Size = new System.Drawing.Size(58, 20);
             this.textBoxAvgHot4.TabIndex = 95;
-            // 
-            // labelAvgHot4
-            // 
-            this.labelAvgHot4.AutoSize = true;
-            this.labelAvgHot4.Location = new System.Drawing.Point(928, 200);
-            this.labelAvgHot4.Name = "labelAvgHot4";
-            this.labelAvgHot4.Size = new System.Drawing.Size(61, 13);
-            this.labelAvgHot4.TabIndex = 94;
-            this.labelAvgHot4.Text = "AVG. HOT:";
             // 
             // textBoxCrit4Avg
             // 
-            this.textBoxCrit4Avg.Location = new System.Drawing.Point(850, 197);
+            this.textBoxCrit4Avg.Location = new System.Drawing.Point(824, 233);
             this.textBoxCrit4Avg.MaxLength = 10;
             this.textBoxCrit4Avg.Name = "textBoxCrit4Avg";
             this.textBoxCrit4Avg.ReadOnly = true;
-            this.textBoxCrit4Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxCrit4Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit4Avg.TabIndex = 93;
             // 
             // labelArrowcCrit4
             // 
             this.labelArrowcCrit4.AutoSize = true;
             this.labelArrowcCrit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowcCrit4.Location = new System.Drawing.Point(818, 199);
+            this.labelArrowcCrit4.Location = new System.Drawing.Point(792, 235);
             this.labelArrowcCrit4.Name = "labelArrowcCrit4";
             this.labelArrowcCrit4.Size = new System.Drawing.Size(26, 16);
             this.labelArrowcCrit4.TabIndex = 92;
@@ -891,17 +876,17 @@
             // 
             // textBoxCrit4To
             // 
-            this.textBoxCrit4To.Location = new System.Drawing.Point(753, 197);
+            this.textBoxCrit4To.Location = new System.Drawing.Point(728, 233);
             this.textBoxCrit4To.MaxLength = 10;
             this.textBoxCrit4To.Name = "textBoxCrit4To";
             this.textBoxCrit4To.ReadOnly = true;
-            this.textBoxCrit4To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxCrit4To.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit4To.TabIndex = 91;
             // 
             // labelDashCrit4
             // 
             this.labelDashCrit4.AutoSize = true;
-            this.labelDashCrit4.Location = new System.Drawing.Point(734, 201);
+            this.labelDashCrit4.Location = new System.Drawing.Point(709, 237);
             this.labelDashCrit4.Name = "labelDashCrit4";
             this.labelDashCrit4.Size = new System.Drawing.Size(13, 13);
             this.labelDashCrit4.TabIndex = 90;
@@ -909,27 +894,27 @@
             // 
             // textBoxCrit4From
             // 
-            this.textBoxCrit4From.Location = new System.Drawing.Point(663, 198);
+            this.textBoxCrit4From.Location = new System.Drawing.Point(645, 234);
             this.textBoxCrit4From.MaxLength = 10;
             this.textBoxCrit4From.Name = "textBoxCrit4From";
             this.textBoxCrit4From.ReadOnly = true;
-            this.textBoxCrit4From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCrit4From.Size = new System.Drawing.Size(58, 20);
             this.textBoxCrit4From.TabIndex = 89;
             // 
             // textBoxHit4Avg
             // 
-            this.textBoxHit4Avg.Location = new System.Drawing.Point(548, 197);
+            this.textBoxHit4Avg.Location = new System.Drawing.Point(540, 233);
             this.textBoxHit4Avg.MaxLength = 10;
             this.textBoxHit4Avg.Name = "textBoxHit4Avg";
             this.textBoxHit4Avg.ReadOnly = true;
-            this.textBoxHit4Avg.Size = new System.Drawing.Size(50, 20);
+            this.textBoxHit4Avg.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit4Avg.TabIndex = 87;
             // 
             // labelArrowHit4
             // 
             this.labelArrowHit4.AutoSize = true;
             this.labelArrowHit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrowHit4.Location = new System.Drawing.Point(516, 199);
+            this.labelArrowHit4.Location = new System.Drawing.Point(508, 234);
             this.labelArrowHit4.Name = "labelArrowHit4";
             this.labelArrowHit4.Size = new System.Drawing.Size(26, 16);
             this.labelArrowHit4.TabIndex = 86;
@@ -937,17 +922,17 @@
             // 
             // textBoxHit4To
             // 
-            this.textBoxHit4To.Location = new System.Drawing.Point(451, 197);
+            this.textBoxHit4To.Location = new System.Drawing.Point(444, 234);
             this.textBoxHit4To.MaxLength = 10;
             this.textBoxHit4To.Name = "textBoxHit4To";
             this.textBoxHit4To.ReadOnly = true;
-            this.textBoxHit4To.Size = new System.Drawing.Size(59, 20);
+            this.textBoxHit4To.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit4To.TabIndex = 85;
             // 
             // labelDashHit4
             // 
             this.labelDashHit4.AutoSize = true;
-            this.labelDashHit4.Location = new System.Drawing.Point(432, 201);
+            this.labelDashHit4.Location = new System.Drawing.Point(425, 237);
             this.labelDashHit4.Name = "labelDashHit4";
             this.labelDashHit4.Size = new System.Drawing.Size(13, 13);
             this.labelDashHit4.TabIndex = 84;
@@ -955,22 +940,119 @@
             // 
             // textBoxHit4From
             // 
-            this.textBoxHit4From.Location = new System.Drawing.Point(361, 198);
+            this.textBoxHit4From.Location = new System.Drawing.Point(361, 234);
             this.textBoxHit4From.MaxLength = 10;
             this.textBoxHit4From.Name = "textBoxHit4From";
             this.textBoxHit4From.ReadOnly = true;
-            this.textBoxHit4From.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHit4From.Size = new System.Drawing.Size(58, 20);
             this.textBoxHit4From.TabIndex = 83;
+            // 
+            // textBoxCastingTime
+            // 
+            this.textBoxCastingTime.Location = new System.Drawing.Point(361, 361);
+            this.textBoxCastingTime.MaxLength = 10;
+            this.textBoxCastingTime.Name = "textBoxCastingTime";
+            this.textBoxCastingTime.ReadOnly = true;
+            this.textBoxCastingTime.Size = new System.Drawing.Size(58, 20);
+            this.textBoxCastingTime.TabIndex = 97;
+            // 
+            // labelCastingTime
+            // 
+            this.labelCastingTime.AutoSize = true;
+            this.labelCastingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCastingTime.Location = new System.Drawing.Point(271, 363);
+            this.labelCastingTime.Name = "labelCastingTime";
+            this.labelCastingTime.Size = new System.Drawing.Size(84, 13);
+            this.labelCastingTime.TabIndex = 98;
+            this.labelCastingTime.Text = "Casting Time:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Olive;
+            this.label1.Location = new System.Drawing.Point(1057, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 100;
+            this.label1.Text = "AVG eHPS:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1165, 119);
+            this.textBox1.MaxLength = 10;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(58, 20);
+            this.textBox1.TabIndex = 99;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Olive;
+            this.label2.Location = new System.Drawing.Point(1057, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.TabIndex = 102;
+            this.label2.Text = "AVG HOT eHPS:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1165, 161);
+            this.textBox2.MaxLength = 10;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(58, 20);
+            this.textBox2.TabIndex = 101;
+            // 
+            // checkBoxGlyphChainHeal
+            // 
+            this.checkBoxGlyphChainHeal.AutoSize = true;
+            this.checkBoxGlyphChainHeal.Enabled = false;
+            this.checkBoxGlyphChainHeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxGlyphChainHeal.Location = new System.Drawing.Point(361, 211);
+            this.checkBoxGlyphChainHeal.Name = "checkBoxGlyphChainHeal";
+            this.checkBoxGlyphChainHeal.Size = new System.Drawing.Size(139, 17);
+            this.checkBoxGlyphChainHeal.TabIndex = 103;
+            this.checkBoxGlyphChainHeal.Text = "Glyph of Chain Heal";
+            this.checkBoxGlyphChainHeal.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(958, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "(Chained Heal)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1057, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.TabIndex = 105;
+            this.label4.Text = "(Chained Heal)";
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1270, 502);
+            this.ClientSize = new System.Drawing.Size(1270, 445);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBoxGlyphChainHeal);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelCastingTime);
+            this.Controls.Add(this.textBoxCastingTime);
             this.Controls.Add(this.labelTarget4);
             this.Controls.Add(this.textBoxAvgHot4);
-            this.Controls.Add(this.labelAvgHot4);
             this.Controls.Add(this.textBoxCrit4Avg);
             this.Controls.Add(this.labelArrowcCrit4);
             this.Controls.Add(this.textBoxCrit4To);
@@ -983,7 +1065,6 @@
             this.Controls.Add(this.textBoxHit4From);
             this.Controls.Add(this.labelTarget3);
             this.Controls.Add(this.textBoxAvgHot3);
-            this.Controls.Add(this.labelAvgHot3);
             this.Controls.Add(this.textBoxCrit3Avg);
             this.Controls.Add(this.labelArrowcCrit3);
             this.Controls.Add(this.textBoxCrit3To);
@@ -996,7 +1077,6 @@
             this.Controls.Add(this.textBoxHit3From);
             this.Controls.Add(this.labelTarget2);
             this.Controls.Add(this.textBoxAvgHot2);
-            this.Controls.Add(this.labelAvgHot2);
             this.Controls.Add(this.textBoxCrit2Avg);
             this.Controls.Add(this.labelArrowcCrit2);
             this.Controls.Add(this.textBoxCrit2To);
@@ -1112,7 +1192,6 @@
         private System.Windows.Forms.Label labelTarget1;
         private System.Windows.Forms.Label labelTarget2;
         private System.Windows.Forms.TextBox textBoxAvgHot2;
-        private System.Windows.Forms.Label labelAvgHot2;
         private System.Windows.Forms.TextBox textBoxCrit2Avg;
         private System.Windows.Forms.Label labelArrowcCrit2;
         private System.Windows.Forms.TextBox textBoxCrit2To;
@@ -1125,7 +1204,6 @@
         private System.Windows.Forms.TextBox textBoxHit2From;
         private System.Windows.Forms.Label labelTarget3;
         private System.Windows.Forms.TextBox textBoxAvgHot3;
-        private System.Windows.Forms.Label labelAvgHot3;
         private System.Windows.Forms.TextBox textBoxCrit3Avg;
         private System.Windows.Forms.Label labelArrowcCrit3;
         private System.Windows.Forms.TextBox textBoxCrit3To;
@@ -1138,7 +1216,6 @@
         private System.Windows.Forms.TextBox textBoxHit3From;
         private System.Windows.Forms.Label labelTarget4;
         private System.Windows.Forms.TextBox textBoxAvgHot4;
-        private System.Windows.Forms.Label labelAvgHot4;
         private System.Windows.Forms.TextBox textBoxCrit4Avg;
         private System.Windows.Forms.Label labelArrowcCrit4;
         private System.Windows.Forms.TextBox textBoxCrit4To;
@@ -1149,6 +1226,15 @@
         private System.Windows.Forms.TextBox textBoxHit4To;
         private System.Windows.Forms.Label labelDashHit4;
         private System.Windows.Forms.TextBox textBoxHit4From;
+        private System.Windows.Forms.TextBox textBoxCastingTime;
+        private System.Windows.Forms.Label labelCastingTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox checkBoxGlyphChainHeal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

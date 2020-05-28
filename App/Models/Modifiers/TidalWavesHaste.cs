@@ -19,7 +19,11 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.HastePercent = Player.Instance.HastePercent + 25;
+            if (Player.Instance.CastingTime != null)
+            {
+                var castingTime = (double)Player.Instance.CastingTime * 0.7;
+                Player.Instance.CastingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+            }
         }
     }
 }

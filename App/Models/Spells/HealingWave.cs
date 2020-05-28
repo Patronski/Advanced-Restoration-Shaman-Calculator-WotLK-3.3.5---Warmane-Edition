@@ -21,7 +21,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new WrathOfTheAirTotem());
             this.Modifiers.Add(new SwiftRetribution());
             this.Modifiers.Add(new RapidCurrents());
-            this.Modifiers.Add(new TidalWavesCrit());
+            this.Modifiers.Add(new TidalWavesHaste());
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
@@ -50,6 +50,14 @@ namespace App.Models.Spells
             rounded = (int)(rounded * 1.375);
 
             return rounded;
+        }
+
+        public override double? CalculateCastingTime()
+        {
+            var castingTime = 2.5 / (1 + Player.Instance.HastePercent / 100);
+            castingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+
+            return castingTime;
         }
     }
 }

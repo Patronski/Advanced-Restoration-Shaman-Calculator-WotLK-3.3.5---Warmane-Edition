@@ -165,7 +165,6 @@ namespace App
             {
                 this.labelArrowcCrit2.Show();
                 this.labelArrowHit2.Show();
-                this.labelAvgHot2.Show();
                 this.labelDashCrit2.Show();
                 this.labelDashHit2.Show();
                 this.labelTarget2.Show();
@@ -179,7 +178,6 @@ namespace App
 
                 this.labelArrowcCrit3.Show();
                 this.labelArrowHit3.Show();
-                this.labelAvgHot3.Show();
                 this.labelDashCrit3.Show();
                 this.labelDashHit3.Show();
                 this.labelTarget3.Show();
@@ -193,7 +191,6 @@ namespace App
 
                 this.labelArrowcCrit4.Show();
                 this.labelArrowHit4.Show();
-                this.labelAvgHot4.Show();
                 this.labelDashCrit4.Show();
                 this.labelDashHit4.Show();
                 this.labelTarget4.Show();
@@ -204,12 +201,16 @@ namespace App
                 this.textBoxHit4Avg.Show();
                 this.textBoxHit4From.Show();
                 this.textBoxHit4To.Show();
+
+                this.labelTarget1.Show();
+                this.labelTarget2.Show();
+                this.labelTarget3.Show();
+                this.labelTarget4.Show();
             }
             else
             {
                 this.labelArrowcCrit2.Hide();
                 this.labelArrowHit2.Hide();
-                this.labelAvgHot2.Hide();
                 this.labelDashCrit2.Hide();
                 this.labelDashHit2.Hide();
                 this.labelTarget2.Hide();
@@ -223,7 +224,6 @@ namespace App
 
                 this.labelArrowcCrit3.Hide();
                 this.labelArrowHit3.Hide();
-                this.labelAvgHot3.Hide();
                 this.labelDashCrit3.Hide();
                 this.labelDashHit3.Hide();
                 this.labelTarget3.Hide();
@@ -237,7 +237,6 @@ namespace App
 
                 this.labelArrowcCrit4.Hide();
                 this.labelArrowHit4.Hide();
-                this.labelAvgHot4.Hide();
                 this.labelDashCrit4.Hide();
                 this.labelDashHit4.Hide();
                 this.labelTarget4.Hide();
@@ -248,6 +247,16 @@ namespace App
                 this.textBoxHit4Avg.Hide();
                 this.textBoxHit4From.Hide();
                 this.textBoxHit4To.Hide();
+
+                this.labelTarget1.Hide();
+                this.labelTarget2.Hide();
+                this.labelTarget3.Hide();
+                this.labelTarget4.Hide();
+            }
+
+            if (selectedSpell.Name == Constants.SpellEarthliving)
+            {
+                //this.textBoxHit1Avg;
             }
         }
 
@@ -329,6 +338,8 @@ namespace App
             this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
             this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
             this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
+
+            this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
             if (Player.Instance.IsCritModified)
             {

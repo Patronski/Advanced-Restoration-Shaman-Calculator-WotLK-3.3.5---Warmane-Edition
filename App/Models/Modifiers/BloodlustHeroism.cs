@@ -12,13 +12,12 @@ namespace App.Models.Modifiers
         public BloodlustHeroism()
         {
             Display = Constants.ModBloodlust;
-            Value = 1.3;
             InitCheckBox();
         }
 
         public override void Modify()
         {
-            Player.Instance.HastePercent = Player.Instance.HastePercent * Value;
+            Player.Instance.HastePercent = Player.Instance.HastePercent * 1.3 + 30;
         }
     }
 }

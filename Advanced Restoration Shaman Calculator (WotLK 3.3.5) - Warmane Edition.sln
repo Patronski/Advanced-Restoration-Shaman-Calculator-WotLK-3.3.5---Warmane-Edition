@@ -9,14 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{A60E9B74-5079-495C-B5C3-4312E8CF92D9}"
 	ProjectSection(SolutionItems) = preProject
+		Requirements\1. Home.png = Requirements\1. Home.png
+		Requirements\CH HPS.png = Requirements\CH HPS.png
 		Requirements\CH.png = Requirements\CH.png
 		Requirements\CH_HPS.png = Requirements\CH_HPS.png
 		Requirements\Earthliving.png = Requirements\Earthliving.png
 		Requirements\ES.png = Requirements\ES.png
 		Requirements\HST.png = Requirements\HST.png
+		Requirements\HW HPS.png = Requirements\HW HPS.png
 		Requirements\HW.png = Requirements\HW.png
 		Requirements\LHW.png = Requirements\LHW.png
-		Requirements\Nachalen.png = Requirements\Nachalen.png
+		Requirements\Riptide HPS.png = Requirements\Riptide HPS.png
 		Requirements\Riptide.png = Requirements\Riptide.png
 	EndProjectSection
 EndProject

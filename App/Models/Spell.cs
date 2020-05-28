@@ -64,15 +64,23 @@ namespace App.Models
 
         public virtual int? CalculateAstralAwakening() { return null; }
         public virtual int? CalculateAverageHPS() { return null; }
-        public virtual decimal? CalculateCastingTime() { return null; }
+        public virtual double? CalculateCastingTime() { return null; }
 
         public virtual void Calculate()
         {
             Player.Instance.Recalculate();
             Player.Instance.Hit1From = CalculateTarget1HitFrom();
             Player.Instance.Hit1To = CalculateTarget1HitTo();
+            Player.Instance.CastingTime = CalculateCastingTime();
 
             ModifyWithModifiers();
+            Player.Instance.CastingTime = CalculateCastingTime();
+            var modifier = Modifiers
+                .FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+            if (modifier != null)
+            {
+                modifier.Modify();
+            }
 
             Player.Instance.Hit2From = CalculateTarget2HitFrom();
             Player.Instance.Hit3From = CalculateTarget3HitFrom();
@@ -102,7 +110,7 @@ namespace App.Models
             Player.Instance.AvgHot2 = CalculateAverageHOT2();
             Player.Instance.AvgHot3 = CalculateAverageHOT3();
             Player.Instance.AvgHot4 = CalculateAverageHOT4();
-            Player.Instance.CastingTime = CalculateCastingTime();
+            
         }
 
         public override string ToString()
@@ -114,7 +122,7 @@ namespace App.Models
         {
             foreach (var modifier in Modifiers)
             {
-                if (modifier.IsCheckBoxChecked)
+                if (modifier.IsCheckBoxChecked && modifier.Display != Constants.ModTidalWavesHaste)
                 {
                     modifier.Modify();
                 }

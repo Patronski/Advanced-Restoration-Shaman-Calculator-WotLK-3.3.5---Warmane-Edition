@@ -19,7 +19,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.HastePercent = Player.Instance.HastePercent * 1.2;
+            Player.Instance.HastePercent = Player.Instance.HastePercent * 1.2 + 20;
         }
     }
 }

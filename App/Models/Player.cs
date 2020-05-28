@@ -36,12 +36,12 @@ namespace App.Models
                 hasteRating = value;
                 if (value != null)
                 {
-                    HastePercent = Math.Round((double)value / 32.79, 2);
+                    HastePercent = Math.Round((double)value / 32.79, 2, MidpointRounding.ToEven);
                 }
             }
         }
 
-        public double? HastePercent { get; set; }
+        public double HastePercent { get; set; }
 
         public double? CriticalChance { get; set; }
         public bool IsCritModified { get; set; }
@@ -62,7 +62,7 @@ namespace App.Models
 
         public bool IsEquipedMetagemForCrit { get; set; }
 
-        public decimal? CastingTime { get; set; }
+        public double? CastingTime { get; set; }
 
         public int? AvgHPS { get; set; }
 
