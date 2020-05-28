@@ -78,15 +78,15 @@ namespace App.Models
         public int? Hit3To { get; set; }
         public int? Hit4To { get; set; }
 
-        public double? Crit1From { get; set; }
-        public double? Crit2From { get; set; }
-        public double? Crit3From { get; set; }
-        public double? Crit4From { get; set; }
+        public int? Crit1From { get; set; }
+        public int? Crit2From { get; set; }
+        public int? Crit3From { get; set; }
+        public int? Crit4From { get; set; }
         
-        public double? Crit1To { get; set; }
-        public double? Crit2To { get; set; }
-        public double? Crit3To { get; set; }
-        public double? Crit4To { get; set; }
+        public int? Crit1To { get; set; }
+        public int? Crit2To { get; set; }
+        public int? Crit3To { get; set; }
+        public int? Crit4To { get; set; }
 
         public int? Hit1Avg { get; set; }
         public int? Hit2Avg { get; set; }

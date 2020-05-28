@@ -300,11 +300,36 @@ namespace App
 
         private void DisplayHealing()
         {
-            this.textBoxHit1To.Text = Player.Instance.Hit1To.ToString();
-            this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
+            this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
             this.textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
+            this.textBoxHit3From.Text = Player.Instance.Hit3From.ToString();
+            this.textBoxHit4From.Text = Player.Instance.Hit4From.ToString();
+            this.textBoxHit1To.Text = Player.Instance.Hit1To.ToString();
             this.textBoxHit2To.Text = Player.Instance.Hit2To.ToString();
+            this.textBoxHit3To.Text = Player.Instance.Hit3To.ToString();
+            this.textBoxHit4To.Text = Player.Instance.Hit4To.ToString();
+            this.textBoxHit1Avg.Text = Player.Instance.Hit1Avg.ToString();
+            this.textBoxHit2Avg.Text = Player.Instance.Hit2Avg.ToString();
+            this.textBoxHit3Avg.Text = Player.Instance.Hit3Avg.ToString();
+            this.textBoxHit4Avg.Text = Player.Instance.Hit4Avg.ToString();
+            this.textBoxCrit1From.Text = Player.Instance.Crit1From.ToString();
+            this.textBoxCrit2From.Text = Player.Instance.Crit2From.ToString();
+            this.textBoxCrit3From.Text = Player.Instance.Crit3From.ToString();
+            this.textBoxCrit4From.Text = Player.Instance.Crit4From.ToString();
+            this.textBoxCrit1To.Text = Player.Instance.Crit1To.ToString();
+            this.textBoxCrit2To.Text = Player.Instance.Crit2To.ToString();
+            this.textBoxCrit3To.Text = Player.Instance.Crit3To.ToString();
+            this.textBoxCrit4To.Text = Player.Instance.Crit4To.ToString();
+            this.textBoxCrit1Avg.Text = Player.Instance.Crit1Avg.ToString();
+            this.textBoxCrit2Avg.Text = Player.Instance.Crit2Avg.ToString();
+            this.textBoxCrit3Avg.Text = Player.Instance.Crit3Avg.ToString();
+            this.textBoxCrit4Avg.Text = Player.Instance.Crit4Avg.ToString();
+            this.textBoxAvgHot1.Text = Player.Instance.AvgHot1.ToString();
+            this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
+            this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
+            this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
+
             if (Player.Instance.IsCritModified)
             {
                 Player.Instance.IsCritModified = false;

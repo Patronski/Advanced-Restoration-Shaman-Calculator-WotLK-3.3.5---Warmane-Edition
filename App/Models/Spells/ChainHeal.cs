@@ -57,12 +57,32 @@ namespace App.Models.Spells
 
         public override int? CalculateTarget2HitFrom()
         {
-            return (int)(CalculateTarget1HitFrom() * 0.6);
+            return (int?)(Player.Instance.Hit1From * 0.6);
         }
 
         public override int? CalculateTarget2HitTo()
         {
-            return (int)(CalculateTarget1HitTo() * 0.6);
+            return (int?)(Player.Instance.Hit1To * 0.6);
+        }
+
+        public override int? CalculateTarget3HitFrom()
+        {
+            return (int?)(Player.Instance.Hit1From * 0.36);
+        }
+
+        public override int? CalculateTarget3HitTo()
+        {
+            return (int?)(Player.Instance.Hit1To * 0.36);
+        }
+
+        public override int? CalculateTarget4HitFrom()
+        {
+            return (int?)(Player.Instance.Hit1From * 0.216);
+        }
+
+        public override int? CalculateTarget4HitTo()
+        {
+            return (int?)(Player.Instance.Hit1To * 0.216);
         }
     }
 }

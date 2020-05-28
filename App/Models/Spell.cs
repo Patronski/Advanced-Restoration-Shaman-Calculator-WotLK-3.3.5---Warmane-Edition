@@ -27,35 +27,36 @@ namespace App.Models
 
         public abstract int CalculateTarget1HitFrom();
         public virtual int? CalculateTarget1HitTo() => null;
-        public virtual int? CalculateTarget1HitAvg() => null;
-        public virtual int? CalculateTarget1CritFrom() => null;
-        public virtual int? CalculateTarget1CritTo() => null;
-        public virtual int? CalculateTarget1CritAvg() => null;
+        public virtual int? CalculateTarget1HitAvg() => (Player.Instance.Hit1From + Player.Instance.Hit1To) / 2;
+        public virtual int? CalculateTarget1CritFrom() => (int?)(Player.Instance.Hit1From * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget1CritTo() => (int?)(Player.Instance.Hit1To * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget1CritAvg() => (Player.Instance.Crit1From + Player.Instance.Crit1To) / 2;
         public virtual int? CalculateTarget1AvgHot() => null;
 
         public virtual int? CalculateTarget2HitFrom() => null;
         public virtual int? CalculateTarget2HitTo() => null;
-        public virtual int? CalculateTarget2HitAvg() => null;
-        public virtual int? CalculateTarget2CritFrom() => null;
-        public virtual int? CalculateTarget2CritTo() => null;
-        public virtual int? CalculateTarget2CritAvg() => null;
+        public virtual int? CalculateTarget2HitAvg() => (Player.Instance.Hit2From + Player.Instance.Hit2To) / 2;
+        public virtual int? CalculateTarget2CritFrom() => (int?)(Player.Instance.Hit2From * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget2CritTo() => (int?)(Player.Instance.Hit2To * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget2CritAvg() => (Player.Instance.Crit2From + Player.Instance.Crit2To) / 2;
         public virtual int? CalculateTarget2AvgHot() => null;
 
         public virtual int? CalculateTarget3HitFrom() => null;
         public virtual int? CalculateTarget3HitTo() => null;
-        public virtual int? CalculateTarget3HitAvg() => null;
-        public virtual int? CalculateTarget3CritFrom() => null;
-        public virtual int? CalculateTarget3CritTo() => null;
-        public virtual int? CalculateTarget3CritAvg() => null;
+        public virtual int? CalculateTarget3HitAvg() => (Player.Instance.Hit3From + Player.Instance.Hit3To) / 2;
+        public virtual int? CalculateTarget3CritFrom() => (int?)(Player.Instance.Hit3From * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget3CritTo() => (int?)(Player.Instance.Hit3To * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget3CritAvg() => (Player.Instance.Crit3From + Player.Instance.Crit3To) / 2;
         public virtual int? CalculateTarget3AvgHot() => null;
 
         public virtual int? CalculateTarget4HitFrom() => null;
         public virtual int? CalculateTarget4HitTo() => null;
-        public virtual int? CalculateTarget4HitAvg() => null;
-        public virtual int? CalculateTarget4CritFrom() => null;
-        public virtual int? CalculateTarget4CritTo() => null;
-        public virtual int? CalculateTarget4CritAvg() => null;
+        public virtual int? CalculateTarget4HitAvg() => (Player.Instance.Hit4From + Player.Instance.Hit4To) / 2;
+        public virtual int? CalculateTarget4CritFrom() => (int?)(Player.Instance.Hit4From * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget4CritTo() => (int?)(Player.Instance.Hit4To * Constants.CriticalMultiplier);
+        public virtual int? CalculateTarget4CritAvg() => (Player.Instance.Crit4From + Player.Instance.Crit4To) / 2;
         public virtual int? CalculateTarget4AvgHot() => null;
+
         public virtual int? CalculateAverageHOT1() => null;
         public virtual int? CalculateAverageHOT2() => null;
         public virtual int? CalculateAverageHOT3() => null;
@@ -69,21 +70,21 @@ namespace App.Models
         {
             Player.Instance.Recalculate();
             Player.Instance.Hit1From = CalculateTarget1HitFrom();
+            Player.Instance.Hit1To = CalculateTarget1HitTo();
+
+            ModifyWithModifiers();
+
             Player.Instance.Hit2From = CalculateTarget2HitFrom();
             Player.Instance.Hit3From = CalculateTarget3HitFrom();
             Player.Instance.Hit4From = CalculateTarget4HitFrom();
-            Player.Instance.Hit1To = CalculateTarget1HitTo();
             Player.Instance.Hit2To = CalculateTarget2HitTo();
             Player.Instance.Hit3To = CalculateTarget3HitTo();
             Player.Instance.Hit4To = CalculateTarget4HitTo();
+
             Player.Instance.Hit1Avg = CalculateTarget1HitAvg();
             Player.Instance.Hit2Avg = CalculateTarget2HitAvg();
             Player.Instance.Hit3Avg = CalculateTarget3HitAvg();
             Player.Instance.Hit4Avg = CalculateTarget4HitAvg();
-            Player.Instance.Crit1Avg = CalculateTarget1CritAvg();
-            Player.Instance.Crit2Avg = CalculateTarget2CritAvg();
-            Player.Instance.Crit3Avg = CalculateTarget3CritAvg();
-            Player.Instance.Crit4Avg = CalculateTarget4CritAvg();
             Player.Instance.Crit1To = CalculateTarget1CritTo();
             Player.Instance.Crit2To = CalculateTarget2CritTo();
             Player.Instance.Crit3To = CalculateTarget3CritTo();
@@ -92,14 +93,16 @@ namespace App.Models
             Player.Instance.Crit2From = CalculateTarget2CritFrom();
             Player.Instance.Crit3From = CalculateTarget3CritFrom();
             Player.Instance.Crit4From = CalculateTarget4CritFrom();
+            Player.Instance.Crit1Avg = CalculateTarget1CritAvg();
+            Player.Instance.Crit2Avg = CalculateTarget2CritAvg();
+            Player.Instance.Crit3Avg = CalculateTarget3CritAvg();
+            Player.Instance.Crit4Avg = CalculateTarget4CritAvg();
             Player.Instance.AvgHPS = CalculateAverageHPS();
             Player.Instance.AvgHot1 = CalculateAverageHOT1();
             Player.Instance.AvgHot2 = CalculateAverageHOT2();
             Player.Instance.AvgHot3 = CalculateAverageHOT3();
             Player.Instance.AvgHot4 = CalculateAverageHOT4();
             Player.Instance.CastingTime = CalculateCastingTime();
-
-            ModifyWithModifiers();
         }
 
         public override string ToString()
