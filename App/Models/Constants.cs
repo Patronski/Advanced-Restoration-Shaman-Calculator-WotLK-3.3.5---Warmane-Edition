@@ -20,20 +20,24 @@ namespace App.Models
         public const string SpellLHW = "Lesser Healing Wave";
         public const string SpellRiptide = "Riptide";
 
-        public const string ModBloodlust = "Bloodlust Heroism";
-        public const string ModEmeraldVigor = "Emerald Vigor";
-        public const string ModGlyphLHW = "Glyph LHW";
-        public const string ModGlyphESH = "Glyph Of Earth Shield";
-        public const string ModGlyphHST = "Glyph Of HST";
+        public const string ModBloodlust = "Bloodlust / Heroism";
+        public const string ModEmeraldVigor = ""; // TODO
+        public const string ModGlyphLHW = "Glyph Lesser Healing Wave";
+        public const string ModGlyphESH = "Glyph of Earth Shield";
+        public const string ModGlyphHST = "Glyph of Healing Stream Totem";
         public const string ModHellscream = "Hellscream's Warsong / Strength of Wrynn";
         public const string ModMoonkin = "Moonkin Form / Elemental Oath";
         public const string ModRapidCurrents = "Rapid Currents";
         public const string ModRapidConsumption = "Riptides Consumption";
         public const string ModSwiftRetrubution = "Swift Retribution / Improved Moonkin Form";
         public const string ModTidalMastery = "Tidal Mastery";
-        public const string ModTidalWavesCrit = "Tidal Waves - Crit";
-        public const string ModTidalWavesHaste = "Tidal Waves - Haste";
-        public const string ModTreeOfLife = "Tree Of Life / Improved Devotion Aura";
-        public const string ModWrathOfTheAirTotem = "Wrath Of The Air Totem";
+        public const string ModTidalWavesCrit = "Tidal Waves (Crit)";
+        public const string ModTidalWavesHaste = "Tidal Waves (Haste)";
+        public const string ModTreeOfLife = "Tree of Life / Improved Devotion Aura";
+        public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
+
+        public const string LabelAvgHps = "AVG eHPS:";
+        public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
+        public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
     }
 }

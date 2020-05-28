@@ -43,11 +43,11 @@ namespace App.Models
 
         public double HastePercent { get; set; }
 
-        public double? CriticalChance { get; set; }
+        public double CriticalChance { get; set; }
         public bool IsCritModified { get; set; }
 
-        private double? criticalChanceInitial;
-        public double? CriticalChanceInitial
+        private double criticalChanceInitial;
+        public double CriticalChanceInitial
         {
             get
             {

@@ -145,6 +145,21 @@ namespace App
 
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!labelEmeraldVigor.Enabled)
+            {
+                labelEmeraldVigor.Enabled = true;
+            }
+            labelSpellPower.Enabled = true;
+            textBoxSpellPower.Enabled = true;
+            labelHaste.Enabled = true;
+            textBoxHasteRating.Enabled = true;
+            labelArrow.Enabled = true;
+            textBoxHastePercent.Enabled = true;
+            labelPercent.Enabled = true;
+            labelCrit.Enabled = true;
+            textBoxCrit.Enabled = true;
+            labelPercentCritChance.Enabled = true;
+
             selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
@@ -157,107 +172,6 @@ namespace App
             selectedSpell.Calculate();
 
             DisplayHealing();
-        }
-
-        private void HideShowControlls(Spell selectedSpell)
-        {
-            if (selectedSpell.Name == Constants.SpellChainHeal)
-            {
-                this.labelArrowcCrit2.Show();
-                this.labelArrowHit2.Show();
-                this.labelDashCrit2.Show();
-                this.labelDashHit2.Show();
-                this.labelTarget2.Show();
-                this.textBoxAvgHot2.Show();
-                this.textBoxCrit2Avg.Show();
-                this.textBoxCrit2From.Show();
-                this.textBoxCrit2To.Show();
-                this.textBoxHit2Avg.Show();
-                this.textBoxHit2From.Show();
-                this.textBoxHit2To.Show();
-
-                this.labelArrowcCrit3.Show();
-                this.labelArrowHit3.Show();
-                this.labelDashCrit3.Show();
-                this.labelDashHit3.Show();
-                this.labelTarget3.Show();
-                this.textBoxAvgHot3.Show();
-                this.textBoxCrit3Avg.Show();
-                this.textBoxCrit3From.Show();
-                this.textBoxCrit3To.Show();
-                this.textBoxHit3Avg.Show();
-                this.textBoxHit3From.Show();
-                this.textBoxHit3To.Show();
-
-                this.labelArrowcCrit4.Show();
-                this.labelArrowHit4.Show();
-                this.labelDashCrit4.Show();
-                this.labelDashHit4.Show();
-                this.labelTarget4.Show();
-                this.textBoxAvgHot4.Show();
-                this.textBoxCrit4Avg.Show();
-                this.textBoxCrit4From.Show();
-                this.textBoxCrit4To.Show();
-                this.textBoxHit4Avg.Show();
-                this.textBoxHit4From.Show();
-                this.textBoxHit4To.Show();
-
-                this.labelTarget1.Show();
-                this.labelTarget2.Show();
-                this.labelTarget3.Show();
-                this.labelTarget4.Show();
-            }
-            else
-            {
-                this.labelArrowcCrit2.Hide();
-                this.labelArrowHit2.Hide();
-                this.labelDashCrit2.Hide();
-                this.labelDashHit2.Hide();
-                this.labelTarget2.Hide();
-                this.textBoxAvgHot2.Hide();
-                this.textBoxCrit2Avg.Hide();
-                this.textBoxCrit2From.Hide();
-                this.textBoxCrit2To.Hide();
-                this.textBoxHit2Avg.Hide();
-                this.textBoxHit2From.Hide();
-                this.textBoxHit2To.Hide();
-
-                this.labelArrowcCrit3.Hide();
-                this.labelArrowHit3.Hide();
-                this.labelDashCrit3.Hide();
-                this.labelDashHit3.Hide();
-                this.labelTarget3.Hide();
-                this.textBoxAvgHot3.Hide();
-                this.textBoxCrit3Avg.Hide();
-                this.textBoxCrit3From.Hide();
-                this.textBoxCrit3To.Hide();
-                this.textBoxHit3Avg.Hide();
-                this.textBoxHit3From.Hide();
-                this.textBoxHit3To.Hide();
-
-                this.labelArrowcCrit4.Hide();
-                this.labelArrowHit4.Hide();
-                this.labelDashCrit4.Hide();
-                this.labelDashHit4.Hide();
-                this.labelTarget4.Hide();
-                this.textBoxAvgHot4.Hide();
-                this.textBoxCrit4Avg.Hide();
-                this.textBoxCrit4From.Hide();
-                this.textBoxCrit4To.Hide();
-                this.textBoxHit4Avg.Hide();
-                this.textBoxHit4From.Hide();
-                this.textBoxHit4To.Hide();
-
-                this.labelTarget1.Hide();
-                this.labelTarget2.Hide();
-                this.labelTarget3.Hide();
-                this.labelTarget4.Hide();
-            }
-
-            if (selectedSpell.Name == Constants.SpellEarthliving)
-            {
-                //this.textBoxHit1Avg;
-            }
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -307,6 +221,312 @@ namespace App
             return result;
         }
 
+        private void HideShowControlls(Spell selectedSpell)
+        {
+            this.labelDashCrit1.Hide();
+            this.labelDashHit1.Hide();
+            this.textBoxAvgHot1.Hide();
+            this.textBoxCrit1Avg.Hide();
+            this.textBoxCrit1From.Hide();
+            this.labelArrowcCrit1.Hide();
+            this.textBoxCrit1To.Hide();
+            labelAvgHot1.Hide();
+            labelCritMax.Hide();
+
+            this.labelArrowcCrit2.Hide();
+            this.labelArrowHit2.Hide();
+            this.labelDashCrit2.Hide();
+            this.labelDashHit2.Hide();
+            this.labelTarget2.Hide();
+            this.textBoxAvgHot2.Hide();
+            this.textBoxCrit2Avg.Hide();
+            this.textBoxCrit2From.Hide();
+            this.textBoxCrit2To.Hide();
+            this.textBoxHit2Avg.Hide();
+            this.textBoxHit2From.Hide();
+            this.textBoxHit2To.Hide();
+
+            this.labelArrowcCrit3.Hide();
+            this.labelArrowHit3.Hide();
+            this.labelDashCrit3.Hide();
+            this.labelDashHit3.Hide();
+            this.labelTarget3.Hide();
+            this.textBoxAvgHot3.Hide();
+            this.textBoxCrit3Avg.Hide();
+            this.textBoxCrit3From.Hide();
+            this.textBoxCrit3To.Hide();
+            this.textBoxHit3Avg.Hide();
+            this.textBoxHit3From.Hide();
+            this.textBoxHit3To.Hide();
+
+            this.labelArrowcCrit4.Hide();
+            this.labelArrowHit4.Hide();
+            this.labelDashCrit4.Hide();
+            this.labelDashHit4.Hide();
+            this.labelTarget4.Hide();
+            this.textBoxAvgHot4.Hide();
+            this.textBoxCrit4Avg.Hide();
+            this.textBoxCrit4From.Hide();
+            this.textBoxCrit4To.Hide();
+            this.textBoxHit4Avg.Hide();
+            this.textBoxHit4From.Hide();
+            this.textBoxHit4To.Hide();
+
+            this.labelTarget1.Hide();
+            this.labelTarget2.Hide();
+            this.labelTarget3.Hide();
+            this.labelTarget4.Hide();
+
+            this.labelArrowHit1.Hide();
+            this.textBoxHit1To.Hide();
+            this.textBoxHit1Avg.Hide();
+
+            checkBoxRevitalizingSkyflareDiamond.Hide();
+            labelChainedHeal1.Hide();
+            labelChainedHeal2.Hide();
+            checkBoxGlyphChainHeal.Hide();
+            labelCastingTime.Hide();
+            labelEarthlivingBlessingOf.Hide();
+
+            textBoxCastingTime.Hide();
+            this.labelHit.Hide();
+            this.labelHitPerTick.Hide();
+            labelHitAvg.Hide();
+            labelCritAvg.Hide();
+            checkBoxGlyphOfEarthliving.Hide();
+            labelAvgHotHps.Hide();
+            textBoxAvgHotHps.Hide();
+            labelApproximately1.Hide();
+            labelApproximately2.Hide();
+            this.textBoxHit1From.Hide();
+            textBoxAvgHps.Hide();
+            labelForOneTarget.Hide();
+            labelAncestralAwakening.Hide();
+            labelAvgHps.Hide();
+            labelAvgAA.Hide();
+            labelAvgAAeHps.Hide();
+            textBoxAvgAAeHps.Hide();
+            labelSpamOnDifferent1.Hide();
+            labelSpamOnDifferent2.Hide();
+            labelSpamOn1Target1.Hide();
+            labelSpamOn1Target2.Hide();
+            checkBoxGlyphOfRiptide.Hide();
+            labelHot.Hide();
+
+            switch (selectedSpell.Name)
+            {
+                case Constants.SpellChainHeal:
+                    labelHitAvg.Show();
+                    labelHit.Show();
+                    labelCritAvg.Show();
+                    this.textBoxHit1From.Show();
+
+                    this.labelArrowcCrit2.Show();
+                    this.labelArrowHit2.Show();
+                    this.labelDashCrit2.Show();
+                    this.labelDashHit2.Show();
+                    this.labelTarget2.Show();
+                    this.textBoxAvgHot2.Show();
+                    this.textBoxCrit2Avg.Show();
+                    this.textBoxCrit2From.Show();
+                    this.textBoxCrit2To.Show();
+                    this.textBoxHit2Avg.Show();
+                    this.textBoxHit2From.Show();
+                    this.textBoxHit2To.Show();
+
+                    this.labelArrowcCrit3.Show();
+                    this.labelArrowHit3.Show();
+                    this.labelDashCrit3.Show();
+                    this.labelDashHit3.Show();
+                    this.labelTarget3.Show();
+                    this.textBoxAvgHot3.Show();
+                    this.textBoxCrit3Avg.Show();
+                    this.textBoxCrit3From.Show();
+                    this.textBoxCrit3To.Show();
+                    this.textBoxHit3Avg.Show();
+                    this.textBoxHit3From.Show();
+                    this.textBoxHit3To.Show();
+
+                    this.labelArrowcCrit4.Show();
+                    this.labelArrowHit4.Show();
+                    this.labelDashCrit4.Show();
+                    this.labelDashHit4.Show();
+                    this.labelTarget4.Show();
+                    this.textBoxAvgHot4.Show();
+                    this.textBoxCrit4Avg.Show();
+                    this.textBoxCrit4From.Show();
+                    this.textBoxCrit4To.Show();
+                    this.textBoxHit4Avg.Show();
+                    this.textBoxHit4From.Show();
+                    this.textBoxHit4To.Show();
+
+                    this.labelTarget1.Show();
+                    this.labelTarget2.Show();
+                    this.labelTarget3.Show();
+                    this.labelTarget4.Show();
+
+                    this.labelArrowcCrit1.Show();
+                    this.labelArrowHit1.Show();
+                    this.labelDashCrit1.Show();
+                    this.labelDashHit1.Show();
+                    this.textBoxAvgHot1.Show();
+                    this.textBoxCrit1Avg.Show();
+                    this.textBoxCrit1From.Show();
+                    this.textBoxCrit1To.Show();
+                    this.textBoxHit1Avg.Show();
+                    this.textBoxHit1To.Show();
+                    labelAvgHot1.Show();
+                    labelCritMax.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    labelChainedHeal1.Show();
+                    checkBoxGlyphChainHeal.Show();
+                    labelCastingTime.Show();
+                    textBoxCastingTime.Show();
+                    labelAvgHps.Show();
+                    textBoxAvgHps.Show();
+                    labelAvgHotHps.Show();
+                    labelChainedHeal2.Show();
+                    textBoxAvgHotHps.Show();
+                    break;
+                case Constants.SpellEarthliving:
+                    textBoxAvgHps.Show();
+                    textBoxHit1From.Show();
+                    labelHitPerTick.Show();
+                    labelEarthlivingBlessingOf.Show();
+                    labelAvgHps.Show();
+                    labelAvgHotHps.Show();
+                    checkBoxGlyphOfEarthliving.Show();
+                    textBoxAvgHotHps.Show();
+                    labelForOneTarget.Show();
+                    break;
+                case Constants.SpellHST:
+                    textBoxHit1From.Show();
+                    labelHitPerTick.Show();
+                    labelAvgHps.Show();
+                    labelAvgHotHps.Show();
+                    textBoxAvgHotHps.Show();
+                    textBoxAvgHps.Show();
+                    labelForOneTarget.Show();
+                    break;
+                case Constants.SpellHW:
+                    labelDashHit1.Show();
+                    textBoxHit1To.Show();
+                    labelArrowHit1.Show();
+                    textBoxHit1Avg.Show();
+                    labelCritMax.Show();
+                    textBoxCrit1From.Show();
+                    labelDashCrit1.Show();
+                    textBoxCrit1To.Show();
+                    labelArrowcCrit1.Show();
+                    textBoxCrit1Avg.Show();
+                    labelCritAvg.Show();
+                    textBoxCrit3From.Show();
+                    labelDashCrit3.Show();
+                    textBoxCrit3To.Show();
+                    labelArrowcCrit3.Show();
+                    textBoxCrit3Avg.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    labelHitAvg.Show();
+
+                    labelAvgHps.Show();
+                    textBoxAvgHps.Show();
+                    labelAvgHotHps.Show();
+                    textBoxAvgHotHps.Show();
+                    labelAvgAA.Show();
+
+                    labelAncestralAwakening.Show();
+                    textBoxHit1From.Show();
+                    this.labelHit.Show();
+                    labelCastingTime.Show();
+                    textBoxCastingTime.Show();
+                    break;
+                case Constants.SpellLHW:
+                    labelDashHit1.Show();
+                    textBoxHit1To.Show();
+                    labelArrowHit1.Show();
+                    textBoxHit1Avg.Show();
+                    labelCritMax.Show();
+                    textBoxCrit1From.Show();
+                    labelDashCrit1.Show();
+                    textBoxCrit1To.Show();
+                    labelArrowcCrit1.Show();
+                    textBoxCrit1Avg.Show();
+                    labelCritAvg.Show();
+                    textBoxCrit3From.Show();
+                    labelDashCrit3.Show();
+                    textBoxCrit3To.Show();
+                    labelArrowcCrit3.Show();
+                    textBoxCrit3Avg.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    labelHitAvg.Show();
+
+                    labelAvgHps.Show();
+                    textBoxAvgHps.Show();
+                    labelAvgHotHps.Show();
+                    textBoxAvgHotHps.Show();
+                    labelAvgAA.Show();
+
+                    labelAncestralAwakening.Show();
+                    textBoxHit1From.Show();
+                    this.labelHit.Show();
+                    labelCastingTime.Show();
+                    textBoxCastingTime.Show();
+                    break;
+                case Constants.SpellESh:
+                    labelApproximately1.Show();
+                    labelApproximately2.Show();
+                    labelAvgHps.Show();
+                    textBoxAvgHps.Show();
+                    this.labelHit.Show();
+                    textBoxHit1From.Show();
+                    labelCritMax.Show();
+                    textBoxCrit1From.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    break;
+                case Constants.SpellRiptide:
+                    labelHitAvg.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    labelAvgAA.Show();
+                    labelAvgAAeHps.Show();
+                    textBoxAvgAAeHps.Show();
+
+                    labelDashHit1.Show();
+                    textBoxHit1To.Show();
+                    labelArrowHit1.Show();
+                    textBoxHit1Avg.Show();
+                    labelCritMax.Show();
+                    textBoxCrit1From.Show();
+                    labelDashCrit1.Show();
+                    textBoxCrit1To.Show();
+                    labelArrowcCrit1.Show();
+                    textBoxCrit1Avg.Show();
+                    labelCritAvg.Show();
+                    textBoxCrit3From.Show();
+                    labelDashCrit3.Show();
+                    textBoxCrit3To.Show();
+                    labelArrowcCrit3.Show();
+                    textBoxCrit3Avg.Show();
+                    checkBoxRevitalizingSkyflareDiamond.Show();
+                    labelHitAvg.Show();
+                    labelAncestralAwakening.Show();
+                    textBoxHit1From.Show();
+                    this.labelHit.Show();
+
+                    labelSpamOnDifferent1.Show();
+                    labelSpamOnDifferent2.Show();
+                    labelSpamOn1Target1.Show();
+                    labelSpamOn1Target2.Show();
+                    labelAvgHotHps.Show();
+                    labelAvgHps.Show();
+                    textBoxAvgHps.Show();
+                    textBoxAvgHotHps.Show();
+                    checkBoxGlyphOfRiptide.Show();
+                    labelHot.Show();
+                    textBoxHit3From.Show();
+                    break;
+            }
+        }
+
         private void DisplayHealing()
         {
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
@@ -345,6 +565,24 @@ namespace App
             {
                 Player.Instance.IsCritModified = false;
                 this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
+            }
+            if (selectedSpell != null &&
+                (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
+            {
+                labelAvgHps.Text = Constants.LabelAvgHps1Plus;
+                labelAvgHotHps.Text = Constants.LabelAvgHps;
+            }
+            else if (selectedSpell != null &&
+                (selectedSpell.Name == Constants.SpellHW || selectedSpell.Name == Constants.SpellLHW))
+            {
+                labelAvgHotHps.Text = Constants.LabelAvgHpsHealingWave;
+                labelAvgHps.Text = Constants.LabelAvgHps;
+            }
+            else
+            {
+                labelAvgHotHps.Text = "AVG HOT eHPS:";
+                labelAvgHps.Text = Constants.LabelAvgHps;
+
             }
         }
 
