@@ -52,5 +52,13 @@ namespace App.Models.Spells
 
             return rounded;
         }
+
+        public override double? CalculateCastingTime()
+        {
+            var castingTime = 1.5 / (1 + Player.Instance.HastePercent / 100);
+            castingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+
+            return castingTime;
+        }
     }
 }

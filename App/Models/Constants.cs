@@ -35,9 +35,12 @@ namespace App.Models
         public const string ModTidalWavesHaste = "Tidal Waves (Haste)";
         public const string ModTreeOfLife = "Tree of Life / Improved Devotion Aura";
         public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
+        public static string ModRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
+        public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
 
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
         public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
+
     }
 }

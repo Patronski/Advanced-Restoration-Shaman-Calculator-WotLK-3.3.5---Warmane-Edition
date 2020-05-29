@@ -9,7 +9,10 @@ namespace App.Models
 {
     public sealed class Player
     {
-        private Player() { }
+        private Player() 
+        {
+            CriticalValue = Constants.CriticalMultiplier;
+        }
 
         private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
 
@@ -17,6 +20,7 @@ namespace App.Models
 
         public void Recalculate() 
         {
+            CriticalValue = Constants.CriticalMultiplier;
             Player.Instance.HasteRating = Player.Instance.HasteRating;
             Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
         }
@@ -36,12 +40,23 @@ namespace App.Models
                 hasteRating = value;
                 if (value != null)
                 {
-                    HastePercent = Math.Round((double)value / 32.79, 2, MidpointRounding.ToEven);
+                    HastePercent = (double)value / 32.79;
+                }
+                else
+                {
+                    HastePercent = 0;
                 }
             }
         }
 
-        public double HastePercent { get; set; }
+        private double hastePerent;
+        public double HastePercent 
+        {
+            get 
+            { return hastePerent; } 
+            set 
+            { hastePerent = Math.Round(value, 2, MidpointRounding.ToEven); }
+        }
 
         public double CriticalChance { get; set; }
         public bool IsCritModified { get; set; }
@@ -60,13 +75,15 @@ namespace App.Models
             }
         }
 
+        public double CriticalValue { get; set; }
+
         public bool IsEquipedMetagemForCrit { get; set; }
 
         public double? CastingTime { get; set; }
 
         public int? AvgHPS { get; set; }
 
-        public int? AvgHOT { get; set; }
+        public int? AvgHotHOT { get; set; }
 
         public int? Hit1From { get; set; }
         public int? Hit2From { get; set; }

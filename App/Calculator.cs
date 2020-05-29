@@ -130,7 +130,7 @@ namespace App
                 isAfterCritKeyPress = false;
 
                 double crit = 0;
-                if (double.TryParse(this.textBoxCrit.Text, out crit))
+                if (double.TryParse(this.textBoxCrit.Text, out crit) || this.textBoxCrit.Text == string.Empty)
                 {
                     Player.Instance.CriticalChanceInitial = crit;
                 }
@@ -558,14 +558,16 @@ namespace App
             this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
             this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
             this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
+            this.textBoxAvgHps.Text = Player.Instance.AvgHPS.ToString();
+            this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHOT.ToString();
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
-            if (Player.Instance.IsCritModified)
-            {
-                Player.Instance.IsCritModified = false;
-                this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
-            }
+            this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
+            //if (Player.Instance.IsCritModified)
+            //{
+            //    Player.Instance.IsCritModified = false;
+            //}
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
             {
@@ -583,6 +585,31 @@ namespace App
                 labelAvgHotHps.Text = "AVG HOT eHPS:";
                 labelAvgHps.Text = Constants.LabelAvgHps;
 
+            }
+
+            CritChanceZeroDisplay();
+        }
+
+        private void CritChanceZeroDisplay()
+        {
+            if (Player.Instance.CriticalChance == 0)
+            {
+                this.textBoxCrit1From.Text = "0";
+                this.textBoxCrit2From.Text = "0";
+                this.textBoxCrit3From.Text = "0";
+                this.textBoxCrit4From.Text = "0";
+                this.textBoxCrit1To.Text =   "0";
+                this.textBoxCrit2To.Text =   "0";
+                this.textBoxCrit3To.Text =   "0";
+                this.textBoxCrit4To.Text =   "0";
+                this.textBoxCrit1Avg.Text =  "0";
+                this.textBoxCrit2Avg.Text =  "0";
+                this.textBoxCrit3Avg.Text =  "0";
+                this.textBoxCrit4Avg.Text =  "0";
+                this.textBoxAvgHot1.Text =   "0";
+                this.textBoxAvgHot2.Text =   "0";
+                this.textBoxAvgHot3.Text =   "0";
+                this.textBoxAvgHot4.Text = "0";
             }
         }
 

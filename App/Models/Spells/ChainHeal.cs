@@ -22,6 +22,7 @@ namespace App.Models.Spells
                 BindingFlags.Instance)
                 .Where(x => x.FieldType.IsAssignableFrom(typeof(Modifier)));
 
+            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
@@ -32,13 +33,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new GlyphOfChainHeal());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
-        }
-
-        public override int? CalculateAstralAwakening()
-        {
-            throw new NotImplementedException();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -83,6 +80,75 @@ namespace App.Models.Spells
         public override int? CalculateTarget4HitTo()
         {
             return (int?)(Player.Instance.Hit1To * 0.216);
+        }
+
+        public override int? CalculateAverageHOT1()
+        {
+            var hot = (int)(Player.Instance.Crit1Avg * 0.25 / 3);
+            return hot;
+        }
+        public override int? CalculateAverageHOT2()
+        {
+            var hot = (int)(Player.Instance.Crit2Avg * 0.25 / 3);
+            return hot;
+        }
+        public override int? CalculateAverageHOT3()
+        {
+            var hot = (int)(Player.Instance.Crit3Avg * 0.25 / 3);
+            return hot;
+        }
+        public override int? CalculateAverageHOT4()
+        {
+            var hot = (int)(Player.Instance.Crit4Avg * 0.25 / 3);
+            return hot;
+        }
+
+        public override double? CalculateCastingTime()
+        {
+            var castingTime = 2.5 / (1 + Player.Instance.HastePercent / 100);
+            castingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+
+            return castingTime;
+        }
+
+        public override int? CalculateAverageHPS()
+        {
+            var hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+
+            var formula = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue)
+                + (1 - Player.Instance.CriticalChance / 100 ) )
+                * Player.Instance.Hit1Avg * 0.4 * (1 + hastePercent / 100));
+
+            var isGlyphOfChainHeal = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+
+            var result = (int)(formula + formula * 0.6 + formula * 0.36 + formula * 0.216);
+
+            if (!isGlyphOfChainHeal)
+            {
+                result = (int)(formula + formula * 0.6 + formula * 0.36);
+            }
+
+            return result;
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+            var hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+
+            var formula = Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue * Player.Instance.Hit1Avg * 0.01111 * (1 + hastePercent / 100);
+
+            var isGlyphOfChainHeal = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+
+            var result = (int)(formula + formula * 0.6 + formula * 0.36 + formula * 0.216);
+
+            if (!isGlyphOfChainHeal)
+            {
+                result = (int)(formula + formula * 0.6 + formula * 0.36);
+            }
+
+            return result;
         }
     }
 }

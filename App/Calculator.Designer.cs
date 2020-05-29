@@ -1108,7 +1108,6 @@
             // checkBoxGlyphChainHeal
             // 
             this.checkBoxGlyphChainHeal.AutoSize = true;
-            this.checkBoxGlyphChainHeal.Enabled = false;
             this.checkBoxGlyphChainHeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxGlyphChainHeal.Location = new System.Drawing.Point(361, 222);
             this.checkBoxGlyphChainHeal.Name = "checkBoxGlyphChainHeal";
@@ -1117,6 +1116,7 @@
             this.checkBoxGlyphChainHeal.Text = "Glyph of Chain Heal";
             this.checkBoxGlyphChainHeal.UseVisualStyleBackColor = true;
             this.checkBoxGlyphChainHeal.Visible = false;
+            this.checkBoxGlyphChainHeal.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelChainedHeal1
             // 
@@ -1153,7 +1153,6 @@
             // checkBoxRevitalizingSkyflareDiamond
             // 
             this.checkBoxRevitalizingSkyflareDiamond.AutoSize = true;
-            this.checkBoxRevitalizingSkyflareDiamond.Enabled = false;
             this.checkBoxRevitalizingSkyflareDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxRevitalizingSkyflareDiamond.Location = new System.Drawing.Point(645, 60);
             this.checkBoxRevitalizingSkyflareDiamond.Name = "checkBoxRevitalizingSkyflareDiamond";
@@ -1162,6 +1161,7 @@
             this.checkBoxRevitalizingSkyflareDiamond.Text = "Revitalizing Skyflare Diamond";
             this.checkBoxRevitalizingSkyflareDiamond.UseVisualStyleBackColor = true;
             this.checkBoxRevitalizingSkyflareDiamond.Visible = false;
+            this.checkBoxRevitalizingSkyflareDiamond.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelEmeraldVigor
             // 
