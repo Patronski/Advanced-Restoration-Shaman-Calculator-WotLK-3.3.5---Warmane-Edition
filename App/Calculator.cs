@@ -302,6 +302,9 @@ namespace App
             textBoxAvgHps.Hide();
             labelForOneTarget.Hide();
             labelAncestralAwakening.Hide();
+            textBoxAncestralAwaceningFrom.Hide();
+            textBoxAncestralAwaceningTo.Hide();
+            textBoxAncestralAwaceningAvg.Hide();
             labelAvgHps.Hide();
             labelAvgAA.Hide();
             labelAvgAAeHps.Hide();
@@ -435,6 +438,9 @@ namespace App
                     labelAvgAA.Show();
 
                     labelAncestralAwakening.Show();
+                    textBoxAncestralAwaceningFrom.Show();
+                    textBoxAncestralAwaceningTo.Show();
+                    textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
                     this.labelHit.Show();
                     labelCastingTime.Show();
@@ -467,6 +473,9 @@ namespace App
                     labelAvgAA.Show();
 
                     labelAncestralAwakening.Show();
+                    textBoxAncestralAwaceningFrom.Show();
+                    textBoxAncestralAwaceningTo.Show();
+                    textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
                     this.labelHit.Show();
                     labelCastingTime.Show();
@@ -509,6 +518,9 @@ namespace App
                     checkBoxRevitalizingSkyflareDiamond.Show();
                     labelHitAvg.Show();
                     labelAncestralAwakening.Show();
+                    textBoxAncestralAwaceningFrom.Show();
+                    textBoxAncestralAwaceningTo.Show();
+                    textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
                     this.labelHit.Show();
 
@@ -558,7 +570,9 @@ namespace App
             this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
             this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
             this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
-            this.textBox.Text = Player.Instance.AvgHot4.ToString();
+            this.textBoxAncestralAwaceningFrom.Text = Player.Instance.AncestralAwaceningFrom.ToString();
+            this.textBoxAncestralAwaceningTo.Text = Player.Instance.AncestralAwaceningTo.ToString();
+            this.textBoxAncestralAwaceningAvg.Text = Player.Instance.AncestralAwaceningAvg.ToString();
             this.textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
             this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
 
@@ -588,31 +602,31 @@ namespace App
 
             }
 
-            CritChanceZeroDisplay();
+            //CritChanceZeroDisplay();
         }
 
-        private void CritChanceZeroDisplay()
-        {
-            if (Player.Instance.CriticalChance == 0)
-            {
-                this.textBoxCrit1From.Text = "0";
-                this.textBoxCrit2From.Text = "0";
-                this.textBoxCrit3From.Text = "0";
-                this.textBoxCrit4From.Text = "0";
-                this.textBoxCrit1To.Text =   "0";
-                this.textBoxCrit2To.Text =   "0";
-                this.textBoxCrit3To.Text =   "0";
-                this.textBoxCrit4To.Text =   "0";
-                this.textBoxCrit1Avg.Text =  "0";
-                this.textBoxCrit2Avg.Text =  "0";
-                this.textBoxCrit3Avg.Text =  "0";
-                this.textBoxCrit4Avg.Text =  "0";
-                this.textBoxAvgHot1.Text =   "0";
-                this.textBoxAvgHot2.Text =   "0";
-                this.textBoxAvgHot3.Text =   "0";
-                this.textBoxAvgHot4.Text = "0";
-            }
-        }
+        //private void CritChanceZeroDisplay()
+        //{
+        //    if (Player.Instance.CriticalChance == 0)
+        //    {
+        //        this.textBoxCrit1From.Text = "0";
+        //        this.textBoxCrit2From.Text = "0";
+        //        this.textBoxCrit3From.Text = "0";
+        //        this.textBoxCrit4From.Text = "0";
+        //        this.textBoxCrit1To.Text =   "0";
+        //        this.textBoxCrit2To.Text =   "0";
+        //        this.textBoxCrit3To.Text =   "0";
+        //        this.textBoxCrit4To.Text =   "0";
+        //        this.textBoxCrit1Avg.Text =  "0";
+        //        this.textBoxCrit2Avg.Text =  "0";
+        //        this.textBoxCrit3Avg.Text =  "0";
+        //        this.textBoxCrit4Avg.Text =  "0";
+        //        this.textBoxAvgHot1.Text =   "0";
+        //        this.textBoxAvgHot2.Text =   "0";
+        //        this.textBoxAvgHot3.Text =   "0";
+        //        this.textBoxAvgHot4.Text = "0";
+        //    }
+        //}
 
         private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -106,13 +106,13 @@ namespace App.Models.Spells
 
         public override int? CalculateAncestralAwakeningFrom()
         {
-            var aa = Player.Instance.Hit1From * 0.33;
+            var aa = Player.Instance.Crit1From * 0.33;
             return (int?)aa;
         }
 
         public override int? CalculateAncestralAwakeningTo()
         {
-            var aa = Player.Instance.Hit1To * 0.33;
+            var aa = Player.Instance.Crit1To * 0.33;
             return (int?)aa;
         }
 

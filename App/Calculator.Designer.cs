@@ -143,6 +143,7 @@
             this.labelHot = new System.Windows.Forms.Label();
             this.textBoxAncestralAwaceningFrom = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
+            this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1355,7 +1356,7 @@
             // 
             // textBoxAncestralAwaceningFrom
             // 
-            this.textBoxAncestralAwaceningFrom.Location = new System.Drawing.Point(597, 208);
+            this.textBoxAncestralAwaceningFrom.Location = new System.Drawing.Point(645, 173);
             this.textBoxAncestralAwaceningFrom.MaxLength = 10;
             this.textBoxAncestralAwaceningFrom.Name = "textBoxAncestralAwaceningFrom";
             this.textBoxAncestralAwaceningFrom.ReadOnly = true;
@@ -1365,7 +1366,7 @@
             // 
             // textBoxAncestralAwaceningTo
             // 
-            this.textBoxAncestralAwaceningTo.Location = new System.Drawing.Point(506, 215);
+            this.textBoxAncestralAwaceningTo.Location = new System.Drawing.Point(728, 173);
             this.textBoxAncestralAwaceningTo.MaxLength = 10;
             this.textBoxAncestralAwaceningTo.Name = "textBoxAncestralAwaceningTo";
             this.textBoxAncestralAwaceningTo.ReadOnly = true;
@@ -1373,12 +1374,23 @@
             this.textBoxAncestralAwaceningTo.TabIndex = 127;
             this.textBoxAncestralAwaceningTo.Visible = false;
             // 
+            // textBoxAncestralAwaceningAvg
+            // 
+            this.textBoxAncestralAwaceningAvg.Location = new System.Drawing.Point(824, 172);
+            this.textBoxAncestralAwaceningAvg.MaxLength = 10;
+            this.textBoxAncestralAwaceningAvg.Name = "textBoxAncestralAwaceningAvg";
+            this.textBoxAncestralAwaceningAvg.ReadOnly = true;
+            this.textBoxAncestralAwaceningAvg.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAncestralAwaceningAvg.TabIndex = 128;
+            this.textBoxAncestralAwaceningAvg.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.textBoxAncestralAwaceningAvg);
             this.Controls.Add(this.textBoxAncestralAwaceningTo);
             this.Controls.Add(this.textBoxAncestralAwaceningFrom);
             this.Controls.Add(this.labelHot);
@@ -1616,6 +1628,7 @@
         private System.Windows.Forms.Label labelHot;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningFrom;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
+        private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
     }
 }
 

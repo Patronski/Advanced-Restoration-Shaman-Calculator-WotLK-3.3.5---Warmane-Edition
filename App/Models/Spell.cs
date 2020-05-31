@@ -25,32 +25,32 @@ namespace App.Models
         public abstract int CalculateTarget1HitFrom();
         public virtual int? CalculateTarget1HitTo() => null;
         public virtual int? CalculateTarget1HitAvg() => (Player.Instance.Hit1From + Player.Instance.Hit1To) / 2;
-        public virtual int? CalculateTarget1CritFrom() => (int?)(Player.Instance.Hit1From * Player.Instance.CriticalValue);
-        public virtual int? CalculateTarget1CritTo() => (int?)(Player.Instance.Hit1To * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget1CritFrom() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit1From * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget1CritTo() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit1To * Player.Instance.CriticalValue);
         public virtual int? CalculateTarget1CritAvg() => (Player.Instance.Crit1From + Player.Instance.Crit1To) / 2;
         public virtual int? CalculateTarget1AvgHot() => null;
 
         public virtual int? CalculateTarget2HitFrom() => null;
         public virtual int? CalculateTarget2HitTo() => null;
         public virtual int? CalculateTarget2HitAvg() => (Player.Instance.Hit2From + Player.Instance.Hit2To) / 2;
-        public virtual int? CalculateTarget2CritFrom() => (int?)(Player.Instance.Hit2From * Player.Instance.CriticalValue);
-        public virtual int? CalculateTarget2CritTo() => (int?)(Player.Instance.Hit2To * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget2CritFrom() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit2From * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget2CritTo() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit2To * Player.Instance.CriticalValue);
         public virtual int? CalculateTarget2CritAvg() => (Player.Instance.Crit2From + Player.Instance.Crit2To) / 2;
         public virtual int? CalculateTarget2AvgHot() => null;
 
         public virtual int? CalculateTarget3HitFrom() => null;
         public virtual int? CalculateTarget3HitTo() => null;
         public virtual int? CalculateTarget3HitAvg() => (Player.Instance.Hit3From + Player.Instance.Hit3To) / 2;
-        public virtual int? CalculateTarget3CritFrom() => (int?)(Player.Instance.Hit3From * Player.Instance.CriticalValue);
-        public virtual int? CalculateTarget3CritTo() => (int?)(Player.Instance.Hit3To * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget3CritFrom() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit3From * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget3CritTo() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit3To * Player.Instance.CriticalValue);
         public virtual int? CalculateTarget3CritAvg() => (Player.Instance.Crit3From + Player.Instance.Crit3To) / 2;
         public virtual int? CalculateTarget3AvgHot() => null;
 
         public virtual int? CalculateTarget4HitFrom() => null;
         public virtual int? CalculateTarget4HitTo() => null;
         public virtual int? CalculateTarget4HitAvg() => (Player.Instance.Hit4From + Player.Instance.Hit4To) / 2;
-        public virtual int? CalculateTarget4CritFrom() => (int?)(Player.Instance.Hit4From * Player.Instance.CriticalValue);
-        public virtual int? CalculateTarget4CritTo() => (int?)(Player.Instance.Hit4To * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget4CritFrom() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit4From * Player.Instance.CriticalValue);
+        public virtual int? CalculateTarget4CritTo() => Player.Instance.CriticalChance == 0 ? 0 : (int?)(Player.Instance.Hit4To * Player.Instance.CriticalValue);
         public virtual int? CalculateTarget4CritAvg() => (Player.Instance.Crit4From + Player.Instance.Crit4To) / 2;
         public virtual int? CalculateTarget4AvgHot() => null;
 
