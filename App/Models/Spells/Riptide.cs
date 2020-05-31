@@ -46,23 +46,38 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHPS()
         {
-            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
-
-            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
+            var avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) + 2 * Player.Instance.AvgHot1) / 6;
+                
 
             return (int?)avgHps;
         }
 
         public override int? CalculateAverageHotHPS()
         {
+            var isGlyphOfRiptide = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
 
-            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+            double? avgHps;
 
-            var avgHps = Player.Instance.CriticalChance / 100 * Player.Instance.AncestralAwaceningAvg *
-                (1 + hastePercent / 100) * 0.6667;
+            if (isGlyphOfRiptide)
+            {
+                avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) * 4 + (16 * Player.Instance.AvgHot1)) / 21;
+            }
+            else
+            {
+                avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) * 3 + (9 * Player.Instance.AvgHot1)) / 15;
+            }
 
             return (int?)avgHps; ;
+        }
+
+        public override int? CalculateAverageAAHPS()
+        {
+            var hps = Player.Instance.CriticalChance * Player.Instance.AncestralAwaceningAvg / 600;
+            return (int?)hps;
         }
 
         public override int? CalculateAncestralAwakeningFrom()
@@ -82,9 +97,11 @@ namespace App.Models.Spells
             return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
         }
 
-        public override int? CalculateAverageAAHPS()
+        public override int? CalculateAverageHOT1()
         {
-            return base.CalculateAverageAAHPS();
+            var round = (int)(0.18 * Player.Instance.SpellPower + 334);
+            round = (int)(round * 1.1);
+            return round;
         }
     }
 }

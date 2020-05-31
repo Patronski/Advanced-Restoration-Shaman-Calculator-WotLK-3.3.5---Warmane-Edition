@@ -316,6 +316,7 @@ namespace App
             labelSpamOn1Target2.Hide();
             checkBoxGlyphOfRiptide.Hide();
             labelHot.Hide();
+            textBoxHotRiptide.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -535,7 +536,7 @@ namespace App
                     textBoxAvgHotHps.Show();
                     checkBoxGlyphOfRiptide.Show();
                     labelHot.Show();
-                    textBoxHit3From.Show();
+                    textBoxHotRiptide.Show();
                     break;
             }
         }
@@ -607,11 +608,13 @@ namespace App
             this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
             this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
             this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
+            this.textBoxHotRiptide.Text = Player.Instance.HotRiptide.ToString();
             this.textBoxAncestralAwaceningFrom.Text = Player.Instance.AncestralAwaceningFrom.ToString();
             this.textBoxAncestralAwaceningTo.Text = Player.Instance.AncestralAwaceningTo.ToString();
             this.textBoxAncestralAwaceningAvg.Text = Player.Instance.AncestralAwaceningAvg.ToString();
             this.textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
             this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
+            textBoxAvgAAeHps.Text = Player.Instance.AvgAAHps.ToString();
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 

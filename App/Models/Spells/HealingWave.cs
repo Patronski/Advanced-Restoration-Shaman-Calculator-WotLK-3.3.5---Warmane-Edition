@@ -98,8 +98,8 @@ namespace App.Models.Spells
                 multiplier = 0.4;
             }
 
-            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * multiplier;
+            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.AncestralAwaceningAvg) *
+                 (1 + hastePercent / 100) * multiplier;
 
             return (int?)avgHps; ;
         }

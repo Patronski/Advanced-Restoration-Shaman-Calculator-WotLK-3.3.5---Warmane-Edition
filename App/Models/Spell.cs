@@ -112,11 +112,13 @@ namespace App.Models
             Player.Instance.AvgHot2 = CalculateAverageHOT2();
             Player.Instance.AvgHot3 = CalculateAverageHOT3();
             Player.Instance.AvgHot4 = CalculateAverageHOT4();
+            Player.Instance.HotRiptide = CalculateAverageHOT1();
             Player.Instance.AncestralAwaceningFrom = CalculateAncestralAwakeningFrom();
             Player.Instance.AncestralAwaceningTo = CalculateAncestralAwakeningTo();
             Player.Instance.AncestralAwaceningAvg = CalculateAncestralAwakeningAvg();
             Player.Instance.AvgHps = CalculateAverageHPS();
             Player.Instance.AvgHotHps = CalculateAverageHotHPS();
+            Player.Instance.AvgAAHps = CalculateAverageAAHPS();
 
             var modChainHeal = Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);

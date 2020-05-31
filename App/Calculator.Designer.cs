@@ -144,6 +144,7 @@
             this.textBoxAncestralAwaceningFrom = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
+            this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -872,7 +873,7 @@
             // 
             // textBoxHit3Avg
             // 
-            this.textBoxHit3Avg.Location = new System.Drawing.Point(540, 173);
+            this.textBoxHit3Avg.Location = new System.Drawing.Point(540, 172);
             this.textBoxHit3Avg.MaxLength = 10;
             this.textBoxHit3Avg.Name = "textBoxHit3Avg";
             this.textBoxHit3Avg.ReadOnly = true;
@@ -913,7 +914,7 @@
             // 
             // textBoxHit3From
             // 
-            this.textBoxHit3From.Location = new System.Drawing.Point(361, 173);
+            this.textBoxHit3From.Location = new System.Drawing.Point(361, 172);
             this.textBoxHit3From.MaxLength = 10;
             this.textBoxHit3From.Name = "textBoxHit3From";
             this.textBoxHit3From.ReadOnly = true;
@@ -1396,12 +1397,23 @@
             this.textBoxAncestralAwaceningAvg.TabIndex = 128;
             this.textBoxAncestralAwaceningAvg.Visible = false;
             // 
+            // textBoxHotRiptide
+            // 
+            this.textBoxHotRiptide.Location = new System.Drawing.Point(361, 172);
+            this.textBoxHotRiptide.MaxLength = 10;
+            this.textBoxHotRiptide.Name = "textBoxHotRiptide";
+            this.textBoxHotRiptide.ReadOnly = true;
+            this.textBoxHotRiptide.Size = new System.Drawing.Size(58, 20);
+            this.textBoxHotRiptide.TabIndex = 129;
+            this.textBoxHotRiptide.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.textBoxHotRiptide);
             this.Controls.Add(this.textBoxAncestralAwaceningAvg);
             this.Controls.Add(this.textBoxAncestralAwaceningTo);
             this.Controls.Add(this.textBoxAncestralAwaceningFrom);
@@ -1641,6 +1653,7 @@
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningFrom;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
+        private System.Windows.Forms.TextBox textBoxHotRiptide;
     }
 }
 

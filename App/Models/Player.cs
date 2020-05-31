@@ -85,6 +85,8 @@ namespace App.Models
 
         public int? AvgHotHps { get; set; }
 
+        public int? AvgAAHps { get; set; }
+
         public int? Hit1From { get; set; }
         public int? Hit2From { get; set; }
         public int? Hit3From { get; set; }
@@ -119,6 +121,7 @@ namespace App.Models
         public int? AvgHot2 { get; set; }
         public int? AvgHot3 { get; set; }
         public int? AvgHot4 { get; set; }
+        public int? HotRiptide { get; set; }
 
         public int? AncestralAwaceningFrom { get; set; }
         public int? AncestralAwaceningTo { get; set; }
