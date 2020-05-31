@@ -18,13 +18,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
+            this.Modifiers.Add(new GlyphOfEarthliving());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
-        }
-
-        public override int? CalculateAstralAwakening()
-        {
-            throw new NotImplementedException();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -34,9 +30,22 @@ namespace App.Models.Spells
             return rounded;
         }
 
-        public override int? CalculateTarget1HitTo()
+        public override int? CalculateAverageHPS()
         {
-            return null;
+            var isGlyphOfEarthliving = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+
+            if (isGlyphOfEarthliving)
+            {
+                return (int)(Player.Instance.Hit1From * 0.25 / 3);
+            }
+
+            return (int)(Player.Instance.Hit1From * 0.2 / 3);
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+            return (int)(Player.Instance.Hit1From / 3);
         }
     }
 }

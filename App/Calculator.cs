@@ -558,8 +558,9 @@ namespace App
             this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
             this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
             this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
-            this.textBoxAvgHps.Text = Player.Instance.AvgHPS.ToString();
-            this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHOT.ToString();
+            this.textBox.Text = Player.Instance.AvgHot4.ToString();
+            this.textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
+            this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 

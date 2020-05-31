@@ -15,7 +15,6 @@ namespace App.Models.Spells
         {
             Name = Constants.SpellChainHeal;
             RanksCount = 7;
-            this.CriticalMultiplier = 1.5;
 
             var modifierFields = this.GetType().GetFields(
                 BindingFlags.NonPublic |

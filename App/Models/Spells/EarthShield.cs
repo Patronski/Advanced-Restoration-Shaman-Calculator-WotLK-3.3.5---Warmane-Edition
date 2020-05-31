@@ -15,6 +15,7 @@ namespace App.Models.Spells
             Name = Constants.SpellESh;
             RanksCount = 5;
 
+            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
@@ -23,11 +24,6 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
-        }
-
-        public override int? CalculateAstralAwakening()
-        {
-            throw new NotImplementedException();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -43,9 +39,13 @@ namespace App.Models.Spells
             return rounded;
         }
 
-        public override int? CalculateTarget1HitTo()
+        public override int? CalculateAverageHPS()
         {
-            return null;
+            var hps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1From;
+            hps = hps / 4.45;
+
+            return (int?)hps;
         }
     }
 }

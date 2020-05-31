@@ -81,9 +81,9 @@ namespace App.Models
 
         public double? CastingTime { get; set; }
 
-        public int? AvgHPS { get; set; }
+        public int? AvgHps { get; set; }
 
-        public int? AvgHotHOT { get; set; }
+        public int? AvgHotHps { get; set; }
 
         public int? Hit1From { get; set; }
         public int? Hit2From { get; set; }
@@ -119,5 +119,9 @@ namespace App.Models
         public int? AvgHot2 { get; set; }
         public int? AvgHot3 { get; set; }
         public int? AvgHot4 { get; set; }
+
+        public int? AncestralAwaceningFrom { get; set; }
+        public int? AncestralAwaceningTo { get; set; }
+        public int? AncestralAwaceningAvg { get; set; }
     }
 }

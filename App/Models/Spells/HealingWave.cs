@@ -15,6 +15,7 @@ namespace App.Models.Spells
             Name = Constants.SpellHW;
             RanksCount = 14;
 
+            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
@@ -27,11 +28,6 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
-        }
-
-        public override int? CalculateAstralAwakening()
-        {
-            throw new NotImplementedException();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -58,6 +54,71 @@ namespace App.Models.Spells
             castingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
 
             return castingTime;
+        }
+
+        public override int? CalculateAverageHPS()
+        {
+            var isTidalWaves = Modifiers
+                .Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+
+            double hastePercent;
+            double multiplier;
+            if (isTidalWaves)
+            {
+                hastePercent = (Player.Instance.HastePercent > 75) ? 75d : Player.Instance.HastePercent;
+                multiplier = 0.57143;
+            }
+            else
+            {
+                hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+                multiplier = 0.4;
+            }
+
+            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * multiplier;
+
+            return (int?)avgHps;
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+            var isTidalWaves = Modifiers
+                .Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+
+            double hastePercent;
+            double multiplier;
+            if (isTidalWaves)
+            {
+                hastePercent = (Player.Instance.HastePercent > 75) ? 75d : Player.Instance.HastePercent;
+                multiplier = 0.57143;
+            }
+            else
+            {
+                hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+                multiplier = 0.4;
+            }
+
+            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * multiplier;
+
+            return (int?)avgHps; ;
+        }
+
+        public override int? CalculateAncestralAwakeningFrom()
+        {
+            var aa = Player.Instance.Hit1From * 0.33;
+            return (int?)aa;
+        }
+
+        public override int? CalculateAncestralAwakeningTo()
+        {
+            var aa = Player.Instance.Hit1To * 0.33;
+            return (int?)aa;
+        }
+
+        public override int? CalculateAncestralAwakeningAvg()
+        {
+            return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
         }
     }
 }

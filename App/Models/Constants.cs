@@ -37,6 +37,7 @@ namespace App.Models
         public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
         public static string ModRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
         public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
+        public static string ModGlyphOfEarthliving = "Glyph of Earthliving";
 
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";

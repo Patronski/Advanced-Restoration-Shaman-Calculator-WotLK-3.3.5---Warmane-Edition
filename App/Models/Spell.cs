@@ -12,18 +12,15 @@ namespace App.Models
         public Spell()
         {
             this.Modifiers = new List<Modifier>();
-            this.CriticalMultiplier = 1;
         }
-
-        public string Name { get; protected set; }
-
-        public List<Modifier> Modifiers { get; set; }
 
         protected List<string> modifierNames;
 
-        public double CriticalMultiplier { get; set; }
+        public List<Modifier> Modifiers { get; set; }
 
+        public string Name { get; protected set; }
         public int RanksCount { get; set; }
+
 
         public abstract int CalculateTarget1HitFrom();
         public virtual int? CalculateTarget1HitTo() => null;
@@ -62,9 +59,13 @@ namespace App.Models
         public virtual int? CalculateAverageHOT3() => null;
         public virtual int? CalculateAverageHOT4() => null;
 
-        public virtual int? CalculateAstralAwakening() { return null; }
+        public virtual int? CalculateAncestralAwakeningFrom() { return null; }
+        public virtual int? CalculateAncestralAwakeningTo() { return null; }
+        public virtual int? CalculateAncestralAwakeningAvg() { return null; }
+
         public virtual int? CalculateAverageHPS() { return null; }
         public virtual int? CalculateAverageHotHPS() { return null; }
+
         public virtual double? CalculateCastingTime() { return null; }
 
         public virtual void Calculate()
@@ -110,8 +111,11 @@ namespace App.Models
             Player.Instance.AvgHot2 = CalculateAverageHOT2();
             Player.Instance.AvgHot3 = CalculateAverageHOT3();
             Player.Instance.AvgHot4 = CalculateAverageHOT4();
-            Player.Instance.AvgHPS = CalculateAverageHPS();
-            Player.Instance.AvgHotHOT = CalculateAverageHotHPS();
+            Player.Instance.AncestralAwaceningFrom = CalculateAncestralAwakeningFrom();
+            Player.Instance.AncestralAwaceningTo = CalculateAncestralAwakeningTo();
+            Player.Instance.AncestralAwaceningAvg = CalculateAncestralAwakeningAvg();
+            Player.Instance.AvgHps = CalculateAverageHPS();
+            Player.Instance.AvgHotHps = CalculateAverageHotHPS();
 
             var modChainHeal = Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);
@@ -119,11 +123,6 @@ namespace App.Models
             {
                 modChainHeal.Modify();
             }
-        }
-
-        public override string ToString()
-        {
-            return $"{this.Name} (Rank {this.RanksCount})";
         }
 
         protected void ModifyWithModifiers()
@@ -182,6 +181,11 @@ namespace App.Models
             }
 
             Calculate();
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Name} (Rank {this.RanksCount})";
         }
     }
 }

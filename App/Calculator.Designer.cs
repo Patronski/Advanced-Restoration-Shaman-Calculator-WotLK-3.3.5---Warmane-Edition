@@ -141,6 +141,8 @@
             this.textBoxAvgAAeHps = new System.Windows.Forms.TextBox();
             this.checkBoxGlyphOfRiptide = new System.Windows.Forms.CheckBox();
             this.labelHot = new System.Windows.Forms.Label();
+            this.textBoxAncestralAwaceningFrom = new System.Windows.Forms.TextBox();
+            this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -539,9 +541,9 @@
             this.labelEarthlivingBlessingOf.AutoSize = true;
             this.labelEarthlivingBlessingOf.Location = new System.Drawing.Point(508, 308);
             this.labelEarthlivingBlessingOf.Name = "labelEarthlivingBlessingOf";
-            this.labelEarthlivingBlessingOf.Size = new System.Drawing.Size(268, 13);
+            this.labelEarthlivingBlessingOf.Size = new System.Drawing.Size(271, 13);
             this.labelEarthlivingBlessingOf.TabIndex = 110;
-            this.labelEarthlivingBlessingOf.Text = "(Blessing of the Eternals is not included into calculation)";
+            this.labelEarthlivingBlessingOf.Text = "(Blessing of the Eternals is not included into calculation!)";
             this.toolTip1.SetToolTip(this.labelEarthlivingBlessingOf, "TOOLTP");
             this.labelEarthlivingBlessingOf.Visible = false;
             // 
@@ -1176,7 +1178,6 @@
             // checkBoxGlyphOfEarthliving
             // 
             this.checkBoxGlyphOfEarthliving.AutoSize = true;
-            this.checkBoxGlyphOfEarthliving.Enabled = false;
             this.checkBoxGlyphOfEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxGlyphOfEarthliving.Location = new System.Drawing.Point(444, 282);
             this.checkBoxGlyphOfEarthliving.Name = "checkBoxGlyphOfEarthliving";
@@ -1185,6 +1186,7 @@
             this.checkBoxGlyphOfEarthliving.Text = "Glyph of Earthliving";
             this.checkBoxGlyphOfEarthliving.UseVisualStyleBackColor = true;
             this.checkBoxGlyphOfEarthliving.Visible = false;
+            this.checkBoxGlyphOfEarthliving.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelHitAvg
             // 
@@ -1351,12 +1353,34 @@
             this.labelHot.Text = "HOT:";
             this.labelHot.Visible = false;
             // 
+            // textBoxAncestralAwaceningFrom
+            // 
+            this.textBoxAncestralAwaceningFrom.Location = new System.Drawing.Point(597, 208);
+            this.textBoxAncestralAwaceningFrom.MaxLength = 10;
+            this.textBoxAncestralAwaceningFrom.Name = "textBoxAncestralAwaceningFrom";
+            this.textBoxAncestralAwaceningFrom.ReadOnly = true;
+            this.textBoxAncestralAwaceningFrom.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAncestralAwaceningFrom.TabIndex = 126;
+            this.textBoxAncestralAwaceningFrom.Visible = false;
+            // 
+            // textBoxAncestralAwaceningTo
+            // 
+            this.textBoxAncestralAwaceningTo.Location = new System.Drawing.Point(506, 215);
+            this.textBoxAncestralAwaceningTo.MaxLength = 10;
+            this.textBoxAncestralAwaceningTo.Name = "textBoxAncestralAwaceningTo";
+            this.textBoxAncestralAwaceningTo.ReadOnly = true;
+            this.textBoxAncestralAwaceningTo.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAncestralAwaceningTo.TabIndex = 127;
+            this.textBoxAncestralAwaceningTo.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.textBoxAncestralAwaceningTo);
+            this.Controls.Add(this.textBoxAncestralAwaceningFrom);
             this.Controls.Add(this.labelHot);
             this.Controls.Add(this.checkBoxGlyphOfRiptide);
             this.Controls.Add(this.textBoxAvgAAeHps);
@@ -1590,6 +1614,8 @@
         private System.Windows.Forms.TextBox textBoxAvgAAeHps;
         private System.Windows.Forms.CheckBox checkBoxGlyphOfRiptide;
         private System.Windows.Forms.Label labelHot;
+        private System.Windows.Forms.TextBox textBoxAncestralAwaceningFrom;
+        private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
     }
 }
 

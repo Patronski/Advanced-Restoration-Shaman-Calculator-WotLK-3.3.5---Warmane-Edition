@@ -24,7 +24,7 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        public override int? CalculateAstralAwakening()
+        public override int? CalculateAncestralAwakeningFrom()
         {
             throw new NotImplementedException();
         }

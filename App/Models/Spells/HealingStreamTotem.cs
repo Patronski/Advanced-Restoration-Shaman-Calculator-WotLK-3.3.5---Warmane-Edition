@@ -24,11 +24,6 @@ namespace App.Models.Spells
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
-        public override int? CalculateAstralAwakening()
-        {
-            throw new NotImplementedException();
-        }
-
         public override int CalculateTarget1HitFrom()
         {
             int rounded = (int)(12.408 * Player.Instance.SpellPower) + 3750;
@@ -38,9 +33,18 @@ namespace App.Models.Spells
             return rounded;
         }
 
-        public override int? CalculateTarget1HitTo()
+        public override int? CalculateAverageHPS()
         {
-            return null;
+            var hps = Player.Instance.Hit1From / 13.2;
+
+            return (int?)hps;
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+            var hps = Player.Instance.Hit1From / 2;
+
+            return (int?)hps;
         }
     }
 }
