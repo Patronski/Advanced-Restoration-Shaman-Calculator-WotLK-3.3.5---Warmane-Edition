@@ -924,6 +924,7 @@
             // labelTarget4
             // 
             this.labelTarget4.AutoSize = true;
+            this.labelTarget4.Enabled = false;
             this.labelTarget4.Location = new System.Drawing.Point(305, 248);
             this.labelTarget4.Name = "labelTarget4";
             this.labelTarget4.Size = new System.Drawing.Size(50, 13);
@@ -933,6 +934,7 @@
             // 
             // textBoxAvgHot4
             // 
+            this.textBoxAvgHot4.Enabled = false;
             this.textBoxAvgHot4.Location = new System.Drawing.Point(961, 245);
             this.textBoxAvgHot4.MaxLength = 10;
             this.textBoxAvgHot4.Name = "textBoxAvgHot4";
@@ -943,6 +945,7 @@
             // 
             // textBoxCrit4Avg
             // 
+            this.textBoxCrit4Avg.Enabled = false;
             this.textBoxCrit4Avg.Location = new System.Drawing.Point(824, 244);
             this.textBoxCrit4Avg.MaxLength = 10;
             this.textBoxCrit4Avg.Name = "textBoxCrit4Avg";
@@ -954,6 +957,7 @@
             // labelArrowcCrit4
             // 
             this.labelArrowcCrit4.AutoSize = true;
+            this.labelArrowcCrit4.Enabled = false;
             this.labelArrowcCrit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelArrowcCrit4.Location = new System.Drawing.Point(792, 246);
             this.labelArrowcCrit4.Name = "labelArrowcCrit4";
@@ -964,6 +968,7 @@
             // 
             // textBoxCrit4To
             // 
+            this.textBoxCrit4To.Enabled = false;
             this.textBoxCrit4To.Location = new System.Drawing.Point(728, 244);
             this.textBoxCrit4To.MaxLength = 10;
             this.textBoxCrit4To.Name = "textBoxCrit4To";
@@ -975,6 +980,7 @@
             // labelDashCrit4
             // 
             this.labelDashCrit4.AutoSize = true;
+            this.labelDashCrit4.Enabled = false;
             this.labelDashCrit4.Location = new System.Drawing.Point(709, 248);
             this.labelDashCrit4.Name = "labelDashCrit4";
             this.labelDashCrit4.Size = new System.Drawing.Size(13, 13);
@@ -984,7 +990,8 @@
             // 
             // textBoxCrit4From
             // 
-            this.textBoxCrit4From.Location = new System.Drawing.Point(645, 245);
+            this.textBoxCrit4From.Enabled = false;
+            this.textBoxCrit4From.Location = new System.Drawing.Point(645, 244);
             this.textBoxCrit4From.MaxLength = 10;
             this.textBoxCrit4From.Name = "textBoxCrit4From";
             this.textBoxCrit4From.ReadOnly = true;
@@ -994,7 +1001,8 @@
             // 
             // textBoxHit4Avg
             // 
-            this.textBoxHit4Avg.Location = new System.Drawing.Point(540, 244);
+            this.textBoxHit4Avg.Enabled = false;
+            this.textBoxHit4Avg.Location = new System.Drawing.Point(540, 245);
             this.textBoxHit4Avg.MaxLength = 10;
             this.textBoxHit4Avg.Name = "textBoxHit4Avg";
             this.textBoxHit4Avg.ReadOnly = true;
@@ -1005,6 +1013,7 @@
             // labelArrowHit4
             // 
             this.labelArrowHit4.AutoSize = true;
+            this.labelArrowHit4.Enabled = false;
             this.labelArrowHit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelArrowHit4.Location = new System.Drawing.Point(508, 245);
             this.labelArrowHit4.Name = "labelArrowHit4";
@@ -1015,6 +1024,7 @@
             // 
             // textBoxHit4To
             // 
+            this.textBoxHit4To.Enabled = false;
             this.textBoxHit4To.Location = new System.Drawing.Point(444, 245);
             this.textBoxHit4To.MaxLength = 10;
             this.textBoxHit4To.Name = "textBoxHit4To";
@@ -1026,6 +1036,7 @@
             // labelDashHit4
             // 
             this.labelDashHit4.AutoSize = true;
+            this.labelDashHit4.Enabled = false;
             this.labelDashHit4.Location = new System.Drawing.Point(425, 248);
             this.labelDashHit4.Name = "labelDashHit4";
             this.labelDashHit4.Size = new System.Drawing.Size(13, 13);
@@ -1035,6 +1046,7 @@
             // 
             // textBoxHit4From
             // 
+            this.textBoxHit4From.Enabled = false;
             this.textBoxHit4From.Location = new System.Drawing.Point(361, 245);
             this.textBoxHit4From.MaxLength = 10;
             this.textBoxHit4From.Name = "textBoxHit4From";
@@ -1332,7 +1344,6 @@
             // checkBoxGlyphOfRiptide
             // 
             this.checkBoxGlyphOfRiptide.AutoSize = true;
-            this.checkBoxGlyphOfRiptide.Enabled = false;
             this.checkBoxGlyphOfRiptide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxGlyphOfRiptide.Location = new System.Drawing.Point(444, 282);
             this.checkBoxGlyphOfRiptide.Name = "checkBoxGlyphOfRiptide";
@@ -1341,6 +1352,7 @@
             this.checkBoxGlyphOfRiptide.Text = "Glyph of Riptide";
             this.checkBoxGlyphOfRiptide.UseVisualStyleBackColor = true;
             this.checkBoxGlyphOfRiptide.Visible = false;
+            this.checkBoxGlyphOfRiptide.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelHot
             // 

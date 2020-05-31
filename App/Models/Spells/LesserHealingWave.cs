@@ -15,6 +15,7 @@ namespace App.Models.Spells
             Name = Constants.SpellLHW;
             RanksCount = 9;
 
+            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
@@ -28,11 +29,6 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
-        }
-
-        public override int? CalculateAncestralAwakeningFrom()
-        {
-            throw new NotImplementedException();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -56,9 +52,47 @@ namespace App.Models.Spells
         public override double? CalculateCastingTime()
         {
             var castingTime = 1.5 / (1 + Player.Instance.HastePercent / 100);
-            castingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+            castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
 
             return castingTime;
+        }
+
+        public override int? CalculateAverageHPS()
+        {
+            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+
+            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
+
+            return (int?)avgHps;
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+
+            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+
+            var avgHps = Player.Instance.CriticalChance / 100 * Player.Instance.AncestralAwaceningAvg *
+                (1 + hastePercent / 100) * 0.6667;
+
+            return (int?)avgHps; ;
+        }
+
+        public override int? CalculateAncestralAwakeningFrom()
+        {
+            var aa = Player.Instance.Crit1From * 0.33;
+            return (int?)aa;
+        }
+
+        public override int? CalculateAncestralAwakeningTo()
+        {
+            var aa = Player.Instance.Crit1To * 0.33;
+            return (int?)aa;
+        }
+
+        public override int? CalculateAncestralAwakeningAvg()
+        {
+            return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
         }
     }
 }

@@ -38,6 +38,7 @@ namespace App.Models
         public static string ModRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
         public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
         public static string ModGlyphOfEarthliving = "Glyph of Earthliving";
+        public static string ModGlyphOfRiptide = "Glyph of Riptide";
 
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";

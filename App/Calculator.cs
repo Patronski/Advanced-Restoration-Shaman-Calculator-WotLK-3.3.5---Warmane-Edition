@@ -193,6 +193,7 @@ namespace App
                 }
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
                 Player.Instance.IsCritModified = true;
+                DisplayOnGlyphOfChainHeal();
                 DisplayHealing();
                 return;
             }
@@ -536,6 +537,42 @@ namespace App
                     labelHot.Show();
                     textBoxHit3From.Show();
                     break;
+            }
+        }
+
+        private void DisplayOnGlyphOfChainHeal()
+        {
+            if (checkBoxGlyphChainHeal.Checked)
+            {
+                this.labelTarget4.Enabled = true;
+                this.labelArrowcCrit4.Enabled = true;
+                this.labelArrowHit4.Enabled = true;
+                this.labelDashCrit4.Enabled = true;
+                this.labelDashHit4.Enabled = true;
+                this.labelTarget4.Enabled = true;
+                this.textBoxAvgHot4.Enabled = true;
+                this.textBoxCrit4Avg.Enabled = true;
+                this.textBoxCrit4From.Enabled = true;
+                this.textBoxCrit4To.Enabled = true;
+                this.textBoxHit4Avg.Enabled = true;
+                this.textBoxHit4From.Enabled = true;
+                this.textBoxHit4To.Enabled = true;
+            }
+            else
+            {
+                this.labelTarget4.Enabled = false;
+                this.labelArrowcCrit4.Enabled = false;
+                this.labelArrowHit4.Enabled = false;
+                this.labelDashCrit4.Enabled = false;
+                this.labelDashHit4.Enabled = false;
+                this.labelTarget4.Enabled = false;
+                this.textBoxAvgHot4.Enabled = false;
+                this.textBoxCrit4Avg.Enabled = false;
+                this.textBoxCrit4From.Enabled = false;
+                this.textBoxCrit4To.Enabled = false;
+                this.textBoxHit4Avg.Enabled = false;
+                this.textBoxHit4From.Enabled = false;
+                this.textBoxHit4To.Enabled = false;
             }
         }
 

@@ -22,7 +22,7 @@ namespace App.Models.Modifiers
             if (Player.Instance.CastingTime != null)
             {
                 var castingTime = (double)Player.Instance.CastingTime * 0.7;
-                Player.Instance.CastingTime = Math.Round(castingTime, 3, MidpointRounding.AwayFromZero);
+                Player.Instance.CastingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
             }
         }
     }

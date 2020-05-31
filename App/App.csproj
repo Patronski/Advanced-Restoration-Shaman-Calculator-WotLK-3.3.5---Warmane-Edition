@@ -62,6 +62,7 @@
     <Compile Include="Models\Modifiers\GlyphOfEarthliving.cs" />
     <Compile Include="Models\Modifiers\GlyphOfEarthShield.cs" />
     <Compile Include="Models\Modifiers\GlyphOfHealingStreamTotem.cs" />
+    <Compile Include="Models\Modifiers\GlyphOfRiptide.cs" />
     <Compile Include="Models\Modifiers\HellscreamsWarsong.cs" />
     <Compile Include="Models\Modifiers\MoonkinForm.cs" />
     <Compile Include="Models\Modifiers\RapidCurrents.cs" />

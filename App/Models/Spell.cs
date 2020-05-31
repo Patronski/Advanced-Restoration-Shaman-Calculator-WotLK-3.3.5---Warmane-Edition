@@ -65,6 +65,7 @@ namespace App.Models
 
         public virtual int? CalculateAverageHPS() { return null; }
         public virtual int? CalculateAverageHotHPS() { return null; }
+        public virtual int? CalculateAverageAAHPS() { return null; }
 
         public virtual double? CalculateCastingTime() { return null; }
 
