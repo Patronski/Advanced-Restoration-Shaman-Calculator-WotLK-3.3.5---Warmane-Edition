@@ -1,4 +1,6 @@
 ﻿using App.Models;
+using App.Properties;
+using CustomToolTipDemo;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +28,78 @@ namespace App
             AdjustComponentProperties();
             AddControllsToList();
             InitialiseComboBoxSpell();
+            AddTooltips();
+        }
+
+        private void AddTooltips()
+        {
+            CustomTooltipEasy myToolTip = new CustomTooltipEasy();
+
+            myToolTip.SetToolTip(checkBoxTreeOfLife, "Tree of life");
+            checkBoxTreeOfLife.Tag = Resources.Tree_of_Life;
+
+            myToolTip.SetToolTip(checkBoxHellscream, "checkBoxHellscream");
+            checkBoxHellscream.Tag = Resources.Hellscream_s_Warsong;
+
+            myToolTip.SetToolTip(labelEmeraldVigor, "labelEmeraldVigor");
+            labelEmeraldVigor.Tag = Resources.Emerald_Vigor;
+
+            myToolTip.SetToolTip(checkBoxEmeraldVigor, "some name");
+            checkBoxEmeraldVigor.Tag = Resources.Emerald_Vigor;
+
+            myToolTip.SetToolTip(checkBoxRiptidesConsumption, "some name");
+            checkBoxRiptidesConsumption.Tag = Resources.Riptide_s_consumption;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfEarthShield, "some name");
+            checkBoxGlyphOfEarthShield.Tag = Resources.Glyph_of_Earth_Shield;
+
+            myToolTip.SetToolTip(checkBoxGyphOfHST, "some name");
+            checkBoxGyphOfHST.Tag = Resources.Glyph_of_Healing_Stream_Totem;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfLHW, "some name");
+            checkBoxGlyphOfLHW.Tag = Resources.Glyph_of_Lesser_Healing_Wave;
+
+            myToolTip.SetToolTip(checkBoxWrathOfTheAirTotem, "some name");
+            checkBoxWrathOfTheAirTotem.Tag = Resources.Wrath_of_Air_Totem;
+
+            myToolTip.SetToolTip(checkBoxSwiftRetribution, "some name");
+            checkBoxSwiftRetribution.Tag = Resources.Improved_Moonking_Form;
+
+            myToolTip.SetToolTip(checkBoxBloodlust, "some name");
+            checkBoxBloodlust.Tag = Resources.Bloodlust;
+
+            myToolTip.SetToolTip(checkBoxRapidCurrents, "some name");
+            checkBoxRapidCurrents.Tag = Resources.Rapid_Currents;
+
+            myToolTip.SetToolTip(checkBoxTidalWaves, "some name");
+            checkBoxTidalWaves.Tag = Resources.Tidal_Waves__Haste_;
+
+            myToolTip.SetToolTip(checkBoxTidalMastery, "some name");
+            checkBoxTidalMastery.Tag = Resources.Tidal_Mastery;
+
+            myToolTip.SetToolTip(checkBoxMoonkinForm, "some name");
+            checkBoxMoonkinForm.Tag = Resources.Improved_Moonking_Form;
+
+            myToolTip.SetToolTip(checkBoxTidalWavesCrit, "some name");
+            checkBoxTidalWavesCrit.Tag = Resources.Tidal_Waves__Critical_;
+
+            myToolTip.SetToolTip(checkBoxGlyphChainHeal, "some name");
+            checkBoxGlyphChainHeal.Tag = Resources.Glyph_of_Chain_Heal;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfEarthliving, "some name");
+            checkBoxGlyphOfEarthliving.Tag = Resources.Glyph_of_Earthliving;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfRiptide, "some name");
+            checkBoxGlyphOfRiptide.Tag = Resources.Glyph_of_Riptide;
+
+            myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
+            checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
+
+            myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
+            checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
+
+            myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
+            checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
         }
 
         private void AdjustComponentProperties()
@@ -690,7 +764,6 @@ namespace App
             var text = box.Text;
             var length = box.TextLength;
             var containsDot = text.Contains('.');
-            
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
@@ -719,12 +792,6 @@ namespace App
                 }
             }
             isAfterCritKeyPress = true;
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            var t = (ToolTip)sender;
-            
         }
     }
 }

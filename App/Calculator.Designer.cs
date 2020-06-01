@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.labelSpellPower = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
@@ -63,7 +62,6 @@
             this.checkBoxMoonkinForm = new System.Windows.Forms.CheckBox();
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.labelEarthlivingBlessingOf = new System.Windows.Forms.Label();
             this.labelPercentCritChance = new System.Windows.Forms.Label();
             this.labelArrowHit1 = new System.Windows.Forms.Label();
@@ -145,6 +143,7 @@
             this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
             this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
+            this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,7 +317,6 @@
             this.checkBoxTreeOfLife.Size = new System.Drawing.Size(206, 17);
             this.checkBoxTreeOfLife.TabIndex = 23;
             this.checkBoxTreeOfLife.Text = "Tree Of Life (Improved Devotion Aura)";
-            this.toolTip1.SetToolTip(this.checkBoxTreeOfLife, "dsdssssss");
             this.checkBoxTreeOfLife.UseVisualStyleBackColor = true;
             this.checkBoxTreeOfLife.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
@@ -331,7 +329,6 @@
             this.checkBoxHellscream.Size = new System.Drawing.Size(223, 17);
             this.checkBoxHellscream.TabIndex = 24;
             this.checkBoxHellscream.Text = "Hellscream\'s Warsong(Strength of Wrynn)";
-            this.toolTip1.SetToolTip(this.checkBoxHellscream, "sasasa");
             this.checkBoxHellscream.UseVisualStyleBackColor = true;
             this.checkBoxHellscream.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
@@ -529,15 +526,6 @@
             0});
             this.numericUpDownEmeraldVigor.ValueChanged += new System.EventHandler(this.numericUpDownEmeraldVigor_ValueChanged);
             // 
-            // toolTip1
-            // 
-            this.toolTip1.BackColor = System.Drawing.Color.Indigo;
-            this.toolTip1.ForeColor = System.Drawing.Color.DarkRed;
-            this.toolTip1.ShowAlways = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "ToolTip";
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
             // labelEarthlivingBlessingOf
             // 
             this.labelEarthlivingBlessingOf.AutoSize = true;
@@ -546,7 +534,6 @@
             this.labelEarthlivingBlessingOf.Size = new System.Drawing.Size(271, 13);
             this.labelEarthlivingBlessingOf.TabIndex = 110;
             this.labelEarthlivingBlessingOf.Text = "(Blessing of the Eternals is not included into calculation!)";
-            this.toolTip1.SetToolTip(this.labelEarthlivingBlessingOf, "TOOLTP");
             this.labelEarthlivingBlessingOf.Visible = false;
             // 
             // labelPercentCritChance
@@ -1407,6 +1394,10 @@
             this.textBoxHotRiptide.TabIndex = 129;
             this.textBoxHotRiptide.Visible = false;
             // 
+            // customTooltipEasy1
+            // 
+            this.customTooltipEasy1.OwnerDraw = true;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1572,7 +1563,6 @@
         private System.Windows.Forms.CheckBox checkBoxMoonkinForm;
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label labelPercentCritChance;
         private System.Windows.Forms.Label labelArrowHit1;
         private System.Windows.Forms.TextBox textBoxHit1Avg;
@@ -1654,6 +1644,7 @@
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
         private System.Windows.Forms.TextBox textBoxHotRiptide;
+        private Models.CustomTooltipEasy customTooltipEasy1;
     }
 }
 
