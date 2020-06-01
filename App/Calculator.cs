@@ -217,6 +217,24 @@ namespace App
             }
         }
 
+        private void numericUpDownCriticalChance_ValueChanged(object sender, EventArgs e)
+        {
+            if (isAfterCritKeyPress)
+            {
+                isAfterCritKeyPress = false;
+
+                double crit = (double)this.numericUpDownCriticalChance.Value;
+                
+                Player.Instance.CriticalChanceInitial = crit;
+            }
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+                DisplayHealing();
+            }
+        }
+
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!labelEmeraldVigor.Enabled)
@@ -693,6 +711,7 @@ namespace App
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
             this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
+            this.numericUpDownCriticalChance.Text = Player.Instance.CriticalChance.ToString();
             //if (Player.Instance.IsCritModified)
             //{
             //    Player.Instance.IsCritModified = false;
@@ -791,6 +810,21 @@ namespace App
                     e.Handled = true;
                 }
             }
+            isAfterCritKeyPress = true;
+        }
+
+        private void numericUpDownCriticalChance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isAfterCritKeyPress = true;
+        }
+
+        private void numericUpDownCriticalChance_MouseDown(object sender, MouseEventArgs e)
+        {
+            isAfterCritKeyPress = true;
+        }
+
+        private void numericUpDownCriticalChance_MouseUp(object sender, MouseEventArgs e)
+        {
             isAfterCritKeyPress = true;
         }
     }

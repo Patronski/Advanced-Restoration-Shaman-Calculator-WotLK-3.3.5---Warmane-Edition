@@ -105,7 +105,8 @@ namespace App.Models.Spells
         public override double? CalculateCastingTime()
         {
             var castingTime = 2.5 / (1 + Player.Instance.HastePercent / 100);
-            castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
+            //castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
+            castingTime = Math.Truncate(castingTime * 1000) / 1000;
 
             return castingTime;
         }

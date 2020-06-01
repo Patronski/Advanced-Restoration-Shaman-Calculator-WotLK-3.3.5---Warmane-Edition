@@ -143,8 +143,10 @@
             this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
             this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
+            this.numericUpDownCriticalChance = new System.Windows.Forms.NumericUpDown();
             this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -1394,6 +1396,23 @@
             this.textBoxHotRiptide.TabIndex = 129;
             this.textBoxHotRiptide.Visible = false;
             // 
+            // numericUpDownCriticalChance
+            // 
+            this.numericUpDownCriticalChance.DecimalPlaces = 2;
+            this.numericUpDownCriticalChance.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownCriticalChance.Location = new System.Drawing.Point(961, 36);
+            this.numericUpDownCriticalChance.Name = "numericUpDownCriticalChance";
+            this.numericUpDownCriticalChance.Size = new System.Drawing.Size(58, 20);
+            this.numericUpDownCriticalChance.TabIndex = 130;
+            this.numericUpDownCriticalChance.ValueChanged += new System.EventHandler(this.numericUpDownCriticalChance_ValueChanged);
+            this.numericUpDownCriticalChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDownCriticalChance_KeyPress);
+            this.numericUpDownCriticalChance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseDown);
+            this.numericUpDownCriticalChance.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseUp);
+            // 
             // customTooltipEasy1
             // 
             this.customTooltipEasy1.OwnerDraw = true;
@@ -1404,6 +1423,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.numericUpDownCriticalChance);
             this.Controls.Add(this.textBoxHotRiptide);
             this.Controls.Add(this.textBoxAncestralAwaceningAvg);
             this.Controls.Add(this.textBoxAncestralAwaceningTo);
@@ -1523,6 +1543,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1645,6 +1666,7 @@
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
         private System.Windows.Forms.TextBox textBoxHotRiptide;
         private Models.CustomTooltipEasy customTooltipEasy1;
+        private System.Windows.Forms.NumericUpDown numericUpDownCriticalChance;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using App.Models.Modifiers;
+using App.Models.Modifiers.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,15 +47,6 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHPS()
         {
-            var avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) + 2 * Player.Instance.AvgHot1) / 6;
-                
-
-            return (int?)avgHps;
-        }
-
-        public override int? CalculateAverageHotHPS()
-        {
             var isGlyphOfRiptide = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
 
@@ -63,13 +55,21 @@ namespace App.Models.Spells
             if (isGlyphOfRiptide)
             {
                 avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) * 4 + (16 * Player.Instance.AvgHot1)) / 21;
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg * 4 + (16 * Player.Instance.AvgHot1)) / 21;
             }
             else
             {
                 avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg) * 3 + (9 * Player.Instance.AvgHot1)) / 15;
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg * 3 + (9 * Player.Instance.AvgHot1)) / 15;
             }
+
+            return (int?)avgHps;
+        }
+
+        public override int? CalculateAverageHotHPS()
+        {
+            var avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (2 * Player.Instance.AvgHot1)) / 6;
 
             return (int?)avgHps; ;
         }
@@ -83,12 +83,28 @@ namespace App.Models.Spells
         public override int? CalculateAncestralAwakeningFrom()
         {
             var aa = Player.Instance.Crit1From * 0.33;
+
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+
+            foreach (var modifier in healingModifiers)
+            {
+                aa = (int)aa * modifier.Value;
+            }
+
             return (int?)aa;
         }
 
         public override int? CalculateAncestralAwakeningTo()
         {
             var aa = Player.Instance.Crit1To * 0.33;
+
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+
+            foreach (var modifier in healingModifiers)
+            {
+                aa = (int)aa * modifier.Value;
+            }
+
             return (int?)aa;
         }
 

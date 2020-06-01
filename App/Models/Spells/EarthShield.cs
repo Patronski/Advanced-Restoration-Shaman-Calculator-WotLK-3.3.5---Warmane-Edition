@@ -34,6 +34,8 @@ namespace App.Models.Spells
 
             rounded = (int)(rounded * 1.1);
 
+            rounded = (int)(rounded * 1.1);
+
             rounded = (int)(rounded * 1.15);
 
             return rounded;

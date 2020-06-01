@@ -1,4 +1,5 @@
 ﻿using App.Models.Modifiers;
+using App.Models.Modifiers.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +53,8 @@ namespace App.Models.Spells
         public override double? CalculateCastingTime()
         {
             var castingTime = 1.5 / (1 + Player.Instance.HastePercent / 100);
-            castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
+            //castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
+            castingTime = Math.Truncate(castingTime * 1000) / 1000;
 
             return castingTime;
         }
@@ -61,8 +63,8 @@ namespace App.Models.Spells
         {
             double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
 
-            var avgHps = (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
+            var avgHps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
 
             return (int?)avgHps;
         }
@@ -81,12 +83,28 @@ namespace App.Models.Spells
         public override int? CalculateAncestralAwakeningFrom()
         {
             var aa = Player.Instance.Crit1From * 0.33;
+
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+
+            foreach (var modifier in healingModifiers)
+            {
+                aa = (int)aa * modifier.Value;
+            }
+
             return (int?)aa;
         }
 
         public override int? CalculateAncestralAwakeningTo()
         {
             var aa = Player.Instance.Crit1To * 0.33;
+
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+
+            foreach (var modifier in healingModifiers)
+            {
+                aa = (int)aa * modifier.Value;
+            }
+
             return (int?)aa;
         }
 
