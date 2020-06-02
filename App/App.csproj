@@ -246,5 +246,20 @@
   <ItemGroup>
     <None Include="Resources\Lqvo_Gore.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Talents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lqvo_Gore1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lqvo Dolu1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dqsno_Gore1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dqsno_Dolu1.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

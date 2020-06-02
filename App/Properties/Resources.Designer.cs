@@ -93,6 +93,26 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dqsno_Dolu {
+            get {
+                object obj = ResourceManager.GetObject("Dqsno_Dolu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dqsno_Gore {
+            get {
+                object obj = ResourceManager.GetObject("Dqsno_Gore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Emerald_Vigor {
             get {
                 object obj = ResourceManager.GetObject("Emerald_Vigor", resourceCulture);
@@ -183,6 +203,26 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lqvo_Dolu {
+            get {
+                object obj = ResourceManager.GetObject("Lqvo Dolu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lqvo_Gore {
+            get {
+                object obj = ResourceManager.GetObject("Lqvo_Gore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Moonkin_Aura {
             get {
                 object obj = ResourceManager.GetObject("Moonkin_Aura", resourceCulture);
@@ -216,6 +256,16 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap Riptide_s_consumption {
             get {
                 object obj = ResourceManager.GetObject("Riptide_s_consumption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Talents {
+            get {
+                object obj = ResourceManager.GetObject("Talents", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
