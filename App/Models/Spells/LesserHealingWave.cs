@@ -61,7 +61,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHPS()
         {
-            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+            double hastePercent = (Player.Instance.HastePercent > 50) ? 50d : Player.Instance.HastePercent;
 
             var avgHps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
                 (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
@@ -72,7 +72,7 @@ namespace App.Models.Spells
         public override int? CalculateAverageHotHPS()
         {
 
-            double hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+            double hastePercent = (Player.Instance.HastePercent > 50) ? 50d : Player.Instance.HastePercent;
 
             var avgHps = Player.Instance.CriticalChance / 100 * Player.Instance.AncestralAwaceningAvg *
                 (1 + hastePercent / 100) * 0.6667;

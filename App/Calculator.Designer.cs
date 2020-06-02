@@ -53,7 +53,7 @@
             this.checkBoxGlyphOfLHW = new System.Windows.Forms.CheckBox();
             this.labelHasteModifiers = new System.Windows.Forms.Label();
             this.checkBoxWrathOfTheAirTotem = new System.Windows.Forms.CheckBox();
-            this.checkBoxSwiftRetribution = new System.Windows.Forms.CheckBox();
+            this.checkBoxSwiftRetributionHaste = new System.Windows.Forms.CheckBox();
             this.checkBoxBloodlust = new System.Windows.Forms.CheckBox();
             this.checkBoxRapidCurrents = new System.Windows.Forms.CheckBox();
             this.checkBoxTidalWaves = new System.Windows.Forms.CheckBox();
@@ -413,17 +413,18 @@
             this.checkBoxWrathOfTheAirTotem.UseVisualStyleBackColor = true;
             this.checkBoxWrathOfTheAirTotem.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
-            // checkBoxSwiftRetribution
+            // checkBoxSwiftRetributionHaste
             // 
-            this.checkBoxSwiftRetribution.AutoSize = true;
-            this.checkBoxSwiftRetribution.Enabled = false;
-            this.checkBoxSwiftRetribution.Location = new System.Drawing.Point(18, 272);
-            this.checkBoxSwiftRetribution.Name = "checkBoxSwiftRetribution";
-            this.checkBoxSwiftRetribution.Size = new System.Drawing.Size(223, 17);
-            this.checkBoxSwiftRetribution.TabIndex = 32;
-            this.checkBoxSwiftRetribution.Text = "Swift Retribution(Improved Moonkin Form)";
-            this.checkBoxSwiftRetribution.UseVisualStyleBackColor = true;
-            this.checkBoxSwiftRetribution.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            this.checkBoxSwiftRetributionHaste.AutoCheck = false;
+            this.checkBoxSwiftRetributionHaste.AutoSize = true;
+            this.checkBoxSwiftRetributionHaste.Enabled = false;
+            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(18, 272);
+            this.checkBoxSwiftRetributionHaste.Name = "checkBoxSwiftRetributionHaste";
+            this.checkBoxSwiftRetributionHaste.Size = new System.Drawing.Size(223, 17);
+            this.checkBoxSwiftRetributionHaste.TabIndex = 32;
+            this.checkBoxSwiftRetributionHaste.Text = "Swift Retribution(Improved Moonkin Form)";
+            this.checkBoxSwiftRetributionHaste.UseVisualStyleBackColor = true;
+            this.checkBoxSwiftRetributionHaste.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxBloodlust
             // 
@@ -1414,6 +1415,7 @@
             // 
             // customTooltipEasy1
             // 
+            this.customTooltipEasy1.AutomaticDelay = 0;
             this.customTooltipEasy1.OwnerDraw = true;
             // 
             // Calculator
@@ -1512,7 +1514,7 @@
             this.Controls.Add(this.checkBoxTidalWaves);
             this.Controls.Add(this.checkBoxRapidCurrents);
             this.Controls.Add(this.checkBoxBloodlust);
-            this.Controls.Add(this.checkBoxSwiftRetribution);
+            this.Controls.Add(this.checkBoxSwiftRetributionHaste);
             this.Controls.Add(this.checkBoxWrathOfTheAirTotem);
             this.Controls.Add(this.labelHasteModifiers);
             this.Controls.Add(this.checkBoxGlyphOfLHW);
@@ -1574,7 +1576,7 @@
         private System.Windows.Forms.CheckBox checkBoxGlyphOfLHW;
         private System.Windows.Forms.Label labelHasteModifiers;
         private System.Windows.Forms.CheckBox checkBoxWrathOfTheAirTotem;
-        private System.Windows.Forms.CheckBox checkBoxSwiftRetribution;
+        private System.Windows.Forms.CheckBox checkBoxSwiftRetributionHaste;
         private System.Windows.Forms.CheckBox checkBoxBloodlust;
         private System.Windows.Forms.CheckBox checkBoxRapidCurrents;
         private System.Windows.Forms.CheckBox checkBoxTidalWaves;

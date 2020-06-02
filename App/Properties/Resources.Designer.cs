@@ -63,9 +63,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ancestral_Awakening__Rank_3_ {
+        internal static System.Drawing.Bitmap Blessing_of_the_Eternals {
             get {
-                object obj = ResourceManager.GetObject("Ancestral_Awakening__Rank_3_", resourceCulture);
+                object obj = ResourceManager.GetObject("Blessing_of_the_Eternals", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +76,16 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap Bloodlust {
             get {
                 object obj = ResourceManager.GetObject("Bloodlust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chained_Heal {
+            get {
+                object obj = ResourceManager.GetObject("Chained_Heal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glyph_of_Earthliving {
+        internal static System.Drawing.Bitmap Glyph_of_Earthliving_Weapon {
             get {
-                object obj = ResourceManager.GetObject("Glyph_of_Earthliving", resourceCulture);
+                object obj = ResourceManager.GetObject("Glyph_of_Earthliving_Weapon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,16 +163,6 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Healing_Way__Rank_3_ {
-            get {
-                object obj = ResourceManager.GetObject("Healing_Way__Rank_3_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hellscream_s_Warsong {
             get {
                 object obj = ResourceManager.GetObject("Hellscream_s_Warsong", resourceCulture);
@@ -173,49 +173,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Improved_Chain_Heal__Rank_2_ {
+        internal static System.Drawing.Bitmap Improved_Moonkin_Form {
             get {
-                object obj = ResourceManager.GetObject("Improved_Chain_Heal__Rank_2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Improved_Earth_Shield__Rank_2_ {
-            get {
-                object obj = ResourceManager.GetObject("Improved_Earth_Shield__Rank_2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Improved_Healing_Wave__Rank_5_ {
-            get {
-                object obj = ResourceManager.GetObject("Improved_Healing_Wave__Rank_5_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Improved_Moonking_Form {
-            get {
-                object obj = ResourceManager.GetObject("Improved_Moonking_Form", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Improved_Shields__Rank_3_ {
-            get {
-                object obj = ResourceManager.GetObject("Improved_Shields__Rank_3_", resourceCulture);
+                object obj = ResourceManager.GetObject("Improved_Moonkin_Form", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,29 +193,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Purification__Rank_5_ {
-            get {
-                object obj = ResourceManager.GetObject("Purification__Rank_5_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Rapid_Currents {
             get {
                 object obj = ResourceManager.GetObject("Rapid_Currents", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Restorative_Totems__Rank_3_ {
-            get {
-                object obj = ResourceManager.GetObject("Restorative_Totems__Rank_3_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +246,6 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap Tidal_Waves__Haste_ {
             get {
                 object obj = ResourceManager.GetObject("Tidal_Waves__Haste_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tidal_Waves__Rank_5_ {
-            get {
-                object obj = ResourceManager.GetObject("Tidal_Waves__Rank_5_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ancestral_Awakening__Rank_3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ancestral Awakening (Rank 3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Blessing_of_the_Eternals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blessing of the Eternals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bloodlust" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bloodlust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chained_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chained Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Emerald_Vigor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Emerald Vigor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +133,8 @@
   <data name="Glyph_of_Chain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Glyph of Chain Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Glyph_of_Earthliving" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Earthliving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Glyph_of_Earthliving_Weapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Earthliving Weapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Glyph_of_Earth_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Glyph of Earth Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,38 +148,17 @@
   <data name="Glyph_of_Riptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Glyph of Riptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Healing_Way__Rank_3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Healing Way (Rank 3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hellscream_s_Warsong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hellscream's Warsong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Improved_Chain_Heal__Rank_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Chain Heal (Rank 2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Earth_Shield__Rank_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Earth Shield (Rank 2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Healing_Wave__Rank_5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Healing Wave (Rank 5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Moonking_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Moonking Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Shields__Rank_3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Shields (Rank 3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Improved_Moonkin_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Moonkin Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Moonkin_Aura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Moonkin Aura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Purification__Rank_5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purification (Rank 5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rapid_Currents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rapid Currents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Restorative_Totems__Rank_3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Restorative Totems (Rank 3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Revitalizing_Skyflare_Diamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Revitalizing Skyflare Diamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,9 +174,6 @@
   </data>
   <data name="Tidal_Waves__Haste_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tidal Waves (Haste).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_Waves__Rank_5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal Waves (Rank 5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tree_of_Life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tree of Life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

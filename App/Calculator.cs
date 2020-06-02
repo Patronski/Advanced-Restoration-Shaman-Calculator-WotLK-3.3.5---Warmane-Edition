@@ -62,8 +62,8 @@ namespace App
             myToolTip.SetToolTip(checkBoxWrathOfTheAirTotem, "some name");
             checkBoxWrathOfTheAirTotem.Tag = Resources.Wrath_of_Air_Totem;
 
-            myToolTip.SetToolTip(checkBoxSwiftRetribution, "some name");
-            checkBoxSwiftRetribution.Tag = Resources.Improved_Moonking_Form;
+            myToolTip.SetToolTip(checkBoxSwiftRetributionHaste, "some name");
+            checkBoxSwiftRetributionHaste.Tag = Resources.Improved_Moonkin_Form;
 
             myToolTip.SetToolTip(checkBoxBloodlust, "some name");
             checkBoxBloodlust.Tag = Resources.Bloodlust;
@@ -78,7 +78,7 @@ namespace App
             checkBoxTidalMastery.Tag = Resources.Tidal_Mastery;
 
             myToolTip.SetToolTip(checkBoxMoonkinForm, "some name");
-            checkBoxMoonkinForm.Tag = Resources.Improved_Moonking_Form;
+            checkBoxMoonkinForm.Tag = Resources.Moonkin_Aura;
 
             myToolTip.SetToolTip(checkBoxTidalWavesCrit, "some name");
             checkBoxTidalWavesCrit.Tag = Resources.Tidal_Waves__Critical_;
@@ -87,7 +87,7 @@ namespace App
             checkBoxGlyphChainHeal.Tag = Resources.Glyph_of_Chain_Heal;
 
             myToolTip.SetToolTip(checkBoxGlyphOfEarthliving, "some name");
-            checkBoxGlyphOfEarthliving.Tag = Resources.Glyph_of_Earthliving;
+            checkBoxGlyphOfEarthliving.Tag = Resources.Glyph_of_Earthliving_Weapon;
 
             myToolTip.SetToolTip(checkBoxGlyphOfRiptide, "some name");
             checkBoxGlyphOfRiptide.Tag = Resources.Glyph_of_Riptide;
@@ -95,11 +95,14 @@ namespace App
             myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
             checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
 
-            myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
-            checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
+            myToolTip.SetToolTip(labelEarthlivingBlessingOf, "some name");
+            labelEarthlivingBlessingOf.Tag = Resources.Blessing_of_the_Eternals;
 
-            myToolTip.SetToolTip(checkBoxRevitalizingSkyflareDiamond, "some name");
-            checkBoxRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
+            myToolTip.SetToolTip(labelChainedHeal1, "some name");
+            labelChainedHeal1.Tag = Resources.Chained_Heal;
+
+            myToolTip.SetToolTip(labelChainedHeal2, "some name");
+            labelChainedHeal2.Tag = Resources.Chained_Heal;
         }
 
         private void AdjustComponentProperties()
@@ -113,7 +116,7 @@ namespace App
             this.checkBoxMoonkinForm.Text = Constants.ModMoonkin;
             this.checkBoxRapidCurrents.Text = Constants.ModRapidCurrents;
             this.checkBoxRiptidesConsumption.Text = Constants.ModRapidConsumption;
-            this.checkBoxSwiftRetribution.Text = Constants.ModSwiftRetrubution;
+            this.checkBoxSwiftRetributionHaste.Text = Constants.ModSwiftRetrubution;
             this.checkBoxTidalMastery.Text = Constants.ModTidalMastery;
             this.checkBoxTidalWaves.Text = Constants.ModTidalWavesHaste;
             this.checkBoxTidalWavesCrit.Text = Constants.ModTidalWavesCrit;
@@ -133,7 +136,7 @@ namespace App
                 this.checkBoxGyphOfHST,
                 this.checkBoxGlyphOfLHW,
                 this.checkBoxWrathOfTheAirTotem,
-                this.checkBoxSwiftRetribution,
+                this.checkBoxSwiftRetributionHaste,
                 this.checkBoxBloodlust,
                 this.checkBoxRapidCurrents,
                 this.checkBoxTidalWaves,

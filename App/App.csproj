@@ -91,6 +91,9 @@
     <Compile Include="Models\Spells\HealingWave.cs" />
     <Compile Include="Models\Spells\LesserHealingWave.cs" />
     <Compile Include="Models\Spells\Riptide.cs" />
+    <Compile Include="Models\TransparentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartScreen.cs">
@@ -114,6 +117,7 @@
     </Compile>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -129,61 +133,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bloodlust.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Emerald Vigor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Glyph of Chain Heal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Glyph of Earth Shield.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Glyph of Earthliving.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Glyph of Healing Stream Totem.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Glyph of Lesser Healing Wave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Glyph of Riptide.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hellscream%27s Warsong.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Improved Moonking Form.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Moonkin Aura.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rapid Currents.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Revitalizing Skyflare Diamond.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Riptide%27s consumption.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tidal Mastery.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tidal Waves %28Critical%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tidal Waves %28Haste%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tree of Life.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Wrath of Air Totem.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ancestral Awakening %28Rank 3%29.png" />
@@ -214,6 +167,84 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Riptide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hellscream%27s Warsong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved Moonkin Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moonkin Aura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rapid Currents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revitalizing Skyflare Diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riptide%27s consumption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal Mastery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal Waves %28Critical%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal Waves %28Haste%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tree of Life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrath of Air Totem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blessing of the Eternals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloodlust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chained Heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emerald Vigor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Chain Heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Earth Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Earthliving Weapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Healing Stream Totem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glyph of Lesser Healing Wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dqsno_Dolu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dqsno_Gore.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lqvo Dolu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lqvo_Gore.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
