@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -29,6 +30,7 @@ namespace App
             AddControllsToList();
             InitialiseComboBoxSpell();
             AddTooltips();
+            
         }
 
         private void AddTooltips()
@@ -253,6 +255,8 @@ namespace App
 
             SelectSpellImage(selectedSpell);
 
+            PlaySound(selectedSpell.Name);
+
             selectedSpell.EnableDisableModifiers(checkBoxes);
 
             HideShowControlls(selectedSpell);
@@ -263,6 +267,49 @@ namespace App
             selectedSpell.Calculate();
 
             DisplayHealing();
+        }
+
+        private void PlaySound(string sound)
+        {
+            var player = new System.Media.SoundPlayer();
+
+            switch (sound)
+            {
+                case "on":
+                    player.Stream = Resources.ON_S;
+                    break;
+                case "off":
+                    player.Stream = Resources.OFF_S;
+                    break;
+                case Constants.SpellChainHeal:
+                    player.Stream = Resources.CH;
+                    break;
+                case Constants.SpellEarthliving:
+                    player.Stream = Resources.EarthL;
+                    break;
+                case Constants.SpellESh:
+                    player.Stream = Resources.ES;
+                    break;
+                case Constants.SpellHST:
+                    player.Stream = Resources.HST;
+                    break;
+                case Constants.SpellHW:
+                    player.Stream = Resources.HW;
+                    break;
+                case Constants.SpellLHW:
+                    player.Stream = Resources.LHW;
+                    break;
+                case Constants.SpellRiptide:
+                    player.Stream = Resources.RP;
+                    break;
+
+            }
+            var byteArr = Resources.CH;
+            
+            //player.Tag = byteArr;
+            
+            player.Load();
+            player.Play();
         }
 
         private void SelectSpellImage(Spell selectedSpell)
@@ -756,6 +803,10 @@ namespace App
             {
                 labelAvgHotHps.Text = Constants.LabelAvgHpsHealingWave;
                 labelAvgHps.Text = Constants.LabelAvgHps;
+            }
+            else if (selectedSpell != null && selectedSpell.Name == Constants.SpellRiptide)
+            {
+                labelAvgHotHps.Text = Constants.LabelAvgHps;
             }
             else
             {

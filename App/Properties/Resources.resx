@@ -262,11 +262,38 @@
   <data name="Tidal_WavesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tidal WavesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CH.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EarthL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthL.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ES.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HST.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Improved_Water_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Improved_Water_ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LHW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LHW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Mana_Tide_TotemH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mana_Tide_TotemH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OFF_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OFF_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ON_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ON_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SpellCHain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SpellCHain_Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

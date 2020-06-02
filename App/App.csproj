@@ -363,5 +363,59 @@
   <ItemGroup>
     <None Include="Resources\SpellRiptide.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chain Heal.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth Shield.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earthliving.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healing Stream Totem.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healing Wave.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lesser Healing Wave.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFF.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ON.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riptide.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EarthL.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ES.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HST.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HW.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LHW.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RP.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFF_S.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ON_S.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

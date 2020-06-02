@@ -24,6 +24,11 @@ namespace App
             buttonTier10.Cursor = cur;
             textBox3.Cursor = cur;
             textBox2.Cursor = cur;
+
+            var player = new System.Media.SoundPlayer();
+            player.Stream = Resources.ON_S;
+            player.Load();
+            player.Play();
         }
 
         private void InitialiseTooltips()
