@@ -766,11 +766,6 @@ namespace App
             }
         }
 
-        private void textBoxCrit_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void numericUpDownCriticalChance_KeyPress(object sender, KeyPressEventArgs e)
         {
             isAfterCritKeyPress = true;

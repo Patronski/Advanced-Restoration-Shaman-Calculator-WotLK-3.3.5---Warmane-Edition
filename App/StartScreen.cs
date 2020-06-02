@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App.Models;
+using App.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,16 +17,81 @@ namespace App
         public StartScreen()
         {
             InitializeComponent();
+            InitialiseTooltips();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void InitialiseTooltips()
         {
+            CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
-        }
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
 
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
+
+            //myToolTip.SetToolTip(, "Tooltip");
+            //.Tag = Resources.Tree_of_Life;
         }
 
         private void buttonTier10_Click(object sender, EventArgs e)
