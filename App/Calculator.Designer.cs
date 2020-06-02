@@ -32,7 +32,6 @@
             this.labelSpellPower = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
             this.comboBoxSpell = new System.Windows.Forms.ComboBox();
-            this.textBoxCrit = new System.Windows.Forms.TextBox();
             this.labelCrit = new System.Windows.Forms.Label();
             this.textBoxHasteRating = new System.Windows.Forms.TextBox();
             this.labelHaste = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.checkBoxGlyphOfLHW = new System.Windows.Forms.CheckBox();
             this.labelHasteModifiers = new System.Windows.Forms.Label();
             this.checkBoxWrathOfTheAirTotem = new System.Windows.Forms.CheckBox();
-            this.checkBoxSwiftRetributionHaste = new System.Windows.Forms.CheckBox();
             this.checkBoxBloodlust = new System.Windows.Forms.CheckBox();
             this.checkBoxRapidCurrents = new System.Windows.Forms.CheckBox();
             this.checkBoxTidalWaves = new System.Windows.Forms.CheckBox();
@@ -145,8 +143,13 @@
             this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
             this.numericUpDownCriticalChance = new System.Windows.Forms.NumericUpDown();
             this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
+            this.pictureBoxSpell = new System.Windows.Forms.PictureBox();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.checkBoxSwiftRetributionHaste = new System.Windows.Forms.CheckBox();
+            this.buttonHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -181,15 +184,6 @@
             this.comboBoxSpell.TabIndex = 2;
             this.comboBoxSpell.Text = "Select spell";
             this.comboBoxSpell.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpell_SelectedIndexChanged);
-            // 
-            // textBoxCrit
-            // 
-            this.textBoxCrit.Enabled = false;
-            this.textBoxCrit.Location = new System.Drawing.Point(961, 9);
-            this.textBoxCrit.MaxLength = 5;
-            this.textBoxCrit.Name = "textBoxCrit";
-            this.textBoxCrit.Size = new System.Drawing.Size(48, 20);
-            this.textBoxCrit.TabIndex = 9;
             // 
             // labelCrit
             // 
@@ -413,19 +407,6 @@
             this.checkBoxWrathOfTheAirTotem.UseVisualStyleBackColor = true;
             this.checkBoxWrathOfTheAirTotem.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
-            // checkBoxSwiftRetributionHaste
-            // 
-            this.checkBoxSwiftRetributionHaste.AutoCheck = false;
-            this.checkBoxSwiftRetributionHaste.AutoSize = true;
-            this.checkBoxSwiftRetributionHaste.Enabled = false;
-            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(18, 272);
-            this.checkBoxSwiftRetributionHaste.Name = "checkBoxSwiftRetributionHaste";
-            this.checkBoxSwiftRetributionHaste.Size = new System.Drawing.Size(223, 17);
-            this.checkBoxSwiftRetributionHaste.TabIndex = 32;
-            this.checkBoxSwiftRetributionHaste.Text = "Swift Retribution(Improved Moonkin Form)";
-            this.checkBoxSwiftRetributionHaste.UseVisualStyleBackColor = true;
-            this.checkBoxSwiftRetributionHaste.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
-            // 
             // checkBoxBloodlust
             // 
             this.checkBoxBloodlust.AutoSize = true;
@@ -542,7 +523,7 @@
             this.labelPercentCritChance.AutoSize = true;
             this.labelPercentCritChance.Enabled = false;
             this.labelPercentCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPercentCritChance.Location = new System.Drawing.Point(1015, 10);
+            this.labelPercentCritChance.Location = new System.Drawing.Point(1025, 10);
             this.labelPercentCritChance.Name = "labelPercentCritChance";
             this.labelPercentCritChance.Size = new System.Drawing.Size(21, 16);
             this.labelPercentCritChance.TabIndex = 41;
@@ -1404,7 +1385,7 @@
             0,
             0,
             65536});
-            this.numericUpDownCriticalChance.Location = new System.Drawing.Point(961, 36);
+            this.numericUpDownCriticalChance.Location = new System.Drawing.Point(961, 8);
             this.numericUpDownCriticalChance.Name = "numericUpDownCriticalChance";
             this.numericUpDownCriticalChance.Size = new System.Drawing.Size(58, 20);
             this.numericUpDownCriticalChance.TabIndex = 130;
@@ -1418,12 +1399,62 @@
             this.customTooltipEasy1.AutomaticDelay = 0;
             this.customTooltipEasy1.OwnerDraw = true;
             // 
+            // pictureBoxSpell
+            // 
+            this.pictureBoxSpell.Location = new System.Drawing.Point(218, 8);
+            this.pictureBoxSpell.Name = "pictureBoxSpell";
+            this.pictureBoxSpell.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxSpell.TabIndex = 131;
+            this.pictureBoxSpell.TabStop = false;
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReset.Location = new System.Drawing.Point(988, 425);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(58, 23);
+            this.buttonReset.TabIndex = 132;
+            this.buttonReset.Text = "RESET";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // checkBoxSwiftRetributionHaste
+            // 
+            this.checkBoxSwiftRetributionHaste.AutoSize = true;
+            this.checkBoxSwiftRetributionHaste.Enabled = false;
+            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(17, 272);
+            this.checkBoxSwiftRetributionHaste.Name = "checkBoxSwiftRetributionHaste";
+            this.checkBoxSwiftRetributionHaste.Size = new System.Drawing.Size(228, 17);
+            this.checkBoxSwiftRetributionHaste.TabIndex = 133;
+            this.checkBoxSwiftRetributionHaste.Text = "Swift Retribution / Improved Moonkin Form";
+            this.checkBoxSwiftRetributionHaste.UseVisualStyleBackColor = true;
+            this.checkBoxSwiftRetributionHaste.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHome.Location = new System.Drawing.Point(899, 425);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(58, 23);
+            this.buttonHome.TabIndex = 134;
+            this.buttonHome.Text = "HOME";
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.buttonHome);
+            this.Controls.Add(this.checkBoxSwiftRetributionHaste);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.pictureBoxSpell);
             this.Controls.Add(this.numericUpDownCriticalChance);
             this.Controls.Add(this.textBoxHotRiptide);
             this.Controls.Add(this.textBoxAncestralAwaceningAvg);
@@ -1514,7 +1545,6 @@
             this.Controls.Add(this.checkBoxTidalWaves);
             this.Controls.Add(this.checkBoxRapidCurrents);
             this.Controls.Add(this.checkBoxBloodlust);
-            this.Controls.Add(this.checkBoxSwiftRetributionHaste);
             this.Controls.Add(this.checkBoxWrathOfTheAirTotem);
             this.Controls.Add(this.labelHasteModifiers);
             this.Controls.Add(this.checkBoxGlyphOfLHW);
@@ -1534,7 +1564,6 @@
             this.Controls.Add(this.labelHit);
             this.Controls.Add(this.textBoxHasteRating);
             this.Controls.Add(this.labelHaste);
-            this.Controls.Add(this.textBoxCrit);
             this.Controls.Add(this.labelCrit);
             this.Controls.Add(this.comboBoxSpell);
             this.Controls.Add(this.textBoxSpellPower);
@@ -1545,6 +1574,7 @@
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1555,7 +1585,6 @@
         private System.Windows.Forms.Label labelSpellPower;
         private System.Windows.Forms.TextBox textBoxSpellPower;
         private System.Windows.Forms.ComboBox comboBoxSpell;
-        private System.Windows.Forms.TextBox textBoxCrit;
         private System.Windows.Forms.Label labelCrit;
         private System.Windows.Forms.TextBox textBoxHasteRating;
         private System.Windows.Forms.Label labelHaste;
@@ -1576,7 +1605,6 @@
         private System.Windows.Forms.CheckBox checkBoxGlyphOfLHW;
         private System.Windows.Forms.Label labelHasteModifiers;
         private System.Windows.Forms.CheckBox checkBoxWrathOfTheAirTotem;
-        private System.Windows.Forms.CheckBox checkBoxSwiftRetributionHaste;
         private System.Windows.Forms.CheckBox checkBoxBloodlust;
         private System.Windows.Forms.CheckBox checkBoxRapidCurrents;
         private System.Windows.Forms.CheckBox checkBoxTidalWaves;
@@ -1668,6 +1696,10 @@
         private System.Windows.Forms.TextBox textBoxHotRiptide;
         private Models.CustomTooltipEasy customTooltipEasy1;
         private System.Windows.Forms.NumericUpDown numericUpDownCriticalChance;
+        private System.Windows.Forms.PictureBox pictureBoxSpell;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.CheckBox checkBoxSwiftRetributionHaste;
+        private System.Windows.Forms.Button buttonHome;
     }
 }
 

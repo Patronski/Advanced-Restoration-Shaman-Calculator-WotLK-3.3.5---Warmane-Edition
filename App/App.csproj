@@ -261,5 +261,107 @@
   <ItemGroup>
     <None Include="Resources\Dqsno_Dolu1.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal WavesH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancestral AwakeningH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancestral HealingH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancestral KnowledgeH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blessing of the EternalsH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cleanse SpiritH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth ShieldH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healing FocusH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healing WayH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved Chain HealH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved Earth ShieldH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved Healing WaveH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved ShieldsH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved Water ShieldH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mana Tide TotemH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nature%27s BlessingH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nature%27s SwiftnessH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PurificationH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restorative TotemsH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RiptideH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thundering StrikesH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal FocusH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal ForceH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal MasteryH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mana_Tide_TotemH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improved_Water_ShieldH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wow cursor hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellCHain_Heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellEarth_Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellEarthliving.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellHealing_Stream_Totem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellHealing_Wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellLesser_Healing_Wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellRiptide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

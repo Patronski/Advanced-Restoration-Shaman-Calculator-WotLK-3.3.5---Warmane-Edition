@@ -196,4 +196,100 @@
   <data name="Dqsno_Dolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dqsno_Dolu1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ancestral_AwakeningH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral AwakeningH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancestral_HealingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral HealingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancestral_KnowledgeH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral KnowledgeH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blessing_of_the_EternalsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blessing of the EternalsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cleanse_SpiritH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cleanse SpiritH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Healing_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Healing FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Healing_WayH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Healing WayH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_Chain_HealH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Chain HealH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_Healing_WaveH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Healing WaveH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_ShieldsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved ShieldsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nature_s_BlessingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nature's BlessingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nature_s_SwiftnessH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nature's SwiftnessH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PurificationH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PurificationH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Restorative_TotemsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restorative TotemsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RiptideH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RiptideH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thundering_StrikesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thundering StrikesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_ForceH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal ForceH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_MasteryH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal MasteryH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_WavesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal WavesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_Water_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved_Water_ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mana_Tide_TotemH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mana_Tide_TotemH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellCHain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellCHain_Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellEarthliving" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellEarthliving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellEarth_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellEarth_Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellHealing_Stream_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellHealing_Stream_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellHealing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellHealing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellLesser_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellLesser_Healing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellRiptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellRiptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wow_cursor_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wow cursor hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

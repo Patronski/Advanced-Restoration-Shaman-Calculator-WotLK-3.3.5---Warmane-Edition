@@ -35,6 +35,10 @@ namespace App
         {
             CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
+            myToolTip.InitialDelay = 50;
+            myToolTip.ReshowDelay = 50;
+            myToolTip.AutoPopDelay = 15000;
+
             myToolTip.SetToolTip(checkBoxTreeOfLife, "Tree of life");
             checkBoxTreeOfLife.Tag = Resources.Tree_of_Life;
 
@@ -142,7 +146,11 @@ namespace App
                 this.checkBoxTidalWaves,
                 this.checkBoxTidalMastery,
                 this.checkBoxMoonkinForm,
-                this.checkBoxTidalWavesCrit
+                this.checkBoxTidalWavesCrit,
+                this.checkBoxRevitalizingSkyflareDiamond,
+                this.checkBoxGlyphOfRiptide,
+                checkBoxGlyphOfEarthliving,
+                checkBoxGlyphChainHeal
             };
         }
 
@@ -243,6 +251,8 @@ namespace App
 
             selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
 
+            SelectSpellImage(selectedSpell);
+
             selectedSpell.EnableDisableModifiers(checkBoxes);
 
             HideShowControlls(selectedSpell);
@@ -253,6 +263,36 @@ namespace App
             selectedSpell.Calculate();
 
             DisplayHealing();
+        }
+
+        private void SelectSpellImage(Spell selectedSpell)
+        {
+            switch (selectedSpell.Name)
+            {
+                case Constants.SpellChainHeal:
+                    pictureBoxSpell.Image = Resources.SpellCHain_Heal;
+                    break;
+                case Constants.SpellEarthliving:
+                    pictureBoxSpell.Image = Resources.SpellEarthliving;
+                    break;
+                case Constants.SpellESh:
+                    pictureBoxSpell.Image = Resources.SpellEarth_Shield;
+                    break;
+                case Constants.SpellHST:
+                    pictureBoxSpell.Image = Resources.SpellHealing_Stream_Totem;
+                    break;
+                case Constants.SpellHW:
+                    pictureBoxSpell.Image = Resources.SpellHealing_Wave;
+                    break;
+                case Constants.SpellLHW:
+                    pictureBoxSpell.Image = Resources.SpellLesser_Healing_Wave;
+                    break;
+                case Constants.SpellRiptide:
+                    pictureBoxSpell.Image = Resources.SpellRiptide;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -779,6 +819,30 @@ namespace App
         private void numericUpDownCriticalChance_MouseUp(object sender, MouseEventArgs e)
         {
             isAfterCritKeyPress = true;
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            foreach (var item in checkBoxes)
+            {
+                item.Checked = false;
+            }
+
+            this.textBoxSpellPower.Text = "";
+            textBoxHasteRating.Text = "";
+            numericUpDownCriticalChance.Value = 0;
+            Player.Instance.CriticalChanceInitial = 0;
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            var location = this.DesktopLocation;
+
+            this.Hide();
+            var startScreen = new StartScreen();
+            startScreen.DesktopLocation = location;
+            startScreen.ShowDialog();
+            this.Close();
         }
     }
 }

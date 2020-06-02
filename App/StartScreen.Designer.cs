@@ -41,7 +41,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.transparentControl1 = new App.Models.TransparentControl();
             this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
-            this.transparentControl2 = new App.Models.TransparentControl();
             this.transparentControl3 = new App.Models.TransparentControl();
             this.transparentControl4 = new App.Models.TransparentControl();
             this.transparentControl5 = new App.Models.TransparentControl();
@@ -64,6 +63,7 @@
             this.transparentControl22 = new App.Models.TransparentControl();
             this.transparentControl23 = new App.Models.TransparentControl();
             this.transparentControl24 = new App.Models.TransparentControl();
+            this.transparentControl2 = new App.Models.TransparentControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +74,7 @@
             // buttonTier10
             // 
             this.buttonTier10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
-            this.buttonTier10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTier10.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonTier10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonTier10.FlatAppearance.BorderSize = 4;
             this.buttonTier10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,7 +90,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(111, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 53);
@@ -100,7 +100,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(515, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(408, 53);
@@ -110,7 +110,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
             this.label3.Location = new System.Drawing.Point(929, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(494, 53);
@@ -136,16 +136,16 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)), true);
-            this.textBox2.Location = new System.Drawing.Point(1346, 4);
+            this.textBox2.Location = new System.Drawing.Point(1366, 12);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(61, 47);
+            this.textBox2.Size = new System.Drawing.Size(41, 27);
             this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Version\r\n1.0";
+            this.textBox2.Text = "v1.0";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox5
@@ -174,6 +174,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(478, 271);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -183,6 +184,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(478, 272);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -206,16 +208,6 @@
             // customTooltipEasy1
             // 
             this.customTooltipEasy1.OwnerDraw = true;
-            // 
-            // transparentControl2
-            // 
-            this.transparentControl2.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl2.Location = new System.Drawing.Point(624, 209);
-            this.transparentControl2.Name = "transparentControl2";
-            this.transparentControl2.Opacity = 100;
-            this.transparentControl2.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl2.TabIndex = 16;
-            this.transparentControl2.Text = "transparentControl2";
             // 
             // transparentControl3
             // 
@@ -437,12 +429,23 @@
             this.transparentControl24.TabIndex = 38;
             this.transparentControl24.Text = "transparentControl24";
             // 
+            // transparentControl2
+            // 
+            this.transparentControl2.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl2.Location = new System.Drawing.Point(624, 209);
+            this.transparentControl2.Name = "transparentControl2";
+            this.transparentControl2.Opacity = 100;
+            this.transparentControl2.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl2.TabIndex = 39;
+            this.transparentControl2.Text = "transparentControl2";
+            // 
             // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(176)))));
             this.ClientSize = new System.Drawing.Size(1440, 763);
+            this.Controls.Add(this.transparentControl2);
             this.Controls.Add(this.transparentControl24);
             this.Controls.Add(this.transparentControl23);
             this.Controls.Add(this.transparentControl22);
@@ -465,7 +468,6 @@
             this.Controls.Add(this.transparentControl5);
             this.Controls.Add(this.transparentControl4);
             this.Controls.Add(this.transparentControl3);
-            this.Controls.Add(this.transparentControl2);
             this.Controls.Add(this.transparentControl1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -506,7 +508,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private Models.TransparentControl transparentControl1;
         private Models.CustomTooltipEasy customTooltipEasy1;
-        private Models.TransparentControl transparentControl2;
         private Models.TransparentControl transparentControl3;
         private Models.TransparentControl transparentControl4;
         private Models.TransparentControl transparentControl5;
@@ -529,5 +530,6 @@
         private Models.TransparentControl transparentControl22;
         private Models.TransparentControl transparentControl23;
         private Models.TransparentControl transparentControl24;
+        private Models.TransparentControl transparentControl2;
     }
 }
