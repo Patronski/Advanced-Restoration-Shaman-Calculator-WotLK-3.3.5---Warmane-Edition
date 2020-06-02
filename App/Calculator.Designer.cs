@@ -190,8 +190,6 @@
             this.textBoxCrit.Name = "textBoxCrit";
             this.textBoxCrit.Size = new System.Drawing.Size(48, 20);
             this.textBoxCrit.TabIndex = 9;
-            this.textBoxCrit.TextChanged += new System.EventHandler(this.textBoxCrit_TextChanged);
-            this.textBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCrit_KeyPress);
             // 
             // labelCrit
             // 
@@ -1399,6 +1397,7 @@
             // numericUpDownCriticalChance
             // 
             this.numericUpDownCriticalChance.DecimalPlaces = 2;
+            this.numericUpDownCriticalChance.Enabled = false;
             this.numericUpDownCriticalChance.Increment = new decimal(new int[] {
             1,
             0,
