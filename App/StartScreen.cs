@@ -19,7 +19,7 @@ namespace App
             InitializeComponent();
 
             InitialiseTooltips();
-            var cur = new Cursor(Properties.Resources.wow_cursor_hand.GetHicon());
+            var cur = new Cursor(Properties.Resources.wow_cursor_hand_croped.GetHicon());
             this.Cursor = cur;
             buttonTier10.Cursor = cur;
             textBox3.Cursor = cur;
@@ -33,6 +33,15 @@ namespace App
 
         private void InitialiseTooltips()
         {
+            var toolTip = new ToolTip();
+            toolTip.InitialDelay = 50;
+            toolTip.ReshowDelay = 50;
+            toolTip.AutoPopDelay = 15000;
+            toolTip.SetToolTip(pictureBox5, "Statistic");
+            toolTip.SetToolTip(pictureBox4, "Download");
+            toolTip.SetToolTip(pictureBox1, "Restoration Shaman Guide");
+            toolTip.SetToolTip(pictureBox3, "Warmane Home");
+
             CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
             myToolTip.InitialDelay = 50;
@@ -131,6 +140,16 @@ namespace App
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://forum.warmane.com/showthread.php?t=323638");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.warmane.com/download");
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.warmane.com/information");
         }
     }
 }

@@ -250,6 +250,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Glyph_of_Healing_Wave {
+            get {
+                object obj = ResourceManager.GetObject("Glyph_of_Healing_Wave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Glyph_of_Lesser_Healing_Wave {
             get {
                 object obj = ResourceManager.GetObject("Glyph_of_Lesser_Healing_Wave", resourceCulture);
@@ -410,6 +420,16 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap Mana_Tide_TotemH {
             get {
                 object obj = ResourceManager.GetObject("Mana_Tide_TotemH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mana_Tide_TotemH1 {
+            get {
+                object obj = ResourceManager.GetObject("Mana_Tide_TotemH1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -707,6 +727,16 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap wow_cursor_hand {
             get {
                 object obj = ResourceManager.GetObject("wow_cursor_hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wow_cursor_hand_croped {
+            get {
+                object obj = ResourceManager.GetObject("wow_cursor_hand_croped", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

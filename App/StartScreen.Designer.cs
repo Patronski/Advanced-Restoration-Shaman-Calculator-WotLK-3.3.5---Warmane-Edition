@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonTier10 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -40,7 +38,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.transparentControl1 = new App.Models.TransparentControl();
-            this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
             this.transparentControl3 = new App.Models.TransparentControl();
             this.transparentControl4 = new App.Models.TransparentControl();
             this.transparentControl5 = new App.Models.TransparentControl();
@@ -87,35 +84,15 @@
             this.buttonTier10.UseVisualStyleBackColor = false;
             this.buttonTier10.Click += new System.EventHandler(this.buttonTier10_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(111, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 53);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "THE POWER OF";
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(515, 144);
+            this.label2.Location = new System.Drawing.Point(491, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(408, 53);
+            this.label2.Size = new System.Drawing.Size(471, 53);
             this.label2.TabIndex = 5;
-            this.label2.Text = "OPTIMAL TALLENTS";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(929, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(494, 53);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "RESTORATION SHAMAN";
+            this.label2.Text = "TALENTS FOR THE WIN";
             // 
             // textBox3
             // 
@@ -156,6 +133,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(478, 270);
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -165,6 +143,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(478, 272);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox1
             // 
@@ -204,10 +183,6 @@
             this.transparentControl1.Size = new System.Drawing.Size(38, 38);
             this.transparentControl1.TabIndex = 15;
             this.transparentControl1.Text = "transparentControl1";
-            // 
-            // customTooltipEasy1
-            // 
-            this.customTooltipEasy1.OwnerDraw = true;
             // 
             // transparentControl3
             // 
@@ -474,9 +449,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonTier10);
@@ -497,9 +470,7 @@
 
         private System.Windows.Forms.Button buttonTier10;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -507,7 +478,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Models.TransparentControl transparentControl1;
-        private Models.CustomTooltipEasy customTooltipEasy1;
         private Models.TransparentControl transparentControl3;
         private Models.TransparentControl transparentControl4;
         private Models.TransparentControl transparentControl5;

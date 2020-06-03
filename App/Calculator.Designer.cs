@@ -142,11 +142,29 @@
             this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
             this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
             this.numericUpDownCriticalChance = new System.Windows.Forms.NumericUpDown();
-            this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
             this.pictureBoxSpell = new System.Windows.Forms.PictureBox();
             this.buttonReset = new System.Windows.Forms.Button();
             this.checkBoxSwiftRetributionHaste = new System.Windows.Forms.CheckBox();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.checkBoxGlyphOfHealingWave = new System.Windows.Forms.CheckBox();
+            this.labelAvgGlyphOfHealingWave = new System.Windows.Forms.Label();
+            this.textBoxGlyphOfHealingWave = new System.Windows.Forms.TextBox();
+            this.labelPerTick = new System.Windows.Forms.Label();
+            this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
+            this.checkBoxGlyphOfChainHealEarthliving = new System.Windows.Forms.CheckBox();
+            this.textBoxEarthlivingAvgHpsLHW = new System.Windows.Forms.TextBox();
+            this.textBoxEarthlivingAvgHpsCH = new System.Windows.Forms.TextBox();
+            this.textBoxEarthlivingAvgHpsHW = new System.Windows.Forms.TextBox();
+            this.textBoxEarthlivingAvgHpsRP = new System.Windows.Forms.TextBox();
+            this.textBoxEarthlivingAvgHpsTotal = new System.Windows.Forms.TextBox();
+            this.labeEarthlivingHps5 = new System.Windows.Forms.Label();
+            this.labeEarthlivingHps4 = new System.Windows.Forms.Label();
+            this.labeEarthlivingHps3 = new System.Windows.Forms.Label();
+            this.labeEarthlivingHps2 = new System.Windows.Forms.Label();
+            this.labelEarthlivingCH = new System.Windows.Forms.Label();
+            this.labelEarthlivingHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingLHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingRP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -511,7 +529,7 @@
             // labelEarthlivingBlessingOf
             // 
             this.labelEarthlivingBlessingOf.AutoSize = true;
-            this.labelEarthlivingBlessingOf.Location = new System.Drawing.Point(508, 308);
+            this.labelEarthlivingBlessingOf.Location = new System.Drawing.Point(441, 425);
             this.labelEarthlivingBlessingOf.Name = "labelEarthlivingBlessingOf";
             this.labelEarthlivingBlessingOf.Size = new System.Drawing.Size(271, 13);
             this.labelEarthlivingBlessingOf.TabIndex = 110;
@@ -1051,7 +1069,7 @@
             this.labelAvgHps.AutoSize = true;
             this.labelAvgHps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHps.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgHps.Location = new System.Drawing.Point(336, 308);
+            this.labelAvgHps.Location = new System.Drawing.Point(366, 308);
             this.labelAvgHps.Name = "labelAvgHps";
             this.labelAvgHps.Size = new System.Drawing.Size(72, 13);
             this.labelAvgHps.TabIndex = 100;
@@ -1116,7 +1134,7 @@
             // labelChainedHeal2
             // 
             this.labelChainedHeal2.AutoSize = true;
-            this.labelChainedHeal2.Location = new System.Drawing.Point(336, 365);
+            this.labelChainedHeal2.Location = new System.Drawing.Point(361, 365);
             this.labelChainedHeal2.Name = "labelChainedHeal2";
             this.labelChainedHeal2.Size = new System.Drawing.Size(77, 13);
             this.labelChainedHeal2.TabIndex = 105;
@@ -1162,11 +1180,11 @@
             // 
             this.checkBoxGlyphOfEarthliving.AutoSize = true;
             this.checkBoxGlyphOfEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfEarthliving.Location = new System.Drawing.Point(444, 282);
+            this.checkBoxGlyphOfEarthliving.Location = new System.Drawing.Point(444, 259);
             this.checkBoxGlyphOfEarthliving.Name = "checkBoxGlyphOfEarthliving";
-            this.checkBoxGlyphOfEarthliving.Size = new System.Drawing.Size(137, 17);
+            this.checkBoxGlyphOfEarthliving.Size = new System.Drawing.Size(188, 17);
             this.checkBoxGlyphOfEarthliving.TabIndex = 109;
-            this.checkBoxGlyphOfEarthliving.Text = "Glyph of Earthliving";
+            this.checkBoxGlyphOfEarthliving.Text = "Glyph of Earthliving Weapon";
             this.checkBoxGlyphOfEarthliving.UseVisualStyleBackColor = true;
             this.checkBoxGlyphOfEarthliving.Visible = false;
             this.checkBoxGlyphOfEarthliving.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
@@ -1198,7 +1216,7 @@
             // labelApproximately1
             // 
             this.labelApproximately1.AutoSize = true;
-            this.labelApproximately1.Location = new System.Drawing.Point(336, 322);
+            this.labelApproximately1.Location = new System.Drawing.Point(363, 322);
             this.labelApproximately1.Name = "labelApproximately1";
             this.labelApproximately1.Size = new System.Drawing.Size(75, 13);
             this.labelApproximately1.TabIndex = 113;
@@ -1208,7 +1226,7 @@
             // labelApproximately2
             // 
             this.labelApproximately2.AutoSize = true;
-            this.labelApproximately2.Location = new System.Drawing.Point(336, 335);
+            this.labelApproximately2.Location = new System.Drawing.Point(351, 335);
             this.labelApproximately2.Name = "labelApproximately2";
             this.labelApproximately2.Size = new System.Drawing.Size(87, 13);
             this.labelApproximately2.TabIndex = 114;
@@ -1218,11 +1236,11 @@
             // labelForOneTarget
             // 
             this.labelForOneTarget.AutoSize = true;
-            this.labelForOneTarget.Location = new System.Drawing.Point(336, 365);
+            this.labelForOneTarget.Location = new System.Drawing.Point(370, 365);
             this.labelForOneTarget.Name = "labelForOneTarget";
-            this.labelForOneTarget.Size = new System.Drawing.Size(71, 13);
+            this.labelForOneTarget.Size = new System.Drawing.Size(68, 13);
             this.labelForOneTarget.TabIndex = 115;
-            this.labelForOneTarget.Text = "(For 1 Tagret)";
+            this.labelForOneTarget.Text = "(For 1 Tagret";
             this.labelForOneTarget.Visible = false;
             // 
             // labelAncestralAwakening
@@ -1252,7 +1270,7 @@
             // labelSpamOn1Target1
             // 
             this.labelSpamOn1Target1.AutoSize = true;
-            this.labelSpamOn1Target1.Location = new System.Drawing.Point(336, 365);
+            this.labelSpamOn1Target1.Location = new System.Drawing.Point(377, 365);
             this.labelSpamOn1Target1.Name = "labelSpamOn1Target1";
             this.labelSpamOn1Target1.Size = new System.Drawing.Size(61, 13);
             this.labelSpamOn1Target1.TabIndex = 118;
@@ -1262,7 +1280,7 @@
             // labelSpamOnDifferent1
             // 
             this.labelSpamOnDifferent1.AutoSize = true;
-            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(336, 322);
+            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(345, 322);
             this.labelSpamOnDifferent1.Name = "labelSpamOnDifferent1";
             this.labelSpamOnDifferent1.Size = new System.Drawing.Size(93, 13);
             this.labelSpamOnDifferent1.TabIndex = 119;
@@ -1272,7 +1290,7 @@
             // labelSpamOnDifferent2
             // 
             this.labelSpamOnDifferent2.AutoSize = true;
-            this.labelSpamOnDifferent2.Location = new System.Drawing.Point(336, 335);
+            this.labelSpamOnDifferent2.Location = new System.Drawing.Point(360, 335);
             this.labelSpamOnDifferent2.Name = "labelSpamOnDifferent2";
             this.labelSpamOnDifferent2.Size = new System.Drawing.Size(78, 13);
             this.labelSpamOnDifferent2.TabIndex = 120;
@@ -1282,7 +1300,7 @@
             // labelSpamOn1Target2
             // 
             this.labelSpamOn1Target2.AutoSize = true;
-            this.labelSpamOn1Target2.Location = new System.Drawing.Point(336, 378);
+            this.labelSpamOn1Target2.Location = new System.Drawing.Point(368, 378);
             this.labelSpamOn1Target2.Name = "labelSpamOn1Target2";
             this.labelSpamOn1Target2.Size = new System.Drawing.Size(70, 13);
             this.labelSpamOn1Target2.TabIndex = 121;
@@ -1294,7 +1312,7 @@
             this.labelAvgAAeHps.AutoSize = true;
             this.labelAvgAAeHps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgAAeHps.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgAAeHps.Location = new System.Drawing.Point(336, 391);
+            this.labelAvgAAeHps.Location = new System.Drawing.Point(346, 391);
             this.labelAvgAAeHps.Name = "labelAvgAAeHps";
             this.labelAvgAAeHps.Size = new System.Drawing.Size(92, 13);
             this.labelAvgAAeHps.TabIndex = 122;
@@ -1394,11 +1412,6 @@
             this.numericUpDownCriticalChance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseDown);
             this.numericUpDownCriticalChance.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseUp);
             // 
-            // customTooltipEasy1
-            // 
-            this.customTooltipEasy1.AutomaticDelay = 0;
-            this.customTooltipEasy1.OwnerDraw = true;
-            // 
             // pictureBoxSpell
             // 
             this.pictureBoxSpell.Location = new System.Drawing.Point(218, 8);
@@ -1445,12 +1458,233 @@
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
+            // checkBoxGlyphOfHealingWave
+            // 
+            this.checkBoxGlyphOfHealingWave.AutoSize = true;
+            this.checkBoxGlyphOfHealingWave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxGlyphOfHealingWave.Location = new System.Drawing.Point(361, 156);
+            this.checkBoxGlyphOfHealingWave.Name = "checkBoxGlyphOfHealingWave";
+            this.checkBoxGlyphOfHealingWave.Size = new System.Drawing.Size(157, 17);
+            this.checkBoxGlyphOfHealingWave.TabIndex = 135;
+            this.checkBoxGlyphOfHealingWave.Text = "Glyph of Healing Wave";
+            this.checkBoxGlyphOfHealingWave.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfHealingWave.Visible = false;
+            this.checkBoxGlyphOfHealingWave.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
+            // labelAvgGlyphOfHealingWave
+            // 
+            this.labelAvgGlyphOfHealingWave.AutoSize = true;
+            this.labelAvgGlyphOfHealingWave.Enabled = false;
+            this.labelAvgGlyphOfHealingWave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgGlyphOfHealingWave.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelAvgGlyphOfHealingWave.Location = new System.Drawing.Point(283, 176);
+            this.labelAvgGlyphOfHealingWave.Name = "labelAvgGlyphOfHealingWave";
+            this.labelAvgGlyphOfHealingWave.Size = new System.Drawing.Size(72, 13);
+            this.labelAvgGlyphOfHealingWave.TabIndex = 136;
+            this.labelAvgGlyphOfHealingWave.Text = "AVG eHPS:";
+            this.labelAvgGlyphOfHealingWave.Visible = false;
+            // 
+            // textBoxGlyphOfHealingWave
+            // 
+            this.textBoxGlyphOfHealingWave.Enabled = false;
+            this.textBoxGlyphOfHealingWave.Location = new System.Drawing.Point(361, 173);
+            this.textBoxGlyphOfHealingWave.MaxLength = 10;
+            this.textBoxGlyphOfHealingWave.Name = "textBoxGlyphOfHealingWave";
+            this.textBoxGlyphOfHealingWave.ReadOnly = true;
+            this.textBoxGlyphOfHealingWave.Size = new System.Drawing.Size(58, 20);
+            this.textBoxGlyphOfHealingWave.TabIndex = 137;
+            this.textBoxGlyphOfHealingWave.Visible = false;
+            // 
+            // labelPerTick
+            // 
+            this.labelPerTick.AutoSize = true;
+            this.labelPerTick.Location = new System.Drawing.Point(389, 378);
+            this.labelPerTick.Name = "labelPerTick";
+            this.labelPerTick.Size = new System.Drawing.Size(49, 13);
+            this.labelPerTick.TabIndex = 138;
+            this.labelPerTick.Text = "per Tick)";
+            this.labelPerTick.Visible = false;
+            // 
+            // customTooltipEasy1
+            // 
+            this.customTooltipEasy1.AutomaticDelay = 0;
+            this.customTooltipEasy1.OwnerDraw = true;
+            // 
+            // checkBoxGlyphOfChainHealEarthliving
+            // 
+            this.checkBoxGlyphOfChainHealEarthliving.AutoSize = true;
+            this.checkBoxGlyphOfChainHealEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxGlyphOfChainHealEarthliving.Location = new System.Drawing.Point(444, 282);
+            this.checkBoxGlyphOfChainHealEarthliving.Name = "checkBoxGlyphOfChainHealEarthliving";
+            this.checkBoxGlyphOfChainHealEarthliving.Size = new System.Drawing.Size(139, 17);
+            this.checkBoxGlyphOfChainHealEarthliving.TabIndex = 139;
+            this.checkBoxGlyphOfChainHealEarthliving.Text = "Glyph of Chain Heal";
+            this.checkBoxGlyphOfChainHealEarthliving.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfChainHealEarthliving.Visible = false;
+            this.checkBoxGlyphOfChainHealEarthliving.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
+            // textBoxEarthlivingAvgHpsLHW
+            // 
+            this.textBoxEarthlivingAvgHpsLHW.Location = new System.Drawing.Point(444, 388);
+            this.textBoxEarthlivingAvgHpsLHW.MaxLength = 10;
+            this.textBoxEarthlivingAvgHpsLHW.Name = "textBoxEarthlivingAvgHpsLHW";
+            this.textBoxEarthlivingAvgHpsLHW.ReadOnly = true;
+            this.textBoxEarthlivingAvgHpsLHW.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingAvgHpsLHW.TabIndex = 140;
+            this.textBoxEarthlivingAvgHpsLHW.Visible = false;
+            // 
+            // textBoxEarthlivingAvgHpsCH
+            // 
+            this.textBoxEarthlivingAvgHpsCH.Location = new System.Drawing.Point(444, 305);
+            this.textBoxEarthlivingAvgHpsCH.MaxLength = 10;
+            this.textBoxEarthlivingAvgHpsCH.Name = "textBoxEarthlivingAvgHpsCH";
+            this.textBoxEarthlivingAvgHpsCH.ReadOnly = true;
+            this.textBoxEarthlivingAvgHpsCH.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingAvgHpsCH.TabIndex = 141;
+            this.textBoxEarthlivingAvgHpsCH.Visible = false;
+            // 
+            // textBoxEarthlivingAvgHpsHW
+            // 
+            this.textBoxEarthlivingAvgHpsHW.Location = new System.Drawing.Point(444, 347);
+            this.textBoxEarthlivingAvgHpsHW.MaxLength = 10;
+            this.textBoxEarthlivingAvgHpsHW.Name = "textBoxEarthlivingAvgHpsHW";
+            this.textBoxEarthlivingAvgHpsHW.ReadOnly = true;
+            this.textBoxEarthlivingAvgHpsHW.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingAvgHpsHW.TabIndex = 142;
+            this.textBoxEarthlivingAvgHpsHW.Visible = false;
+            // 
+            // textBoxEarthlivingAvgHpsRP
+            // 
+            this.textBoxEarthlivingAvgHpsRP.Location = new System.Drawing.Point(652, 305);
+            this.textBoxEarthlivingAvgHpsRP.MaxLength = 10;
+            this.textBoxEarthlivingAvgHpsRP.Name = "textBoxEarthlivingAvgHpsRP";
+            this.textBoxEarthlivingAvgHpsRP.ReadOnly = true;
+            this.textBoxEarthlivingAvgHpsRP.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingAvgHpsRP.TabIndex = 143;
+            this.textBoxEarthlivingAvgHpsRP.Visible = false;
+            // 
+            // textBoxEarthlivingAvgHpsTotal
+            // 
+            this.textBoxEarthlivingAvgHpsTotal.Location = new System.Drawing.Point(652, 388);
+            this.textBoxEarthlivingAvgHpsTotal.MaxLength = 10;
+            this.textBoxEarthlivingAvgHpsTotal.Name = "textBoxEarthlivingAvgHpsTotal";
+            this.textBoxEarthlivingAvgHpsTotal.ReadOnly = true;
+            this.textBoxEarthlivingAvgHpsTotal.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingAvgHpsTotal.TabIndex = 144;
+            this.textBoxEarthlivingAvgHpsTotal.Visible = false;
+            // 
+            // labeEarthlivingHps5
+            // 
+            this.labeEarthlivingHps5.AutoSize = true;
+            this.labeEarthlivingHps5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeEarthlivingHps5.ForeColor = System.Drawing.Color.Olive;
+            this.labeEarthlivingHps5.Location = new System.Drawing.Point(514, 391);
+            this.labeEarthlivingHps5.Name = "labeEarthlivingHps5";
+            this.labeEarthlivingHps5.Size = new System.Drawing.Size(132, 13);
+            this.labeEarthlivingHps5.TabIndex = 145;
+            this.labeEarthlivingHps5.Text = "+1% AVG Total eHPS:";
+            this.labeEarthlivingHps5.Visible = false;
+            // 
+            // labeEarthlivingHps4
+            // 
+            this.labeEarthlivingHps4.AutoSize = true;
+            this.labeEarthlivingHps4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeEarthlivingHps4.ForeColor = System.Drawing.Color.Olive;
+            this.labeEarthlivingHps4.Location = new System.Drawing.Point(574, 308);
+            this.labeEarthlivingHps4.Name = "labeEarthlivingHps4";
+            this.labeEarthlivingHps4.Size = new System.Drawing.Size(72, 13);
+            this.labeEarthlivingHps4.TabIndex = 146;
+            this.labeEarthlivingHps4.Text = "AVG eHPS:";
+            this.labeEarthlivingHps4.Visible = false;
+            // 
+            // labeEarthlivingHps3
+            // 
+            this.labeEarthlivingHps3.AutoSize = true;
+            this.labeEarthlivingHps3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeEarthlivingHps3.ForeColor = System.Drawing.Color.Olive;
+            this.labeEarthlivingHps3.Location = new System.Drawing.Point(366, 391);
+            this.labeEarthlivingHps3.Name = "labeEarthlivingHps3";
+            this.labeEarthlivingHps3.Size = new System.Drawing.Size(72, 13);
+            this.labeEarthlivingHps3.TabIndex = 147;
+            this.labeEarthlivingHps3.Text = "AVG eHPS:";
+            this.labeEarthlivingHps3.Visible = false;
+            // 
+            // labeEarthlivingHps2
+            // 
+            this.labeEarthlivingHps2.AutoSize = true;
+            this.labeEarthlivingHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeEarthlivingHps2.ForeColor = System.Drawing.Color.Olive;
+            this.labeEarthlivingHps2.Location = new System.Drawing.Point(366, 350);
+            this.labeEarthlivingHps2.Name = "labeEarthlivingHps2";
+            this.labeEarthlivingHps2.Size = new System.Drawing.Size(72, 13);
+            this.labeEarthlivingHps2.TabIndex = 148;
+            this.labeEarthlivingHps2.Text = "AVG eHPS:";
+            this.labeEarthlivingHps2.Visible = false;
+            // 
+            // labelEarthlivingCH
+            // 
+            this.labelEarthlivingCH.AutoSize = true;
+            this.labelEarthlivingCH.Location = new System.Drawing.Point(358, 322);
+            this.labelEarthlivingCH.Name = "labelEarthlivingCH";
+            this.labelEarthlivingCH.Size = new System.Drawing.Size(80, 13);
+            this.labelEarthlivingCH.TabIndex = 149;
+            this.labelEarthlivingCH.Text = "(By Chain Heal)";
+            this.labelEarthlivingCH.Visible = false;
+            // 
+            // labelEarthlivingHW
+            // 
+            this.labelEarthlivingHW.AutoSize = true;
+            this.labelEarthlivingHW.Location = new System.Drawing.Point(342, 365);
+            this.labelEarthlivingHW.Name = "labelEarthlivingHW";
+            this.labelEarthlivingHW.Size = new System.Drawing.Size(96, 13);
+            this.labelEarthlivingHW.TabIndex = 150;
+            this.labelEarthlivingHW.Text = "(By Healing Wave)";
+            this.labelEarthlivingHW.Visible = false;
+            // 
+            // labelEarthlivingLHW
+            // 
+            this.labelEarthlivingLHW.AutoSize = true;
+            this.labelEarthlivingLHW.Location = new System.Drawing.Point(308, 402);
+            this.labelEarthlivingLHW.Name = "labelEarthlivingLHW";
+            this.labelEarthlivingLHW.Size = new System.Drawing.Size(130, 13);
+            this.labelEarthlivingLHW.TabIndex = 151;
+            this.labelEarthlivingLHW.Text = "(By Lesser Healing Wave)";
+            this.labelEarthlivingLHW.Visible = false;
+            // 
+            // labelEarthlivingRP
+            // 
+            this.labelEarthlivingRP.AutoSize = true;
+            this.labelEarthlivingRP.Location = new System.Drawing.Point(585, 322);
+            this.labelEarthlivingRP.Name = "labelEarthlivingRP";
+            this.labelEarthlivingRP.Size = new System.Drawing.Size(61, 13);
+            this.labelEarthlivingRP.TabIndex = 152;
+            this.labelEarthlivingRP.Text = "(By Riptide)";
+            this.labelEarthlivingRP.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.labelEarthlivingRP);
+            this.Controls.Add(this.labelEarthlivingLHW);
+            this.Controls.Add(this.labelEarthlivingHW);
+            this.Controls.Add(this.labelEarthlivingCH);
+            this.Controls.Add(this.labeEarthlivingHps2);
+            this.Controls.Add(this.labeEarthlivingHps3);
+            this.Controls.Add(this.labeEarthlivingHps4);
+            this.Controls.Add(this.labeEarthlivingHps5);
+            this.Controls.Add(this.textBoxEarthlivingAvgHpsTotal);
+            this.Controls.Add(this.textBoxEarthlivingAvgHpsRP);
+            this.Controls.Add(this.textBoxEarthlivingAvgHpsHW);
+            this.Controls.Add(this.textBoxEarthlivingAvgHpsCH);
+            this.Controls.Add(this.textBoxEarthlivingAvgHpsLHW);
+            this.Controls.Add(this.checkBoxGlyphOfChainHealEarthliving);
+            this.Controls.Add(this.labelPerTick);
+            this.Controls.Add(this.textBoxGlyphOfHealingWave);
+            this.Controls.Add(this.labelAvgGlyphOfHealingWave);
+            this.Controls.Add(this.checkBoxGlyphOfHealingWave);
             this.Controls.Add(this.buttonHome);
             this.Controls.Add(this.checkBoxSwiftRetributionHaste);
             this.Controls.Add(this.buttonReset);
@@ -1700,6 +1934,24 @@
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.CheckBox checkBoxSwiftRetributionHaste;
         private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.CheckBox checkBoxGlyphOfHealingWave;
+        private System.Windows.Forms.Label labelAvgGlyphOfHealingWave;
+        private System.Windows.Forms.TextBox textBoxGlyphOfHealingWave;
+        private System.Windows.Forms.Label labelPerTick;
+        private System.Windows.Forms.CheckBox checkBoxGlyphOfChainHealEarthliving;
+        private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsLHW;
+        private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsCH;
+        private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsHW;
+        private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsRP;
+        private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsTotal;
+        private System.Windows.Forms.Label labeEarthlivingHps5;
+        private System.Windows.Forms.Label labeEarthlivingHps4;
+        private System.Windows.Forms.Label labeEarthlivingHps3;
+        private System.Windows.Forms.Label labeEarthlivingHps2;
+        private System.Windows.Forms.Label labelEarthlivingCH;
+        private System.Windows.Forms.Label labelEarthlivingHW;
+        private System.Windows.Forms.Label labelEarthlivingLHW;
+        private System.Windows.Forms.Label labelEarthlivingRP;
     }
 }
 

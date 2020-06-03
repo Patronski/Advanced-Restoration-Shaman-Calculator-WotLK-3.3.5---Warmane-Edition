@@ -16,6 +16,7 @@ namespace App.Models.Spells
             Name = Constants.SpellHW;
             RanksCount = 14;
 
+            this.Modifiers.Add(new GlyphOfHealingWave());
             this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
@@ -137,6 +138,17 @@ namespace App.Models.Spells
         public override int? CalculateAncestralAwakeningAvg()
         {
             return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
+        }
+
+        public override int? CalculateAvgGlyphOfHealingWave()
+        {
+            var isGlyphOfHealingWave = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfHealingWave && x.IsCheckBoxChecked);
+            if (!isGlyphOfHealingWave) return 0;
+
+            var result = CalculateAverageHPS() * 0.2;
+
+            return (int?)result;
         }
     }
 }

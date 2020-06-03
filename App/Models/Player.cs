@@ -126,5 +126,13 @@ namespace App.Models
         public int? AncestralAwaceningFrom { get; set; }
         public int? AncestralAwaceningTo { get; set; }
         public int? AncestralAwaceningAvg { get; set; }
+
+        public int? AvgGlyphOfHealingWave { get; set; }
+
+        public int? EarthlivingAvgHpsCH { get; set; }
+        public int? EarthlivingAvgHpsHW { get; set; }
+        public int? EarthlivingAvgHpsLHW { get; set; }
+        public int? EarthlivingAvgHpsRP { get; set; }
+        public int? EarthlivingAvgHpsTotal { get; set; }
     }
 }

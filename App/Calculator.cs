@@ -41,6 +41,10 @@ namespace App
             myToolTip.ReshowDelay = 50;
             myToolTip.AutoPopDelay = 15000;
 
+            
+            myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
+            checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
+
             myToolTip.SetToolTip(checkBoxTreeOfLife, "Tree of life");
             checkBoxTreeOfLife.Tag = Resources.Tree_of_Life;
 
@@ -109,6 +113,9 @@ namespace App
 
             myToolTip.SetToolTip(labelChainedHeal2, "some name");
             labelChainedHeal2.Tag = Resources.Chained_Heal;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfHealingWave, "some name");
+            checkBoxGlyphOfHealingWave.Tag = Resources.Glyph_of_Healing_Wave;
         }
 
         private void AdjustComponentProperties()
@@ -152,7 +159,8 @@ namespace App
                 this.checkBoxRevitalizingSkyflareDiamond,
                 this.checkBoxGlyphOfRiptide,
                 checkBoxGlyphOfEarthliving,
-                checkBoxGlyphChainHeal
+                checkBoxGlyphChainHeal,
+                checkBoxGlyphOfHealingWave
             };
         }
 
@@ -361,12 +369,25 @@ namespace App
                 }
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
                 Player.Instance.IsCritModified = true;
+                DisplayOnGlyphOfHealingWave();
                 DisplayOnGlyphOfChainHeal();
                 DisplayHealing();
                 return;
             }
+        }
 
-            throw new Exception("Sender is not CheckBox");
+        private void DisplayOnGlyphOfHealingWave()
+        {
+            if (checkBoxGlyphOfHealingWave.Checked)
+            {
+                this.labelAvgGlyphOfHealingWave.Enabled = true;
+                textBoxGlyphOfHealingWave.Enabled = true;
+            }
+            else
+            {
+                this.labelAvgGlyphOfHealingWave.Enabled = false;
+                textBoxGlyphOfHealingWave.Enabled = false;
+            }
         }
 
         private void numericUpDownEmeraldVigor_ValueChanged(object sender, EventArgs e)
@@ -485,6 +506,24 @@ namespace App
             checkBoxGlyphOfRiptide.Hide();
             labelHot.Hide();
             textBoxHotRiptide.Hide();
+            textBoxGlyphOfHealingWave.Hide();
+            labelAvgGlyphOfHealingWave.Hide();
+            checkBoxGlyphOfHealingWave.Hide();
+            labelPerTick.Hide();
+            checkBoxGlyphOfChainHealEarthliving.Hide();
+            textBoxEarthlivingAvgHpsCH.Hide();
+            textBoxEarthlivingAvgHpsHW.Hide();
+            textBoxEarthlivingAvgHpsLHW.Hide();
+            textBoxEarthlivingAvgHpsRP.Hide();
+            textBoxEarthlivingAvgHpsTotal.Hide();
+            labeEarthlivingHps2.Hide();
+            labeEarthlivingHps3.Hide();
+            labeEarthlivingHps4.Hide();
+            labeEarthlivingHps5.Hide();
+            labelEarthlivingCH.Hide();
+            labelEarthlivingHW.Hide();
+            labelEarthlivingLHW.Hide();
+            labelEarthlivingRP.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -566,11 +605,23 @@ namespace App
                     textBoxHit1From.Show();
                     labelHitPerTick.Show();
                     labelEarthlivingBlessingOf.Show();
-                    labelAvgHps.Show();
-                    labelAvgHotHps.Show();
                     checkBoxGlyphOfEarthliving.Show();
                     textBoxAvgHotHps.Show();
-                    labelForOneTarget.Show();
+                    checkBoxGlyphOfChainHealEarthliving.Show();
+                    textBoxEarthlivingAvgHpsCH.Show();
+                    textBoxEarthlivingAvgHpsHW.Show();
+                    textBoxEarthlivingAvgHpsLHW.Show();
+                    textBoxEarthlivingAvgHpsRP.Show();
+                    textBoxEarthlivingAvgHpsTotal.Show();
+                    labelAvgHps.Show();
+                    labeEarthlivingHps2.Show();
+                    labeEarthlivingHps3.Show();
+                    labeEarthlivingHps4.Show();
+                    labeEarthlivingHps5.Show();
+                    labelEarthlivingCH.Show();
+                    labelEarthlivingHW.Show();
+                    labelEarthlivingLHW.Show();
+                    labelEarthlivingRP.Show();
                     break;
                 case Constants.SpellHST:
                     textBoxHit1From.Show();
@@ -580,6 +631,7 @@ namespace App
                     textBoxAvgHotHps.Show();
                     textBoxAvgHps.Show();
                     labelForOneTarget.Show();
+                    labelPerTick.Show();
                     break;
                 case Constants.SpellHW:
                     labelDashHit1.Show();
@@ -600,13 +652,11 @@ namespace App
                     textBoxCrit3Avg.Show();
                     checkBoxRevitalizingSkyflareDiamond.Show();
                     labelHitAvg.Show();
-
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
                     labelAvgHotHps.Show();
                     textBoxAvgHotHps.Show();
                     labelAvgAA.Show();
-
                     labelAncestralAwakening.Show();
                     textBoxAncestralAwaceningFrom.Show();
                     textBoxAncestralAwaceningTo.Show();
@@ -615,6 +665,9 @@ namespace App
                     this.labelHit.Show();
                     labelCastingTime.Show();
                     textBoxCastingTime.Show();
+                    textBoxGlyphOfHealingWave.Show();
+                    labelAvgGlyphOfHealingWave.Show();
+                    checkBoxGlyphOfHealingWave.Show();
                     break;
                 case Constants.SpellLHW:
                     labelDashHit1.Show();
@@ -783,6 +836,13 @@ namespace App
             this.textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
             this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
             textBoxAvgAAeHps.Text = Player.Instance.AvgAAHps.ToString();
+            textBoxGlyphOfHealingWave.Text = Player.Instance.AvgGlyphOfHealingWave.ToString();
+            //Earthliving
+            textBoxEarthlivingAvgHpsCH.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
+            textBoxEarthlivingAvgHpsHW.Text = Player.Instance.EarthlivingAvgHpsHW.ToString();
+            textBoxEarthlivingAvgHpsLHW.Text = Player.Instance.EarthlivingAvgHpsLHW.ToString();
+            textBoxEarthlivingAvgHpsRP.Text = Player.Instance.EarthlivingAvgHpsRP.ToString();
+            textBoxEarthlivingAvgHpsTotal.Text = Player.Instance.EarthlivingAvgHpsTotal.ToString();
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
@@ -795,7 +855,7 @@ namespace App
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
             {
-                labelAvgHps.Text = Constants.LabelAvgHps1Plus;
+                labelAvgHps.Text = Constants.LabelAvgHps;
                 labelAvgHotHps.Text = Constants.LabelAvgHps;
             }
             else if (selectedSpell != null &&
@@ -814,32 +874,7 @@ namespace App
                 labelAvgHps.Text = Constants.LabelAvgHps;
 
             }
-
-            //CritChanceZeroDisplay();
         }
-
-        //private void CritChanceZeroDisplay()
-        //{
-        //    if (Player.Instance.CriticalChance == 0)
-        //    {
-        //        this.textBoxCrit1From.Text = "0";
-        //        this.textBoxCrit2From.Text = "0";
-        //        this.textBoxCrit3From.Text = "0";
-        //        this.textBoxCrit4From.Text = "0";
-        //        this.textBoxCrit1To.Text =   "0";
-        //        this.textBoxCrit2To.Text =   "0";
-        //        this.textBoxCrit3To.Text =   "0";
-        //        this.textBoxCrit4To.Text =   "0";
-        //        this.textBoxCrit1Avg.Text =  "0";
-        //        this.textBoxCrit2Avg.Text =  "0";
-        //        this.textBoxCrit3Avg.Text =  "0";
-        //        this.textBoxCrit4Avg.Text =  "0";
-        //        this.textBoxAvgHot1.Text =   "0";
-        //        this.textBoxAvgHot2.Text =   "0";
-        //        this.textBoxAvgHot3.Text =   "0";
-        //        this.textBoxAvgHot4.Text = "0";
-        //    }
-        //}
 
         private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
         {

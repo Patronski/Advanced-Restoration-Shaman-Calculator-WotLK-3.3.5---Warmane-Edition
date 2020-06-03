@@ -69,6 +69,14 @@ namespace App.Models
 
         public virtual double? CalculateCastingTime() { return null; }
 
+        public virtual int? CalculateAvgGlyphOfHealingWave() { return null; }
+
+        public virtual int? CalculateEarthlivingAvgHpsCH() { return null; }
+        public virtual int? CalculateEarthlivingAvgHpsHW() { return null; }
+        public virtual int? CalculateEarthlivingAvgHpsLHW() { return null; }
+        public virtual int? CalculateEarthlivingAvgHpsRP() { return null; }
+        public virtual int? CalculateEarthlivingAvgHpsTotal() { return null; }
+
         public virtual void Calculate()
         {
             Player.Instance.Recalculate();
@@ -84,6 +92,12 @@ namespace App.Models
             {
                 modifier.Modify();
             }
+
+            Player.Instance.EarthlivingAvgHpsCH = CalculateEarthlivingAvgHpsCH();
+            Player.Instance.EarthlivingAvgHpsHW = CalculateEarthlivingAvgHpsHW();
+            Player.Instance.EarthlivingAvgHpsLHW = CalculateEarthlivingAvgHpsLHW();
+            Player.Instance.EarthlivingAvgHpsRP = CalculateEarthlivingAvgHpsRP();
+            Player.Instance.EarthlivingAvgHpsTotal = CalculateEarthlivingAvgHpsTotal();
 
             Player.Instance.Hit2From = CalculateTarget2HitFrom();
             Player.Instance.Hit3From = CalculateTarget3HitFrom();
@@ -119,6 +133,7 @@ namespace App.Models
             Player.Instance.AvgHps = CalculateAverageHPS();
             Player.Instance.AvgHotHps = CalculateAverageHotHPS();
             Player.Instance.AvgAAHps = CalculateAverageAAHPS();
+            Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
 
             var modChainHeal = Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);

@@ -36,8 +36,9 @@ namespace App.Models
         public const string ModTreeOfLife = "Tree of Life / Improved Devotion Aura";
         public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
         public static string ModRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
+        public static string ModGlyphOfHealingWave = "Glyph of Healing Wave";
         public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
-        public static string ModGlyphOfEarthliving = "Glyph of Earthliving";
+        public static string ModGlyphOfEarthliving = "Glyph of Earthliving Weapon";
         public static string ModGlyphOfRiptide = "Glyph of Riptide";
 
         public const string LabelAvgHps = "AVG eHPS:";
