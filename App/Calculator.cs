@@ -938,6 +938,7 @@ namespace App
             {
                 Player.Instance.Modifiers[checkBoxMuteSound.Text] = checkBoxMuteSound.Checked;
             }
+            dontRunCheckedChanged = true;
         }
     }
 }

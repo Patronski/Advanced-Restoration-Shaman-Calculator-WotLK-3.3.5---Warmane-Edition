@@ -155,6 +155,7 @@ namespace App
 
         private void StartScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Hide();
             Player.Instance.PlaySound("off");
         }
     }

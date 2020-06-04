@@ -1229,11 +1229,11 @@
             // labelApproximately2
             // 
             this.labelApproximately2.AutoSize = true;
-            this.labelApproximately2.Location = new System.Drawing.Point(351, 335);
+            this.labelApproximately2.Location = new System.Drawing.Point(366, 335);
             this.labelApproximately2.Name = "labelApproximately2";
-            this.labelApproximately2.Size = new System.Drawing.Size(87, 13);
+            this.labelApproximately2.Size = new System.Drawing.Size(72, 13);
             this.labelApproximately2.TabIndex = 114;
-            this.labelApproximately2.Text = "13-14 procs/min)";
+            this.labelApproximately2.Text = "14 procs/min)";
             this.labelApproximately2.Visible = false;
             // 
             // labelForOneTarget
@@ -1293,7 +1293,7 @@
             // labelSpamOnDifferent2
             // 
             this.labelSpamOnDifferent2.AutoSize = true;
-            this.labelSpamOnDifferent2.Location = new System.Drawing.Point(360, 335);
+            this.labelSpamOnDifferent2.Location = new System.Drawing.Point(360, 336);
             this.labelSpamOnDifferent2.Name = "labelSpamOnDifferent2";
             this.labelSpamOnDifferent2.Size = new System.Drawing.Size(78, 13);
             this.labelSpamOnDifferent2.TabIndex = 120;

@@ -45,7 +45,7 @@ namespace App.Models.Spells
         {
             var hps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
                 (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1From;
-            hps = hps / 4.45;
+            hps = hps / 4.28;
 
             return (int?)hps;
         }
