@@ -935,6 +935,7 @@ namespace App
         {
             foreach (var item in checkBoxes)
             {
+                if (item.Name == "checkBoxMuteSound") continue;
                 item.Checked = false;
             }
 
