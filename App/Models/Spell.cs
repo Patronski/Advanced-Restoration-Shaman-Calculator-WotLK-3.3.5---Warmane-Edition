@@ -81,14 +81,13 @@ namespace App.Models
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {
             var critModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(ICriticalModifier).Name) != null && x.IsCheckBoxChecked).ToList();
-            Player.Instance.CriticalChanceInitial = newCritValue;
-            //Player.Instance.Recalculate();
+            
+            double sumOfModifierValues = 0;
             foreach (var item in critModifiers)
             {
-                item.Modify();
+                sumOfModifierValues += item.Value;
             }
-            var difference = Player.Instance.CriticalChance - Player.Instance.CriticalChanceInitial;
-            Player.Instance.CriticalChanceInitial -= difference;
+            Player.Instance.CriticalChanceInitial = newCritValue - sumOfModifierValues;
         }
 
         public virtual void Calculate()
