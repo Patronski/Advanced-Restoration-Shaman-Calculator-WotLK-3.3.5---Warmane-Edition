@@ -150,7 +150,6 @@
             this.labelAvgGlyphOfHealingWave = new System.Windows.Forms.Label();
             this.textBoxGlyphOfHealingWave = new System.Windows.Forms.TextBox();
             this.labelPerTick = new System.Windows.Forms.Label();
-            this.customTooltipEasy1 = new App.Models.CustomTooltipEasy();
             this.checkBoxGlyphOfChainHealEarthliving = new System.Windows.Forms.CheckBox();
             this.textBoxEarthlivingAvgHpsLHW = new System.Windows.Forms.TextBox();
             this.textBoxEarthlivingAvgHpsCH = new System.Windows.Forms.TextBox();
@@ -1505,11 +1504,6 @@
             this.labelPerTick.Text = "per Tick)";
             this.labelPerTick.Visible = false;
             // 
-            // customTooltipEasy1
-            // 
-            this.customTooltipEasy1.AutomaticDelay = 0;
-            this.customTooltipEasy1.OwnerDraw = true;
-            // 
             // checkBoxGlyphOfChainHealEarthliving
             // 
             this.checkBoxGlyphOfChainHealEarthliving.AutoSize = true;
@@ -1928,7 +1922,6 @@
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
         private System.Windows.Forms.TextBox textBoxHotRiptide;
-        private Models.CustomTooltipEasy customTooltipEasy1;
         private System.Windows.Forms.NumericUpDown numericUpDownCriticalChance;
         private System.Windows.Forms.PictureBox pictureBoxSpell;
         private System.Windows.Forms.Button buttonReset;

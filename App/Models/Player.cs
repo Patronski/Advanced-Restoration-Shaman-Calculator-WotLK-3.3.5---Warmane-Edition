@@ -17,7 +17,10 @@ namespace App.Models
 
         private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
 
-        public static Player Instance { get { return lazyInstance.Value; } } // thread safe
+        /// <summary>
+        /// thread safe
+        /// </summary>
+        public static Player Instance { get { return lazyInstance.Value; } }
 
         public void Recalculate() 
         {
@@ -25,6 +28,9 @@ namespace App.Models
             Player.Instance.HasteRating = Player.Instance.HasteRating; // reseting HastePercent
             Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
         }
+
+        public Dictionary<string, bool> Modifiers { get; set; } = new Dictionary<string, bool>();
+
         public int SpellPower { get; set; }
 
         public int EmeraldVigorNumber { get; set; }
@@ -50,13 +56,13 @@ namespace App.Models
             }
         }
 
-        private double hastePerent;
+        private double hastePercent;
         public double HastePercent 
         {
             get 
-            { return hastePerent; } 
+            { return hastePercent; } 
             set 
-            { hastePerent = Math.Round(value, 2, MidpointRounding.ToEven); }
+            { hastePercent = Math.Round(value, 2, MidpointRounding.ToEven); }
         }
 
         public double CriticalChance { get; set; }
@@ -136,8 +142,7 @@ namespace App.Models
         public int? EarthlivingAvgHpsTotal { get; set; }
 
         public List<string> ModifierNames = new List<string>();
-        private Spell selectedSpell;
-        private bool isAfterCritKeyPress;
+
         public bool isCritModified;
     }
 }

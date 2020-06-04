@@ -427,16 +427,6 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mana_Tide_TotemH1 {
-            get {
-                object obj = ResourceManager.GetObject("Mana_Tide_TotemH1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Moonkin_Aura {
             get {
                 object obj = ResourceManager.GetObject("Moonkin_Aura", resourceCulture);

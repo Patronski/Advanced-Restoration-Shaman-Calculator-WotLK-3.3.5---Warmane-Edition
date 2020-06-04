@@ -423,10 +423,10 @@
     <None Include="Resources\Earth ShieldH.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Mana Tide TotemH.png" />
+    <None Include="Resources\Glyph_of_Healing_Wave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Glyph_of_Healing_Wave.png" />
+    <None Include="Resources\Mana Tide TotemH.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

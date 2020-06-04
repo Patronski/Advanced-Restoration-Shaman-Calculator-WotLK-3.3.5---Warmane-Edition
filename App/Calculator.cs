@@ -32,15 +32,28 @@ namespace App
             AddControllsToList();
             InitialiseComboBoxSpell();
             AddTooltips();
-            
+            LoadControlsFromPlayer();
+        }
+
+        private void LoadControlsFromPlayer()
+        {
+            foreach (var item in Player.Instance.Modifiers)
+            {
+                if (item.Value == true)
+                {
+                    var checkbox = checkBoxes.FirstOrDefault(x => x.Text == item.Key);
+                    dontRunCheckedChanged = true;
+                    checkbox.Checked = true;
+                }
+            }
         }
 
         private void AddTooltips()
         {
             CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
-            myToolTip.InitialDelay = 50;
-            myToolTip.ReshowDelay = 50;
+            myToolTip.InitialDelay = 20;
+            myToolTip.ReshowDelay = 20;
             myToolTip.AutoPopDelay = 15000;
 
             
@@ -365,6 +378,7 @@ namespace App
                     }
                     Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
                 }
+                Player.Instance.Modifiers[check.Text] = check.Checked;
                 CheckConnectedControlls(check.Text, check.Checked);
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
                 isCritModified = true;
