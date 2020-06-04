@@ -21,6 +21,9 @@ namespace App.Models
             CriticalValue = Constants.CriticalMultiplier;
         }
 
+        private bool isOffSoundPlayed { get; set; }
+        private bool isOnSoundPlayed { get; set; }
+
         internal void PlaySound(string name)
         {
             var player = new System.Media.SoundPlayer();
@@ -28,11 +31,20 @@ namespace App.Models
             switch (name)
             {
                 case "on":
-                    player.Stream = Resources.ON_S;
-                    break;
+                    if (!isOnSoundPlayed)
+                    {
+                        player.Stream = Resources.ON_S;
+                        player.Play();
+                        isOnSoundPlayed = true;
+                    }
+                    return;
                 case "off":
-                    player.Stream = Resources.OFF_S;
-                    player.PlaySync();
+                    if (!isOffSoundPlayed)
+                    {
+                        player.Stream = Resources.OFF_S;
+                        player.PlaySync();
+                        isOffSoundPlayed = true;
+                    }
                     return;
                 case Constants.SpellChainHeal:
                     player.Stream = Resources.CH;
@@ -55,7 +67,6 @@ namespace App.Models
                 case Constants.SpellRiptide:
                     player.Stream = Resources.RP;
                     break;
-
             }
 
             player.Play();
