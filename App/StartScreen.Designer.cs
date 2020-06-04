@@ -37,31 +37,31 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.transparentControl1 = new App.Models.TransparentControl();
-            this.transparentControl3 = new App.Models.TransparentControl();
-            this.transparentControl4 = new App.Models.TransparentControl();
-            this.transparentControl5 = new App.Models.TransparentControl();
-            this.transparentControl6 = new App.Models.TransparentControl();
-            this.transparentControl7 = new App.Models.TransparentControl();
-            this.transparentControl8 = new App.Models.TransparentControl();
-            this.transparentControl9 = new App.Models.TransparentControl();
-            this.transparentControl10 = new App.Models.TransparentControl();
-            this.transparentControl11 = new App.Models.TransparentControl();
-            this.transparentControl12 = new App.Models.TransparentControl();
-            this.transparentControl13 = new App.Models.TransparentControl();
-            this.transparentControl14 = new App.Models.TransparentControl();
-            this.transparentControl15 = new App.Models.TransparentControl();
-            this.transparentControl16 = new App.Models.TransparentControl();
-            this.transparentControl17 = new App.Models.TransparentControl();
-            this.transparentControl18 = new App.Models.TransparentControl();
-            this.transparentControl19 = new App.Models.TransparentControl();
-            this.transparentControl20 = new App.Models.TransparentControl();
-            this.transparentControl21 = new App.Models.TransparentControl();
-            this.transparentControl22 = new App.Models.TransparentControl();
-            this.transparentControl23 = new App.Models.TransparentControl();
-            this.transparentControl24 = new App.Models.TransparentControl();
-            this.transparentControl2 = new App.Models.TransparentControl();
             this.linkOpenSource = new System.Windows.Forms.LinkLabel();
+            this.transparentControl2 = new App.Models.TransparentControl();
+            this.transparentControl24 = new App.Models.TransparentControl();
+            this.transparentControl23 = new App.Models.TransparentControl();
+            this.transparentControl22 = new App.Models.TransparentControl();
+            this.transparentControl21 = new App.Models.TransparentControl();
+            this.transparentControl20 = new App.Models.TransparentControl();
+            this.transparentControl19 = new App.Models.TransparentControl();
+            this.transparentControl18 = new App.Models.TransparentControl();
+            this.transparentControl17 = new App.Models.TransparentControl();
+            this.transparentControl16 = new App.Models.TransparentControl();
+            this.transparentControl15 = new App.Models.TransparentControl();
+            this.transparentControl14 = new App.Models.TransparentControl();
+            this.transparentControl13 = new App.Models.TransparentControl();
+            this.transparentControl12 = new App.Models.TransparentControl();
+            this.transparentControl11 = new App.Models.TransparentControl();
+            this.transparentControl10 = new App.Models.TransparentControl();
+            this.transparentControl9 = new App.Models.TransparentControl();
+            this.transparentControl8 = new App.Models.TransparentControl();
+            this.transparentControl7 = new App.Models.TransparentControl();
+            this.transparentControl6 = new App.Models.TransparentControl();
+            this.transparentControl5 = new App.Models.TransparentControl();
+            this.transparentControl4 = new App.Models.TransparentControl();
+            this.transparentControl3 = new App.Models.TransparentControl();
+            this.transparentControl1 = new App.Models.TransparentControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,246 +175,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // transparentControl1
-            // 
-            this.transparentControl1.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl1.Location = new System.Drawing.Point(575, 258);
-            this.transparentControl1.Name = "transparentControl1";
-            this.transparentControl1.Opacity = 100;
-            this.transparentControl1.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl1.TabIndex = 15;
-            this.transparentControl1.Text = "transparentControl1";
-            // 
-            // transparentControl3
-            // 
-            this.transparentControl3.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl3.Location = new System.Drawing.Point(675, 258);
-            this.transparentControl3.Name = "transparentControl3";
-            this.transparentControl3.Opacity = 100;
-            this.transparentControl3.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl3.TabIndex = 17;
-            this.transparentControl3.Text = "transparentControl3";
-            // 
-            // transparentControl4
-            // 
-            this.transparentControl4.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl4.Location = new System.Drawing.Point(779, 209);
-            this.transparentControl4.Name = "transparentControl4";
-            this.transparentControl4.Opacity = 100;
-            this.transparentControl4.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl4.TabIndex = 18;
-            this.transparentControl4.Text = "transparentControl4";
-            // 
-            // transparentControl5
-            // 
-            this.transparentControl5.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl5.Location = new System.Drawing.Point(730, 307);
-            this.transparentControl5.Name = "transparentControl5";
-            this.transparentControl5.Opacity = 100;
-            this.transparentControl5.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl5.TabIndex = 19;
-            this.transparentControl5.Text = "transparentControl5";
-            // 
-            // transparentControl6
-            // 
-            this.transparentControl6.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl6.Location = new System.Drawing.Point(779, 307);
-            this.transparentControl6.Name = "transparentControl6";
-            this.transparentControl6.Opacity = 100;
-            this.transparentControl6.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl6.TabIndex = 20;
-            this.transparentControl6.Text = "transparentControl6";
-            // 
-            // transparentControl7
-            // 
-            this.transparentControl7.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl7.Location = new System.Drawing.Point(831, 258);
-            this.transparentControl7.Name = "transparentControl7";
-            this.transparentControl7.Opacity = 100;
-            this.transparentControl7.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl7.TabIndex = 21;
-            this.transparentControl7.Text = "transparentControl7";
-            // 
-            // transparentControl8
-            // 
-            this.transparentControl8.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl8.Location = new System.Drawing.Point(831, 307);
-            this.transparentControl8.Name = "transparentControl8";
-            this.transparentControl8.Opacity = 100;
-            this.transparentControl8.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl8.TabIndex = 22;
-            this.transparentControl8.Text = "transparentControl8";
-            // 
-            // transparentControl9
-            // 
-            this.transparentControl9.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl9.Location = new System.Drawing.Point(875, 307);
-            this.transparentControl9.Name = "transparentControl9";
-            this.transparentControl9.Opacity = 100;
-            this.transparentControl9.Size = new System.Drawing.Size(48, 38);
-            this.transparentControl9.TabIndex = 23;
-            this.transparentControl9.Text = "transparentControl9";
-            // 
-            // transparentControl10
-            // 
-            this.transparentControl10.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl10.Location = new System.Drawing.Point(730, 407);
-            this.transparentControl10.Name = "transparentControl10";
-            this.transparentControl10.Opacity = 100;
-            this.transparentControl10.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl10.TabIndex = 24;
-            this.transparentControl10.Text = "transparentControl10";
-            // 
-            // transparentControl11
-            // 
-            this.transparentControl11.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl11.Location = new System.Drawing.Point(779, 360);
-            this.transparentControl11.Name = "transparentControl11";
-            this.transparentControl11.Opacity = 100;
-            this.transparentControl11.Size = new System.Drawing.Size(38, 37);
-            this.transparentControl11.TabIndex = 25;
-            this.transparentControl11.Text = "transparentControl11";
-            // 
-            // transparentControl12
-            // 
-            this.transparentControl12.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl12.Location = new System.Drawing.Point(831, 359);
-            this.transparentControl12.Name = "transparentControl12";
-            this.transparentControl12.Opacity = 100;
-            this.transparentControl12.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl12.TabIndex = 26;
-            this.transparentControl12.Text = "transparentControl12";
-            // 
-            // transparentControl13
-            // 
-            this.transparentControl13.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl13.Location = new System.Drawing.Point(831, 407);
-            this.transparentControl13.Name = "transparentControl13";
-            this.transparentControl13.Opacity = 100;
-            this.transparentControl13.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl13.TabIndex = 27;
-            this.transparentControl13.Text = "transparentControl13";
-            // 
-            // transparentControl14
-            // 
-            this.transparentControl14.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl14.Location = new System.Drawing.Point(831, 460);
-            this.transparentControl14.Name = "transparentControl14";
-            this.transparentControl14.Opacity = 100;
-            this.transparentControl14.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl14.TabIndex = 28;
-            this.transparentControl14.Text = "transparentControl14";
-            // 
-            // transparentControl15
-            // 
-            this.transparentControl15.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl15.Location = new System.Drawing.Point(779, 507);
-            this.transparentControl15.Name = "transparentControl15";
-            this.transparentControl15.Opacity = 100;
-            this.transparentControl15.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl15.TabIndex = 29;
-            this.transparentControl15.Text = "transparentControl15";
-            // 
-            // transparentControl16
-            // 
-            this.transparentControl16.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl16.Location = new System.Drawing.Point(831, 507);
-            this.transparentControl16.Name = "transparentControl16";
-            this.transparentControl16.Opacity = 100;
-            this.transparentControl16.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl16.TabIndex = 30;
-            this.transparentControl16.Text = "transparentControl16";
-            // 
-            // transparentControl17
-            // 
-            this.transparentControl17.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl17.Location = new System.Drawing.Point(730, 558);
-            this.transparentControl17.Name = "transparentControl17";
-            this.transparentControl17.Opacity = 100;
-            this.transparentControl17.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl17.TabIndex = 31;
-            this.transparentControl17.Text = "transparentControl17";
-            // 
-            // transparentControl18
-            // 
-            this.transparentControl18.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl18.Location = new System.Drawing.Point(779, 558);
-            this.transparentControl18.Name = "transparentControl18";
-            this.transparentControl18.Opacity = 100;
-            this.transparentControl18.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl18.TabIndex = 32;
-            this.transparentControl18.Text = "transparentControl18";
-            // 
-            // transparentControl19
-            // 
-            this.transparentControl19.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl19.Location = new System.Drawing.Point(831, 558);
-            this.transparentControl19.Name = "transparentControl19";
-            this.transparentControl19.Opacity = 100;
-            this.transparentControl19.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl19.TabIndex = 33;
-            this.transparentControl19.Text = "transparentControl19";
-            // 
-            // transparentControl20
-            // 
-            this.transparentControl20.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl20.Location = new System.Drawing.Point(831, 606);
-            this.transparentControl20.Name = "transparentControl20";
-            this.transparentControl20.Opacity = 100;
-            this.transparentControl20.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl20.TabIndex = 34;
-            this.transparentControl20.Text = "transparentControl20";
-            // 
-            // transparentControl21
-            // 
-            this.transparentControl21.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl21.Location = new System.Drawing.Point(779, 656);
-            this.transparentControl21.Name = "transparentControl21";
-            this.transparentControl21.Opacity = 100;
-            this.transparentControl21.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl21.TabIndex = 35;
-            this.transparentControl21.Text = "transparentControl21";
-            // 
-            // transparentControl22
-            // 
-            this.transparentControl22.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl22.Location = new System.Drawing.Point(779, 606);
-            this.transparentControl22.Name = "transparentControl22";
-            this.transparentControl22.Opacity = 100;
-            this.transparentControl22.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl22.TabIndex = 36;
-            this.transparentControl22.Text = "transparentControl22";
-            // 
-            // transparentControl23
-            // 
-            this.transparentControl23.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl23.Location = new System.Drawing.Point(730, 606);
-            this.transparentControl23.Name = "transparentControl23";
-            this.transparentControl23.Opacity = 100;
-            this.transparentControl23.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl23.TabIndex = 37;
-            this.transparentControl23.Text = "transparentControl23";
-            // 
-            // transparentControl24
-            // 
-            this.transparentControl24.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl24.Location = new System.Drawing.Point(779, 707);
-            this.transparentControl24.Name = "transparentControl24";
-            this.transparentControl24.Opacity = 100;
-            this.transparentControl24.Size = new System.Drawing.Size(38, 44);
-            this.transparentControl24.TabIndex = 38;
-            this.transparentControl24.Text = "transparentControl24";
-            // 
-            // transparentControl2
-            // 
-            this.transparentControl2.BackColor = System.Drawing.Color.Transparent;
-            this.transparentControl2.Location = new System.Drawing.Point(624, 209);
-            this.transparentControl2.Name = "transparentControl2";
-            this.transparentControl2.Opacity = 100;
-            this.transparentControl2.Size = new System.Drawing.Size(38, 38);
-            this.transparentControl2.TabIndex = 39;
-            this.transparentControl2.Text = "transparentControl2";
-            // 
             // linkOpenSource
             // 
             this.linkOpenSource.AutoSize = true;
@@ -426,6 +186,246 @@
             this.linkOpenSource.TabStop = true;
             this.linkOpenSource.Text = "Open source project";
             this.linkOpenSource.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOpenSource_LinkClicked);
+            // 
+            // transparentControl2
+            // 
+            this.transparentControl2.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl2.Location = new System.Drawing.Point(624, 209);
+            this.transparentControl2.Name = "transparentControl2";
+            this.transparentControl2.Opacity = 100;
+            this.transparentControl2.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl2.TabIndex = 39;
+            this.transparentControl2.Text = "transparentControl2";
+            // 
+            // transparentControl24
+            // 
+            this.transparentControl24.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl24.Location = new System.Drawing.Point(779, 707);
+            this.transparentControl24.Name = "transparentControl24";
+            this.transparentControl24.Opacity = 100;
+            this.transparentControl24.Size = new System.Drawing.Size(38, 44);
+            this.transparentControl24.TabIndex = 38;
+            this.transparentControl24.Text = "transparentControl24";
+            // 
+            // transparentControl23
+            // 
+            this.transparentControl23.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl23.Location = new System.Drawing.Point(730, 606);
+            this.transparentControl23.Name = "transparentControl23";
+            this.transparentControl23.Opacity = 100;
+            this.transparentControl23.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl23.TabIndex = 37;
+            this.transparentControl23.Text = "transparentControl23";
+            // 
+            // transparentControl22
+            // 
+            this.transparentControl22.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl22.Location = new System.Drawing.Point(779, 606);
+            this.transparentControl22.Name = "transparentControl22";
+            this.transparentControl22.Opacity = 100;
+            this.transparentControl22.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl22.TabIndex = 36;
+            this.transparentControl22.Text = "transparentControl22";
+            // 
+            // transparentControl21
+            // 
+            this.transparentControl21.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl21.Location = new System.Drawing.Point(779, 656);
+            this.transparentControl21.Name = "transparentControl21";
+            this.transparentControl21.Opacity = 100;
+            this.transparentControl21.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl21.TabIndex = 35;
+            this.transparentControl21.Text = "transparentControl21";
+            // 
+            // transparentControl20
+            // 
+            this.transparentControl20.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl20.Location = new System.Drawing.Point(831, 606);
+            this.transparentControl20.Name = "transparentControl20";
+            this.transparentControl20.Opacity = 100;
+            this.transparentControl20.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl20.TabIndex = 34;
+            this.transparentControl20.Text = "transparentControl20";
+            // 
+            // transparentControl19
+            // 
+            this.transparentControl19.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl19.Location = new System.Drawing.Point(831, 558);
+            this.transparentControl19.Name = "transparentControl19";
+            this.transparentControl19.Opacity = 100;
+            this.transparentControl19.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl19.TabIndex = 33;
+            this.transparentControl19.Text = "transparentControl19";
+            // 
+            // transparentControl18
+            // 
+            this.transparentControl18.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl18.Location = new System.Drawing.Point(779, 558);
+            this.transparentControl18.Name = "transparentControl18";
+            this.transparentControl18.Opacity = 100;
+            this.transparentControl18.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl18.TabIndex = 32;
+            this.transparentControl18.Text = "transparentControl18";
+            // 
+            // transparentControl17
+            // 
+            this.transparentControl17.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl17.Location = new System.Drawing.Point(730, 558);
+            this.transparentControl17.Name = "transparentControl17";
+            this.transparentControl17.Opacity = 100;
+            this.transparentControl17.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl17.TabIndex = 31;
+            this.transparentControl17.Text = "transparentControl17";
+            // 
+            // transparentControl16
+            // 
+            this.transparentControl16.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl16.Location = new System.Drawing.Point(831, 507);
+            this.transparentControl16.Name = "transparentControl16";
+            this.transparentControl16.Opacity = 100;
+            this.transparentControl16.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl16.TabIndex = 30;
+            this.transparentControl16.Text = "transparentControl16";
+            // 
+            // transparentControl15
+            // 
+            this.transparentControl15.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl15.Location = new System.Drawing.Point(779, 507);
+            this.transparentControl15.Name = "transparentControl15";
+            this.transparentControl15.Opacity = 100;
+            this.transparentControl15.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl15.TabIndex = 29;
+            this.transparentControl15.Text = "transparentControl15";
+            // 
+            // transparentControl14
+            // 
+            this.transparentControl14.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl14.Location = new System.Drawing.Point(831, 460);
+            this.transparentControl14.Name = "transparentControl14";
+            this.transparentControl14.Opacity = 100;
+            this.transparentControl14.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl14.TabIndex = 28;
+            this.transparentControl14.Text = "transparentControl14";
+            // 
+            // transparentControl13
+            // 
+            this.transparentControl13.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl13.Location = new System.Drawing.Point(831, 407);
+            this.transparentControl13.Name = "transparentControl13";
+            this.transparentControl13.Opacity = 100;
+            this.transparentControl13.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl13.TabIndex = 27;
+            this.transparentControl13.Text = "transparentControl13";
+            // 
+            // transparentControl12
+            // 
+            this.transparentControl12.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl12.Location = new System.Drawing.Point(831, 359);
+            this.transparentControl12.Name = "transparentControl12";
+            this.transparentControl12.Opacity = 100;
+            this.transparentControl12.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl12.TabIndex = 26;
+            this.transparentControl12.Text = "transparentControl12";
+            // 
+            // transparentControl11
+            // 
+            this.transparentControl11.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl11.Location = new System.Drawing.Point(779, 360);
+            this.transparentControl11.Name = "transparentControl11";
+            this.transparentControl11.Opacity = 100;
+            this.transparentControl11.Size = new System.Drawing.Size(38, 37);
+            this.transparentControl11.TabIndex = 25;
+            this.transparentControl11.Text = "transparentControl11";
+            // 
+            // transparentControl10
+            // 
+            this.transparentControl10.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl10.Location = new System.Drawing.Point(730, 407);
+            this.transparentControl10.Name = "transparentControl10";
+            this.transparentControl10.Opacity = 100;
+            this.transparentControl10.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl10.TabIndex = 24;
+            this.transparentControl10.Text = "transparentControl10";
+            // 
+            // transparentControl9
+            // 
+            this.transparentControl9.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl9.Location = new System.Drawing.Point(875, 307);
+            this.transparentControl9.Name = "transparentControl9";
+            this.transparentControl9.Opacity = 100;
+            this.transparentControl9.Size = new System.Drawing.Size(48, 38);
+            this.transparentControl9.TabIndex = 23;
+            this.transparentControl9.Text = "transparentControl9";
+            // 
+            // transparentControl8
+            // 
+            this.transparentControl8.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl8.Location = new System.Drawing.Point(831, 307);
+            this.transparentControl8.Name = "transparentControl8";
+            this.transparentControl8.Opacity = 100;
+            this.transparentControl8.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl8.TabIndex = 22;
+            this.transparentControl8.Text = "transparentControl8";
+            // 
+            // transparentControl7
+            // 
+            this.transparentControl7.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl7.Location = new System.Drawing.Point(831, 258);
+            this.transparentControl7.Name = "transparentControl7";
+            this.transparentControl7.Opacity = 100;
+            this.transparentControl7.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl7.TabIndex = 21;
+            this.transparentControl7.Text = "transparentControl7";
+            // 
+            // transparentControl6
+            // 
+            this.transparentControl6.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl6.Location = new System.Drawing.Point(779, 307);
+            this.transparentControl6.Name = "transparentControl6";
+            this.transparentControl6.Opacity = 100;
+            this.transparentControl6.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl6.TabIndex = 20;
+            this.transparentControl6.Text = "transparentControl6";
+            // 
+            // transparentControl5
+            // 
+            this.transparentControl5.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl5.Location = new System.Drawing.Point(730, 307);
+            this.transparentControl5.Name = "transparentControl5";
+            this.transparentControl5.Opacity = 100;
+            this.transparentControl5.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl5.TabIndex = 19;
+            this.transparentControl5.Text = "transparentControl5";
+            // 
+            // transparentControl4
+            // 
+            this.transparentControl4.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl4.Location = new System.Drawing.Point(779, 209);
+            this.transparentControl4.Name = "transparentControl4";
+            this.transparentControl4.Opacity = 100;
+            this.transparentControl4.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl4.TabIndex = 18;
+            this.transparentControl4.Text = "transparentControl4";
+            // 
+            // transparentControl3
+            // 
+            this.transparentControl3.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl3.Location = new System.Drawing.Point(675, 258);
+            this.transparentControl3.Name = "transparentControl3";
+            this.transparentControl3.Opacity = 100;
+            this.transparentControl3.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl3.TabIndex = 17;
+            this.transparentControl3.Text = "transparentControl3";
+            // 
+            // transparentControl1
+            // 
+            this.transparentControl1.BackColor = System.Drawing.Color.Transparent;
+            this.transparentControl1.Location = new System.Drawing.Point(575, 258);
+            this.transparentControl1.Name = "transparentControl1";
+            this.transparentControl1.Opacity = 100;
+            this.transparentControl1.Size = new System.Drawing.Size(38, 38);
+            this.transparentControl1.TabIndex = 15;
+            this.transparentControl1.Text = "transparentControl1";
             // 
             // StartScreen
             // 
@@ -470,6 +470,7 @@
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartScreen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

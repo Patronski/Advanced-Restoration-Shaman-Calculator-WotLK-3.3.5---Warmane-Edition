@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,7 +13,52 @@ namespace App.Models
     {
         private Player() 
         {
+            var player = new System.Media.SoundPlayer();
+            player.Stream = Resources.ON_S;
+            player.Load();
+            player.Play();
+
             CriticalValue = Constants.CriticalMultiplier;
+        }
+
+        internal void PlaySound(string name)
+        {
+            var player = new System.Media.SoundPlayer();
+
+            switch (name)
+            {
+                case "on":
+                    player.Stream = Resources.ON_S;
+                    break;
+                case "off":
+                    player.Stream = Resources.OFF_S;
+                    player.PlaySync();
+                    return;
+                case Constants.SpellChainHeal:
+                    player.Stream = Resources.CH;
+                    break;
+                case Constants.SpellEarthliving:
+                    player.Stream = Resources.EarthL;
+                    break;
+                case Constants.SpellESh:
+                    player.Stream = Resources.ES;
+                    break;
+                case Constants.SpellHST:
+                    player.Stream = Resources.HST;
+                    break;
+                case Constants.SpellHW:
+                    player.Stream = Resources.HW;
+                    break;
+                case Constants.SpellLHW:
+                    player.Stream = Resources.LHW;
+                    break;
+                case Constants.SpellRiptide:
+                    player.Stream = Resources.RP;
+                    break;
+
+            }
+
+            player.Play();
         }
 
         private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());

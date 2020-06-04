@@ -17,6 +17,7 @@ namespace App
         public StartScreen()
         {
             InitializeComponent();
+            Player.Instance.PlaySound("on");
 
             InitialiseTooltips();
             var cur = new Cursor(Properties.Resources.wow_cursor_hand_croped.GetHicon());
@@ -24,11 +25,6 @@ namespace App
             buttonTier10.Cursor = cur;
             textBox3.Cursor = cur;
             textBox2.Cursor = cur;
-
-            var player = new System.Media.SoundPlayer();
-            player.Stream = Resources.ON_S;
-            player.Load();
-            player.Play();
         }
 
         private void InitialiseTooltips()
@@ -155,6 +151,11 @@ namespace App
         private void linkOpenSource_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Patronski/Advanced-Restoration-Shaman-Calculator-WotLK-3.3.5---Warmane-Edition");
+        }
+
+        private void StartScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Player.Instance.PlaySound("off");
         }
     }
 }

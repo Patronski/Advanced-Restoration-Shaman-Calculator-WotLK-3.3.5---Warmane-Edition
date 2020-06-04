@@ -274,7 +274,7 @@ namespace App
 
             SelectSpellImage(selectedSpell);
 
-            PlaySound(selectedSpell.Name);
+            Player.Instance.PlaySound(selectedSpell.Name);
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
 
@@ -286,49 +286,6 @@ namespace App
             selectedSpell.Calculate();
 
             DisplayHealing();
-        }
-
-        private void PlaySound(string sound)
-        {
-            var player = new System.Media.SoundPlayer();
-
-            switch (sound)
-            {
-                case "on":
-                    player.Stream = Resources.ON_S;
-                    break;
-                case "off":
-                    player.Stream = Resources.OFF_S;
-                    break;
-                case Constants.SpellChainHeal:
-                    player.Stream = Resources.CH;
-                    break;
-                case Constants.SpellEarthliving:
-                    player.Stream = Resources.EarthL;
-                    break;
-                case Constants.SpellESh:
-                    player.Stream = Resources.ES;
-                    break;
-                case Constants.SpellHST:
-                    player.Stream = Resources.HST;
-                    break;
-                case Constants.SpellHW:
-                    player.Stream = Resources.HW;
-                    break;
-                case Constants.SpellLHW:
-                    player.Stream = Resources.LHW;
-                    break;
-                case Constants.SpellRiptide:
-                    player.Stream = Resources.RP;
-                    break;
-
-            }
-            var byteArr = Resources.CH;
-            
-            //player.Tag = byteArr;
-            
-            player.Load();
-            player.Play();
         }
 
         private void SelectSpellImage(Spell selectedSpell)
