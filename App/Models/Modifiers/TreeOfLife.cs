@@ -19,8 +19,9 @@ namespace App.Models.Modifiers
         }
         public override void Modify()
         {
-            Player.Instance.Hit1From = (int)(Player.Instance.Hit1From * 1.06);
-            Player.Instance.Hit1To = (int?)(Player.Instance.Hit1To * 1.06);
+            Player.Instance.Hit1From = (int)(Player.Instance.Hit1From * Value);
+            Player.Instance.Hit1To = (int?)(Player.Instance.Hit1To * Value);
+            Player.Instance.HotRiptide = (int?)(Player.Instance.HotRiptide * Value);
         }
     }
 }

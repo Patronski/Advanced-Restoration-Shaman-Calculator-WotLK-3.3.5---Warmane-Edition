@@ -23,6 +23,7 @@ namespace App.Models.Modifiers
         {
             Player.Instance.Hit1From = (int)(Player.Instance.Hit1From * Value);
             Player.Instance.Hit1To = (int?)(Player.Instance.Hit1To * Value);
+            Player.Instance.HotRiptide = (int?)(Player.Instance.HotRiptide * Value);
         }
     }
 }

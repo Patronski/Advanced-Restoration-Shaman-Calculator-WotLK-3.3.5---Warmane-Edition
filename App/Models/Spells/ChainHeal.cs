@@ -83,6 +83,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHOT1()
         {
+            if (Player.Instance.Crit1Avg == null) return null;
             var hot = (int)(Player.Instance.Crit1Avg * 0.25 / 3);
             return hot;
         }

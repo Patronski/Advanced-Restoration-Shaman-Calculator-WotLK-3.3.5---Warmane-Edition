@@ -164,9 +164,11 @@
             this.labelEarthlivingHW = new System.Windows.Forms.Label();
             this.labelEarthlivingLHW = new System.Windows.Forms.Label();
             this.labelEarthlivingRP = new System.Windows.Forms.Label();
-            this.labelAvgHpsOnePercent = new System.Windows.Forms.Label();
             this.labelAvgAAHps2 = new System.Windows.Forms.Label();
             this.checkBoxMuteSound = new System.Windows.Forms.CheckBox();
+            this.labelEarthlivingHps2 = new System.Windows.Forms.Label();
+            this.labelEarthlivingHps1 = new System.Windows.Forms.Label();
+            this.labelChainHealStacking = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -1587,11 +1589,11 @@
             this.labeEarthlivingHps4.AutoSize = true;
             this.labeEarthlivingHps4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeEarthlivingHps4.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps4.Location = new System.Drawing.Point(574, 308);
+            this.labeEarthlivingHps4.Location = new System.Drawing.Point(563, 308);
             this.labeEarthlivingHps4.Name = "labeEarthlivingHps4";
-            this.labeEarthlivingHps4.Size = new System.Drawing.Size(72, 13);
+            this.labeEarthlivingHps4.Size = new System.Drawing.Size(83, 13);
             this.labeEarthlivingHps4.TabIndex = 146;
-            this.labeEarthlivingHps4.Text = "AVG eHPS:";
+            this.labeEarthlivingHps4.Text = "AVG Healing:";
             this.labeEarthlivingHps4.Visible = false;
             // 
             // labeEarthlivingHps3
@@ -1599,11 +1601,11 @@
             this.labeEarthlivingHps3.AutoSize = true;
             this.labeEarthlivingHps3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeEarthlivingHps3.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps3.Location = new System.Drawing.Point(366, 391);
+            this.labeEarthlivingHps3.Location = new System.Drawing.Point(355, 391);
             this.labeEarthlivingHps3.Name = "labeEarthlivingHps3";
-            this.labeEarthlivingHps3.Size = new System.Drawing.Size(72, 13);
+            this.labeEarthlivingHps3.Size = new System.Drawing.Size(83, 13);
             this.labeEarthlivingHps3.TabIndex = 147;
-            this.labeEarthlivingHps3.Text = "AVG eHPS:";
+            this.labeEarthlivingHps3.Text = "AVG Healing:";
             this.labeEarthlivingHps3.Visible = false;
             // 
             // labeAvgHps2
@@ -1621,54 +1623,42 @@
             // labelEarthlivingCH
             // 
             this.labelEarthlivingCH.AutoSize = true;
-            this.labelEarthlivingCH.Location = new System.Drawing.Point(358, 322);
+            this.labelEarthlivingCH.Location = new System.Drawing.Point(331, 322);
             this.labelEarthlivingCH.Name = "labelEarthlivingCH";
-            this.labelEarthlivingCH.Size = new System.Drawing.Size(80, 13);
+            this.labelEarthlivingCH.Size = new System.Drawing.Size(107, 13);
             this.labelEarthlivingCH.TabIndex = 149;
-            this.labelEarthlivingCH.Text = "(By Chain Heal)";
+            this.labelEarthlivingCH.Text = "(Per Chain Heal cast)";
             this.labelEarthlivingCH.Visible = false;
             // 
             // labelEarthlivingHW
             // 
             this.labelEarthlivingHW.AutoSize = true;
-            this.labelEarthlivingHW.Location = new System.Drawing.Point(342, 365);
+            this.labelEarthlivingHW.Location = new System.Drawing.Point(315, 363);
             this.labelEarthlivingHW.Name = "labelEarthlivingHW";
-            this.labelEarthlivingHW.Size = new System.Drawing.Size(96, 13);
+            this.labelEarthlivingHW.Size = new System.Drawing.Size(123, 13);
             this.labelEarthlivingHW.TabIndex = 150;
-            this.labelEarthlivingHW.Text = "(By Healing Wave)";
+            this.labelEarthlivingHW.Text = "(Per Healing Wave cast)";
             this.labelEarthlivingHW.Visible = false;
             // 
             // labelEarthlivingLHW
             // 
             this.labelEarthlivingLHW.AutoSize = true;
-            this.labelEarthlivingLHW.Location = new System.Drawing.Point(308, 402);
+            this.labelEarthlivingLHW.Location = new System.Drawing.Point(281, 404);
             this.labelEarthlivingLHW.Name = "labelEarthlivingLHW";
-            this.labelEarthlivingLHW.Size = new System.Drawing.Size(130, 13);
+            this.labelEarthlivingLHW.Size = new System.Drawing.Size(157, 13);
             this.labelEarthlivingLHW.TabIndex = 151;
-            this.labelEarthlivingLHW.Text = "(By Lesser Healing Wave)";
+            this.labelEarthlivingLHW.Text = "(Per Lesser Healing Wave cast)";
             this.labelEarthlivingLHW.Visible = false;
             // 
             // labelEarthlivingRP
             // 
             this.labelEarthlivingRP.AutoSize = true;
-            this.labelEarthlivingRP.Location = new System.Drawing.Point(585, 322);
+            this.labelEarthlivingRP.Location = new System.Drawing.Point(558, 322);
             this.labelEarthlivingRP.Name = "labelEarthlivingRP";
-            this.labelEarthlivingRP.Size = new System.Drawing.Size(61, 13);
+            this.labelEarthlivingRP.Size = new System.Drawing.Size(88, 13);
             this.labelEarthlivingRP.TabIndex = 152;
-            this.labelEarthlivingRP.Text = "(By Riptide)";
+            this.labelEarthlivingRP.Text = "(Per Riptide cast)";
             this.labelEarthlivingRP.Visible = false;
-            // 
-            // labelAvgHpsOnePercent
-            // 
-            this.labelAvgHpsOnePercent.AutoSize = true;
-            this.labelAvgHpsOnePercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAvgHpsOnePercent.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgHpsOnePercent.Location = new System.Drawing.Point(339, 309);
-            this.labelAvgHpsOnePercent.Name = "labelAvgHpsOnePercent";
-            this.labelAvgHpsOnePercent.Size = new System.Drawing.Size(99, 13);
-            this.labelAvgHpsOnePercent.TabIndex = 153;
-            this.labelAvgHpsOnePercent.Text = "+1% AVG eHPS:";
-            this.labelAvgHpsOnePercent.Visible = false;
             // 
             // labelAvgAAHps2
             // 
@@ -1694,15 +1684,51 @@
             this.checkBoxMuteSound.UseVisualStyleBackColor = true;
             this.checkBoxMuteSound.CheckedChanged += new System.EventHandler(this.checkBoxMuteSound_CheckedChanged);
             // 
+            // labelEarthlivingHps2
+            // 
+            this.labelEarthlivingHps2.AutoSize = true;
+            this.labelEarthlivingHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEarthlivingHps2.ForeColor = System.Drawing.Color.Olive;
+            this.labelEarthlivingHps2.Location = new System.Drawing.Point(355, 350);
+            this.labelEarthlivingHps2.Name = "labelEarthlivingHps2";
+            this.labelEarthlivingHps2.Size = new System.Drawing.Size(83, 13);
+            this.labelEarthlivingHps2.TabIndex = 156;
+            this.labelEarthlivingHps2.Text = "AVG Healing:";
+            this.labelEarthlivingHps2.Visible = false;
+            // 
+            // labelEarthlivingHps1
+            // 
+            this.labelEarthlivingHps1.AutoSize = true;
+            this.labelEarthlivingHps1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEarthlivingHps1.ForeColor = System.Drawing.Color.Olive;
+            this.labelEarthlivingHps1.Location = new System.Drawing.Point(355, 308);
+            this.labelEarthlivingHps1.Name = "labelEarthlivingHps1";
+            this.labelEarthlivingHps1.Size = new System.Drawing.Size(83, 13);
+            this.labelEarthlivingHps1.TabIndex = 157;
+            this.labelEarthlivingHps1.Text = "AVG Healing:";
+            this.labelEarthlivingHps1.Visible = false;
+            // 
+            // labelChainHealStacking
+            // 
+            this.labelChainHealStacking.AutoSize = true;
+            this.labelChainHealStacking.Location = new System.Drawing.Point(360, 391);
+            this.labelChainHealStacking.Name = "labelChainHealStacking";
+            this.labelChainHealStacking.Size = new System.Drawing.Size(327, 13);
+            this.labelChainHealStacking.TabIndex = 158;
+            this.labelChainHealStacking.Text = "(Stacking of Chained Heal on 1 Target is not taken into calculation!)";
+            this.labelChainHealStacking.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.labelChainHealStacking);
+            this.Controls.Add(this.labelEarthlivingHps1);
+            this.Controls.Add(this.labelEarthlivingHps2);
             this.Controls.Add(this.checkBoxMuteSound);
             this.Controls.Add(this.labelAvgAAHps2);
-            this.Controls.Add(this.labelAvgHpsOnePercent);
             this.Controls.Add(this.labelEarthlivingRP);
             this.Controls.Add(this.labelEarthlivingLHW);
             this.Controls.Add(this.labelEarthlivingHW);
@@ -1987,9 +2013,11 @@
         private System.Windows.Forms.Label labelEarthlivingHW;
         private System.Windows.Forms.Label labelEarthlivingLHW;
         private System.Windows.Forms.Label labelEarthlivingRP;
-        private System.Windows.Forms.Label labelAvgHpsOnePercent;
         private System.Windows.Forms.Label labelAvgAAHps2;
         private System.Windows.Forms.CheckBox checkBoxMuteSound;
+        private System.Windows.Forms.Label labelEarthlivingHps2;
+        private System.Windows.Forms.Label labelEarthlivingHps1;
+        private System.Windows.Forms.Label labelChainHealStacking;
     }
 }
 

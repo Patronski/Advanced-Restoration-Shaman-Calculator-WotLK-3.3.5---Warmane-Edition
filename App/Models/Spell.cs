@@ -97,6 +97,7 @@ namespace App.Models
             Player.Instance.Hit1From = CalculateTarget1HitFrom();
             Player.Instance.Hit1To = CalculateTarget1HitTo();
             Player.Instance.CastingTime = CalculateCastingTime();
+            Player.Instance.HotRiptide = CalculateAverageHOT1();
 
             ModifyWithModifiers();
             Player.Instance.CastingTime = CalculateCastingTime();
@@ -112,14 +113,12 @@ namespace App.Models
             Player.Instance.EarthlivingAvgHpsLHW = CalculateEarthlivingAvgHpsLHW();
             Player.Instance.EarthlivingAvgHpsRP = CalculateEarthlivingAvgHpsRP();
             Player.Instance.EarthlivingAvgHpsTotal = CalculateEarthlivingAvgHpsTotal();
-
             Player.Instance.Hit2From = CalculateTarget2HitFrom();
             Player.Instance.Hit3From = CalculateTarget3HitFrom();
             Player.Instance.Hit4From = CalculateTarget4HitFrom();
             Player.Instance.Hit2To = CalculateTarget2HitTo();
             Player.Instance.Hit3To = CalculateTarget3HitTo();
             Player.Instance.Hit4To = CalculateTarget4HitTo();
-
             Player.Instance.Hit1Avg = CalculateTarget1HitAvg();
             Player.Instance.Hit2Avg = CalculateTarget2HitAvg();
             Player.Instance.Hit3Avg = CalculateTarget3HitAvg();
@@ -140,7 +139,6 @@ namespace App.Models
             Player.Instance.AvgHot2 = CalculateAverageHOT2();
             Player.Instance.AvgHot3 = CalculateAverageHOT3();
             Player.Instance.AvgHot4 = CalculateAverageHOT4();
-            Player.Instance.HotRiptide = CalculateAverageHOT1();
             Player.Instance.AncestralAwaceningFrom = CalculateAncestralAwakeningFrom();
             Player.Instance.AncestralAwaceningTo = CalculateAncestralAwakeningTo();
             Player.Instance.AncestralAwaceningAvg = CalculateAncestralAwakeningAvg();

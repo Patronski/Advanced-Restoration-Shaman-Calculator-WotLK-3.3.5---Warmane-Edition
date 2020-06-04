@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,18 @@ namespace App.Models
             CriticalValue = Constants.CriticalMultiplier;
         }
 
+        private SoundPlayer player { get; set; } = new SoundPlayer();
         private bool isOffSoundPlayed { get; set; }
         private bool isOnSoundPlayed { get; set; }
         public bool MuteSound { get; set; }
+        public void StopSound()
+        {
+            player.Stop();
+        }
 
         internal void PlaySound(string name)
         {
             if (MuteSound) return;
-            var player = new System.Media.SoundPlayer();
 
             switch (name)
             {

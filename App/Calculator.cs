@@ -549,12 +549,15 @@ namespace App
             labelEarthlivingHW.Hide();
             labelEarthlivingLHW.Hide();
             labelEarthlivingRP.Hide();
-            labelAvgHpsOnePercent.Hide();
             labelAvgAAHps2.Hide();
+            labelEarthlivingHps1.Hide();
+            labelEarthlivingHps2.Hide();
+            labelChainHealStacking.Hide();
 
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
+                    labelChainHealStacking.Show();
                     labelHitAvg.Show();
                     labelHit.Show();
                     labelCritAvg.Show();
@@ -639,12 +642,14 @@ namespace App
                     textBoxEarthlivingAvgHpsHW.Show();
                     textBoxEarthlivingAvgHpsLHW.Show();
                     textBoxEarthlivingAvgHpsRP.Show();
-                    textBoxEarthlivingAvgHpsTotal.Show();
-                    labelAvgHps.Show();
-                    labeAvgHps2.Show();
+                    //textBoxEarthlivingAvgHpsTotal.Show();
+                    //labelAvgHps.Show();
+                    //labeAvgHps2.Show();
+                    labelEarthlivingHps1.Show();
+                    labelEarthlivingHps2.Show();
                     labeEarthlivingHps3.Show();
                     labeEarthlivingHps4.Show();
-                    labeEarthlivingHps5.Show();
+                    //labeEarthlivingHps5.Show();
                     labelEarthlivingCH.Show();
                     labelEarthlivingHW.Show();
                     labelEarthlivingLHW.Show();
@@ -654,10 +659,9 @@ namespace App
                     textBoxHit1From.Show();
                     labelTick.Show();
                     textBoxAvgHotHps.Show();
-                    textBoxAvgHps.Show();
+                    //textBoxAvgHps.Show();
                     labelForOneTarget.Show();
                     labelPerTick.Show();
-                    labelAvgHpsOnePercent.Show();
                     labeAvgHps2.Show();
                     break;
                 case Constants.SpellHW:
@@ -779,7 +783,6 @@ namespace App
                     labelSpamOnDifferent2.Show();
                     labelSpamOn1Target1.Show();
                     labelSpamOn1Target2.Show();
-                    //labelAvgHotHps.Show();
                     labeAvgHps2.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
@@ -829,8 +832,8 @@ namespace App
 
         private void DisplayHealing()
         {
-            this.textBoxHasteRating.Text = Player.Instance.HasteRating.ToString();
-            this.textBoxSpellPower.Text = Player.Instance.SpellPower.ToString();
+            this.textBoxHasteRating.Text = Player.Instance.HasteRating == 0 ? "" : Player.Instance.HasteRating.ToString();
+            this.textBoxSpellPower.Text = Player.Instance.SpellPower == 0 ? "" : Player.Instance.SpellPower.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
             this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
             this.textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
@@ -969,6 +972,7 @@ namespace App
             if (checkBoxMuteSound.Checked)
             {
                 Player.Instance.MuteSound = true;
+                Player.Instance.StopSound();
             }
             else
             {

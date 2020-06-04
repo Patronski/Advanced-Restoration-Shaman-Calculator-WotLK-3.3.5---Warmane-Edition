@@ -25,6 +25,7 @@ namespace App.Models.Modifiers
 
             Player.Instance.Hit1From = (int)(emeraldVigorMultiplier * Player.Instance.Hit1From);
             Player.Instance.Hit1To = (int?)(emeraldVigorMultiplier * Player.Instance.Hit1To);
+            Player.Instance.HotRiptide = (int?)(emeraldVigorMultiplier * Player.Instance.HotRiptide);
         }
     }
 }
