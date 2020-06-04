@@ -496,7 +496,7 @@ namespace App
             textBoxEarthlivingAvgHpsLHW.Hide();
             textBoxEarthlivingAvgHpsRP.Hide();
             textBoxEarthlivingAvgHpsTotal.Hide();
-            labeEarthlivingHps2.Hide();
+            labeAvgHps2.Hide();
             labeEarthlivingHps3.Hide();
             labeEarthlivingHps4.Hide();
             labeEarthlivingHps5.Hide();
@@ -504,6 +504,7 @@ namespace App
             labelEarthlivingHW.Hide();
             labelEarthlivingLHW.Hide();
             labelEarthlivingRP.Hide();
+            labelAvgHpsOnePercent.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -594,7 +595,7 @@ namespace App
                     textBoxEarthlivingAvgHpsRP.Show();
                     textBoxEarthlivingAvgHpsTotal.Show();
                     labelAvgHps.Show();
-                    labeEarthlivingHps2.Show();
+                    labeAvgHps2.Show();
                     labeEarthlivingHps3.Show();
                     labeEarthlivingHps4.Show();
                     labeEarthlivingHps5.Show();
@@ -606,12 +607,12 @@ namespace App
                 case Constants.SpellHST:
                     textBoxHit1From.Show();
                     labelHitPerTick.Show();
-                    labelAvgHps.Show();
-                    labelAvgHotHps.Show();
                     textBoxAvgHotHps.Show();
                     textBoxAvgHps.Show();
                     labelForOneTarget.Show();
                     labelPerTick.Show();
+                    labelAvgHpsOnePercent.Show();
+                    labeAvgHps2.Show();
                     break;
                 case Constants.SpellHW:
                     labelDashHit1.Show();
@@ -837,7 +838,7 @@ namespace App
                 (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
             {
                 labelAvgHps.Text = Constants.LabelAvgHps;
-                labelAvgHotHps.Text = Constants.LabelAvgHps;
+                //labelAvgHotHps.Text = Constants.LabelAvgHps;
             }
             else if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellHW || selectedSpell.Name == Constants.SpellLHW))

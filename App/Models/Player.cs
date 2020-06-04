@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace App.Models
 {
+    /// <summary>
+    /// Purpose of this singleton class is development to be easy, to act as database between forms.
+    /// </summary>
     public sealed class Player
     {
         private Player() 

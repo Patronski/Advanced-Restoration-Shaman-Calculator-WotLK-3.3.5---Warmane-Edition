@@ -159,11 +159,12 @@
             this.labeEarthlivingHps5 = new System.Windows.Forms.Label();
             this.labeEarthlivingHps4 = new System.Windows.Forms.Label();
             this.labeEarthlivingHps3 = new System.Windows.Forms.Label();
-            this.labeEarthlivingHps2 = new System.Windows.Forms.Label();
+            this.labeAvgHps2 = new System.Windows.Forms.Label();
             this.labelEarthlivingCH = new System.Windows.Forms.Label();
             this.labelEarthlivingHW = new System.Windows.Forms.Label();
             this.labelEarthlivingLHW = new System.Windows.Forms.Label();
             this.labelEarthlivingRP = new System.Windows.Forms.Label();
+            this.labelAvgHpsOnePercent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -1095,6 +1096,7 @@
             this.labelAvgHotHps.Size = new System.Drawing.Size(102, 13);
             this.labelAvgHotHps.TabIndex = 102;
             this.labelAvgHotHps.Text = "AVG HOT eHPS:";
+            this.labelAvgHotHps.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelAvgHotHps.Visible = false;
             // 
             // textBoxAvgHotHps
@@ -1603,17 +1605,17 @@
             this.labeEarthlivingHps3.Text = "AVG eHPS:";
             this.labeEarthlivingHps3.Visible = false;
             // 
-            // labeEarthlivingHps2
+            // labeAvgHps2
             // 
-            this.labeEarthlivingHps2.AutoSize = true;
-            this.labeEarthlivingHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labeEarthlivingHps2.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps2.Location = new System.Drawing.Point(366, 350);
-            this.labeEarthlivingHps2.Name = "labeEarthlivingHps2";
-            this.labeEarthlivingHps2.Size = new System.Drawing.Size(72, 13);
-            this.labeEarthlivingHps2.TabIndex = 148;
-            this.labeEarthlivingHps2.Text = "AVG eHPS:";
-            this.labeEarthlivingHps2.Visible = false;
+            this.labeAvgHps2.AutoSize = true;
+            this.labeAvgHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeAvgHps2.ForeColor = System.Drawing.Color.Olive;
+            this.labeAvgHps2.Location = new System.Drawing.Point(366, 350);
+            this.labeAvgHps2.Name = "labeAvgHps2";
+            this.labeAvgHps2.Size = new System.Drawing.Size(72, 13);
+            this.labeAvgHps2.TabIndex = 148;
+            this.labeAvgHps2.Text = "AVG eHPS:";
+            this.labeAvgHps2.Visible = false;
             // 
             // labelEarthlivingCH
             // 
@@ -1655,17 +1657,30 @@
             this.labelEarthlivingRP.Text = "(By Riptide)";
             this.labelEarthlivingRP.Visible = false;
             // 
+            // labelAvgHpsOnePercent
+            // 
+            this.labelAvgHpsOnePercent.AutoSize = true;
+            this.labelAvgHpsOnePercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgHpsOnePercent.ForeColor = System.Drawing.Color.Olive;
+            this.labelAvgHpsOnePercent.Location = new System.Drawing.Point(339, 309);
+            this.labelAvgHpsOnePercent.Name = "labelAvgHpsOnePercent";
+            this.labelAvgHpsOnePercent.Size = new System.Drawing.Size(99, 13);
+            this.labelAvgHpsOnePercent.TabIndex = 153;
+            this.labelAvgHpsOnePercent.Text = "+1% AVG eHPS:";
+            this.labelAvgHpsOnePercent.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.labelAvgHpsOnePercent);
             this.Controls.Add(this.labelEarthlivingRP);
             this.Controls.Add(this.labelEarthlivingLHW);
             this.Controls.Add(this.labelEarthlivingHW);
             this.Controls.Add(this.labelEarthlivingCH);
-            this.Controls.Add(this.labeEarthlivingHps2);
+            this.Controls.Add(this.labeAvgHps2);
             this.Controls.Add(this.labeEarthlivingHps3);
             this.Controls.Add(this.labeEarthlivingHps4);
             this.Controls.Add(this.labeEarthlivingHps5);
@@ -1940,11 +1955,12 @@
         private System.Windows.Forms.Label labeEarthlivingHps5;
         private System.Windows.Forms.Label labeEarthlivingHps4;
         private System.Windows.Forms.Label labeEarthlivingHps3;
-        private System.Windows.Forms.Label labeEarthlivingHps2;
+        private System.Windows.Forms.Label labeAvgHps2;
         private System.Windows.Forms.Label labelEarthlivingCH;
         private System.Windows.Forms.Label labelEarthlivingHW;
         private System.Windows.Forms.Label labelEarthlivingLHW;
         private System.Windows.Forms.Label labelEarthlivingRP;
+        private System.Windows.Forms.Label labelAvgHpsOnePercent;
     }
 }
 
