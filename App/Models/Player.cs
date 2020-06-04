@@ -16,19 +16,16 @@ namespace App.Models
     {
         private Player() 
         {
-            var player = new System.Media.SoundPlayer();
-            player.Stream = Resources.ON_S;
-            player.Load();
-            player.Play();
-
             CriticalValue = Constants.CriticalMultiplier;
         }
 
         private bool isOffSoundPlayed { get; set; }
         private bool isOnSoundPlayed { get; set; }
+        public bool MuteSound { get; set; }
 
         internal void PlaySound(string name)
         {
+            if (MuteSound) return;
             var player = new System.Media.SoundPlayer();
 
             switch (name)

@@ -175,7 +175,8 @@ namespace App
                 this.checkBoxGlyphOfRiptide,
                 checkBoxGlyphOfEarthliving,
                 checkBoxGlyphChainHeal,
-                checkBoxGlyphOfHealingWave
+                checkBoxGlyphOfHealingWave,
+                checkBoxMuteSound
             };
         }
 
@@ -460,7 +461,7 @@ namespace App
 
             textBoxCastingTime.Hide();
             this.labelHit.Hide();
-            this.labelHitPerTick.Hide();
+            this.labelTick.Hide();
             labelHitAvg.Hide();
             labelCritAvg.Hide();
             checkBoxGlyphOfEarthliving.Hide();
@@ -505,6 +506,7 @@ namespace App
             labelEarthlivingLHW.Hide();
             labelEarthlivingRP.Hide();
             labelAvgHpsOnePercent.Hide();
+            labelAvgAAHps2.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -584,7 +586,7 @@ namespace App
                 case Constants.SpellEarthliving:
                     textBoxAvgHps.Show();
                     textBoxHit1From.Show();
-                    labelHitPerTick.Show();
+                    labelTick.Show();
                     labelEarthlivingBlessingOf.Show();
                     checkBoxGlyphOfEarthliving.Show();
                     textBoxAvgHotHps.Show();
@@ -606,7 +608,7 @@ namespace App
                     break;
                 case Constants.SpellHST:
                     textBoxHit1From.Show();
-                    labelHitPerTick.Show();
+                    labelTick.Show();
                     textBoxAvgHotHps.Show();
                     textBoxAvgHps.Show();
                     labelForOneTarget.Show();
@@ -634,10 +636,10 @@ namespace App
                     checkBoxRevitalizingSkyflareDiamond.Show();
                     labelHitAvg.Show();
                     labelAvgHps.Show();
-                    textBoxAvgHps.Show();
-                    labelAvgHotHps.Show();
-                    textBoxAvgHotHps.Show();
+                    labelAvgAAHps2.Show();
                     labelAvgAA.Show();
+                    textBoxAvgHps.Show();
+                    textBoxAvgHotHps.Show();
                     labelAncestralAwakening.Show();
                     textBoxAncestralAwaceningFrom.Show();
                     textBoxAncestralAwaceningTo.Show();
@@ -671,8 +673,9 @@ namespace App
                     labelHitAvg.Show();
 
                     labelAvgHps.Show();
+                    labelAvgAAHps2.Show();
                     textBoxAvgHps.Show();
-                    labelAvgHotHps.Show();
+                    
                     textBoxAvgHotHps.Show();
                     labelAvgAA.Show();
 
@@ -732,7 +735,8 @@ namespace App
                     labelSpamOnDifferent2.Show();
                     labelSpamOn1Target1.Show();
                     labelSpamOn1Target2.Show();
-                    labelAvgHotHps.Show();
+                    //labelAvgHotHps.Show();
+                    labeAvgHps2.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
                     textBoxAvgHotHps.Show();
@@ -917,6 +921,22 @@ namespace App
             {
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
+            }
+        }
+
+        private void checkBoxMuteSound_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMuteSound.Checked)
+            {
+                Player.Instance.MuteSound = true;
+            }
+            else
+            {
+                Player.Instance.MuteSound = false;
+            }
+            if (!dontRunCheckedChanged)
+            {
+                Player.Instance.Modifiers[checkBoxMuteSound.Text] = checkBoxMuteSound.Checked;
             }
         }
     }

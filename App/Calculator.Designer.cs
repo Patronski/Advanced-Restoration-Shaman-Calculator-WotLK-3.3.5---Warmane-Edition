@@ -118,7 +118,7 @@
             this.checkBoxGlyphChainHeal = new System.Windows.Forms.CheckBox();
             this.labelChainedHeal1 = new System.Windows.Forms.Label();
             this.labelChainedHeal2 = new System.Windows.Forms.Label();
-            this.labelHitPerTick = new System.Windows.Forms.Label();
+            this.labelTick = new System.Windows.Forms.Label();
             this.checkBoxRevitalizingSkyflareDiamond = new System.Windows.Forms.CheckBox();
             this.labelEmeraldVigor = new System.Windows.Forms.Label();
             this.checkBoxGlyphOfEarthliving = new System.Windows.Forms.CheckBox();
@@ -165,6 +165,8 @@
             this.labelEarthlivingLHW = new System.Windows.Forms.Label();
             this.labelEarthlivingRP = new System.Windows.Forms.Label();
             this.labelAvgHpsOnePercent = new System.Windows.Forms.Label();
+            this.labelAvgAAHps2 = new System.Windows.Forms.Label();
+            this.checkBoxMuteSound = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -1142,17 +1144,17 @@
             this.labelChainedHeal2.Text = "(Chained Heal)";
             this.labelChainedHeal2.Visible = false;
             // 
-            // labelHitPerTick
+            // labelTick
             // 
-            this.labelHitPerTick.AutoSize = true;
-            this.labelHitPerTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHitPerTick.ForeColor = System.Drawing.Color.DarkGreen;
-            this.labelHitPerTick.Location = new System.Drawing.Point(358, 80);
-            this.labelHitPerTick.Name = "labelHitPerTick";
-            this.labelHitPerTick.Size = new System.Drawing.Size(86, 13);
-            this.labelHitPerTick.TabIndex = 106;
-            this.labelHitPerTick.Text = "HIT per TICK:";
-            this.labelHitPerTick.Visible = false;
+            this.labelTick.AutoSize = true;
+            this.labelTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTick.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelTick.Location = new System.Drawing.Point(358, 80);
+            this.labelTick.Name = "labelTick";
+            this.labelTick.Size = new System.Drawing.Size(39, 13);
+            this.labelTick.TabIndex = 106;
+            this.labelTick.Text = "TICK:";
+            this.labelTick.Visible = false;
             // 
             // checkBoxRevitalizingSkyflareDiamond
             // 
@@ -1669,12 +1671,38 @@
             this.labelAvgHpsOnePercent.Text = "+1% AVG eHPS:";
             this.labelAvgHpsOnePercent.Visible = false;
             // 
+            // labelAvgAAHps2
+            // 
+            this.labelAvgAAHps2.AutoSize = true;
+            this.labelAvgAAHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgAAHps2.ForeColor = System.Drawing.Color.Olive;
+            this.labelAvgAAHps2.Location = new System.Drawing.Point(346, 349);
+            this.labelAvgAAHps2.Name = "labelAvgAAHps2";
+            this.labelAvgAAHps2.Size = new System.Drawing.Size(92, 13);
+            this.labelAvgAAHps2.TabIndex = 154;
+            this.labelAvgAAHps2.Text = "AVG AA eHPS:";
+            this.labelAvgAAHps2.Visible = false;
+            // 
+            // checkBoxMuteSound
+            // 
+            this.checkBoxMuteSound.AutoSize = true;
+            this.checkBoxMuteSound.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxMuteSound.Location = new System.Drawing.Point(899, 397);
+            this.checkBoxMuteSound.Name = "checkBoxMuteSound";
+            this.checkBoxMuteSound.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxMuteSound.TabIndex = 155;
+            this.checkBoxMuteSound.Text = "MUTE SOUND";
+            this.checkBoxMuteSound.UseVisualStyleBackColor = true;
+            this.checkBoxMuteSound.CheckedChanged += new System.EventHandler(this.checkBoxMuteSound_CheckedChanged);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.checkBoxMuteSound);
+            this.Controls.Add(this.labelAvgAAHps2);
             this.Controls.Add(this.labelAvgHpsOnePercent);
             this.Controls.Add(this.labelEarthlivingRP);
             this.Controls.Add(this.labelEarthlivingLHW);
@@ -1722,7 +1750,7 @@
             this.Controls.Add(this.checkBoxGlyphOfEarthliving);
             this.Controls.Add(this.labelEmeraldVigor);
             this.Controls.Add(this.checkBoxRevitalizingSkyflareDiamond);
-            this.Controls.Add(this.labelHitPerTick);
+            this.Controls.Add(this.labelTick);
             this.Controls.Add(this.labelChainedHeal2);
             this.Controls.Add(this.labelChainedHeal1);
             this.Controls.Add(this.checkBoxGlyphChainHeal);
@@ -1913,7 +1941,7 @@
         private System.Windows.Forms.CheckBox checkBoxGlyphChainHeal;
         private System.Windows.Forms.Label labelChainedHeal1;
         private System.Windows.Forms.Label labelChainedHeal2;
-        private System.Windows.Forms.Label labelHitPerTick;
+        private System.Windows.Forms.Label labelTick;
         private System.Windows.Forms.CheckBox checkBoxRevitalizingSkyflareDiamond;
         private System.Windows.Forms.Label labelEmeraldVigor;
         private System.Windows.Forms.CheckBox checkBoxGlyphOfEarthliving;
@@ -1961,6 +1989,8 @@
         private System.Windows.Forms.Label labelEarthlivingLHW;
         private System.Windows.Forms.Label labelEarthlivingRP;
         private System.Windows.Forms.Label labelAvgHpsOnePercent;
+        private System.Windows.Forms.Label labelAvgAAHps2;
+        private System.Windows.Forms.CheckBox checkBoxMuteSound;
     }
 }
 

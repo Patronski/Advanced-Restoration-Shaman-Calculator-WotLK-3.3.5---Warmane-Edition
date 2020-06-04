@@ -193,7 +193,10 @@ namespace App.Models
                 }
                 else
                 {
-                    check.Enabled = false;
+                    if (check.Text != "MUTE SOUND")
+                    {
+                        check.Enabled = false;
+                    }
                 }
             }
         }
