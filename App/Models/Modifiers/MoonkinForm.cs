@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Models.Modifiers.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class MoonkinForm : Modifier
+    public class MoonkinForm : Modifier, ICriticalModifier
     {
         public MoonkinForm()
         {

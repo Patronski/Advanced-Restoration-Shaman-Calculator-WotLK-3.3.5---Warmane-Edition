@@ -71,6 +71,7 @@
     <Compile Include="Models\Modifiers\GlyphOfHealingWave.cs" />
     <Compile Include="Models\Modifiers\GlyphOfRiptide.cs" />
     <Compile Include="Models\Modifiers\HellscreamsWarsong.cs" />
+    <Compile Include="Models\Modifiers\Interfaces\ICriticalModifier.cs" />
     <Compile Include="Models\Modifiers\Interfaces\IHealingModifier.cs" />
     <Compile Include="Models\Modifiers\MoonkinForm.cs" />
     <Compile Include="Models\Modifiers\RapidCurrents.cs" />

@@ -22,6 +22,8 @@ namespace App
 
         private Spell selectedSpell;
         private bool isAfterCritKeyPress;
+        private bool isCritModified;
+        private bool dontRunCheckedChanged;
 
         public Calculator()
         {
@@ -218,21 +220,18 @@ namespace App
             DisplayHealing();
         }
 
-        private void textBoxCrit_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void numericUpDownCriticalChance_ValueChanged(object sender, EventArgs e)
         {
-            if (isAfterCritKeyPress)
+            if (isAfterCritKeyPress && !isCritModified)
             {
                 isAfterCritKeyPress = false;
 
                 double crit = (double)this.numericUpDownCriticalChance.Value;
-                
-                Player.Instance.CriticalChanceInitial = crit;
+
+                selectedSpell.CalculateOnCritChanceInsert(crit);
             }
+
+            isCritModified = false;
 
             if (selectedSpell != null)
             {
@@ -255,7 +254,6 @@ namespace App
             textBoxHastePercent.Enabled = true;
             labelPercent.Enabled = true;
             labelCrit.Enabled = true;
-            //textBoxCrit.Enabled = true;
             numericUpDownCriticalChance.Enabled = true;
             labelPercentCritChance.Enabled = true;
 
@@ -352,7 +350,7 @@ namespace App
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (sender is CheckBox)
+            if (sender is CheckBox && dontRunCheckedChanged == false)
             {
                 var check = sender as CheckBox;
                 if (check.Text == Constants.ModEmeraldVigor)
@@ -367,12 +365,23 @@ namespace App
                     }
                     Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
                 }
+                CheckConnectedControlls(check.Text, check.Checked);
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
-                Player.Instance.IsCritModified = true;
+                isCritModified = true;
                 DisplayOnGlyphOfHealingWave();
                 DisplayOnGlyphOfChainHeal();
                 DisplayHealing();
-                return;
+            }
+            dontRunCheckedChanged = false;
+        }
+
+        private void CheckConnectedControlls(string controlName, bool isChecked)
+        {
+            if (controlName == Constants.ModGlyphOfChainHeal)
+            {
+                dontRunCheckedChanged = true;
+                this.checkBoxGlyphOfChainHealEarthliving.Checked = isChecked;
+                this.checkBoxGlyphChainHeal.Checked = isChecked;
             }
         }
 
@@ -800,6 +809,8 @@ namespace App
 
         private void DisplayHealing()
         {
+            this.textBoxHasteRating.Text = Player.Instance.HasteRating.ToString();
+            this.textBoxSpellPower.Text = Player.Instance.SpellPower.ToString();
             this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
             this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
             this.textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
@@ -846,7 +857,6 @@ namespace App
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
-            //this.textBoxCrit.Text = Player.Instance.CriticalChance.ToString();
             this.numericUpDownCriticalChance.Text = Player.Instance.CriticalChance.ToString();
             //if (Player.Instance.IsCritModified)
             //{
@@ -902,11 +912,6 @@ namespace App
             isAfterCritKeyPress = true;
         }
 
-        private void numericUpDownCriticalChance_MouseUp(object sender, MouseEventArgs e)
-        {
-            isAfterCritKeyPress = true;
-        }
-
         private void buttonReset_Click(object sender, EventArgs e)
         {
             foreach (var item in checkBoxes)
@@ -916,8 +921,8 @@ namespace App
 
             this.textBoxSpellPower.Text = "";
             textBoxHasteRating.Text = "";
-            numericUpDownCriticalChance.Value = 0;
             Player.Instance.CriticalChanceInitial = 0;
+            numericUpDownCriticalChance.Value = 0;
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -929,6 +934,18 @@ namespace App
             startScreen.DesktopLocation = location;
             startScreen.ShowDialog();
             this.Close();
+        }
+
+        private void numericUpDownCriticalChance_Enter(object sender, EventArgs e)
+        {
+            // Select the whole answer in the NumericUpDown control.
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int lengthOfAnswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthOfAnswer);
+            }
         }
     }
 }

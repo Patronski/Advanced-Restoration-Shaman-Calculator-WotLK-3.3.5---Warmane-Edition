@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Models.Modifiers.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,6 +77,19 @@ namespace App.Models
         public virtual int? CalculateEarthlivingAvgHpsLHW() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsRP() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsTotal() { return null; }
+
+        public virtual void CalculateOnCritChanceInsert(double newCritValue)
+        {
+            var critModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(ICriticalModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+            Player.Instance.CriticalChanceInitial = newCritValue;
+            Player.Instance.Recalculate();
+            foreach (var item in critModifiers)
+            {
+                item.Modify();
+            }
+            var difference = Player.Instance.CriticalChance - Player.Instance.CriticalChanceInitial;
+            Player.Instance.CriticalChanceInitial -= difference;
+        }
 
         public virtual void Calculate()
         {

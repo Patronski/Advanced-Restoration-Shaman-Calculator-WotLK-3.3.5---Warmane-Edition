@@ -1408,9 +1408,9 @@
             this.numericUpDownCriticalChance.Size = new System.Drawing.Size(58, 20);
             this.numericUpDownCriticalChance.TabIndex = 130;
             this.numericUpDownCriticalChance.ValueChanged += new System.EventHandler(this.numericUpDownCriticalChance_ValueChanged);
+            this.numericUpDownCriticalChance.Enter += new System.EventHandler(this.numericUpDownCriticalChance_Enter);
             this.numericUpDownCriticalChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDownCriticalChance_KeyPress);
             this.numericUpDownCriticalChance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseDown);
-            this.numericUpDownCriticalChance.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseUp);
             // 
             // pictureBoxSpell
             // 

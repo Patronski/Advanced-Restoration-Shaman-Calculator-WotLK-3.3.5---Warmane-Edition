@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace App.Models
 {
@@ -21,7 +22,7 @@ namespace App.Models
         public void Recalculate() 
         {
             CriticalValue = Constants.CriticalMultiplier;
-            Player.Instance.HasteRating = Player.Instance.HasteRating;
+            Player.Instance.HasteRating = Player.Instance.HasteRating; // reseting HastePercent
             Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
         }
         public int SpellPower { get; set; }
@@ -59,7 +60,6 @@ namespace App.Models
         }
 
         public double CriticalChance { get; set; }
-        public bool IsCritModified { get; set; }
 
         private double criticalChanceInitial;
         public double CriticalChanceInitial
@@ -134,5 +134,10 @@ namespace App.Models
         public int? EarthlivingAvgHpsLHW { get; set; }
         public int? EarthlivingAvgHpsRP { get; set; }
         public int? EarthlivingAvgHpsTotal { get; set; }
+
+        public List<string> ModifierNames = new List<string>();
+        private Spell selectedSpell;
+        private bool isAfterCritKeyPress;
+        public bool isCritModified;
     }
 }

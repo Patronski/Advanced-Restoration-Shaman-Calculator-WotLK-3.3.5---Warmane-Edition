@@ -11,10 +11,12 @@ namespace App.Models.Modifiers
         public RevitalizingSkyflareDiamond()
         {
             Display = Constants.ModRevitalizingSkyflareDiamond;
+            Value = 1.03;
         }
+
         public override void Modify()
         {
-            Player.Instance.CriticalValue = 1.5 * 1.03;
+            Player.Instance.CriticalValue = Constants.CriticalMultiplier * Value;
         }
     }
 }
