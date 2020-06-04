@@ -82,7 +82,7 @@ namespace App.Models
         {
             var critModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(ICriticalModifier).Name) != null && x.IsCheckBoxChecked).ToList();
             Player.Instance.CriticalChanceInitial = newCritValue;
-            Player.Instance.Recalculate();
+            //Player.Instance.Recalculate();
             foreach (var item in critModifiers)
             {
                 item.Modify();

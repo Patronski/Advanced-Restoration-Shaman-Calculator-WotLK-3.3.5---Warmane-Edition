@@ -23,7 +23,7 @@ namespace App
         private Spell selectedSpell;
         private bool isAfterCritKeyPress;
         private bool isCritModified;
-        private bool dontRunCheckedChanged;
+        private bool skipEventChanged;
 
         public Calculator()
         {
@@ -37,13 +37,21 @@ namespace App
 
         private void LoadControlsFromPlayer()
         {
-            foreach (var item in Player.Instance.Modifiers)
+            foreach (var mod in Player.Instance.Modifiers)
             {
-                if (item.Value == true)
+                if (mod.Value == true)
                 {
-                    var checkbox = checkBoxes.FirstOrDefault(x => x.Text == item.Key);
-                    dontRunCheckedChanged = true;
+                    var checkbox = checkBoxes.FirstOrDefault(x => x.Text == mod.Key);
+                    skipEventChanged = true;
                     checkbox.Checked = true;
+                }
+                if (mod.Key == Constants.ModEmeraldVigor)
+                {
+                    if (this.numericUpDownEmeraldVigor.Value != Player.Instance.EmeraldVigorNumber)
+                    {
+                        skipEventChanged = true;
+                        this.numericUpDownEmeraldVigor.Value = Player.Instance.EmeraldVigorNumber;
+                    }
                 }
             }
         }
@@ -278,6 +286,7 @@ namespace App
             Player.Instance.PlaySound(selectedSpell.Name);
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
+            EnableDisableControlls();
 
             HideShowControlls(selectedSpell);
 
@@ -287,6 +296,34 @@ namespace App
             selectedSpell.Calculate();
 
             DisplayHealing();
+        }
+
+        private void EnableDisableControlls()
+        {
+            if (checkBoxEmeraldVigor.Checked == true)
+            {
+                this.numericUpDownEmeraldVigor.Enabled = true;
+            }
+            if (checkBoxGlyphOfHealingWave.Checked)
+            {
+                textBoxGlyphOfHealingWave.Enabled = true;
+                labelAvgGlyphOfHealingWave.Enabled = true;
+            }
+            if (checkBoxGlyphChainHeal.Checked)
+            {
+                labelTarget4.Enabled = true;
+                textBoxHit4From.Enabled = true;
+                labelDashHit4.Enabled = true;
+                textBoxHit4To.Enabled = true;
+                labelArrowHit4.Enabled = true;
+                textBoxHit4Avg.Enabled = true;
+                textBoxCrit4From.Enabled = true;
+                labelDashCrit4.Enabled = true;
+                textBoxCrit4Avg.Enabled = true;
+                labelArrowcCrit4.Enabled = true;
+                textBoxCrit4To.Enabled = true;
+                textBoxAvgHot4.Enabled = true;
+            }
         }
 
         private void SelectSpellImage(Spell selectedSpell)
@@ -321,7 +358,7 @@ namespace App
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (sender is CheckBox && dontRunCheckedChanged == false)
+            if (sender is CheckBox && !skipEventChanged)
             {
                 var check = sender as CheckBox;
                 if (check.Text == Constants.ModEmeraldVigor)
@@ -339,19 +376,22 @@ namespace App
                 Player.Instance.Modifiers[check.Text] = check.Checked;
                 CheckConnectedControlls(check.Text, check.Checked);
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
-                isCritModified = true;
+                if (check.Text == Constants.ModTidalWavesCrit || check.Text == Constants.ModMoonkin || check.Text == Constants.ModTidalMastery)
+                {
+                    isCritModified = true;
+                }
                 DisplayOnGlyphOfHealingWave();
                 DisplayOnGlyphOfChainHeal();
                 DisplayHealing();
             }
-            dontRunCheckedChanged = false;
+            skipEventChanged = false;
         }
 
         private void CheckConnectedControlls(string controlName, bool isChecked)
         {
             if (controlName == Constants.ModGlyphOfChainHeal)
             {
-                dontRunCheckedChanged = true;
+                skipEventChanged = true;
                 this.checkBoxGlyphOfChainHealEarthliving.Checked = isChecked;
                 this.checkBoxGlyphChainHeal.Checked = isChecked;
             }
@@ -373,10 +413,14 @@ namespace App
 
         private void numericUpDownEmeraldVigor_ValueChanged(object sender, EventArgs e)
         {
-            var number = (int)((NumericUpDown)sender).Value;
-            Player.Instance.EmeraldVigorNumber = number;
-            selectedSpell.Calculate();
-            DisplayHealing();
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.EmeraldVigorNumber = number;
+                selectedSpell.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
         }
 
         private List<string> GetTextOfCheckedModifiers()
@@ -834,15 +878,11 @@ namespace App
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
             this.numericUpDownCriticalChance.Text = Player.Instance.CriticalChance.ToString();
-            //if (Player.Instance.IsCritModified)
-            //{
-            //    Player.Instance.IsCritModified = false;
-            //}
+
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
             {
                 labelAvgHps.Text = Constants.LabelAvgHps;
-                //labelAvgHotHps.Text = Constants.LabelAvgHps;
             }
             else if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellHW || selectedSpell.Name == Constants.SpellLHW))
@@ -912,17 +952,17 @@ namespace App
             this.Close();
         }
 
-        private void numericUpDownCriticalChance_Enter(object sender, EventArgs e)
-        {
-            // Select the whole answer in the NumericUpDown control.
-            NumericUpDown answerBox = sender as NumericUpDown;
+        //private void numericUpDownCriticalChance_Enter(object sender, EventArgs e)
+        //{
+        //    // Select the whole answer in the NumericUpDown control.
+        //    NumericUpDown answerBox = sender as NumericUpDown;
 
-            if (answerBox != null)
-            {
-                int lengthOfAnswer = answerBox.Value.ToString().Length;
-                answerBox.Select(0, lengthOfAnswer);
-            }
-        }
+        //    if (answerBox != null)
+        //    {
+        //        int lengthOfAnswer = answerBox.Value.ToString().Length;
+        //        answerBox.Select(0, lengthOfAnswer);
+        //    }
+        //}
 
         private void checkBoxMuteSound_CheckedChanged(object sender, EventArgs e)
         {
@@ -934,11 +974,11 @@ namespace App
             {
                 Player.Instance.MuteSound = false;
             }
-            if (!dontRunCheckedChanged)
+            if (!skipEventChanged)
             {
                 Player.Instance.Modifiers[checkBoxMuteSound.Text] = checkBoxMuteSound.Checked;
             }
-            dontRunCheckedChanged = true;
+            skipEventChanged = false;
         }
     }
 }
