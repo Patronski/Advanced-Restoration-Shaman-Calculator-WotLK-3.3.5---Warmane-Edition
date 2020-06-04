@@ -151,5 +151,10 @@ namespace App
         {
             System.Diagnostics.Process.Start("https://www.warmane.com/information");
         }
+
+        private void linkOpenSource_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Patronski/Advanced-Restoration-Shaman-Calculator-WotLK-3.3.5---Warmane-Edition");
+        }
     }
 }

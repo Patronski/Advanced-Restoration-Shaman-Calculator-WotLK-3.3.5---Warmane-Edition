@@ -61,6 +61,7 @@
             this.transparentControl23 = new App.Models.TransparentControl();
             this.transparentControl24 = new App.Models.TransparentControl();
             this.transparentControl2 = new App.Models.TransparentControl();
+            this.linkOpenSource = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -414,12 +415,25 @@
             this.transparentControl2.TabIndex = 39;
             this.transparentControl2.Text = "transparentControl2";
             // 
+            // linkOpenSource
+            // 
+            this.linkOpenSource.AutoSize = true;
+            this.linkOpenSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
+            this.linkOpenSource.Location = new System.Drawing.Point(850, 114);
+            this.linkOpenSource.Name = "linkOpenSource";
+            this.linkOpenSource.Size = new System.Drawing.Size(103, 13);
+            this.linkOpenSource.TabIndex = 40;
+            this.linkOpenSource.TabStop = true;
+            this.linkOpenSource.Text = "Open source project";
+            this.linkOpenSource.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOpenSource_LinkClicked);
+            // 
             // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(176)))));
             this.ClientSize = new System.Drawing.Size(1440, 763);
+            this.Controls.Add(this.linkOpenSource);
             this.Controls.Add(this.transparentControl2);
             this.Controls.Add(this.transparentControl24);
             this.Controls.Add(this.transparentControl23);
@@ -501,5 +515,6 @@
         private Models.TransparentControl transparentControl23;
         private Models.TransparentControl transparentControl24;
         private Models.TransparentControl transparentControl2;
+        private System.Windows.Forms.LinkLabel linkOpenSource;
     }
 }

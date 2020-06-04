@@ -7,69 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8046AF25-7E14-450A-BF03-0F7F5D342E70}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{A60E9B74-5079-495C-B5C3-4312E8CF92D9}"
-	ProjectSection(SolutionItems) = preProject
-		Requirements\1. Home.png = Requirements\1. Home.png
-		Requirements\CH HPS.png = Requirements\CH HPS.png
-		Requirements\CH.png = Requirements\CH.png
-		Requirements\CH_HPS.png = Requirements\CH_HPS.png
-		Requirements\Earthliving.png = Requirements\Earthliving.png
-		Requirements\ES.png = Requirements\ES.png
-		Requirements\HST.png = Requirements\HST.png
-		Requirements\HW HPS.png = Requirements\HW HPS.png
-		Requirements\HW.png = Requirements\HW.png
-		Requirements\LHW.png = Requirements\LHW.png
-		Requirements\Riptide HPS.png = Requirements\Riptide HPS.png
-		Requirements\Riptide.png = Requirements\Riptide.png
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{EDF33193-9239-48E8-91B1-458528A5589A}"
-	ProjectSection(SolutionItems) = preProject
-		Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg = Resourses\177064-shaman-thrall-part-of-the-battlecry-anniversary-wallpaper-by-wei-wang.jpg
-		Resourses\pic1.png = Resourses\pic1.png
-		Resourses\pic2.png = Resourses\pic2.png
-		Resourses\pic3.png = Resourses\pic3.png
-		Resourses\Spell_shaman_giftearthmother.ico = Resourses\Spell_shaman_giftearthmother.ico
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToolTips", "ToolTips", "{474EACB9-4B91-418C-A091-433054BF240F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home", "Home", "{428921D6-5947-4705-A0B3-A9BACC9498E4}"
-	ProjectSection(SolutionItems) = preProject
-		Resourses\Home (Talents)\Ancestral Awakening (Rank 3).png = Resourses\Home (Talents)\Ancestral Awakening (Rank 3).png
-		Resourses\Home (Talents)\Healing Way (Rank 3).png = Resourses\Home (Talents)\Healing Way (Rank 3).png
-		Resourses\Home (Talents)\Improved Chain Heal (Rank 2).png = Resourses\Home (Talents)\Improved Chain Heal (Rank 2).png
-		Resourses\Home (Talents)\Improved Earth Shield (Rank 2).png = Resourses\Home (Talents)\Improved Earth Shield (Rank 2).png
-		Resourses\Home (Talents)\Improved Healing Wave (Rank 5).png = Resourses\Home (Talents)\Improved Healing Wave (Rank 5).png
-		Resourses\Home (Talents)\Improved Shields (Rank 3).png = Resourses\Home (Talents)\Improved Shields (Rank 3).png
-		Resourses\Home (Talents)\Purification (Rank 5).png = Resourses\Home (Talents)\Purification (Rank 5).png
-		Resourses\Home (Talents)\Restorative Totems (Rank 3).png = Resourses\Home (Talents)\Restorative Totems (Rank 3).png
-		Resourses\Home (Talents)\Tidal Waves (Rank 5).png = Resourses\Home (Talents)\Tidal Waves (Rank 5).png
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modifiers", "Modifiers", "{DB515DAB-5126-47B7-AA53-8D45909D3454}"
-	ProjectSection(SolutionItems) = preProject
-		Resourses\Modifiers\Bloodlust.png = Resourses\Modifiers\Bloodlust.png
-		Resourses\Modifiers\Emerald Vigor.png = Resourses\Modifiers\Emerald Vigor.png
-		Resourses\Modifiers\Glyph of Chain Heal.png = Resourses\Modifiers\Glyph of Chain Heal.png
-		Resourses\Modifiers\Glyph of Earth Shield.png = Resourses\Modifiers\Glyph of Earth Shield.png
-		Resourses\Modifiers\Glyph of Earthliving.png = Resourses\Modifiers\Glyph of Earthliving.png
-		Resourses\Modifiers\Glyph of Healing Stream Totem.png = Resourses\Modifiers\Glyph of Healing Stream Totem.png
-		Resourses\Modifiers\Glyph of Lesser Healing Wave.png = Resourses\Modifiers\Glyph of Lesser Healing Wave.png
-		Resourses\Modifiers\Glyph of Riptide.png = Resourses\Modifiers\Glyph of Riptide.png
-		Resourses\Modifiers\Hellscream's Warsong.png = Resourses\Modifiers\Hellscream's Warsong.png
-		Resourses\Modifiers\Improved Moonking Form.png = Resourses\Modifiers\Improved Moonking Form.png
-		Resourses\Modifiers\Moonkin Aura.png = Resourses\Modifiers\Moonkin Aura.png
-		Resourses\Modifiers\Rapid Currents.png = Resourses\Modifiers\Rapid Currents.png
-		Resourses\Modifiers\Revitalizing Skyflare Diamond.png = Resourses\Modifiers\Revitalizing Skyflare Diamond.png
-		Resourses\Modifiers\Riptide's consumption.png = Resourses\Modifiers\Riptide's consumption.png
-		Resourses\Modifiers\Tidal Mastery.png = Resourses\Modifiers\Tidal Mastery.png
-		Resourses\Modifiers\Tidal Waves (Critical).png = Resourses\Modifiers\Tidal Waves (Critical).png
-		Resourses\Modifiers\Tidal Waves (Haste).png = Resourses\Modifiers\Tidal Waves (Haste).png
-		Resourses\Modifiers\Tree of Life.png = Resourses\Modifiers\Tree of Life.png
-		Resourses\Modifiers\Wrath of Air Totem.png = Resourses\Modifiers\Wrath of Air Totem.png
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,13 +20,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A60E9B74-5079-495C-B5C3-4312E8CF92D9} = {8046AF25-7E14-450A-BF03-0F7F5D342E70}
-		{EDF33193-9239-48E8-91B1-458528A5589A} = {8046AF25-7E14-450A-BF03-0F7F5D342E70}
-		{474EACB9-4B91-418C-A091-433054BF240F} = {EDF33193-9239-48E8-91B1-458528A5589A}
-		{428921D6-5947-4705-A0B3-A9BACC9498E4} = {474EACB9-4B91-418C-A091-433054BF240F}
-		{DB515DAB-5126-47B7-AA53-8D45909D3454} = {474EACB9-4B91-418C-A091-433054BF240F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9E47966-CD39-45DC-839A-A508D21883DD}
