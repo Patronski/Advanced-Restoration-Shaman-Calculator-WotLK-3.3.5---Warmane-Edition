@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartScreen());
-            //Application.Run(new Calculator());
+            Player.Instance.InitialiseForms();
+            Application.Run(Player.Instance.FormStartScreen);
         }
     }
 }

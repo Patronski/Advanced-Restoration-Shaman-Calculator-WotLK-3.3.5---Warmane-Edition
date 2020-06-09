@@ -122,10 +122,10 @@ namespace App
             var location = this.DesktopLocation;
 
             this.Hide();
-            var calculator = new Calculator();
+            var calculator = Player.Instance.FormCalculator;
             calculator.DesktopLocation = location;
-            calculator.ShowDialog();
-            this.Close();
+            calculator.Show();
+            //this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

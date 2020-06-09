@@ -950,10 +950,10 @@ namespace App
             var location = this.DesktopLocation;
 
             this.Hide();
-            var startScreen = new StartScreen();
+            var startScreen = Player.Instance.FormStartScreen;
             startScreen.DesktopLocation = location;
-            startScreen.ShowDialog();
-            this.Close();
+            startScreen.Show();
+            //this.Close();
         }
 
         //private void numericUpDownCriticalChance_Enter(object sender, EventArgs e)
@@ -984,6 +984,12 @@ namespace App
                 Player.Instance.Modifiers[checkBoxMuteSound.Text] = checkBoxMuteSound.Checked;
             }
             skipEventChanged = false;
+        }
+
+        private void Calculator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Player.Instance.FormStartScreen.Close();
         }
     }
 }

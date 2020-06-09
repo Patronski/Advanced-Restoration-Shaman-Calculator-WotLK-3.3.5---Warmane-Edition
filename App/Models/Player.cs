@@ -16,11 +16,26 @@ namespace App.Models
     public sealed class Player
     {
         private Player() 
-        {
-            CriticalValue = Constants.CriticalMultiplier;
+         {
+            player = new SoundPlayer();
+            Modifiers = new Dictionary<string, bool>();
+            ModifierNames = new List<string>();
         }
 
-        private SoundPlayer player { get; set; } = new SoundPlayer();
+        //private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
+
+        public static Player Instance { get; } = new Player();
+
+        public Calculator FormCalculator { get; set; }
+        public StartScreen FormStartScreen { get; set; }
+
+        public void InitialiseForms()
+        {
+            Player.Instance.FormStartScreen = new StartScreen();
+            Player.Instance.FormCalculator = new Calculator();
+        }
+
+        private SoundPlayer player { get; set; }
         private bool isOffSoundPlayed { get; set; }
         private bool isOnSoundPlayed { get; set; }
         public bool MuteSound { get; set; }
@@ -77,12 +92,10 @@ namespace App.Models
             player.Play();
         }
 
-        private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
-
         /// <summary>
         /// thread safe
         /// </summary>
-        public static Player Instance { get { return lazyInstance.Value; } }
+
 
         public void Recalculate() 
         {
@@ -91,7 +104,7 @@ namespace App.Models
             Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
         }
 
-        public Dictionary<string, bool> Modifiers { get; set; } = new Dictionary<string, bool>();
+        public Dictionary<string, bool> Modifiers { get; set; }
 
         public int SpellPower { get; set; }
 
@@ -143,7 +156,7 @@ namespace App.Models
             }
         }
 
-        public double CriticalValue { get; set; }
+        public double CriticalValue { get; set; } = Constants.CriticalMultiplier;
 
         public bool IsEquipedMetagemForCrit { get; set; }
 
@@ -203,7 +216,7 @@ namespace App.Models
         public int? EarthlivingAvgHpsRP { get; set; }
         public int? EarthlivingAvgHpsTotal { get; set; }
 
-        public List<string> ModifierNames = new List<string>();
+        public List<string> ModifierNames;
 
         public bool isCritModified;
     }

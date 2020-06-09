@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>App</RootNamespace>
-    <AssemblyName>Advanced Resto Shaman Calculator v1.0</AssemblyName>
+    <AssemblyName>Advanced Resto Shaman Calculator v1.1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Models\Enums\ModifierType.cs" />
     <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Modifiers\TwoPiecesTier9Bonus.cs" />
     <Compile Include="Models\Modifiers\BloodlustHeroism.cs" />
     <Compile Include="Models\Modifiers\EmeraldVigor.cs" />
     <Compile Include="Models\Modifiers\GlyphLesserHealingWave.cs" />
