@@ -169,6 +169,12 @@
             this.labelEarthlivingHps2 = new System.Windows.Forms.Label();
             this.labelEarthlivingHps1 = new System.Windows.Forms.Label();
             this.labelChainHealStacking = new System.Windows.Forms.Label();
+            this.checkBox2PT9Bonus = new System.Windows.Forms.CheckBox();
+            this.checkBox4PT7Bonus = new System.Windows.Forms.CheckBox();
+            this.checkBoxSteamcallersTotem = new System.Windows.Forms.CheckBox();
+            this.checkBox4PT8Bonus = new System.Windows.Forms.CheckBox();
+            this.checkBox2PT8Bonus = new System.Windows.Forms.CheckBox();
+            this.checkBox4PT9Bonus = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -363,7 +369,7 @@
             // 
             this.checkBoxRiptidesConsumption.AutoSize = true;
             this.checkBoxRiptidesConsumption.Enabled = false;
-            this.checkBoxRiptidesConsumption.Location = new System.Drawing.Point(18, 142);
+            this.checkBoxRiptidesConsumption.Location = new System.Drawing.Point(18, 208);
             this.checkBoxRiptidesConsumption.Name = "checkBoxRiptidesConsumption";
             this.checkBoxRiptidesConsumption.Size = new System.Drawing.Size(130, 17);
             this.checkBoxRiptidesConsumption.TabIndex = 26;
@@ -375,7 +381,7 @@
             // 
             this.checkBoxGlyphOfEarthShield.AutoSize = true;
             this.checkBoxGlyphOfEarthShield.Enabled = false;
-            this.checkBoxGlyphOfEarthShield.Location = new System.Drawing.Point(18, 165);
+            this.checkBoxGlyphOfEarthShield.Location = new System.Drawing.Point(18, 231);
             this.checkBoxGlyphOfEarthShield.Name = "checkBoxGlyphOfEarthShield";
             this.checkBoxGlyphOfEarthShield.Size = new System.Drawing.Size(125, 17);
             this.checkBoxGlyphOfEarthShield.TabIndex = 27;
@@ -387,7 +393,7 @@
             // 
             this.checkBoxGyphOfHST.AutoSize = true;
             this.checkBoxGyphOfHST.Enabled = false;
-            this.checkBoxGyphOfHST.Location = new System.Drawing.Point(18, 188);
+            this.checkBoxGyphOfHST.Location = new System.Drawing.Point(18, 254);
             this.checkBoxGyphOfHST.Name = "checkBoxGyphOfHST";
             this.checkBoxGyphOfHST.Size = new System.Drawing.Size(90, 17);
             this.checkBoxGyphOfHST.TabIndex = 28;
@@ -399,7 +405,7 @@
             // 
             this.checkBoxGlyphOfLHW.AutoSize = true;
             this.checkBoxGlyphOfLHW.Enabled = false;
-            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(18, 211);
+            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(18, 277);
             this.checkBoxGlyphOfLHW.Name = "checkBoxGlyphOfLHW";
             this.checkBoxGlyphOfLHW.Size = new System.Drawing.Size(93, 17);
             this.checkBoxGlyphOfLHW.TabIndex = 29;
@@ -411,7 +417,7 @@
             // 
             this.labelHasteModifiers.AutoSize = true;
             this.labelHasteModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHasteModifiers.Location = new System.Drawing.Point(16, 231);
+            this.labelHasteModifiers.Location = new System.Drawing.Point(16, 297);
             this.labelHasteModifiers.Name = "labelHasteModifiers";
             this.labelHasteModifiers.Size = new System.Drawing.Size(112, 15);
             this.labelHasteModifiers.TabIndex = 30;
@@ -421,7 +427,7 @@
             // 
             this.checkBoxWrathOfTheAirTotem.AutoSize = true;
             this.checkBoxWrathOfTheAirTotem.Enabled = false;
-            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 249);
+            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 315);
             this.checkBoxWrathOfTheAirTotem.Name = "checkBoxWrathOfTheAirTotem";
             this.checkBoxWrathOfTheAirTotem.Size = new System.Drawing.Size(133, 17);
             this.checkBoxWrathOfTheAirTotem.TabIndex = 31;
@@ -433,7 +439,7 @@
             // 
             this.checkBoxBloodlust.AutoSize = true;
             this.checkBoxBloodlust.Enabled = false;
-            this.checkBoxBloodlust.Location = new System.Drawing.Point(18, 295);
+            this.checkBoxBloodlust.Location = new System.Drawing.Point(18, 361);
             this.checkBoxBloodlust.Name = "checkBoxBloodlust";
             this.checkBoxBloodlust.Size = new System.Drawing.Size(110, 17);
             this.checkBoxBloodlust.TabIndex = 33;
@@ -445,7 +451,7 @@
             // 
             this.checkBoxRapidCurrents.AutoSize = true;
             this.checkBoxRapidCurrents.Enabled = false;
-            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(18, 318);
+            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(18, 430);
             this.checkBoxRapidCurrents.Name = "checkBoxRapidCurrents";
             this.checkBoxRapidCurrents.Size = new System.Drawing.Size(96, 17);
             this.checkBoxRapidCurrents.TabIndex = 34;
@@ -457,7 +463,7 @@
             // 
             this.checkBoxTidalWaves.AutoSize = true;
             this.checkBoxTidalWaves.Enabled = false;
-            this.checkBoxTidalWaves.Location = new System.Drawing.Point(18, 341);
+            this.checkBoxTidalWaves.Location = new System.Drawing.Point(18, 453);
             this.checkBoxTidalWaves.Name = "checkBoxTidalWaves";
             this.checkBoxTidalWaves.Size = new System.Drawing.Size(121, 17);
             this.checkBoxTidalWaves.TabIndex = 35;
@@ -469,7 +475,7 @@
             // 
             this.labelCritModifiers.AutoSize = true;
             this.labelCritModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCritModifiers.Location = new System.Drawing.Point(15, 361);
+            this.labelCritModifiers.Location = new System.Drawing.Point(15, 473);
             this.labelCritModifiers.Name = "labelCritModifiers";
             this.labelCritModifiers.Size = new System.Drawing.Size(97, 15);
             this.labelCritModifiers.TabIndex = 36;
@@ -479,7 +485,7 @@
             // 
             this.checkBoxTidalMastery.AutoSize = true;
             this.checkBoxTidalMastery.Enabled = false;
-            this.checkBoxTidalMastery.Location = new System.Drawing.Point(18, 379);
+            this.checkBoxTidalMastery.Location = new System.Drawing.Point(18, 491);
             this.checkBoxTidalMastery.Name = "checkBoxTidalMastery";
             this.checkBoxTidalMastery.Size = new System.Drawing.Size(89, 17);
             this.checkBoxTidalMastery.TabIndex = 37;
@@ -491,7 +497,7 @@
             // 
             this.checkBoxMoonkinForm.AutoSize = true;
             this.checkBoxMoonkinForm.Enabled = false;
-            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(18, 402);
+            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(18, 514);
             this.checkBoxMoonkinForm.Name = "checkBoxMoonkinForm";
             this.checkBoxMoonkinForm.Size = new System.Drawing.Size(171, 17);
             this.checkBoxMoonkinForm.TabIndex = 38;
@@ -503,7 +509,7 @@
             // 
             this.checkBoxTidalWavesCrit.AutoSize = true;
             this.checkBoxTidalWavesCrit.Enabled = false;
-            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 425);
+            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 537);
             this.checkBoxTidalWavesCrit.Name = "checkBoxTidalWavesCrit";
             this.checkBoxTidalWavesCrit.Size = new System.Drawing.Size(109, 17);
             this.checkBoxTidalWavesCrit.TabIndex = 39;
@@ -1429,7 +1435,7 @@
             this.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReset.Location = new System.Drawing.Point(988, 425);
+            this.buttonReset.Location = new System.Drawing.Point(988, 556);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(58, 23);
             this.buttonReset.TabIndex = 132;
@@ -1441,7 +1447,7 @@
             // 
             this.checkBoxSwiftRetributionHaste.AutoSize = true;
             this.checkBoxSwiftRetributionHaste.Enabled = false;
-            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(17, 272);
+            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(18, 338);
             this.checkBoxSwiftRetributionHaste.Name = "checkBoxSwiftRetributionHaste";
             this.checkBoxSwiftRetributionHaste.Size = new System.Drawing.Size(228, 17);
             this.checkBoxSwiftRetributionHaste.TabIndex = 133;
@@ -1454,7 +1460,7 @@
             this.buttonHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonHome.Location = new System.Drawing.Point(899, 425);
+            this.buttonHome.Location = new System.Drawing.Point(899, 556);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(58, 23);
             this.buttonHome.TabIndex = 134;
@@ -1676,7 +1682,7 @@
             // 
             this.checkBoxMuteSound.AutoSize = true;
             this.checkBoxMuteSound.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMuteSound.Location = new System.Drawing.Point(899, 397);
+            this.checkBoxMuteSound.Location = new System.Drawing.Point(899, 528);
             this.checkBoxMuteSound.Name = "checkBoxMuteSound";
             this.checkBoxMuteSound.Size = new System.Drawing.Size(99, 17);
             this.checkBoxMuteSound.TabIndex = 155;
@@ -1718,12 +1724,84 @@
             this.labelChainHealStacking.Text = "(Stacking of Chained Heal on 1 Target is not taken into calculation!)";
             this.labelChainHealStacking.Visible = false;
             // 
+            // checkBox2PT9Bonus
+            // 
+            this.checkBox2PT9Bonus.AutoSize = true;
+            this.checkBox2PT9Bonus.Enabled = false;
+            this.checkBox2PT9Bonus.Location = new System.Drawing.Point(18, 139);
+            this.checkBox2PT9Bonus.Name = "checkBox2PT9Bonus";
+            this.checkBox2PT9Bonus.Size = new System.Drawing.Size(90, 17);
+            this.checkBox2PT9Bonus.TabIndex = 159;
+            this.checkBox2PT9Bonus.Text = "2P/T9 Bonus";
+            this.checkBox2PT9Bonus.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4PT7Bonus
+            // 
+            this.checkBox4PT7Bonus.AutoSize = true;
+            this.checkBox4PT7Bonus.Enabled = false;
+            this.checkBox4PT7Bonus.Location = new System.Drawing.Point(18, 162);
+            this.checkBox4PT7Bonus.Name = "checkBox4PT7Bonus";
+            this.checkBox4PT7Bonus.Size = new System.Drawing.Size(90, 17);
+            this.checkBox4PT7Bonus.TabIndex = 160;
+            this.checkBox4PT7Bonus.Text = "4P/T7 Bonus";
+            this.checkBox4PT7Bonus.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSteamcallersTotem
+            // 
+            this.checkBoxSteamcallersTotem.AutoSize = true;
+            this.checkBoxSteamcallersTotem.Enabled = false;
+            this.checkBoxSteamcallersTotem.Location = new System.Drawing.Point(18, 185);
+            this.checkBoxSteamcallersTotem.Name = "checkBoxSteamcallersTotem";
+            this.checkBoxSteamcallersTotem.Size = new System.Drawing.Size(121, 17);
+            this.checkBoxSteamcallersTotem.TabIndex = 161;
+            this.checkBoxSteamcallersTotem.Text = "Steamcaller\'s Totem";
+            this.checkBoxSteamcallersTotem.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4PT8Bonus
+            // 
+            this.checkBox4PT8Bonus.AutoSize = true;
+            this.checkBox4PT8Bonus.Enabled = false;
+            this.checkBox4PT8Bonus.Location = new System.Drawing.Point(18, 384);
+            this.checkBox4PT8Bonus.Name = "checkBox4PT8Bonus";
+            this.checkBox4PT8Bonus.Size = new System.Drawing.Size(90, 17);
+            this.checkBox4PT8Bonus.TabIndex = 162;
+            this.checkBox4PT8Bonus.Text = "4P/T8 Bonus";
+            this.checkBox4PT8Bonus.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2PT8Bonus
+            // 
+            this.checkBox2PT8Bonus.AutoSize = true;
+            this.checkBox2PT8Bonus.Enabled = false;
+            this.checkBox2PT8Bonus.Location = new System.Drawing.Point(18, 407);
+            this.checkBox2PT8Bonus.Name = "checkBox2PT8Bonus";
+            this.checkBox2PT8Bonus.Size = new System.Drawing.Size(90, 17);
+            this.checkBox2PT8Bonus.TabIndex = 163;
+            this.checkBox2PT8Bonus.Text = "2P/T8 Bonus";
+            this.checkBox2PT8Bonus.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4PT9Bonus
+            // 
+            this.checkBox4PT9Bonus.AutoSize = true;
+            this.checkBox4PT9Bonus.Enabled = false;
+            this.checkBox4PT9Bonus.Location = new System.Drawing.Point(18, 560);
+            this.checkBox4PT9Bonus.Name = "checkBox4PT9Bonus";
+            this.checkBox4PT9Bonus.Size = new System.Drawing.Size(90, 17);
+            this.checkBox4PT9Bonus.TabIndex = 164;
+            this.checkBox4PT9Bonus.Text = "4P/T9 Bonus";
+            this.checkBox4PT9Bonus.UseVisualStyleBackColor = true;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.ClientSize = new System.Drawing.Size(1048, 580);
+            this.Controls.Add(this.checkBox4PT9Bonus);
+            this.Controls.Add(this.checkBox2PT8Bonus);
+            this.Controls.Add(this.checkBox4PT8Bonus);
+            this.Controls.Add(this.checkBoxSteamcallersTotem);
+            this.Controls.Add(this.checkBox4PT7Bonus);
+            this.Controls.Add(this.checkBox2PT9Bonus);
             this.Controls.Add(this.labelChainHealStacking);
             this.Controls.Add(this.labelEarthlivingHps1);
             this.Controls.Add(this.labelEarthlivingHps2);
@@ -2019,6 +2097,12 @@
         private System.Windows.Forms.Label labelEarthlivingHps2;
         private System.Windows.Forms.Label labelEarthlivingHps1;
         private System.Windows.Forms.Label labelChainHealStacking;
+        private System.Windows.Forms.CheckBox checkBox2PT9Bonus;
+        private System.Windows.Forms.CheckBox checkBox4PT7Bonus;
+        private System.Windows.Forms.CheckBox checkBoxSteamcallersTotem;
+        private System.Windows.Forms.CheckBox checkBox4PT8Bonus;
+        private System.Windows.Forms.CheckBox checkBox2PT8Bonus;
+        private System.Windows.Forms.CheckBox checkBox4PT9Bonus;
     }
 }
 
