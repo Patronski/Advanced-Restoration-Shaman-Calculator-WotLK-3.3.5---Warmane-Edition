@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class TwoPiecesT9Bonus : Modifier
+    public class FourPiecesT9Bonus : Modifier
     {
-        public TwoPiecesT9Bonus()
+        public FourPiecesT9Bonus()
         {
-            Display = Constants.Mod2PT9Bonus;
+            Display = Constants.Mod4PT9Bonus;
 
             this.InitCheckBox();
         }
 
         public override void Modify()
         {
-            
         }
     }
 }

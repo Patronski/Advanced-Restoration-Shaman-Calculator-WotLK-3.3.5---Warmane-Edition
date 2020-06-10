@@ -184,7 +184,13 @@ namespace App
                 checkBoxGlyphOfEarthliving,
                 checkBoxGlyphChainHeal,
                 checkBoxGlyphOfHealingWave,
-                checkBoxMuteSound
+                checkBoxMuteSound,
+                this.checkBox2PT8Bonus,
+                this.checkBox2PT9Bonus,
+                this.checkBox4PT7Bonus,
+                this.checkBox4PT8Bonus,
+                this.checkBox4PT9Bonus,
+                this.checkBoxSteamcallersTotem
             };
         }
 

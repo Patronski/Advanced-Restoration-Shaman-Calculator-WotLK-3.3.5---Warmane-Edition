@@ -40,6 +40,12 @@ namespace App.Models
         public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
         public static string ModGlyphOfEarthliving = "Glyph of Earthliving Weapon";
         public static string ModGlyphOfRiptide = "Glyph of Riptide";
+        public static string Mod2PT9Bonus = "2P/T9 Bonus";
+        public static string Mod4PT7Bonus = "4P/T7 Bonus";
+        public static string ModSteamcallersTotem = "Steamcaller's Totem";
+        public static string Mod4PT8Bonus = "4P/T8 Bonus";
+        public static string Mod2PT8Bonus = "2P/T8 Bonus";
+        public static string Mod4PT9Bonus = "4P/T9 Bonus";
 
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";

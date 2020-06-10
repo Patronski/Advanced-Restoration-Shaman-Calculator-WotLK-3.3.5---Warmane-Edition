@@ -33,20 +33,34 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new GlyphOfChainHeal());
+            this.Modifiers.Add(new FourPiecesT7Bonus());
+            this.Modifiers.Add(new SteamcallersTotemBonus());
+            this.Modifiers.Add(new FourPiecesT8Bonus());
+            this.Modifiers.Add(new FourPiecesT9Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
         {
-            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1055) * 1.32);
+            int a = 0;
+            //if (Steamcaller's Totem )
+            //{
+            //    a = 243
+            //}
+            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1055 + a) * 1.32);
 
             return rounded;
         }
 
         public override int? CalculateTarget1HitTo()
         {
-            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1205) * 1.32);
+            int a = 0;
+            //if (Steamcaller's Totem )
+            //{
+            //    a = 243
+            //}
+            int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1205 + a) * 1.32);
 
             return rounded;
         }
@@ -105,8 +119,7 @@ namespace App.Models.Spells
 
         public override double? CalculateCastingTime()
         {
-            var castingTime = 2.5 / (1 + Player.Instance.HastePercent / 100);
-            //castingTime = Math.Round(castingTime, 3, MidpointRounding.ToEven);
+            var castingTime = 2.5 / (1 + Player.Instance.HastePercent / 100); // 4p/T8 2.5 -> 2.3
             castingTime = Math.Truncate(castingTime * 1000) / 1000;
 
             return castingTime;

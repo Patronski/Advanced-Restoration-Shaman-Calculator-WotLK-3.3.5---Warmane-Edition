@@ -79,6 +79,11 @@
     </Compile>
     <Compile Include="Models\Enums\ModifierType.cs" />
     <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
+    <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />
+    <Compile Include="Models\Modifiers\FourPiecesT9Bonus.cs" />
+    <Compile Include="Models\Modifiers\SteamcallersTotemBonus.cs" />
+    <Compile Include="Models\Modifiers\TwoPiecesT8Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesTier9Bonus.cs" />
     <Compile Include="Models\Modifiers\BloodlustHeroism.cs" />
     <Compile Include="Models\Modifiers\EmeraldVigor.cs" />

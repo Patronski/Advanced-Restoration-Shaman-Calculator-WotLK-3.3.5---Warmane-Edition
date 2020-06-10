@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class TwoPiecesT9Bonus : Modifier
+    public class SteamcallersTotemBonus : Modifier
     {
-        public TwoPiecesT9Bonus()
+        public SteamcallersTotemBonus()
         {
-            Display = Constants.Mod2PT9Bonus;
+            Display = Constants.ModSteamcallersTotem;
 
             this.InitCheckBox();
         }
 
         public override void Modify()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

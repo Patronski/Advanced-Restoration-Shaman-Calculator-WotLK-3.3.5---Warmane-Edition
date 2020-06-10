@@ -28,6 +28,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new FourPiecesT7Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }

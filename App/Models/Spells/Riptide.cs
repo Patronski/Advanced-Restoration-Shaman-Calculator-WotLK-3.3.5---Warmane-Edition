@@ -23,6 +23,8 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new GlyphOfRiptide());
+            this.Modifiers.Add(new TwoPiecesT9Bonus());
+            this.Modifiers.Add(new TwoPiecesT8Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
