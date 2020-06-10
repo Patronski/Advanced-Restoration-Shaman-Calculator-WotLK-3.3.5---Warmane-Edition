@@ -23,7 +23,7 @@ namespace App
         private Spell selectedSpell;
         private bool isAfterCritKeyPress;
         private bool isCritModified;
-        private bool skipEventChanged;
+        public bool skipEventChanged;
 
         public Calculator()
         {
@@ -60,11 +60,24 @@ namespace App
         {
             CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
-            myToolTip.InitialDelay = 20;
-            myToolTip.ReshowDelay = 20;
-            myToolTip.AutoPopDelay = 15000;
+            myToolTip.SetToolTip(checkBox2PT8Bonus, "mod");
+            checkBox2PT8Bonus.Tag = Resources._2pT8_Bonus;
 
-            
+            myToolTip.SetToolTip(checkBox2PT9Bonus, "mod");
+            checkBox2PT9Bonus.Tag = Resources._2pT9_Bonus;
+
+            myToolTip.SetToolTip(checkBox4PT8Bonus, "mod");
+            checkBox4PT8Bonus.Tag = Resources._4pT8_Bonus;
+
+            myToolTip.SetToolTip(checkBox4PT9Bonus, "mod");
+            checkBox4PT9Bonus.Tag = Resources._4pT9_Bonus;
+
+            myToolTip.SetToolTip(checkBoxSteamcallersTotem, "mod");
+            checkBoxSteamcallersTotem.Tag = Resources.Steamcallers_Totem;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
+            checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
+
             myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
             checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
 
@@ -301,6 +314,19 @@ namespace App
 
             selectedSpell.Calculate();
 
+            if (selectedSpell.Name == Constants.SpellChainHeal)
+            {
+                var myToolTip = new CustomTooltipEasy();
+                myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
+                checkBox4PT7Bonus.Tag = Resources._4pT7_CH;
+            }
+            else if (selectedSpell.Name == Constants.SpellHW)
+            {
+                var myToolTip = new CustomTooltipEasy();
+                myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
+                checkBox4PT7Bonus.Tag = Resources._4pT7_HW;
+            }
+
             DisplayHealing();
         }
 
@@ -317,18 +343,63 @@ namespace App
             }
             if (checkBoxGlyphChainHeal.Checked)
             {
-                labelTarget4.Enabled = true;
-                textBoxHit4From.Enabled = true;
-                labelDashHit4.Enabled = true;
-                textBoxHit4To.Enabled = true;
-                labelArrowHit4.Enabled = true;
-                textBoxHit4Avg.Enabled = true;
-                textBoxCrit4From.Enabled = true;
-                labelDashCrit4.Enabled = true;
-                textBoxCrit4Avg.Enabled = true;
-                labelArrowcCrit4.Enabled = true;
-                textBoxCrit4To.Enabled = true;
-                textBoxAvgHot4.Enabled = true;
+                this.labelTarget4.Enabled = true;
+                this.labelArrowcCrit4.Enabled = true;
+                this.labelArrowHit4.Enabled = true;
+                this.labelDashCrit4.Enabled = true;
+                this.labelDashHit4.Enabled = true;
+                this.labelTarget4.Enabled = true;
+                this.textBoxAvgHot4.Enabled = true;
+                this.textBoxCrit4Avg.Enabled = true;
+                this.textBoxCrit4From.Enabled = true;
+                this.textBoxCrit4To.Enabled = true;
+                this.textBoxHit4Avg.Enabled = true;
+                this.textBoxHit4From.Enabled = true;
+                this.textBoxHit4To.Enabled = true;
+            }
+            else
+            {
+                this.labelTarget4.Enabled = false;
+                this.labelArrowcCrit4.Enabled = false;
+                this.labelArrowHit4.Enabled = false;
+                this.labelDashCrit4.Enabled = false;
+                this.labelDashHit4.Enabled = false;
+                this.labelTarget4.Enabled = false;
+                this.textBoxAvgHot4.Enabled = false;
+                this.textBoxCrit4Avg.Enabled = false;
+                this.textBoxCrit4From.Enabled = false;
+                this.textBoxCrit4To.Enabled = false;
+                this.textBoxHit4Avg.Enabled = false;
+                this.textBoxHit4From.Enabled = false;
+                this.textBoxHit4To.Enabled = false;
+            }
+            if ((checkBox4PT7Bonus.Checked || checkBox4PT8Bonus.Checked || checkBox4PT9Bonus.Checked) && selectedSpell.Name == Constants.SpellChainHeal)
+            {
+                this.labelAvgHot1.Enabled = false;
+                labelChainedHeal1.Enabled = false;
+                textBoxAvgHot1.Enabled = false;
+                textBoxAvgHot2.Enabled = false;
+                textBoxAvgHot3.Enabled = false;
+                textBoxAvgHot4.Enabled = false;
+                textBoxAvgHot4.Enabled = false;
+                labelAvgHotHps.Enabled = false;
+                labelChainedHeal2.Enabled = false;
+                textBoxAvgHotHps.Enabled = false;
+            }
+            else
+            {
+                this.labelAvgHot1.Enabled = true;
+                labelChainedHeal1.Enabled = true;
+                textBoxAvgHot1.Enabled = true;
+                textBoxAvgHot2.Enabled = true;
+                textBoxAvgHot3.Enabled = true;
+                if (this.checkBoxGlyphChainHeal.Checked)
+                {
+                    textBoxAvgHot4.Enabled = true;
+                }
+                labelAvgHotHps.Enabled = true;
+                labelChainedHeal2.Enabled = true;
+                textBoxAvgHotHps.Enabled = true;
             }
         }
 
@@ -379,17 +450,22 @@ namespace App
                     }
                     Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
                 }
+
                 Player.Instance.Modifiers[check.Text] = check.Checked;
                 CheckConnectedControlls(check.Text, check.Checked);
+
                 selectedSpell.CalculateOnModifierChange(check.Text, check.Checked);
-                if (check.Text == Constants.ModTidalWavesCrit || check.Text == Constants.ModMoonkin || check.Text == Constants.ModTidalMastery)
+
+                if (check.Text == Constants.ModTidalWavesCrit || check.Text == Constants.ModMoonkin || check.Text == Constants.ModTidalMastery || check.Text == Constants.Mod4PT9Bonus)
                 {
                     isCritModified = true;
                 }
+
                 DisplayOnGlyphOfHealingWave();
-                DisplayOnGlyphOfChainHeal();
+                EnableDisableControlls();
                 DisplayHealing();
             }
+
             skipEventChanged = false;
         }
 
@@ -797,42 +873,6 @@ namespace App
                     labelHot.Show();
                     textBoxHotRiptide.Show();
                     break;
-            }
-        }
-
-        private void DisplayOnGlyphOfChainHeal()
-        {
-            if (checkBoxGlyphChainHeal.Checked)
-            {
-                this.labelTarget4.Enabled = true;
-                this.labelArrowcCrit4.Enabled = true;
-                this.labelArrowHit4.Enabled = true;
-                this.labelDashCrit4.Enabled = true;
-                this.labelDashHit4.Enabled = true;
-                this.labelTarget4.Enabled = true;
-                this.textBoxAvgHot4.Enabled = true;
-                this.textBoxCrit4Avg.Enabled = true;
-                this.textBoxCrit4From.Enabled = true;
-                this.textBoxCrit4To.Enabled = true;
-                this.textBoxHit4Avg.Enabled = true;
-                this.textBoxHit4From.Enabled = true;
-                this.textBoxHit4To.Enabled = true;
-            }
-            else
-            {
-                this.labelTarget4.Enabled = false;
-                this.labelArrowcCrit4.Enabled = false;
-                this.labelArrowHit4.Enabled = false;
-                this.labelDashCrit4.Enabled = false;
-                this.labelDashHit4.Enabled = false;
-                this.labelTarget4.Enabled = false;
-                this.textBoxAvgHot4.Enabled = false;
-                this.textBoxCrit4Avg.Enabled = false;
-                this.textBoxCrit4From.Enabled = false;
-                this.textBoxCrit4To.Enabled = false;
-                this.textBoxHit4Avg.Enabled = false;
-                this.textBoxHit4From.Enabled = false;
-                this.textBoxHit4To.Enabled = false;
             }
         }
 

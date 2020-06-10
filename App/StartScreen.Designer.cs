@@ -80,9 +80,9 @@
             this.buttonTier10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTier10.Location = new System.Drawing.Point(32, 28);
             this.buttonTier10.Name = "buttonTier10";
-            this.buttonTier10.Size = new System.Drawing.Size(178, 67);
+            this.buttonTier10.Size = new System.Drawing.Size(225, 67);
             this.buttonTier10.TabIndex = 0;
-            this.buttonTier10.Text = "SIMCRAFT";
+            this.buttonTier10.Text = "CALCULATOR";
             this.buttonTier10.UseVisualStyleBackColor = false;
             this.buttonTier10.Click += new System.EventHandler(this.buttonTier10_Click);
             // 

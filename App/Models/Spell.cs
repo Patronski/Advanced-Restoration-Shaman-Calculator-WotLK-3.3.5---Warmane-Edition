@@ -167,6 +167,14 @@ namespace App.Models
 
         public void CheckModifiers(List<string> checkedModifierNames)
         {
+            if (Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked &&
+            (Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked || Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked))
+            {
+                Player.Instance.FormCalculator.skipEventChanged = true;
+                Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
+                Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
+            }
+
             foreach (var modifier in this.Modifiers)
             {
                 if (checkedModifierNames.Contains(modifier.Display))
@@ -190,7 +198,7 @@ namespace App.Models
                 }
                 else
                 {
-                    if (check.Text != "MUTE SOUND")
+                    if (check.Name != "checkBoxMuteSound")
                     {
                         check.Enabled = false;
                     }
@@ -198,16 +206,15 @@ namespace App.Models
             }
         }
 
-        public void CalculateOnModifierChange(string name, bool isChecked)
+        public virtual void CalculateOnModifierChange(string modName, bool isChecked)
         {
             foreach (var modifier in Modifiers)
             {
-                if (name == modifier.Display)
+                if (modName == modifier.Display)
                 {
                     if (isChecked != modifier.IsCheckBoxChecked)
                     {
                         modifier.IsCheckBoxChecked = isChecked;
-                        break;
                     }
                 }
             }

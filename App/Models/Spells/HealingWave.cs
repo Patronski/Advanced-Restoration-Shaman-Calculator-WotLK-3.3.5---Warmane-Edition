@@ -151,5 +151,33 @@ namespace App.Models.Spells
 
             return (int?)result;
         }
+
+        public override void CalculateOnModifierChange(string modName, bool isChecked)
+        {
+            if (modName == Constants.Mod4PT7Bonus)
+            {
+                if (Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                {
+                    Player.Instance.FormCalculator.skipEventChanged = true;
+                }
+
+                Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
+                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
+                mod.IsCheckBoxChecked = false;
+            }
+            else if (modName == Constants.ModRapidCurrents)
+            {
+                if (Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked)
+                {
+                    Player.Instance.FormCalculator.skipEventChanged = true;
+                }
+
+                Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
+                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
+                mod.IsCheckBoxChecked = false;
+            }
+
+            base.CalculateOnModifierChange(modName, isChecked);
+        }
     }
 }

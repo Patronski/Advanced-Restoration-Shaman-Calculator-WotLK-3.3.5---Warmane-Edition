@@ -325,4 +325,25 @@
   <data name="Mana_Tide_TotemH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mana Tide TotemH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Steamcallers_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steamcallers_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2pT8_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2pT8_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT8_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT8_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT7_CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT7_CH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT7_HW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT7_HW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

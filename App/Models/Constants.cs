@@ -27,7 +27,7 @@ namespace App.Models
         public const string ModGlyphHST = "Glyph of Healing Stream Totem";
         public const string ModHellscream = "Hellscream's Warsong / Strength of Wrynn";
         public const string ModMoonkin = "Moonkin Aura / Elemental Oath";
-        public const string ModRapidCurrents = "Rapid Currents";
+        public const string ModRapidCurrents = "2P/T10 (Rapid Currents)";
         public const string ModRapidConsumption = "Riptides Consumption";
         public const string ModSwiftRetrubution = "Swift Retribution / Improved Moonkin Form";
         public const string ModTidalMastery = "Tidal Mastery";

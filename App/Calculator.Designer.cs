@@ -324,7 +324,7 @@
             // 
             this.labelHealingModifiers.AutoSize = true;
             this.labelHealingModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHealingModifiers.Location = new System.Drawing.Point(15, 52);
+            this.labelHealingModifiers.Location = new System.Drawing.Point(15, 55);
             this.labelHealingModifiers.Name = "labelHealingModifiers";
             this.labelHealingModifiers.Size = new System.Drawing.Size(125, 15);
             this.labelHealingModifiers.TabIndex = 22;
@@ -334,7 +334,7 @@
             // 
             this.checkBoxTreeOfLife.AutoSize = true;
             this.checkBoxTreeOfLife.Enabled = false;
-            this.checkBoxTreeOfLife.Location = new System.Drawing.Point(18, 73);
+            this.checkBoxTreeOfLife.Location = new System.Drawing.Point(18, 142);
             this.checkBoxTreeOfLife.Name = "checkBoxTreeOfLife";
             this.checkBoxTreeOfLife.Size = new System.Drawing.Size(206, 17);
             this.checkBoxTreeOfLife.TabIndex = 23;
@@ -346,7 +346,7 @@
             // 
             this.checkBoxHellscream.AutoSize = true;
             this.checkBoxHellscream.Enabled = false;
-            this.checkBoxHellscream.Location = new System.Drawing.Point(18, 96);
+            this.checkBoxHellscream.Location = new System.Drawing.Point(18, 165);
             this.checkBoxHellscream.Name = "checkBoxHellscream";
             this.checkBoxHellscream.Size = new System.Drawing.Size(223, 17);
             this.checkBoxHellscream.TabIndex = 24;
@@ -358,7 +358,7 @@
             // 
             this.checkBoxEmeraldVigor.AutoSize = true;
             this.checkBoxEmeraldVigor.Enabled = false;
-            this.checkBoxEmeraldVigor.Location = new System.Drawing.Point(18, 119);
+            this.checkBoxEmeraldVigor.Location = new System.Drawing.Point(18, 188);
             this.checkBoxEmeraldVigor.Name = "checkBoxEmeraldVigor";
             this.checkBoxEmeraldVigor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxEmeraldVigor.TabIndex = 25;
@@ -417,7 +417,7 @@
             // 
             this.labelHasteModifiers.AutoSize = true;
             this.labelHasteModifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHasteModifiers.Location = new System.Drawing.Point(16, 297);
+            this.labelHasteModifiers.Location = new System.Drawing.Point(15, 297);
             this.labelHasteModifiers.Name = "labelHasteModifiers";
             this.labelHasteModifiers.Size = new System.Drawing.Size(112, 15);
             this.labelHasteModifiers.TabIndex = 30;
@@ -427,7 +427,7 @@
             // 
             this.checkBoxWrathOfTheAirTotem.AutoSize = true;
             this.checkBoxWrathOfTheAirTotem.Enabled = false;
-            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 315);
+            this.checkBoxWrathOfTheAirTotem.Location = new System.Drawing.Point(18, 384);
             this.checkBoxWrathOfTheAirTotem.Name = "checkBoxWrathOfTheAirTotem";
             this.checkBoxWrathOfTheAirTotem.Size = new System.Drawing.Size(133, 17);
             this.checkBoxWrathOfTheAirTotem.TabIndex = 31;
@@ -439,7 +439,7 @@
             // 
             this.checkBoxBloodlust.AutoSize = true;
             this.checkBoxBloodlust.Enabled = false;
-            this.checkBoxBloodlust.Location = new System.Drawing.Point(18, 361);
+            this.checkBoxBloodlust.Location = new System.Drawing.Point(18, 430);
             this.checkBoxBloodlust.Name = "checkBoxBloodlust";
             this.checkBoxBloodlust.Size = new System.Drawing.Size(110, 17);
             this.checkBoxBloodlust.TabIndex = 33;
@@ -451,7 +451,7 @@
             // 
             this.checkBoxRapidCurrents.AutoSize = true;
             this.checkBoxRapidCurrents.Enabled = false;
-            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(18, 430);
+            this.checkBoxRapidCurrents.Location = new System.Drawing.Point(18, 361);
             this.checkBoxRapidCurrents.Name = "checkBoxRapidCurrents";
             this.checkBoxRapidCurrents.Size = new System.Drawing.Size(96, 17);
             this.checkBoxRapidCurrents.TabIndex = 34;
@@ -497,7 +497,7 @@
             // 
             this.checkBoxMoonkinForm.AutoSize = true;
             this.checkBoxMoonkinForm.Enabled = false;
-            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(18, 514);
+            this.checkBoxMoonkinForm.Location = new System.Drawing.Point(18, 537);
             this.checkBoxMoonkinForm.Name = "checkBoxMoonkinForm";
             this.checkBoxMoonkinForm.Size = new System.Drawing.Size(171, 17);
             this.checkBoxMoonkinForm.TabIndex = 38;
@@ -509,7 +509,7 @@
             // 
             this.checkBoxTidalWavesCrit.AutoSize = true;
             this.checkBoxTidalWavesCrit.Enabled = false;
-            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 537);
+            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(18, 560);
             this.checkBoxTidalWavesCrit.Name = "checkBoxTidalWavesCrit";
             this.checkBoxTidalWavesCrit.Size = new System.Drawing.Size(109, 17);
             this.checkBoxTidalWavesCrit.TabIndex = 39;
@@ -520,7 +520,7 @@
             // numericUpDownEmeraldVigor
             // 
             this.numericUpDownEmeraldVigor.Enabled = false;
-            this.numericUpDownEmeraldVigor.Location = new System.Drawing.Point(39, 117);
+            this.numericUpDownEmeraldVigor.Location = new System.Drawing.Point(39, 186);
             this.numericUpDownEmeraldVigor.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1181,7 +1181,7 @@
             // 
             this.labelEmeraldVigor.AutoSize = true;
             this.labelEmeraldVigor.Enabled = false;
-            this.labelEmeraldVigor.Location = new System.Drawing.Point(96, 119);
+            this.labelEmeraldVigor.Location = new System.Drawing.Point(96, 188);
             this.labelEmeraldVigor.Name = "labelEmeraldVigor";
             this.labelEmeraldVigor.Size = new System.Drawing.Size(176, 13);
             this.labelEmeraldVigor.TabIndex = 108;
@@ -1447,7 +1447,7 @@
             // 
             this.checkBoxSwiftRetributionHaste.AutoSize = true;
             this.checkBoxSwiftRetributionHaste.Enabled = false;
-            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(18, 338);
+            this.checkBoxSwiftRetributionHaste.Location = new System.Drawing.Point(18, 407);
             this.checkBoxSwiftRetributionHaste.Name = "checkBoxSwiftRetributionHaste";
             this.checkBoxSwiftRetributionHaste.Size = new System.Drawing.Size(228, 17);
             this.checkBoxSwiftRetributionHaste.TabIndex = 133;
@@ -1728,67 +1728,73 @@
             // 
             this.checkBox2PT9Bonus.AutoSize = true;
             this.checkBox2PT9Bonus.Enabled = false;
-            this.checkBox2PT9Bonus.Location = new System.Drawing.Point(18, 139);
+            this.checkBox2PT9Bonus.Location = new System.Drawing.Point(18, 96);
             this.checkBox2PT9Bonus.Name = "checkBox2PT9Bonus";
             this.checkBox2PT9Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox2PT9Bonus.TabIndex = 159;
             this.checkBox2PT9Bonus.Text = "2P/T9 Bonus";
             this.checkBox2PT9Bonus.UseVisualStyleBackColor = true;
+            this.checkBox2PT9Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBox4PT7Bonus
             // 
             this.checkBox4PT7Bonus.AutoSize = true;
             this.checkBox4PT7Bonus.Enabled = false;
-            this.checkBox4PT7Bonus.Location = new System.Drawing.Point(18, 162);
+            this.checkBox4PT7Bonus.Location = new System.Drawing.Point(18, 73);
             this.checkBox4PT7Bonus.Name = "checkBox4PT7Bonus";
             this.checkBox4PT7Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT7Bonus.TabIndex = 160;
             this.checkBox4PT7Bonus.Text = "4P/T7 Bonus";
             this.checkBox4PT7Bonus.UseVisualStyleBackColor = true;
+            this.checkBox4PT7Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxSteamcallersTotem
             // 
             this.checkBoxSteamcallersTotem.AutoSize = true;
             this.checkBoxSteamcallersTotem.Enabled = false;
-            this.checkBoxSteamcallersTotem.Location = new System.Drawing.Point(18, 185);
+            this.checkBoxSteamcallersTotem.Location = new System.Drawing.Point(18, 119);
             this.checkBoxSteamcallersTotem.Name = "checkBoxSteamcallersTotem";
             this.checkBoxSteamcallersTotem.Size = new System.Drawing.Size(121, 17);
             this.checkBoxSteamcallersTotem.TabIndex = 161;
             this.checkBoxSteamcallersTotem.Text = "Steamcaller\'s Totem";
             this.checkBoxSteamcallersTotem.UseVisualStyleBackColor = true;
+            this.checkBoxSteamcallersTotem.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBox4PT8Bonus
             // 
             this.checkBox4PT8Bonus.AutoSize = true;
             this.checkBox4PT8Bonus.Enabled = false;
-            this.checkBox4PT8Bonus.Location = new System.Drawing.Point(18, 384);
+            this.checkBox4PT8Bonus.Location = new System.Drawing.Point(18, 338);
             this.checkBox4PT8Bonus.Name = "checkBox4PT8Bonus";
             this.checkBox4PT8Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT8Bonus.TabIndex = 162;
             this.checkBox4PT8Bonus.Text = "4P/T8 Bonus";
             this.checkBox4PT8Bonus.UseVisualStyleBackColor = true;
+            this.checkBox4PT8Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBox2PT8Bonus
             // 
             this.checkBox2PT8Bonus.AutoSize = true;
             this.checkBox2PT8Bonus.Enabled = false;
-            this.checkBox2PT8Bonus.Location = new System.Drawing.Point(18, 407);
+            this.checkBox2PT8Bonus.Location = new System.Drawing.Point(18, 315);
             this.checkBox2PT8Bonus.Name = "checkBox2PT8Bonus";
             this.checkBox2PT8Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox2PT8Bonus.TabIndex = 163;
             this.checkBox2PT8Bonus.Text = "2P/T8 Bonus";
             this.checkBox2PT8Bonus.UseVisualStyleBackColor = true;
+            this.checkBox2PT8Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBox4PT9Bonus
             // 
             this.checkBox4PT9Bonus.AutoSize = true;
             this.checkBox4PT9Bonus.Enabled = false;
-            this.checkBox4PT9Bonus.Location = new System.Drawing.Point(18, 560);
+            this.checkBox4PT9Bonus.Location = new System.Drawing.Point(18, 514);
             this.checkBox4PT9Bonus.Name = "checkBox4PT9Bonus";
             this.checkBox4PT9Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT9Bonus.TabIndex = 164;
             this.checkBox4PT9Bonus.Text = "4P/T9 Bonus";
             this.checkBox4PT9Bonus.UseVisualStyleBackColor = true;
+            this.checkBox4PT9Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // Calculator
             // 
@@ -1981,7 +1987,7 @@
         private System.Windows.Forms.Label labelHasteModifiers;
         private System.Windows.Forms.CheckBox checkBoxWrathOfTheAirTotem;
         private System.Windows.Forms.CheckBox checkBoxBloodlust;
-        private System.Windows.Forms.CheckBox checkBoxRapidCurrents;
+        
         private System.Windows.Forms.CheckBox checkBoxTidalWaves;
         private System.Windows.Forms.Label labelCritModifiers;
         private System.Windows.Forms.CheckBox checkBoxTidalMastery;
@@ -2097,12 +2103,13 @@
         private System.Windows.Forms.Label labelEarthlivingHps2;
         private System.Windows.Forms.Label labelEarthlivingHps1;
         private System.Windows.Forms.Label labelChainHealStacking;
-        private System.Windows.Forms.CheckBox checkBox2PT9Bonus;
-        private System.Windows.Forms.CheckBox checkBox4PT7Bonus;
-        private System.Windows.Forms.CheckBox checkBoxSteamcallersTotem;
-        private System.Windows.Forms.CheckBox checkBox4PT8Bonus;
-        private System.Windows.Forms.CheckBox checkBox2PT8Bonus;
-        private System.Windows.Forms.CheckBox checkBox4PT9Bonus;
+        public System.Windows.Forms.CheckBox checkBoxRapidCurrents;
+        public System.Windows.Forms.CheckBox checkBox2PT9Bonus;
+        public System.Windows.Forms.CheckBox checkBox4PT7Bonus;
+        public System.Windows.Forms.CheckBox checkBoxSteamcallersTotem;
+        public System.Windows.Forms.CheckBox checkBox4PT8Bonus;
+        public System.Windows.Forms.CheckBox checkBox2PT8Bonus;
+        public System.Windows.Forms.CheckBox checkBox4PT9Bonus;
     }
 }
 

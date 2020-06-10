@@ -15,6 +15,10 @@ namespace App.Models
             this.OwnerDraw = true;
             this.Popup += new PopupEventHandler(this.OnPopup);
             this.Draw += new DrawToolTipEventHandler(this.OnDraw);
+
+            this.InitialDelay = 20;
+            this.ReshowDelay = 20;
+            this.AutoPopDelay = 15000;
         }
 
         private void OnPopup(object sender, PopupEventArgs e) // use this event to set the size of the tool tip

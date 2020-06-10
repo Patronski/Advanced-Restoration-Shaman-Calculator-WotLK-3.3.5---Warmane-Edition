@@ -453,6 +453,14 @@
     <None Include="Resources\Mana Tide TotemH.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\4pT9_Bonus.png" />
+    <None Include="Resources\Steamcallers_Totem.png" />
+    <None Include="Resources\2pT8_Bonus.png" />
+    <None Include="Resources\2pT9_Bonus.png" />
+    <None Include="Resources\4pT7_Bonus.png" />
+    <None Include="Resources\4pT8_Bonus.png" />
+    <None Include="Resources\4pT7_HW.png" />
+    <None Include="Resources\4pT7_CH.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

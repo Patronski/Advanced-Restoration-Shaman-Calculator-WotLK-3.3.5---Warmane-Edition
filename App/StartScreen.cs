@@ -42,7 +42,6 @@ namespace App
 
             myToolTip.InitialDelay = 50;
             myToolTip.ReshowDelay = 50;
-            myToolTip.AutoPopDelay = 15000;
 
             myToolTip.SetToolTip(transparentControl2, "Tooltip");
             transparentControl2.Tag = Resources.Ancestral_KnowledgeH;

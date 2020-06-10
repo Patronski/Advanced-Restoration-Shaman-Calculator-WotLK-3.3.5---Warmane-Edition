@@ -51,18 +51,22 @@ namespace App.Models.Spells
         {
             var isGlyphOfRiptide = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
+            var is2PT8Equiped = Modifiers
+                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+
+            int cooldown = is2PT8Equiped ? 5 : 6;
 
             double? avgHps;
 
             if (isGlyphOfRiptide)
             {
                 avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / 6;
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / cooldown;
             }
             else
             {
                 avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / 6;
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / cooldown;
             }
 
             return (int?)avgHps;
@@ -70,15 +74,26 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHotHPS()
         {
+            var is2PT8Equiped = Modifiers
+                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+
+            int cooldown = is2PT8Equiped ? 5 : 6;
+            int hotMultiplier = is2PT8Equiped ? 1 : 2;
+
             var avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (2 * Player.Instance.HotRiptide)) / 6;
+                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (hotMultiplier * Player.Instance.HotRiptide)) / cooldown;
 
             return (int?)avgHps; ;
         }
 
         public override int? CalculateAverageAAHPS()
         {
-            var hps = Player.Instance.CriticalChance * Player.Instance.AncestralAwaceningAvg / 600;
+            var is2PT8Equiped = Modifiers
+                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+
+            int cooldown = is2PT8Equiped ? 500 : 600;
+
+            var hps = Player.Instance.CriticalChance * Player.Instance.AncestralAwaceningAvg / cooldown;
             return (int?)hps;
         }
 

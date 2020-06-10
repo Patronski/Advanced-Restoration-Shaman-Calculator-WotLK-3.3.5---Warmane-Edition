@@ -63,6 +63,66 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2pT8_Bonus {
+            get {
+                object obj = ResourceManager.GetObject("_2pT8_Bonus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2pT9_Bonus {
+            get {
+                object obj = ResourceManager.GetObject("_2pT9_Bonus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4pT7_CH {
+            get {
+                object obj = ResourceManager.GetObject("_4pT7_CH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4pT7_HW {
+            get {
+                object obj = ResourceManager.GetObject("_4pT7_HW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4pT8_Bonus {
+            get {
+                object obj = ResourceManager.GetObject("_4pT8_Bonus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4pT9_Bonus {
+            get {
+                object obj = ResourceManager.GetObject("_4pT9_Bonus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ancestral_AwakeningH {
             get {
                 object obj = ResourceManager.GetObject("Ancestral_AwakeningH", resourceCulture);
@@ -607,6 +667,16 @@ namespace App.Properties {
         internal static System.Drawing.Bitmap SpellRiptide {
             get {
                 object obj = ResourceManager.GetObject("SpellRiptide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Steamcallers_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Steamcallers_Totem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
