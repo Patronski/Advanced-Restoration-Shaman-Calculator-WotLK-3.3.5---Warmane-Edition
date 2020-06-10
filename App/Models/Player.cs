@@ -32,7 +32,6 @@ namespace App.Models
         public void InitialiseForms()
         {
             Player.Instance.FormStartScreen = new StartScreen();
-            Player.Instance.FormCalculator = new Calculator();
         }
 
         private SoundPlayer player { get; set; }

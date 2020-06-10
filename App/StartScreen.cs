@@ -121,6 +121,10 @@ namespace App
             var location = this.DesktopLocation;
 
             this.Hide();
+            if (Player.Instance.FormCalculator == null)
+            {
+                Player.Instance.FormCalculator = new Calculator();
+            }
             var calculator = Player.Instance.FormCalculator;
             calculator.DesktopLocation = location;
             calculator.Show();
