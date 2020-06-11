@@ -1951,7 +1951,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) - Warmane Edition";
+            this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Calculator_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).EndInit();

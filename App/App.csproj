@@ -74,6 +74,9 @@
     <Compile Include="Models\CustomizedToolTip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Models\CustomSoundPlayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\CustomTooltipEasy.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -462,6 +465,7 @@
     <None Include="Resources\4pT8_Bonus.png" />
     <None Include="Resources\4pT7_HW.png" />
     <None Include="Resources\4pT7_CH.png" />
+    <None Include="Resources\ST.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

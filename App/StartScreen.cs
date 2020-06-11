@@ -17,7 +17,7 @@ namespace App
         public StartScreen()
         {
             InitializeComponent();
-            Player.Instance.PlaySound("on");
+            soundPlayer.PlaySound("on");
 
             InitialiseTooltips();
             var cur = new Cursor(Properties.Resources.wow_cursor_hand_croped.GetHicon());
@@ -26,6 +26,8 @@ namespace App
             textBox3.Cursor = cur;
             textBox2.Cursor = cur;
         }
+
+        private CustomSoundPlayer soundPlayer = new CustomSoundPlayer();
 
         private void InitialiseTooltips()
         {
@@ -159,7 +161,10 @@ namespace App
         private void StartScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            Player.Instance.PlaySound("off");
+            if (!Player.Instance.MuteSound)
+            {
+                soundPlayer.PlaySound("off");
+            }
         }
     }
 }

@@ -19,6 +19,7 @@ namespace App
     public partial class Calculator : Form
     {
         private List<CheckBox> checkBoxes;
+        private CustomSoundPlayer soundPlayer = new CustomSoundPlayer();
 
         private Spell selectedSpell;
         private bool isAfterCritKeyPress;
@@ -72,7 +73,7 @@ namespace App
             checkBox4PT9Bonus.Tag = Resources._4pT9_Bonus;
 
             myToolTip.SetToolTip(checkBoxSteamcallersTotem, "mod");
-            checkBoxSteamcallersTotem.Tag = Resources.Steamcallers_Totem;
+            checkBoxSteamcallersTotem.Tag = Resources.ST;
 
             myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
             checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
@@ -301,7 +302,10 @@ namespace App
 
             SelectSpellImage(selectedSpell);
 
-            Player.Instance.PlaySound(selectedSpell.Name);
+            if (!Player.Instance.MuteSound)
+            {
+                soundPlayer.PlaySound(selectedSpell.Name);
+            }
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
             EnableDisableControlls();
@@ -1029,27 +1033,14 @@ namespace App
             var startScreen = Forms.Instance.FormStartScreen;
             startScreen.DesktopLocation = location;
             startScreen.Show();
-            //this.Close();
         }
-
-        //private void numericUpDownCriticalChance_Enter(object sender, EventArgs e)
-        //{
-        //    // Select the whole answer in the NumericUpDown control.
-        //    NumericUpDown answerBox = sender as NumericUpDown;
-
-        //    if (answerBox != null)
-        //    {
-        //        int lengthOfAnswer = answerBox.Value.ToString().Length;
-        //        answerBox.Select(0, lengthOfAnswer);
-        //    }
-        //}
 
         private void checkBoxMuteSound_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxMuteSound.Checked)
             {
                 Player.Instance.MuteSound = true;
-                Player.Instance.StopSound();
+                soundPlayer.StopSound();
             }
             else
             {

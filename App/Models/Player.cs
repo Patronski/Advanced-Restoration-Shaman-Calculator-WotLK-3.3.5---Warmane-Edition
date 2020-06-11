@@ -1,12 +1,5 @@
-﻿using App.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App.Models
 {
@@ -17,7 +10,6 @@ namespace App.Models
     {
         private Player() 
          {
-            player = new SoundPlayer();
             Modifiers = new Dictionary<string, bool>();
             ModifierNames = new List<string>();
         }
@@ -32,79 +24,14 @@ namespace App.Models
             }
         }
 
-        //public static Player Instance { get; } = new Player();
-
-        //public Calculator FormCalculator { get; set; }
-        //public StartScreen FormStartScreen { get; set; }
-
-        private SoundPlayer player { get; set; }
-        private bool isOffSoundPlayed { get; set; }
-        private bool isOnSoundPlayed { get; set; }
-        public bool MuteSound { get; set; }
-        public void StopSound()
-        {
-            player.Stop();
-        }
-
-        internal void PlaySound(string name)
-        {
-            if (MuteSound) return;
-
-            switch (name)
-            {
-                case "on":
-                    if (!isOnSoundPlayed)
-                    {
-                        player.Stream = Resources.ON_S;
-                        player.Play();
-                        isOnSoundPlayed = true;
-                    }
-                    return;
-                case "off":
-                    if (!isOffSoundPlayed)
-                    {
-                        player.Stream = Resources.OFF_S;
-                        player.PlaySync();
-                        isOffSoundPlayed = true;
-                    }
-                    return;
-                case Constants.SpellChainHeal:
-                    player.Stream = Resources.CH;
-                    break;
-                case Constants.SpellEarthliving:
-                    player.Stream = Resources.EarthL;
-                    break;
-                case Constants.SpellESh:
-                    player.Stream = Resources.ES;
-                    break;
-                case Constants.SpellHST:
-                    player.Stream = Resources.HST;
-                    break;
-                case Constants.SpellHW:
-                    player.Stream = Resources.HW;
-                    break;
-                case Constants.SpellLHW:
-                    player.Stream = Resources.LHW;
-                    break;
-                case Constants.SpellRiptide:
-                    player.Stream = Resources.RP;
-                    break;
-            }
-
-            player.Play();
-        }
-
-        /// <summary>
-        /// thread safe
-        /// </summary>
-
-
         public void Recalculate() 
         {
             CriticalValue = Constants.CriticalMultiplier;
             Player.Instance.HasteRating = Player.Instance.HasteRating; // reseting HastePercent
             Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
         }
+
+        public bool MuteSound { get; set; }
 
         public Dictionary<string, bool> Modifiers { get; set; }
 

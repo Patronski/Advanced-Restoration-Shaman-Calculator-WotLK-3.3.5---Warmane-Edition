@@ -674,9 +674,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Steamcallers_Totem {
+        internal static System.Drawing.Bitmap ST {
             get {
-                object obj = ResourceManager.GetObject("Steamcallers_Totem", resourceCulture);
+                object obj = ResourceManager.GetObject("ST", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

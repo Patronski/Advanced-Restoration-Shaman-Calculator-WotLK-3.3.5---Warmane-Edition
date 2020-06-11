@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using App.Properties;
+using System.Media;
 
 namespace App.Models
 {
@@ -10,7 +7,6 @@ namespace App.Models
     {
         private Forms()
         {
-
         }
 
         public static Forms Instance { get; } = new Forms();
