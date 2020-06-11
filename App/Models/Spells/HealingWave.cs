@@ -156,23 +156,23 @@ namespace App.Models.Spells
         {
             if (modName == Constants.Mod4PT7Bonus)
             {
-                if (Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                if (Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
+                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
                 var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
                 mod.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.ModRapidCurrents)
             {
-                if (Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked)
+                if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
                 var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
                 mod.IsCheckBoxChecked = false;
             }

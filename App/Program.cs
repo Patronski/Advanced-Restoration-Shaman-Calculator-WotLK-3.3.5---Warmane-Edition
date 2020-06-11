@@ -17,8 +17,8 @@ namespace App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Player.Instance.InitialiseForms();
-            Application.Run(Player.Instance.FormStartScreen);
+            Forms.Instance.FormStartScreen = new StartScreen();
+            Application.Run(Forms.Instance.FormStartScreen);
         }
     }
 }

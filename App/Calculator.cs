@@ -24,6 +24,7 @@ namespace App
         private bool isAfterCritKeyPress;
         private bool isCritModified;
         public bool skipEventChanged;
+        private CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
         public Calculator()
         {
@@ -58,8 +59,6 @@ namespace App
 
         private void AddTooltips()
         {
-            CustomTooltipEasy myToolTip = new CustomTooltipEasy();
-
             myToolTip.SetToolTip(checkBox2PT8Bonus, "mod");
             checkBox2PT8Bonus.Tag = Resources._2pT8_Bonus;
 
@@ -316,13 +315,11 @@ namespace App
 
             if (selectedSpell.Name == Constants.SpellChainHeal)
             {
-                var myToolTip = new CustomTooltipEasy();
                 myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
                 checkBox4PT7Bonus.Tag = Resources._4pT7_CH;
             }
             else if (selectedSpell.Name == Constants.SpellHW)
             {
-                var myToolTip = new CustomTooltipEasy();
                 myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
                 checkBox4PT7Bonus.Tag = Resources._4pT7_HW;
             }
@@ -400,6 +397,39 @@ namespace App
                 labelAvgHotHps.Enabled = true;
                 labelChainedHeal2.Enabled = true;
                 textBoxAvgHotHps.Enabled = true;
+            }
+
+            //textBoxHasteRating.Enabled
+            //textBoxHastePercent.Enabled
+            //numericUpDownCriticalChance.Enabled
+            switch (selectedSpell.Name)
+            {
+                case Constants.SpellEarthliving:
+                    textBoxHasteRating.Enabled = false;
+                    numericUpDownCriticalChance.Enabled = false;
+                    textBoxHastePercent.Enabled = false;
+                    break;
+                case Constants.SpellESh:
+                    textBoxHasteRating.Enabled = false;
+                    textBoxHastePercent.Enabled = false;
+                    numericUpDownCriticalChance.Enabled = true;
+                    break;
+                case Constants.SpellHST:
+                    textBoxHasteRating.Enabled = false;
+                    textBoxHastePercent.Enabled = false;
+                    numericUpDownCriticalChance.Enabled = false;
+                    break;
+                
+                case Constants.SpellRiptide:
+                    textBoxHasteRating.Enabled = false;
+                    textBoxHastePercent.Enabled = false;
+                    numericUpDownCriticalChance.Enabled = true;
+                    break;
+                default:
+                    textBoxHastePercent.Enabled = true;
+                    textBoxHasteRating.Enabled = true;
+                    numericUpDownCriticalChance.Enabled = true;
+                    break;
             }
         }
 
@@ -996,7 +1026,7 @@ namespace App
             var location = this.DesktopLocation;
 
             this.Hide();
-            var startScreen = Player.Instance.FormStartScreen;
+            var startScreen = Forms.Instance.FormStartScreen;
             startScreen.DesktopLocation = location;
             startScreen.Show();
             //this.Close();
@@ -1035,7 +1065,8 @@ namespace App
         private void Calculator_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            Player.Instance.FormStartScreen.Close();
+            Forms.Instance.FormStartScreen.Close();
+            this.Close();
         }
     }
 }

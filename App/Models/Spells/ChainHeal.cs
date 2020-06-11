@@ -214,85 +214,85 @@ namespace App.Models.Spells
         {
             if (modName == Constants.Mod4PT7Bonus)
             {
-                if (Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                if (Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
-                
-                Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
+
+                Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
                 var modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT8Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT9Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
+                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.Mod4PT8Bonus)
             {
-                if (Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
                 var modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT9Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
+                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.Mod4PT9Bonus)
             {
-                if (Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
                 var modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT8Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
+                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.ModRapidCurrents)
             {
-                if (Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
-                    Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked)
+                if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
+                    Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked)
                 {
-                    Player.Instance.FormCalculator.skipEventChanged = true;
+                    Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Player.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
                 var modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT8Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT9Bonus);
                 modifier.IsCheckBoxChecked = false;
             }

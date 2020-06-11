@@ -167,12 +167,12 @@ namespace App.Models
 
         public void CheckModifiers(List<string> checkedModifierNames)
         {
-            if (Player.Instance.FormCalculator.checkBoxRapidCurrents.Checked &&
-            (Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked || Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked))
+            if (Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked &&
+            (Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked || Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked))
             {
-                Player.Instance.FormCalculator.skipEventChanged = true;
-                Player.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
-                Player.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
+                Forms.Instance.FormCalculator.skipEventChanged = true;
+                Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
+                Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
             }
 
             foreach (var modifier in this.Modifiers)

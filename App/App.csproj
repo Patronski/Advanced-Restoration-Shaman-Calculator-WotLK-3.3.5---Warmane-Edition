@@ -78,6 +78,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\Enums\ModifierType.cs" />
+    <Compile Include="Models\Forms.cs" />
     <Compile Include="Models\Modifier.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />

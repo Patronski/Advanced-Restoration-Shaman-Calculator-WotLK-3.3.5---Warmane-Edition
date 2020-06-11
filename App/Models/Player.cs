@@ -22,17 +22,20 @@ namespace App.Models
             ModifierNames = new List<string>();
         }
 
-        //private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
+        private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
 
-        public static Player Instance { get; } = new Player();
-
-        public Calculator FormCalculator { get; set; }
-        public StartScreen FormStartScreen { get; set; }
-
-        public void InitialiseForms()
+        public static Player Instance
         {
-            Player.Instance.FormStartScreen = new StartScreen();
+            get
+            {
+                return lazyInstance.Value;
+            }
         }
+
+        //public static Player Instance { get; } = new Player();
+
+        //public Calculator FormCalculator { get; set; }
+        //public StartScreen FormStartScreen { get; set; }
 
         private SoundPlayer player { get; set; }
         private bool isOffSoundPlayed { get; set; }
