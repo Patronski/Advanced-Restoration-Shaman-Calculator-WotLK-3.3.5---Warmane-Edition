@@ -1057,7 +1057,6 @@ namespace App
         {
             this.Hide();
             Forms.Instance.FormStartScreen.Close();
-            this.Close();
         }
     }
 }

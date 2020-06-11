@@ -164,12 +164,13 @@ namespace App.Models.Spells
             var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
+            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
             var formula = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue)
                 + (1 - Player.Instance.CriticalChance / 100 ) )
-                * Player.Instance.Hit1Avg * 0.4 * (1 + hastePercent / 100));
+                * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100));
 
             var isGlyphOfChainHeal = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
