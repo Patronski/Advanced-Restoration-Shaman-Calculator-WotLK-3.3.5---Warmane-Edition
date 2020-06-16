@@ -124,7 +124,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(41, 27);
             this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "v1.2";
+            this.textBox2.Text = "v1.3";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox5
@@ -432,8 +432,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(176)))));
-            this.ClientSize = new System.Drawing.Size(1440, 763);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.linkOpenSource);
             this.Controls.Add(this.transparentControl2);
             this.Controls.Add(this.transparentControl24);

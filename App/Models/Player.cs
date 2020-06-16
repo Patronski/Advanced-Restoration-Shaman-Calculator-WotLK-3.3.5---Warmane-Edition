@@ -87,13 +87,17 @@ namespace App.Models
 
         public double CriticalValue { get; set; } = Constants.CriticalMultiplier;
 
-        public bool IsEquipedMetagemForCrit { get; set; }
+        public List<string> ModifierNames;
+
+        public bool isCritModified;
 
         public double? CastingTime { get; set; }
 
         public int? AvgHps { get; set; }
 
         public int? AvgHotHps { get; set; }
+
+        public int? AvgHpm { get; set; }
 
         public int? AvgAAHps { get; set; }
 
@@ -144,9 +148,5 @@ namespace App.Models
         public int? EarthlivingAvgHpsLHW { get; set; }
         public int? EarthlivingAvgHpsRP { get; set; }
         public int? EarthlivingAvgHpsTotal { get; set; }
-
-        public List<string> ModifierNames;
-
-        public bool isCritModified;
     }
 }

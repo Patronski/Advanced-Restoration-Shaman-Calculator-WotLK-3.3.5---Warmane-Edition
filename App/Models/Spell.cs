@@ -145,6 +145,7 @@ namespace App.Models
             Player.Instance.AvgHotHps = CalculateAverageHotHPS();
             Player.Instance.AvgAAHps = CalculateAverageAAHPS();
             Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
+            Player.Instance.AvgHpm = CalculateAvgHpm();
 
             var modChainHeal = Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);
@@ -152,6 +153,11 @@ namespace App.Models
             {
                 modChainHeal.Modify();
             }
+        }
+
+        public virtual int? CalculateAvgHpm()
+        {
+            return null;
         }
 
         protected void ModifyWithModifiers()
