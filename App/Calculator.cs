@@ -670,6 +670,43 @@ namespace App
             labelEarthlivingHps2.Hide();
             labelChainHealStacking.Hide();
 
+            textBoxMp5CHPM.Hide();
+            textBoxMp5Crit.Hide();
+            textBoxMp5LHWPM.Hide();
+            textBoxMp5Percent.Hide();
+            textBoxMp5RPM.Hide();
+            textBoxMp5TotalCrit.Hide();
+            textBoxMP5TimeDec.Hide();
+            textBoxMP5TimeMin.Hide();
+            textBoxMP5TimeSec.Hide();
+            textBoxMP5TotalCH.Hide();
+            textBoxMP5TotalHW.Hide();
+            textBoxMP5TotalLHW.Hide();
+            textBoxMP5TotalRiptides.Hide();
+            textBoxMp5HWPM.Hide();
+            labelMp5Arrow.Hide();
+            labelMp5arrrow2.Hide();
+            labelMp5Arrow3.Hide();
+            labelMp5Arrow4.Hide();
+            labelMp5Arrow5.Hide();
+            labelMp5CHPM.Hide();
+            labelMp5Crit.Hide();
+            labelMp5LHealingWave.Hide();
+            labelMP5LHWPM.Hide();
+            labelMP5HWPM.Hide();
+            labelMp5Min.Hide();
+            labelMp5Mp5S.Hide();
+            labelMp5Percent.Hide();
+            labelMp5rightPercent.Hide();
+            labelMp5RightTotalCrit.Hide();
+            labelMp5RPM.Hide();
+            labelMp5Sec.Hide();
+            labelMp5TimeLength.Hide();
+            labelMp5TotalCH.Hide();
+            labelMp5TotalCritLeft.Hide();
+            labelMp5TotalHealingWaves.Hide();
+            labelMp5TotalRiptides.Hide();
+
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
@@ -907,6 +944,44 @@ namespace App
                     labelHot.Show();
                     textBoxHotRiptide.Show();
                     break;
+                case Constants.SpellCritIntoMP5S:
+                    textBoxMp5CHPM.Show();
+                    textBoxMp5Crit.Show();
+                    textBoxMp5LHWPM.Show();
+                    textBoxMp5Percent.Show();
+                    textBoxMp5RPM.Show();
+                    textBoxMp5TotalCrit.Show();
+                    textBoxMP5TimeDec.Show();
+                    textBoxMP5TimeMin.Show();
+                    textBoxMP5TimeSec.Show();
+                    textBoxMP5TotalCH.Show();
+                    textBoxMP5TotalHW.Show();
+                    textBoxMP5TotalLHW.Show();
+                    textBoxMP5TotalRiptides.Show();
+                    textBoxMp5HWPM.Show();
+                    labelMp5Arrow.Show();
+                    labelMp5arrrow2.Show();
+                    labelMp5Arrow3.Show();
+                    labelMp5Arrow4.Show();
+                    labelMp5Arrow5.Show();
+                    labelMp5CHPM.Show();
+                    labelMp5Crit.Show();
+                    labelMp5LHealingWave.Show();
+                    labelMP5LHWPM.Show();
+                    labelMP5HWPM.Show();
+                    labelMp5Min.Show();
+                    labelMp5Mp5S.Show();
+                    labelMp5Percent.Show();
+                    labelMp5rightPercent.Show();
+                    labelMp5RightTotalCrit.Show();
+                    labelMp5RPM.Show();
+                    labelMp5Sec.Show();
+                    labelMp5TimeLength.Show();
+                    labelMp5TotalCH.Show();
+                    labelMp5TotalCritLeft.Show();
+                    labelMp5TotalHealingWaves.Show();
+                    labelMp5TotalRiptides.Show();
+                    break;
             }
         }
 
@@ -1057,6 +1132,62 @@ namespace App
         {
             this.Hide();
             Forms.Instance.FormStartScreen.Close();
+        }
+
+        private void textBoxMP5TimeMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMP5TotalRiptides_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMP5TotalHW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMP5TimeSec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            var text = (string)sender.GetType().GetProperty("Text").GetValue(sender);
+
+            if (text != null && char.IsDigit(e.KeyChar) && int.Parse(text + e.KeyChar) > 59)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMP5TotalLHW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMP5TotalCH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

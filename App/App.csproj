@@ -115,6 +115,7 @@
     <Compile Include="Models\Rank.cs" />
     <Compile Include="Models\Spell.cs" />
     <Compile Include="Models\Spells\ChainHeal.cs" />
+    <Compile Include="Models\Spells\CritIntoMP5S.cs" />
     <Compile Include="Models\Spells\Earthliving.cs" />
     <Compile Include="Models\Spells\EarthShield.cs" />
     <Compile Include="Models\Spells\HealingStreamTotem.cs" />

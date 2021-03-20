@@ -19,6 +19,7 @@ namespace App.Models
         public const string SpellHW = "Healing Wave";
         public const string SpellLHW = "Lesser Healing Wave";
         public const string SpellRiptide = "Riptide";
+        public const string SpellCritIntoMP5S = "Critical Into MP5S";
 
         public const string ModBloodlust = "Bloodlust / Heroism";
         public const string ModEmeraldVigor = ""; // TODO

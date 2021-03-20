@@ -175,6 +175,42 @@
             this.checkBox4PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox2PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox4PT9Bonus = new System.Windows.Forms.CheckBox();
+            this.textBoxMP5TimeMin = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TimeSec = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TimeDec = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TotalRiptides = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TotalHW = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TotalLHW = new System.Windows.Forms.TextBox();
+            this.textBoxMP5TotalCH = new System.Windows.Forms.TextBox();
+            this.labelMp5Min = new System.Windows.Forms.Label();
+            this.labelMp5Sec = new System.Windows.Forms.Label();
+            this.labelMp5Arrow = new System.Windows.Forms.Label();
+            this.labelMp5TimeLength = new System.Windows.Forms.Label();
+            this.labelMp5TotalRiptides = new System.Windows.Forms.Label();
+            this.textBoxMp5RPM = new System.Windows.Forms.TextBox();
+            this.labelMp5arrrow2 = new System.Windows.Forms.Label();
+            this.labelMp5Arrow3 = new System.Windows.Forms.Label();
+            this.textBoxMp5HWPM = new System.Windows.Forms.TextBox();
+            this.labelMp5Arrow4 = new System.Windows.Forms.Label();
+            this.textBoxMp5LHWPM = new System.Windows.Forms.TextBox();
+            this.labelMp5Arrow5 = new System.Windows.Forms.Label();
+            this.textBoxMp5CHPM = new System.Windows.Forms.TextBox();
+            this.labelMp5TotalHealingWaves = new System.Windows.Forms.Label();
+            this.labelMp5LHealingWave = new System.Windows.Forms.Label();
+            this.labelMp5TotalCH = new System.Windows.Forms.Label();
+            this.labelMp5RPM = new System.Windows.Forms.Label();
+            this.labelMP5HWPM = new System.Windows.Forms.Label();
+            this.labelMP5LHWPM = new System.Windows.Forms.Label();
+            this.labelMp5CHPM = new System.Windows.Forms.Label();
+            this.textBoxMp5Crit = new System.Windows.Forms.TextBox();
+            this.textBoxMp5Percent = new System.Windows.Forms.TextBox();
+            this.textBoxMp5TotalCrit = new System.Windows.Forms.TextBox();
+            this.labelMp5Crit = new System.Windows.Forms.Label();
+            this.labelMp5Mp5S = new System.Windows.Forms.Label();
+            this.labelMp5Percent = new System.Windows.Forms.Label();
+            this.labelMp5rightPercent = new System.Windows.Forms.Label();
+            this.labelMp5TotalCritLeft = new System.Windows.Forms.Label();
+            this.labelMp5RightTotalCrit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -210,7 +246,7 @@
             this.comboBoxSpell.Name = "comboBoxSpell";
             this.comboBoxSpell.Size = new System.Drawing.Size(200, 21);
             this.comboBoxSpell.TabIndex = 2;
-            this.comboBoxSpell.Text = "Select spell";
+            this.comboBoxSpell.Text = "Select option";
             this.comboBoxSpell.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpell_SelectedIndexChanged);
             // 
             // labelCrit
@@ -1796,12 +1832,415 @@
             this.checkBox4PT9Bonus.UseVisualStyleBackColor = true;
             this.checkBox4PT9Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
+            // textBoxMP5TimeMin
+            // 
+            this.textBoxMP5TimeMin.Location = new System.Drawing.Point(361, 96);
+            this.textBoxMP5TimeMin.MaxLength = 10;
+            this.textBoxMP5TimeMin.Name = "textBoxMP5TimeMin";
+            this.textBoxMP5TimeMin.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TimeMin.TabIndex = 165;
+            this.textBoxMP5TimeMin.Visible = false;
+            this.textBoxMP5TimeMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TimeMin_KeyPress);
+            // 
+            // textBoxMP5TimeSec
+            // 
+            this.textBoxMP5TimeSec.Location = new System.Drawing.Point(454, 96);
+            this.textBoxMP5TimeSec.MaxLength = 10;
+            this.textBoxMP5TimeSec.Name = "textBoxMP5TimeSec";
+            this.textBoxMP5TimeSec.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TimeSec.TabIndex = 166;
+            this.textBoxMP5TimeSec.Visible = false;
+            this.textBoxMP5TimeSec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TimeSec_KeyPress);
+            // 
+            // textBoxMP5TimeDec
+            // 
+            this.textBoxMP5TimeDec.Location = new System.Drawing.Point(581, 96);
+            this.textBoxMP5TimeDec.MaxLength = 10;
+            this.textBoxMP5TimeDec.Name = "textBoxMP5TimeDec";
+            this.textBoxMP5TimeDec.ReadOnly = true;
+            this.textBoxMP5TimeDec.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TimeDec.TabIndex = 167;
+            this.textBoxMP5TimeDec.Visible = false;
+            // 
+            // textBoxMP5TotalRiptides
+            // 
+            this.textBoxMP5TotalRiptides.Location = new System.Drawing.Point(361, 133);
+            this.textBoxMP5TotalRiptides.MaxLength = 10;
+            this.textBoxMP5TotalRiptides.Name = "textBoxMP5TotalRiptides";
+            this.textBoxMP5TotalRiptides.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TotalRiptides.TabIndex = 168;
+            this.textBoxMP5TotalRiptides.Visible = false;
+            this.textBoxMP5TotalRiptides.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalRiptides_KeyPress);
+            // 
+            // textBoxMP5TotalHW
+            // 
+            this.textBoxMP5TotalHW.Location = new System.Drawing.Point(361, 174);
+            this.textBoxMP5TotalHW.MaxLength = 10;
+            this.textBoxMP5TotalHW.Name = "textBoxMP5TotalHW";
+            this.textBoxMP5TotalHW.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TotalHW.TabIndex = 169;
+            this.textBoxMP5TotalHW.Visible = false;
+            this.textBoxMP5TotalHW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalHW_KeyPress);
+            // 
+            // textBoxMP5TotalLHW
+            // 
+            this.textBoxMP5TotalLHW.Location = new System.Drawing.Point(361, 208);
+            this.textBoxMP5TotalLHW.MaxLength = 10;
+            this.textBoxMP5TotalLHW.Name = "textBoxMP5TotalLHW";
+            this.textBoxMP5TotalLHW.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TotalLHW.TabIndex = 170;
+            this.textBoxMP5TotalLHW.Visible = false;
+            this.textBoxMP5TotalLHW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalLHW_KeyPress);
+            // 
+            // textBoxMP5TotalCH
+            // 
+            this.textBoxMP5TotalCH.Location = new System.Drawing.Point(361, 244);
+            this.textBoxMP5TotalCH.MaxLength = 10;
+            this.textBoxMP5TotalCH.Name = "textBoxMP5TotalCH";
+            this.textBoxMP5TotalCH.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMP5TotalCH.TabIndex = 171;
+            this.textBoxMP5TotalCH.Visible = false;
+            this.textBoxMP5TotalCH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalCH_KeyPress);
+            // 
+            // labelMp5Min
+            // 
+            this.labelMp5Min.AutoSize = true;
+            this.labelMp5Min.Location = new System.Drawing.Point(425, 99);
+            this.labelMp5Min.Name = "labelMp5Min";
+            this.labelMp5Min.Size = new System.Drawing.Size(23, 13);
+            this.labelMp5Min.TabIndex = 172;
+            this.labelMp5Min.Text = "min";
+            this.labelMp5Min.Visible = false;
+            // 
+            // labelMp5Sec
+            // 
+            this.labelMp5Sec.AutoSize = true;
+            this.labelMp5Sec.Location = new System.Drawing.Point(518, 100);
+            this.labelMp5Sec.Name = "labelMp5Sec";
+            this.labelMp5Sec.Size = new System.Drawing.Size(24, 13);
+            this.labelMp5Sec.TabIndex = 173;
+            this.labelMp5Sec.Text = "sec";
+            this.labelMp5Sec.Visible = false;
+            // 
+            // labelMp5Arrow
+            // 
+            this.labelMp5Arrow.AutoSize = true;
+            this.labelMp5Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Arrow.Location = new System.Drawing.Point(548, 98);
+            this.labelMp5Arrow.Name = "labelMp5Arrow";
+            this.labelMp5Arrow.Size = new System.Drawing.Size(26, 16);
+            this.labelMp5Arrow.TabIndex = 174;
+            this.labelMp5Arrow.Text = "—>";
+            this.labelMp5Arrow.Visible = false;
+            // 
+            // labelMp5TimeLength
+            // 
+            this.labelMp5TimeLength.AutoSize = true;
+            this.labelMp5TimeLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TimeLength.ForeColor = System.Drawing.Color.Black;
+            this.labelMp5TimeLength.Location = new System.Drawing.Point(290, 99);
+            this.labelMp5TimeLength.Name = "labelMp5TimeLength";
+            this.labelMp5TimeLength.Size = new System.Drawing.Size(65, 13);
+            this.labelMp5TimeLength.TabIndex = 175;
+            this.labelMp5TimeLength.Text = "Time length:";
+            this.labelMp5TimeLength.Visible = false;
+            // 
+            // labelMp5TotalRiptides
+            // 
+            this.labelMp5TotalRiptides.AutoSize = true;
+            this.labelMp5TotalRiptides.Location = new System.Drawing.Point(280, 136);
+            this.labelMp5TotalRiptides.Name = "labelMp5TotalRiptides";
+            this.labelMp5TotalRiptides.Size = new System.Drawing.Size(75, 13);
+            this.labelMp5TotalRiptides.TabIndex = 176;
+            this.labelMp5TotalRiptides.Text = "Total Riptides:";
+            this.labelMp5TotalRiptides.Visible = false;
+            // 
+            // textBoxMp5RPM
+            // 
+            this.textBoxMp5RPM.Location = new System.Drawing.Point(454, 132);
+            this.textBoxMp5RPM.MaxLength = 10;
+            this.textBoxMp5RPM.Name = "textBoxMp5RPM";
+            this.textBoxMp5RPM.ReadOnly = true;
+            this.textBoxMp5RPM.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5RPM.TabIndex = 177;
+            this.textBoxMp5RPM.Visible = false;
+            // 
+            // labelMp5arrrow2
+            // 
+            this.labelMp5arrrow2.AutoSize = true;
+            this.labelMp5arrrow2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5arrrow2.Location = new System.Drawing.Point(422, 134);
+            this.labelMp5arrrow2.Name = "labelMp5arrrow2";
+            this.labelMp5arrrow2.Size = new System.Drawing.Size(26, 16);
+            this.labelMp5arrrow2.TabIndex = 178;
+            this.labelMp5arrrow2.Text = "—>";
+            this.labelMp5arrrow2.Visible = false;
+            // 
+            // labelMp5Arrow3
+            // 
+            this.labelMp5Arrow3.AutoSize = true;
+            this.labelMp5Arrow3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Arrow3.Location = new System.Drawing.Point(422, 174);
+            this.labelMp5Arrow3.Name = "labelMp5Arrow3";
+            this.labelMp5Arrow3.Size = new System.Drawing.Size(26, 16);
+            this.labelMp5Arrow3.TabIndex = 179;
+            this.labelMp5Arrow3.Text = "—>";
+            this.labelMp5Arrow3.Visible = false;
+            // 
+            // textBoxMp5HWPM
+            // 
+            this.textBoxMp5HWPM.Location = new System.Drawing.Point(454, 173);
+            this.textBoxMp5HWPM.MaxLength = 10;
+            this.textBoxMp5HWPM.Name = "textBoxMp5HWPM";
+            this.textBoxMp5HWPM.ReadOnly = true;
+            this.textBoxMp5HWPM.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5HWPM.TabIndex = 180;
+            this.textBoxMp5HWPM.Visible = false;
+            // 
+            // labelMp5Arrow4
+            // 
+            this.labelMp5Arrow4.AutoSize = true;
+            this.labelMp5Arrow4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Arrow4.Location = new System.Drawing.Point(422, 209);
+            this.labelMp5Arrow4.Name = "labelMp5Arrow4";
+            this.labelMp5Arrow4.Size = new System.Drawing.Size(26, 16);
+            this.labelMp5Arrow4.TabIndex = 181;
+            this.labelMp5Arrow4.Text = "—>";
+            this.labelMp5Arrow4.Visible = false;
+            // 
+            // textBoxMp5LHWPM
+            // 
+            this.textBoxMp5LHWPM.Location = new System.Drawing.Point(454, 208);
+            this.textBoxMp5LHWPM.MaxLength = 10;
+            this.textBoxMp5LHWPM.Name = "textBoxMp5LHWPM";
+            this.textBoxMp5LHWPM.ReadOnly = true;
+            this.textBoxMp5LHWPM.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5LHWPM.TabIndex = 182;
+            this.textBoxMp5LHWPM.Visible = false;
+            // 
+            // labelMp5Arrow5
+            // 
+            this.labelMp5Arrow5.AutoSize = true;
+            this.labelMp5Arrow5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Arrow5.Location = new System.Drawing.Point(422, 246);
+            this.labelMp5Arrow5.Name = "labelMp5Arrow5";
+            this.labelMp5Arrow5.Size = new System.Drawing.Size(26, 16);
+            this.labelMp5Arrow5.TabIndex = 183;
+            this.labelMp5Arrow5.Text = "—>";
+            this.labelMp5Arrow5.Visible = false;
+            // 
+            // textBoxMp5CHPM
+            // 
+            this.textBoxMp5CHPM.Location = new System.Drawing.Point(454, 245);
+            this.textBoxMp5CHPM.MaxLength = 10;
+            this.textBoxMp5CHPM.Name = "textBoxMp5CHPM";
+            this.textBoxMp5CHPM.ReadOnly = true;
+            this.textBoxMp5CHPM.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5CHPM.TabIndex = 184;
+            this.textBoxMp5CHPM.Visible = false;
+            // 
+            // labelMp5TotalHealingWaves
+            // 
+            this.labelMp5TotalHealingWaves.AutoSize = true;
+            this.labelMp5TotalHealingWaves.Location = new System.Drawing.Point(299, 177);
+            this.labelMp5TotalHealingWaves.Name = "labelMp5TotalHealingWaves";
+            this.labelMp5TotalHealingWaves.Size = new System.Drawing.Size(56, 13);
+            this.labelMp5TotalHealingWaves.TabIndex = 185;
+            this.labelMp5TotalHealingWaves.Text = "Total HW:";
+            this.labelMp5TotalHealingWaves.Visible = false;
+            // 
+            // labelMp5LHealingWave
+            // 
+            this.labelMp5LHealingWave.AutoSize = true;
+            this.labelMp5LHealingWave.Location = new System.Drawing.Point(293, 211);
+            this.labelMp5LHealingWave.Name = "labelMp5LHealingWave";
+            this.labelMp5LHealingWave.Size = new System.Drawing.Size(62, 13);
+            this.labelMp5LHealingWave.TabIndex = 186;
+            this.labelMp5LHealingWave.Text = "Total LHW:";
+            this.labelMp5LHealingWave.Visible = false;
+            // 
+            // labelMp5TotalCH
+            // 
+            this.labelMp5TotalCH.AutoSize = true;
+            this.labelMp5TotalCH.Location = new System.Drawing.Point(303, 248);
+            this.labelMp5TotalCH.Name = "labelMp5TotalCH";
+            this.labelMp5TotalCH.Size = new System.Drawing.Size(52, 13);
+            this.labelMp5TotalCH.TabIndex = 187;
+            this.labelMp5TotalCH.Text = "Total CH:";
+            this.labelMp5TotalCH.Visible = false;
+            // 
+            // labelMp5RPM
+            // 
+            this.labelMp5RPM.AutoSize = true;
+            this.labelMp5RPM.Location = new System.Drawing.Point(518, 136);
+            this.labelMp5RPM.Name = "labelMp5RPM";
+            this.labelMp5RPM.Size = new System.Drawing.Size(31, 13);
+            this.labelMp5RPM.TabIndex = 188;
+            this.labelMp5RPM.Text = "RPM";
+            this.labelMp5RPM.Visible = false;
+            // 
+            // labelMP5HWPM
+            // 
+            this.labelMP5HWPM.AutoSize = true;
+            this.labelMP5HWPM.Location = new System.Drawing.Point(518, 177);
+            this.labelMP5HWPM.Name = "labelMP5HWPM";
+            this.labelMP5HWPM.Size = new System.Drawing.Size(42, 13);
+            this.labelMP5HWPM.TabIndex = 189;
+            this.labelMP5HWPM.Text = "HWPM";
+            this.labelMP5HWPM.Visible = false;
+            // 
+            // labelMP5LHWPM
+            // 
+            this.labelMP5LHWPM.AutoSize = true;
+            this.labelMP5LHWPM.Location = new System.Drawing.Point(518, 211);
+            this.labelMP5LHWPM.Name = "labelMP5LHWPM";
+            this.labelMP5LHWPM.Size = new System.Drawing.Size(48, 13);
+            this.labelMP5LHWPM.TabIndex = 190;
+            this.labelMP5LHWPM.Text = "LHWPM";
+            this.labelMP5LHWPM.Visible = false;
+            // 
+            // labelMp5CHPM
+            // 
+            this.labelMp5CHPM.AutoSize = true;
+            this.labelMp5CHPM.Location = new System.Drawing.Point(518, 248);
+            this.labelMp5CHPM.Name = "labelMp5CHPM";
+            this.labelMp5CHPM.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5CHPM.TabIndex = 191;
+            this.labelMp5CHPM.Text = "CHPM";
+            this.labelMp5CHPM.Visible = false;
+            // 
+            // textBoxMp5Crit
+            // 
+            this.textBoxMp5Crit.Location = new System.Drawing.Point(454, 305);
+            this.textBoxMp5Crit.MaxLength = 10;
+            this.textBoxMp5Crit.Name = "textBoxMp5Crit";
+            this.textBoxMp5Crit.ReadOnly = true;
+            this.textBoxMp5Crit.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5Crit.TabIndex = 192;
+            this.textBoxMp5Crit.Visible = false;
+            // 
+            // textBoxMp5Percent
+            // 
+            this.textBoxMp5Percent.Location = new System.Drawing.Point(454, 347);
+            this.textBoxMp5Percent.MaxLength = 10;
+            this.textBoxMp5Percent.Name = "textBoxMp5Percent";
+            this.textBoxMp5Percent.ReadOnly = true;
+            this.textBoxMp5Percent.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5Percent.TabIndex = 193;
+            this.textBoxMp5Percent.Visible = false;
+            // 
+            // textBoxMp5TotalCrit
+            // 
+            this.textBoxMp5TotalCrit.Location = new System.Drawing.Point(454, 388);
+            this.textBoxMp5TotalCrit.MaxLength = 10;
+            this.textBoxMp5TotalCrit.Name = "textBoxMp5TotalCrit";
+            this.textBoxMp5TotalCrit.ReadOnly = true;
+            this.textBoxMp5TotalCrit.Size = new System.Drawing.Size(58, 20);
+            this.textBoxMp5TotalCrit.TabIndex = 194;
+            this.textBoxMp5TotalCrit.Visible = false;
+            // 
+            // labelMp5Crit
+            // 
+            this.labelMp5Crit.AutoSize = true;
+            this.labelMp5Crit.Location = new System.Drawing.Point(306, 308);
+            this.labelMp5Crit.Name = "labelMp5Crit";
+            this.labelMp5Crit.Size = new System.Drawing.Size(142, 13);
+            this.labelMp5Crit.TabIndex = 195;
+            this.labelMp5Crit.Text = "1 critical strice rating is worth";
+            this.labelMp5Crit.Visible = false;
+            // 
+            // labelMp5Mp5S
+            // 
+            this.labelMp5Mp5S.AutoSize = true;
+            this.labelMp5Mp5S.Location = new System.Drawing.Point(518, 308);
+            this.labelMp5Mp5S.Name = "labelMp5Mp5S";
+            this.labelMp5Mp5S.Size = new System.Drawing.Size(36, 13);
+            this.labelMp5Mp5S.TabIndex = 196;
+            this.labelMp5Mp5S.Text = "MP5S";
+            this.labelMp5Mp5S.Visible = false;
+            // 
+            // labelMp5Percent
+            // 
+            this.labelMp5Percent.AutoSize = true;
+            this.labelMp5Percent.Location = new System.Drawing.Point(369, 350);
+            this.labelMp5Percent.Name = "labelMp5Percent";
+            this.labelMp5Percent.Size = new System.Drawing.Size(79, 13);
+            this.labelMp5Percent.TabIndex = 197;
+            this.labelMp5Percent.Text = "and it becomes";
+            this.labelMp5Percent.Visible = false;
+            // 
+            // labelMp5rightPercent
+            // 
+            this.labelMp5rightPercent.AutoSize = true;
+            this.labelMp5rightPercent.Location = new System.Drawing.Point(518, 350);
+            this.labelMp5rightPercent.Name = "labelMp5rightPercent";
+            this.labelMp5rightPercent.Size = new System.Drawing.Size(326, 13);
+            this.labelMp5rightPercent.TabIndex = 198;
+            this.labelMp5rightPercent.Text = "% as effective as MP5S according to item budget (1 crit = 0.5 mp5s)";
+            this.labelMp5rightPercent.Visible = false;
+            // 
+            // labelMp5TotalCritLeft
+            // 
+            this.labelMp5TotalCritLeft.AutoSize = true;
+            this.labelMp5TotalCritLeft.Location = new System.Drawing.Point(280, 391);
+            this.labelMp5TotalCritLeft.Name = "labelMp5TotalCritLeft";
+            this.labelMp5TotalCritLeft.Size = new System.Drawing.Size(168, 13);
+            this.labelMp5TotalCritLeft.TabIndex = 199;
+            this.labelMp5TotalCritLeft.Text = "Your critical strice chance is worth";
+            this.labelMp5TotalCritLeft.Visible = false;
+            // 
+            // labelMp5RightTotalCrit
+            // 
+            this.labelMp5RightTotalCrit.AutoSize = true;
+            this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(518, 391);
+            this.labelMp5RightTotalCrit.Name = "labelMp5RightTotalCrit";
+            this.labelMp5RightTotalCrit.Size = new System.Drawing.Size(36, 13);
+            this.labelMp5RightTotalCrit.TabIndex = 200;
+            this.labelMp5RightTotalCrit.Text = "MP5S";
+            this.labelMp5RightTotalCrit.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 580);
+            this.Controls.Add(this.labelMp5RightTotalCrit);
+            this.Controls.Add(this.labelMp5TotalCritLeft);
+            this.Controls.Add(this.labelMp5rightPercent);
+            this.Controls.Add(this.labelMp5Percent);
+            this.Controls.Add(this.labelMp5Mp5S);
+            this.Controls.Add(this.labelMp5Crit);
+            this.Controls.Add(this.textBoxMp5TotalCrit);
+            this.Controls.Add(this.textBoxMp5Percent);
+            this.Controls.Add(this.textBoxMp5Crit);
+            this.Controls.Add(this.labelMp5CHPM);
+            this.Controls.Add(this.labelMP5LHWPM);
+            this.Controls.Add(this.labelMP5HWPM);
+            this.Controls.Add(this.labelMp5RPM);
+            this.Controls.Add(this.labelMp5TotalCH);
+            this.Controls.Add(this.labelMp5LHealingWave);
+            this.Controls.Add(this.labelMp5TotalHealingWaves);
+            this.Controls.Add(this.textBoxMp5CHPM);
+            this.Controls.Add(this.labelMp5Arrow5);
+            this.Controls.Add(this.textBoxMp5LHWPM);
+            this.Controls.Add(this.labelMp5Arrow4);
+            this.Controls.Add(this.textBoxMp5HWPM);
+            this.Controls.Add(this.labelMp5Arrow3);
+            this.Controls.Add(this.labelMp5arrrow2);
+            this.Controls.Add(this.textBoxMp5RPM);
+            this.Controls.Add(this.labelMp5TotalRiptides);
+            this.Controls.Add(this.labelMp5TimeLength);
+            this.Controls.Add(this.labelMp5Arrow);
+            this.Controls.Add(this.labelMp5Sec);
+            this.Controls.Add(this.labelMp5Min);
+            this.Controls.Add(this.textBoxMP5TotalCH);
+            this.Controls.Add(this.textBoxMP5TotalLHW);
+            this.Controls.Add(this.textBoxMP5TotalHW);
+            this.Controls.Add(this.textBoxMP5TotalRiptides);
+            this.Controls.Add(this.textBoxMP5TimeDec);
+            this.Controls.Add(this.textBoxMP5TimeSec);
+            this.Controls.Add(this.textBoxMP5TimeMin);
             this.Controls.Add(this.checkBox4PT9Bonus);
             this.Controls.Add(this.checkBox2PT8Bonus);
             this.Controls.Add(this.checkBox4PT8Bonus);
@@ -2110,6 +2549,42 @@
         public System.Windows.Forms.CheckBox checkBox4PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox2PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox4PT9Bonus;
+        private System.Windows.Forms.TextBox textBoxMP5TimeMin;
+        private System.Windows.Forms.TextBox textBoxMP5TimeSec;
+        private System.Windows.Forms.TextBox textBoxMP5TimeDec;
+        private System.Windows.Forms.TextBox textBoxMP5TotalRiptides;
+        private System.Windows.Forms.TextBox textBoxMP5TotalHW;
+        private System.Windows.Forms.TextBox textBoxMP5TotalLHW;
+        private System.Windows.Forms.TextBox textBoxMP5TotalCH;
+        private System.Windows.Forms.Label labelMp5Min;
+        private System.Windows.Forms.Label labelMp5Sec;
+        private System.Windows.Forms.Label labelMp5Arrow;
+        private System.Windows.Forms.Label labelMp5TimeLength;
+        private System.Windows.Forms.Label labelMp5TotalRiptides;
+        private System.Windows.Forms.TextBox textBoxMp5RPM;
+        private System.Windows.Forms.Label labelMp5arrrow2;
+        private System.Windows.Forms.Label labelMp5Arrow3;
+        private System.Windows.Forms.TextBox textBoxMp5HWPM;
+        private System.Windows.Forms.Label labelMp5Arrow4;
+        private System.Windows.Forms.TextBox textBoxMp5LHWPM;
+        private System.Windows.Forms.Label labelMp5Arrow5;
+        private System.Windows.Forms.TextBox textBoxMp5CHPM;
+        private System.Windows.Forms.Label labelMp5TotalHealingWaves;
+        private System.Windows.Forms.Label labelMp5LHealingWave;
+        private System.Windows.Forms.Label labelMp5TotalCH;
+        private System.Windows.Forms.Label labelMp5RPM;
+        private System.Windows.Forms.Label labelMP5HWPM;
+        private System.Windows.Forms.Label labelMP5LHWPM;
+        private System.Windows.Forms.Label labelMp5CHPM;
+        private System.Windows.Forms.TextBox textBoxMp5Crit;
+        private System.Windows.Forms.TextBox textBoxMp5Percent;
+        private System.Windows.Forms.TextBox textBoxMp5TotalCrit;
+        private System.Windows.Forms.Label labelMp5Crit;
+        private System.Windows.Forms.Label labelMp5Mp5S;
+        private System.Windows.Forms.Label labelMp5Percent;
+        private System.Windows.Forms.Label labelMp5rightPercent;
+        private System.Windows.Forms.Label labelMp5TotalCritLeft;
+        private System.Windows.Forms.Label labelMp5RightTotalCrit;
     }
 }
 

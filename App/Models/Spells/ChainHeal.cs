@@ -16,11 +16,6 @@ namespace App.Models.Spells
             Name = Constants.SpellChainHeal;
             RanksCount = 7;
 
-            var modifierFields = this.GetType().GetFields(
-                BindingFlags.NonPublic |
-                BindingFlags.Instance)
-                .Where(x => x.FieldType.IsAssignableFrom(typeof(Modifier)));
-
             this.Modifiers.Add(new RevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
