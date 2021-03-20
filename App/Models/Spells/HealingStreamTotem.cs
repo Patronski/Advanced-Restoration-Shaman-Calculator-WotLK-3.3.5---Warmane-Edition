@@ -50,5 +50,10 @@ namespace App.Models.Spells
 
             return (int?)hps;
         }
+
+        public override int? CalculateAvgHpm()
+        {
+            return Player.Instance.Hit1From * 150 / 131;
+        }
     }
 }

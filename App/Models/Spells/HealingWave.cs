@@ -179,5 +179,17 @@ namespace App.Models.Spells
 
             base.CalculateOnModifierChange(modName, isChecked);
         }
+
+        public override int? CalculateAvgHpm()
+        {
+            // HPM = HW HIT * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] / [1044 - (Crit% * 4.92)]
+
+            var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
+                (1 - Player.Instance.CriticalChance / 100)))
+                /
+                (1044 - Player.Instance.CriticalChance * 4.92);
+
+            return (int)Math.Round(result ?? 0);
+        }
     }
 }

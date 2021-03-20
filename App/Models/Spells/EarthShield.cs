@@ -49,5 +49,16 @@ namespace App.Models.Spells
 
             return (int?)hps;
         }
+
+        public override int? CalculateAvgHpm()
+        {
+            // ES TICK * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] * 8 / 626[/color]
+            var result = Player.Instance.Hit1From *
+                (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
+                (1 - Player.Instance.CriticalChance / 100))
+                *
+                8 / 626;
+            return (int)Math.Round(result ?? 0);
+        }
     }
 }

@@ -112,5 +112,16 @@ namespace App.Models.Spells
         {
             return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
         }
+
+        public override int? CalculateAvgHpm()
+        {
+            var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
+                (1 - Player.Instance.CriticalChance / 100)))
+                /
+                (626 - Player.Instance.CriticalChance * 2.952);
+
+            
+            return (int)Math.Round(result ?? 0);
+        }
     }
 }

@@ -669,6 +669,11 @@ namespace App
             labelEarthlivingHps1.Hide();
             labelEarthlivingHps2.Hide();
             labelChainHealStacking.Hide();
+            labelAvgHpm.Hide();
+            textBoxAvgHpm.Hide();
+            labelAvgHpmAdditional1.Hide();
+            labelAvgHpmAdditional2.Hide();
+            labelFor1Target.Hide();
 
             textBoxMp5CHPM.Hide();
             textBoxMp5Crit.Hide();
@@ -710,6 +715,10 @@ namespace App
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
                     labelChainHealStacking.Show();
                     labelHitAvg.Show();
                     labelHit.Show();
@@ -809,6 +818,11 @@ namespace App
                     labelEarthlivingRP.Show();
                     break;
                 case Constants.SpellHST:
+                    labelFor1Target.Show();
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
                     textBoxHit1From.Show();
                     labelTick.Show();
                     textBoxAvgHotHps.Show();
@@ -818,6 +832,10 @@ namespace App
                     labeAvgHps2.Show();
                     break;
                 case Constants.SpellHW:
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
                     labelDashHit1.Show();
                     textBoxHit1To.Show();
                     labelArrowHit1.Show();
@@ -854,6 +872,10 @@ namespace App
                     checkBoxGlyphOfHealingWave.Show();
                     break;
                 case Constants.SpellLHW:
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
                     labelDashHit1.Show();
                     textBoxHit1To.Show();
                     labelArrowHit1.Show();
@@ -890,6 +912,10 @@ namespace App
                     textBoxCastingTime.Show();
                     break;
                 case Constants.SpellESh:
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
                     labelApproximately1.Show();
                     labelApproximately2.Show();
                     labelAvgHps.Show();
@@ -901,6 +927,10 @@ namespace App
                     checkBoxRevitalizingSkyflareDiamond.Show();
                     break;
                 case Constants.SpellRiptide:
+                    labelAvgHpmAdditional1.Show();
+                    labelAvgHpmAdditional2.Show();
+                    labelAvgHpm.Show();
+                    textBoxAvgHpm.Show();
                     labelHitAvg.Show();
                     checkBoxRevitalizingSkyflareDiamond.Show();
                     labelAvgAA.Show();
@@ -1026,6 +1056,7 @@ namespace App
             this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
             textBoxAvgAAeHps.Text = Player.Instance.AvgAAHps.ToString();
             textBoxGlyphOfHealingWave.Text = Player.Instance.AvgGlyphOfHealingWave.ToString();
+            textBoxAvgHpm.Text = Player.Instance.AvgHpm.ToString();
             //Earthliving
             textBoxEarthlivingAvgHpsCH.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
             textBoxEarthlivingAvgHpsHW.Text = Player.Instance.EarthlivingAvgHpsHW.ToString();
@@ -1036,7 +1067,7 @@ namespace App
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
             this.numericUpDownCriticalChance.Text = Player.Instance.CriticalChance.ToString();
-
+            
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving) || selectedSpell.Name == Constants.SpellHST)
             {

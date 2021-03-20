@@ -296,68 +296,25 @@ namespace App.Models.Spells
             base.CalculateOnModifierChange(modName, isChecked);
         }
 
-        public override void Calculate()
+        public override int? CalculateAvgHpm()
         {
-            Player.Instance.Recalculate();
-            Player.Instance.Hit1From = CalculateTarget1HitFrom();
-            Player.Instance.Hit1To = CalculateTarget1HitTo();
-            Player.Instance.CastingTime = CalculateCastingTime();
-            Player.Instance.HotRiptide = CalculateAverageHOT1();
+            var isGlyphOfChainHeal = Modifiers
+                .Any(x => (x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked));
 
-            ModifyWithModifiers();
-            Player.Instance.CastingTime = CalculateCastingTime();
-            var modifier = Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
-            if (modifier != null)
+            var avgHit = Player.Instance.Hit1Avg + Player.Instance.Hit2Avg + Player.Instance.Hit3Avg;
+            var multiplier = isGlyphOfChainHeal ? 5.904 : 4.428;
+            if (isGlyphOfChainHeal)
             {
-                modifier.Modify();
+                avgHit += Player.Instance.Hit4Avg;
             }
 
-            Player.Instance.EarthlivingAvgHpsCH = CalculateEarthlivingAvgHpsCH();
-            Player.Instance.EarthlivingAvgHpsHW = CalculateEarthlivingAvgHpsHW();
-            Player.Instance.EarthlivingAvgHpsLHW = CalculateEarthlivingAvgHpsLHW();
-            Player.Instance.EarthlivingAvgHpsRP = CalculateEarthlivingAvgHpsRP();
-            Player.Instance.EarthlivingAvgHpsTotal = CalculateEarthlivingAvgHpsTotal();
-            Player.Instance.Hit2From = CalculateTarget2HitFrom();
-            Player.Instance.Hit3From = CalculateTarget3HitFrom();
-            Player.Instance.Hit4From = CalculateTarget4HitFrom();
-            Player.Instance.Hit2To = CalculateTarget2HitTo();
-            Player.Instance.Hit3To = CalculateTarget3HitTo();
-            Player.Instance.Hit4To = CalculateTarget4HitTo();
-            Player.Instance.Hit1Avg = CalculateTarget1HitAvg();
-            Player.Instance.Hit2Avg = CalculateTarget2HitAvg();
-            Player.Instance.Hit3Avg = CalculateTarget3HitAvg();
-            Player.Instance.Hit4Avg = CalculateTarget4HitAvg();
-            Player.Instance.Crit1To = CalculateTarget1CritTo();
-            Player.Instance.Crit2To = CalculateTarget2CritTo();
-            Player.Instance.Crit3To = CalculateTarget3CritTo();
-            Player.Instance.Crit4To = CalculateTarget4CritTo();
-            Player.Instance.Crit1From = CalculateTarget1CritFrom();
-            Player.Instance.Crit2From = CalculateTarget2CritFrom();
-            Player.Instance.Crit3From = CalculateTarget3CritFrom();
-            Player.Instance.Crit4From = CalculateTarget4CritFrom();
-            Player.Instance.Crit1Avg = CalculateTarget1CritAvg();
-            Player.Instance.Crit2Avg = CalculateTarget2CritAvg();
-            Player.Instance.Crit3Avg = CalculateTarget3CritAvg();
-            Player.Instance.Crit4Avg = CalculateTarget4CritAvg();
-            Player.Instance.AvgHot1 = CalculateAverageHOT1();
-            Player.Instance.AvgHot2 = CalculateAverageHOT2();
-            Player.Instance.AvgHot3 = CalculateAverageHOT3();
-            Player.Instance.AvgHot4 = CalculateAverageHOT4();
-            Player.Instance.AncestralAwaceningFrom = CalculateAncestralAwakeningFrom();
-            Player.Instance.AncestralAwaceningTo = CalculateAncestralAwakeningTo();
-            Player.Instance.AncestralAwaceningAvg = CalculateAncestralAwakeningAvg();
-            Player.Instance.AvgHps = CalculateAverageHPS();
-            Player.Instance.AvgHotHps = CalculateAverageHotHPS();
-            Player.Instance.AvgAAHps = CalculateAverageAAHPS();
-            Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
-
-            var modChainHeal = Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);
-            if (modChainHeal != null)
-            {
-                modChainHeal.Modify();
-            }
+            //* [Crtit% / 100 * 1.5 + (1 - Crit% / 100)]} / [793 - (Crit% * 5.904)]
+            var result = (avgHit * (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
+                (1 - Player.Instance.CriticalChance / 100))) 
+                /
+                (793 - Player.Instance.CriticalChance * multiplier);
+            
+            return (int)Math.Round(result ?? 0);
         }
     }
 }

@@ -175,6 +175,11 @@
             this.checkBox4PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox2PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox4PT9Bonus = new System.Windows.Forms.CheckBox();
+            this.textBoxAvgHpm = new System.Windows.Forms.TextBox();
+            this.labelAvgHpm = new System.Windows.Forms.Label();
+            this.labelAvgHpmAdditional1 = new System.Windows.Forms.Label();
+            this.labelAvgHpmAdditional2 = new System.Windows.Forms.Label();
+            this.labelFor1Target = new System.Windows.Forms.Label();
             this.textBoxMP5TimeMin = new System.Windows.Forms.TextBox();
             this.textBoxMP5TimeSec = new System.Windows.Forms.TextBox();
             this.textBoxMP5TimeDec = new System.Windows.Forms.TextBox();
@@ -1596,7 +1601,7 @@
             // 
             // textBoxEarthlivingAvgHpsRP
             // 
-            this.textBoxEarthlivingAvgHpsRP.Location = new System.Drawing.Point(652, 305);
+            this.textBoxEarthlivingAvgHpsRP.Location = new System.Drawing.Point(645, 305);
             this.textBoxEarthlivingAvgHpsRP.MaxLength = 10;
             this.textBoxEarthlivingAvgHpsRP.Name = "textBoxEarthlivingAvgHpsRP";
             this.textBoxEarthlivingAvgHpsRP.ReadOnly = true;
@@ -1631,7 +1636,7 @@
             this.labeEarthlivingHps4.AutoSize = true;
             this.labeEarthlivingHps4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeEarthlivingHps4.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps4.Location = new System.Drawing.Point(563, 308);
+            this.labeEarthlivingHps4.Location = new System.Drawing.Point(556, 308);
             this.labeEarthlivingHps4.Name = "labeEarthlivingHps4";
             this.labeEarthlivingHps4.Size = new System.Drawing.Size(83, 13);
             this.labeEarthlivingHps4.TabIndex = 146;
@@ -1695,7 +1700,7 @@
             // labelEarthlivingRP
             // 
             this.labelEarthlivingRP.AutoSize = true;
-            this.labelEarthlivingRP.Location = new System.Drawing.Point(558, 322);
+            this.labelEarthlivingRP.Location = new System.Drawing.Point(551, 321);
             this.labelEarthlivingRP.Name = "labelEarthlivingRP";
             this.labelEarthlivingRP.Size = new System.Drawing.Size(88, 13);
             this.labelEarthlivingRP.TabIndex = 152;
@@ -1831,6 +1836,59 @@
             this.checkBox4PT9Bonus.Text = "4P/T9 Bonus";
             this.checkBox4PT9Bonus.UseVisualStyleBackColor = true;
             this.checkBox4PT9Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
+            // textBoxAvgHpm
+            // 
+            this.textBoxAvgHpm.Location = new System.Drawing.Point(645, 305);
+            this.textBoxAvgHpm.MaxLength = 10;
+            this.textBoxAvgHpm.Name = "textBoxAvgHpm";
+            this.textBoxAvgHpm.ReadOnly = true;
+            this.textBoxAvgHpm.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAvgHpm.TabIndex = 165;
+            this.textBoxAvgHpm.Visible = false;
+            // 
+            // labelAvgHpm
+            // 
+            this.labelAvgHpm.AutoSize = true;
+            this.labelAvgHpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgHpm.ForeColor = System.Drawing.Color.Indigo;
+            this.labelAvgHpm.Location = new System.Drawing.Point(572, 308);
+            this.labelAvgHpm.Name = "labelAvgHpm";
+            this.labelAvgHpm.Size = new System.Drawing.Size(67, 13);
+            this.labelAvgHpm.TabIndex = 166;
+            this.labelAvgHpm.Text = "AVG HPM:";
+            this.labelAvgHpm.Visible = false;
+            // 
+            // labelAvgHpmAdditional1
+            // 
+            this.labelAvgHpmAdditional1.AutoSize = true;
+            this.labelAvgHpmAdditional1.Location = new System.Drawing.Point(518, 321);
+            this.labelAvgHpmAdditional1.Name = "labelAvgHpmAdditional1";
+            this.labelAvgHpmAdditional1.Size = new System.Drawing.Size(121, 13);
+            this.labelAvgHpmAdditional1.TabIndex = 167;
+            this.labelAvgHpmAdditional1.Text = "(additional healing procs";
+            this.labelAvgHpmAdditional1.Visible = false;
+            // 
+            // labelAvgHpmAdditional2
+            // 
+            this.labelAvgHpmAdditional2.AutoSize = true;
+            this.labelAvgHpmAdditional2.Location = new System.Drawing.Point(553, 334);
+            this.labelAvgHpmAdditional2.Name = "labelAvgHpmAdditional2";
+            this.labelAvgHpmAdditional2.Size = new System.Drawing.Size(86, 13);
+            this.labelAvgHpmAdditional2.TabIndex = 168;
+            this.labelAvgHpmAdditional2.Text = "are not included)";
+            this.labelAvgHpmAdditional2.Visible = false;
+            // 
+            // labelFor1Target
+            // 
+            this.labelFor1Target.AutoSize = true;
+            this.labelFor1Target.Location = new System.Drawing.Point(709, 308);
+            this.labelFor1Target.Name = "labelFor1Target";
+            this.labelFor1Target.Size = new System.Drawing.Size(71, 13);
+            this.labelFor1Target.TabIndex = 169;
+            this.labelFor1Target.Text = "(For 1 Target)";
+            this.labelFor1Target.Visible = false;
+            // 
             // 
             // textBoxMP5TimeMin
             // 
@@ -2205,6 +2263,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 580);
+            this.Controls.Add(this.labelFor1Target);
+            this.Controls.Add(this.labelAvgHpmAdditional2);
+            this.Controls.Add(this.labelAvgHpmAdditional1);
+            this.Controls.Add(this.labelAvgHpm);
+            this.Controls.Add(this.textBoxAvgHpm);
             this.Controls.Add(this.labelMp5RightTotalCrit);
             this.Controls.Add(this.labelMp5TotalCritLeft);
             this.Controls.Add(this.labelMp5rightPercent);
@@ -2549,6 +2612,11 @@
         public System.Windows.Forms.CheckBox checkBox4PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox2PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox4PT9Bonus;
+        private System.Windows.Forms.TextBox textBoxAvgHpm;
+        private System.Windows.Forms.Label labelAvgHpm;
+        private System.Windows.Forms.Label labelAvgHpmAdditional1;
+        private System.Windows.Forms.Label labelAvgHpmAdditional2;
+        private System.Windows.Forms.Label labelFor1Target;
         private System.Windows.Forms.TextBox textBoxMP5TimeMin;
         private System.Windows.Forms.TextBox textBoxMP5TimeSec;
         private System.Windows.Forms.TextBox textBoxMP5TimeDec;
