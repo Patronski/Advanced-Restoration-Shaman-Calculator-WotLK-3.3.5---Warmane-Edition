@@ -1889,7 +1889,6 @@
             this.labelFor1Target.Text = "(For 1 Target)";
             this.labelFor1Target.Visible = false;
             // 
-            // 
             // textBoxMP5TimeMin
             // 
             this.textBoxMP5TimeMin.Location = new System.Drawing.Point(361, 96);
@@ -1898,6 +1897,7 @@
             this.textBoxMP5TimeMin.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TimeMin.TabIndex = 165;
             this.textBoxMP5TimeMin.Visible = false;
+            this.textBoxMP5TimeMin.TextChanged += new System.EventHandler(this.textBoxMP5TimeMin_TextChanged);
             this.textBoxMP5TimeMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TimeMin_KeyPress);
             // 
             // textBoxMP5TimeSec
@@ -1908,6 +1908,7 @@
             this.textBoxMP5TimeSec.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TimeSec.TabIndex = 166;
             this.textBoxMP5TimeSec.Visible = false;
+            this.textBoxMP5TimeSec.TextChanged += new System.EventHandler(this.textBoxMP5TimeSec_TextChanged);
             this.textBoxMP5TimeSec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TimeSec_KeyPress);
             // 
             // textBoxMP5TimeDec
@@ -1928,6 +1929,7 @@
             this.textBoxMP5TotalRiptides.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TotalRiptides.TabIndex = 168;
             this.textBoxMP5TotalRiptides.Visible = false;
+            this.textBoxMP5TotalRiptides.TextChanged += new System.EventHandler(this.textBoxMP5TotalRiptides_TextChanged);
             this.textBoxMP5TotalRiptides.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalRiptides_KeyPress);
             // 
             // textBoxMP5TotalHW
@@ -1938,6 +1940,7 @@
             this.textBoxMP5TotalHW.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TotalHW.TabIndex = 169;
             this.textBoxMP5TotalHW.Visible = false;
+            this.textBoxMP5TotalHW.TextChanged += new System.EventHandler(this.textBoxMP5TotalHW_TextChanged);
             this.textBoxMP5TotalHW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalHW_KeyPress);
             // 
             // textBoxMP5TotalLHW
@@ -1948,6 +1951,7 @@
             this.textBoxMP5TotalLHW.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TotalLHW.TabIndex = 170;
             this.textBoxMP5TotalLHW.Visible = false;
+            this.textBoxMP5TotalLHW.TextChanged += new System.EventHandler(this.textBoxMP5TotalLHW_TextChanged);
             this.textBoxMP5TotalLHW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalLHW_KeyPress);
             // 
             // textBoxMP5TotalCH
@@ -1958,6 +1962,7 @@
             this.textBoxMP5TotalCH.Size = new System.Drawing.Size(58, 20);
             this.textBoxMP5TotalCH.TabIndex = 171;
             this.textBoxMP5TotalCH.Visible = false;
+            this.textBoxMP5TotalCH.TextChanged += new System.EventHandler(this.textBoxMP5TotalCH_TextChanged);
             this.textBoxMP5TotalCH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMP5TotalCH_KeyPress);
             // 
             // labelMp5Min
@@ -2204,7 +2209,7 @@
             this.labelMp5Crit.Name = "labelMp5Crit";
             this.labelMp5Crit.Size = new System.Drawing.Size(142, 13);
             this.labelMp5Crit.TabIndex = 195;
-            this.labelMp5Crit.Text = "1 critical strice rating is worth";
+            this.labelMp5Crit.Text = "1 critical strike rating is worth";
             this.labelMp5Crit.Visible = false;
             // 
             // labelMp5Mp5S
@@ -2244,7 +2249,7 @@
             this.labelMp5TotalCritLeft.Name = "labelMp5TotalCritLeft";
             this.labelMp5TotalCritLeft.Size = new System.Drawing.Size(168, 13);
             this.labelMp5TotalCritLeft.TabIndex = 199;
-            this.labelMp5TotalCritLeft.Text = "Your critical strice chance is worth";
+            this.labelMp5TotalCritLeft.Text = "Your critical strike chance is worth";
             this.labelMp5TotalCritLeft.Visible = false;
             // 
             // labelMp5RightTotalCrit

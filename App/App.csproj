@@ -137,7 +137,7 @@
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -467,6 +467,12 @@
     <None Include="Resources\4pT7_HW.png" />
     <None Include="Resources\4pT7_CH.png" />
     <None Include="Resources\ST.png" />
+    <None Include="Resources\WSh.wav" />
+    <None Include="Resources\WSh_Sound.wav" />
+    <None Include="Resources\file_example_WAV_1MG.wav" />
+    <None Include="Resources\WSh1.wav" />
+    <None Include="Resources\WShSound.wav" />
+    <None Include="Resources\WSh.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

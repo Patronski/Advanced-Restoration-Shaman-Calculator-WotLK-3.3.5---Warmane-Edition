@@ -78,6 +78,15 @@ namespace App.Models
         public virtual int? CalculateEarthlivingAvgHpsRP() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsTotal() { return null; }
 
+        public virtual double? CalculateMp5TotalDec() { return null; }
+        public virtual double? CalculateMp5RPM() { return null; }
+        public virtual double? CalculateMp5HWPM() { return null; }
+        public virtual double? CalculateMp5LHWPM() { return null; }
+        public virtual double? CalculateMp5CHPM() { return null; }
+        public virtual double? CalculateMp5Crit() { return null; }
+        public virtual double? CalculateMp5Percent() { return null; }
+        public virtual double? CalculateMp5TotalCrit() { return null; }
+
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {
             var critModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(ICriticalModifier).Name) != null && x.IsCheckBoxChecked).ToList();

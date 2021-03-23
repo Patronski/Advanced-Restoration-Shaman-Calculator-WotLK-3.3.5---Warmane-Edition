@@ -148,5 +148,21 @@ namespace App.Models
         public int? EarthlivingAvgHpsLHW { get; set; }
         public int? EarthlivingAvgHpsRP { get; set; }
         public int? EarthlivingAvgHpsTotal { get; set; }
+
+        public int? Mp5TimeMin { get; set; }
+        public int? Mp5TimeSec { get; set; }
+        public double? Mp5TimeDec { get; set; }
+        public int? Mp5TotalRiptides { get; set; }
+        public int? Mp5TotalHW { get; set; }
+        public int? Mp5TotalLHW { get; set; }
+        public int? Mp5TotalCH { get; set; }
+        public double? Mp5RPM { get; set; }
+        public double? Mp5HWPM { get; set; }
+        public double? Mp5LHWPM { get; set; }
+        public double? Mp5CHPM { get; set; }
+        public double? Mp5Crit { get; set; }
+        public double? Mp5Percent { get; set; }
+        public double? Mp5TotalCrit { get; set; }
+
     }
 }

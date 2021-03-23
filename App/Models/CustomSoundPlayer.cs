@@ -54,6 +54,9 @@ namespace App.Models
                 case Constants.SpellRiptide:
                     this.Stream = Resources.RP;
                     break;
+                case Constants.SpellCritIntoMP5S:
+                    this.Stream = Resources.WShSound;
+                    break;
             }
             this.Play();
         }

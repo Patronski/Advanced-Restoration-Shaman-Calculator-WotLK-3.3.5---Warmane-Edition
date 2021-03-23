@@ -327,6 +327,11 @@ namespace App
                 myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
                 checkBox4PT7Bonus.Tag = Resources._4pT7_HW;
             }
+            else if (selectedSpell.Name == Constants.SpellCritIntoMP5S)
+            {
+                textBoxHasteRating.Enabled = false;
+                textBoxSpellPower.Enabled = false;
+            }
 
             DisplayHealing();
         }
@@ -461,6 +466,9 @@ namespace App
                     break;
                 case Constants.SpellRiptide:
                     pictureBoxSpell.Image = Resources.SpellRiptide;
+                    break;
+                case Constants.SpellCritIntoMP5S:
+                    pictureBoxSpell.Image = Resources.WSh;
                     break;
                 default:
                     break;
@@ -1063,6 +1071,15 @@ namespace App
             textBoxEarthlivingAvgHpsLHW.Text = Player.Instance.EarthlivingAvgHpsLHW.ToString();
             textBoxEarthlivingAvgHpsRP.Text = Player.Instance.EarthlivingAvgHpsRP.ToString();
             textBoxEarthlivingAvgHpsTotal.Text = Player.Instance.EarthlivingAvgHpsTotal.ToString();
+            //Mp5
+            textBoxMP5TimeDec.Text = Player.Instance.Mp5TimeDec.ToString();
+            textBoxMp5RPM.Text = Player.Instance.Mp5RPM.ToString();
+            textBoxMp5HWPM.Text = Player.Instance.Mp5HWPM.ToString();
+            textBoxMp5LHWPM.Text = Player.Instance.Mp5LHWPM.ToString();
+            textBoxMp5CHPM.Text = Player.Instance.Mp5CHPM.ToString();
+            textBoxMp5Crit.Text = Player.Instance.Mp5Crit.ToString();
+            textBoxMp5Percent.Text = Player.Instance.Mp5Percent.ToString();
+            textBoxMp5TotalCrit.Text = Player.Instance.Mp5TotalCrit.ToString();
 
             this.textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
@@ -1219,6 +1236,108 @@ namespace App
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxMP5TimeMin_TextChanged(object sender, EventArgs e)
+        {
+            int timeMin = 0;
+            if (!int.TryParse(this.textBoxMP5TimeMin.Text, out timeMin))
+            {
+                this.textBoxMP5TimeMin.Text = "";
+            }
+            Player.Instance.Mp5TimeMin = timeMin;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
+        }
+
+        private void textBoxMP5TimeSec_TextChanged(object sender, EventArgs e)
+        {
+            int timeSec = 0;
+            if (!int.TryParse(this.textBoxMP5TimeSec.Text, out timeSec))
+            {
+                this.textBoxMP5TimeSec.Text = "";
+            }
+            Player.Instance.Mp5TimeSec = timeSec;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
+        }
+
+        private void textBoxMP5TotalRiptides_TextChanged(object sender, EventArgs e)
+        {
+            int num = 0;
+            if (!int.TryParse(this.textBoxMP5TotalRiptides.Text, out num))
+            {
+                this.textBoxMP5TotalRiptides.Text = "";
+            }
+            Player.Instance.Mp5TotalRiptides = num;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
+        }
+
+        private void textBoxMP5TotalHW_TextChanged(object sender, EventArgs e)
+        {
+            int num = 0;
+            if (!int.TryParse(this.textBoxMP5TotalHW.Text, out num))
+            {
+                this.textBoxMP5TotalHW.Text = "";
+            }
+            Player.Instance.Mp5TotalHW = num;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
+        }
+
+        private void textBoxMP5TotalLHW_TextChanged(object sender, EventArgs e)
+        {
+            int num = 0;
+            if (!int.TryParse(this.textBoxMP5TotalLHW.Text, out num))
+            {
+                this.textBoxMP5TotalLHW.Text = "";
+            }
+            Player.Instance.Mp5TotalLHW = num;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
+        }
+
+        private void textBoxMP5TotalCH_TextChanged(object sender, EventArgs e)
+        {
+            int num = 0;
+            if (!int.TryParse(this.textBoxMP5TotalCH.Text, out num))
+            {
+                this.textBoxMP5TotalCH.Text = "";
+            }
+            Player.Instance.Mp5TotalCH = num;
+
+            if (selectedSpell != null)
+            {
+                selectedSpell.Calculate();
+            }
+
+            DisplayHealing();
         }
     }
 }

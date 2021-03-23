@@ -24,13 +24,78 @@ namespace App.Models.Spells
             return 222;
         }
 
+        public override double? CalculateMp5TotalDec()
+        {
+            var r = (Player.Instance.Mp5TimeMin ?? 0) + ((Player.Instance.Mp5TimeSec ?? 0) / 60d);
+            return Math.Round(r, 2); ;
+        }
+
+        public override double? CalculateMp5RPM()
+        {
+            if (Player.Instance.Mp5TimeDec == null || Player.Instance.Mp5TimeDec == 0)
+            {
+                return null;
+            }
+            var r = Player.Instance.Mp5TotalRiptides ?? 0;
+            var x = r / (double)Player.Instance.Mp5TimeDec;
+            return Math.Round(x, 2);
+        }
+
+        public override double? CalculateMp5HWPM()
+        {
+            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            {
+                return null;
+            }
+            var r = (Player.Instance.Mp5TotalHW ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            return Math.Round(r, 2);
+        }
+
+        public override double? CalculateMp5LHWPM()
+        {
+            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            {
+                return null;
+            }
+            var r = (Player.Instance.Mp5TotalLHW ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            return Math.Round(r, 2);
+        }
+
+        public override double? CalculateMp5CHPM()
+        {
+            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            {
+                return null;
+            }
+            var r = (Player.Instance.Mp5TotalCH ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            return Math.Round(r, 2);
+        }
+
+        public override double? CalculateMp5Crit()
+        {
+            //RPM * 0.00893 + HWPM * 0.00893 + LHWPM * 0.005358 + CHPM * 0.00268
+            var r = (Player.Instance.Mp5RPM ?? 0) * 0.00893 +
+                (Player.Instance.Mp5HWPM ?? 0) * 0.00893 + 
+                (Player.Instance.Mp5LHWPM ?? 0) * 0.005358 +
+                (Player.Instance.Mp5CHPM ?? 0) * 0.00268;
+            return Math.Round(r, 4);
+        }
+
+        public override double? CalculateMp5Percent()
+        {
+            var r = (Player.Instance.Mp5Crit ?? 0) * 200;
+            return Math.Round(r, 2);
+        }
+
+        public override double? CalculateMp5TotalCrit()
+        {
+            var r = Player.Instance.CriticalChance * 45.91 * (Player.Instance.Mp5Crit ?? 0);
+            return Math.Round(r);
+        }
+
         public override void Calculate()
         {
             Player.Instance.Recalculate();
-            Player.Instance.Hit1From = CalculateTarget1HitFrom();
-            Player.Instance.Hit1To = CalculateTarget1HitTo();
-            Player.Instance.CastingTime = CalculateCastingTime();
-            Player.Instance.HotRiptide = CalculateAverageHOT1();
 
             ModifyWithModifiers();
 
@@ -40,6 +105,15 @@ namespace App.Models.Spells
             {
                 modifier.Modify();
             }
+
+            Player.Instance.Mp5TimeDec = CalculateMp5TotalDec();
+            Player.Instance.Mp5RPM = CalculateMp5RPM();
+            Player.Instance.Mp5HWPM = CalculateMp5HWPM();
+            Player.Instance.Mp5LHWPM = CalculateMp5LHWPM();
+            Player.Instance.Mp5CHPM = CalculateMp5CHPM();
+            Player.Instance.Mp5Crit = CalculateMp5Crit();
+            Player.Instance.Mp5Percent = CalculateMp5Percent();
+            Player.Instance.Mp5TotalCrit = CalculateMp5TotalCrit();
         }
 
         public override string ToString()
