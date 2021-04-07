@@ -2105,31 +2105,31 @@
             // labelMp5TotalHealingWaves
             // 
             this.labelMp5TotalHealingWaves.AutoSize = true;
-            this.labelMp5TotalHealingWaves.Location = new System.Drawing.Point(299, 177);
+            this.labelMp5TotalHealingWaves.Location = new System.Drawing.Point(294, 177);
             this.labelMp5TotalHealingWaves.Name = "labelMp5TotalHealingWaves";
-            this.labelMp5TotalHealingWaves.Size = new System.Drawing.Size(56, 13);
+            this.labelMp5TotalHealingWaves.Size = new System.Drawing.Size(61, 13);
             this.labelMp5TotalHealingWaves.TabIndex = 185;
-            this.labelMp5TotalHealingWaves.Text = "Total HW:";
+            this.labelMp5TotalHealingWaves.Text = "Total HWs:";
             this.labelMp5TotalHealingWaves.Visible = false;
             // 
             // labelMp5LHealingWave
             // 
             this.labelMp5LHealingWave.AutoSize = true;
-            this.labelMp5LHealingWave.Location = new System.Drawing.Point(293, 211);
+            this.labelMp5LHealingWave.Location = new System.Drawing.Point(288, 211);
             this.labelMp5LHealingWave.Name = "labelMp5LHealingWave";
-            this.labelMp5LHealingWave.Size = new System.Drawing.Size(62, 13);
+            this.labelMp5LHealingWave.Size = new System.Drawing.Size(67, 13);
             this.labelMp5LHealingWave.TabIndex = 186;
-            this.labelMp5LHealingWave.Text = "Total LHW:";
+            this.labelMp5LHealingWave.Text = "Total LHWs:";
             this.labelMp5LHealingWave.Visible = false;
             // 
             // labelMp5TotalCH
             // 
             this.labelMp5TotalCH.AutoSize = true;
-            this.labelMp5TotalCH.Location = new System.Drawing.Point(303, 248);
+            this.labelMp5TotalCH.Location = new System.Drawing.Point(298, 248);
             this.labelMp5TotalCH.Name = "labelMp5TotalCH";
-            this.labelMp5TotalCH.Size = new System.Drawing.Size(52, 13);
+            this.labelMp5TotalCH.Size = new System.Drawing.Size(57, 13);
             this.labelMp5TotalCH.TabIndex = 187;
-            this.labelMp5TotalCH.Text = "Total CH:";
+            this.labelMp5TotalCH.Text = "Total CHs:";
             this.labelMp5TotalCH.Visible = false;
             // 
             // labelMp5RPM

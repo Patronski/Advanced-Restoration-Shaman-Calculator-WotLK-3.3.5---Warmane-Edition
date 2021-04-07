@@ -28,15 +28,13 @@ namespace App.Models.Spells
 
         public override int CalculateTarget1HitFrom()
         {
-            int rounded = (int)(3.223 * Player.Instance.SpellPower) + 2022;
+            int rounded = (int)Math.Round(4.304 * Player.Instance.SpellPower) + 2696;
 
-            rounded = rounded / 6;
+            rounded = (int)Math.Round(rounded / 8d);
 
-            rounded = (int)(rounded * 1.1);
+            rounded = (int)Math.Round(rounded * 1.25);
 
-            rounded = (int)(rounded * 1.1);
-
-            rounded = (int)(rounded * 1.15);
+            rounded = (int)Math.Round(rounded * 1.1);
 
             return rounded;
         }

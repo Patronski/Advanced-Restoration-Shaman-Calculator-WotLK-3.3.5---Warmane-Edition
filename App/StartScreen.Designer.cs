@@ -124,7 +124,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(41, 27);
             this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "v1.3";
+            this.textBox2.Text = "v1.4";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox5

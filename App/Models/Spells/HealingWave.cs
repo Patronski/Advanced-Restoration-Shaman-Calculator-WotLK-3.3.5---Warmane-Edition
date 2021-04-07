@@ -110,7 +110,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAncestralAwakeningFrom()
         {
-            var aa = Player.Instance.Crit1From * 0.33;
+            var aa = Player.Instance.Crit1From * 0.297;
 
             var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
@@ -124,7 +124,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAncestralAwakeningTo()
         {
-            var aa = Player.Instance.Crit1To * 0.33;
+            var aa = Player.Instance.Crit1To * 0.297;
 
             var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
