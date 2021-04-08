@@ -1146,6 +1146,12 @@ namespace App
             textBoxHasteRating.Text = "";
             Player.Instance.CriticalChanceInitial = 0;
             numericUpDownCriticalChance.Value = 0;
+            textBoxMP5TimeMin.Text = "";
+            textBoxMP5TimeSec.Text = "";
+            textBoxMP5TotalRiptides.Text = "";
+            textBoxMP5TotalHW.Text = "";
+            textBoxMP5TotalLHW.Text = "";
+            textBoxMP5TotalCH.Text = "";
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
