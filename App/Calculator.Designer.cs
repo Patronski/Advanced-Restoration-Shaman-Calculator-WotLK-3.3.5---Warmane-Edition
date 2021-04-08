@@ -216,6 +216,8 @@
             this.labelMp5rightPercent = new System.Windows.Forms.Label();
             this.labelMp5TotalCritLeft = new System.Windows.Forms.Label();
             this.labelMp5RightTotalCrit = new System.Windows.Forms.Label();
+            this.labelAdditionalCritical = new System.Windows.Forms.Label();
+            this.labelAreNotIncluded = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
@@ -2262,12 +2264,34 @@
             this.labelMp5RightTotalCrit.Text = "MP5S";
             this.labelMp5RightTotalCrit.Visible = false;
             // 
+            // labelAdditionalCritical
+            // 
+            this.labelAdditionalCritical.AutoSize = true;
+            this.labelAdditionalCritical.Location = new System.Drawing.Point(280, 411);
+            this.labelAdditionalCritical.Name = "labelAdditionalCritical";
+            this.labelAdditionalCritical.Size = new System.Drawing.Size(184, 13);
+            this.labelAdditionalCritical.TabIndex = 201;
+            this.labelAdditionalCritical.Text = "(additional critical strike chance procs";
+            this.labelAdditionalCritical.Visible = false;
+            // 
+            // labelAreNotIncluded
+            // 
+            this.labelAreNotIncluded.AutoSize = true;
+            this.labelAreNotIncluded.Location = new System.Drawing.Point(280, 424);
+            this.labelAreNotIncluded.Name = "labelAreNotIncluded";
+            this.labelAreNotIncluded.Size = new System.Drawing.Size(160, 13);
+            this.labelAreNotIncluded.TabIndex = 202;
+            this.labelAreNotIncluded.Text = "are not included into calculation)";
+            this.labelAreNotIncluded.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 580);
+            this.Controls.Add(this.labelAreNotIncluded);
+            this.Controls.Add(this.labelAdditionalCritical);
             this.Controls.Add(this.labelFor1Target);
             this.Controls.Add(this.labelAvgHpmAdditional2);
             this.Controls.Add(this.labelAvgHpmAdditional1);
@@ -2658,6 +2682,8 @@
         private System.Windows.Forms.Label labelMp5rightPercent;
         private System.Windows.Forms.Label labelMp5TotalCritLeft;
         private System.Windows.Forms.Label labelMp5RightTotalCrit;
+        private System.Windows.Forms.Label labelAdditionalCritical;
+        private System.Windows.Forms.Label labelAreNotIncluded;
     }
 }
 

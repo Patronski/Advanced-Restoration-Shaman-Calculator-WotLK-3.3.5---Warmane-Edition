@@ -719,6 +719,8 @@ namespace App
             labelMp5TotalCritLeft.Hide();
             labelMp5TotalHealingWaves.Hide();
             labelMp5TotalRiptides.Hide();
+            labelAdditionalCritical.Hide();
+            labelAreNotIncluded.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -1019,6 +1021,8 @@ namespace App
                     labelMp5TotalCritLeft.Show();
                     labelMp5TotalHealingWaves.Show();
                     labelMp5TotalRiptides.Show();
+                    labelAdditionalCritical.Show();
+                    labelAreNotIncluded.Show();
                     break;
             }
         }
