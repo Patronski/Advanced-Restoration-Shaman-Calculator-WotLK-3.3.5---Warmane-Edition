@@ -1208,6 +1208,8 @@ namespace App
 
         private void textBoxMP5TimeSec_KeyPress(object sender, KeyPressEventArgs e)
         {
+            var ob = (TextBoxBase)sender;
+            ;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
@@ -1216,7 +1218,7 @@ namespace App
 
             var text = (string)sender.GetType().GetProperty("Text").GetValue(sender);
 
-            if (text != null && char.IsDigit(e.KeyChar) && int.Parse(text + e.KeyChar) > 59)
+            if (text != null && char.IsDigit(e.KeyChar) && int.Parse(text + e.KeyChar) > 59 && ob.SelectedText != text)
             {
                 e.Handled = true;
             }
