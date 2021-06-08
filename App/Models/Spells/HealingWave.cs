@@ -116,7 +116,7 @@ namespace App.Models.Spells
 
             foreach (var modifier in healingModifiers)
             {
-                aa = (int)aa * modifier.Value;
+                aa = aa * modifier.Value;
             }
 
             return (int?)aa;
@@ -130,7 +130,7 @@ namespace App.Models.Spells
 
             foreach (var modifier in healingModifiers)
             {
-                aa = (int)aa * modifier.Value;
+                aa = aa * modifier.Value;
             }
 
             return (int?)aa;
