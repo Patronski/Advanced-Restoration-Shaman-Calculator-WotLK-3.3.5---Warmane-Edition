@@ -329,7 +329,6 @@ namespace App
             }
             else if (selectedSpell.Name == Constants.SpellCritIntoMP5S)
             {
-                textBoxHasteRating.Enabled = false;
                 textBoxSpellPower.Enabled = false;
             }
 
@@ -408,9 +407,6 @@ namespace App
                 textBoxAvgHotHps.Enabled = true;
             }
 
-            //textBoxHasteRating.Enabled
-            //textBoxHastePercent.Enabled
-            //numericUpDownCriticalChance.Enabled
             switch (selectedSpell.Name)
             {
                 case Constants.SpellEarthliving:
@@ -433,6 +429,10 @@ namespace App
                     textBoxHasteRating.Enabled = false;
                     textBoxHastePercent.Enabled = false;
                     numericUpDownCriticalChance.Enabled = true;
+                    break;
+                case Constants.SpellCritIntoMP5S:
+                    textBoxHasteRating.Enabled = false;
+                    textBoxHastePercent.Enabled = false;
                     break;
                 default:
                     textBoxHastePercent.Enabled = true;
