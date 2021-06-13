@@ -20,6 +20,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());
             this.Modifiers.Add(new GlyphOfHealingStreamTotem());
+            this.Modifiers.Add(new MoonkinForm());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }

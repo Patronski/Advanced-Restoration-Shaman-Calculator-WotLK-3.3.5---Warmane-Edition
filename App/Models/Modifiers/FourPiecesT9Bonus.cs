@@ -18,7 +18,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + Value;
+            Player.Instance.CriticalPercent = Player.Instance.CriticalPercent + Value;
         }
     }
 }

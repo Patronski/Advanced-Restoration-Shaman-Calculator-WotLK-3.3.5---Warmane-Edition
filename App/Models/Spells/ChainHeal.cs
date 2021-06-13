@@ -97,11 +97,9 @@ namespace App.Models.Spells
             var hot = (int)(Player.Instance.Crit1Avg * 0.25 / 3);
 
             var is4PiecesEquiped = Modifiers
-                .Any(x => (x.Display == Constants.Mod4PT7Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT9Bonus && x.IsCheckBoxChecked));
+                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (is4PiecesEquiped) hot = 0;
+            if (!is4PiecesEquiped) hot = 0;
 
             return hot;
         }
@@ -109,11 +107,9 @@ namespace App.Models.Spells
         {
             var hot = (int)(Player.Instance.Crit2Avg * 0.25 / 3);
             var is4PiecesEquiped = Modifiers
-                .Any(x => (x.Display == Constants.Mod4PT7Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT9Bonus && x.IsCheckBoxChecked));
+                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (is4PiecesEquiped) hot = 0;
+            if (!is4PiecesEquiped) hot = 0;
 
             return hot;
         }
@@ -121,11 +117,9 @@ namespace App.Models.Spells
         {
             var hot = (int)(Player.Instance.Crit3Avg * 0.25 / 3);
             var is4PiecesEquiped = Modifiers
-                .Any(x => (x.Display == Constants.Mod4PT7Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT9Bonus && x.IsCheckBoxChecked));
+                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (is4PiecesEquiped) hot = 0;
+            if (!is4PiecesEquiped) hot = 0;
 
             return hot;
         }
@@ -134,11 +128,9 @@ namespace App.Models.Spells
             var hot = (int)(Player.Instance.Crit4Avg * 0.25 / 3);
 
             var is4PiecesEquiped = Modifiers
-                .Any(x => (x.Display == Constants.Mod4PT7Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT9Bonus && x.IsCheckBoxChecked));
+                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (is4PiecesEquiped) hot = 0;
+            if (!is4PiecesEquiped) hot = 0;
 
             return hot;
         }
@@ -164,8 +156,8 @@ namespace App.Models.Spells
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
-            var formula = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue)
-                + (1 - Player.Instance.CriticalChance / 100 ) )
+            var formula = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier)
+                + (1 - Player.Instance.CriticalPercent / 100 ) )
                 * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100));
 
             var isGlyphOfChainHeal = Modifiers
@@ -185,7 +177,7 @@ namespace App.Models.Spells
         {
             var hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
 
-            var formula = Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue * Player.Instance.Hit1Avg * 0.01111 * (1 + hastePercent / 100);
+            var formula = Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier * Player.Instance.Hit1Avg * 0.01111 * (1 + hastePercent / 100);
 
             var isGlyphOfChainHeal = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
@@ -197,12 +189,10 @@ namespace App.Models.Spells
                 result = (int)(formula + formula * 0.6 + formula * 0.36);
             }
 
-            var is4PiecesEquiped = Modifiers
-                .Any(x => (x.Display == Constants.Mod4PT7Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked) ||
-                    (x.Display == Constants.Mod4PT9Bonus && x.IsCheckBoxChecked));
+            var is4PT10Equiped = Modifiers
+                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
             
-            if (is4PiecesEquiped) result = 0;
+            if (!is4PT10Equiped) result = 0;
 
             return result;
         }
@@ -310,10 +300,10 @@ namespace App.Models.Spells
             }
 
             //* [Crtit% / 100 * 1.5 + (1 - Crit% / 100)]} / [793 - (Crit% * 5.904)]
-            var result = (avgHit * (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
-                (1 - Player.Instance.CriticalChance / 100))) 
+            var result = (avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
+                (1 - Player.Instance.CriticalPercent / 100))) 
                 /
-                (793 - Player.Instance.CriticalChance * multiplier);
+                (793 - Player.Instance.CriticalPercent * multiplier);
             
             return (int)Math.Round(result ?? 0);
         }

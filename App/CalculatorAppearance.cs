@@ -16,8 +16,6 @@ namespace App
             textBoxHasteRating.Enabled = true;
             labelArrow.Enabled = true;
             labelPercent.Enabled = true;
-            labelCrit.Enabled = true;
-            labelPercentCritChance.Enabled = true;
 
             if (checkBoxEmeraldVigor.Checked == true)
             {
@@ -60,7 +58,7 @@ namespace App
                 this.textBoxHit4From.Enabled = false;
                 this.textBoxHit4To.Enabled = false;
             }
-            if (!checkBox4PT10Bonus.Checked)
+            if (!checkBox4PT10Bonus.Checked && selectedSpell?.Name == Constants.SpellChainHeal)
             {
                 this.labelAvgHot1.Enabled = false;
                 labelChainedHeal1.Enabled = false;
@@ -605,7 +603,7 @@ namespace App
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
-            numericUpDownCriticalChance.Text = Player.Instance.CriticalChance.ToString();
+            textBoxCriticalPercent.Text = Player.Instance.CriticalPercent.ToString();
 
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving || selectedSpell.Name == Constants.SpellHST))

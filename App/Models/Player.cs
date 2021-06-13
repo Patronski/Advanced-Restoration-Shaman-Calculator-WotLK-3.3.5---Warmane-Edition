@@ -8,14 +8,12 @@ namespace App.Models
     /// </summary>
     public sealed class Player
     {
-        private Player() 
-         {
-            Modifiers = new Dictionary<string, bool>();
-            ModifierNames = new List<string>();
-        }
+        public List<string> ModifierNames;
+        public Dictionary<string, bool> Modifiers { get; set; }
+
+        public bool MuteSound { get; set; }
 
         private static readonly Lazy<Player> lazyInstance = new Lazy<Player>(() => new Player());
-
         public static Player Instance
         {
             get
@@ -24,20 +22,21 @@ namespace App.Models
             }
         }
 
-        public void Recalculate() 
-        {
-            CriticalValue = Constants.CriticalMultiplier;
-            Player.Instance.HasteRating = Player.Instance.HasteRating; // reseting HastePercent
-            Player.Instance.CriticalChance = Player.Instance.CriticalChanceInitial;
+        private Player() 
+         {
+            Modifiers = new Dictionary<string, bool>();
+            ModifierNames = new List<string>();
         }
 
-        public bool MuteSound { get; set; }
-
-        public Dictionary<string, bool> Modifiers { get; set; }
+        public void Recalculate() 
+        {
+            CriticalMultiplier = Constants.BaseCriticalMultiplier;
+            Instance.HasteRating = Instance.HasteRating; // reseting HastePercent
+            Instance.CriticalRating = Instance.criticalRating;
+        }
 
         public int SpellPower { get; set; }
         public int Intellect { get; set; }
-        public int CriticalRating { get; set; }
         public int Mana { get; set; }
         public int MP5S { get; set; }
 
@@ -67,31 +66,39 @@ namespace App.Models
         private double hastePercent;
         public double HastePercent 
         {
-            get 
-            { return hastePercent; } 
-            set 
-            { hastePercent = Math.Round(value, 2, MidpointRounding.ToEven); }
+            get { return hastePercent; } 
+            set { hastePercent = Math.Round(value, 2, MidpointRounding.ToEven); }
         }
 
-        public double CriticalChance { get; set; }
+        private int criticalRating = 0;
+        public int CriticalRating 
+        {
+            get { return criticalRating; }
+            set
+            {
+                criticalRating = value;
+                CriticalPercent = Math.Floor(criticalRating / 45.91 * 100) / 100 + Constants.BaseCriticalPercent;
+                CriticalPercentInitial = CriticalPercent;
+            } 
+        }
 
-        private double criticalChanceInitial;
-        public double CriticalChanceInitial
+        public double CriticalPercent { get; set; } = Constants.BaseCriticalPercent;
+
+        private double criticalPercentInitial;
+        public double CriticalPercentInitial
         {
             get
             {
-                return criticalChanceInitial;
+                return criticalPercentInitial;
             }
             set
             {
-                criticalChanceInitial = value;
-                CriticalChance = value;
+                criticalPercentInitial = value;
+                CriticalPercent = value;
             }
         }
 
-        public double CriticalValue { get; set; } = Constants.CriticalMultiplier;
-
-        public List<string> ModifierNames;
+        public double CriticalMultiplier { get; set; } = Constants.BaseCriticalMultiplier;
 
         public bool isCritModified;
 

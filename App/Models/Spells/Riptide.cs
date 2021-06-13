@@ -60,13 +60,13 @@ namespace App.Models.Spells
 
             if (isGlyphOfRiptide)
             {
-                avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / cooldown;
+                avgHps = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
+                (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / cooldown;
             }
             else
             {
-                avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / cooldown;
+                avgHps = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
+                (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / cooldown;
             }
 
             return (int?)avgHps;
@@ -80,8 +80,8 @@ namespace App.Models.Spells
             int cooldown = is2PT8Equiped ? 5 : 6;
             int hotMultiplier = is2PT8Equiped ? 1 : 2;
 
-            var avgHps = (((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg + (hotMultiplier * Player.Instance.HotRiptide)) / cooldown;
+            var avgHps = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
+                (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1Avg + (hotMultiplier * Player.Instance.HotRiptide)) / cooldown;
 
             return (int?)avgHps; ;
         }
@@ -93,7 +93,7 @@ namespace App.Models.Spells
 
             int cooldown = is2PT8Equiped ? 500 : 600;
 
-            var hps = Player.Instance.CriticalChance * Player.Instance.AncestralAwaceningAvg / cooldown;
+            var hps = Player.Instance.CriticalPercent * Player.Instance.AncestralAwaceningAvg / cooldown;
             return (int?)hps;
         }
 
@@ -142,8 +142,8 @@ namespace App.Models.Spells
             // {Rip HIT * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] + [5 * Rip TICK]} / [751 - (Crit% * 4.92 )]
             var isGlyphOfRiptide = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
-            var critChance = Player.Instance.CriticalChance;
-            var critValue = Player.Instance.CriticalValue;
+            var critChance = Player.Instance.CriticalPercent;
+            var critValue = Player.Instance.CriticalMultiplier;
 
             double? avgHps;
 

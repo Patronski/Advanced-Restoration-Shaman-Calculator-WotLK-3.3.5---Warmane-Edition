@@ -41,8 +41,8 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHPS()
         {
-            var hps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1From;
+            var hps = ((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
+                (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1From;
             hps = hps / 4.28;
 
             return (int?)hps;
@@ -52,8 +52,8 @@ namespace App.Models.Spells
         {
             // ES TICK * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] * 8 / 626[/color]
             var result = Player.Instance.Hit1From *
-                (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
-                (1 - Player.Instance.CriticalChance / 100))
+                (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
+                (1 - Player.Instance.CriticalPercent / 100))
                 *
                 8 / 626;
             return (int)Math.Round(result ?? 0);

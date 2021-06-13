@@ -32,7 +32,6 @@
             this.labelSpellPower = new System.Windows.Forms.Label();
             this.textBoxSpellPower = new System.Windows.Forms.TextBox();
             this.comboBoxSpell = new System.Windows.Forms.ComboBox();
-            this.labelCrit = new System.Windows.Forms.Label();
             this.textBoxHasteRating = new System.Windows.Forms.TextBox();
             this.labelHaste = new System.Windows.Forms.Label();
             this.labelHit = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@
             this.checkBoxTidalWavesCrit = new System.Windows.Forms.CheckBox();
             this.numericUpDownEmeraldVigor = new System.Windows.Forms.NumericUpDown();
             this.labelEarthlivingBlessingOf = new System.Windows.Forms.Label();
-            this.labelPercentCritChance = new System.Windows.Forms.Label();
             this.labelArrowHit1 = new System.Windows.Forms.Label();
             this.textBoxHit1Avg = new System.Windows.Forms.TextBox();
             this.labelCritMax = new System.Windows.Forms.Label();
@@ -140,7 +138,6 @@
             this.textBoxAncestralAwaceningTo = new System.Windows.Forms.TextBox();
             this.textBoxAncestralAwaceningAvg = new System.Windows.Forms.TextBox();
             this.textBoxHotRiptide = new System.Windows.Forms.TextBox();
-            this.numericUpDownCriticalChance = new System.Windows.Forms.NumericUpDown();
             this.pictureBoxSpell = new System.Windows.Forms.PictureBox();
             this.buttonReset = new System.Windows.Forms.Button();
             this.checkBoxSwiftRetributionHaste = new System.Windows.Forms.CheckBox();
@@ -228,7 +225,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCriticalPercent = new System.Windows.Forms.TextBox();
             this.textBoxCriticalRating = new System.Windows.Forms.TextBox();
             this.labelCriticalStrike = new System.Windows.Forms.Label();
             this.textBoxMana = new System.Windows.Forms.TextBox();
@@ -237,7 +234,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
             this.SuspendLayout();
             // 
@@ -271,17 +267,6 @@
             this.comboBoxSpell.TabIndex = 2;
             this.comboBoxSpell.Text = "Select option";
             this.comboBoxSpell.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpell_SelectedIndexChanged);
-            // 
-            // labelCrit
-            // 
-            this.labelCrit.AutoSize = true;
-            this.labelCrit.Enabled = false;
-            this.labelCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCrit.Location = new System.Drawing.Point(649, 803);
-            this.labelCrit.Name = "labelCrit";
-            this.labelCrit.Size = new System.Drawing.Size(91, 16);
-            this.labelCrit.TabIndex = 8;
-            this.labelCrit.Text = "Crit Chance:";
             // 
             // textBoxHasteRating
             // 
@@ -573,17 +558,6 @@
             this.labelEarthlivingBlessingOf.TabIndex = 110;
             this.labelEarthlivingBlessingOf.Text = "(Blessing of the Eternals is not included into calculation!)";
             this.labelEarthlivingBlessingOf.Visible = false;
-            // 
-            // labelPercentCritChance
-            // 
-            this.labelPercentCritChance.AutoSize = true;
-            this.labelPercentCritChance.Enabled = false;
-            this.labelPercentCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPercentCritChance.Location = new System.Drawing.Point(808, 803);
-            this.labelPercentCritChance.Name = "labelPercentCritChance";
-            this.labelPercentCritChance.Size = new System.Drawing.Size(21, 16);
-            this.labelPercentCritChance.TabIndex = 41;
-            this.labelPercentCritChance.Text = "%";
             // 
             // labelArrowHit1
             // 
@@ -1428,23 +1402,6 @@
             this.textBoxHotRiptide.TabIndex = 129;
             this.textBoxHotRiptide.Visible = false;
             // 
-            // numericUpDownCriticalChance
-            // 
-            this.numericUpDownCriticalChance.DecimalPlaces = 2;
-            this.numericUpDownCriticalChance.Enabled = false;
-            this.numericUpDownCriticalChance.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownCriticalChance.Location = new System.Drawing.Point(744, 801);
-            this.numericUpDownCriticalChance.Name = "numericUpDownCriticalChance";
-            this.numericUpDownCriticalChance.Size = new System.Drawing.Size(58, 20);
-            this.numericUpDownCriticalChance.TabIndex = 130;
-            this.numericUpDownCriticalChance.ValueChanged += new System.EventHandler(this.numericUpDownCriticalChance_ValueChanged);
-            this.numericUpDownCriticalChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDownCriticalChance_KeyPress);
-            this.numericUpDownCriticalChance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numericUpDownCriticalChance_MouseDown);
-            // 
             // pictureBoxSpell
             // 
             this.pictureBoxSpell.Location = new System.Drawing.Point(218, 8);
@@ -2252,6 +2209,7 @@
             this.checkBox4PT10Bonus.TabIndex = 203;
             this.checkBox4PT10Bonus.Text = "4P/T10 Bonus";
             this.checkBox4PT10Bonus.UseVisualStyleBackColor = true;
+            this.checkBox4PT10Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // labelTierBonus
             // 
@@ -2366,14 +2324,14 @@
             this.label3.TabIndex = 216;
             this.label3.Text = "%";
             // 
-            // textBox1
+            // textBoxCriticalPercent
             // 
-            this.textBox1.Location = new System.Drawing.Point(726, 35);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(48, 20);
-            this.textBox1.TabIndex = 215;
+            this.textBoxCriticalPercent.Location = new System.Drawing.Point(726, 35);
+            this.textBoxCriticalPercent.MaxLength = 6;
+            this.textBoxCriticalPercent.Name = "textBoxCriticalPercent";
+            this.textBoxCriticalPercent.ReadOnly = true;
+            this.textBoxCriticalPercent.Size = new System.Drawing.Size(48, 20);
+            this.textBoxCriticalPercent.TabIndex = 215;
             // 
             // textBoxCriticalRating
             // 
@@ -2400,6 +2358,7 @@
             this.textBoxMana.Location = new System.Drawing.Point(950, 8);
             this.textBoxMana.MaxLength = 6;
             this.textBoxMana.Name = "textBoxMana";
+            this.textBoxMana.ReadOnly = true;
             this.textBoxMana.Size = new System.Drawing.Size(48, 20);
             this.textBoxMana.TabIndex = 219;
             this.textBoxMana.TextChanged += new System.EventHandler(this.textBoxMana_TextChanged);
@@ -2459,7 +2418,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCriticalPercent);
             this.Controls.Add(this.textBoxCriticalRating);
             this.Controls.Add(this.labelCriticalStrike);
             this.Controls.Add(this.textBoxIntellect);
@@ -2547,7 +2506,6 @@
             this.Controls.Add(this.checkBoxSwiftRetributionHaste);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.pictureBoxSpell);
-            this.Controls.Add(this.numericUpDownCriticalChance);
             this.Controls.Add(this.textBoxHotRiptide);
             this.Controls.Add(this.textBoxAncestralAwaceningAvg);
             this.Controls.Add(this.textBoxAncestralAwaceningTo);
@@ -2628,7 +2586,6 @@
             this.Controls.Add(this.labelCritMax);
             this.Controls.Add(this.textBoxHit1Avg);
             this.Controls.Add(this.labelArrowHit1);
-            this.Controls.Add(this.labelPercentCritChance);
             this.Controls.Add(this.numericUpDownEmeraldVigor);
             this.Controls.Add(this.checkBoxTidalWavesCrit);
             this.Controls.Add(this.checkBoxMoonkinForm);
@@ -2655,7 +2612,6 @@
             this.Controls.Add(this.labelHit);
             this.Controls.Add(this.textBoxHasteRating);
             this.Controls.Add(this.labelHaste);
-            this.Controls.Add(this.labelCrit);
             this.Controls.Add(this.comboBoxSpell);
             this.Controls.Add(this.textBoxSpellPower);
             this.Controls.Add(this.labelSpellPower);
@@ -2665,7 +2621,6 @@
             this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Calculator_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCriticalChance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2677,7 +2632,6 @@
         private System.Windows.Forms.Label labelSpellPower;
         private System.Windows.Forms.TextBox textBoxSpellPower;
         private System.Windows.Forms.ComboBox comboBoxSpell;
-        private System.Windows.Forms.Label labelCrit;
         private System.Windows.Forms.TextBox textBoxHasteRating;
         private System.Windows.Forms.Label labelHaste;
         private System.Windows.Forms.Label labelHit;
@@ -2704,7 +2658,6 @@
         private System.Windows.Forms.CheckBox checkBoxMoonkinForm;
         private System.Windows.Forms.CheckBox checkBoxTidalWavesCrit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmeraldVigor;
-        private System.Windows.Forms.Label labelPercentCritChance;
         private System.Windows.Forms.Label labelArrowHit1;
         private System.Windows.Forms.TextBox textBoxHit1Avg;
         private System.Windows.Forms.Label labelCritMax;
@@ -2785,7 +2738,6 @@
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningTo;
         private System.Windows.Forms.TextBox textBoxAncestralAwaceningAvg;
         private System.Windows.Forms.TextBox textBoxHotRiptide;
-        private System.Windows.Forms.NumericUpDown numericUpDownCriticalChance;
         private System.Windows.Forms.PictureBox pictureBoxSpell;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.CheckBox checkBoxSwiftRetributionHaste;
@@ -2874,7 +2826,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCriticalPercent;
         private System.Windows.Forms.TextBox textBoxCriticalRating;
         private System.Windows.Forms.Label labelCriticalStrike;
         private System.Windows.Forms.TextBox textBoxMana;

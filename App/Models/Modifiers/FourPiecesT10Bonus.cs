@@ -6,7 +6,7 @@ namespace App.Models.Modifiers
     {
         public FourPiecesT10Bonus()
         {
-            Display = Constants.Mod4PT7Bonus;
+            Display = Constants.Mod4PT10Bonus;
             this.InitCheckBox();
         }
 

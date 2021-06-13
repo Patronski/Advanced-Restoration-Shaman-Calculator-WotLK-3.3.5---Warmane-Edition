@@ -89,7 +89,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5TotalCrit()
         {
-            var r = Player.Instance.CriticalChance * 45.91 * (Player.Instance.Mp5Crit ?? 0);
+            var r = Player.Instance.CriticalPercent * 45.91 * (Player.Instance.Mp5Crit ?? 0);
             return Math.Round(r);
         }
 

@@ -8,9 +8,12 @@ namespace App.Models
 {
     public static class Constants
     {
-        public const double MetagemCritMiltiplier = 1.03d;
+        public const int BaseMana = 4116;
 
-        public const double CriticalMultiplier = 1.50;
+        public const double BaseCriticalPercent = 16.2;
+        public const double BaseCriticalMultiplier = 1.50;
+
+        public const double MetagemCritMiltiplier = 1.03d;
 
         public const string SpellHST = "Healing Stream Totem";
         public const string SpellChainHeal = "Chain Heal";
@@ -19,7 +22,7 @@ namespace App.Models
         public const string SpellHW = "Healing Wave";
         public const string SpellLHW = "Lesser Healing Wave";
         public const string SpellRiptide = "Riptide";
-        public const string SpellCritIntoMP5S = "Critical Into MP5S";
+        public const string SpellCritIntoMP5S = "Critical Into MP5S and Mana Return";
 
         public const string ModBloodlust = "Bloodlust / Heroism";
         public const string ModEmeraldVigor = ""; // TODO
@@ -52,6 +55,5 @@ namespace App.Models
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
         public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
-
     }
 }

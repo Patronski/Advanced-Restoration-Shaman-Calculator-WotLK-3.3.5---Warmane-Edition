@@ -63,8 +63,8 @@ namespace App.Models.Spells
         {
             double hastePercent = (Player.Instance.HastePercent > 50) ? 50d : Player.Instance.HastePercent;
 
-            var avgHps = ((Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue) +
-                (1 - Player.Instance.CriticalChance / 100)) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
+            var avgHps = ((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
+                (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1Avg * (1 + hastePercent / 100) * 0.6667; //god bless
 
             return (int?)avgHps;
         }
@@ -74,7 +74,7 @@ namespace App.Models.Spells
 
             double hastePercent = (Player.Instance.HastePercent > 50) ? 50d : Player.Instance.HastePercent;
 
-            var avgHps = Player.Instance.CriticalChance / 100 * Player.Instance.AncestralAwaceningAvg *
+            var avgHps = Player.Instance.CriticalPercent / 100 * Player.Instance.AncestralAwaceningAvg *
                 (1 + hastePercent / 100) * 0.6667;
 
             return (int?)avgHps; ;
@@ -115,10 +115,10 @@ namespace App.Models.Spells
 
         public override int? CalculateAvgHpm()
         {
-            var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalChance / 100 * Player.Instance.CriticalValue +
-                (1 - Player.Instance.CriticalChance / 100)))
+            var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
+                (1 - Player.Instance.CriticalPercent / 100)))
                 /
-                (626 - Player.Instance.CriticalChance * 2.952);
+                (626 - Player.Instance.CriticalPercent * 2.952);
 
             
             return (int)Math.Round(result ?? 0);

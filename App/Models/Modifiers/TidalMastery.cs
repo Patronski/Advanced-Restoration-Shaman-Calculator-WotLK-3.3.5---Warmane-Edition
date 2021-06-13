@@ -23,11 +23,11 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalChance = Player.Instance.CriticalChance + 5;
+            Player.Instance.CriticalPercent = Player.Instance.CriticalPercent + 5;
 
-            if (Player.Instance.CriticalChance > 100)
+            if (Player.Instance.CriticalPercent > 100)
             {
-                Player.Instance.CriticalChance = 100;
+                Player.Instance.CriticalPercent = 100;
             }
         }
     }

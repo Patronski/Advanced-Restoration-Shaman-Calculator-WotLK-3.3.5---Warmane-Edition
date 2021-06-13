@@ -16,7 +16,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalValue = Constants.CriticalMultiplier * Value;
+            Player.Instance.CriticalMultiplier = Constants.BaseCriticalMultiplier * Value;
         }
     }
 }

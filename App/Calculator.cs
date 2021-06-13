@@ -257,26 +257,6 @@ namespace App
             DisplayHealing();
         }
 
-        private void numericUpDownCriticalChance_ValueChanged(object sender, EventArgs e)
-        {
-            if (isAfterCritKeyPress && !isCritModified)
-            {
-                isAfterCritKeyPress = false;
-
-                double crit = (double)this.numericUpDownCriticalChance.Value;
-
-                selectedSpell?.CalculateOnCritChanceInsert(crit);
-            }
-
-            isCritModified = false;
-
-            if (selectedSpell != null)
-            {
-                selectedSpell.Calculate();
-                DisplayHealing();
-            }
-        }
-
         // After choosing a Spell
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -308,10 +288,6 @@ namespace App
             {
                 myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
                 checkBox4PT7Bonus.Tag = Resources._4pT7_HW;
-            }
-            else if (selectedSpell.Name == Constants.SpellCritIntoMP5S)
-            {
-                textBoxSpellPower.Enabled = false;
             }
 
             DisplayHealing();
@@ -464,8 +440,8 @@ namespace App
 
             this.textBoxSpellPower.Text = "";
             textBoxHasteRating.Text = "";
-            Player.Instance.CriticalChanceInitial = 0;
-            numericUpDownCriticalChance.Value = 0;
+            Player.Instance.CriticalPercentInitial = 0;
+            textBoxCriticalRating.Text = "";
             textBoxMP5TimeMin.Text = "";
             textBoxMP5TimeSec.Text = "";
             textBoxMP5TotalRiptides.Text = "";
