@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public RapidCurrents()
         {
-            Display = Constants.ModRapidCurrents;
+            Display = Constants.Mod2PT10Bonus_RapidCurrents;
 
             Value = 1.2;
 

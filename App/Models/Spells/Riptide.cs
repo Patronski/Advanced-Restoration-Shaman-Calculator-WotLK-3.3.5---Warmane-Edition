@@ -101,7 +101,7 @@ namespace App.Models.Spells
         {
             var aa = Player.Instance.Crit1From * 0.297;
 
-            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IHealingModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
             foreach (var modifier in healingModifiers)
             {
@@ -115,7 +115,7 @@ namespace App.Models.Spells
         {
             var aa = Player.Instance.Crit1To * 0.297;
 
-            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IHealingModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
             foreach (var modifier in healingModifiers)
             {

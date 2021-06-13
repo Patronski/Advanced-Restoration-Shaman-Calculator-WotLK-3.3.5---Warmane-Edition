@@ -112,7 +112,7 @@ namespace App.Models.Spells
         {
             var aa = Player.Instance.Crit1From * 0.297;
 
-            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IHealingModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
             foreach (var modifier in healingModifiers)
             {
@@ -126,7 +126,7 @@ namespace App.Models.Spells
         {
             var aa = Player.Instance.Crit1To * 0.297;
 
-            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IAncestralAwakeningModifier).Name) != null && x.IsCheckBoxChecked).ToList();
+            var healingModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(IHealingModifier).Name) != null && x.IsCheckBoxChecked).ToList();
 
             foreach (var modifier in healingModifiers)
             {
@@ -156,16 +156,16 @@ namespace App.Models.Spells
         {
             if (modName == Constants.Mod4PT7Bonus)
             {
-                if (Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                if (Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked)
                 {
                     Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
 
-                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
-                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
+                Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked = false;
+                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT10Bonus_RapidCurrents);
                 mod.IsCheckBoxChecked = false;
             }
-            else if (modName == Constants.ModRapidCurrents)
+            else if (modName == Constants.Mod2PT10Bonus_RapidCurrents)
             {
                 if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked)
                 {

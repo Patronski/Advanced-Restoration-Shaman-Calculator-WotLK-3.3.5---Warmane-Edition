@@ -32,6 +32,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new SteamcallersTotemBonus());
             this.Modifiers.Add(new FourPiecesT8Bonus());
             this.Modifiers.Add(new FourPiecesT9Bonus());
+            this.Modifiers.Add(new FourPiecesT10Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -212,7 +213,7 @@ namespace App.Models.Spells
             {
                 if (Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
                     Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
-                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                    Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked)
                 {
                     Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
@@ -225,15 +226,15 @@ namespace App.Models.Spells
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT9Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
-                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
+                Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked = false;
+                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT10Bonus_RapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.Mod4PT8Bonus)
             {
                 if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
                     Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked ||
-                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                    Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked)
                 {
                     Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
@@ -246,15 +247,15 @@ namespace App.Models.Spells
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT9Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
-                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
+                Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked = false;
+                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT10Bonus_RapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
             else if (modName == Constants.Mod4PT9Bonus)
             {
                 if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
                     Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||
-                    Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked)
+                    Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked)
                 {
                     Forms.Instance.FormCalculator.skipEventChanged = true;
                 }
@@ -267,11 +268,11 @@ namespace App.Models.Spells
                 modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT8Bonus);
                 modifier.IsCheckBoxChecked = false;
 
-                Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked = false;
-                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.ModRapidCurrents);
+                Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked = false;
+                modifier = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT10Bonus_RapidCurrents);
                 modifier.IsCheckBoxChecked = false;
             }
-            else if (modName == Constants.ModRapidCurrents)
+            else if (modName == Constants.Mod2PT10Bonus_RapidCurrents)
             {
                 if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked ||
                     Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked ||

@@ -70,6 +70,9 @@
     <Compile Include="Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculatorAppearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\CustomizedToolTip.cs">
       <SubType>Component</SubType>
@@ -83,6 +86,7 @@
     <Compile Include="Models\Enums\ModifierType.cs" />
     <Compile Include="Models\Forms.cs" />
     <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Modifiers\FourPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT9Bonus.cs" />

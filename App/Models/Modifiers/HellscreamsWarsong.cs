@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace App.Models.Modifiers
 {
-    public class HellscreamsWarsong : Modifier, IAncestralAwakeningModifier
+    public class HellscreamsWarsong : Modifier, IHealingModifier
     {
         public HellscreamsWarsong()
         {

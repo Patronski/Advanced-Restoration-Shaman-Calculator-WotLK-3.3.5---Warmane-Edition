@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class TreeOfLife : Modifier, IAncestralAwakeningModifier
+    public class TreeOfLife : Modifier, IHealingModifier
     {
         public TreeOfLife()
         {

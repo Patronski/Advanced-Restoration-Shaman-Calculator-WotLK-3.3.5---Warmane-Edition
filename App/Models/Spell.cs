@@ -182,7 +182,7 @@ namespace App.Models
 
         public void CheckModifiers(List<string> checkedModifierNames)
         {
-            if (Forms.Instance.FormCalculator.checkBoxRapidCurrents.Checked &&
+            if (Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked &&
             (Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked || Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked))
             {
                 Forms.Instance.FormCalculator.skipEventChanged = true;
@@ -205,20 +205,20 @@ namespace App.Models
 
         public virtual void EnableDisableModifiers(List<CheckBox> checks)
         {
-            foreach (var check in checks)
-            {
-                if (this.modifierNames.Contains(check.Text))
-                {
-                    check.Enabled = true;
-                }
-                else
-                {
-                    if (check.Name != "checkBoxMuteSound")
-                    {
-                        check.Enabled = false;
-                    }
-                }
-            }
+            //foreach (var check in checks)
+            //{
+            //    if (this.modifierNames.Contains(check.Text))
+            //    {
+            //        check.Enabled = true;
+            //    }
+            //    else
+            //    {
+            //        if (check.Name != "checkBoxMuteSound")
+            //        {
+            //            check.Enabled = false;
+            //        }
+            //    }
+            //}
         }
 
         public virtual void CalculateOnModifierChange(string modName, bool isChecked)

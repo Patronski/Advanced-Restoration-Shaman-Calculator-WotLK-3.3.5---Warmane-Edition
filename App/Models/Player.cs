@@ -36,6 +36,10 @@ namespace App.Models
         public Dictionary<string, bool> Modifiers { get; set; }
 
         public int SpellPower { get; set; }
+        public int Intellect { get; set; }
+        public int CriticalRating { get; set; }
+        public int Mana { get; set; }
+        public int MP5S { get; set; }
 
         public int EmeraldVigorNumber { get; set; }
 

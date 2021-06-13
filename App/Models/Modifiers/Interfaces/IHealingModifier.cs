@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers.Interfaces
 {
-    interface IAncestralAwakeningModifier
+    interface IHealingModifier
     {
     }
 }

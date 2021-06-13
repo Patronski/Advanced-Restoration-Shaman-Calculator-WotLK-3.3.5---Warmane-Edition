@@ -9,6 +9,9 @@ namespace App.Models.Modifiers
 {
     public class TidalMastery : Modifier, ICriticalModifier
     {
+        /// <summary>
+        ///  have to be removed
+        /// </summary>
         public TidalMastery()
         {
             Display = Constants.ModTidalMastery;

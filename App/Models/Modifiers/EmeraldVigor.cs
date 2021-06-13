@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace App.Models.Modifiers
 {
-    public class EmeraldVigor : Modifier, IAncestralAwakeningModifier
+    public class EmeraldVigor : Modifier, IHealingModifier
     {
         public EmeraldVigor()
         {
