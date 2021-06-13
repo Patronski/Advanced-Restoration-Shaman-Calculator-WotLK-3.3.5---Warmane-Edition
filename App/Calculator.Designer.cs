@@ -2250,6 +2250,7 @@
             this.checkBox2PT7Bonus.TabIndex = 207;
             this.checkBox2PT7Bonus.Text = "2P/T7 Bonus";
             this.checkBox2PT7Bonus.UseVisualStyleBackColor = true;
+            this.checkBox2PT7Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxGlyphOfWaterMastery
             // 
@@ -2261,6 +2262,7 @@
             this.checkBoxGlyphOfWaterMastery.TabIndex = 208;
             this.checkBoxGlyphOfWaterMastery.Text = "Glyph of Water Mastery";
             this.checkBoxGlyphOfWaterMastery.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfWaterMastery.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxGlyphOfManaTideTotem
             // 
@@ -2272,6 +2274,7 @@
             this.checkBoxGlyphOfManaTideTotem.TabIndex = 209;
             this.checkBoxGlyphOfManaTideTotem.Text = "Glyph of Mana Tide Totem";
             this.checkBoxGlyphOfManaTideTotem.UseVisualStyleBackColor = true;
+            this.checkBoxGlyphOfManaTideTotem.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // checkBoxMetaInsightfulEarthsiegeDiamond
             // 
@@ -2283,6 +2286,7 @@
             this.checkBoxMetaInsightfulEarthsiegeDiamond.TabIndex = 210;
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Text = "Insightful Earthsiege Diamond";
             this.checkBoxMetaInsightfulEarthsiegeDiamond.UseVisualStyleBackColor = true;
+            this.checkBoxMetaInsightfulEarthsiegeDiamond.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // textBoxIntellect
             // 

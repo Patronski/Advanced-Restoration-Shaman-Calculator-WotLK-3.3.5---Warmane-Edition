@@ -161,10 +161,7 @@ namespace App
         private void StartScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            if (!Player.Instance.MuteSound)
-            {
-                soundPlayer.PlaySound("off");
-            }
+            soundPlayer.PlaySound("off");
         }
     }
 }

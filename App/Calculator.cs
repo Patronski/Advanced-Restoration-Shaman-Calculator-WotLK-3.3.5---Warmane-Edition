@@ -22,8 +22,6 @@ namespace App
         private CustomSoundPlayer soundPlayer = new CustomSoundPlayer();
 
         private Spell selectedSpell;
-        private bool isAfterCritKeyPress;
-        private bool isCritModified;
         public bool skipEventChanged;
         private CustomTooltipEasy myToolTip = new CustomTooltipEasy();
 
@@ -35,6 +33,7 @@ namespace App
             InitialiseComboBoxSpell();
             AddTooltips();
             LoadControlsFromPlayer();
+            DisplayHealing();
         }
 
         private void LoadControlsFromPlayer()
@@ -260,14 +259,11 @@ namespace App
         // After choosing a Spell
         private void comboBoxSpell_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedSpell = (Spell)this.comboBoxSpell.SelectedItem;
+            selectedSpell = (Spell)comboBoxSpell.SelectedItem;
 
             SelectSpellImage(selectedSpell);
 
-            if (!Player.Instance.MuteSound)
-            {
-                soundPlayer.PlaySound(selectedSpell.Name);
-            }
+            soundPlayer.PlaySound(selectedSpell.Name);
 
             selectedSpell.EnableDisableModifiers(checkBoxes);
             EnableDisableControlls();
@@ -292,8 +288,6 @@ namespace App
 
             DisplayHealing();
         }
-
-
 
         private void SelectSpellImage(Spell selectedSpell)
         {
@@ -350,11 +344,6 @@ namespace App
                 CheckConnectedControlls(check.Text, check.Checked);
 
                 selectedSpell?.CalculateOnModifierChange(check.Text, check.Checked);
-
-                if (check.Text == Constants.ModTidalWavesCrit || check.Text == Constants.ModMoonkin || check.Text == Constants.ModTidalMastery || check.Text == Constants.Mod4PT9Bonus)
-                {
-                    isCritModified = true;
-                }
 
                 DisplayOnGlyphOfHealingWave();
                 EnableDisableControlls();
@@ -418,16 +407,6 @@ namespace App
             {
                 e.Handled = true;
             }
-        }
-
-        private void numericUpDownCriticalChance_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            isAfterCritKeyPress = true;
-        }
-
-        private void numericUpDownCriticalChance_MouseDown(object sender, MouseEventArgs e)
-        {
-            isAfterCritKeyPress = true;
         }
 
         private void buttonReset_Click(object sender, EventArgs e)

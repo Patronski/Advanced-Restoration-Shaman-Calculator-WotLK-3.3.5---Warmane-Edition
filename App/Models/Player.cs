@@ -36,30 +36,30 @@ namespace App.Models
         }
 
         public int SpellPower { get; set; }
-        public int Intellect { get; set; }
-        public int Mana { get; set; }
+        private int intellect;
+        public int Intellect 
+        {
+            get { return intellect; }
+            set 
+            { 
+                intellect = value; 
+                Mana = Constants.BaseMana + intellect * 15;
+                CriticalPercent = CalculateCriticalPercent();
+            }
+        }
+        public int Mana { get; set; } = Constants.BaseMana;
         public int MP5S { get; set; }
 
         public int EmeraldVigorNumber { get; set; }
 
-        private int? hasteRating;
-        public int? HasteRating 
+        private int hasteRating;
+        public int HasteRating 
         { 
-            get 
-            {
-                return hasteRating;
-            } 
+            get { return hasteRating; } 
             set
             {
                 hasteRating = value;
-                if (value != null)
-                {
-                    HastePercent = (double)value / 32.79;
-                }
-                else
-                {
-                    HastePercent = 0;
-                }
+                HastePercent = hasteRating != 0 ? hasteRating / 32.79 : 0;
             }
         }
 
@@ -77,9 +77,15 @@ namespace App.Models
             set
             {
                 criticalRating = value;
-                CriticalPercent = Math.Floor(criticalRating / 45.91 * 100) / 100 + Constants.BaseCriticalPercent;
+                CriticalPercent = CalculateCriticalPercent();
                 CriticalPercentInitial = CriticalPercent;
             } 
+        }
+
+        private double CalculateCriticalPercent()
+        {
+            var percent = Math.Floor(criticalRating / 45.91 * 100) / 100 + Constants.BaseCriticalPercent + (Math.Floor(Intellect / 166.6667 * 100) / 100);
+            return percent > 100 ? 100 : percent;
         }
 
         public double CriticalPercent { get; set; } = Constants.BaseCriticalPercent;

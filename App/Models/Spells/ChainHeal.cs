@@ -28,8 +28,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new GlyphOfChainHeal());
-            this.Modifiers.Add(new FourPiecesT7Bonus());
             this.Modifiers.Add(new SteamcallersTotemBonus());
+            this.Modifiers.Add(new TwoPiecesT7Bonus());
+            this.Modifiers.Add(new FourPiecesT7Bonus());
             this.Modifiers.Add(new FourPiecesT8Bonus());
             this.Modifiers.Add(new FourPiecesT9Bonus());
             this.Modifiers.Add(new FourPiecesT10Bonus());
@@ -290,10 +291,15 @@ namespace App.Models.Spells
         public override int? CalculateAvgHpm()
         {
             var isGlyphOfChainHeal = Modifiers
-                .Any(x => (x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked));
+                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
 
             var avgHit = Player.Instance.Hit1Avg + Player.Instance.Hit2Avg + Player.Instance.Hit3Avg;
-            var multiplier = isGlyphOfChainHeal ? 5.904 : 4.428;
+
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+
+            var multiplier = isGlyphOfChainHeal ?
+                (mod2Pt7 ? 6.42 : 5.904) 
+                : (mod2Pt7 ? 4.815 : 4.428);
             if (isGlyphOfChainHeal)
             {
                 avgHit += Player.Instance.Hit4Avg;

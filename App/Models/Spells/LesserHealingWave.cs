@@ -28,6 +28,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new TwoPiecesT7Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -115,10 +116,14 @@ namespace App.Models.Spells
 
         public override int? CalculateAvgHpm()
         {
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+
+            var multiplier = mod2Pt7 ? 3.21 : 2.952;
+
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)))
                 /
-                (626 - Player.Instance.CriticalPercent * 2.952);
+                (626 - Player.Instance.CriticalPercent * multiplier);
 
             
             return (int)Math.Round(result ?? 0);

@@ -15,50 +15,53 @@ namespace App.Models
 
         internal void PlaySound(string name)
         {
-            switch (name)
+            if (!Player.Instance.MuteSound)
             {
-                case "on":
-                    if (!isOnSoundPlayed)
-                    {
-                        this.Stream = Resources.ON_S;
-                        this.Play();
-                        isOnSoundPlayed = true;
-                    }
-                    return;
-                case "off":
-                    if (!isOffSoundPlayed)
-                    {
-                        this.Stream = Resources.OFF_S;
-                        this.PlaySync();
-                        isOffSoundPlayed = true;
-                    }
-                    return;
-                case Constants.SpellChainHeal:
-                    this.Stream = Resources.CH;
-                    break;
-                case Constants.SpellEarthliving:
-                    this.Stream = Resources.EarthL;
-                    break;
-                case Constants.SpellESh:
-                    this.Stream = Resources.ES;
-                    break;
-                case Constants.SpellHST:
-                    this.Stream = Resources.HST;
-                    break;
-                case Constants.SpellHW:
-                    this.Stream = Resources.HW;
-                    break;
-                case Constants.SpellLHW:
-                    this.Stream = Resources.LHW;
-                    break;
-                case Constants.SpellRiptide:
-                    this.Stream = Resources.RP;
-                    break;
-                case Constants.SpellCritIntoMP5S:
-                    this.Stream = Resources.WShSound;
-                    break;
+                switch (name)
+                {
+                    case "on":
+                        if (!isOnSoundPlayed)
+                        {
+                            this.Stream = Resources.ON_S;
+                            this.Play();
+                            isOnSoundPlayed = true;
+                        }
+                        return;
+                    case "off":
+                        if (!isOffSoundPlayed)
+                        {
+                            this.Stream = Resources.OFF_S;
+                            this.PlaySync();
+                            isOffSoundPlayed = true;
+                        }
+                        return;
+                    case Constants.SpellChainHeal:
+                        this.Stream = Resources.CH;
+                        break;
+                    case Constants.SpellEarthliving:
+                        this.Stream = Resources.EarthL;
+                        break;
+                    case Constants.SpellESh:
+                        this.Stream = Resources.ES;
+                        break;
+                    case Constants.SpellHST:
+                        this.Stream = Resources.HST;
+                        break;
+                    case Constants.SpellHW:
+                        this.Stream = Resources.HW;
+                        break;
+                    case Constants.SpellLHW:
+                        this.Stream = Resources.LHW;
+                        break;
+                    case Constants.SpellRiptide:
+                        this.Stream = Resources.RP;
+                        break;
+                    case Constants.SpellCritIntoMP5S:
+                        this.Stream = Resources.WShSound;
+                        break;
+                }
+                this.Play();
             }
-            this.Play();
         }
     }
 }

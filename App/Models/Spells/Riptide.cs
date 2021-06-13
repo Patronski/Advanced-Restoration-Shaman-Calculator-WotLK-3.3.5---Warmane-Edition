@@ -23,8 +23,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new GlyphOfRiptide());
-            this.Modifiers.Add(new TwoPiecesT9Bonus());
+            this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new TwoPiecesT8Bonus());
+            this.Modifiers.Add(new TwoPiecesT9Bonus());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -139,9 +140,13 @@ namespace App.Models.Spells
 
         public override int? CalculateAvgHpm()
         {
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var multiplier = mod2Pt7 ? 5.35 : 4.92;
+
             // {Rip HIT * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] + [5 * Rip TICK]} / [751 - (Crit% * 4.92 )]
             var isGlyphOfRiptide = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
+
             var critChance = Player.Instance.CriticalPercent;
             var critValue = Player.Instance.CriticalMultiplier;
 
@@ -150,12 +155,12 @@ namespace App.Models.Spells
             if (isGlyphOfRiptide)
             {
                 avgHps = (((critChance / 100 * critValue) +
-                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / (751 - critChance * 4.92);
+                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / (751 - critChance * multiplier);
             }
             else
             {
                 avgHps = (((critChance / 100 * critValue) +
-                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / (751 - critChance * 4.92);
+                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / (751 - critChance * multiplier);
             }
 
             return (int)Math.Round(avgHps ?? 0);

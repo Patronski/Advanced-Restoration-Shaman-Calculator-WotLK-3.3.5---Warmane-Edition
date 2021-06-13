@@ -19,7 +19,7 @@ namespace App
 
             if (checkBoxEmeraldVigor.Checked == true)
             {
-                this.numericUpDownEmeraldVigor.Enabled = true;
+                numericUpDownEmeraldVigor.Enabled = true;
             }
             if (checkBoxGlyphOfHealingWave.Checked)
             {
@@ -44,7 +44,7 @@ namespace App
             }
             else
             {
-                this.labelTarget4.Enabled = false;
+                labelTarget4.Enabled = false;
                 this.labelArrowcCrit4.Enabled = false;
                 this.labelArrowHit4.Enabled = false;
                 this.labelDashCrit4.Enabled = false;
@@ -324,6 +324,7 @@ namespace App
                     labelChainedHeal2.Show();
                     textBoxAvgHotHps.Show();
                     break;
+
                 case Constants.SpellEarthliving:
                     textBoxAvgHps.Show();
                     textBoxHit1From.Show();
@@ -344,6 +345,7 @@ namespace App
                     labelEarthlivingLHW.Show();
                     labelEarthlivingRP.Show();
                     break;
+
                 case Constants.SpellHST:
                     labelFor1Target.Show();
                     labelAvgHpmAdditional1.Show();
@@ -357,6 +359,7 @@ namespace App
                     labelPerTick.Show();
                     labeAvgHps2.Show();
                     break;
+
                 case Constants.SpellHW:
                     labelAvgHpmAdditional1.Show();
                     labelAvgHpmAdditional2.Show();
@@ -397,6 +400,7 @@ namespace App
                     labelAvgGlyphOfHealingWave.Show();
                     checkBoxGlyphOfHealingWave.Show();
                     break;
+
                 case Constants.SpellLHW:
                     labelAvgHpmAdditional1.Show();
                     labelAvgHpmAdditional2.Show();
@@ -433,10 +437,11 @@ namespace App
                     textBoxAncestralAwaceningTo.Show();
                     textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
-                    this.labelHit.Show();
+                    labelHit.Show();
                     labelCastingTime.Show();
                     textBoxCastingTime.Show();
                     break;
+
                 case Constants.SpellESh:
                     labelAvgHpmAdditional1.Show();
                     labelAvgHpmAdditional2.Show();
@@ -446,12 +451,13 @@ namespace App
                     labelApproximately2.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
-                    this.labelHit.Show();
+                    labelHit.Show();
                     textBoxHit1From.Show();
                     labelCritMax.Show();
                     textBoxCrit1From.Show();
                     checkBoxMetaRevitalizingSkyflareDiamond.Show();
                     break;
+
                 case Constants.SpellRiptide:
                     labelAvgHpmAdditional1.Show();
                     labelAvgHpmAdditional2.Show();
@@ -486,7 +492,7 @@ namespace App
                     textBoxAncestralAwaceningTo.Show();
                     textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
-                    this.labelHit.Show();
+                    labelHit.Show();
 
                     labelSpamOnDifferent1.Show();
                     labelSpamOnDifferent2.Show();
@@ -500,6 +506,7 @@ namespace App
                     labelHot.Show();
                     textBoxHotRiptide.Show();
                     break;
+
                 case Constants.SpellCritIntoMP5S:
                     textBoxMp5CHPM.Show();
                     textBoxMp5Crit.Show();
@@ -545,43 +552,47 @@ namespace App
 
         private void DisplayHealing()
         {
-            this.textBoxHasteRating.Text = Player.Instance.HasteRating == 0 ? "" : Player.Instance.HasteRating.ToString();
-            this.textBoxSpellPower.Text = Player.Instance.SpellPower == 0 ? "" : Player.Instance.SpellPower.ToString();
-            this.textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
-            this.textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
-            this.textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
-            this.textBoxHit3From.Text = Player.Instance.Hit3From.ToString();
-            this.textBoxHit4From.Text = Player.Instance.Hit4From.ToString();
-            this.textBoxHit1To.Text = Player.Instance.Hit1To.ToString();
-            this.textBoxHit2To.Text = Player.Instance.Hit2To.ToString();
-            this.textBoxHit3To.Text = Player.Instance.Hit3To.ToString();
-            this.textBoxHit4To.Text = Player.Instance.Hit4To.ToString();
-            this.textBoxHit1Avg.Text = Player.Instance.Hit1Avg.ToString();
-            this.textBoxHit2Avg.Text = Player.Instance.Hit2Avg.ToString();
-            this.textBoxHit3Avg.Text = Player.Instance.Hit3Avg.ToString();
-            this.textBoxHit4Avg.Text = Player.Instance.Hit4Avg.ToString();
-            this.textBoxCrit1From.Text = Player.Instance.Crit1From.ToString();
-            this.textBoxCrit2From.Text = Player.Instance.Crit2From.ToString();
-            this.textBoxCrit3From.Text = Player.Instance.Crit3From.ToString();
-            this.textBoxCrit4From.Text = Player.Instance.Crit4From.ToString();
-            this.textBoxCrit1To.Text = Player.Instance.Crit1To.ToString();
-            this.textBoxCrit2To.Text = Player.Instance.Crit2To.ToString();
-            this.textBoxCrit3To.Text = Player.Instance.Crit3To.ToString();
-            this.textBoxCrit4To.Text = Player.Instance.Crit4To.ToString();
-            this.textBoxCrit1Avg.Text = Player.Instance.Crit1Avg.ToString();
-            this.textBoxCrit2Avg.Text = Player.Instance.Crit2Avg.ToString();
-            this.textBoxCrit3Avg.Text = Player.Instance.Crit3Avg.ToString();
-            this.textBoxCrit4Avg.Text = Player.Instance.Crit4Avg.ToString();
-            this.textBoxAvgHot1.Text = Player.Instance.AvgHot1.ToString();
-            this.textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
-            this.textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
-            this.textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
-            this.textBoxHotRiptide.Text = Player.Instance.HotRiptide.ToString();
-            this.textBoxAncestralAwaceningFrom.Text = Player.Instance.AncestralAwaceningFrom.ToString();
-            this.textBoxAncestralAwaceningTo.Text = Player.Instance.AncestralAwaceningTo.ToString();
-            this.textBoxAncestralAwaceningAvg.Text = Player.Instance.AncestralAwaceningAvg.ToString();
-            this.textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
-            this.textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
+            textBoxHasteRating.Text = Player.Instance.HasteRating == 0 ? "" : Player.Instance.HasteRating.ToString();
+            textBoxSpellPower.Text = Player.Instance.SpellPower == 0 ? "" : Player.Instance.SpellPower.ToString();
+            textBoxHastePercent.Text = Player.Instance.HastePercent.ToString();
+            textBoxCriticalPercent.Text = Player.Instance.CriticalPercent.ToString();
+            textBoxIntellect.Text = Player.Instance.Intellect == 0 ? "" : Player.Instance.Intellect.ToString();
+            textBoxMana.Text = Player.Instance.Mana.ToString();
+
+            textBoxHit1From.Text = Player.Instance.Hit1From.ToString();
+            textBoxHit2From.Text = Player.Instance.Hit2From.ToString();
+            textBoxHit3From.Text = Player.Instance.Hit3From.ToString();
+            textBoxHit4From.Text = Player.Instance.Hit4From.ToString();
+            textBoxHit1To.Text = Player.Instance.Hit1To.ToString();
+            textBoxHit2To.Text = Player.Instance.Hit2To.ToString();
+            textBoxHit3To.Text = Player.Instance.Hit3To.ToString();
+            textBoxHit4To.Text = Player.Instance.Hit4To.ToString();
+            textBoxHit1Avg.Text = Player.Instance.Hit1Avg.ToString();
+            textBoxHit2Avg.Text = Player.Instance.Hit2Avg.ToString();
+            textBoxHit3Avg.Text = Player.Instance.Hit3Avg.ToString();
+            textBoxHit4Avg.Text = Player.Instance.Hit4Avg.ToString();
+            textBoxCrit1From.Text = Player.Instance.Crit1From.ToString();
+            textBoxCrit2From.Text = Player.Instance.Crit2From.ToString();
+            textBoxCrit3From.Text = Player.Instance.Crit3From.ToString();
+            textBoxCrit4From.Text = Player.Instance.Crit4From.ToString();
+            textBoxCrit1To.Text = Player.Instance.Crit1To.ToString();
+            textBoxCrit2To.Text = Player.Instance.Crit2To.ToString();
+            textBoxCrit3To.Text = Player.Instance.Crit3To.ToString();
+            textBoxCrit4To.Text = Player.Instance.Crit4To.ToString();
+            textBoxCrit1Avg.Text = Player.Instance.Crit1Avg.ToString();
+            textBoxCrit2Avg.Text = Player.Instance.Crit2Avg.ToString();
+            textBoxCrit3Avg.Text = Player.Instance.Crit3Avg.ToString();
+            textBoxCrit4Avg.Text = Player.Instance.Crit4Avg.ToString();
+            textBoxAvgHot1.Text = Player.Instance.AvgHot1.ToString();
+            textBoxAvgHot2.Text = Player.Instance.AvgHot2.ToString();
+            textBoxAvgHot3.Text = Player.Instance.AvgHot3.ToString();
+            textBoxAvgHot4.Text = Player.Instance.AvgHot4.ToString();
+            textBoxHotRiptide.Text = Player.Instance.HotRiptide.ToString();
+            textBoxAncestralAwaceningFrom.Text = Player.Instance.AncestralAwaceningFrom.ToString();
+            textBoxAncestralAwaceningTo.Text = Player.Instance.AncestralAwaceningTo.ToString();
+            textBoxAncestralAwaceningAvg.Text = Player.Instance.AncestralAwaceningAvg.ToString();
+            textBoxAvgHps.Text = Player.Instance.AvgHps.ToString();
+            textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
             textBoxAvgAAeHps.Text = Player.Instance.AvgAAHps.ToString();
             textBoxGlyphOfHealingWave.Text = Player.Instance.AvgGlyphOfHealingWave.ToString();
             textBoxAvgHpm.Text = Player.Instance.AvgHpm.ToString();
@@ -603,8 +614,6 @@ namespace App
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 
-            textBoxCriticalPercent.Text = Player.Instance.CriticalPercent.ToString();
-
             if (selectedSpell != null &&
                 (selectedSpell.Name == Constants.SpellEarthliving || selectedSpell.Name == Constants.SpellHST))
             {
@@ -624,7 +633,6 @@ namespace App
             {
                 labelAvgHotHps.Text = "AVG HOT eHPS:";
                 labelAvgHps.Text = Constants.LabelAvgHps;
-
             }
         }
     }
