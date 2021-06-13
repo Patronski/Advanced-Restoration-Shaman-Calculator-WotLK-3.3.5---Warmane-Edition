@@ -1,10 +1,4 @@
-﻿using App.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace App.Models
 {
@@ -27,7 +21,7 @@ namespace App.Models
 
         public bool IsCheckBoxChecked { get; set; }
 
-        public abstract void Modify();
+        public virtual void Modify() { }
 
         public void InitCheckBox()
         {

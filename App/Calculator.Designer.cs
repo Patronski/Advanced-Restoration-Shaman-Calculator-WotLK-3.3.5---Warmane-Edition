@@ -218,7 +218,6 @@
             this.labelGlyphs = new System.Windows.Forms.Label();
             this.labelMetaGem = new System.Windows.Forms.Label();
             this.checkBox2PT7Bonus = new System.Windows.Forms.CheckBox();
-            this.checkBoxGlyphOfWaterMastery = new System.Windows.Forms.CheckBox();
             this.checkBoxGlyphOfManaTideTotem = new System.Windows.Forms.CheckBox();
             this.checkBoxMetaInsightfulEarthsiegeDiamond = new System.Windows.Forms.CheckBox();
             this.textBoxIntellect = new System.Windows.Forms.TextBox();
@@ -233,8 +232,22 @@
             this.textBoxMP5S = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDownMp5Totems = new System.Windows.Forms.NumericUpDown();
+            this.labelMp5Totems = new System.Windows.Forms.Label();
+            this.labelMp5Inervates = new System.Windows.Forms.Label();
+            this.numericUpDownMp5Inervates = new System.Windows.Forms.NumericUpDown();
+            this.textBoxMp5Totems = new System.Windows.Forms.TextBox();
+            this.textBoxMp5Innervates = new System.Windows.Forms.TextBox();
+            this.textBoxMp5Replenish = new System.Windows.Forms.TextBox();
+            this.labelMp5Replenish = new System.Windows.Forms.Label();
+            this.numericUpDownReplenish = new System.Windows.Forms.NumericUpDown();
+            this.textBoxMp5Diamond = new System.Windows.Forms.TextBox();
+            this.labelMp5InsightfulEarthsiegeDiamond = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplenish)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -1169,7 +1182,7 @@
             // 
             this.checkBoxMetaRevitalizingSkyflareDiamond.AutoSize = true;
             this.checkBoxMetaRevitalizingSkyflareDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMetaRevitalizingSkyflareDiamond.Location = new System.Drawing.Point(18, 788);
+            this.checkBoxMetaRevitalizingSkyflareDiamond.Location = new System.Drawing.Point(18, 765);
             this.checkBoxMetaRevitalizingSkyflareDiamond.Name = "checkBoxMetaRevitalizingSkyflareDiamond";
             this.checkBoxMetaRevitalizingSkyflareDiamond.Size = new System.Drawing.Size(166, 17);
             this.checkBoxMetaRevitalizingSkyflareDiamond.TabIndex = 107;
@@ -2235,7 +2248,7 @@
             // 
             this.labelMetaGem.AutoSize = true;
             this.labelMetaGem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMetaGem.Location = new System.Drawing.Point(15, 770);
+            this.labelMetaGem.Location = new System.Drawing.Point(15, 747);
             this.labelMetaGem.Name = "labelMetaGem";
             this.labelMetaGem.Size = new System.Drawing.Size(84, 15);
             this.labelMetaGem.TabIndex = 206;
@@ -2252,23 +2265,13 @@
             this.checkBox2PT7Bonus.UseVisualStyleBackColor = true;
             this.checkBox2PT7Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
-            // checkBoxGlyphOfWaterMastery
-            // 
-            this.checkBoxGlyphOfWaterMastery.AutoSize = true;
-            this.checkBoxGlyphOfWaterMastery.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfWaterMastery.Location = new System.Drawing.Point(18, 727);
-            this.checkBoxGlyphOfWaterMastery.Name = "checkBoxGlyphOfWaterMastery";
-            this.checkBoxGlyphOfWaterMastery.Size = new System.Drawing.Size(137, 17);
-            this.checkBoxGlyphOfWaterMastery.TabIndex = 208;
-            this.checkBoxGlyphOfWaterMastery.Text = "Glyph of Water Mastery";
-            this.checkBoxGlyphOfWaterMastery.UseVisualStyleBackColor = true;
-            this.checkBoxGlyphOfWaterMastery.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
-            // 
             // checkBoxGlyphOfManaTideTotem
             // 
             this.checkBoxGlyphOfManaTideTotem.AutoSize = true;
+            this.checkBoxGlyphOfManaTideTotem.Checked = true;
+            this.checkBoxGlyphOfManaTideTotem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxGlyphOfManaTideTotem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfManaTideTotem.Location = new System.Drawing.Point(18, 750);
+            this.checkBoxGlyphOfManaTideTotem.Location = new System.Drawing.Point(18, 727);
             this.checkBoxGlyphOfManaTideTotem.Name = "checkBoxGlyphOfManaTideTotem";
             this.checkBoxGlyphOfManaTideTotem.Size = new System.Drawing.Size(152, 17);
             this.checkBoxGlyphOfManaTideTotem.TabIndex = 209;
@@ -2280,7 +2283,7 @@
             // 
             this.checkBoxMetaInsightfulEarthsiegeDiamond.AutoSize = true;
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMetaInsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(18, 811);
+            this.checkBoxMetaInsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(18, 788);
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Name = "checkBoxMetaInsightfulEarthsiegeDiamond";
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(166, 17);
             this.checkBoxMetaInsightfulEarthsiegeDiamond.TabIndex = 210;
@@ -2409,12 +2412,126 @@
             this.label6.TabIndex = 222;
             this.label6.Text = "(while casting)";
             // 
+            // numericUpDownMp5Totems
+            // 
+            this.numericUpDownMp5Totems.Location = new System.Drawing.Point(718, 505);
+            this.numericUpDownMp5Totems.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numericUpDownMp5Totems.Name = "numericUpDownMp5Totems";
+            this.numericUpDownMp5Totems.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDownMp5Totems.TabIndex = 223;
+            this.numericUpDownMp5Totems.ValueChanged += new System.EventHandler(this.numericUpDownMp5Totems_ValueChanged);
+            // 
+            // labelMp5Totems
+            // 
+            this.labelMp5Totems.AutoSize = true;
+            this.labelMp5Totems.Location = new System.Drawing.Point(662, 505);
+            this.labelMp5Totems.Name = "labelMp5Totems";
+            this.labelMp5Totems.Size = new System.Drawing.Size(42, 13);
+            this.labelMp5Totems.TabIndex = 224;
+            this.labelMp5Totems.Text = "Totems";
+            // 
+            // labelMp5Inervates
+            // 
+            this.labelMp5Inervates.AutoSize = true;
+            this.labelMp5Inervates.Location = new System.Drawing.Point(662, 532);
+            this.labelMp5Inervates.Name = "labelMp5Inervates";
+            this.labelMp5Inervates.Size = new System.Drawing.Size(51, 13);
+            this.labelMp5Inervates.TabIndex = 225;
+            this.labelMp5Inervates.Text = "Inervates";
+            // 
+            // numericUpDownMp5Inervates
+            // 
+            this.numericUpDownMp5Inervates.Location = new System.Drawing.Point(719, 531);
+            this.numericUpDownMp5Inervates.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numericUpDownMp5Inervates.Name = "numericUpDownMp5Inervates";
+            this.numericUpDownMp5Inervates.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDownMp5Inervates.TabIndex = 226;
+            this.numericUpDownMp5Inervates.ValueChanged += new System.EventHandler(this.numericUpDownMp5Inervates_ValueChanged);
+            // 
+            // textBoxMp5Totems
+            // 
+            this.textBoxMp5Totems.Location = new System.Drawing.Point(776, 505);
+            this.textBoxMp5Totems.MaxLength = 6;
+            this.textBoxMp5Totems.Name = "textBoxMp5Totems";
+            this.textBoxMp5Totems.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Totems.TabIndex = 227;
+            // 
+            // textBoxMp5Innervates
+            // 
+            this.textBoxMp5Innervates.Location = new System.Drawing.Point(776, 531);
+            this.textBoxMp5Innervates.MaxLength = 6;
+            this.textBoxMp5Innervates.Name = "textBoxMp5Innervates";
+            this.textBoxMp5Innervates.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Innervates.TabIndex = 228;
+            // 
+            // textBoxMp5Replenish
+            // 
+            this.textBoxMp5Replenish.Location = new System.Drawing.Point(776, 563);
+            this.textBoxMp5Replenish.MaxLength = 6;
+            this.textBoxMp5Replenish.Name = "textBoxMp5Replenish";
+            this.textBoxMp5Replenish.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Replenish.TabIndex = 229;
+            // 
+            // labelMp5Replenish
+            // 
+            this.labelMp5Replenish.AutoSize = true;
+            this.labelMp5Replenish.Location = new System.Drawing.Point(655, 570);
+            this.labelMp5Replenish.Name = "labelMp5Replenish";
+            this.labelMp5Replenish.Size = new System.Drawing.Size(54, 13);
+            this.labelMp5Replenish.TabIndex = 230;
+            this.labelMp5Replenish.Text = "Replenish";
+            // 
+            // numericUpDownReplenish
+            // 
+            this.numericUpDownReplenish.DecimalPlaces = 2;
+            this.numericUpDownReplenish.Location = new System.Drawing.Point(718, 565);
+            this.numericUpDownReplenish.Name = "numericUpDownReplenish";
+            this.numericUpDownReplenish.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownReplenish.TabIndex = 231;
+            this.numericUpDownReplenish.ValueChanged += new System.EventHandler(this.numericUpDownReplenish_ValueChanged);
+            // 
+            // textBoxMp5Diamond
+            // 
+            this.textBoxMp5Diamond.Location = new System.Drawing.Point(776, 599);
+            this.textBoxMp5Diamond.MaxLength = 6;
+            this.textBoxMp5Diamond.Name = "textBoxMp5Diamond";
+            this.textBoxMp5Diamond.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Diamond.TabIndex = 232;
+            // 
+            // labelMp5InsightfulEarthsiegeDiamond
+            // 
+            this.labelMp5InsightfulEarthsiegeDiamond.AutoSize = true;
+            this.labelMp5InsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(623, 602);
+            this.labelMp5InsightfulEarthsiegeDiamond.Name = "labelMp5InsightfulEarthsiegeDiamond";
+            this.labelMp5InsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(147, 13);
+            this.labelMp5InsightfulEarthsiegeDiamond.TabIndex = 233;
+            this.labelMp5InsightfulEarthsiegeDiamond.Text = "Insightful Earthsiege Diamond";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 828);
+            this.Controls.Add(this.labelMp5InsightfulEarthsiegeDiamond);
+            this.Controls.Add(this.textBoxMp5Diamond);
+            this.Controls.Add(this.numericUpDownReplenish);
+            this.Controls.Add(this.labelMp5Replenish);
+            this.Controls.Add(this.textBoxMp5Replenish);
+            this.Controls.Add(this.textBoxMp5Innervates);
+            this.Controls.Add(this.textBoxMp5Totems);
+            this.Controls.Add(this.numericUpDownMp5Inervates);
+            this.Controls.Add(this.labelMp5Inervates);
+            this.Controls.Add(this.labelMp5Totems);
+            this.Controls.Add(this.numericUpDownMp5Totems);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxMP5S);
             this.Controls.Add(this.label5);
@@ -2429,7 +2546,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxMetaInsightfulEarthsiegeDiamond);
             this.Controls.Add(this.checkBoxGlyphOfManaTideTotem);
-            this.Controls.Add(this.checkBoxGlyphOfWaterMastery);
             this.Controls.Add(this.checkBox2PT7Bonus);
             this.Controls.Add(this.labelMetaGem);
             this.Controls.Add(this.labelGlyphs);
@@ -2622,10 +2738,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Advanced Restoration Shaman Calculator (WotLK 3.3.5) ";
+            this.Text = "nklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnklnkly";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Calculator_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplenish)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2823,7 +2942,6 @@
         private System.Windows.Forms.Label labelGlyphs;
         private System.Windows.Forms.Label labelMetaGem;
         public System.Windows.Forms.CheckBox checkBox2PT7Bonus;
-        private System.Windows.Forms.CheckBox checkBoxGlyphOfWaterMastery;
         private System.Windows.Forms.CheckBox checkBoxGlyphOfManaTideTotem;
         private System.Windows.Forms.CheckBox checkBoxMetaInsightfulEarthsiegeDiamond;
         private System.Windows.Forms.TextBox textBoxIntellect;
@@ -2838,6 +2956,17 @@
         private System.Windows.Forms.TextBox textBoxMP5S;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDownMp5Totems;
+        private System.Windows.Forms.Label labelMp5Totems;
+        private System.Windows.Forms.Label labelMp5Inervates;
+        private System.Windows.Forms.NumericUpDown numericUpDownMp5Inervates;
+        private System.Windows.Forms.TextBox textBoxMp5Totems;
+        private System.Windows.Forms.TextBox textBoxMp5Innervates;
+        private System.Windows.Forms.TextBox textBoxMp5Replenish;
+        private System.Windows.Forms.Label labelMp5Replenish;
+        private System.Windows.Forms.NumericUpDown numericUpDownReplenish;
+        private System.Windows.Forms.TextBox textBoxMp5Diamond;
+        private System.Windows.Forms.Label labelMp5InsightfulEarthsiegeDiamond;
     }
 }
 

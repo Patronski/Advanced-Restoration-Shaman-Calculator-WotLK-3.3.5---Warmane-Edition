@@ -611,6 +611,10 @@ namespace App
             textBoxMp5Crit.Text = Player.Instance.Mp5Crit.ToString();
             textBoxMp5Percent.Text = Player.Instance.Mp5Percent.ToString();
             textBoxMp5TotalCrit.Text = Player.Instance.Mp5TotalCrit.ToString();
+            textBoxMp5Totems.Text = Player.Instance.Mp5Totems.ToString();
+            textBoxMp5Innervates.Text = Player.Instance.Mp5Innervates.ToString();
+            textBoxMp5Replenish.Text = Player.Instance.Mp5Replenish.ToString();
+            textBoxMp5Diamond.Text = Player.Instance.Mp5Diamond.ToString();
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 

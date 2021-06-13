@@ -669,5 +669,41 @@ namespace App
 
             DisplayHealing();
         }
+
+        private void numericUpDownMp5Totems_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5TotemsCount = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5Inervates_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5InnervatesCount = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownReplenish_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5ReplenishCount = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
     }
 }

@@ -1,9 +1,6 @@
 ﻿using App.Models.Modifiers;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App.Models.Spells
 {
@@ -15,6 +12,8 @@ namespace App.Models.Spells
 
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new TwoPiecesT7Bonus());
+            this.Modifiers.Add(new GlyphOfManaTideTotem());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -73,6 +72,19 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5Crit()
         {
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var multiplier = mod2Pt7 ? 5.35 : 4.92;
+
+            //RPM * 0.00971 + HWPM * 0.00971 + LHWPM * 0.005826 + CHPM * 0.002913
+            if (mod2Pt7)
+            {
+                var rezult = (Player.Instance.Mp5RPM ?? 0) * 0.00971 +
+                (Player.Instance.Mp5HWPM ?? 0) * 0.00971 +
+                (Player.Instance.Mp5LHWPM ?? 0) * 0.005826 +
+                (Player.Instance.Mp5CHPM ?? 0) * 0.002913;
+                return Math.Round(rezult, 4);
+            }
+            
             //RPM * 0.00893 + HWPM * 0.00893 + LHWPM * 0.005358 + CHPM * 0.00268
             var r = (Player.Instance.Mp5RPM ?? 0) * 0.00893 +
                 (Player.Instance.Mp5HWPM ?? 0) * 0.00893 + 
@@ -91,6 +103,33 @@ namespace App.Models.Spells
         {
             var r = Player.Instance.CriticalPercent * 45.91 * (Player.Instance.Mp5Crit ?? 0);
             return Math.Round(r);
+        }
+
+        public override double CalculateMp5Totems()
+        {
+            var isGlyphOfManaTideTotem = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfManaTideTotem && x.IsCheckBoxChecked);
+
+            var rezult = Player.Instance.Mana * (isGlyphOfManaTideTotem ? 0.28d : 0.24d) * Player.Instance.Mp5TotemsCount;
+            return Math.Round(rezult);
+        }
+
+        public override double CalculateMp5Innervates()
+        {
+            return Player.Instance.Mp5InnervatesCount * 7866;
+        }
+
+        public override double CalculateMp5Replenish()
+        {
+            var result = Player.Instance.Mana / 100d * Player.Instance.Mp5ReplenishCount / 100;
+            return Math.Round(result, 2);
+        }
+
+        public override int CalculateMp5Diamond()
+        {
+            var isInsightfulDiamond = Modifiers
+                .Any(x => x.Display == Constants.ModMetaInsightfulEarthsiegeDiamond && x.IsCheckBoxChecked);
+            return isInsightfulDiamond ? 2 : 1;
         }
 
         public override void Calculate()
@@ -114,6 +153,10 @@ namespace App.Models.Spells
             Player.Instance.Mp5Crit = CalculateMp5Crit();
             Player.Instance.Mp5Percent = CalculateMp5Percent();
             Player.Instance.Mp5TotalCrit = CalculateMp5TotalCrit();
+            Player.Instance.Mp5Totems = CalculateMp5Totems();
+            Player.Instance.Mp5Innervates = CalculateMp5Innervates();
+            Player.Instance.Mp5Replenish = CalculateMp5Replenish();
+            Player.Instance.Mp5Diamond = CalculateMp5Diamond();
         }
 
         public override string ToString()

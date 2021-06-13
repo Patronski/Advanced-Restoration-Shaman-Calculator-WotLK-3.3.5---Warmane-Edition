@@ -86,6 +86,10 @@ namespace App.Models
         public virtual double? CalculateMp5Crit() { return null; }
         public virtual double? CalculateMp5Percent() { return null; }
         public virtual double? CalculateMp5TotalCrit() { return null; }
+        public virtual double CalculateMp5Totems() { return 0; }
+        public virtual double CalculateMp5Innervates() { return 0; }
+        public virtual double CalculateMp5Replenish() { return 0; }
+        public virtual int CalculateMp5Diamond() { return 0; }
 
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {

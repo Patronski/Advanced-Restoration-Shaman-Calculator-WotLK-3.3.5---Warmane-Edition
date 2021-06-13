@@ -180,6 +180,12 @@ namespace App.Models
         public double? Mp5Crit { get; set; }
         public double? Mp5Percent { get; set; }
         public double? Mp5TotalCrit { get; set; }
-
+        public double Mp5Totems { get; set; }
+        public int Mp5TotemsCount { get; set; }
+        public int Mp5InnervatesCount { get; set; }
+        public double Mp5Innervates { get; set; }
+        public double Mp5ReplenishCount { get; set; }
+        public double Mp5Replenish { get; set; }
+        public int Mp5Diamond { get; set; }
     }
 }

@@ -90,7 +90,10 @@
     <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT9Bonus.cs" />
+    <Compile Include="Models\Modifiers\GlyphOfManaTideTotem.cs" />
+    <Compile Include="Models\Modifiers\MetaInsightfulEarthsiegeDiamond.cs" />
     <Compile Include="Models\Modifiers\SteamcallersTotemBonus.cs" />
+    <Compile Include="Models\Modifiers\TwoPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT8Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesTier9Bonus.cs" />

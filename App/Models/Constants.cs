@@ -39,11 +39,13 @@ namespace App.Models
         public const string ModTidalWavesHaste = "Tidal Waves (Haste)";
         public const string ModTreeOfLife = "Tree of Life / Improved Devotion Aura";
         public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
-        public static string ModRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
+        public static string ModMetaRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
+        public static string ModMetaInsightfulEarthsiegeDiamond = "Insightful Earthsiege Diamond";
         public static string ModGlyphOfHealingWave = "Glyph of Healing Wave";
         public static string ModGlyphOfChainHeal = "Glyph of Chain Heal";
         public static string ModGlyphOfEarthliving = "Glyph of Earthliving Weapon";
         public static string ModGlyphOfRiptide = "Glyph of Riptide";
+        public static string ModGlyphOfManaTideTotem = "Glyph of Mana Tide Totem";
         public static string ModSteamcallersTotem = "Steamcaller's Totem";
         public static string Mod2PT7Bonus = "2P/T7 Bonus";
         public static string Mod4PT7Bonus = "4P/T7 Bonus";

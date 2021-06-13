@@ -10,7 +10,7 @@ namespace App.Models.Modifiers
     {
         public RevitalizingSkyflareDiamond()
         {
-            Display = Constants.ModRevitalizingSkyflareDiamond;
+            Display = Constants.ModMetaRevitalizingSkyflareDiamond;
             Value = 1.03;
         }
 
