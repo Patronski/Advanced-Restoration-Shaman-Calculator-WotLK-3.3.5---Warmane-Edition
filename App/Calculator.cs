@@ -621,6 +621,11 @@ namespace App
             {
                 this.textBoxIntellect.Text = "";
             }
+            if (value > 3500)
+            {
+                value = 3500;
+                this.textBoxIntellect.Text = "3500";
+            }
             Player.Instance.Intellect = value;
 
             selectedSpell?.Calculate();
@@ -634,6 +639,11 @@ namespace App
             if (!int.TryParse(this.textBoxCriticalRating.Text, out value))
             {
                 this.textBoxCriticalRating.Text = "";
+            }
+            if (value > 2200)
+            {
+                value = 2200;
+                this.textBoxCriticalRating.Text = "2200";
             }
             Player.Instance.CriticalRating = value;
 
