@@ -16,7 +16,7 @@ namespace App.Models.Spells
             Name = Constants.SpellLHW;
             RanksCount = 9;
 
-            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
+            this.Modifiers.Add(new MetaRevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());

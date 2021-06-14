@@ -243,6 +243,7 @@
             this.numericUpDownReplenish = new System.Windows.Forms.NumericUpDown();
             this.textBoxMp5Diamond = new System.Windows.Forms.TextBox();
             this.labelMp5InsightfulEarthsiegeDiamond = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
@@ -2056,11 +2057,11 @@
             // labelMp5TotalCH
             // 
             this.labelMp5TotalCH.AutoSize = true;
-            this.labelMp5TotalCH.Location = new System.Drawing.Point(304, 286);
+            this.labelMp5TotalCH.Location = new System.Drawing.Point(270, 286);
             this.labelMp5TotalCH.Name = "labelMp5TotalCH";
-            this.labelMp5TotalCH.Size = new System.Drawing.Size(57, 13);
+            this.labelMp5TotalCH.Size = new System.Drawing.Size(91, 13);
             this.labelMp5TotalCH.TabIndex = 187;
-            this.labelMp5TotalCH.Text = "Total CHs:";
+            this.labelMp5TotalCH.Text = "Total CH Targets:";
             this.labelMp5TotalCH.Visible = false;
             // 
             // labelMp5RPM
@@ -2098,9 +2099,9 @@
             this.labelMp5CHPM.AutoSize = true;
             this.labelMp5CHPM.Location = new System.Drawing.Point(524, 286);
             this.labelMp5CHPM.Name = "labelMp5CHPM";
-            this.labelMp5CHPM.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5CHPM.Size = new System.Drawing.Size(45, 13);
             this.labelMp5CHPM.TabIndex = 191;
-            this.labelMp5CHPM.Text = "CHPM";
+            this.labelMp5CHPM.Text = "CHTPM";
             this.labelMp5CHPM.Visible = false;
             // 
             // textBoxMp5Crit
@@ -2414,7 +2415,7 @@
             // 
             // numericUpDownMp5Totems
             // 
-            this.numericUpDownMp5Totems.Location = new System.Drawing.Point(718, 505);
+            this.numericUpDownMp5Totems.Location = new System.Drawing.Point(825, 135);
             this.numericUpDownMp5Totems.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2428,24 +2429,24 @@
             // labelMp5Totems
             // 
             this.labelMp5Totems.AutoSize = true;
-            this.labelMp5Totems.Location = new System.Drawing.Point(662, 505);
+            this.labelMp5Totems.Location = new System.Drawing.Point(728, 137);
             this.labelMp5Totems.Name = "labelMp5Totems";
-            this.labelMp5Totems.Size = new System.Drawing.Size(42, 13);
+            this.labelMp5Totems.Size = new System.Drawing.Size(91, 13);
             this.labelMp5Totems.TabIndex = 224;
-            this.labelMp5Totems.Text = "Totems";
+            this.labelMp5Totems.Text = "Mana Tide Totem";
             // 
             // labelMp5Inervates
             // 
             this.labelMp5Inervates.AutoSize = true;
-            this.labelMp5Inervates.Location = new System.Drawing.Point(662, 532);
+            this.labelMp5Inervates.Location = new System.Drawing.Point(742, 549);
             this.labelMp5Inervates.Name = "labelMp5Inervates";
-            this.labelMp5Inervates.Size = new System.Drawing.Size(51, 13);
+            this.labelMp5Inervates.Size = new System.Drawing.Size(52, 13);
             this.labelMp5Inervates.TabIndex = 225;
-            this.labelMp5Inervates.Text = "Inervates";
+            this.labelMp5Inervates.Text = "Innervate";
             // 
             // numericUpDownMp5Inervates
             // 
-            this.numericUpDownMp5Inervates.Location = new System.Drawing.Point(719, 531);
+            this.numericUpDownMp5Inervates.Location = new System.Drawing.Point(800, 547);
             this.numericUpDownMp5Inervates.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2458,7 +2459,7 @@
             // 
             // textBoxMp5Totems
             // 
-            this.textBoxMp5Totems.Location = new System.Drawing.Point(776, 505);
+            this.textBoxMp5Totems.Location = new System.Drawing.Point(909, 135);
             this.textBoxMp5Totems.MaxLength = 6;
             this.textBoxMp5Totems.Name = "textBoxMp5Totems";
             this.textBoxMp5Totems.Size = new System.Drawing.Size(48, 20);
@@ -2466,7 +2467,7 @@
             // 
             // textBoxMp5Innervates
             // 
-            this.textBoxMp5Innervates.Location = new System.Drawing.Point(776, 531);
+            this.textBoxMp5Innervates.Location = new System.Drawing.Point(883, 547);
             this.textBoxMp5Innervates.MaxLength = 6;
             this.textBoxMp5Innervates.Name = "textBoxMp5Innervates";
             this.textBoxMp5Innervates.Size = new System.Drawing.Size(48, 20);
@@ -2474,7 +2475,7 @@
             // 
             // textBoxMp5Replenish
             // 
-            this.textBoxMp5Replenish.Location = new System.Drawing.Point(776, 563);
+            this.textBoxMp5Replenish.Location = new System.Drawing.Point(883, 581);
             this.textBoxMp5Replenish.MaxLength = 6;
             this.textBoxMp5Replenish.Name = "textBoxMp5Replenish";
             this.textBoxMp5Replenish.Size = new System.Drawing.Size(48, 20);
@@ -2483,16 +2484,16 @@
             // labelMp5Replenish
             // 
             this.labelMp5Replenish.AutoSize = true;
-            this.labelMp5Replenish.Location = new System.Drawing.Point(655, 570);
+            this.labelMp5Replenish.Location = new System.Drawing.Point(682, 583);
             this.labelMp5Replenish.Name = "labelMp5Replenish";
-            this.labelMp5Replenish.Size = new System.Drawing.Size(54, 13);
+            this.labelMp5Replenish.Size = new System.Drawing.Size(111, 13);
             this.labelMp5Replenish.TabIndex = 230;
-            this.labelMp5Replenish.Text = "Replenish";
+            this.labelMp5Replenish.Text = "Replenishment uptime";
             // 
             // numericUpDownReplenish
             // 
             this.numericUpDownReplenish.DecimalPlaces = 2;
-            this.numericUpDownReplenish.Location = new System.Drawing.Point(718, 565);
+            this.numericUpDownReplenish.Location = new System.Drawing.Point(799, 581);
             this.numericUpDownReplenish.Name = "numericUpDownReplenish";
             this.numericUpDownReplenish.Size = new System.Drawing.Size(52, 20);
             this.numericUpDownReplenish.TabIndex = 231;
@@ -2500,7 +2501,7 @@
             // 
             // textBoxMp5Diamond
             // 
-            this.textBoxMp5Diamond.Location = new System.Drawing.Point(776, 599);
+            this.textBoxMp5Diamond.Location = new System.Drawing.Point(883, 615);
             this.textBoxMp5Diamond.MaxLength = 6;
             this.textBoxMp5Diamond.Name = "textBoxMp5Diamond";
             this.textBoxMp5Diamond.Size = new System.Drawing.Size(48, 20);
@@ -2509,11 +2510,21 @@
             // labelMp5InsightfulEarthsiegeDiamond
             // 
             this.labelMp5InsightfulEarthsiegeDiamond.AutoSize = true;
-            this.labelMp5InsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(623, 602);
+            this.labelMp5InsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(645, 618);
             this.labelMp5InsightfulEarthsiegeDiamond.Name = "labelMp5InsightfulEarthsiegeDiamond";
             this.labelMp5InsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(147, 13);
             this.labelMp5InsightfulEarthsiegeDiamond.TabIndex = 233;
             this.labelMp5InsightfulEarthsiegeDiamond.Text = "Insightful Earthsiege Diamond";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(857, 583);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 16);
+            this.label7.TabIndex = 234;
+            this.label7.Text = "%";
             // 
             // Calculator
             // 
@@ -2521,6 +2532,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 828);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.labelMp5InsightfulEarthsiegeDiamond);
             this.Controls.Add(this.textBoxMp5Diamond);
             this.Controls.Add(this.numericUpDownReplenish);
@@ -2967,6 +2979,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownReplenish;
         private System.Windows.Forms.TextBox textBoxMp5Diamond;
         private System.Windows.Forms.Label labelMp5InsightfulEarthsiegeDiamond;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -14,6 +14,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new GlyphOfManaTideTotem());
+            this.Modifiers.Add(new MetaInsightfulEarthsiegeDiamond());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -35,8 +36,9 @@ namespace App.Models.Spells
             {
                 return null;
             }
-            var r = Player.Instance.Mp5TotalRiptides ?? 0;
-            var x = r / (double)Player.Instance.Mp5TimeDec;
+
+            var x = Player.Instance.Mp5TotalRiptides / (double)Player.Instance.Mp5TimeDec;
+
             return Math.Round(x, 2);
         }
 
@@ -46,7 +48,7 @@ namespace App.Models.Spells
             {
                 return null;
             }
-            var r = (Player.Instance.Mp5TotalHW ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            var r = (Player.Instance.Mp5TotalHW) / (double)Player.Instance.Mp5TimeDec;
             return Math.Round(r, 2);
         }
 
@@ -56,7 +58,7 @@ namespace App.Models.Spells
             {
                 return null;
             }
-            var r = (Player.Instance.Mp5TotalLHW ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            var r = (Player.Instance.Mp5TotalLHW) / (double)Player.Instance.Mp5TimeDec;
             return Math.Round(r, 2);
         }
 
@@ -66,7 +68,7 @@ namespace App.Models.Spells
             {
                 return null;
             }
-            var r = (Player.Instance.Mp5TotalCH ?? 0) / (double)Player.Instance.Mp5TimeDec;
+            var r = (Player.Instance.Mp5TotalCH) / (double)Player.Instance.Mp5TimeDec;
             return Math.Round(r, 2);
         }
 
@@ -125,11 +127,15 @@ namespace App.Models.Spells
             return Math.Round(result, 2);
         }
 
-        public override int CalculateMp5Diamond()
+        public override double CalculateMp5Diamond()
         {
             var isInsightfulDiamond = Modifiers
                 .Any(x => x.Display == Constants.ModMetaInsightfulEarthsiegeDiamond && x.IsCheckBoxChecked);
-            return isInsightfulDiamond ? 2 : 1;
+
+            var totalSomething = Player.Instance.Mp5TotalHW + Player.Instance.Mp5TotalLHW + Player.Instance.Mp5TotalRiptides + (Player.Instance.Mp5TotalCH / 3);
+            var result = totalSomething * 0.05 * 600;
+            //var result = Player.Instance.Mp5TimeDec * 60 / totalSomething;
+            return result;
         }
 
         public override void Calculate()

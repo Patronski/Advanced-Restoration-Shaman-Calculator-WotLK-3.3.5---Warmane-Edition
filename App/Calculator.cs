@@ -242,12 +242,17 @@ namespace App
 
         private void textBoxHaste_TextChanged(object sender, EventArgs e)
         {
-            int hasteRating = 0;
-            if (!int.TryParse(this.textBoxHasteRating.Text, out hasteRating))
+            int value = 0;
+            if (!int.TryParse(this.textBoxHasteRating.Text, out value))
             {
                 this.textBoxHasteRating.Text = "";
             }
-            Player.Instance.HasteRating = hasteRating;
+            if (value > 3000)
+            {
+                value = 3000;
+                this.textBoxHasteRating.Text = "3000";
+            }
+            Player.Instance.HasteRating = value;
 
             if (selectedSpell != null)
             {

@@ -17,7 +17,7 @@ namespace App.Models.Spells
             RanksCount = 14;
 
             this.Modifiers.Add(new GlyphOfHealingWave());
-            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
+            this.Modifiers.Add(new MetaRevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());

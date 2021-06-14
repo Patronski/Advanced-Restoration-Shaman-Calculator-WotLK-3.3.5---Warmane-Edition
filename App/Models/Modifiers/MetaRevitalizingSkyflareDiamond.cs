@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace App.Models.Modifiers
 {
-    public class RevitalizingSkyflareDiamond : Modifier
+    public class MetaRevitalizingSkyflareDiamond : Modifier
     {
-        public RevitalizingSkyflareDiamond()
+        public MetaRevitalizingSkyflareDiamond()
         {
             Display = Constants.ModMetaRevitalizingSkyflareDiamond;
             Value = 1.03;

@@ -16,7 +16,7 @@ namespace App.Models.Spells
             Name = Constants.SpellChainHeal;
             RanksCount = 7;
 
-            this.Modifiers.Add(new RevitalizingSkyflareDiamond());
+            this.Modifiers.Add(new MetaRevitalizingSkyflareDiamond());
             this.Modifiers.Add(new TreeOfLife());
             this.Modifiers.Add(new HellscreamsWarsong());
             this.Modifiers.Add(new EmeraldVigor());

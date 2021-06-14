@@ -89,7 +89,7 @@ namespace App.Models
         public virtual double CalculateMp5Totems() { return 0; }
         public virtual double CalculateMp5Innervates() { return 0; }
         public virtual double CalculateMp5Replenish() { return 0; }
-        public virtual int CalculateMp5Diamond() { return 0; }
+        public virtual double CalculateMp5Diamond() { return 0; }
 
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {

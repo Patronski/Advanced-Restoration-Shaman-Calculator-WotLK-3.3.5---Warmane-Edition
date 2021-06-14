@@ -169,10 +169,10 @@ namespace App.Models
         public int? Mp5TimeMin { get; set; }
         public int? Mp5TimeSec { get; set; }
         public double? Mp5TimeDec { get; set; }
-        public int? Mp5TotalRiptides { get; set; }
-        public int? Mp5TotalHW { get; set; }
-        public int? Mp5TotalLHW { get; set; }
-        public int? Mp5TotalCH { get; set; }
+        public int Mp5TotalRiptides { get; set; }
+        public int Mp5TotalHW { get; set; }
+        public int Mp5TotalLHW { get; set; }
+        public int Mp5TotalCH { get; set; }
         public double? Mp5RPM { get; set; }
         public double? Mp5HWPM { get; set; }
         public double? Mp5LHWPM { get; set; }
@@ -186,6 +186,6 @@ namespace App.Models
         public double Mp5Innervates { get; set; }
         public double Mp5ReplenishCount { get; set; }
         public double Mp5Replenish { get; set; }
-        public int Mp5Diamond { get; set; }
+        public double Mp5Diamond { get; set; }
     }
 }

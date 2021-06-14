@@ -111,7 +111,7 @@
     <Compile Include="Models\Modifiers\Interfaces\IHealingModifier.cs" />
     <Compile Include="Models\Modifiers\MoonkinForm.cs" />
     <Compile Include="Models\Modifiers\RapidCurrents.cs" />
-    <Compile Include="Models\Modifiers\RevitalizingSkyflareDiamond.cs" />
+    <Compile Include="Models\Modifiers\MetaRevitalizingSkyflareDiamond.cs" />
     <Compile Include="Models\Modifiers\RiptidesConsumption.cs" />
     <Compile Include="Models\Modifiers\SwiftRetribution.cs" />
     <Compile Include="Models\Modifiers\TidalWavesHaste.cs" />
