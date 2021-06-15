@@ -78,18 +78,19 @@ namespace App.Models
         public virtual int? CalculateEarthlivingAvgHpsRP() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsTotal() { return null; }
 
-        public virtual double? CalculateMp5TotalDec() { return null; }
+        public virtual double CalculateMp5TotalDec() { return 0; }
         public virtual double? CalculateMp5RPM() { return null; }
         public virtual double? CalculateMp5HWPM() { return null; }
         public virtual double? CalculateMp5LHWPM() { return null; }
         public virtual double? CalculateMp5CHPM() { return null; }
         public virtual double? CalculateMp5Crit() { return null; }
         public virtual double? CalculateMp5Percent() { return null; }
-        public virtual double? CalculateMp5TotalCrit() { return null; }
+        public virtual double CalculateMp5TotalCrit() { return 0; }
         public virtual double CalculateMp5Totems() { return 0; }
         public virtual double CalculateMp5Innervates() { return 0; }
         public virtual double CalculateMp5Replenish() { return 0; }
         public virtual double CalculateMp5Diamond() { return 0; }
+        public virtual int CalculateMp5TotalManaGain() { return 0; }
 
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {
@@ -160,17 +161,14 @@ namespace App.Models
             Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
             Player.Instance.AvgHpm = CalculateAvgHpm();
 
-            var modChainHeal = Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false);
-            if (modChainHeal != null)
-            {
-                modChainHeal.Modify();
-            }
+            Modifiers
+                .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false)
+                ?.Modify();
         }
 
-        public virtual int? CalculateAvgHpm()
+        public virtual double CalculateAvgHpm()
         {
-            return null;
+            return 0;
         }
 
         protected void ModifyWithModifiers()
@@ -209,20 +207,13 @@ namespace App.Models
 
         public virtual void EnableDisableModifiers(List<CheckBox> checks)
         {
-            //foreach (var check in checks)
-            //{
-            //    if (this.modifierNames.Contains(check.Text))
-            //    {
-            //        check.Enabled = true;
-            //    }
-            //    else
-            //    {
-            //        if (check.Name != "checkBoxMuteSound")
-            //        {
-            //            check.Enabled = false;
-            //        }
-            //    }
-            //}
+            foreach (var check in checks)
+            {
+                if (this.modifierNames.Contains(check.Text))
+                {
+                    check.Enabled = true;
+                }
+            }
         }
 
         public virtual void CalculateOnModifierChange(string modName, bool isChecked)

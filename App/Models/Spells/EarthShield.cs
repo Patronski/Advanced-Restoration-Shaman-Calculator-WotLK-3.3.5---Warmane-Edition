@@ -22,6 +22,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new GlyphOfEarthShield());
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -43,12 +44,13 @@ namespace App.Models.Spells
         {
             var hps = ((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier) +
                 (1 - Player.Instance.CriticalPercent / 100)) * Player.Instance.Hit1From;
-            hps = hps / 4.28;
+
+            hps = hps / 3.83;
 
             return (int?)hps;
         }
 
-        public override int? CalculateAvgHpm()
+        public override double CalculateAvgHpm()
         {
             // ES TICK * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] * 8 / 626[/color]
             var result = Player.Instance.Hit1From *
@@ -56,7 +58,7 @@ namespace App.Models.Spells
                 (1 - Player.Instance.CriticalPercent / 100))
                 *
                 8 / 626;
-            return (int)Math.Round(result ?? 0);
+            return Math.Round(result ?? 0, 1);
         }
     }
 }

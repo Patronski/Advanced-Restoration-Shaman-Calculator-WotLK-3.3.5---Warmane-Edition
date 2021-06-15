@@ -29,11 +29,14 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new GlyphOfChainHeal());
             this.Modifiers.Add(new SteamcallersTotemBonus());
+            this.Modifiers.Add(new TotemOfForestGrowth());
+            this.Modifiers.Add(new TotemOfTheBay());
             this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new FourPiecesT7Bonus());
             this.Modifiers.Add(new FourPiecesT8Bonus());
             this.Modifiers.Add(new FourPiecesT9Bonus());
             this.Modifiers.Add(new FourPiecesT10Bonus());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -42,8 +45,11 @@ namespace App.Models.Spells
         {
             var isSteamcallerTotem = Modifiers
                 .Any(x => x.Display == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
+            var isTotemOfTheBay = Modifiers
+                .Any(x => x.Display == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
 
             int a = isSteamcallerTotem ? 243 : 0;
+            a = isTotemOfTheBay ? 102 : a;
 
             int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1055 + a) * 1.32);
 
@@ -54,8 +60,11 @@ namespace App.Models.Spells
         {
             var isSteamcallerTotem = Modifiers
                 .Any(x => x.Display == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
+            var isTotemOfTheBay = Modifiers
+                .Any(x => x.Display == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
 
             int a = isSteamcallerTotem ? 243 : 0;
+            a = isTotemOfTheBay ? 102 : a;
 
             int rounded = (int)((int)(1.342 * Player.Instance.SpellPower + 1205 + a) * 1.32);
 
@@ -158,7 +167,7 @@ namespace App.Models.Spells
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
             var formula = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier)
-                + (1 - Player.Instance.CriticalPercent / 100 ) )
+                + (1 - Player.Instance.CriticalPercent / 100))
                 * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100));
 
             var isGlyphOfChainHeal = Modifiers
@@ -192,7 +201,7 @@ namespace App.Models.Spells
 
             var is4PT10Equiped = Modifiers
                 .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
-            
+
             if (!is4PT10Equiped) result = 0;
 
             return result;
@@ -288,30 +297,35 @@ namespace App.Models.Spells
             base.CalculateOnModifierChange(modName, isChecked);
         }
 
-        public override int? CalculateAvgHpm()
+        public override double CalculateAvgHpm()
         {
-            var isGlyphOfChainHeal = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+            var isGlyphOfChainHeal = Modifiers.Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+            var isTotemOfForestGrowth = Modifiers.Any(x => x.Display == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
 
             var avgHit = Player.Instance.Hit1Avg + Player.Instance.Hit2Avg + Player.Instance.Hit3Avg;
 
-            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            //var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
 
-            var multiplier = isGlyphOfChainHeal ?
-                (mod2Pt7 ? 6.42 : 5.904) 
-                : (mod2Pt7 ? 4.815 : 4.428);
+            //var multiplier = isGlyphOfChainHeal ?
+            //    (mod2Pt7 ? 6.42 : 5.904)
+            //    : (mod2Pt7 ? 4.815 : 4.428);
             if (isGlyphOfChainHeal)
             {
                 avgHit += Player.Instance.Hit4Avg;
             }
 
+            var totemModifier = isTotemOfForestGrowth ? 719 : 793;
+
             //* [Crtit% / 100 * 1.5 + (1 - Crit% / 100)]} / [793 - (Crit% * 5.904)]
             var result = (avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
-                (1 - Player.Instance.CriticalPercent / 100))) 
-                /
-                (793 - Player.Instance.CriticalPercent * multiplier);
-            
-            return (int)Math.Round(result ?? 0);
+                (1 - Player.Instance.CriticalPercent / 100)));
+                 /*- Player.Instance.CriticalPercent * multiplier*/
+
+            result += (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4)
+                * 3 * Player.Instance.CriticalPercent / 100;
+            result /= totemModifier;
+
+            return Math.Round(result ?? 0, 1);
         }
     }
 }

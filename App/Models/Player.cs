@@ -114,7 +114,7 @@ namespace App.Models
 
         public int? AvgHotHps { get; set; }
 
-        public int? AvgHpm { get; set; }
+        public double AvgHpm { get; set; }
 
         public int? AvgAAHps { get; set; }
 
@@ -168,7 +168,7 @@ namespace App.Models
 
         public int? Mp5TimeMin { get; set; }
         public int? Mp5TimeSec { get; set; }
-        public double? Mp5TimeDec { get; set; }
+        public double Mp5TimeDec { get; set; }
         public int Mp5TotalRiptides { get; set; }
         public int Mp5TotalHW { get; set; }
         public int Mp5TotalLHW { get; set; }
@@ -179,7 +179,7 @@ namespace App.Models
         public double? Mp5CHPM { get; set; }
         public double? Mp5Crit { get; set; }
         public double? Mp5Percent { get; set; }
-        public double? Mp5TotalCrit { get; set; }
+        public double Mp5TotalCrit { get; set; }
         public double Mp5Totems { get; set; }
         public int Mp5TotemsCount { get; set; }
         public int Mp5InnervatesCount { get; set; }
@@ -187,5 +187,6 @@ namespace App.Models
         public double Mp5ReplenishCount { get; set; }
         public double Mp5Replenish { get; set; }
         public double Mp5Diamond { get; set; }
+        public int Mp5TotalManaGain { get; set; }
     }
 }

@@ -29,6 +29,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TidalMastery());
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new TwoPiecesT7Bonus());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -114,19 +115,19 @@ namespace App.Models.Spells
             return (Player.Instance.AncestralAwaceningFrom + Player.Instance.AncestralAwaceningTo) / 2;
         }
 
-        public override int? CalculateAvgHpm()
+        public override double CalculateAvgHpm()
         {
             var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
 
-            var multiplier = mod2Pt7 ? 3.21 : 2.952;
+
 
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
-                (1 - Player.Instance.CriticalPercent / 100)))
-                /
-                (626 - Player.Instance.CriticalPercent * multiplier);
+                (1 - Player.Instance.CriticalPercent / 100)));
 
-            
-            return (int)Math.Round(result ?? 0);
+            result += Player.Instance.AncestralAwaceningAvg * Player.Instance.CriticalPercent / 100;
+
+            result /= 626;
+            return Math.Round(result ?? 0, 1);
         }
     }
 }

@@ -63,6 +63,26 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _2P_T10 {
+            get {
+                object obj = ResourceManager.GetObject("_2P_T10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _2P_T7 {
+            get {
+                object obj = ResourceManager.GetObject("_2P_T7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _2pT8_Bonus {
             get {
                 object obj = ResourceManager.GetObject("_2pT8_Bonus", resourceCulture);
@@ -83,9 +103,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _4pT7_CH {
+        public static System.Drawing.Bitmap _4P_T10 {
             get {
-                object obj = ResourceManager.GetObject("_4pT7_CH", resourceCulture);
+                object obj = ResourceManager.GetObject("_4P_T10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _4pT7_HW {
+        public static System.Drawing.Bitmap _4P_T7 {
             get {
-                object obj = ResourceManager.GetObject("_4pT7_HW", resourceCulture);
+                object obj = ResourceManager.GetObject("_4P_T7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Ancestral_KnowledgeH {
             get {
                 object obj = ResourceManager.GetObject("Ancestral_KnowledgeH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Berserking {
+            get {
+                object obj = ResourceManager.GetObject("Berserking", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -339,9 +369,38 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Glyph_of_MTT {
+            get {
+                object obj = ResourceManager.GetObject("Glyph_of_MTT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Glyph_of_Riptide {
             get {
                 object obj = ResourceManager.GetObject("Glyph_of_Riptide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream GotN {
+            get {
+                return ResourceManager.GetStream("GotN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap GotNPicture {
+            get {
+                object obj = ResourceManager.GetObject("GotNPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -391,6 +450,16 @@ namespace App.Properties {
         public static System.IO.UnmanagedMemoryStream HW {
             get {
                 return ResourceManager.GetStream("HW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IED {
+            get {
+                object obj = ResourceManager.GetObject("IED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -547,16 +616,6 @@ namespace App.Properties {
         public static System.Drawing.Bitmap PurificationH {
             get {
                 object obj = ResourceManager.GetObject("PurificationH", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Rapid_Currents {
-            get {
-                object obj = ResourceManager.GetObject("Rapid_Currents", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -776,6 +835,36 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Tidal_WavesH {
             get {
                 object obj = ResourceManager.GetObject("Tidal_WavesH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Totem_of_Forest_Growth {
+            get {
+                object obj = ResourceManager.GetObject("Totem_of_Forest_Growth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Totem_of_Misery {
+            get {
+                object obj = ResourceManager.GetObject("Totem_of_Misery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Totem_of_the_Bay {
+            get {
+                object obj = ResourceManager.GetObject("Totem_of_the_Bay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

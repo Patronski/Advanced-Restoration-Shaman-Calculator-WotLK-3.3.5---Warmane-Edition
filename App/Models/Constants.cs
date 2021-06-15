@@ -23,8 +23,10 @@ namespace App.Models
         public const string SpellLHW = "Lesser Healing Wave";
         public const string SpellRiptide = "Riptide";
         public const string SpellCritIntoMP5S = "Critical Into MP5S and Mana Return";
+        public const string SpellGiftOfTheNaaru = "Gift of the Naaru (Draenei)";
 
         public const string ModBloodlust = "Bloodlust / Heroism";
+        public const string ModBerserking = "Berserking (Troll)";
         public const string ModEmeraldVigor = ""; // TODO
         public const string ModGlyphLHW = "Glyph Lesser Healing Wave";
         public const string ModGlyphESH = "Glyph of Earth Shield";
@@ -47,6 +49,9 @@ namespace App.Models
         public static string ModGlyphOfRiptide = "Glyph of Riptide";
         public static string ModGlyphOfManaTideTotem = "Glyph of Mana Tide Totem";
         public static string ModSteamcallersTotem = "Steamcaller's Totem";
+        public static string ModTotemOfForestGrowth = "Totem of Forest Growth";
+        public static string ModTotemOfTheBay = "Totem of the Bay";
+        public static string ModTotemOfMisery = "Totem of Misery";
         public static string Mod2PT7Bonus = "2P/T7 Bonus";
         public static string Mod4PT7Bonus = "4P/T7 Bonus";
         public static string Mod2PT8Bonus = "2P/T8 Bonus";

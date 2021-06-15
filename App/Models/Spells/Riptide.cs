@@ -26,6 +26,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new TwoPiecesT8Bonus());
             this.Modifiers.Add(new TwoPiecesT9Bonus());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -138,7 +139,7 @@ namespace App.Models.Spells
             return round;
         }
 
-        public override int? CalculateAvgHpm()
+        public override double CalculateAvgHpm()
         {
             var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
             var multiplier = mod2Pt7 ? 5.35 : 4.92;
@@ -155,15 +156,18 @@ namespace App.Models.Spells
             if (isGlyphOfRiptide)
             {
                 avgHps = (((critChance / 100 * critValue) +
-                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide)) / (751 - critChance * multiplier);
+                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (7 * Player.Instance.HotRiptide));
             }
             else
             {
                 avgHps = (((critChance / 100 * critValue) +
-                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide)) / (751 - critChance * multiplier);
+                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide));
             }
+            avgHps += Player.Instance.AncestralAwaceningAvg * Player.Instance.CriticalPercent / 100;
 
-            return (int)Math.Round(avgHps ?? 0);
+            avgHps /= 751;
+
+            return Math.Round(avgHps ?? 0, 1);
         }
     }
 }

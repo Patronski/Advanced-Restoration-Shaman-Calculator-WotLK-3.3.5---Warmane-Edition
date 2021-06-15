@@ -74,12 +74,6 @@ namespace App
             myToolTip.SetToolTip(checkBoxSteamcallersTotem, "mod");
             checkBoxSteamcallersTotem.Tag = Resources.ST;
 
-            //myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
-            //checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
-
-            //myToolTip.SetToolTip(checkBoxGlyphOfChainHealEarthliving, "Tree of life");
-            //checkBoxGlyphOfChainHealEarthliving.Tag = Resources.Glyph_of_Chain_Heal;
-
             myToolTip.SetToolTip(checkBoxTreeOfLife, "Tree of life");
             checkBoxTreeOfLife.Tag = Resources.Tree_of_Life;
 
@@ -114,7 +108,7 @@ namespace App
             checkBoxBloodlust.Tag = Resources.Bloodlust;
 
             myToolTip.SetToolTip(checkBox2PT10Bonus, "some name");
-            checkBox2PT10Bonus.Tag = Resources.Rapid_Currents;
+            checkBox2PT10Bonus.Tag = Resources._2P_T10;
 
             myToolTip.SetToolTip(checkBoxTidalWaves, "some name");
             checkBoxTidalWaves.Tag = Resources.Tidal_Waves__Haste_;
@@ -137,9 +131,6 @@ namespace App
             myToolTip.SetToolTip(checkBoxMetaRevitalizingSkyflareDiamond, "some name");
             checkBoxMetaRevitalizingSkyflareDiamond.Tag = Resources.Revitalizing_Skyflare_Diamond;
 
-            myToolTip.SetToolTip(labelEarthlivingBlessingOf, "some name");
-            labelEarthlivingBlessingOf.Tag = Resources.Blessing_of_the_Eternals;
-
             myToolTip.SetToolTip(labelChainedHeal1, "some name");
             labelChainedHeal1.Tag = Resources.Chained_Heal;
 
@@ -148,6 +139,33 @@ namespace App
 
             myToolTip.SetToolTip(checkBoxGlyphOfHealingWave, "some name");
             checkBoxGlyphOfHealingWave.Tag = Resources.Glyph_of_Healing_Wave;
+
+            myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
+            checkBox4PT7Bonus.Tag = Resources._4P_T7;
+
+            myToolTip.SetToolTip(checkBox2PT7Bonus, "mod");
+            checkBox2PT7Bonus.Tag = Resources._2P_T7;
+
+            myToolTip.SetToolTip(checkBox4PT10Bonus, "mod");
+            checkBox4PT10Bonus.Tag = Resources._4P_T10;
+
+            myToolTip.SetToolTip(checkBoxBerserking, "mod");
+            checkBoxBerserking.Tag = Resources.Berserking;
+
+            myToolTip.SetToolTip(checkBoxGlyphOfManaTideTotem, "mod");
+            checkBoxGlyphOfManaTideTotem.Tag = Resources.Mana_Tide_TotemH;
+
+            myToolTip.SetToolTip(checkBoxMetaInsightfulEarthsiegeDiamond, "mod");
+            checkBoxMetaInsightfulEarthsiegeDiamond.Tag = Resources.IED;
+
+            myToolTip.SetToolTip(checkBoxTotemOfForestGrowth, "mod");
+            checkBoxTotemOfForestGrowth.Tag = Resources.Totem_of_Forest_Growth;
+
+            myToolTip.SetToolTip(checkBoxTotemOfMisery, "mod");
+            checkBoxTotemOfMisery.Tag = Resources.Totem_of_Misery;
+
+            myToolTip.SetToolTip(checkBoxTotemOfTheBay, "mod");
+            checkBoxTotemOfTheBay.Tag = Resources.Totem_of_the_Bay;
         }
 
         private void AdjustComponentProperties()
@@ -170,36 +188,46 @@ namespace App
 
         private void AddControllsToList()
         {
-            checkBoxes = new List<CheckBox>()
+            checkBoxes = new List<CheckBox>();
+
+            foreach (Control c in this.Controls)
             {
-                this.checkBoxTreeOfLife,
-                this.checkBoxHellscream,
-                this.checkBoxEmeraldVigor,
-                this.checkBoxRiptidesConsumption,
-                this.checkBoxGlyphOfEarthShield,
-                this.checkBoxGyphOfHST,
-                this.checkBoxGlyphOfLHW,
-                this.checkBoxWrathOfTheAirTotem,
-                this.checkBoxSwiftRetributionHaste,
-                this.checkBoxBloodlust,
-                this.checkBoxTidalWaves,
-                this.checkBoxMoonkinForm,
-                this.checkBoxTidalWavesCrit,
-                this.checkBoxMetaRevitalizingSkyflareDiamond,
-                this.checkBoxGlyphOfRiptide,
-                checkBoxGlyphOfEarthliving,
-                checkBoxGlyphChainHeal,
-                checkBoxGlyphOfHealingWave,
-                checkBoxMuteSound,
-                this.checkBox4PT7Bonus,
-                this.checkBox2PT8Bonus,
-                this.checkBox4PT8Bonus,
-                this.checkBox2PT9Bonus,
-                this.checkBox4PT9Bonus,
-                this.checkBox2PT10Bonus,
-                this.checkBox4PT10Bonus,
-                this.checkBoxSteamcallersTotem
-            };
+                if (c is CheckBox)
+                {
+                    checkBoxes.Add(c as CheckBox);
+                }
+            }
+            //checkBoxes = new List<CheckBox>()
+            //{
+            //    this.checkBoxTreeOfLife,
+            //    this.checkBoxHellscream,
+            //    this.checkBoxEmeraldVigor,
+            //    this.checkBoxRiptidesConsumption,
+            //    this.checkBoxGlyphOfEarthShield,
+            //    this.checkBoxGyphOfHST,
+            //    this.checkBoxGlyphOfLHW,
+            //    this.checkBoxWrathOfTheAirTotem,
+            //    this.checkBoxSwiftRetributionHaste,
+            //    this.checkBoxBloodlust,
+            //    this.checkBoxTidalWaves,
+            //    this.checkBoxMoonkinForm,
+            //    this.checkBoxTidalWavesCrit,
+            //    this.checkBoxMetaRevitalizingSkyflareDiamond,
+            //    this.checkBoxGlyphOfRiptide,
+            //    checkBoxGlyphOfEarthliving,
+            //    checkBoxGlyphChainHeal,
+            //    checkBoxGlyphOfHealingWave,
+            //    checkBoxMuteSound,
+            //    this.checkBox4PT7Bonus,
+            //    this.checkBox2PT8Bonus,
+            //    this.checkBox4PT8Bonus,
+            //    this.checkBox2PT9Bonus,
+            //    this.checkBox4PT9Bonus,
+            //    this.checkBox2PT10Bonus,
+            //    this.checkBox4PT10Bonus,
+            //    this.checkBoxSteamcallersTotem,
+            //    checkBoxBerserking
+            //};
         }
 
         private void InitialiseComboBoxSpell()
@@ -270,7 +298,8 @@ namespace App
 
             soundPlayer.PlaySound(selectedSpell.Name);
 
-            selectedSpell.EnableDisableModifiers(checkBoxes);
+            //selectedSpell.EnableDisableModifiers(checkBoxes);
+            EnableControllsAtStart();
             EnableDisableControlls();
 
             HideShowControlls(selectedSpell);
@@ -280,18 +309,16 @@ namespace App
 
             selectedSpell.Calculate();
 
-            if (selectedSpell.Name == Constants.SpellChainHeal)
-            {
-                myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
-                checkBox4PT7Bonus.Tag = Resources._4pT7_CH;
-            }
-            else if (selectedSpell.Name == Constants.SpellHW)
-            {
-                myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
-                checkBox4PT7Bonus.Tag = Resources._4pT7_HW;
-            }
-
             DisplayHealing();
+        }
+
+        private void EnableControllsAtStart()
+        {
+            numericUpDownEmeraldVigor.Enabled = true;
+            foreach (var check in checkBoxes)
+            {
+                check.Enabled = true;
+            }
         }
 
         private void SelectSpellImage(Spell selectedSpell)
@@ -321,6 +348,9 @@ namespace App
                     break;
                 case Constants.SpellCritIntoMP5S:
                     pictureBoxSpell.Image = Resources.WSh;
+                    break;
+                case Constants.SpellGiftOfTheNaaru:
+                    pictureBoxSpell.Image = Resources.GotNPicture;
                     break;
                 default:
                     break;

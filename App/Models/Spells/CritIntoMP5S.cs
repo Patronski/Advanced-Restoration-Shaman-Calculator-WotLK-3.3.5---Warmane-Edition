@@ -15,6 +15,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new GlyphOfManaTideTotem());
             this.Modifiers.Add(new MetaInsightfulEarthsiegeDiamond());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -24,7 +25,7 @@ namespace App.Models.Spells
             return 222;
         }
 
-        public override double? CalculateMp5TotalDec()
+        public override double CalculateMp5TotalDec()
         {
             var r = (Player.Instance.Mp5TimeMin ?? 0) + ((Player.Instance.Mp5TimeSec ?? 0) / 60d);
             return Math.Round(r, 2); ;
@@ -32,7 +33,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5RPM()
         {
-            if (Player.Instance.Mp5TimeDec == null || Player.Instance.Mp5TimeDec == 0)
+            if (Player.Instance.Mp5TimeDec == 0)
             {
                 return null;
             }
@@ -44,7 +45,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5HWPM()
         {
-            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            if (Player.Instance.Mp5TimeDec == 0)
             {
                 return null;
             }
@@ -54,7 +55,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5LHWPM()
         {
-            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            if (Player.Instance.Mp5TimeDec == 0)
             {
                 return null;
             }
@@ -64,7 +65,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5CHPM()
         {
-            if (Player.Instance.Mp5TimeDec == 0 || Player.Instance.Mp5TimeDec == null)
+            if (Player.Instance.Mp5TimeDec == 0)
             {
                 return null;
             }
@@ -101,7 +102,7 @@ namespace App.Models.Spells
             return Math.Round(r, 2);
         }
 
-        public override double? CalculateMp5TotalCrit()
+        public override double CalculateMp5TotalCrit()
         {
             var r = Player.Instance.CriticalPercent * 45.91 * (Player.Instance.Mp5Crit ?? 0);
             return Math.Round(r);
@@ -131,11 +132,21 @@ namespace App.Models.Spells
         {
             var isInsightfulDiamond = Modifiers
                 .Any(x => x.Display == Constants.ModMetaInsightfulEarthsiegeDiamond && x.IsCheckBoxChecked);
+            if (!isInsightfulDiamond)
+            {
+                return 0;
+            }
 
             var totalSomething = Player.Instance.Mp5TotalHW + Player.Instance.Mp5TotalLHW + Player.Instance.Mp5TotalRiptides + (Player.Instance.Mp5TotalCH / 3);
             var result = totalSomething * 0.05 * 600;
-            //var result = Player.Instance.Mp5TimeDec * 60 / totalSomething;
             return result;
+        }
+
+        public override int CalculateMp5TotalManaGain()
+        {
+            var a = (Player.Instance.Mp5TimeDec * 60 * (Player.Instance.MP5S + Player.Instance.Mp5Replenish + Player.Instance.Mp5TotalCrit) / 5)
+                + Player.Instance.Mp5Totems + Player.Instance.Mp5Innervates + Player.Instance.Mp5Diamond;
+            return (int)Math.Round(a);
         }
 
         public override void Calculate()
@@ -163,6 +174,7 @@ namespace App.Models.Spells
             Player.Instance.Mp5Innervates = CalculateMp5Innervates();
             Player.Instance.Mp5Replenish = CalculateMp5Replenish();
             Player.Instance.Mp5Diamond = CalculateMp5Diamond();
+            Player.Instance.Mp5TotalManaGain = CalculateMp5TotalManaGain();
         }
 
         public override string ToString()

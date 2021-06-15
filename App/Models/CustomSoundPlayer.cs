@@ -59,6 +59,9 @@ namespace App.Models
                     case Constants.SpellCritIntoMP5S:
                         this.Stream = Resources.WShSound;
                         break;
+                    case Constants.SpellGiftOfTheNaaru:
+                        Stream = Resources.GotN;
+                        break;
                 }
                 this.Play();
             }

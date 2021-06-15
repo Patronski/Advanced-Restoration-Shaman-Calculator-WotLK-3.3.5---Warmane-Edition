@@ -86,6 +86,17 @@ namespace App
                 labelChainedHeal2.Enabled = true;
                 textBoxAvgHotHps.Enabled = true;
             }
+
+            if (checkBoxMetaInsightfulEarthsiegeDiamond.Checked)
+            {
+                labelMp5InsightfulEarthsiegeDiamond.Enabled = true;
+                textBoxMp5Diamond.Enabled = true;
+            }
+            else
+            {
+                labelMp5InsightfulEarthsiegeDiamond.Enabled = false;
+                textBoxMp5Diamond.Enabled = false;
+            }
         }
 
         private void HideShowControlls(Spell selectedSpell)
@@ -151,7 +162,6 @@ namespace App
             labelChainedHeal1.Hide();
             labelChainedHeal2.Hide();
             labelCastingTime.Hide();
-            labelEarthlivingBlessingOf.Hide();
 
             textBoxCastingTime.Hide();
             this.labelHit.Hide();
@@ -160,8 +170,6 @@ namespace App
             labelCritAvg.Hide();
             labelAvgHotHps.Hide();
             textBoxAvgHotHps.Hide();
-            labelApproximately1.Hide();
-            labelApproximately2.Hide();
             this.textBoxHit1From.Hide();
             textBoxAvgHps.Hide();
             labelForOneTarget.Hide();
@@ -198,11 +206,8 @@ namespace App
             labelAvgAAHps2.Hide();
             labelEarthlivingHps1.Hide();
             labelEarthlivingHps2.Hide();
-            labelChainHealStacking.Hide();
             labelAvgHpm.Hide();
             textBoxAvgHpm.Hide();
-            labelAvgHpmAdditional1.Hide();
-            labelAvgHpmAdditional2.Hide();
             labelFor1Target.Hide();
 
             textBoxMp5CHPM.Hide();
@@ -241,17 +246,26 @@ namespace App
             labelMp5TotalCritLeft.Hide();
             labelMp5TotalHealingWaves.Hide();
             labelMp5TotalRiptides.Hide();
-            labelAdditionalCritical.Hide();
-            labelAreNotIncluded.Hide();
+            labelMp5Totems.Hide();
+            labelMp5Inervates.Hide();
+            labelMp5Replenish.Hide();
+            labelMp5ReplenishPercent.Hide();
+            labelMp5InsightfulEarthsiegeDiamond.Hide();
+            numericUpDownMp5Totems.Hide();
+            numericUpDownMp5Inervates.Hide();
+            numericUpDownMp5Replenish.Hide();
+            textBoxMp5Totems.Hide();
+            textBoxMp5Innervates.Hide();
+            textBoxMp5Replenish.Hide();
+            textBoxMp5Diamond.Hide();
+            labelMp5TotalManaGain.Hide();
+            textBoxMp5TotalManaGain.Hide();
 
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
-                    labelChainHealStacking.Show();
                     labelHitAvg.Show();
                     labelHit.Show();
                     labelCritAvg.Show();
@@ -329,7 +343,6 @@ namespace App
                     textBoxAvgHps.Show();
                     textBoxHit1From.Show();
                     labelTick.Show();
-                    labelEarthlivingBlessingOf.Show();
                     checkBoxGlyphOfEarthliving.Show();
                     textBoxAvgHotHps.Show();
                     textBoxEarthlivingAvgHpsCH.Show();
@@ -348,8 +361,6 @@ namespace App
 
                 case Constants.SpellHST:
                     labelFor1Target.Show();
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
                     textBoxHit1From.Show();
@@ -361,8 +372,6 @@ namespace App
                     break;
 
                 case Constants.SpellHW:
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
                     labelDashHit1.Show();
@@ -402,8 +411,6 @@ namespace App
                     break;
 
                 case Constants.SpellLHW:
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
                     labelDashHit1.Show();
@@ -443,12 +450,8 @@ namespace App
                     break;
 
                 case Constants.SpellESh:
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
-                    labelApproximately1.Show();
-                    labelApproximately2.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
                     labelHit.Show();
@@ -459,8 +462,6 @@ namespace App
                     break;
 
                 case Constants.SpellRiptide:
-                    labelAvgHpmAdditional1.Show();
-                    labelAvgHpmAdditional2.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpm.Show();
                     labelHitAvg.Show();
@@ -544,8 +545,27 @@ namespace App
                     labelMp5TotalCritLeft.Show();
                     labelMp5TotalHealingWaves.Show();
                     labelMp5TotalRiptides.Show();
-                    labelAdditionalCritical.Show();
-                    labelAreNotIncluded.Show();
+                    labelMp5Totems.Show();
+                    labelMp5Inervates.Show();
+                    labelMp5Replenish.Show();
+                    labelMp5ReplenishPercent.Show();
+                    labelMp5InsightfulEarthsiegeDiamond.Show();
+                    numericUpDownMp5Totems.Show();
+                    numericUpDownMp5Inervates.Show();
+                    numericUpDownMp5Replenish.Show();
+                    textBoxMp5Totems.Show();
+                    textBoxMp5Innervates.Show();
+                    textBoxMp5Replenish.Show();
+                    textBoxMp5Diamond.Show();
+                    labelMp5TotalManaGain.Show();
+                    textBoxMp5TotalManaGain.Show();
+                    break;
+
+                case Constants.SpellGiftOfTheNaaru:
+                    labelTick.Show();
+                    labelAvgHps.Show();
+                    textBoxHit1From.Show(); // Tick
+                    textBoxAvgHps.Show();
                     break;
             }
         }
@@ -615,6 +635,7 @@ namespace App
             textBoxMp5Innervates.Text = Player.Instance.Mp5Innervates.ToString();
             textBoxMp5Replenish.Text = Player.Instance.Mp5Replenish.ToString();
             textBoxMp5Diamond.Text = Player.Instance.Mp5Diamond.ToString();
+            textBoxMp5TotalManaGain.Text = Player.Instance.Mp5TotalManaGain.ToString();
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
 

@@ -86,6 +86,7 @@
     <Compile Include="Models\Enums\ModifierType.cs" />
     <Compile Include="Models\Forms.cs" />
     <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Modifiers\Berserking.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />
@@ -93,6 +94,9 @@
     <Compile Include="Models\Modifiers\GlyphOfManaTideTotem.cs" />
     <Compile Include="Models\Modifiers\MetaInsightfulEarthsiegeDiamond.cs" />
     <Compile Include="Models\Modifiers\SteamcallersTotemBonus.cs" />
+    <Compile Include="Models\Modifiers\TotemOfForestGrowth.cs" />
+    <Compile Include="Models\Modifiers\TotemOfMisery.cs" />
+    <Compile Include="Models\Modifiers\TotemOfTheBay.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT8Bonus.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="Models\Spells\CritIntoMP5S.cs" />
     <Compile Include="Models\Spells\Earthliving.cs" />
     <Compile Include="Models\Spells\EarthShield.cs" />
+    <Compile Include="Models\Spells\GiftOfTheNaaru.cs" />
     <Compile Include="Models\Spells\HealingStreamTotem.cs" />
     <Compile Include="Models\Spells\HealingWave.cs" />
     <Compile Include="Models\Spells\LesserHealingWave.cs" />
@@ -481,6 +486,18 @@
     <None Include="Resources\WSh1.wav" />
     <None Include="Resources\WShSound.wav" />
     <None Include="Resources\WSh.png" />
+    <None Include="Resources\2P T7.png" />
+    <None Include="Resources\4P T7.png" />
+    <None Include="Resources\2P T10.png" />
+    <None Include="Resources\4P T10.png" />
+    <None Include="Resources\Berserking.png" />
+    <None Include="Resources\Totem of Forest Growth.png" />
+    <None Include="Resources\Totem of Misery.png" />
+    <None Include="Resources\Totem of the Bay.png" />
+    <None Include="Resources\Glyph of MTT.png" />
+    <None Include="Resources\IED.png" />
+    <None Include="Resources\GotN.wav" />
+    <None Include="Resources\GotN.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

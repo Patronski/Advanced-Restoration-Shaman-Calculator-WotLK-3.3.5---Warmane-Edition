@@ -21,6 +21,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new EmeraldVigor());
             this.Modifiers.Add(new GlyphOfHealingStreamTotem());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new Berserking());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -52,9 +53,10 @@ namespace App.Models.Spells
             return (int?)hps;
         }
 
-        public override int? CalculateAvgHpm()
+        public override double CalculateAvgHpm()
         {
-            return Player.Instance.Hit1From * 150 / 131;
+            var result = (Player.Instance.Hit1From ?? 0) * 150 / 131d;
+            return Math.Round(result, 1);
         }
     }
 }

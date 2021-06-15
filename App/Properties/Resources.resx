@@ -154,9 +154,6 @@
   <data name="Bloodlust" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bloodlust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rapid_Currents" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rapid Currents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Improved_Moonkin_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Improved Moonkin Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -337,12 +334,6 @@
   <data name="_4pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_4pT7_CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4pT7_CH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_4pT7_HW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4pT7_HW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -354,5 +345,41 @@
   </data>
   <data name="WShSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WShSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Berserking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Berserking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glyph_of_MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GotN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotN.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GotNPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Totem_of_Forest_Growth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of Forest Growth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Totem_of_Misery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of Misery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Totem_of_the_Bay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of the Bay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

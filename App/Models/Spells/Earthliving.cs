@@ -21,6 +21,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new EmeraldVigor());
             this.Modifiers.Add(new GlyphOfEarthliving());
             this.Modifiers.Add(new MoonkinForm());
+            this.Modifiers.Add(new Berserking());
             //this.Modifiers.Add(new WrathOfTheAirTotem());
             //this.Modifiers.Add(new SwiftRetribution());
             //this.Modifiers.Add(new BloodlustHeroism());
