@@ -184,14 +184,6 @@ namespace App.Models
 
         public void CheckModifiers(List<string> checkedModifierNames)
         {
-            if (Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked &&
-            (Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked || Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked))
-            {
-                Forms.Instance.FormCalculator.skipEventChanged = true;
-                Forms.Instance.FormCalculator.checkBox4PT8Bonus.Checked = false;
-                Forms.Instance.FormCalculator.checkBox4PT9Bonus.Checked = false;
-            }
-
             foreach (var modifier in this.Modifiers)
             {
                 if (checkedModifierNames.Contains(modifier.Display))

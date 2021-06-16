@@ -32,11 +32,11 @@ namespace App
             AddControllsToList();
             InitialiseComboBoxSpell();
             AddTooltips();
-            LoadControlsFromPlayer();
+            LoadControlsFromMemory();
             DisplayHealing();
         }
 
-        private void LoadControlsFromPlayer()
+        private void LoadControlsFromMemory()
         {
             foreach (var mod in Player.Instance.Modifiers)
             {
@@ -452,16 +452,24 @@ namespace App
                 item.Checked = false;
             }
 
+            // reset base stats
             this.textBoxSpellPower.Text = "";
+            this.textBoxIntellect.Text = "";
+            this.textBoxMP5S.Text = "";
             textBoxHasteRating.Text = "";
             Player.Instance.CriticalPercentInitial = 0;
             textBoxCriticalRating.Text = "";
+
+            // reset controlls for spell MP5S
             textBoxMP5TimeMin.Text = "";
             textBoxMP5TimeSec.Text = "";
             textBoxMP5TotalRiptides.Text = "";
             textBoxMP5TotalHW.Text = "";
             textBoxMP5TotalLHW.Text = "";
             textBoxMP5TotalCH.Text = "";
+            numericUpDownMp5Totems.Value = 0;
+            numericUpDownMp5Inervates.Value = 0;
+            numericUpDownMp5Replenish.Value = 0;
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

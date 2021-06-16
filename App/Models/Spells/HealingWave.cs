@@ -155,34 +155,6 @@ namespace App.Models.Spells
             return (int?)result;
         }
 
-        public override void CalculateOnModifierChange(string modName, bool isChecked)
-        {
-            if (modName == Constants.Mod4PT7Bonus)
-            {
-                if (Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked)
-                {
-                    Forms.Instance.FormCalculator.skipEventChanged = true;
-                }
-
-                Forms.Instance.FormCalculator.checkBox2PT10Bonus.Checked = false;
-                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT10Bonus_RapidCurrents);
-                mod.IsCheckBoxChecked = false;
-            }
-            else if (modName == Constants.Mod2PT10Bonus_RapidCurrents)
-            {
-                if (Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked)
-                {
-                    Forms.Instance.FormCalculator.skipEventChanged = true;
-                }
-
-                Forms.Instance.FormCalculator.checkBox4PT7Bonus.Checked = false;
-                var mod = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod4PT7Bonus);
-                mod.IsCheckBoxChecked = false;
-            }
-
-            base.CalculateOnModifierChange(modName, isChecked);
-        }
-
         public override double CalculateAvgHpm()
         {
             var isGlyphHealingWave = Modifiers.FirstOrDefault(x => x.Display == Constants.ModGlyphOfHealingWave).IsCheckBoxChecked;
