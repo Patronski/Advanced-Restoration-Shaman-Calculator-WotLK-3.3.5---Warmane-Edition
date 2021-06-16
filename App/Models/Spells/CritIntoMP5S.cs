@@ -87,10 +87,10 @@ namespace App.Models.Spells
                 (Player.Instance.Mp5CHPM ?? 0) * 0.002913;
                 return Math.Round(rezult, 4);
             }
-            
+
             //RPM * 0.00893 + HWPM * 0.00893 + LHWPM * 0.005358 + CHPM * 0.00268
             var r = (Player.Instance.Mp5RPM ?? 0) * 0.00893 +
-                (Player.Instance.Mp5HWPM ?? 0) * 0.00893 + 
+                (Player.Instance.Mp5HWPM ?? 0) * 0.00893 +
                 (Player.Instance.Mp5LHWPM ?? 0) * 0.005358 +
                 (Player.Instance.Mp5CHPM ?? 0) * 0.00268;
             return Math.Round(r, 4);

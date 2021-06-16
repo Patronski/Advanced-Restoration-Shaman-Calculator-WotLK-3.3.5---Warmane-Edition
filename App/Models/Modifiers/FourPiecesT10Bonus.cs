@@ -9,9 +9,5 @@ namespace App.Models.Modifiers
             Display = Constants.Mod4PT10Bonus;
             this.InitCheckBox();
         }
-
-        public override void Modify()
-        {
-        }
     }
 }

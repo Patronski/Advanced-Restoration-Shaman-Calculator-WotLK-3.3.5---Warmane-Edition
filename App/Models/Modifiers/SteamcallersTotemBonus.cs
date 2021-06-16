@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace App.Models.Modifiers
+﻿namespace App.Models.Modifiers
 {
     public class SteamcallersTotemBonus : Modifier
     {
@@ -13,11 +7,6 @@ namespace App.Models.Modifiers
             Display = Constants.ModSteamcallersTotem;
 
             this.InitCheckBox();
-        }
-
-        public override void Modify()
-        {
-            
         }
     }
 }

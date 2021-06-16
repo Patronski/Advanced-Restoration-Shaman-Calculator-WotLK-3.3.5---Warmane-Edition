@@ -6,7 +6,6 @@ namespace App.Models
     {
         public Modifier()
         {
-            
         }
 
         public double Value { get; set; }
@@ -19,7 +18,9 @@ namespace App.Models
 
         public bool IsCheckBoxChecked { get; set; }
 
-        public virtual void Modify() { }
+        public virtual void Modify()
+        {
+        }
 
         public void InitCheckBox()
         {

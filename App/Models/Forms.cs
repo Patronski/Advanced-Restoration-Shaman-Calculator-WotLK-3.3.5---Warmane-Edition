@@ -1,7 +1,4 @@
-﻿using App.Properties;
-using System.Media;
-
-namespace App.Models
+﻿namespace App.Models
 {
     public sealed class Forms
     {

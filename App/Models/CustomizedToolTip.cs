@@ -9,23 +9,21 @@
    Language        : C#
 
    Description     : Implementation of CustomizedToolTip
- 
+
    Copyright (C) ravikant.cse@gmail.com 2006-2010 All Rights Reserved
 
 -----------------------------------------------------------------------------*/
 /*] END */
 
-
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using System;
-using System.Diagnostics;
-using System.ComponentModel;
 
 namespace CustomToolTipDemo
 {
-
     /// <summary>
     /// CustomizedToolTip to create tooltips with Image.
     /// </summary>
@@ -39,7 +37,7 @@ namespace CustomToolTipDemo
         private const int PADDING = 6;
         private const int DEFAULT_IMAGE_WIDTH = 15;
 
-        #endregion
+        #endregion Constants
 
         #region Fields
 
@@ -60,7 +58,8 @@ namespace CustomToolTipDemo
 
         private int myInternalImageWidth = DEFAULT_IMAGE_WIDTH;
         private bool myAutoSize = true;
-        #endregion
+
+        #endregion Fields
 
         #region Properties
 
@@ -226,7 +225,7 @@ namespace CustomToolTipDemo
             }
         }
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -255,11 +254,11 @@ namespace CustomToolTipDemo
             }
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -299,7 +298,6 @@ namespace CustomToolTipDemo
                     base.Dispose(disposing);
                 }
             }
-
             catch (Exception ex)
             {
                 string logMessage = "Exception in CustomizedToolTip.Dispose (bool) " + ex.ToString();
@@ -313,11 +311,10 @@ namespace CustomToolTipDemo
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="e">e</param>
-        void CustomizedToolTip_Draw(object sender, DrawToolTipEventArgs e)
+        private void CustomizedToolTip_Draw(object sender, DrawToolTipEventArgs e)
         {
             try
             {
-
                 e.Graphics.CompositingQuality = CompositingQuality.HighQuality;
 
                 myToolTipRectangle.Size = e.Bounds.Size;
@@ -345,7 +342,6 @@ namespace CustomToolTipDemo
                     e.Graphics.DrawString(e.ToolTipText, myFont, myTextBrush, myImageRectangle, myTextFormat);
                 }
             }
-
             catch (Exception ex)
             {
                 string logMessage = "Exception in CustomizedToolTip.BlindHeaderToolTip_Draw (object, DrawToolTipEventArgs) " + ex.ToString();
@@ -359,7 +355,7 @@ namespace CustomToolTipDemo
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="e">e</param>
-        void CustomizedToolTip_Popup(object sender, PopupEventArgs e)
+        private void CustomizedToolTip_Popup(object sender, PopupEventArgs e)
         {
             try
             {
@@ -396,6 +392,6 @@ namespace CustomToolTipDemo
             }
         }
 
-        #endregion
+        #endregion Methods
     }
 }

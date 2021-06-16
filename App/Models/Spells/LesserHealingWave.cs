@@ -1,11 +1,7 @@
 ﻿using App.Models.Modifiers;
 using App.Models.Modifiers.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App.Models.Spells
 {
@@ -73,7 +69,6 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHotHPS()
         {
-
             double hastePercent = (Player.Instance.HastePercent > 50) ? 50d : Player.Instance.HastePercent;
 
             var avgHps = Player.Instance.CriticalPercent / 100 * Player.Instance.AncestralAwaceningAvg *
@@ -118,8 +113,6 @@ namespace App.Models.Spells
         public override double CalculateAvgHpm()
         {
             var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
-
-
 
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)));

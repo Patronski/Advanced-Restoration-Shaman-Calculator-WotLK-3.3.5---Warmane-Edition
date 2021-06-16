@@ -1,17 +1,10 @@
 ﻿using App.Models;
 using App.Properties;
-using CustomToolTipDemo;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -328,30 +321,39 @@ namespace App
                 case Constants.SpellChainHeal:
                     pictureBoxSpell.Image = Resources.SpellCHain_Heal;
                     break;
+
                 case Constants.SpellEarthliving:
                     pictureBoxSpell.Image = Resources.SpellEarthliving;
                     break;
+
                 case Constants.SpellESh:
                     pictureBoxSpell.Image = Resources.SpellEarth_Shield;
                     break;
+
                 case Constants.SpellHST:
                     pictureBoxSpell.Image = Resources.SpellHealing_Stream_Totem;
                     break;
+
                 case Constants.SpellHW:
                     pictureBoxSpell.Image = Resources.SpellHealing_Wave;
                     break;
+
                 case Constants.SpellLHW:
                     pictureBoxSpell.Image = Resources.SpellLesser_Healing_Wave;
                     break;
+
                 case Constants.SpellRiptide:
                     pictureBoxSpell.Image = Resources.SpellRiptide;
                     break;
+
                 case Constants.SpellCritIntoMP5S:
                     pictureBoxSpell.Image = Resources.WSh;
                     break;
+
                 case Constants.SpellGiftOfTheNaaru:
                     pictureBoxSpell.Image = Resources.GotNPicture;
                     break;
+
                 default:
                     break;
             }
@@ -653,7 +655,7 @@ namespace App
             Player.Instance.Mp5TotalCH = value;
 
             selectedSpell?.Calculate();
-            
+
             DisplayHealing();
         }
 
@@ -672,7 +674,7 @@ namespace App
             Player.Instance.Intellect = value;
 
             selectedSpell?.Calculate();
-            
+
             DisplayHealing();
         }
 

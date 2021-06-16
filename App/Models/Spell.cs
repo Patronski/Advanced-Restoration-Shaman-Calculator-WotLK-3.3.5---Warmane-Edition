@@ -1,9 +1,6 @@
 ﻿using App.Models.Modifiers.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App.Models
@@ -22,42 +19,68 @@ namespace App.Models
         public string Name { get; protected set; }
         public int RanksCount { get; set; }
 
-
         public abstract int CalculateTarget1HitFrom();
+
         public virtual int? CalculateTarget1HitTo() => null;
+
         public virtual int? CalculateTarget1HitAvg() => (Player.Instance.Hit1From + Player.Instance.Hit1To) / 2;
+
         public virtual int? CalculateTarget1CritFrom() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit1From * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget1CritTo() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit1To * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget1CritAvg() => (Player.Instance.Crit1From + Player.Instance.Crit1To) / 2;
+
         public virtual int? CalculateTarget1AvgHot() => null;
 
         public virtual int? CalculateTarget2HitFrom() => null;
+
         public virtual int? CalculateTarget2HitTo() => null;
+
         public virtual int? CalculateTarget2HitAvg() => (Player.Instance.Hit2From + Player.Instance.Hit2To) / 2;
+
         public virtual int? CalculateTarget2CritFrom() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit2From * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget2CritTo() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit2To * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget2CritAvg() => (Player.Instance.Crit2From + Player.Instance.Crit2To) / 2;
+
         public virtual int? CalculateTarget2AvgHot() => null;
 
         public virtual int? CalculateTarget3HitFrom() => null;
+
         public virtual int? CalculateTarget3HitTo() => null;
+
         public virtual int? CalculateTarget3HitAvg() => (Player.Instance.Hit3From + Player.Instance.Hit3To) / 2;
+
         public virtual int? CalculateTarget3CritFrom() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit3From * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget3CritTo() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit3To * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget3CritAvg() => (Player.Instance.Crit3From + Player.Instance.Crit3To) / 2;
+
         public virtual int? CalculateTarget3AvgHot() => null;
 
         public virtual int? CalculateTarget4HitFrom() => null;
+
         public virtual int? CalculateTarget4HitTo() => null;
+
         public virtual int? CalculateTarget4HitAvg() => (Player.Instance.Hit4From + Player.Instance.Hit4To) / 2;
+
         public virtual int? CalculateTarget4CritFrom() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit4From * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget4CritTo() => Player.Instance.CriticalPercent == 0 ? 0 : (int?)(Player.Instance.Hit4To * Player.Instance.CriticalMultiplier);
+
         public virtual int? CalculateTarget4CritAvg() => (Player.Instance.Crit4From + Player.Instance.Crit4To) / 2;
+
         public virtual int? CalculateTarget4AvgHot() => null;
 
         public virtual int? CalculateAverageHOT1() => null;
+
         public virtual int? CalculateAverageHOT2() => null;
+
         public virtual int? CalculateAverageHOT3() => null;
+
         public virtual int? CalculateAverageHOT4() => null;
 
         public virtual int? CalculateAncestralAwakeningFrom() { return null; }
@@ -95,7 +118,7 @@ namespace App.Models
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {
             var critModifiers = Modifiers.Where(x => x.GetType().GetInterface(typeof(ICriticalModifier).Name) != null && x.IsCheckBoxChecked).ToList();
-            
+
             double sumOfModifierValues = 0;
             foreach (var item in critModifiers)
             {

@@ -1,11 +1,6 @@
 ﻿using App.Models.Modifiers;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App.Models.Spells
 {
@@ -113,6 +108,7 @@ namespace App.Models.Spells
 
             return hot;
         }
+
         public override int? CalculateAverageHOT2()
         {
             var hot = (int)(Player.Instance.Crit2Avg * 0.25 / 3);
@@ -123,6 +119,7 @@ namespace App.Models.Spells
 
             return hot;
         }
+
         public override int? CalculateAverageHOT3()
         {
             var hot = (int)(Player.Instance.Crit3Avg * 0.25 / 3);
@@ -133,6 +130,7 @@ namespace App.Models.Spells
 
             return hot;
         }
+
         public override int? CalculateAverageHOT4()
         {
             var hot = (int)(Player.Instance.Crit4Avg * 0.25 / 3);
@@ -229,7 +227,7 @@ namespace App.Models.Spells
             //* [Crtit% / 100 * 1.5 + (1 - Crit% / 100)]} / [793 - (Crit% * 5.904)]
             var result = (avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)));
-                 /*- Player.Instance.CriticalPercent * multiplier*/
+            /*- Player.Instance.CriticalPercent * multiplier*/
 
             result += (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4)
                 * 3 * Player.Instance.CriticalPercent / 100;
