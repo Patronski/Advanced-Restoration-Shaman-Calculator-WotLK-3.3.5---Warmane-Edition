@@ -182,32 +182,24 @@ namespace App
             labelAvgAAeHps.Hide();
             textBoxAvgAAeHps.Hide();
             labelSpamOnDifferent1.Hide();
-            labelSpamOnDifferent2.Hide();
             labelSpamOn1Target1.Hide();
-            labelSpamOn1Target2.Hide();
             labelHot.Hide();
             textBoxHotRiptide.Hide();
             textBoxGlyphOfHealingWave.Hide();
             labelAvgGlyphOfHealingWave.Hide();
-            labelPerTick.Hide();
             textBoxEarthlivingAvgHpsCH.Hide();
             textBoxEarthlivingAvgHpsHW.Hide();
             textBoxEarthlivingAvgHpsLHW.Hide();
             textBoxEarthlivingAvgHpsRP.Hide();
-            textBoxEarthlivingAvgHpsTotal.Hide();
             labeAvgHps2.Hide();
             labeEarthlivingHps3.Hide();
             labeEarthlivingHps4.Hide();
             labeEarthlivingHps5.Hide();
-            labelEarthlivingCH.Hide();
-            labelEarthlivingHW.Hide();
-            labelEarthlivingLHW.Hide();
-            labelEarthlivingRP.Hide();
             labelAvgAAHps2.Hide();
             labelEarthlivingHps1.Hide();
-            labelEarthlivingHps2.Hide();
+            labelAvgHealingEarthliving.Hide();
             labelAvgHpm.Hide();
-            textBoxAvgHpm.Hide();
+            textBoxAvgHpmManyTargets.Hide();
             labelFor1Target.Hide();
 
             textBoxMp5CHPM.Hide();
@@ -247,7 +239,7 @@ namespace App
             labelMp5TotalHealingWaves.Hide();
             labelMp5TotalRiptides.Hide();
             labelMp5Totems.Hide();
-            labelMp5Inervates.Hide();
+            labelMp5Innervates.Hide();
             labelMp5Replenish.Hide();
             labelMp5ReplenishPercent.Hide();
             labelMp5InsightfulEarthsiegeDiamond.Hide();
@@ -260,12 +252,23 @@ namespace App
             textBoxMp5Diamond.Hide();
             labelMp5TotalManaGain.Hide();
             textBoxMp5TotalManaGain.Hide();
+            labelTickEarthliving.Hide();
+            textBoxTickEarthliving.Hide();
+            labelAvgHealingEarthliving.Hide();
+            textBoxAvgHealingEarthliving.Hide();
+            pictureBoxSpellEarthliving.Hide();
+            labelEarthliving.Hide();
+            labelEarthlivingRank6.Hide();
+            labelAvgHpm2.Hide();
+            textBoxAvgHpmOneTarget.Hide();
+            labelSpamOnDifferent3.Hide();
+            labelSpamOn1Target3.Hide();
 
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     labelHitAvg.Show();
                     labelHit.Show();
                     labelCritAvg.Show();
@@ -337,6 +340,13 @@ namespace App
                     labelAvgHotHps.Show();
                     labelChainedHeal2.Show();
                     textBoxAvgHotHps.Show();
+                    labelTickEarthliving.Show();
+                    textBoxTickEarthliving.Show();
+                    labelAvgHealingEarthliving.Show();
+                    textBoxAvgHealingEarthliving.Show();
+                    pictureBoxSpellEarthliving.Show();
+                    labelEarthliving.Show();
+                    labelEarthlivingRank6.Show();
                     break;
 
                 case Constants.SpellEarthliving:
@@ -350,30 +360,25 @@ namespace App
                     textBoxEarthlivingAvgHpsLHW.Show();
                     textBoxEarthlivingAvgHpsRP.Show();
                     labelEarthlivingHps1.Show();
-                    labelEarthlivingHps2.Show();
+                    labelAvgHealingEarthliving.Show();
                     labeEarthlivingHps3.Show();
                     labeEarthlivingHps4.Show();
-                    labelEarthlivingCH.Show();
-                    labelEarthlivingHW.Show();
-                    labelEarthlivingLHW.Show();
-                    labelEarthlivingRP.Show();
                     break;
 
                 case Constants.SpellHST:
                     labelFor1Target.Show();
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     textBoxHit1From.Show();
                     labelTick.Show();
                     textBoxAvgHotHps.Show();
                     labelForOneTarget.Show();
-                    labelPerTick.Show();
                     labeAvgHps2.Show();
                     break;
 
                 case Constants.SpellHW:
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     labelDashHit1.Show();
                     textBoxHit1To.Show();
                     labelArrowHit1.Show();
@@ -408,11 +413,18 @@ namespace App
                     textBoxGlyphOfHealingWave.Show();
                     labelAvgGlyphOfHealingWave.Show();
                     checkBoxGlyphOfHealingWave.Show();
+                    labelTickEarthliving.Show();
+                    textBoxTickEarthliving.Show();
+                    labelAvgHealingEarthliving.Show();
+                    textBoxAvgHealingEarthliving.Show();
+                    pictureBoxSpellEarthliving.Show();
+                    labelEarthliving.Show();
+                    labelEarthlivingRank6.Show();
                     break;
 
                 case Constants.SpellLHW:
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     labelDashHit1.Show();
                     textBoxHit1To.Show();
                     labelArrowHit1.Show();
@@ -447,11 +459,18 @@ namespace App
                     labelHit.Show();
                     labelCastingTime.Show();
                     textBoxCastingTime.Show();
+                    labelTickEarthliving.Show();
+                    textBoxTickEarthliving.Show();
+                    labelAvgHealingEarthliving.Show();
+                    textBoxAvgHealingEarthliving.Show();
+                    pictureBoxSpellEarthliving.Show();
+                    labelEarthliving.Show();
+                    labelEarthlivingRank6.Show();
                     break;
 
                 case Constants.SpellESh:
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
                     labelHit.Show();
@@ -463,7 +482,7 @@ namespace App
 
                 case Constants.SpellRiptide:
                     labelAvgHpm.Show();
-                    textBoxAvgHpm.Show();
+                    textBoxAvgHpmManyTargets.Show();
                     labelHitAvg.Show();
                     checkBoxMetaRevitalizingSkyflareDiamond.Show();
                     labelAvgAA.Show();
@@ -496,9 +515,7 @@ namespace App
                     labelHit.Show();
 
                     labelSpamOnDifferent1.Show();
-                    labelSpamOnDifferent2.Show();
                     labelSpamOn1Target1.Show();
-                    labelSpamOn1Target2.Show();
                     labeAvgHps2.Show();
                     labelAvgHps.Show();
                     textBoxAvgHps.Show();
@@ -506,6 +523,17 @@ namespace App
                     checkBoxGlyphOfRiptide.Show();
                     labelHot.Show();
                     textBoxHotRiptide.Show();
+                    labelTickEarthliving.Show();
+                    textBoxTickEarthliving.Show();
+                    labelAvgHealingEarthliving.Show();
+                    textBoxAvgHealingEarthliving.Show();
+                    pictureBoxSpellEarthliving.Show();
+                    labelEarthliving.Show();
+                    labelEarthlivingRank6.Show();
+                    labelAvgHpm2.Show();
+                    textBoxAvgHpmOneTarget.Show();
+                    labelSpamOnDifferent3.Show();
+                    labelSpamOn1Target3.Show();
                     break;
 
                 case Constants.SpellCritIntoMP5S:
@@ -546,7 +574,7 @@ namespace App
                     labelMp5TotalHealingWaves.Show();
                     labelMp5TotalRiptides.Show();
                     labelMp5Totems.Show();
-                    labelMp5Inervates.Show();
+                    labelMp5Innervates.Show();
                     labelMp5Replenish.Show();
                     labelMp5ReplenishPercent.Show();
                     labelMp5InsightfulEarthsiegeDiamond.Show();
@@ -615,13 +643,13 @@ namespace App
             textBoxAvgHotHps.Text = Player.Instance.AvgHotHps.ToString();
             textBoxAvgAAeHps.Text = Player.Instance.AvgAAHps.ToString();
             textBoxGlyphOfHealingWave.Text = Player.Instance.AvgGlyphOfHealingWave.ToString();
-            textBoxAvgHpm.Text = Player.Instance.AvgHpm.ToString();
+            textBoxAvgHpmManyTargets.Text = Player.Instance.AvgHpm.ToString();
+            textBoxAvgHpmOneTarget.Text = Player.Instance.AvgHpmOneTarget.ToString();
             //Earthliving
             textBoxEarthlivingAvgHpsCH.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
             textBoxEarthlivingAvgHpsHW.Text = Player.Instance.EarthlivingAvgHpsHW.ToString();
             textBoxEarthlivingAvgHpsLHW.Text = Player.Instance.EarthlivingAvgHpsLHW.ToString();
             textBoxEarthlivingAvgHpsRP.Text = Player.Instance.EarthlivingAvgHpsRP.ToString();
-            textBoxEarthlivingAvgHpsTotal.Text = Player.Instance.EarthlivingAvgHpsTotal.ToString();
             //Mp5
             textBoxMP5TimeDec.Text = Player.Instance.Mp5TimeDec.ToString();
             textBoxMp5RPM.Text = Player.Instance.Mp5RPM.ToString();
@@ -638,26 +666,39 @@ namespace App
             textBoxMp5TotalManaGain.Text = Player.Instance.Mp5TotalManaGain.ToString();
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
+            textBoxTickEarthliving.Text = Player.Instance.EarthlivingTick.ToString();
 
-            if (selectedSpell != null &&
-                (selectedSpell.Name == Constants.SpellEarthliving || selectedSpell.Name == Constants.SpellHST))
+            switch (selectedSpell?.Name)
             {
-                labelAvgHps.Text = Constants.LabelAvgHps;
-            }
-            else if (selectedSpell != null &&
-                (selectedSpell.Name == Constants.SpellHW || selectedSpell.Name == Constants.SpellLHW))
-            {
-                labelAvgHotHps.Text = Constants.LabelAvgHpsHealingWave;
-                labelAvgHps.Text = Constants.LabelAvgHps;
-            }
-            else if (selectedSpell != null && selectedSpell.Name == Constants.SpellRiptide)
-            {
-                labelAvgHotHps.Text = Constants.LabelAvgHps;
-            }
-            else
-            {
-                labelAvgHotHps.Text = "AVG HOT eHPS:";
-                labelAvgHps.Text = Constants.LabelAvgHps;
+                case Constants.SpellHST:
+                    labelAvgHps.Text = Constants.LabelAvgHps;
+                    break;
+
+                case Constants.SpellLHW:
+                    labelAvgHotHps.Text = Constants.LabelAvgHpsHealingWave;
+                    labelAvgHps.Text = Constants.LabelAvgHps;
+                    textBoxAvgHealingEarthliving.Text = Player.Instance.EarthlivingAvgHpsLHW.ToString();
+                    break;
+
+                case Constants.SpellHW:
+                    labelAvgHotHps.Text = Constants.LabelAvgHpsHealingWave;
+                    labelAvgHps.Text = Constants.LabelAvgHps;
+                    textBoxAvgHealingEarthliving.Text = Player.Instance.EarthlivingAvgHpsHW.ToString();
+                    break;
+
+                case Constants.SpellRiptide:
+                    labelAvgHotHps.Text = Constants.LabelAvgHps;
+                    textBoxAvgHealingEarthliving.Text = Player.Instance.EarthlivingAvgHpsRP.ToString();
+                    break;
+
+                case Constants.SpellChainHeal:
+                    textBoxAvgHealingEarthliving.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
+                    break;
+
+                default:
+                    labelAvgHotHps.Text = "AVG HOT eHPS:";
+                    labelAvgHps.Text = Constants.LabelAvgHps;
+                    break;
             }
         }
     }

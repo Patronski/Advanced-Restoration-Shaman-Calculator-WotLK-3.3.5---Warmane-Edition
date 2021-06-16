@@ -159,6 +159,15 @@ namespace App
 
             myToolTip.SetToolTip(checkBoxTotemOfTheBay, "mod");
             checkBoxTotemOfTheBay.Tag = Resources.Totem_of_the_Bay;
+
+            myToolTip.SetToolTip(labelMp5Totems, "mod");
+            labelMp5Totems.Tag = Resources.MTT;
+
+            myToolTip.SetToolTip(labelMp5Innervates, "mod");
+            labelMp5Innervates.Tag = Resources.Innervate;
+
+            myToolTip.SetToolTip(labelMp5Replenish, "mod");
+            labelMp5Replenish.Tag = Resources.Replenishment;
         }
 
         private void AdjustComponentProperties()
@@ -177,6 +186,7 @@ namespace App
             this.checkBoxTidalWavesCrit.Text = Constants.ModTidalWavesCrit;
             this.checkBoxTreeOfLife.Text = Constants.ModTreeOfLife;
             this.checkBoxWrathOfTheAirTotem.Text = Constants.ModWrathOfTheAirTotem;
+            pictureBoxSpellEarthliving.Image = Resources.SpellEarthliving;
         }
 
         private void AddControllsToList()

@@ -23,6 +23,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TwoPiecesT8Bonus());
             this.Modifiers.Add(new TwoPiecesT9Bonus());
             this.Modifiers.Add(new Berserking());
+            this.Modifiers.Add(new GlyphOfEarthliving());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -159,11 +160,41 @@ namespace App.Models.Spells
                 avgHps = (((critChance / 100 * critValue) +
                 (1 - critChance / 100)) * Player.Instance.Hit1Avg + (5 * Player.Instance.HotRiptide));
             }
+
+            avgHps += Player.Instance.EarthlivingAvgHpsRP;
             avgHps += Player.Instance.AncestralAwaceningAvg * Player.Instance.CriticalPercent / 100;
 
             avgHps /= 751;
 
             return Math.Round(avgHps ?? 0, 1);
+        }
+
+        public override double CalculateAvgHpmOneTarget()
+        {
+            var critChance = Player.Instance.CriticalPercent;
+            var critValue = Player.Instance.CriticalMultiplier;
+
+            double? avgHps = (((critChance / 100 * critValue) +
+                (1 - critChance / 100)) * Player.Instance.Hit1Avg + (2 * Player.Instance.HotRiptide));
+
+            avgHps += Player.Instance.EarthlivingAvgHpsRP;
+            avgHps += Player.Instance.AncestralAwaceningAvg * Player.Instance.CriticalPercent / 100;
+
+            avgHps /= 751;
+
+            return Math.Round(avgHps ?? 0, 1);
+        }
+
+        public override int? CalculateEarthlivingAvgHpsRP()
+        {
+            var isGlyphOfEarthliving = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+
+            double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
+
+            var result = Player.Instance.EarthlivingTick * multiplier * 4;
+
+            return (int?)result;
         }
     }
 }

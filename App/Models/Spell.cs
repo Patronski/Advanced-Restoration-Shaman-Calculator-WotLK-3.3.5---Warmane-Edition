@@ -99,7 +99,6 @@ namespace App.Models
         public virtual int? CalculateEarthlivingAvgHpsHW() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsLHW() { return null; }
         public virtual int? CalculateEarthlivingAvgHpsRP() { return null; }
-        public virtual int? CalculateEarthlivingAvgHpsTotal() { return null; }
 
         public virtual double CalculateMp5TotalDec() { return 0; }
         public virtual double? CalculateMp5RPM() { return null; }
@@ -114,6 +113,8 @@ namespace App.Models
         public virtual double CalculateMp5Replenish() { return 0; }
         public virtual double CalculateMp5Diamond() { return 0; }
         public virtual int CalculateMp5TotalManaGain() { return 0; }
+        public virtual int CalculateEarthlivingTick() 
+            => (int)((int)(0.1692 * Player.Instance.SpellPower + 163) * 1.1);
 
         public virtual void CalculateOnCritChanceInsert(double newCritValue)
         {
@@ -134,21 +135,18 @@ namespace App.Models
             Player.Instance.Hit1To = CalculateTarget1HitTo();
             Player.Instance.CastingTime = CalculateCastingTime();
             Player.Instance.HotRiptide = CalculateAverageHOT1();
+            Player.Instance.EarthlivingTick = CalculateEarthlivingTick();
 
             ModifyWithModifiers();
+
             Player.Instance.CastingTime = CalculateCastingTime();
-            var modifier = Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
-            if (modifier != null)
-            {
-                modifier.Modify();
-            }
+
+            Modifiers.FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked)?.Modify();
 
             Player.Instance.EarthlivingAvgHpsCH = CalculateEarthlivingAvgHpsCH();
             Player.Instance.EarthlivingAvgHpsHW = CalculateEarthlivingAvgHpsHW();
             Player.Instance.EarthlivingAvgHpsLHW = CalculateEarthlivingAvgHpsLHW();
             Player.Instance.EarthlivingAvgHpsRP = CalculateEarthlivingAvgHpsRP();
-            Player.Instance.EarthlivingAvgHpsTotal = CalculateEarthlivingAvgHpsTotal();
             Player.Instance.Hit2From = CalculateTarget2HitFrom();
             Player.Instance.Hit3From = CalculateTarget3HitFrom();
             Player.Instance.Hit4From = CalculateTarget4HitFrom();
@@ -183,16 +181,15 @@ namespace App.Models
             Player.Instance.AvgAAHps = CalculateAverageAAHPS();
             Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
             Player.Instance.AvgHpm = CalculateAvgHpm();
+            Player.Instance.AvgHpmOneTarget = CalculateAvgHpmOneTarget();
 
             Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false)
                 ?.Modify();
         }
 
-        public virtual double CalculateAvgHpm()
-        {
-            return 0;
-        }
+        public virtual double CalculateAvgHpm() { return 0; }
+        public virtual double CalculateAvgHpmOneTarget() { return 0; }
 
         protected void ModifyWithModifiers()
         {

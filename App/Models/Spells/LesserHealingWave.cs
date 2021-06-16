@@ -26,6 +26,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new MoonkinForm());
             this.Modifiers.Add(new TwoPiecesT7Bonus());
             this.Modifiers.Add(new Berserking());
+            this.Modifiers.Add(new GlyphOfEarthliving());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -117,10 +118,24 @@ namespace App.Models.Spells
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)));
 
+            result += Player.Instance.EarthlivingAvgHpsLHW;
+
             result += Player.Instance.AncestralAwaceningAvg * Player.Instance.CriticalPercent / 100;
 
             result /= 626;
             return Math.Round(result ?? 0, 1);
+        }
+
+        public override int? CalculateEarthlivingAvgHpsLHW()
+        {
+            var isGlyphOfEarthliving = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+
+            double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
+
+            var result = Player.Instance.EarthlivingTick * multiplier * 4;
+
+            return (int?)result;
         }
     }
 }

@@ -32,6 +32,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new FourPiecesT9Bonus());
             this.Modifiers.Add(new FourPiecesT10Bonus());
             this.Modifiers.Add(new Berserking());
+            this.Modifiers.Add(new GlyphOfEarthliving());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -212,11 +213,6 @@ namespace App.Models.Spells
 
             var avgHit = Player.Instance.Hit1Avg + Player.Instance.Hit2Avg + Player.Instance.Hit3Avg;
 
-            //var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
-
-            //var multiplier = isGlyphOfChainHeal ?
-            //    (mod2Pt7 ? 6.42 : 5.904)
-            //    : (mod2Pt7 ? 4.815 : 4.428);
             if (isGlyphOfChainHeal)
             {
                 avgHit += Player.Instance.Hit4Avg;
@@ -224,16 +220,34 @@ namespace App.Models.Spells
 
             var totemModifier = isTotemOfForestGrowth ? 719 : 793;
 
-            //* [Crtit% / 100 * 1.5 + (1 - Crit% / 100)]} / [793 - (Crit% * 5.904)]
-            var result = (avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
-                (1 - Player.Instance.CriticalPercent / 100)));
-            /*- Player.Instance.CriticalPercent * multiplier*/
+            var result = avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
+                (1 - Player.Instance.CriticalPercent / 100));
+
+            result += Player.Instance.EarthlivingAvgHpsCH;
 
             result += (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4)
                 * 3 * Player.Instance.CriticalPercent / 100;
+
             result /= totemModifier;
 
             return Math.Round(result ?? 0, 1);
+        }
+
+        public override int? CalculateEarthlivingAvgHpsCH()
+        {
+            var isGlyphOfChainHeal = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+            var isGlyphOfEarthliving = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+
+            double a = isGlyphOfChainHeal ? 4 : 3;
+            double b = isGlyphOfEarthliving ? 0.25 : 0.2;
+            double multiplier = a * b;
+
+            // tick * (3 * 0.2) *4
+            var result = Player.Instance.EarthlivingTick * multiplier * 4;
+
+            return (int?)result;
         }
     }
 }

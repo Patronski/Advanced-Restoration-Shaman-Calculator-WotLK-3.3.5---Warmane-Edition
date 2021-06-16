@@ -498,6 +498,9 @@
     <None Include="Resources\IED.png" />
     <None Include="Resources\GotN.wav" />
     <None Include="Resources\GotN.png" />
+    <None Include="Resources\Innervate.png" />
+    <None Include="Resources\MTT.png" />
+    <None Include="Resources\Replenishment.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

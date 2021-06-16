@@ -125,8 +125,6 @@
             this.labelAvgAA = new System.Windows.Forms.Label();
             this.labelSpamOn1Target1 = new System.Windows.Forms.Label();
             this.labelSpamOnDifferent1 = new System.Windows.Forms.Label();
-            this.labelSpamOnDifferent2 = new System.Windows.Forms.Label();
-            this.labelSpamOn1Target2 = new System.Windows.Forms.Label();
             this.labelAvgAAeHps = new System.Windows.Forms.Label();
             this.textBoxAvgAAeHps = new System.Windows.Forms.TextBox();
             this.checkBoxGlyphOfRiptide = new System.Windows.Forms.CheckBox();
@@ -142,7 +140,6 @@
             this.checkBoxGlyphOfHealingWave = new System.Windows.Forms.CheckBox();
             this.labelAvgGlyphOfHealingWave = new System.Windows.Forms.Label();
             this.textBoxGlyphOfHealingWave = new System.Windows.Forms.TextBox();
-            this.labelPerTick = new System.Windows.Forms.Label();
             this.textBoxEarthlivingAvgHpsLHW = new System.Windows.Forms.TextBox();
             this.textBoxEarthlivingAvgHpsCH = new System.Windows.Forms.TextBox();
             this.textBoxEarthlivingAvgHpsHW = new System.Windows.Forms.TextBox();
@@ -152,13 +149,9 @@
             this.labeEarthlivingHps4 = new System.Windows.Forms.Label();
             this.labeEarthlivingHps3 = new System.Windows.Forms.Label();
             this.labeAvgHps2 = new System.Windows.Forms.Label();
-            this.labelEarthlivingCH = new System.Windows.Forms.Label();
-            this.labelEarthlivingHW = new System.Windows.Forms.Label();
-            this.labelEarthlivingLHW = new System.Windows.Forms.Label();
-            this.labelEarthlivingRP = new System.Windows.Forms.Label();
             this.labelAvgAAHps2 = new System.Windows.Forms.Label();
             this.checkBoxMuteSound = new System.Windows.Forms.CheckBox();
-            this.labelEarthlivingHps2 = new System.Windows.Forms.Label();
+            this.labelAvgHealingEarthliving = new System.Windows.Forms.Label();
             this.labelEarthlivingHps1 = new System.Windows.Forms.Label();
             this.checkBox2PT9Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox4PT7Bonus = new System.Windows.Forms.CheckBox();
@@ -166,7 +159,7 @@
             this.checkBox4PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox2PT8Bonus = new System.Windows.Forms.CheckBox();
             this.checkBox4PT9Bonus = new System.Windows.Forms.CheckBox();
-            this.textBoxAvgHpm = new System.Windows.Forms.TextBox();
+            this.textBoxAvgHpmManyTargets = new System.Windows.Forms.TextBox();
             this.labelAvgHpm = new System.Windows.Forms.Label();
             this.labelFor1Target = new System.Windows.Forms.Label();
             this.textBoxMP5TimeMin = new System.Windows.Forms.TextBox();
@@ -226,7 +219,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownMp5Totems = new System.Windows.Forms.NumericUpDown();
             this.labelMp5Totems = new System.Windows.Forms.Label();
-            this.labelMp5Inervates = new System.Windows.Forms.Label();
+            this.labelMp5Innervates = new System.Windows.Forms.Label();
             this.numericUpDownMp5Inervates = new System.Windows.Forms.NumericUpDown();
             this.textBoxMp5Totems = new System.Windows.Forms.TextBox();
             this.textBoxMp5Innervates = new System.Windows.Forms.TextBox();
@@ -243,11 +236,26 @@
             this.checkBoxTotemOfTheBay = new System.Windows.Forms.CheckBox();
             this.checkBoxTotemOfMisery = new System.Windows.Forms.CheckBox();
             this.checkBoxBerserking = new System.Windows.Forms.CheckBox();
+            this.labelTickEarthliving = new System.Windows.Forms.Label();
+            this.textBoxTickEarthliving = new System.Windows.Forms.TextBox();
+            this.textBoxAvgHealingEarthliving = new System.Windows.Forms.TextBox();
+            this.pictureBoxSpellEarthliving = new System.Windows.Forms.PictureBox();
+            this.labelEarthliving = new System.Windows.Forms.Label();
+            this.labelEarthlivingRank6 = new System.Windows.Forms.Label();
+            this.labelAvgHpm2 = new System.Windows.Forms.Label();
+            this.textBoxAvgHpmOneTarget = new System.Windows.Forms.TextBox();
+            this.labelSpamOnDifferent3 = new System.Windows.Forms.Label();
+            this.labelSpamOn1Target3 = new System.Windows.Forms.Label();
+            this.labelMp5Mana1 = new System.Windows.Forms.Label();
+            this.labelMp5Mana2 = new System.Windows.Forms.Label();
+            this.labelMp5Mana4 = new System.Windows.Forms.Label();
+            this.labelMp5Mana3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Replenish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpellEarthliving)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -1246,11 +1254,11 @@
             // labelForOneTarget
             // 
             this.labelForOneTarget.AutoSize = true;
-            this.labelForOneTarget.Location = new System.Drawing.Point(376, 403);
+            this.labelForOneTarget.Location = new System.Drawing.Point(372, 408);
             this.labelForOneTarget.Name = "labelForOneTarget";
-            this.labelForOneTarget.Size = new System.Drawing.Size(68, 13);
+            this.labelForOneTarget.Size = new System.Drawing.Size(113, 13);
             this.labelForOneTarget.TabIndex = 115;
-            this.labelForOneTarget.Text = "(For 1 Tagret";
+            this.labelForOneTarget.Text = "(For 1 Tagret per Tick)";
             this.labelForOneTarget.Visible = false;
             // 
             // labelAncestralAwakening
@@ -1280,42 +1288,22 @@
             // labelSpamOn1Target1
             // 
             this.labelSpamOn1Target1.AutoSize = true;
-            this.labelSpamOn1Target1.Location = new System.Drawing.Point(383, 403);
+            this.labelSpamOn1Target1.Location = new System.Drawing.Point(375, 408);
             this.labelSpamOn1Target1.Name = "labelSpamOn1Target1";
-            this.labelSpamOn1Target1.Size = new System.Drawing.Size(61, 13);
+            this.labelSpamOn1Target1.Size = new System.Drawing.Size(127, 13);
             this.labelSpamOn1Target1.TabIndex = 118;
-            this.labelSpamOn1Target1.Text = "(Spam on 1";
+            this.labelSpamOn1Target1.Text = "(Spam on 1 target on CD)";
             this.labelSpamOn1Target1.Visible = false;
             // 
             // labelSpamOnDifferent1
             // 
             this.labelSpamOnDifferent1.AutoSize = true;
-            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(351, 360);
+            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(372, 366);
             this.labelSpamOnDifferent1.Name = "labelSpamOnDifferent1";
-            this.labelSpamOnDifferent1.Size = new System.Drawing.Size(93, 13);
+            this.labelSpamOnDifferent1.Size = new System.Drawing.Size(164, 13);
             this.labelSpamOnDifferent1.TabIndex = 119;
-            this.labelSpamOnDifferent1.Text = "(Spam on different";
+            this.labelSpamOnDifferent1.Text = "(Spam on different targets on CD)";
             this.labelSpamOnDifferent1.Visible = false;
-            // 
-            // labelSpamOnDifferent2
-            // 
-            this.labelSpamOnDifferent2.AutoSize = true;
-            this.labelSpamOnDifferent2.Location = new System.Drawing.Point(366, 374);
-            this.labelSpamOnDifferent2.Name = "labelSpamOnDifferent2";
-            this.labelSpamOnDifferent2.Size = new System.Drawing.Size(78, 13);
-            this.labelSpamOnDifferent2.TabIndex = 120;
-            this.labelSpamOnDifferent2.Text = " targets on CD)";
-            this.labelSpamOnDifferent2.Visible = false;
-            // 
-            // labelSpamOn1Target2
-            // 
-            this.labelSpamOn1Target2.AutoSize = true;
-            this.labelSpamOn1Target2.Location = new System.Drawing.Point(374, 416);
-            this.labelSpamOn1Target2.Name = "labelSpamOn1Target2";
-            this.labelSpamOn1Target2.Size = new System.Drawing.Size(70, 13);
-            this.labelSpamOn1Target2.TabIndex = 121;
-            this.labelSpamOn1Target2.Text = "target on CD)";
-            this.labelSpamOn1Target2.Visible = false;
             // 
             // labelAvgAAeHps
             // 
@@ -1487,16 +1475,6 @@
             this.textBoxGlyphOfHealingWave.TabIndex = 137;
             this.textBoxGlyphOfHealingWave.Visible = false;
             // 
-            // labelPerTick
-            // 
-            this.labelPerTick.AutoSize = true;
-            this.labelPerTick.Location = new System.Drawing.Point(395, 416);
-            this.labelPerTick.Name = "labelPerTick";
-            this.labelPerTick.Size = new System.Drawing.Size(49, 13);
-            this.labelPerTick.TabIndex = 138;
-            this.labelPerTick.Text = "per Tick)";
-            this.labelPerTick.Visible = false;
-            // 
             // textBoxEarthlivingAvgHpsLHW
             // 
             this.textBoxEarthlivingAvgHpsLHW.Location = new System.Drawing.Point(450, 426);
@@ -1595,46 +1573,6 @@
             this.labeAvgHps2.Text = "AVG eHPS:";
             this.labeAvgHps2.Visible = false;
             // 
-            // labelEarthlivingCH
-            // 
-            this.labelEarthlivingCH.AutoSize = true;
-            this.labelEarthlivingCH.Location = new System.Drawing.Point(337, 360);
-            this.labelEarthlivingCH.Name = "labelEarthlivingCH";
-            this.labelEarthlivingCH.Size = new System.Drawing.Size(107, 13);
-            this.labelEarthlivingCH.TabIndex = 149;
-            this.labelEarthlivingCH.Text = "(Per Chain Heal cast)";
-            this.labelEarthlivingCH.Visible = false;
-            // 
-            // labelEarthlivingHW
-            // 
-            this.labelEarthlivingHW.AutoSize = true;
-            this.labelEarthlivingHW.Location = new System.Drawing.Point(321, 401);
-            this.labelEarthlivingHW.Name = "labelEarthlivingHW";
-            this.labelEarthlivingHW.Size = new System.Drawing.Size(123, 13);
-            this.labelEarthlivingHW.TabIndex = 150;
-            this.labelEarthlivingHW.Text = "(Per Healing Wave cast)";
-            this.labelEarthlivingHW.Visible = false;
-            // 
-            // labelEarthlivingLHW
-            // 
-            this.labelEarthlivingLHW.AutoSize = true;
-            this.labelEarthlivingLHW.Location = new System.Drawing.Point(287, 442);
-            this.labelEarthlivingLHW.Name = "labelEarthlivingLHW";
-            this.labelEarthlivingLHW.Size = new System.Drawing.Size(157, 13);
-            this.labelEarthlivingLHW.TabIndex = 151;
-            this.labelEarthlivingLHW.Text = "(Per Lesser Healing Wave cast)";
-            this.labelEarthlivingLHW.Visible = false;
-            // 
-            // labelEarthlivingRP
-            // 
-            this.labelEarthlivingRP.AutoSize = true;
-            this.labelEarthlivingRP.Location = new System.Drawing.Point(557, 359);
-            this.labelEarthlivingRP.Name = "labelEarthlivingRP";
-            this.labelEarthlivingRP.Size = new System.Drawing.Size(88, 13);
-            this.labelEarthlivingRP.TabIndex = 152;
-            this.labelEarthlivingRP.Text = "(Per Riptide cast)";
-            this.labelEarthlivingRP.Visible = false;
-            // 
             // labelAvgAAHps2
             // 
             this.labelAvgAAHps2.AutoSize = true;
@@ -1659,17 +1597,17 @@
             this.checkBoxMuteSound.UseVisualStyleBackColor = true;
             this.checkBoxMuteSound.CheckedChanged += new System.EventHandler(this.checkBoxMuteSound_CheckedChanged);
             // 
-            // labelEarthlivingHps2
+            // labelAvgHealingEarthliving
             // 
-            this.labelEarthlivingHps2.AutoSize = true;
-            this.labelEarthlivingHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEarthlivingHps2.ForeColor = System.Drawing.Color.Olive;
-            this.labelEarthlivingHps2.Location = new System.Drawing.Point(361, 388);
-            this.labelEarthlivingHps2.Name = "labelEarthlivingHps2";
-            this.labelEarthlivingHps2.Size = new System.Drawing.Size(83, 13);
-            this.labelEarthlivingHps2.TabIndex = 156;
-            this.labelEarthlivingHps2.Text = "AVG Healing:";
-            this.labelEarthlivingHps2.Visible = false;
+            this.labelAvgHealingEarthliving.AutoSize = true;
+            this.labelAvgHealingEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgHealingEarthliving.ForeColor = System.Drawing.Color.Olive;
+            this.labelAvgHealingEarthliving.Location = new System.Drawing.Point(466, 544);
+            this.labelAvgHealingEarthliving.Name = "labelAvgHealingEarthliving";
+            this.labelAvgHealingEarthliving.Size = new System.Drawing.Size(83, 13);
+            this.labelAvgHealingEarthliving.TabIndex = 156;
+            this.labelAvgHealingEarthliving.Text = "AVG Healing:";
+            this.labelAvgHealingEarthliving.Visible = false;
             // 
             // labelEarthlivingHps1
             // 
@@ -1755,15 +1693,15 @@
             this.checkBox4PT9Bonus.UseVisualStyleBackColor = true;
             this.checkBox4PT9Bonus.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
-            // textBoxAvgHpm
+            // textBoxAvgHpmManyTargets
             // 
-            this.textBoxAvgHpm.Location = new System.Drawing.Point(651, 343);
-            this.textBoxAvgHpm.MaxLength = 10;
-            this.textBoxAvgHpm.Name = "textBoxAvgHpm";
-            this.textBoxAvgHpm.ReadOnly = true;
-            this.textBoxAvgHpm.Size = new System.Drawing.Size(58, 20);
-            this.textBoxAvgHpm.TabIndex = 165;
-            this.textBoxAvgHpm.Visible = false;
+            this.textBoxAvgHpmManyTargets.Location = new System.Drawing.Point(651, 343);
+            this.textBoxAvgHpmManyTargets.MaxLength = 10;
+            this.textBoxAvgHpmManyTargets.Name = "textBoxAvgHpmManyTargets";
+            this.textBoxAvgHpmManyTargets.ReadOnly = true;
+            this.textBoxAvgHpmManyTargets.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAvgHpmManyTargets.TabIndex = 165;
+            this.textBoxAvgHpmManyTargets.Visible = false;
             // 
             // labelAvgHpm
             // 
@@ -1780,7 +1718,7 @@
             // labelFor1Target
             // 
             this.labelFor1Target.AutoSize = true;
-            this.labelFor1Target.Location = new System.Drawing.Point(715, 346);
+            this.labelFor1Target.Location = new System.Drawing.Point(578, 366);
             this.labelFor1Target.Name = "labelFor1Target";
             this.labelFor1Target.Size = new System.Drawing.Size(71, 13);
             this.labelFor1Target.TabIndex = 169;
@@ -1866,9 +1804,10 @@
             // labelMp5Min
             // 
             this.labelMp5Min.AutoSize = true;
+            this.labelMp5Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5Min.Location = new System.Drawing.Point(431, 137);
             this.labelMp5Min.Name = "labelMp5Min";
-            this.labelMp5Min.Size = new System.Drawing.Size(23, 13);
+            this.labelMp5Min.Size = new System.Drawing.Size(26, 13);
             this.labelMp5Min.TabIndex = 172;
             this.labelMp5Min.Text = "min";
             this.labelMp5Min.Visible = false;
@@ -1876,9 +1815,10 @@
             // labelMp5Sec
             // 
             this.labelMp5Sec.AutoSize = true;
+            this.labelMp5Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5Sec.Location = new System.Drawing.Point(524, 138);
             this.labelMp5Sec.Name = "labelMp5Sec";
-            this.labelMp5Sec.Size = new System.Drawing.Size(24, 13);
+            this.labelMp5Sec.Size = new System.Drawing.Size(27, 13);
             this.labelMp5Sec.TabIndex = 173;
             this.labelMp5Sec.Text = "sec";
             this.labelMp5Sec.Visible = false;
@@ -1897,11 +1837,11 @@
             // labelMp5TimeLength
             // 
             this.labelMp5TimeLength.AutoSize = true;
-            this.labelMp5TimeLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TimeLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5TimeLength.ForeColor = System.Drawing.Color.Black;
-            this.labelMp5TimeLength.Location = new System.Drawing.Point(296, 137);
+            this.labelMp5TimeLength.Location = new System.Drawing.Point(284, 138);
             this.labelMp5TimeLength.Name = "labelMp5TimeLength";
-            this.labelMp5TimeLength.Size = new System.Drawing.Size(65, 13);
+            this.labelMp5TimeLength.Size = new System.Drawing.Size(77, 13);
             this.labelMp5TimeLength.TabIndex = 175;
             this.labelMp5TimeLength.Text = "Time length:";
             this.labelMp5TimeLength.Visible = false;
@@ -1909,9 +1849,10 @@
             // labelMp5TotalRiptides
             // 
             this.labelMp5TotalRiptides.AutoSize = true;
-            this.labelMp5TotalRiptides.Location = new System.Drawing.Point(286, 174);
+            this.labelMp5TotalRiptides.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TotalRiptides.Location = new System.Drawing.Point(271, 174);
             this.labelMp5TotalRiptides.Name = "labelMp5TotalRiptides";
-            this.labelMp5TotalRiptides.Size = new System.Drawing.Size(75, 13);
+            this.labelMp5TotalRiptides.Size = new System.Drawing.Size(90, 13);
             this.labelMp5TotalRiptides.TabIndex = 176;
             this.labelMp5TotalRiptides.Text = "Total Riptides:";
             this.labelMp5TotalRiptides.Visible = false;
@@ -2003,9 +1944,10 @@
             // labelMp5TotalHealingWaves
             // 
             this.labelMp5TotalHealingWaves.AutoSize = true;
-            this.labelMp5TotalHealingWaves.Location = new System.Drawing.Point(300, 215);
+            this.labelMp5TotalHealingWaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TotalHealingWaves.Location = new System.Drawing.Point(290, 215);
             this.labelMp5TotalHealingWaves.Name = "labelMp5TotalHealingWaves";
-            this.labelMp5TotalHealingWaves.Size = new System.Drawing.Size(61, 13);
+            this.labelMp5TotalHealingWaves.Size = new System.Drawing.Size(71, 13);
             this.labelMp5TotalHealingWaves.TabIndex = 185;
             this.labelMp5TotalHealingWaves.Text = "Total HWs:";
             this.labelMp5TotalHealingWaves.Visible = false;
@@ -2013,9 +1955,10 @@
             // labelMp5LHealingWave
             // 
             this.labelMp5LHealingWave.AutoSize = true;
-            this.labelMp5LHealingWave.Location = new System.Drawing.Point(294, 249);
+            this.labelMp5LHealingWave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5LHealingWave.Location = new System.Drawing.Point(283, 249);
             this.labelMp5LHealingWave.Name = "labelMp5LHealingWave";
-            this.labelMp5LHealingWave.Size = new System.Drawing.Size(67, 13);
+            this.labelMp5LHealingWave.Size = new System.Drawing.Size(78, 13);
             this.labelMp5LHealingWave.TabIndex = 186;
             this.labelMp5LHealingWave.Text = "Total LHWs:";
             this.labelMp5LHealingWave.Visible = false;
@@ -2023,9 +1966,10 @@
             // labelMp5TotalCH
             // 
             this.labelMp5TotalCH.AutoSize = true;
-            this.labelMp5TotalCH.Location = new System.Drawing.Point(270, 286);
+            this.labelMp5TotalCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TotalCH.Location = new System.Drawing.Point(253, 286);
             this.labelMp5TotalCH.Name = "labelMp5TotalCH";
-            this.labelMp5TotalCH.Size = new System.Drawing.Size(91, 13);
+            this.labelMp5TotalCH.Size = new System.Drawing.Size(108, 13);
             this.labelMp5TotalCH.TabIndex = 187;
             this.labelMp5TotalCH.Text = "Total CH Targets:";
             this.labelMp5TotalCH.Visible = false;
@@ -2033,9 +1977,10 @@
             // labelMp5RPM
             // 
             this.labelMp5RPM.AutoSize = true;
+            this.labelMp5RPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5RPM.Location = new System.Drawing.Point(524, 174);
             this.labelMp5RPM.Name = "labelMp5RPM";
-            this.labelMp5RPM.Size = new System.Drawing.Size(31, 13);
+            this.labelMp5RPM.Size = new System.Drawing.Size(34, 13);
             this.labelMp5RPM.TabIndex = 188;
             this.labelMp5RPM.Text = "RPM";
             this.labelMp5RPM.Visible = false;
@@ -2043,9 +1988,10 @@
             // labelMP5HWPM
             // 
             this.labelMP5HWPM.AutoSize = true;
+            this.labelMP5HWPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMP5HWPM.Location = new System.Drawing.Point(524, 215);
             this.labelMP5HWPM.Name = "labelMP5HWPM";
-            this.labelMP5HWPM.Size = new System.Drawing.Size(42, 13);
+            this.labelMP5HWPM.Size = new System.Drawing.Size(46, 13);
             this.labelMP5HWPM.TabIndex = 189;
             this.labelMP5HWPM.Text = "HWPM";
             this.labelMP5HWPM.Visible = false;
@@ -2053,9 +1999,10 @@
             // labelMP5LHWPM
             // 
             this.labelMP5LHWPM.AutoSize = true;
+            this.labelMP5LHWPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMP5LHWPM.Location = new System.Drawing.Point(524, 249);
             this.labelMP5LHWPM.Name = "labelMP5LHWPM";
-            this.labelMP5LHWPM.Size = new System.Drawing.Size(48, 13);
+            this.labelMP5LHWPM.Size = new System.Drawing.Size(53, 13);
             this.labelMP5LHWPM.TabIndex = 190;
             this.labelMP5LHWPM.Text = "LHWPM";
             this.labelMP5LHWPM.Visible = false;
@@ -2063,9 +2010,10 @@
             // labelMp5CHPM
             // 
             this.labelMp5CHPM.AutoSize = true;
+            this.labelMp5CHPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5CHPM.Location = new System.Drawing.Point(524, 286);
             this.labelMp5CHPM.Name = "labelMp5CHPM";
-            this.labelMp5CHPM.Size = new System.Drawing.Size(45, 13);
+            this.labelMp5CHPM.Size = new System.Drawing.Size(50, 13);
             this.labelMp5CHPM.TabIndex = 191;
             this.labelMp5CHPM.Text = "CHTPM";
             this.labelMp5CHPM.Visible = false;
@@ -2103,9 +2051,10 @@
             // labelMp5Crit
             // 
             this.labelMp5Crit.AutoSize = true;
-            this.labelMp5Crit.Location = new System.Drawing.Point(312, 346);
+            this.labelMp5Crit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Crit.Location = new System.Drawing.Point(279, 346);
             this.labelMp5Crit.Name = "labelMp5Crit";
-            this.labelMp5Crit.Size = new System.Drawing.Size(142, 13);
+            this.labelMp5Crit.Size = new System.Drawing.Size(175, 13);
             this.labelMp5Crit.TabIndex = 195;
             this.labelMp5Crit.Text = "1 critical strike rating is worth";
             this.labelMp5Crit.Visible = false;
@@ -2113,9 +2062,10 @@
             // labelMp5Mp5S
             // 
             this.labelMp5Mp5S.AutoSize = true;
+            this.labelMp5Mp5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5Mp5S.Location = new System.Drawing.Point(524, 346);
             this.labelMp5Mp5S.Name = "labelMp5Mp5S";
-            this.labelMp5Mp5S.Size = new System.Drawing.Size(36, 13);
+            this.labelMp5Mp5S.Size = new System.Drawing.Size(40, 13);
             this.labelMp5Mp5S.TabIndex = 196;
             this.labelMp5Mp5S.Text = "MP5S";
             this.labelMp5Mp5S.Visible = false;
@@ -2123,9 +2073,10 @@
             // labelMp5Percent
             // 
             this.labelMp5Percent.AutoSize = true;
-            this.labelMp5Percent.Location = new System.Drawing.Point(375, 388);
+            this.labelMp5Percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Percent.Location = new System.Drawing.Point(361, 388);
             this.labelMp5Percent.Name = "labelMp5Percent";
-            this.labelMp5Percent.Size = new System.Drawing.Size(79, 13);
+            this.labelMp5Percent.Size = new System.Drawing.Size(93, 13);
             this.labelMp5Percent.TabIndex = 197;
             this.labelMp5Percent.Text = "and it becomes";
             this.labelMp5Percent.Visible = false;
@@ -2133,9 +2084,10 @@
             // labelMp5rightPercent
             // 
             this.labelMp5rightPercent.AutoSize = true;
+            this.labelMp5rightPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5rightPercent.Location = new System.Drawing.Point(524, 388);
             this.labelMp5rightPercent.Name = "labelMp5rightPercent";
-            this.labelMp5rightPercent.Size = new System.Drawing.Size(326, 13);
+            this.labelMp5rightPercent.Size = new System.Drawing.Size(393, 13);
             this.labelMp5rightPercent.TabIndex = 198;
             this.labelMp5rightPercent.Text = "% as effective as MP5S according to item budget (1 crit = 0.5 mp5s)";
             this.labelMp5rightPercent.Visible = false;
@@ -2143,9 +2095,10 @@
             // labelMp5TotalCritLeft
             // 
             this.labelMp5TotalCritLeft.AutoSize = true;
-            this.labelMp5TotalCritLeft.Location = new System.Drawing.Point(286, 429);
+            this.labelMp5TotalCritLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TotalCritLeft.Location = new System.Drawing.Point(250, 429);
             this.labelMp5TotalCritLeft.Name = "labelMp5TotalCritLeft";
-            this.labelMp5TotalCritLeft.Size = new System.Drawing.Size(168, 13);
+            this.labelMp5TotalCritLeft.Size = new System.Drawing.Size(204, 13);
             this.labelMp5TotalCritLeft.TabIndex = 199;
             this.labelMp5TotalCritLeft.Text = "Your critical strike chance is worth";
             this.labelMp5TotalCritLeft.Visible = false;
@@ -2153,9 +2106,10 @@
             // labelMp5RightTotalCrit
             // 
             this.labelMp5RightTotalCrit.AutoSize = true;
+            this.labelMp5RightTotalCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(524, 429);
             this.labelMp5RightTotalCrit.Name = "labelMp5RightTotalCrit";
-            this.labelMp5RightTotalCrit.Size = new System.Drawing.Size(36, 13);
+            this.labelMp5RightTotalCrit.Size = new System.Drawing.Size(40, 13);
             this.labelMp5RightTotalCrit.TabIndex = 200;
             this.labelMp5RightTotalCrit.Text = "MP5S";
             this.labelMp5RightTotalCrit.Visible = false;
@@ -2363,7 +2317,7 @@
             // 
             // numericUpDownMp5Totems
             // 
-            this.numericUpDownMp5Totems.Location = new System.Drawing.Point(825, 135);
+            this.numericUpDownMp5Totems.Location = new System.Drawing.Point(825, 134);
             this.numericUpDownMp5Totems.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2378,22 +2332,24 @@
             // labelMp5Totems
             // 
             this.labelMp5Totems.AutoSize = true;
-            this.labelMp5Totems.Location = new System.Drawing.Point(728, 137);
+            this.labelMp5Totems.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Totems.Location = new System.Drawing.Point(718, 138);
             this.labelMp5Totems.Name = "labelMp5Totems";
-            this.labelMp5Totems.Size = new System.Drawing.Size(91, 13);
+            this.labelMp5Totems.Size = new System.Drawing.Size(106, 13);
             this.labelMp5Totems.TabIndex = 224;
             this.labelMp5Totems.Text = "Mana Tide Totem";
             this.labelMp5Totems.Visible = false;
             // 
-            // labelMp5Inervates
+            // labelMp5Innervates
             // 
-            this.labelMp5Inervates.AutoSize = true;
-            this.labelMp5Inervates.Location = new System.Drawing.Point(768, 172);
-            this.labelMp5Inervates.Name = "labelMp5Inervates";
-            this.labelMp5Inervates.Size = new System.Drawing.Size(52, 13);
-            this.labelMp5Inervates.TabIndex = 225;
-            this.labelMp5Inervates.Text = "Innervate";
-            this.labelMp5Inervates.Visible = false;
+            this.labelMp5Innervates.AutoSize = true;
+            this.labelMp5Innervates.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Innervates.Location = new System.Drawing.Point(763, 174);
+            this.labelMp5Innervates.Name = "labelMp5Innervates";
+            this.labelMp5Innervates.Size = new System.Drawing.Size(61, 13);
+            this.labelMp5Innervates.TabIndex = 225;
+            this.labelMp5Innervates.Text = "Innervate";
+            this.labelMp5Innervates.Visible = false;
             // 
             // numericUpDownMp5Inervates
             // 
@@ -2439,9 +2395,10 @@
             // labelMp5Replenish
             // 
             this.labelMp5Replenish.AutoSize = true;
-            this.labelMp5Replenish.Location = new System.Drawing.Point(708, 214);
+            this.labelMp5Replenish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Replenish.Location = new System.Drawing.Point(693, 215);
             this.labelMp5Replenish.Name = "labelMp5Replenish";
-            this.labelMp5Replenish.Size = new System.Drawing.Size(111, 13);
+            this.labelMp5Replenish.Size = new System.Drawing.Size(131, 13);
             this.labelMp5Replenish.TabIndex = 230;
             this.labelMp5Replenish.Text = "Replenishment uptime";
             this.labelMp5Replenish.Visible = false;
@@ -2468,9 +2425,10 @@
             // labelMp5InsightfulEarthsiegeDiamond
             // 
             this.labelMp5InsightfulEarthsiegeDiamond.AutoSize = true;
+            this.labelMp5InsightfulEarthsiegeDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5InsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(671, 249);
             this.labelMp5InsightfulEarthsiegeDiamond.Name = "labelMp5InsightfulEarthsiegeDiamond";
-            this.labelMp5InsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(147, 13);
+            this.labelMp5InsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(176, 13);
             this.labelMp5InsightfulEarthsiegeDiamond.TabIndex = 233;
             this.labelMp5InsightfulEarthsiegeDiamond.Text = "Insightful Earthsiege Diamond";
             this.labelMp5InsightfulEarthsiegeDiamond.Visible = false;
@@ -2478,10 +2436,10 @@
             // labelMp5ReplenishPercent
             // 
             this.labelMp5ReplenishPercent.AutoSize = true;
-            this.labelMp5ReplenishPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5ReplenishPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5ReplenishPercent.Location = new System.Drawing.Point(883, 214);
             this.labelMp5ReplenishPercent.Name = "labelMp5ReplenishPercent";
-            this.labelMp5ReplenishPercent.Size = new System.Drawing.Size(20, 16);
+            this.labelMp5ReplenishPercent.Size = new System.Drawing.Size(21, 16);
             this.labelMp5ReplenishPercent.TabIndex = 234;
             this.labelMp5ReplenishPercent.Text = "%";
             this.labelMp5ReplenishPercent.Visible = false;
@@ -2566,6 +2524,154 @@
             this.checkBoxBerserking.UseVisualStyleBackColor = true;
             this.checkBoxBerserking.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
+            // labelTickEarthliving
+            // 
+            this.labelTickEarthliving.AutoSize = true;
+            this.labelTickEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTickEarthliving.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelTickEarthliving.Location = new System.Drawing.Point(322, 544);
+            this.labelTickEarthliving.Name = "labelTickEarthliving";
+            this.labelTickEarthliving.Size = new System.Drawing.Size(39, 13);
+            this.labelTickEarthliving.TabIndex = 243;
+            this.labelTickEarthliving.Text = "TICK:";
+            this.labelTickEarthliving.Visible = false;
+            // 
+            // textBoxTickEarthliving
+            // 
+            this.textBoxTickEarthliving.Location = new System.Drawing.Point(367, 541);
+            this.textBoxTickEarthliving.MaxLength = 10;
+            this.textBoxTickEarthliving.Name = "textBoxTickEarthliving";
+            this.textBoxTickEarthliving.Size = new System.Drawing.Size(58, 20);
+            this.textBoxTickEarthliving.TabIndex = 244;
+            this.textBoxTickEarthliving.Visible = false;
+            // 
+            // textBoxAvgHealingEarthliving
+            // 
+            this.textBoxAvgHealingEarthliving.Location = new System.Drawing.Point(555, 541);
+            this.textBoxAvgHealingEarthliving.MaxLength = 10;
+            this.textBoxAvgHealingEarthliving.Name = "textBoxAvgHealingEarthliving";
+            this.textBoxAvgHealingEarthliving.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAvgHealingEarthliving.TabIndex = 245;
+            this.textBoxAvgHealingEarthliving.Visible = false;
+            // 
+            // pictureBoxSpellEarthliving
+            // 
+            this.pictureBoxSpellEarthliving.Location = new System.Drawing.Point(325, 480);
+            this.pictureBoxSpellEarthliving.Name = "pictureBoxSpellEarthliving";
+            this.pictureBoxSpellEarthliving.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxSpellEarthliving.TabIndex = 246;
+            this.pictureBoxSpellEarthliving.TabStop = false;
+            this.pictureBoxSpellEarthliving.Visible = false;
+            // 
+            // labelEarthliving
+            // 
+            this.labelEarthliving.AutoSize = true;
+            this.labelEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEarthliving.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelEarthliving.Location = new System.Drawing.Point(357, 486);
+            this.labelEarthliving.Name = "labelEarthliving";
+            this.labelEarthliving.Size = new System.Drawing.Size(86, 18);
+            this.labelEarthliving.TabIndex = 247;
+            this.labelEarthliving.Text = "Earthliving";
+            this.labelEarthliving.Visible = false;
+            // 
+            // labelEarthlivingRank6
+            // 
+            this.labelEarthlivingRank6.AutoSize = true;
+            this.labelEarthlivingRank6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEarthlivingRank6.Location = new System.Drawing.Point(440, 486);
+            this.labelEarthlivingRank6.Name = "labelEarthlivingRank6";
+            this.labelEarthlivingRank6.Size = new System.Drawing.Size(65, 18);
+            this.labelEarthlivingRank6.TabIndex = 248;
+            this.labelEarthlivingRank6.Text = "(Rank 6)";
+            this.labelEarthlivingRank6.Visible = false;
+            // 
+            // labelAvgHpm2
+            // 
+            this.labelAvgHpm2.AutoSize = true;
+            this.labelAvgHpm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgHpm2.ForeColor = System.Drawing.Color.Indigo;
+            this.labelAvgHpm2.Location = new System.Drawing.Point(578, 388);
+            this.labelAvgHpm2.Name = "labelAvgHpm2";
+            this.labelAvgHpm2.Size = new System.Drawing.Size(67, 13);
+            this.labelAvgHpm2.TabIndex = 250;
+            this.labelAvgHpm2.Text = "AVG HPM:";
+            this.labelAvgHpm2.Visible = false;
+            // 
+            // textBoxAvgHpmOneTarget
+            // 
+            this.textBoxAvgHpmOneTarget.Location = new System.Drawing.Point(651, 385);
+            this.textBoxAvgHpmOneTarget.MaxLength = 10;
+            this.textBoxAvgHpmOneTarget.Name = "textBoxAvgHpmOneTarget";
+            this.textBoxAvgHpmOneTarget.ReadOnly = true;
+            this.textBoxAvgHpmOneTarget.Size = new System.Drawing.Size(58, 20);
+            this.textBoxAvgHpmOneTarget.TabIndex = 249;
+            this.textBoxAvgHpmOneTarget.Visible = false;
+            // 
+            // labelSpamOnDifferent3
+            // 
+            this.labelSpamOnDifferent3.AutoSize = true;
+            this.labelSpamOnDifferent3.Location = new System.Drawing.Point(578, 366);
+            this.labelSpamOnDifferent3.Name = "labelSpamOnDifferent3";
+            this.labelSpamOnDifferent3.Size = new System.Drawing.Size(164, 13);
+            this.labelSpamOnDifferent3.TabIndex = 251;
+            this.labelSpamOnDifferent3.Text = "(Spam on different targets on CD)";
+            this.labelSpamOnDifferent3.Visible = false;
+            // 
+            // labelSpamOn1Target3
+            // 
+            this.labelSpamOn1Target3.AutoSize = true;
+            this.labelSpamOn1Target3.Location = new System.Drawing.Point(578, 408);
+            this.labelSpamOn1Target3.Name = "labelSpamOn1Target3";
+            this.labelSpamOn1Target3.Size = new System.Drawing.Size(127, 13);
+            this.labelSpamOn1Target3.TabIndex = 253;
+            this.labelSpamOn1Target3.Text = "(Spam on 1 target on CD)";
+            this.labelSpamOn1Target3.Visible = false;
+            // 
+            // labelMp5Mana1
+            // 
+            this.labelMp5Mana1.AutoSize = true;
+            this.labelMp5Mana1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Mana1.Location = new System.Drawing.Point(964, 138);
+            this.labelMp5Mana1.Name = "labelMp5Mana1";
+            this.labelMp5Mana1.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5Mana1.TabIndex = 254;
+            this.labelMp5Mana1.Text = "Mana";
+            this.labelMp5Mana1.Visible = false;
+            // 
+            // labelMp5Mana2
+            // 
+            this.labelMp5Mana2.AutoSize = true;
+            this.labelMp5Mana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Mana2.Location = new System.Drawing.Point(964, 175);
+            this.labelMp5Mana2.Name = "labelMp5Mana2";
+            this.labelMp5Mana2.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5Mana2.TabIndex = 255;
+            this.labelMp5Mana2.Text = "Mana";
+            this.labelMp5Mana2.Visible = false;
+            // 
+            // labelMp5Mana4
+            // 
+            this.labelMp5Mana4.AutoSize = true;
+            this.labelMp5Mana4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Mana4.Location = new System.Drawing.Point(964, 249);
+            this.labelMp5Mana4.Name = "labelMp5Mana4";
+            this.labelMp5Mana4.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5Mana4.TabIndex = 256;
+            this.labelMp5Mana4.Text = "Mana";
+            this.labelMp5Mana4.Visible = false;
+            // 
+            // labelMp5Mana3
+            // 
+            this.labelMp5Mana3.AutoSize = true;
+            this.labelMp5Mana3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5Mana3.Location = new System.Drawing.Point(964, 215);
+            this.labelMp5Mana3.Name = "labelMp5Mana3";
+            this.labelMp5Mana3.Size = new System.Drawing.Size(37, 13);
+            this.labelMp5Mana3.TabIndex = 257;
+            this.labelMp5Mana3.Text = "Mp5s";
+            this.labelMp5Mana3.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2573,6 +2679,20 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 917);
+            this.Controls.Add(this.labelMp5Mana3);
+            this.Controls.Add(this.labelMp5Mana4);
+            this.Controls.Add(this.labelMp5Mana2);
+            this.Controls.Add(this.labelMp5Mana1);
+            this.Controls.Add(this.labelSpamOn1Target3);
+            this.Controls.Add(this.labelSpamOnDifferent3);
+            this.Controls.Add(this.labelAvgHpm2);
+            this.Controls.Add(this.textBoxAvgHpmOneTarget);
+            this.Controls.Add(this.labelEarthlivingRank6);
+            this.Controls.Add(this.labelEarthliving);
+            this.Controls.Add(this.pictureBoxSpellEarthliving);
+            this.Controls.Add(this.textBoxAvgHealingEarthliving);
+            this.Controls.Add(this.textBoxTickEarthliving);
+            this.Controls.Add(this.labelTickEarthliving);
             this.Controls.Add(this.checkBoxBerserking);
             this.Controls.Add(this.checkBoxTotemOfMisery);
             this.Controls.Add(this.checkBoxTotemOfTheBay);
@@ -2589,7 +2709,7 @@
             this.Controls.Add(this.textBoxMp5Innervates);
             this.Controls.Add(this.textBoxMp5Totems);
             this.Controls.Add(this.numericUpDownMp5Inervates);
-            this.Controls.Add(this.labelMp5Inervates);
+            this.Controls.Add(this.labelMp5Innervates);
             this.Controls.Add(this.labelMp5Totems);
             this.Controls.Add(this.numericUpDownMp5Totems);
             this.Controls.Add(this.label6);
@@ -2613,7 +2733,7 @@
             this.Controls.Add(this.checkBox4PT10Bonus);
             this.Controls.Add(this.labelFor1Target);
             this.Controls.Add(this.labelAvgHpm);
-            this.Controls.Add(this.textBoxAvgHpm);
+            this.Controls.Add(this.textBoxAvgHpmManyTargets);
             this.Controls.Add(this.labelMp5RightTotalCrit);
             this.Controls.Add(this.labelMp5TotalCritLeft);
             this.Controls.Add(this.labelMp5rightPercent);
@@ -2657,13 +2777,9 @@
             this.Controls.Add(this.checkBox4PT7Bonus);
             this.Controls.Add(this.checkBox2PT9Bonus);
             this.Controls.Add(this.labelEarthlivingHps1);
-            this.Controls.Add(this.labelEarthlivingHps2);
+            this.Controls.Add(this.labelAvgHealingEarthliving);
             this.Controls.Add(this.checkBoxMuteSound);
             this.Controls.Add(this.labelAvgAAHps2);
-            this.Controls.Add(this.labelEarthlivingRP);
-            this.Controls.Add(this.labelEarthlivingLHW);
-            this.Controls.Add(this.labelEarthlivingHW);
-            this.Controls.Add(this.labelEarthlivingCH);
             this.Controls.Add(this.labeAvgHps2);
             this.Controls.Add(this.labeEarthlivingHps3);
             this.Controls.Add(this.labeEarthlivingHps4);
@@ -2673,7 +2789,6 @@
             this.Controls.Add(this.textBoxEarthlivingAvgHpsHW);
             this.Controls.Add(this.textBoxEarthlivingAvgHpsCH);
             this.Controls.Add(this.textBoxEarthlivingAvgHpsLHW);
-            this.Controls.Add(this.labelPerTick);
             this.Controls.Add(this.textBoxGlyphOfHealingWave);
             this.Controls.Add(this.labelAvgGlyphOfHealingWave);
             this.Controls.Add(this.checkBoxGlyphOfHealingWave);
@@ -2689,8 +2804,6 @@
             this.Controls.Add(this.checkBoxGlyphOfRiptide);
             this.Controls.Add(this.textBoxAvgAAeHps);
             this.Controls.Add(this.labelAvgAAeHps);
-            this.Controls.Add(this.labelSpamOn1Target2);
-            this.Controls.Add(this.labelSpamOnDifferent2);
             this.Controls.Add(this.labelSpamOnDifferent1);
             this.Controls.Add(this.labelSpamOn1Target1);
             this.Controls.Add(this.labelAvgAA);
@@ -2797,6 +2910,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Replenish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpellEarthliving)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2900,8 +3014,6 @@
         private System.Windows.Forms.Label labelAvgAA;
         private System.Windows.Forms.Label labelSpamOn1Target1;
         private System.Windows.Forms.Label labelSpamOnDifferent1;
-        private System.Windows.Forms.Label labelSpamOnDifferent2;
-        private System.Windows.Forms.Label labelSpamOn1Target2;
         private System.Windows.Forms.Label labelAvgAAeHps;
         private System.Windows.Forms.TextBox textBoxAvgAAeHps;
         private System.Windows.Forms.CheckBox checkBoxGlyphOfRiptide;
@@ -2917,7 +3029,6 @@
         private System.Windows.Forms.CheckBox checkBoxGlyphOfHealingWave;
         private System.Windows.Forms.Label labelAvgGlyphOfHealingWave;
         private System.Windows.Forms.TextBox textBoxGlyphOfHealingWave;
-        private System.Windows.Forms.Label labelPerTick;
         private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsLHW;
         private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsCH;
         private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsHW;
@@ -2927,13 +3038,9 @@
         private System.Windows.Forms.Label labeEarthlivingHps4;
         private System.Windows.Forms.Label labeEarthlivingHps3;
         private System.Windows.Forms.Label labeAvgHps2;
-        private System.Windows.Forms.Label labelEarthlivingCH;
-        private System.Windows.Forms.Label labelEarthlivingHW;
-        private System.Windows.Forms.Label labelEarthlivingLHW;
-        private System.Windows.Forms.Label labelEarthlivingRP;
         private System.Windows.Forms.Label labelAvgAAHps2;
         private System.Windows.Forms.CheckBox checkBoxMuteSound;
-        private System.Windows.Forms.Label labelEarthlivingHps2;
+        private System.Windows.Forms.Label labelAvgHealingEarthliving;
         private System.Windows.Forms.Label labelEarthlivingHps1;
         public System.Windows.Forms.CheckBox checkBox2PT10Bonus;
         public System.Windows.Forms.CheckBox checkBox2PT9Bonus;
@@ -2942,7 +3049,7 @@
         public System.Windows.Forms.CheckBox checkBox4PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox2PT8Bonus;
         public System.Windows.Forms.CheckBox checkBox4PT9Bonus;
-        private System.Windows.Forms.TextBox textBoxAvgHpm;
+        private System.Windows.Forms.TextBox textBoxAvgHpmManyTargets;
         private System.Windows.Forms.Label labelAvgHpm;
         private System.Windows.Forms.Label labelFor1Target;
         private System.Windows.Forms.TextBox textBoxMP5TimeMin;
@@ -3002,7 +3109,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDownMp5Totems;
         private System.Windows.Forms.Label labelMp5Totems;
-        private System.Windows.Forms.Label labelMp5Inervates;
+        private System.Windows.Forms.Label labelMp5Innervates;
         private System.Windows.Forms.NumericUpDown numericUpDownMp5Inervates;
         private System.Windows.Forms.TextBox textBoxMp5Totems;
         private System.Windows.Forms.TextBox textBoxMp5Innervates;
@@ -3019,6 +3126,20 @@
         public System.Windows.Forms.CheckBox checkBoxTotemOfTheBay;
         public System.Windows.Forms.CheckBox checkBoxTotemOfMisery;
         private System.Windows.Forms.CheckBox checkBoxBerserking;
+        private System.Windows.Forms.Label labelTickEarthliving;
+        private System.Windows.Forms.TextBox textBoxTickEarthliving;
+        private System.Windows.Forms.TextBox textBoxAvgHealingEarthliving;
+        private System.Windows.Forms.PictureBox pictureBoxSpellEarthliving;
+        private System.Windows.Forms.Label labelEarthliving;
+        private System.Windows.Forms.Label labelEarthlivingRank6;
+        private System.Windows.Forms.Label labelAvgHpm2;
+        private System.Windows.Forms.TextBox textBoxAvgHpmOneTarget;
+        private System.Windows.Forms.Label labelSpamOnDifferent3;
+        private System.Windows.Forms.Label labelSpamOn1Target3;
+        private System.Windows.Forms.Label labelMp5Mana1;
+        private System.Windows.Forms.Label labelMp5Mana2;
+        private System.Windows.Forms.Label labelMp5Mana4;
+        private System.Windows.Forms.Label labelMp5Mana3;
     }
 }
 

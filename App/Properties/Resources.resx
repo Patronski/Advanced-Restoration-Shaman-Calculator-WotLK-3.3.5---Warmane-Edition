@@ -382,4 +382,13 @@
   <data name="_4P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Innervate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Innervate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Replenishment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Replenishment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

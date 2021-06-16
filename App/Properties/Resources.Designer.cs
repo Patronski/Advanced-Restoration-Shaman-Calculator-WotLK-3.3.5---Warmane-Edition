@@ -524,6 +524,16 @@ namespace App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Innervate {
+            get {
+                object obj = ResourceManager.GetObject("Innervate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream LHW {
@@ -575,6 +585,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap MTT {
+            get {
+                object obj = ResourceManager.GetObject("MTT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Nature_s_BlessingH {
             get {
                 object obj = ResourceManager.GetObject("Nature_s_BlessingH", resourceCulture);
@@ -616,6 +636,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap PurificationH {
             get {
                 object obj = ResourceManager.GetObject("PurificationH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Replenishment {
+            get {
+                object obj = ResourceManager.GetObject("Replenishment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

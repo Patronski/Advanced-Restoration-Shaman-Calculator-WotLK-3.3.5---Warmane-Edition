@@ -122,6 +122,7 @@ namespace App.Models
         public int? AvgHotHps { get; set; }
 
         public double AvgHpm { get; set; }
+        public double AvgHpmOneTarget { get; set; }
 
         public int? AvgAAHps { get; set; }
 
@@ -171,7 +172,7 @@ namespace App.Models
         public int? EarthlivingAvgHpsHW { get; set; }
         public int? EarthlivingAvgHpsLHW { get; set; }
         public int? EarthlivingAvgHpsRP { get; set; }
-        public int? EarthlivingAvgHpsTotal { get; set; }
+        public int EarthlivingTick { get; set; }
 
         public int? Mp5TimeMin { get; set; }
         public int? Mp5TimeSec { get; set; }

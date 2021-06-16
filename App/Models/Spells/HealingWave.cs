@@ -28,6 +28,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new FourPiecesT7Bonus());
             this.Modifiers.Add(new TotemOfMisery());
             this.Modifiers.Add(new Berserking());
+            this.Modifiers.Add(new GlyphOfEarthliving());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -161,11 +162,11 @@ namespace App.Models.Spells
             var isTotemOfMisery = Modifiers.Any(x => x.Display == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
             var totemModifier = isTotemOfMisery ? 969 : 1044;
 
-            // HPM = HW HIT * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] / [1044 - (Crit% * 4.92)]
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)));
-            ///
-            //(totemModifier /*- Player.Instance.CriticalPercent * multiplier*/);
+
+            result += Player.Instance.EarthlivingAvgHpsHW;
+
             if (isGlyphHealingWave)
             {
                 result += result * 0.2;
@@ -174,6 +175,18 @@ namespace App.Models.Spells
             result /= totemModifier;
 
             return Math.Round(result ?? 0, 1);
+        }
+
+        public override int? CalculateEarthlivingAvgHpsHW()
+        {
+            var isGlyphOfEarthliving = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+
+            double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
+
+            var result = Player.Instance.EarthlivingTick * multiplier * 4;
+
+            return (int?)result;
         }
     }
 }
