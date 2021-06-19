@@ -729,6 +729,7 @@ namespace App
         {
             var location = this.DesktopLocation;
 
+            this.Hide();
             var startScreen = Forms.Instance.FormStartScreen;
             startScreen.DesktopLocation = location;
             startScreen.Show();
@@ -773,6 +774,19 @@ namespace App
             numericUpDownMp5Totems.Value = 0;
             numericUpDownMp5Inervates.Value = 0;
             numericUpDownMp5Replenish.Value = 0;
+            numericUpDownMp5TotemicRecall.Value = 0;
+            textBoxMp5TotalCHCasts.Text = "";
+            textBoxMp5TotalESHCasts.Text = "";
+            numericUpDownMp5BloodlustHeroism.Value = 0;
+            numericUpDownMp5CallOfElements.Value = 0;
+            comboBoxAirTotems.SelectedIndex = -1;
+            comboBoxAirTotems.Text = "Select Air Totem";
+            comboBoxEarthTotems.SelectedIndex = -1;
+            comboBoxEarthTotems.Text = "Select Earth Totem";
+            comboBoxFireTotems.SelectedIndex = -1;
+            comboBoxFireTotems.Text = "Select Fire Totem";
+            comboBoxWaterTotems.SelectedIndex = -1;
+            comboBoxWaterTotems.Text = "Select Water Totem";
         }
 
         private void textBoxMp5TotalCHCasts_TextChanged(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ namespace App
         {
             InitializeComponent();
             richTextBoxInfo.Dock = DockStyle.Fill;
-            richTextBoxInfo.LoadFile("../../../Resourses/HELP.rtf");
+
+            richTextBoxInfo.Rtf = Resources.HELP_rtf;
         }
     }
 }

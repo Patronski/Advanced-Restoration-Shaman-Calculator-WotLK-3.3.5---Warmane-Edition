@@ -2788,6 +2788,7 @@
             // 
             this.comboBoxAirTotems.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxAirTotems.FormattingEnabled = true;
+            this.comboBoxAirTotems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBoxAirTotems.Location = new System.Drawing.Point(734, 453);
             this.comboBoxAirTotems.Name = "comboBoxAirTotems";
             this.comboBoxAirTotems.Size = new System.Drawing.Size(141, 21);

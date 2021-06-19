@@ -193,7 +193,9 @@
     <None Include="Resources\Glyph of Earthliving.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HELP.rtf" />
+    <None Include="Resources\HELP.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Improved Moonking Form.png" />
   </ItemGroup>
   <ItemGroup>
