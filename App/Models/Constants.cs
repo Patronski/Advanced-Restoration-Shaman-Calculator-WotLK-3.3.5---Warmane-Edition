@@ -28,11 +28,11 @@
         public const string ModHellscream = "Hellscream's Warsong / Strength of Wrynn";
         public const string ModMoonkin = "Moonkin Aura / Elemental Oath";
         public const string Mod2PT10Bonus_RapidCurrents = "2P/T10 (Rapid Currents)";
-        public const string ModRapidConsumption = "Riptides Consumption";
+        public const string ModRapidConsumption = "Riptides Consumption (Chain Heal)";
         public const string ModSwiftRetrubution = "Swift Retribution / Improved Moonkin Form";
         public const string ModTidalMastery = "Tidal Mastery";
-        public const string ModTidalWavesCrit = "Tidal Waves (Crit)";
-        public const string ModTidalWavesHaste = "Tidal Waves (Haste)";
+        public const string ModTidalWavesCrit = "Tidal Waves (Lesser Healing Wave)";
+        public const string ModTidalWavesHaste = "Tidal Waves (Healing Wave)";
         public const string ModTreeOfLife = "Tree of Life / Improved Devotion Aura";
         public const string ModWrathOfTheAirTotem = "Wrath of Air Totem";
         public static string ModMetaRevitalizingSkyflareDiamond = "Revitalizing Skyflare Diamond";
@@ -57,5 +57,6 @@
         public const string LabelAvgHps = "AVG eHPS:";
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
         public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
+        public const string LabelChainHealAvgHotEhps = "AVG HOT eHPS:";
     }
 }

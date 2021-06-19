@@ -113,6 +113,8 @@ namespace App.Models
         public virtual double CalculateMp5Replenish() { return 0; }
         public virtual double CalculateMp5Diamond() { return 0; }
         public virtual int CalculateMp5TotalManaGain() { return 0; }
+        public virtual int CalculateMp5TotalManaSpent() { return 0; }
+        
         public virtual int CalculateEarthlivingTick() 
             => (int)((int)(0.1692 * Player.Instance.SpellPower + 163) * 1.1);
 

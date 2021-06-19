@@ -180,12 +180,12 @@
             // 
             this.linkOpenSource.AutoSize = true;
             this.linkOpenSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
-            this.linkOpenSource.Location = new System.Drawing.Point(850, 114);
+            this.linkOpenSource.Location = new System.Drawing.Point(914, 114);
             this.linkOpenSource.Name = "linkOpenSource";
-            this.linkOpenSource.Size = new System.Drawing.Size(103, 13);
+            this.linkOpenSource.Size = new System.Drawing.Size(38, 13);
             this.linkOpenSource.TabIndex = 40;
             this.linkOpenSource.TabStop = true;
-            this.linkOpenSource.Text = "Open source project";
+            this.linkOpenSource.Text = "Github";
             this.linkOpenSource.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOpenSource_LinkClicked);
             // 
             // transparentControl2

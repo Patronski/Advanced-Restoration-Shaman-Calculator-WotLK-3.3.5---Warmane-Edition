@@ -1,4 +1,5 @@
 ﻿using App.Models;
+using App.Models.Totems;
 using App.Properties;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,10 @@ namespace App
             AdjustComponentProperties();
             AddControllsToList();
             InitialiseComboBoxSpell();
+            InitialiseComboBoxFireTotems();
+            InitialiseComboBoxWaterTotems();
+            InitialiseComboBoxEarthTotems();
+            InitialiseComboBoxAirTotems();
             AddTooltips();
             LoadControlsFromMemory();
             DisplayHealing();
@@ -52,6 +57,15 @@ namespace App
 
         private void AddTooltips()
         {
+            var toolTip = new ToolTip();
+            toolTip.InitialDelay = 50;
+            toolTip.ReshowDelay = 50;
+            toolTip.AutoPopDelay = 15000;
+            toolTip.SetToolTip(pictureBoxHome, "Home");
+            toolTip.SetToolTip(pictureBoxInfo, "Info");
+            toolTip.SetToolTip(pictureBoxReset, "Reset");
+            toolTip.SetToolTip(pictureBoxSound, "Sound");
+
             myToolTip.SetToolTip(checkBox2PT8Bonus, "mod");
             checkBox2PT8Bonus.Tag = Resources._2pT8_Bonus;
 
@@ -168,6 +182,15 @@ namespace App
 
             myToolTip.SetToolTip(labelMp5Replenish, "mod");
             labelMp5Replenish.Tag = Resources.Replenishment;
+
+            myToolTip.SetToolTip(labelMp5InsightfulEarthsiegeDiamond, "mod");
+            labelMp5InsightfulEarthsiegeDiamond.Tag = Resources.IED;
+
+            myToolTip.SetToolTip(labelGlyphOfHealingWave, "mod");
+            labelGlyphOfHealingWave.Tag = Resources.Glyph_of_Healing_Wave;
+
+            myToolTip.SetToolTip(labelMp5TotemicRecall, "mod");
+            labelMp5TotemicRecall.Tag = Resources.Totemic_Recall;
         }
 
         private void AdjustComponentProperties()
@@ -187,6 +210,17 @@ namespace App
             this.checkBoxTreeOfLife.Text = Constants.ModTreeOfLife;
             this.checkBoxWrathOfTheAirTotem.Text = Constants.ModWrathOfTheAirTotem;
             pictureBoxSpellEarthliving.Image = Resources.SpellEarthliving;
+            if (Player.Instance.MuteSound)
+            {
+                pictureBoxSound.Image = Resources.Sound_off;
+            }
+            else
+            {
+                pictureBoxSound.Image = Resources.Sound_on;
+            }
+            pictureBoxHome.Image = Resources.home;
+            pictureBoxInfo.Image = Resources.help;
+            pictureBoxReset.Image = Resources.reset;
         }
 
         private void AddControllsToList()
@@ -200,37 +234,6 @@ namespace App
                     checkBoxes.Add(c as CheckBox);
                 }
             }
-            //checkBoxes = new List<CheckBox>()
-            //{
-            //    this.checkBoxTreeOfLife,
-            //    this.checkBoxHellscream,
-            //    this.checkBoxEmeraldVigor,
-            //    this.checkBoxRiptidesConsumption,
-            //    this.checkBoxGlyphOfEarthShield,
-            //    this.checkBoxGyphOfHST,
-            //    this.checkBoxGlyphOfLHW,
-            //    this.checkBoxWrathOfTheAirTotem,
-            //    this.checkBoxSwiftRetributionHaste,
-            //    this.checkBoxBloodlust,
-            //    this.checkBoxTidalWaves,
-            //    this.checkBoxMoonkinForm,
-            //    this.checkBoxTidalWavesCrit,
-            //    this.checkBoxMetaRevitalizingSkyflareDiamond,
-            //    this.checkBoxGlyphOfRiptide,
-            //    checkBoxGlyphOfEarthliving,
-            //    checkBoxGlyphChainHeal,
-            //    checkBoxGlyphOfHealingWave,
-            //    checkBoxMuteSound,
-            //    this.checkBox4PT7Bonus,
-            //    this.checkBox2PT8Bonus,
-            //    this.checkBox4PT8Bonus,
-            //    this.checkBox2PT9Bonus,
-            //    this.checkBox4PT9Bonus,
-            //    this.checkBox2PT10Bonus,
-            //    this.checkBox4PT10Bonus,
-            //    this.checkBoxSteamcallersTotem,
-            //    checkBoxBerserking
-            //};
         }
 
         private void InitialiseComboBoxSpell()
@@ -252,6 +255,37 @@ namespace App
             }
 
             this.comboBoxSpell.Items.AddRange(spells.ToArray());
+        }
+
+        private void InitialiseComboBoxAirTotems()
+        {
+            comboBoxAirTotems.Items.Add(new Totem { Name = "Wrath of Air Totem", Mana = 483 });
+            comboBoxAirTotems.Items.Add(new Totem { Name = "Windfury Totem", Mana = 483 });
+            comboBoxAirTotems.Items.Add(new Totem { Name = "Nature Resistance Totem", Mana = 351 });
+            comboBoxAirTotems.Items.Add(new Totem { Name = "None", Mana = 0 });
+        }
+
+        private void InitialiseComboBoxEarthTotems()
+        {
+            comboBoxEarthTotems.Items.Add(new Totem { Name = "Strength of Earth Totem", Mana = 439 });
+            comboBoxEarthTotems.Items.Add(new Totem { Name = "Stoneskin Totem", Mana = 439 });
+            comboBoxEarthTotems.Items.Add(new Totem { Name = "None", Mana = 0 });
+        }
+
+        private void InitialiseComboBoxWaterTotems()
+        {
+            comboBoxWaterTotems.Items.Add(new Totem { Name = "Healing Stream Totem", Mana = 131 });
+            comboBoxWaterTotems.Items.Add(new Totem { Name = "Mana Spring Totem", Mana = 175 });
+            comboBoxWaterTotems.Items.Add(new Totem { Name = "Fire Resistance Totem", Mana = 351 });
+            comboBoxWaterTotems.Items.Add(new Totem { Name = "Cleansing Totem", Mana = 351 });
+            comboBoxWaterTotems.Items.Add(new Totem { Name = "None", Mana = 0 });
+        }
+
+        private void InitialiseComboBoxFireTotems()
+        {
+            comboBoxFireTotems.Items.Add(new Totem { Name = "Flametongue Totem", Mana = 483 });
+            comboBoxFireTotems.Items.Add(new Totem { Name = "Frost Resistance Totem", Mana = 351 });
+            comboBoxFireTotems.Items.Add(new Totem { Name = "None", Mana = 0 });
         }
 
         private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
@@ -317,7 +351,6 @@ namespace App
 
         private void EnableControllsAtStart()
         {
-            numericUpDownEmeraldVigor.Enabled = true;
             foreach (var check in checkBoxes)
             {
                 check.Enabled = true;
@@ -415,11 +448,13 @@ namespace App
             {
                 this.labelAvgGlyphOfHealingWave.Enabled = true;
                 textBoxGlyphOfHealingWave.Enabled = true;
+                labelGlyphOfHealingWave.Enabled = true;
             }
             else
             {
                 this.labelAvgGlyphOfHealingWave.Enabled = false;
                 textBoxGlyphOfHealingWave.Enabled = false;
+                labelGlyphOfHealingWave.Enabled = false;
             }
         }
 
@@ -448,7 +483,7 @@ namespace App
             return result;
         }
 
-        private void textBoxSpellPower_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxOnlyIntegers_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
@@ -456,90 +491,25 @@ namespace App
             }
         }
 
-        private void buttonReset_Click(object sender, EventArgs e)
+        private void pictureBoxSound_MouseClick(object sender, MouseEventArgs e)
         {
-            foreach (var item in checkBoxes)
+            if (Player.Instance.MuteSound)
             {
-                if (item.Name == "checkBoxMuteSound") continue;
-                item.Checked = false;
-            }
-
-            // reset base stats
-            this.textBoxSpellPower.Text = "";
-            this.textBoxIntellect.Text = "";
-            this.textBoxMP5S.Text = "";
-            textBoxHasteRating.Text = "";
-            Player.Instance.CriticalPercentInitial = 0;
-            textBoxCriticalRating.Text = "";
-
-            // reset controlls for spell MP5S
-            textBoxMP5TimeMin.Text = "";
-            textBoxMP5TimeSec.Text = "";
-            textBoxMP5TotalRiptides.Text = "";
-            textBoxMP5TotalHW.Text = "";
-            textBoxMP5TotalLHW.Text = "";
-            textBoxMP5TotalCH.Text = "";
-            numericUpDownMp5Totems.Value = 0;
-            numericUpDownMp5Inervates.Value = 0;
-            numericUpDownMp5Replenish.Value = 0;
-        }
-
-        private void buttonHome_Click(object sender, EventArgs e)
-        {
-            var location = this.DesktopLocation;
-
-            this.Hide();
-            var startScreen = Forms.Instance.FormStartScreen;
-            startScreen.DesktopLocation = location;
-            startScreen.Show();
-        }
-
-        private void checkBoxMuteSound_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxMuteSound.Checked)
-            {
-                Player.Instance.MuteSound = true;
-                soundPlayer.StopSound();
+                Player.Instance.MuteSound = false;
+                pictureBoxSound.Image = Resources.Sound_on;
             }
             else
             {
-                Player.Instance.MuteSound = false;
+                Player.Instance.MuteSound = true;
+                pictureBoxSound.Image = Resources.Sound_off;
+                soundPlayer.StopSound();
             }
-            if (!skipEventChanged)
-            {
-                Player.Instance.Modifiers[checkBoxMuteSound.Text] = checkBoxMuteSound.Checked;
-            }
-            skipEventChanged = false;
         }
 
         private void Calculator_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
             Forms.Instance.FormStartScreen.Close();
-        }
-
-        private void textBoxMP5TimeMin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxMP5TotalRiptides_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxMP5TotalHW_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
 
         private void textBoxMP5TimeSec_KeyPress(object sender, KeyPressEventArgs e)
@@ -555,22 +525,6 @@ namespace App
             var text = (string)sender.GetType().GetProperty("Text").GetValue(sender);
 
             if (text != null && char.IsDigit(e.KeyChar) && int.Parse(text + e.KeyChar) > 59 && ob.SelectedText != text)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxMP5TotalLHW_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxMP5TotalCH_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -765,6 +719,138 @@ namespace App
             {
                 var number = (int)((NumericUpDown)sender).Value;
                 Player.Instance.Mp5ReplenishCount = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void pictureBoxHome_Click(object sender, EventArgs e)
+        {
+            var location = this.DesktopLocation;
+
+            var startScreen = Forms.Instance.FormStartScreen;
+            startScreen.DesktopLocation = location;
+            startScreen.Show();
+        }
+
+        private void pictureBoxHelp_Click(object sender, EventArgs e)
+        {
+            var location = this.DesktopLocation;
+
+            if (Forms.Instance.FormInfo == null || Forms.Instance.FormInfo.IsDisposed)
+            {
+                Forms.Instance.FormInfo = new Info();
+            }
+
+            Forms.Instance.FormInfo.DesktopLocation = location;
+            Forms.Instance.FormInfo.Show();
+        }
+
+        private void pictureBoxReset_Click(object sender, EventArgs e)
+        {
+            foreach (var item in checkBoxes)
+            {
+                if (item.Name == "checkBoxMuteSound") continue;
+                item.Checked = false;
+            }
+
+            // reset base stats
+            this.textBoxSpellPower.Text = "";
+            this.textBoxIntellect.Text = "";
+            this.textBoxMP5S.Text = "";
+            textBoxHasteRating.Text = "";
+            Player.Instance.CriticalPercentInitial = 0;
+            textBoxCriticalRating.Text = "";
+
+            // reset controlls for spell MP5S
+            textBoxMP5TimeMin.Text = "";
+            textBoxMP5TimeSec.Text = "";
+            textBoxMP5TotalRiptides.Text = "";
+            textBoxMP5TotalHW.Text = "";
+            textBoxMP5TotalLHW.Text = "";
+            textBoxMP5TotalCH.Text = "";
+            numericUpDownMp5Totems.Value = 0;
+            numericUpDownMp5Inervates.Value = 0;
+            numericUpDownMp5Replenish.Value = 0;
+        }
+
+        private void textBoxMp5TotalCHCasts_TextChanged(object sender, EventArgs e)
+        {
+            int value = 0;
+            if (!int.TryParse(this.textBoxMp5TotalCHCasts.Text, out value))
+            {
+                this.textBoxMp5TotalCHCasts.Text = "";
+            }
+            Player.Instance.Mp5TotalCHCasts = value;
+
+            selectedSpell?.Calculate();
+
+            DisplayHealing();
+        }
+
+        private void numericUpDownMp5BloodlustHeroism_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5BloodlustHeroism = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void textBoxMp5TotalESHCasts_TextChanged(object sender, EventArgs e)
+        {
+            int value = 0;
+            if (!int.TryParse(this.textBoxMp5TotalESHCasts.Text, out value))
+            {
+                this.textBoxMp5TotalESHCasts.Text = "";
+            }
+            Player.Instance.Mp5TotalESHCasts = value;
+
+            selectedSpell?.Calculate();
+
+            DisplayHealing();
+        }
+
+        private void comboBoxTotems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedWaterTotem = (Totem)comboBoxWaterTotems.SelectedItem;
+            var selectedFireTotem = (Totem)comboBoxFireTotems.SelectedItem;
+            var selectedEarthTotem = (Totem)comboBoxEarthTotems.SelectedItem;
+            var selectedAirTotem = (Totem)comboBoxAirTotems.SelectedItem;
+
+            Player.Instance.Mp5SelectedTotemTotalMana = 0;
+            Player.Instance.Mp5SelectedTotemTotalMana += selectedAirTotem?.Mana ?? 0 ;
+            Player.Instance.Mp5SelectedTotemTotalMana += selectedEarthTotem?.Mana ?? 0;
+            Player.Instance.Mp5SelectedTotemTotalMana += selectedFireTotem?.Mana ?? 0;
+            Player.Instance.Mp5SelectedTotemTotalMana += selectedWaterTotem?.Mana ?? 0;
+
+            selectedSpell.Calculate();
+
+            DisplayHealing();
+        }
+
+        private void numericUpDownCallOfElements_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5CallOfElements = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5TotemicRecall_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5TotemicRecall = number;
                 selectedSpell?.Calculate();
                 DisplayHealing();
             }

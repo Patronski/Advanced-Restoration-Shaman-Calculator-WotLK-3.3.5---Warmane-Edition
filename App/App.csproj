@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>App</RootNamespace>
-    <AssemblyName>Advanced Resto Shaman Calculator v1.4</AssemblyName>
+    <AssemblyName>[WotLK] Advanced Resto Shaman Calculator v2.0</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -73,6 +73,12 @@
     <Compile Include="CalculatorAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\CustomizedToolTip.cs">
       <SubType>Component</SubType>
@@ -128,13 +134,17 @@
     <Compile Include="Models\Spell.cs" />
     <Compile Include="Models\Spells\ChainHeal.cs" />
     <Compile Include="Models\Spells\CritIntoMP5S.cs" />
-    <Compile Include="Models\Spells\Earthliving.cs" />
     <Compile Include="Models\Spells\EarthShield.cs" />
     <Compile Include="Models\Spells\GiftOfTheNaaru.cs" />
     <Compile Include="Models\Spells\HealingStreamTotem.cs" />
     <Compile Include="Models\Spells\HealingWave.cs" />
     <Compile Include="Models\Spells\LesserHealingWave.cs" />
     <Compile Include="Models\Spells\Riptide.cs" />
+    <Compile Include="Models\Totems\IAirTotem.cs" />
+    <Compile Include="Models\Totems\IEarthTotem.cs" />
+    <Compile Include="Models\Totems\IFireTotem.cs" />
+    <Compile Include="Models\Totems\Totem.cs" />
+    <Compile Include="Models\Totems\IWaterTotem.cs" />
     <Compile Include="Models\TransparentControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -180,6 +193,7 @@
     <None Include="Resources\Glyph of Earthliving.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\HELP.rtf" />
     <None Include="Resources\Improved Moonking Form.png" />
   </ItemGroup>
   <ItemGroup>
@@ -501,6 +515,14 @@
     <None Include="Resources\Innervate.png" />
     <None Include="Resources\MTT.png" />
     <None Include="Resources\Replenishment.png" />
+    <None Include="Resources\sound on.png" />
+    <None Include="Resources\sound off.png" />
+    <None Include="Resources\Sound-off.png" />
+    <None Include="Resources\Sound-on.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\Totemic Recall.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -515,5 +537,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

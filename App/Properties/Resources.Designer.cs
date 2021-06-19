@@ -436,6 +436,40 @@ namespace App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap help {
+            get {
+                object obj = ResourceManager.GetObject("help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
+        ///{\colortbl ;\red0\green77\blue187;\red0\green0\blue0;\red255\green0\blue0;}
+        ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+        ///\pard\sa200\sl276\slmult1\qc\f0\fs22\lang9 Welcome to \cf1 [WotLK] Advanced Resto Shaman Calculator\par
+        ///
+        ///\pard\sa200\sl276\slmult1\cf2 The program calculates according to \b Stats\b0  and \b Modifiers\b0  you type/enable.  The stats can be seen\f1\lang1026  \f0\lang1033 [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string HELP_rtf {
+            get {
+                return ResourceManager.GetString("HELP_rtf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream HST {
@@ -653,6 +687,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap reset {
+            get {
+                object obj = ResourceManager.GetObject("reset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Restorative_TotemsH {
             get {
                 object obj = ResourceManager.GetObject("Restorative_TotemsH", resourceCulture);
@@ -696,6 +740,26 @@ namespace App.Properties {
         public static System.IO.UnmanagedMemoryStream RP {
             get {
                 return ResourceManager.GetStream("RP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Sound_off {
+            get {
+                object obj = ResourceManager.GetObject("Sound_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Sound_on {
+            get {
+                object obj = ResourceManager.GetObject("Sound_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -895,6 +959,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Totem_of_the_Bay {
             get {
                 object obj = ResourceManager.GetObject("Totem_of_the_Bay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Totemic_Recall {
+            get {
+                object obj = ResourceManager.GetObject("Totemic_Recall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

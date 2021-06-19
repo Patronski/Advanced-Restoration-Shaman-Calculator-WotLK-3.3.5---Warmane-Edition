@@ -16,6 +16,11 @@ namespace App.Models.Spells
             this.Modifiers.Add(new GlyphOfManaTideTotem());
             this.Modifiers.Add(new MetaInsightfulEarthsiegeDiamond());
             this.Modifiers.Add(new Berserking());
+            this.Modifiers.Add(new WrathOfTheAirTotem());
+            this.Modifiers.Add(new SwiftRetribution());
+            this.Modifiers.Add(new BloodlustHeroism());
+            this.Modifiers.Add(new TotemOfForestGrowth());
+            this.Modifiers.Add(new TotemOfMisery());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -27,7 +32,7 @@ namespace App.Models.Spells
 
         public override double CalculateMp5TotalDec()
         {
-            var r = (Player.Instance.Mp5TimeMin ?? 0) + ((Player.Instance.Mp5TimeSec ?? 0) / 60d);
+            var r = Player.Instance.Mp5TimeMin + (Player.Instance.Mp5TimeSec / 60d);
             return Math.Round(r, 2); ;
         }
 
@@ -137,16 +142,38 @@ namespace App.Models.Spells
                 return 0;
             }
 
-            var totalSomething = Player.Instance.Mp5TotalHW + Player.Instance.Mp5TotalLHW + Player.Instance.Mp5TotalRiptides + (Player.Instance.Mp5TotalCH / 3);
+            var totalSomething = Player.Instance.Mp5TotalHW + Player.Instance.Mp5TotalLHW + Player.Instance.Mp5TotalRiptides + Player.Instance.Mp5TotalCHCasts;
             var result = totalSomething * 0.05 * 600;
             return result;
         }
 
         public override int CalculateMp5TotalManaGain()
         {
-            var a = (Player.Instance.Mp5TimeDec * 60 * (Player.Instance.MP5S + Player.Instance.Mp5Replenish + Player.Instance.Mp5TotalCrit) / 5)
-                + Player.Instance.Mp5Totems + Player.Instance.Mp5Innervates + Player.Instance.Mp5Diamond;
+            var a = (Player.Instance.Mp5TimeMin * 60 + Player.Instance.Mp5TimeSec) *
+                (Player.Instance.MP5S + Player.Instance.Mp5Replenish + Player.Instance.Mp5TotalCrit);
+            a /= 5;
+            a += Player.Instance.Mp5Totems + Player.Instance.Mp5Innervates + Player.Instance.Mp5Diamond;
+            a += Player.Instance.Mp5TotemicRecall * (0.25d * Player.Instance.Mp5SelectedTotemTotalMana);
+
             return (int)Math.Round(a);
+        }
+
+        public override int CalculateMp5TotalManaSpent()
+        {
+            var isTotemOfMisery = Modifiers
+                .Any(x => x.Display == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
+            var isTotemOfForest = Modifiers
+                .Any(x => x.Display == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
+
+            var result = Player.Instance.Mp5TotalRiptides * 751 +
+                Player.Instance.Mp5TotalHW * (isTotemOfMisery ? 969 : 1044) +
+                Player.Instance.Mp5TotalLHW * 626 +
+                Player.Instance.Mp5TotalCHCasts * (isTotemOfForest ? 719 : 793) +
+                Player.Instance.Mp5TotalESHCasts * 626 +
+                Player.Instance.Mp5BloodlustHeroism * 1142 +
+                Player.Instance.Mp5SelectedTotemTotalMana * Player.Instance.Mp5CallOfElements;
+
+            return result;
         }
 
         public override void Calculate()
@@ -175,6 +202,7 @@ namespace App.Models.Spells
             Player.Instance.Mp5Replenish = CalculateMp5Replenish();
             Player.Instance.Mp5Diamond = CalculateMp5Diamond();
             Player.Instance.Mp5TotalManaGain = CalculateMp5TotalManaGain();
+            Player.Instance.Mp5TotalManaSpent = CalculateMp5TotalManaSpent();
         }
 
         public override string ToString()

@@ -91,11 +91,13 @@ namespace App
             {
                 labelMp5InsightfulEarthsiegeDiamond.Enabled = true;
                 textBoxMp5Diamond.Enabled = true;
+                labelMp5Mana4.Enabled = true;
             }
             else
             {
                 labelMp5InsightfulEarthsiegeDiamond.Enabled = false;
                 textBoxMp5Diamond.Enabled = false;
+                labelMp5Mana4.Enabled = false;
             }
         }
 
@@ -187,13 +189,8 @@ namespace App
             textBoxHotRiptide.Hide();
             textBoxGlyphOfHealingWave.Hide();
             labelAvgGlyphOfHealingWave.Hide();
-            textBoxEarthlivingAvgHpsCH.Hide();
-            textBoxEarthlivingAvgHpsHW.Hide();
-            textBoxEarthlivingAvgHpsLHW.Hide();
-            textBoxEarthlivingAvgHpsRP.Hide();
             labeAvgHps2.Hide();
             labeEarthlivingHps3.Hide();
-            labeEarthlivingHps4.Hide();
             labeEarthlivingHps5.Hide();
             labelAvgAAHps2.Hide();
             labelEarthlivingHps1.Hide();
@@ -263,6 +260,36 @@ namespace App
             textBoxAvgHpmOneTarget.Hide();
             labelSpamOnDifferent3.Hide();
             labelSpamOn1Target3.Hide();
+            labelMp5Mana1.Hide();
+            labelMp5Mana2.Hide();
+            labelMp5Mana3.Hide();
+            labelMp5Mana4.Hide();
+            labelGlyphOfHealingWave.Hide();
+            textBoxMp5TotalCHCasts.Hide();
+            labelMp5TotalCHCasts.Hide();
+            labelMp5BloodlustHeroism.Hide();
+            numericUpDownMp5BloodlustHeroism.Hide();
+            labelMp5TotalManaSpent.Hide();
+            textBoxMp5TotalManaSpent.Hide();
+            labelMp5TotalESHCasts.Hide();
+            textBoxMp5TotalESHCasts.Hide();
+            comboBoxAirTotems.Hide();
+            comboBoxEarthTotems.Hide();
+            comboBoxFireTotems.Hide();
+            comboBoxWaterTotems.Hide();
+            numericUpDownMp5CallOfElements.Hide();
+            numericUpDownMp5TotemicRecall.Hide();
+            labelMp5TotemicRecall.Hide();
+            labelMp5CallOfElements.Hide();
+            labelMp5Casts1.Hide();
+            labelMp5Casts2.Hide();
+            labelmp5Casts3.Hide();
+            labelmp5Casts4.Hide();
+            labelMp5Casts5.Hide();
+            comboBoxAirTotems.Hide();
+            comboBoxWaterTotems.Hide();
+            comboBoxFireTotems.Hide();
+            comboBoxEarthTotems.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -355,14 +382,9 @@ namespace App
                     labelTick.Show();
                     checkBoxGlyphOfEarthliving.Show();
                     textBoxAvgHotHps.Show();
-                    textBoxEarthlivingAvgHpsCH.Show();
-                    textBoxEarthlivingAvgHpsHW.Show();
-                    textBoxEarthlivingAvgHpsLHW.Show();
-                    textBoxEarthlivingAvgHpsRP.Show();
                     labelEarthlivingHps1.Show();
                     labelAvgHealingEarthliving.Show();
                     labeEarthlivingHps3.Show();
-                    labeEarthlivingHps4.Show();
                     break;
 
                 case Constants.SpellHST:
@@ -420,6 +442,7 @@ namespace App
                     pictureBoxSpellEarthliving.Show();
                     labelEarthliving.Show();
                     labelEarthlivingRank6.Show();
+                    labelGlyphOfHealingWave.Show();
                     break;
 
                 case Constants.SpellLHW:
@@ -587,6 +610,35 @@ namespace App
                     textBoxMp5Diamond.Show();
                     labelMp5TotalManaGain.Show();
                     textBoxMp5TotalManaGain.Show();
+                    labelMp5Mana1.Show();
+                    labelMp5Mana2.Show();
+                    labelMp5Mana3.Show();
+                    labelMp5Mana4.Show();
+                    textBoxMp5TotalCHCasts.Show();
+                    labelMp5TotalCHCasts.Show();
+                    labelMp5BloodlustHeroism.Show();
+                    numericUpDownMp5BloodlustHeroism.Show();
+                    labelMp5TotalManaSpent.Show();
+                    textBoxMp5TotalManaSpent.Show();
+                    labelMp5TotalESHCasts.Show();
+                    textBoxMp5TotalESHCasts.Show();
+                    comboBoxAirTotems.Show();
+                    comboBoxEarthTotems.Show();
+                    comboBoxFireTotems.Show();
+                    comboBoxWaterTotems.Show();
+                    numericUpDownMp5CallOfElements.Show();
+                    numericUpDownMp5TotemicRecall.Show();
+                    labelMp5TotemicRecall.Show();
+                    labelMp5CallOfElements.Show();
+                    labelMp5Casts1.Show();
+                    labelMp5Casts2.Show();
+                    labelmp5Casts3.Show();
+                    labelmp5Casts4.Show();
+                    labelMp5Casts5.Show();
+                    comboBoxAirTotems.Show();
+                    comboBoxWaterTotems.Show();
+                    comboBoxFireTotems.Show();
+                    comboBoxEarthTotems.Show();
                     break;
 
                 case Constants.SpellGiftOfTheNaaru:
@@ -645,11 +697,6 @@ namespace App
             textBoxGlyphOfHealingWave.Text = Player.Instance.AvgGlyphOfHealingWave.ToString();
             textBoxAvgHpmManyTargets.Text = Player.Instance.AvgHpm.ToString();
             textBoxAvgHpmOneTarget.Text = Player.Instance.AvgHpmOneTarget.ToString();
-            //Earthliving
-            textBoxEarthlivingAvgHpsCH.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
-            textBoxEarthlivingAvgHpsHW.Text = Player.Instance.EarthlivingAvgHpsHW.ToString();
-            textBoxEarthlivingAvgHpsLHW.Text = Player.Instance.EarthlivingAvgHpsLHW.ToString();
-            textBoxEarthlivingAvgHpsRP.Text = Player.Instance.EarthlivingAvgHpsRP.ToString();
             //Mp5
             textBoxMP5TimeDec.Text = Player.Instance.Mp5TimeDec.ToString();
             textBoxMp5RPM.Text = Player.Instance.Mp5RPM.ToString();
@@ -664,6 +711,7 @@ namespace App
             textBoxMp5Replenish.Text = Player.Instance.Mp5Replenish.ToString();
             textBoxMp5Diamond.Text = Player.Instance.Mp5Diamond.ToString();
             textBoxMp5TotalManaGain.Text = Player.Instance.Mp5TotalManaGain.ToString();
+            textBoxMp5TotalManaSpent.Text = Player.Instance.Mp5TotalManaSpent.ToString();
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
             textBoxTickEarthliving.Text = Player.Instance.EarthlivingTick.ToString();
@@ -692,11 +740,12 @@ namespace App
                     break;
 
                 case Constants.SpellChainHeal:
+                    labelAvgHotHps.Text = Constants.LabelChainHealAvgHotEhps;
                     textBoxAvgHealingEarthliving.Text = Player.Instance.EarthlivingAvgHpsCH.ToString();
                     break;
 
                 default:
-                    labelAvgHotHps.Text = "AVG HOT eHPS:";
+                    labelAvgHotHps.Text = Constants.LabelChainHealAvgHotEhps;
                     labelAvgHps.Text = Constants.LabelAvgHps;
                     break;
             }

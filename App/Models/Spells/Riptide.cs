@@ -24,6 +24,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TwoPiecesT9Bonus());
             this.Modifiers.Add(new Berserking());
             this.Modifiers.Add(new GlyphOfEarthliving());
+            this.Modifiers.Add(new WrathOfTheAirTotem());
+            this.Modifiers.Add(new SwiftRetribution());
+            this.Modifiers.Add(new BloodlustHeroism());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }

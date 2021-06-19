@@ -10,5 +10,6 @@
 
         public Calculator FormCalculator { get; set; }
         public StartScreen FormStartScreen { get; set; }
+        public Info FormInfo { get; set; }
     }
 }
