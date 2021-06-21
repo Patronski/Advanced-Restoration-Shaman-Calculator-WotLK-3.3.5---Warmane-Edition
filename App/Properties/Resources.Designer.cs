@@ -677,6 +677,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Rapture {
+            get {
+                object obj = ResourceManager.GetObject("Rapture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Replenishment {
             get {
                 object obj = ResourceManager.GetObject("Replenishment", resourceCulture);
@@ -700,6 +710,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Restorative_TotemsH {
             get {
                 object obj = ResourceManager.GetObject("Restorative_TotemsH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Revitalize {
+            get {
+                object obj = ResourceManager.GetObject("Revitalize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

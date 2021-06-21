@@ -290,6 +290,18 @@ namespace App
             comboBoxWaterTotems.Hide();
             comboBoxFireTotems.Hide();
             comboBoxEarthTotems.Hide();
+            labelMp5RevitalizeMana.Hide();
+            labelMp5RevitalizeRank.Hide();
+            numericUpDownMp5Revitalize.Hide();
+            textBoxMp5Revitalize.Hide();
+            labelMp5PerTickOf.Hide();
+            labelMp5TicksRevitalize.Hide();
+            labelMp5RaptureMana.Hide();
+            labelMp5RaptureProcs.Hide();
+            labelMp5RaptureRank.Hide();
+            labelMp5RapturePerProc.Hide();
+            numericUpDownMp5Rapture.Hide();
+            textBoxMp5Rapture.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -639,6 +651,18 @@ namespace App
                     comboBoxWaterTotems.Show();
                     comboBoxFireTotems.Show();
                     comboBoxEarthTotems.Show();
+                    labelMp5RevitalizeMana.Show();
+                    labelMp5RevitalizeRank.Show();
+                    numericUpDownMp5Revitalize.Show();
+                    textBoxMp5Revitalize.Show();
+                    labelMp5PerTickOf.Show();
+                    labelMp5TicksRevitalize.Show();
+                    labelMp5RaptureMana.Show();
+                    labelMp5RaptureProcs.Show();
+                    labelMp5RaptureRank.Show();
+                    labelMp5RapturePerProc.Show();
+                    numericUpDownMp5Rapture.Show();
+                    textBoxMp5Rapture.Show();
                     break;
 
                 case Constants.SpellGiftOfTheNaaru:
@@ -710,8 +734,10 @@ namespace App
             textBoxMp5Innervates.Text = Player.Instance.Mp5Innervates.ToString();
             textBoxMp5Replenish.Text = Player.Instance.Mp5Replenish.ToString();
             textBoxMp5Diamond.Text = Player.Instance.Mp5Diamond.ToString();
+            textBoxMp5Revitalize.Text = Player.Instance.Mp5RevitalizeMana.ToString();
             textBoxMp5TotalManaGain.Text = Player.Instance.Mp5TotalManaGain.ToString();
             textBoxMp5TotalManaSpent.Text = Player.Instance.Mp5TotalManaSpent.ToString();
+            textBoxMp5Rapture.Text = Player.Instance.Mp5RaptureMana.ToString();
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
             textBoxTickEarthliving.Text = Player.Instance.EarthlivingTick.ToString();

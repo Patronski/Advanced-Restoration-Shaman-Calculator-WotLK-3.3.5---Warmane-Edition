@@ -203,5 +203,9 @@ namespace App.Models
         public int Mp5SelectedTotemTotalMana { get; set; }
         public int Mp5CallOfElements { get; set; }
         public int Mp5TotemicRecall { get; set; }
+        public int Mp5RevitalizeTicks { get; set; }
+        public int Mp5RevitalizeMana { get; set; }
+        public int Mp5RaptureProcs { get; set; }
+        public int Mp5RaptureMana { get; set; }
     }
 }

@@ -191,6 +191,12 @@ namespace App
 
             myToolTip.SetToolTip(labelMp5TotemicRecall, "mod");
             labelMp5TotemicRecall.Tag = Resources.Totemic_Recall;
+
+            myToolTip.SetToolTip(labelMp5RevitalizeRank, "mod");
+            labelMp5RevitalizeRank.Tag = Resources.Revitalize;
+
+            myToolTip.SetToolTip(labelMp5RaptureRank, "mod");
+            labelMp5RaptureRank.Tag = Resources.Rapture;
         }
 
         private void AdjustComponentProperties()
@@ -787,6 +793,8 @@ namespace App
             comboBoxFireTotems.Text = "Select Fire Totem";
             comboBoxWaterTotems.SelectedIndex = -1;
             comboBoxWaterTotems.Text = "Select Water Totem";
+            numericUpDownMp5Revitalize.Value = 0;
+            numericUpDownMp5Rapture.Value = 0;
         }
 
         private void textBoxMp5TotalCHCasts_TextChanged(object sender, EventArgs e)
@@ -865,6 +873,30 @@ namespace App
             {
                 var number = (int)((NumericUpDown)sender).Value;
                 Player.Instance.Mp5TotemicRecall = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5Revitalize_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5RevitalizeTicks = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5Rapture_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5RaptureProcs = number;
                 selectedSpell?.Calculate();
                 DisplayHealing();
             }

@@ -269,6 +269,18 @@
             this.labelmp5Casts4 = new System.Windows.Forms.Label();
             this.labelMp5Casts5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelMp5TicksRevitalize = new System.Windows.Forms.Label();
+            this.labelMp5RevitalizeMana = new System.Windows.Forms.Label();
+            this.textBoxMp5Revitalize = new System.Windows.Forms.TextBox();
+            this.labelMp5RevitalizeRank = new System.Windows.Forms.Label();
+            this.numericUpDownMp5Revitalize = new System.Windows.Forms.NumericUpDown();
+            this.labelMp5PerTickOf = new System.Windows.Forms.Label();
+            this.labelMp5RapturePerProc = new System.Windows.Forms.Label();
+            this.labelMp5RaptureProcs = new System.Windows.Forms.Label();
+            this.labelMp5RaptureMana = new System.Windows.Forms.Label();
+            this.textBoxMp5Rapture = new System.Windows.Forms.TextBox();
+            this.labelMp5RaptureRank = new System.Windows.Forms.Label();
+            this.numericUpDownMp5Rapture = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
@@ -282,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5BloodlustHeroism)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5CallOfElements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5TotemicRecall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Revitalize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Rapture)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -2250,7 +2264,7 @@
             // 
             this.numericUpDownMp5Totems.Location = new System.Drawing.Point(825, 134);
             this.numericUpDownMp5Totems.Maximum = new decimal(new int[] {
-            9,
+            99,
             0,
             0,
             0});
@@ -2286,7 +2300,7 @@
             // 
             this.numericUpDownMp5Inervates.Location = new System.Drawing.Point(826, 170);
             this.numericUpDownMp5Inervates.Maximum = new decimal(new int[] {
-            9,
+            99,
             0,
             0,
             0});
@@ -2301,6 +2315,7 @@
             this.textBoxMp5Totems.Location = new System.Drawing.Point(909, 135);
             this.textBoxMp5Totems.MaxLength = 6;
             this.textBoxMp5Totems.Name = "textBoxMp5Totems";
+            this.textBoxMp5Totems.ReadOnly = true;
             this.textBoxMp5Totems.Size = new System.Drawing.Size(48, 20);
             this.textBoxMp5Totems.TabIndex = 227;
             this.textBoxMp5Totems.Visible = false;
@@ -2310,6 +2325,7 @@
             this.textBoxMp5Innervates.Location = new System.Drawing.Point(909, 170);
             this.textBoxMp5Innervates.MaxLength = 6;
             this.textBoxMp5Innervates.Name = "textBoxMp5Innervates";
+            this.textBoxMp5Innervates.ReadOnly = true;
             this.textBoxMp5Innervates.Size = new System.Drawing.Size(48, 20);
             this.textBoxMp5Innervates.TabIndex = 228;
             this.textBoxMp5Innervates.Visible = false;
@@ -2319,6 +2335,7 @@
             this.textBoxMp5Replenish.Location = new System.Drawing.Point(909, 212);
             this.textBoxMp5Replenish.MaxLength = 6;
             this.textBoxMp5Replenish.Name = "textBoxMp5Replenish";
+            this.textBoxMp5Replenish.ReadOnly = true;
             this.textBoxMp5Replenish.Size = new System.Drawing.Size(48, 20);
             this.textBoxMp5Replenish.TabIndex = 229;
             this.textBoxMp5Replenish.Visible = false;
@@ -2349,6 +2366,7 @@
             this.textBoxMp5Diamond.Location = new System.Drawing.Point(909, 246);
             this.textBoxMp5Diamond.MaxLength = 6;
             this.textBoxMp5Diamond.Name = "textBoxMp5Diamond";
+            this.textBoxMp5Diamond.ReadOnly = true;
             this.textBoxMp5Diamond.Size = new System.Drawing.Size(48, 20);
             this.textBoxMp5Diamond.TabIndex = 232;
             this.textBoxMp5Diamond.Visible = false;
@@ -2705,7 +2723,7 @@
             // 
             this.numericUpDownMp5BloodlustHeroism.Location = new System.Drawing.Point(367, 387);
             this.numericUpDownMp5BloodlustHeroism.Maximum = new decimal(new int[] {
-            9,
+            99,
             0,
             0,
             0});
@@ -2812,7 +2830,7 @@
             // 
             this.numericUpDownMp5CallOfElements.Location = new System.Drawing.Point(546, 419);
             this.numericUpDownMp5CallOfElements.Maximum = new decimal(new int[] {
-            9,
+            99,
             0,
             0,
             0});
@@ -2826,7 +2844,7 @@
             // 
             this.numericUpDownMp5TotemicRecall.Location = new System.Drawing.Point(909, 280);
             this.numericUpDownMp5TotemicRecall.Maximum = new decimal(new int[] {
-            9,
+            99,
             0,
             0,
             0});
@@ -2912,6 +2930,142 @@
             this.label7.TabIndex = 287;
             this.label7.Text = "MP5S";
             // 
+            // labelMp5TicksRevitalize
+            // 
+            this.labelMp5TicksRevitalize.AutoSize = true;
+            this.labelMp5TicksRevitalize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5TicksRevitalize.Location = new System.Drawing.Point(867, 317);
+            this.labelMp5TicksRevitalize.Name = "labelMp5TicksRevitalize";
+            this.labelMp5TicksRevitalize.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5TicksRevitalize.TabIndex = 292;
+            this.labelMp5TicksRevitalize.Text = "Ticks";
+            this.labelMp5TicksRevitalize.Visible = false;
+            // 
+            // labelMp5RevitalizeMana
+            // 
+            this.labelMp5RevitalizeMana.AutoSize = true;
+            this.labelMp5RevitalizeMana.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RevitalizeMana.Location = new System.Drawing.Point(959, 317);
+            this.labelMp5RevitalizeMana.Name = "labelMp5RevitalizeMana";
+            this.labelMp5RevitalizeMana.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5RevitalizeMana.TabIndex = 291;
+            this.labelMp5RevitalizeMana.Text = "Mana";
+            this.labelMp5RevitalizeMana.Visible = false;
+            // 
+            // textBoxMp5Revitalize
+            // 
+            this.textBoxMp5Revitalize.Location = new System.Drawing.Point(909, 314);
+            this.textBoxMp5Revitalize.MaxLength = 6;
+            this.textBoxMp5Revitalize.Name = "textBoxMp5Revitalize";
+            this.textBoxMp5Revitalize.ReadOnly = true;
+            this.textBoxMp5Revitalize.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Revitalize.TabIndex = 290;
+            this.textBoxMp5Revitalize.Visible = false;
+            // 
+            // labelMp5RevitalizeRank
+            // 
+            this.labelMp5RevitalizeRank.AutoSize = true;
+            this.labelMp5RevitalizeRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RevitalizeRank.Location = new System.Drawing.Point(696, 318);
+            this.labelMp5RevitalizeRank.Name = "labelMp5RevitalizeRank";
+            this.labelMp5RevitalizeRank.Size = new System.Drawing.Size(116, 13);
+            this.labelMp5RevitalizeRank.TabIndex = 289;
+            this.labelMp5RevitalizeRank.Text = "Revitalize (Rank 3)";
+            this.labelMp5RevitalizeRank.Visible = false;
+            // 
+            // numericUpDownMp5Revitalize
+            // 
+            this.numericUpDownMp5Revitalize.Location = new System.Drawing.Point(818, 314);
+            this.numericUpDownMp5Revitalize.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDownMp5Revitalize.Name = "numericUpDownMp5Revitalize";
+            this.numericUpDownMp5Revitalize.Size = new System.Drawing.Size(48, 20);
+            this.numericUpDownMp5Revitalize.TabIndex = 288;
+            this.numericUpDownMp5Revitalize.Visible = false;
+            this.numericUpDownMp5Revitalize.ValueChanged += new System.EventHandler(this.numericUpDownMp5Revitalize_ValueChanged);
+            // 
+            // labelMp5PerTickOf
+            // 
+            this.labelMp5PerTickOf.AutoSize = true;
+            this.labelMp5PerTickOf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5PerTickOf.Location = new System.Drawing.Point(696, 337);
+            this.labelMp5PerTickOf.Name = "labelMp5PerTickOf";
+            this.labelMp5PerTickOf.Size = new System.Drawing.Size(289, 13);
+            this.labelMp5PerTickOf.TabIndex = 293;
+            this.labelMp5PerTickOf.Text = "(Per Tick of Rejuvenation or Wild Growth on You)";
+            this.labelMp5PerTickOf.Visible = false;
+            // 
+            // labelMp5RapturePerProc
+            // 
+            this.labelMp5RapturePerProc.AutoSize = true;
+            this.labelMp5RapturePerProc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RapturePerProc.Location = new System.Drawing.Point(707, 384);
+            this.labelMp5RapturePerProc.Name = "labelMp5RapturePerProc";
+            this.labelMp5RapturePerProc.Size = new System.Drawing.Size(172, 13);
+            this.labelMp5RapturePerProc.TabIndex = 299;
+            this.labelMp5RapturePerProc.Text = "(Per Proc of Rapture on You)";
+            this.labelMp5RapturePerProc.Visible = false;
+            // 
+            // labelMp5RaptureProcs
+            // 
+            this.labelMp5RaptureProcs.AutoSize = true;
+            this.labelMp5RaptureProcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RaptureProcs.Location = new System.Drawing.Point(867, 363);
+            this.labelMp5RaptureProcs.Name = "labelMp5RaptureProcs";
+            this.labelMp5RaptureProcs.Size = new System.Drawing.Size(39, 13);
+            this.labelMp5RaptureProcs.TabIndex = 298;
+            this.labelMp5RaptureProcs.Text = "Procs";
+            this.labelMp5RaptureProcs.Visible = false;
+            // 
+            // labelMp5RaptureMana
+            // 
+            this.labelMp5RaptureMana.AutoSize = true;
+            this.labelMp5RaptureMana.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RaptureMana.Location = new System.Drawing.Point(959, 363);
+            this.labelMp5RaptureMana.Name = "labelMp5RaptureMana";
+            this.labelMp5RaptureMana.Size = new System.Drawing.Size(38, 13);
+            this.labelMp5RaptureMana.TabIndex = 297;
+            this.labelMp5RaptureMana.Text = "Mana";
+            this.labelMp5RaptureMana.Visible = false;
+            // 
+            // textBoxMp5Rapture
+            // 
+            this.textBoxMp5Rapture.Location = new System.Drawing.Point(909, 360);
+            this.textBoxMp5Rapture.MaxLength = 6;
+            this.textBoxMp5Rapture.Name = "textBoxMp5Rapture";
+            this.textBoxMp5Rapture.ReadOnly = true;
+            this.textBoxMp5Rapture.Size = new System.Drawing.Size(48, 20);
+            this.textBoxMp5Rapture.TabIndex = 296;
+            this.textBoxMp5Rapture.Visible = false;
+            // 
+            // labelMp5RaptureRank
+            // 
+            this.labelMp5RaptureRank.AutoSize = true;
+            this.labelMp5RaptureRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5RaptureRank.Location = new System.Drawing.Point(707, 363);
+            this.labelMp5RaptureRank.Name = "labelMp5RaptureRank";
+            this.labelMp5RaptureRank.Size = new System.Drawing.Size(105, 13);
+            this.labelMp5RaptureRank.TabIndex = 295;
+            this.labelMp5RaptureRank.Text = "Rapture (Rank 3)";
+            this.labelMp5RaptureRank.Visible = false;
+            // 
+            // numericUpDownMp5Rapture
+            // 
+            this.numericUpDownMp5Rapture.Location = new System.Drawing.Point(818, 360);
+            this.numericUpDownMp5Rapture.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDownMp5Rapture.Name = "numericUpDownMp5Rapture";
+            this.numericUpDownMp5Rapture.Size = new System.Drawing.Size(48, 20);
+            this.numericUpDownMp5Rapture.TabIndex = 294;
+            this.numericUpDownMp5Rapture.Visible = false;
+            this.numericUpDownMp5Rapture.ValueChanged += new System.EventHandler(this.numericUpDownMp5Rapture_ValueChanged);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2919,6 +3073,18 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 917);
+            this.Controls.Add(this.labelMp5RapturePerProc);
+            this.Controls.Add(this.labelMp5RaptureProcs);
+            this.Controls.Add(this.labelMp5RaptureMana);
+            this.Controls.Add(this.textBoxMp5Rapture);
+            this.Controls.Add(this.labelMp5RaptureRank);
+            this.Controls.Add(this.numericUpDownMp5Rapture);
+            this.Controls.Add(this.labelMp5PerTickOf);
+            this.Controls.Add(this.labelMp5TicksRevitalize);
+            this.Controls.Add(this.labelMp5RevitalizeMana);
+            this.Controls.Add(this.textBoxMp5Revitalize);
+            this.Controls.Add(this.labelMp5RevitalizeRank);
+            this.Controls.Add(this.numericUpDownMp5Revitalize);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.labelMp5Casts5);
             this.Controls.Add(this.labelmp5Casts4);
@@ -3162,7 +3328,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "[WotLK] Advanced Resto Shaman Calculator v2.0";
+            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.0";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Calculator_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).EndInit();
@@ -3177,6 +3343,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5BloodlustHeroism)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5CallOfElements)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5TotemicRecall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Revitalize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Rapture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3425,6 +3593,18 @@
         private System.Windows.Forms.Label labelmp5Casts4;
         private System.Windows.Forms.Label labelMp5Casts5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelMp5TicksRevitalize;
+        private System.Windows.Forms.Label labelMp5RevitalizeMana;
+        private System.Windows.Forms.TextBox textBoxMp5Revitalize;
+        private System.Windows.Forms.Label labelMp5RevitalizeRank;
+        private System.Windows.Forms.NumericUpDown numericUpDownMp5Revitalize;
+        private System.Windows.Forms.Label labelMp5PerTickOf;
+        private System.Windows.Forms.Label labelMp5RapturePerProc;
+        private System.Windows.Forms.Label labelMp5RaptureProcs;
+        private System.Windows.Forms.Label labelMp5RaptureMana;
+        private System.Windows.Forms.TextBox textBoxMp5Rapture;
+        private System.Windows.Forms.Label labelMp5RaptureRank;
+        private System.Windows.Forms.NumericUpDown numericUpDownMp5Rapture;
     }
 }
 

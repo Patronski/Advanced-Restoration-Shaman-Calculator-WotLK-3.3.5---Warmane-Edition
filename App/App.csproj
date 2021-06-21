@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>App</RootNamespace>
-    <AssemblyName>[WotLK] Advanced Resto Shaman Calculator v2.0</AssemblyName>
+    <AssemblyName>[WotLK] PvE Restoration Shaman Calculator v2.0</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -523,6 +523,8 @@
     <None Include="Resources\reset.png" />
     <None Include="Resources\home.png" />
     <None Include="Resources\Totemic Recall.png" />
+    <None Include="Resources\Rapture.png" />
+    <None Include="Resources\Revitalize.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

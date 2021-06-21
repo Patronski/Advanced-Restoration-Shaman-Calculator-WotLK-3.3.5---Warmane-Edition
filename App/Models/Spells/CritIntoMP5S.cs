@@ -154,6 +154,8 @@ namespace App.Models.Spells
             a /= 5;
             a += Player.Instance.Mp5Totems + Player.Instance.Mp5Innervates + Player.Instance.Mp5Diamond;
             a += Player.Instance.Mp5TotemicRecall * (0.25d * Player.Instance.Mp5SelectedTotemTotalMana);
+            a += Player.Instance.Mp5RevitalizeMana;
+            a += Player.Instance.Mp5RaptureMana;
 
             return (int)Math.Round(a);
         }
@@ -174,6 +176,16 @@ namespace App.Models.Spells
                 Player.Instance.Mp5SelectedTotemTotalMana * Player.Instance.Mp5CallOfElements;
 
             return result;
+        }
+
+        public override int CalculateMp5RevitalizeMana()
+        {
+            return (int)(0.0015 * Player.Instance.Mana * Player.Instance.Mp5RevitalizeTicks);
+        }
+
+        public override int CalculateMp5RaptureMana()
+        {
+            return (int)(Player.Instance.Mp5RaptureProcs * Player.Instance.Mana * 0.02);
         }
 
         public override void Calculate()
@@ -201,6 +213,8 @@ namespace App.Models.Spells
             Player.Instance.Mp5Innervates = CalculateMp5Innervates();
             Player.Instance.Mp5Replenish = CalculateMp5Replenish();
             Player.Instance.Mp5Diamond = CalculateMp5Diamond();
+            Player.Instance.Mp5RevitalizeMana = CalculateMp5RevitalizeMana();
+            Player.Instance.Mp5RaptureMana = CalculateMp5RaptureMana();
             Player.Instance.Mp5TotalManaGain = CalculateMp5TotalManaGain();
             Player.Instance.Mp5TotalManaSpent = CalculateMp5TotalManaSpent();
         }
