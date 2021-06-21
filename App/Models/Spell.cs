@@ -116,6 +116,7 @@ namespace App.Models
         public virtual int CalculateMp5TotalManaSpent() { return 0; }
         public virtual int CalculateMp5RevitalizeMana() { return 0; }
         public virtual int CalculateMp5RaptureMana() { return 0; }
+        public virtual int CalculateMp5ManaDifference() { return 0; }
 
         public virtual int CalculateEarthlivingTick() 
             => (int)((int)(0.1692 * Player.Instance.SpellPower + 163) * 1.1);

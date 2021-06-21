@@ -1,4 +1,5 @@
 ﻿using App.Models;
+using System.Drawing;
 
 namespace App
 {
@@ -302,6 +303,8 @@ namespace App
             labelMp5RapturePerProc.Hide();
             numericUpDownMp5Rapture.Hide();
             textBoxMp5Rapture.Hide();
+            labelMp5ManaDifference.Hide();
+            textBoxMp5ManaDifference.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -663,6 +666,8 @@ namespace App
                     labelMp5RapturePerProc.Show();
                     numericUpDownMp5Rapture.Show();
                     textBoxMp5Rapture.Show();
+                    labelMp5ManaDifference.Show();
+                    textBoxMp5ManaDifference.Show();
                     break;
 
                 case Constants.SpellGiftOfTheNaaru:
@@ -738,6 +743,24 @@ namespace App
             textBoxMp5TotalManaGain.Text = Player.Instance.Mp5TotalManaGain.ToString();
             textBoxMp5TotalManaSpent.Text = Player.Instance.Mp5TotalManaSpent.ToString();
             textBoxMp5Rapture.Text = Player.Instance.Mp5RaptureMana.ToString();
+            textBoxMp5ManaDifference.Text = Player.Instance.Mp5ManaDifference.ToString();
+            if (Player.Instance.Mp5ManaDifference > Player.Instance.Mana)
+            {
+                textBoxMp5ManaDifference.BackColor = textBoxMp5ManaDifference.BackColor;
+                textBoxMp5ManaDifference.ForeColor = Color.Green;
+                //textBoxMp5ManaDifference.ReadOnly = false;
+            }
+            else if (Player.Instance.Mp5ManaDifference < 0)
+            {
+                textBoxMp5ManaDifference.BackColor = textBoxMp5ManaDifference.BackColor;
+                textBoxMp5ManaDifference.ForeColor = Color.Red;
+                //textBoxMp5ManaDifference.ReadOnly = false;
+            }
+            else
+            {
+                //textBoxMp5ManaDifference.ReadOnly = true;
+                textBoxMp5ManaDifference.ForeColor = Color.Black;
+            }
 
             textBoxCastingTime.Text = Player.Instance.CastingTime.ToString();
             textBoxTickEarthliving.Text = Player.Instance.EarthlivingTick.ToString();

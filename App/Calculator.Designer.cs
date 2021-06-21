@@ -281,6 +281,8 @@
             this.textBoxMp5Rapture = new System.Windows.Forms.TextBox();
             this.labelMp5RaptureRank = new System.Windows.Forms.Label();
             this.numericUpDownMp5Rapture = new System.Windows.Forms.NumericUpDown();
+            this.textBoxMp5ManaDifference = new System.Windows.Forms.TextBox();
+            this.labelMp5ManaDifference = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
@@ -2008,7 +2010,7 @@
             // 
             this.labelMp5Mp5S.AutoSize = true;
             this.labelMp5Mp5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5Mp5S.Location = new System.Drawing.Point(524, 506);
+            this.labelMp5Mp5S.Location = new System.Drawing.Point(520, 507);
             this.labelMp5Mp5S.Name = "labelMp5Mp5S";
             this.labelMp5Mp5S.Size = new System.Drawing.Size(40, 13);
             this.labelMp5Mp5S.TabIndex = 196;
@@ -2030,7 +2032,7 @@
             // 
             this.labelMp5rightPercent.AutoSize = true;
             this.labelMp5rightPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5rightPercent.Location = new System.Drawing.Point(524, 548);
+            this.labelMp5rightPercent.Location = new System.Drawing.Point(520, 549);
             this.labelMp5rightPercent.Name = "labelMp5rightPercent";
             this.labelMp5rightPercent.Size = new System.Drawing.Size(393, 13);
             this.labelMp5rightPercent.TabIndex = 198;
@@ -2052,7 +2054,7 @@
             // 
             this.labelMp5RightTotalCrit.AutoSize = true;
             this.labelMp5RightTotalCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(524, 589);
+            this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(520, 590);
             this.labelMp5RightTotalCrit.Name = "labelMp5RightTotalCrit";
             this.labelMp5RightTotalCrit.Size = new System.Drawing.Size(40, 13);
             this.labelMp5RightTotalCrit.TabIndex = 200;
@@ -2397,7 +2399,7 @@
             // 
             this.labelMp5TotalManaGain.AutoSize = true;
             this.labelMp5TotalManaGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5TotalManaGain.Location = new System.Drawing.Point(383, 678);
+            this.labelMp5TotalManaGain.Location = new System.Drawing.Point(383, 677);
             this.labelMp5TotalManaGain.Name = "labelMp5TotalManaGain";
             this.labelMp5TotalManaGain.Size = new System.Drawing.Size(105, 13);
             this.labelMp5TotalManaGain.TabIndex = 235;
@@ -2407,7 +2409,7 @@
             // textBoxMp5TotalManaGain
             // 
             this.textBoxMp5TotalManaGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMp5TotalManaGain.Location = new System.Drawing.Point(494, 675);
+            this.textBoxMp5TotalManaGain.Location = new System.Drawing.Point(494, 674);
             this.textBoxMp5TotalManaGain.MaxLength = 7;
             this.textBoxMp5TotalManaGain.Name = "textBoxMp5TotalManaGain";
             this.textBoxMp5TotalManaGain.ReadOnly = true;
@@ -3066,6 +3068,29 @@
             this.numericUpDownMp5Rapture.Visible = false;
             this.numericUpDownMp5Rapture.ValueChanged += new System.EventHandler(this.numericUpDownMp5Rapture_ValueChanged);
             // 
+            // textBoxMp5ManaDifference
+            // 
+            this.textBoxMp5ManaDifference.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMp5ManaDifference.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxMp5ManaDifference.Location = new System.Drawing.Point(494, 711);
+            this.textBoxMp5ManaDifference.MaxLength = 7;
+            this.textBoxMp5ManaDifference.Name = "textBoxMp5ManaDifference";
+            this.textBoxMp5ManaDifference.ReadOnly = true;
+            this.textBoxMp5ManaDifference.Size = new System.Drawing.Size(123, 20);
+            this.textBoxMp5ManaDifference.TabIndex = 301;
+            this.textBoxMp5ManaDifference.Visible = false;
+            // 
+            // labelMp5ManaDifference
+            // 
+            this.labelMp5ManaDifference.AutoSize = true;
+            this.labelMp5ManaDifference.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMp5ManaDifference.Location = new System.Drawing.Point(274, 714);
+            this.labelMp5ManaDifference.Name = "labelMp5ManaDifference";
+            this.labelMp5ManaDifference.Size = new System.Drawing.Size(214, 13);
+            this.labelMp5ManaDifference.TabIndex = 300;
+            this.labelMp5ManaDifference.Text = "Mana Left in the end of Time length:";
+            this.labelMp5ManaDifference.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3073,6 +3098,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 917);
+            this.Controls.Add(this.textBoxMp5ManaDifference);
+            this.Controls.Add(this.labelMp5ManaDifference);
             this.Controls.Add(this.labelMp5RapturePerProc);
             this.Controls.Add(this.labelMp5RaptureProcs);
             this.Controls.Add(this.labelMp5RaptureMana);
@@ -3605,6 +3632,8 @@
         private System.Windows.Forms.TextBox textBoxMp5Rapture;
         private System.Windows.Forms.Label labelMp5RaptureRank;
         private System.Windows.Forms.NumericUpDown numericUpDownMp5Rapture;
+        private System.Windows.Forms.TextBox textBoxMp5ManaDifference;
+        private System.Windows.Forms.Label labelMp5ManaDifference;
     }
 }
 

@@ -207,5 +207,6 @@ namespace App.Models
         public int Mp5RevitalizeMana { get; set; }
         public int Mp5RaptureProcs { get; set; }
         public int Mp5RaptureMana { get; set; }
+        public int Mp5ManaDifference { get; set; }
     }
 }

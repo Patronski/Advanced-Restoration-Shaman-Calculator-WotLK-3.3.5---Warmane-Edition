@@ -296,12 +296,17 @@ namespace App
 
         private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
         {
-            int spellPower = 0;
-            if (!int.TryParse(this.textBoxSpellPower.Text, out spellPower))
+            int value = 0;
+            if (!int.TryParse(this.textBoxSpellPower.Text, out value))
             {
                 this.textBoxSpellPower.Text = "";
             }
-            Player.Instance.SpellPower = spellPower;
+            if (value > 10000)
+            {
+                value = 10000;
+                this.textBoxSpellPower.Text = "10000";
+            }
+            Player.Instance.SpellPower = value;
 
             if (selectedSpell != null)
             {
@@ -687,6 +692,11 @@ namespace App
             if (!int.TryParse(this.textBoxMP5S.Text, out value))
             {
                 this.textBoxMP5S.Text = "";
+            }
+            if (value > 5000)
+            {
+                value = 5000;
+                this.textBoxMP5S.Text = "5000";
             }
             Player.Instance.MP5S = value;
 

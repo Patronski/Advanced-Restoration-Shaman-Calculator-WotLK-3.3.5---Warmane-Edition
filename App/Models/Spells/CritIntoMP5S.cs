@@ -188,6 +188,11 @@ namespace App.Models.Spells
             return (int)(Player.Instance.Mp5RaptureProcs * Player.Instance.Mana * 0.02);
         }
 
+        public override int CalculateMp5ManaDifference()
+        {
+            return Player.Instance.Mana + (Player.Instance.Mp5TotalManaGain - Player.Instance.Mp5TotalManaSpent);
+        }
+
         public override void Calculate()
         {
             Player.Instance.Recalculate();
@@ -217,6 +222,7 @@ namespace App.Models.Spells
             Player.Instance.Mp5RaptureMana = CalculateMp5RaptureMana();
             Player.Instance.Mp5TotalManaGain = CalculateMp5TotalManaGain();
             Player.Instance.Mp5TotalManaSpent = CalculateMp5TotalManaSpent();
+            Player.Instance.Mp5ManaDifference = CalculateMp5ManaDifference();
         }
 
         public override string ToString()
