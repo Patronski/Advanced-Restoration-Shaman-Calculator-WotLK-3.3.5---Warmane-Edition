@@ -70,7 +70,7 @@
     <Compile Include="Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalculatorAppearance.cs">
+    <Compile Include="Calculator.Appearance.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Info.cs">

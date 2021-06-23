@@ -12,8 +12,6 @@ namespace App.Models
 
         public string Display { get; set; }
 
-        public bool UseExtraNumber { get; set; }
-
         public CheckBox CheckBox { get; set; }
 
         public bool IsCheckBoxChecked { get; set; }
