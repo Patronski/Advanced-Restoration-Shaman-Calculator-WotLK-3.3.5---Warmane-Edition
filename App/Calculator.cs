@@ -197,6 +197,12 @@ namespace App
 
             myToolTip.SetToolTip(labelMp5RaptureRank, "mod");
             labelMp5RaptureRank.Tag = Resources.Rapture;
+
+            myToolTip.SetToolTip(labelMp5RunicManaPotion, "mod");
+            labelMp5RunicManaPotion.Tag = Resources.RunicManaPotion;
+
+            myToolTip.SetToolTip(checkBoxMp5RunicManaInjector, "mod");
+            checkBoxMp5RunicManaInjector.Tag = Resources.RunicManaInjector;
         }
 
         private void AdjustComponentProperties()
@@ -805,6 +811,8 @@ namespace App
             comboBoxWaterTotems.Text = "Select Water Totem";
             numericUpDownMp5Revitalize.Value = 0;
             numericUpDownMp5Rapture.Value = 0;
+            numericUpDownMp5CleanseSpirit.Value = 0;
+            numericUpDownMp5RunicManaPotion.Value = 0;
         }
 
         private void textBoxMp5TotalCHCasts_TextChanged(object sender, EventArgs e)
@@ -855,7 +863,7 @@ namespace App
             var selectedAirTotem = (Totem)comboBoxAirTotems.SelectedItem;
 
             Player.Instance.Mp5SelectedTotemTotalMana = 0;
-            Player.Instance.Mp5SelectedTotemTotalMana += selectedAirTotem?.Mana ?? 0 ;
+            Player.Instance.Mp5SelectedTotemTotalMana += selectedAirTotem?.Mana ?? 0;
             Player.Instance.Mp5SelectedTotemTotalMana += selectedEarthTotem?.Mana ?? 0;
             Player.Instance.Mp5SelectedTotemTotalMana += selectedFireTotem?.Mana ?? 0;
             Player.Instance.Mp5SelectedTotemTotalMana += selectedWaterTotem?.Mana ?? 0;
@@ -907,6 +915,42 @@ namespace App
             {
                 var number = (int)((NumericUpDown)sender).Value;
                 Player.Instance.Mp5RaptureProcs = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5CleanseSpirit_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5CleanseSpirit = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void checkBoxMp5RunicManaInjector_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is CheckBox && !skipEventChanged)
+            {
+                var check = sender as CheckBox;
+                Player.Instance.Mp5RunicManaInjector = check.Checked;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownMp5RunicManaPotion_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.Mp5RunicManaPotion = number;
                 selectedSpell?.Calculate();
                 DisplayHealing();
             }

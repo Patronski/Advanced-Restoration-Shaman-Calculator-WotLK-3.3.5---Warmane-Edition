@@ -208,5 +208,8 @@ namespace App.Models
         public int Mp5RaptureProcs { get; set; }
         public int Mp5RaptureMana { get; set; }
         public int Mp5ManaDifference { get; set; }
+        public int Mp5CleanseSpirit { get; set; }
+        public bool Mp5RunicManaInjector { get; set; }
+        public int Mp5RunicManaPotion { get; set; }
     }
 }

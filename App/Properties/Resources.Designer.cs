@@ -449,9 +449,9 @@ namespace App.Properties {
         ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
         ///{\colortbl ;\red0\green77\blue187;\red0\green0\blue0;\red255\green0\blue0;}
         ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
-        ///\pard\sa200\sl276\slmult1\qc\f0\fs22\lang9 Welcome to \cf1 [WotLK] Advanced Resto Shaman Calculator\par
+        ///\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs22\lang9 Welcome to \cf1 [WotLK] PvE Resto Shaman Calculator\ulnone\b0\par
         ///
-        ///\pard\sa200\sl276\slmult1\cf2 The program calculates according to \b Stats\b0  and \b Modifiers\b0  you type/enable.  The stats can be seen\f1\lang1026  \f0\lang1033 [rest of string was truncated]&quot;;.
+        ///\pard\sa200\sl276\slmult1\cf2 The program calculates according to \b Stats\b0  and \b Modifiers\b0  you type/enable.  The stats can be seen\f1\lang1026  \f [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HELP_rtf {
             get {
@@ -760,6 +760,26 @@ namespace App.Properties {
         public static System.IO.UnmanagedMemoryStream RP {
             get {
                 return ResourceManager.GetStream("RP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap RunicManaInjector {
+            get {
+                object obj = ResourceManager.GetObject("RunicManaInjector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap RunicManaPotion {
+            get {
+                object obj = ResourceManager.GetObject("RunicManaPotion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

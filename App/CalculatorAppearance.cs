@@ -305,6 +305,15 @@ namespace App
             textBoxMp5Rapture.Hide();
             labelMp5ManaDifference.Hide();
             textBoxMp5ManaDifference.Hide();
+            labelMp5CastsCleanseSpirit.Hide();
+            labelMP5CleanseSpirit.Hide();
+            numericUpDownMp5CleanseSpirit.Hide();
+            checkBoxMp5RunicManaInjector.Hide();
+            labelMp5RunicManaPotion.Hide();
+            labelMp5RunicPotionUses.Hide();
+            numericUpDownMp5RunicManaPotion.Hide();
+            labelMP5ManaSpenders.Hide();
+            labelMp5ManaGainEffects.Hide();
 
             switch (selectedSpell.Name)
             {
@@ -668,6 +677,15 @@ namespace App
                     textBoxMp5Rapture.Show();
                     labelMp5ManaDifference.Show();
                     textBoxMp5ManaDifference.Show();
+                    labelMp5CastsCleanseSpirit.Show();
+                    labelMP5CleanseSpirit.Show();
+                    numericUpDownMp5CleanseSpirit.Show();
+                    checkBoxMp5RunicManaInjector.Show();
+                    labelMp5RunicManaPotion.Show();
+                    labelMp5RunicPotionUses.Show();
+                    numericUpDownMp5RunicManaPotion.Show();
+                    labelMP5ManaSpenders.Show();
+                    labelMp5ManaGainEffects.Show();
                     break;
 
                 case Constants.SpellGiftOfTheNaaru:

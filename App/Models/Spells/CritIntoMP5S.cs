@@ -142,7 +142,16 @@ namespace App.Models.Spells
                 return 0;
             }
 
-            var totalSomething = Player.Instance.Mp5TotalHW + Player.Instance.Mp5TotalLHW + Player.Instance.Mp5TotalRiptides + Player.Instance.Mp5TotalCHCasts;
+            var totalSomething = Player.Instance.Mp5TotalHW +
+                Player.Instance.Mp5TotalLHW +
+                Player.Instance.Mp5TotalRiptides +
+                Player.Instance.Mp5TotalCHCasts +
+                Player.Instance.Mp5BloodlustHeroism +
+                Player.Instance.Mp5CallOfElements +
+                Player.Instance.Mp5CleanseSpirit +
+                Player.Instance.Mp5TotemsCount +
+                Player.Instance.Mp5TotemicRecall;
+
             var result = totalSomething * 0.05 * 600;
             return result;
         }
@@ -156,6 +165,7 @@ namespace App.Models.Spells
             a += Player.Instance.Mp5TotemicRecall * (0.25d * Player.Instance.Mp5SelectedTotemTotalMana);
             a += Player.Instance.Mp5RevitalizeMana;
             a += Player.Instance.Mp5RaptureMana;
+            a += Player.Instance.Mp5RunicManaPotion * (Player.Instance.Mp5RunicManaInjector ? 5375 : 4300);
 
             return (int)Math.Round(a);
         }
@@ -173,7 +183,8 @@ namespace App.Models.Spells
                 Player.Instance.Mp5TotalCHCasts * (isTotemOfForest ? 719 : 793) +
                 Player.Instance.Mp5TotalESHCasts * 626 +
                 Player.Instance.Mp5BloodlustHeroism * 1142 +
-                Player.Instance.Mp5SelectedTotemTotalMana * Player.Instance.Mp5CallOfElements;
+                Player.Instance.Mp5SelectedTotemTotalMana * Player.Instance.Mp5CallOfElements +
+                Player.Instance.Mp5CleanseSpirit * 307;
 
             return result;
         }

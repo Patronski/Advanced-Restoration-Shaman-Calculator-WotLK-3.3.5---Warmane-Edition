@@ -525,6 +525,8 @@
     <None Include="Resources\Totemic Recall.png" />
     <None Include="Resources\Rapture.png" />
     <None Include="Resources\Revitalize.png" />
+    <None Include="Resources\RunicManaPotion.png" />
+    <None Include="Resources\RunicManaInjector.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>
