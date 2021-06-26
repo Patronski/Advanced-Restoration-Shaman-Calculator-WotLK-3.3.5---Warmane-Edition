@@ -137,5 +137,17 @@ namespace App.Models.Spells
 
             return (int?)result;
         }
+
+        public override int CalculateEarthlivingEHPS()
+        {
+            double hasteBorder = 50;
+            double coefficientHaste = 0.6667;
+
+            var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
+
+            var formula = Player.Instance.EarthlivingAvgHpsLHW * (1 + hastePercent / 100) * coefficientHaste;
+
+            return (int)formula;
+        }
     }
 }

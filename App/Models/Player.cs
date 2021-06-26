@@ -173,6 +173,7 @@ namespace App.Models
         public int? EarthlivingAvgHpsLHW { get; set; }
         public int? EarthlivingAvgHpsRP { get; set; }
         public int EarthlivingTick { get; set; }
+        public int EarthlivingEHPS { get; set; }
 
         public int Mp5TimeMin { get; set; }
         public int Mp5TimeSec { get; set; }

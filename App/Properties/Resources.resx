@@ -424,4 +424,73 @@
   <data name="RunicManaPotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RunicManaPotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Air_Totem_Nature_Resistance_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Nature_Resistance_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Air_Totem_Windfury_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Windfury_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Air_Totem_Wrath_of_Air_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Wrath_of_Air_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CallOfElements" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CallOfElements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CleanseSpirit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleanseSpirit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CleansingTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleansingTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotemStoneskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotemStoneskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotemStrength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotemStrength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FireResistanceTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FireResistanceTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FireTotemFlametongue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FireTotemFlametongue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlametongueTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlametongueTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FrostResistanceTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FrostResistanceTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FrostTotemResistance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FrostTotemResistance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HealingStreamTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HealingStreamTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManaSpringTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ManaSpringTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NatureResistanceTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NatureResistanceTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StoneskinTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StoneskinTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WaterTotemHealing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WaterTotemHealing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_Totem_Cleaansing_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_Totem_Cleaansing_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_Totem_Fire_Resistance_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_Totem_Fire_Resistance_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_Totem_Mana_Spring_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_Totem_Mana_Spring_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WindfuryTotemTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WindfuryTotemTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

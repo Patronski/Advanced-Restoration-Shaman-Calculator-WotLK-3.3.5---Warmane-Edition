@@ -188,5 +188,19 @@ namespace App.Models.Spells
 
             return (int?)result;
         }
+
+        public override int CalculateEarthlivingEHPS()
+        {
+            var isTidalWaves = Modifiers.Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+
+            double hasteBorder = isTidalWaves ? 75 : 150;
+            double coefficientHaste = isTidalWaves ? 0.57143 : 0.4;
+
+            var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
+
+            var formula = Player.Instance.EarthlivingAvgHpsHW * (1 + hastePercent / 100) * coefficientHaste;
+
+            return (int)formula;
+        }
     }
 }

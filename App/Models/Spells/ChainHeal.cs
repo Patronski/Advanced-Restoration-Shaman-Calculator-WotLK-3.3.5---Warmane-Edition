@@ -139,7 +139,10 @@ namespace App.Models.Spells
             var is4PiecesEquiped = Modifiers
                 .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (!is4PiecesEquiped) hot = 0;
+            var isGlyphOfChainHeal = Modifiers
+                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+
+            if (!is4PiecesEquiped || !isGlyphOfChainHeal) hot = 0;
 
             return hot;
         }
@@ -184,26 +187,27 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHotHPS()
         {
-            var hastePercent = (Player.Instance.HastePercent > 150) ? 150d : Player.Instance.HastePercent;
+            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
-            var formula = Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier * Player.Instance.Hit1Avg * 0.01111 * (1 + hastePercent / 100);
+            double hasteBorder = is4PT8 ? 130 : 150;
+            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
+
+            var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
             var isGlyphOfChainHeal = Modifiers
                 .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
 
-            var result = (int)(formula + formula * 0.6 + formula * 0.36 + formula * 0.216);
-
-            if (!isGlyphOfChainHeal)
-            {
-                result = (int)(formula + formula * 0.6 + formula * 0.36);
-            }
+            var formula = (1 + hastePercent / 100) 
+                * (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4) 
+                * 3 * coefficientHaste
+                * Player.Instance.CriticalPercent / 100;
 
             var is4PT10Equiped = Modifiers
                 .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
-            if (!is4PT10Equiped) result = 0;
+            if (!is4PT10Equiped) formula = 0;
 
-            return result;
+            return (int)formula;
         }
 
         public override double CalculateAvgHpm()
@@ -248,6 +252,20 @@ namespace App.Models.Spells
             var result = Player.Instance.EarthlivingTick * multiplier * 4;
 
             return (int?)result;
+        }
+
+        public override int CalculateEarthlivingEHPS()
+        {
+            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
+
+            double hasteBorder = is4PT8 ? 130 : 150;
+            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
+
+            var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
+
+            var formula = Player.Instance.EarthlivingAvgHpsCH * (1 + hastePercent / 100) * coefficientHaste;
+
+            return (int)formula;
         }
     }
 }

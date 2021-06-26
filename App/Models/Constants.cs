@@ -58,5 +58,19 @@
         public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
         public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
         public const string LabelChainHealAvgHotEhps = "AVG HOT eHPS:";
+
+        public const string None = "None";
+        public const string AirTotemWrath = "Wrath of Air Totem";
+        public const string AirTotemWindfury = "Windfury Totem";
+        public const string AirTotemResistance = "Nature Resistance Totem";
+        public const string EarthTotemStrength = "Strength of Earth Totem";
+        public const string EarthTotemStoneskin = "Stoneskin Totem";
+        public const string WaterTotemHealing = "Healing Stream Totem";
+        public const string WaterTotemMana = "Mana Spring Totem";
+        public const string WaterTotemResistance = "Fire Resistance Totem";
+        public const string WaterTotemCleansing = "Cleansing Totem";
+        public const string FireTotemFlametongue = "Flametongue Totem";
+        public const string FireTotemResistance = "Frost Resistance Totem";
+
     }
 }

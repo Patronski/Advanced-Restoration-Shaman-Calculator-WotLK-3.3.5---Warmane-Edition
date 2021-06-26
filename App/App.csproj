@@ -86,7 +86,7 @@
     <Compile Include="Models\CustomSoundPlayer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Models\CustomTooltipEasy.cs">
+    <Compile Include="Models\CustomTooltipForPictures.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\Enums\ModifierType.cs" />
@@ -264,9 +264,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Blessing of the Eternals.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Bloodlust.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Chained Heal.png" />
@@ -527,6 +524,30 @@
     <None Include="Resources\Revitalize.png" />
     <None Include="Resources\RunicManaPotion.png" />
     <None Include="Resources\RunicManaInjector.png" />
+    <None Include="Resources\WaterTotemHealing.png" />
+    <None Include="Resources\FrostTotemResistance.png" />
+    <None Include="Resources\FireTotemFlametongue.png" />
+    <None Include="Resources\Water_Totem_Mana_Spring_Totem.png" />
+    <None Include="Resources\FireResistanceTotem.png" />
+    <None Include="Resources\Water_Totem_Fire_Resistance_Totem.png" />
+    <None Include="Resources\CallOfElements.png" />
+    <None Include="Resources\EarthTotem.png" />
+    <None Include="Resources\StoneskinTotem.png" />
+    <None Include="Resources\FlametongueTotem.png" />
+    <None Include="Resources\FrostResistanceTotem.png" />
+    <None Include="Resources\HealingStreamTotem.png" />
+    <None Include="Resources\ManaSpringTotem.png" />
+    <None Include="Resources\EarthTotemStoneskin.png" />
+    <None Include="Resources\EarthTotemStrength.png" />
+    <None Include="Resources\CleanseSpirit.png" />
+    <None Include="Resources\Bloodlust.png" />
+    <None Include="Resources\CleansingTotem.png" />
+    <None Include="Resources\Water_Totem_Cleaansing_Totem.png" />
+    <None Include="Resources\Air_Totem_Windfury_Totem.png" />
+    <None Include="Resources\Air_Totem_Nature_Resistance_Totem.png" />
+    <None Include="Resources\Air_Totem_Wrath_of_Air_Totem.png" />
+    <None Include="Resources\NatureResistanceTooltip.png" />
+    <None Include="Resources\WindfuryTotemTooltip.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

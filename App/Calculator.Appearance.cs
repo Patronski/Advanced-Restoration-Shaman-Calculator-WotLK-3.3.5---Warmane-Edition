@@ -511,71 +511,82 @@ namespace App
             numericUpDownMp5RunicManaPotion.Hide();
             labelMP5ManaSpenders.Hide();
             labelMp5ManaGainEffects.Hide();
+            labelEarthlivingPerCastCH.Hide();
+            labelEarthlivingPerCastR.Hide();
+            labelEarthlivingCastHW.Hide();
+            labelEarthlivingCastLHW.Hide();
+            labelEarthlivingHPSr.Hide();
+            labelEarthlivingHPSCH.Hide();
+            labelEarthlivingHPSHW.Hide();
+            labelEarthlivingHPSLHW.Hide();
+            labelEarthlivingEHPS.Hide();
+            textBoxEarthlivingEHPS.Hide();
+            pictureBoxAirTotem.Hide();
+            pictureBoxEarthTotem.Hide();
+            pictureBoxFireTotem.Hide();
+            pictureBoxWaterTotem.Hide();
 
             switch (selectedSpell.Name)
             {
                 case Constants.SpellChainHeal:
+                    labelEarthlivingPerCastCH.Show();
+                    labelEarthlivingHPSCH.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpmManyTargets.Show();
                     labelHitAvg.Show();
                     labelHit.Show();
                     labelCritAvg.Show();
-                    this.textBoxHit1From.Show();
-
-                    this.labelArrowcCrit2.Show();
-                    this.labelArrowHit2.Show();
-                    this.labelDashCrit2.Show();
-                    this.labelDashHit2.Show();
-                    this.labelTarget2.Show();
-                    this.textBoxAvgHot2.Show();
-                    this.textBoxCrit2Avg.Show();
-                    this.textBoxCrit2From.Show();
-                    this.textBoxCrit2To.Show();
-                    this.textBoxHit2Avg.Show();
-                    this.textBoxHit2From.Show();
-                    this.textBoxHit2To.Show();
-
-                    this.labelArrowcCrit3.Show();
-                    this.labelArrowHit3.Show();
-                    this.labelDashCrit3.Show();
-                    this.labelDashHit3.Show();
-                    this.labelTarget3.Show();
-                    this.textBoxAvgHot3.Show();
-                    this.textBoxCrit3Avg.Show();
-                    this.textBoxCrit3From.Show();
-                    this.textBoxCrit3To.Show();
-                    this.textBoxHit3Avg.Show();
-                    this.textBoxHit3From.Show();
-                    this.textBoxHit3To.Show();
-
-                    this.labelArrowcCrit4.Show();
-                    this.labelArrowHit4.Show();
-                    this.labelDashCrit4.Show();
-                    this.labelDashHit4.Show();
-                    this.labelTarget4.Show();
-                    this.textBoxAvgHot4.Show();
-                    this.textBoxCrit4Avg.Show();
-                    this.textBoxCrit4From.Show();
-                    this.textBoxCrit4To.Show();
-                    this.textBoxHit4Avg.Show();
-                    this.textBoxHit4From.Show();
-                    this.textBoxHit4To.Show();
-
-                    this.labelTarget1.Show();
-                    this.labelTarget2.Show();
-                    this.labelTarget3.Show();
-                    this.labelTarget4.Show();
-
-                    this.labelArrowcCrit1.Show();
-                    this.labelArrowHit1.Show();
-                    this.labelDashCrit1.Show();
-                    this.labelDashHit1.Show();
-                    this.textBoxAvgHot1.Show();
-                    this.textBoxCrit1Avg.Show();
-                    this.textBoxCrit1From.Show();
-                    this.textBoxCrit1To.Show();
-                    this.textBoxHit1Avg.Show();
-                    this.textBoxHit1To.Show();
+                    textBoxHit1From.Show();
+                    labelArrowcCrit2.Show();
+                    labelArrowHit2.Show();
+                    labelDashCrit2.Show();
+                    labelDashHit2.Show();
+                    labelTarget2.Show();
+                    textBoxAvgHot2.Show();
+                    textBoxCrit2Avg.Show();
+                    textBoxCrit2From.Show();
+                    textBoxCrit2To.Show();
+                    textBoxHit2Avg.Show();
+                    textBoxHit2From.Show();
+                    textBoxHit2To.Show();
+                    labelArrowcCrit3.Show();
+                    labelArrowHit3.Show();
+                    labelDashCrit3.Show();
+                    labelDashHit3.Show();
+                    labelTarget3.Show();
+                    textBoxAvgHot3.Show();
+                    textBoxCrit3Avg.Show();
+                    textBoxCrit3From.Show();
+                    textBoxCrit3To.Show();
+                    textBoxHit3Avg.Show();
+                    textBoxHit3From.Show();
+                    textBoxHit3To.Show();
+                    labelArrowcCrit4.Show();
+                    labelArrowHit4.Show();
+                    labelDashCrit4.Show();
+                    labelDashHit4.Show();
+                    labelTarget4.Show();
+                    textBoxAvgHot4.Show();
+                    textBoxCrit4Avg.Show();
+                    textBoxCrit4From.Show();
+                    textBoxCrit4To.Show();
+                    textBoxHit4Avg.Show();
+                    textBoxHit4From.Show();
+                    textBoxHit4To.Show();
+                    labelTarget1.Show();
+                    labelTarget2.Show();
+                    labelTarget3.Show();
+                    labelTarget4.Show();
+                    labelArrowcCrit1.Show();
+                    labelArrowHit1.Show();
+                    labelDashCrit1.Show();
+                    labelDashHit1.Show();
+                    textBoxAvgHot1.Show();
+                    textBoxCrit1Avg.Show();
+                    textBoxCrit1From.Show();
+                    textBoxCrit1To.Show();
+                    textBoxHit1Avg.Show();
+                    textBoxHit1To.Show();
                     labelAvgHot1.Show();
                     labelCritMax.Show();
                     checkBoxMetaRevitalizingSkyflareDiamond.Show();
@@ -595,6 +606,8 @@ namespace App
                     pictureBoxSpellEarthliving.Show();
                     labelEarthliving.Show();
                     labelEarthlivingRank6.Show();
+                    labelEarthlivingEHPS.Show();
+                    textBoxEarthlivingEHPS.Show();
                     break;
 
                 case Constants.SpellEarthliving:
@@ -620,6 +633,8 @@ namespace App
                     break;
 
                 case Constants.SpellHW:
+                    labelEarthlivingCastHW.Show();
+                    labelEarthlivingHPSHW.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpmManyTargets.Show();
                     labelDashHit1.Show();
@@ -664,9 +679,13 @@ namespace App
                     labelEarthliving.Show();
                     labelEarthlivingRank6.Show();
                     labelGlyphOfHealingWave.Show();
+                    labelEarthlivingEHPS.Show();
+                    textBoxEarthlivingEHPS.Show();
                     break;
 
                 case Constants.SpellLHW:
+                    labelEarthlivingCastLHW.Show();
+                    labelEarthlivingHPSLHW.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpmManyTargets.Show();
                     labelDashHit1.Show();
@@ -687,14 +706,11 @@ namespace App
                     textBoxCrit3Avg.Show();
                     checkBoxMetaRevitalizingSkyflareDiamond.Show();
                     labelHitAvg.Show();
-
                     labelAvgHps.Show();
                     labelAvgAAHps2.Show();
                     textBoxAvgHps.Show();
-
                     textBoxAvgHotHps.Show();
                     labelAvgAA.Show();
-
                     labelAncestralAwakening.Show();
                     textBoxAncestralAwaceningFrom.Show();
                     textBoxAncestralAwaceningTo.Show();
@@ -710,6 +726,8 @@ namespace App
                     pictureBoxSpellEarthliving.Show();
                     labelEarthliving.Show();
                     labelEarthlivingRank6.Show();
+                    labelEarthlivingEHPS.Show();
+                    textBoxEarthlivingEHPS.Show();
                     break;
 
                 case Constants.SpellESh:
@@ -725,6 +743,8 @@ namespace App
                     break;
 
                 case Constants.SpellRiptide:
+                    labelEarthlivingPerCastR.Show();
+                    labelEarthlivingHPSr.Show();
                     labelAvgHpm.Show();
                     textBoxAvgHpmManyTargets.Show();
                     labelHitAvg.Show();
@@ -732,7 +752,8 @@ namespace App
                     labelAvgAA.Show();
                     labelAvgAAeHps.Show();
                     textBoxAvgAAeHps.Show();
-
+                    textBoxEarthlivingEHPS.Show();
+                    labelEarthlivingEHPS.Show();
                     labelDashHit1.Show();
                     textBoxHit1To.Show();
                     labelArrowHit1.Show();
@@ -757,7 +778,6 @@ namespace App
                     textBoxAncestralAwaceningAvg.Show();
                     textBoxHit1From.Show();
                     labelHit.Show();
-
                     labelSpamOnDifferent1.Show();
                     labelSpamOn1Target1.Show();
                     labeAvgHps2.Show();
@@ -883,6 +903,10 @@ namespace App
                     numericUpDownMp5RunicManaPotion.Show();
                     labelMP5ManaSpenders.Show();
                     labelMp5ManaGainEffects.Show();
+                    pictureBoxAirTotem.Show();
+                    pictureBoxEarthTotem.Show();
+                    pictureBoxFireTotem.Show();
+                    pictureBoxWaterTotem.Show();
                     break;
 
                 case Constants.SpellGiftOfTheNaaru:
@@ -959,6 +983,8 @@ namespace App
             textBoxMp5TotalManaSpent.Text = Player.Instance.Mp5TotalManaSpent.ToString();
             textBoxMp5Rapture.Text = Player.Instance.Mp5RaptureMana.ToString();
             textBoxMp5ManaDifference.Text = Player.Instance.Mp5ManaDifference.ToString();
+            textBoxEarthlivingEHPS.Text = Player.Instance.EarthlivingEHPS.ToString();
+
             if (Player.Instance.Mp5ManaDifference > Player.Instance.Mana)
             {
                 textBoxMp5ManaDifference.BackColor = textBoxMp5ManaDifference.BackColor;

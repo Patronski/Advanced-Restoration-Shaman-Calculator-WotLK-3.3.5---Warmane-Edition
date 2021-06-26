@@ -117,6 +117,7 @@ namespace App.Models
         public virtual int CalculateMp5RevitalizeMana() { return 0; }
         public virtual int CalculateMp5RaptureMana() { return 0; }
         public virtual int CalculateMp5ManaDifference() { return 0; }
+        public virtual int CalculateEarthlivingEHPS() { return 0; }
 
         public virtual int CalculateEarthlivingTick() 
             => (int)((int)(0.1692 * Player.Instance.SpellPower + 163) * 1.1);
@@ -187,6 +188,7 @@ namespace App.Models
             Player.Instance.AvgGlyphOfHealingWave = CalculateAvgGlyphOfHealingWave();
             Player.Instance.AvgHpm = CalculateAvgHpm();
             Player.Instance.AvgHpmOneTarget = CalculateAvgHpmOneTarget();
+            Player.Instance.EarthlivingEHPS = CalculateEarthlivingEHPS();
 
             Modifiers
                 .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false)

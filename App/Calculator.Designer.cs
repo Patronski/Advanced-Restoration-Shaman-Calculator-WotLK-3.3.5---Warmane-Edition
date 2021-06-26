@@ -292,6 +292,20 @@
             this.checkBoxMp5RunicManaInjector = new System.Windows.Forms.CheckBox();
             this.labelMP5ManaSpenders = new System.Windows.Forms.Label();
             this.labelMp5ManaGainEffects = new System.Windows.Forms.Label();
+            this.labelEarthlivingPerCastCH = new System.Windows.Forms.Label();
+            this.labelEarthlivingCastHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingCastLHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingPerCastR = new System.Windows.Forms.Label();
+            this.labelEarthlivingHPSCH = new System.Windows.Forms.Label();
+            this.labelEarthlivingHPSHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingHPSLHW = new System.Windows.Forms.Label();
+            this.labelEarthlivingHPSr = new System.Windows.Forms.Label();
+            this.textBoxEarthlivingEHPS = new System.Windows.Forms.TextBox();
+            this.labelEarthlivingEHPS = new System.Windows.Forms.Label();
+            this.pictureBoxEarthTotem = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWaterTotem = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFireTotem = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAirTotem = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
@@ -309,6 +323,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Rapture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5CleanseSpirit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5RunicManaPotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEarthTotem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWaterTotem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFireTotem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAirTotem)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSpellPower
@@ -2785,7 +2803,7 @@
             // 
             this.comboBoxWaterTotems.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxWaterTotems.FormattingEnabled = true;
-            this.comboBoxWaterTotems.Location = new System.Drawing.Point(570, 474);
+            this.comboBoxWaterTotems.Location = new System.Drawing.Point(276, 506);
             this.comboBoxWaterTotems.Name = "comboBoxWaterTotems";
             this.comboBoxWaterTotems.Size = new System.Drawing.Size(141, 21);
             this.comboBoxWaterTotems.TabIndex = 273;
@@ -2797,7 +2815,7 @@
             // 
             this.comboBoxFireTotems.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxFireTotems.FormattingEnabled = true;
-            this.comboBoxFireTotems.Location = new System.Drawing.Point(406, 474);
+            this.comboBoxFireTotems.Location = new System.Drawing.Point(481, 472);
             this.comboBoxFireTotems.Name = "comboBoxFireTotems";
             this.comboBoxFireTotems.Size = new System.Drawing.Size(141, 21);
             this.comboBoxFireTotems.TabIndex = 274;
@@ -2809,7 +2827,7 @@
             // 
             this.comboBoxEarthTotems.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxEarthTotems.FormattingEnabled = true;
-            this.comboBoxEarthTotems.Location = new System.Drawing.Point(242, 474);
+            this.comboBoxEarthTotems.Location = new System.Drawing.Point(276, 472);
             this.comboBoxEarthTotems.Name = "comboBoxEarthTotems";
             this.comboBoxEarthTotems.Size = new System.Drawing.Size(141, 21);
             this.comboBoxEarthTotems.TabIndex = 275;
@@ -2822,7 +2840,7 @@
             this.comboBoxAirTotems.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxAirTotems.FormattingEnabled = true;
             this.comboBoxAirTotems.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBoxAirTotems.Location = new System.Drawing.Point(734, 474);
+            this.comboBoxAirTotems.Location = new System.Drawing.Point(481, 506);
             this.comboBoxAirTotems.Name = "comboBoxAirTotems";
             this.comboBoxAirTotems.Size = new System.Drawing.Size(141, 21);
             this.comboBoxAirTotems.TabIndex = 276;
@@ -3214,6 +3232,145 @@
             this.labelMp5ManaGainEffects.Text = "MANA GAIN EFFECTS";
             this.labelMp5ManaGainEffects.Visible = false;
             // 
+            // labelEarthlivingPerCastCH
+            // 
+            this.labelEarthlivingPerCastCH.AutoSize = true;
+            this.labelEarthlivingPerCastCH.Location = new System.Drawing.Point(466, 564);
+            this.labelEarthlivingPerCastCH.Name = "labelEarthlivingPerCastCH";
+            this.labelEarthlivingPerCastCH.Size = new System.Drawing.Size(108, 13);
+            this.labelEarthlivingPerCastCH.TabIndex = 311;
+            this.labelEarthlivingPerCastCH.Text = "(Per Chain Heal Cast)";
+            this.labelEarthlivingPerCastCH.Visible = false;
+            // 
+            // labelEarthlivingCastHW
+            // 
+            this.labelEarthlivingCastHW.AutoSize = true;
+            this.labelEarthlivingCastHW.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingCastHW.Name = "labelEarthlivingCastHW";
+            this.labelEarthlivingCastHW.Size = new System.Drawing.Size(124, 13);
+            this.labelEarthlivingCastHW.TabIndex = 312;
+            this.labelEarthlivingCastHW.Text = "(Per Healing Wave Cast)";
+            this.labelEarthlivingCastHW.Visible = false;
+            // 
+            // labelEarthlivingCastLHW
+            // 
+            this.labelEarthlivingCastLHW.AutoSize = true;
+            this.labelEarthlivingCastLHW.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingCastLHW.Name = "labelEarthlivingCastLHW";
+            this.labelEarthlivingCastLHW.Size = new System.Drawing.Size(158, 13);
+            this.labelEarthlivingCastLHW.TabIndex = 313;
+            this.labelEarthlivingCastLHW.Text = "(Per Lesser Healing Wave Cast)";
+            this.labelEarthlivingCastLHW.Visible = false;
+            // 
+            // labelEarthlivingPerCastR
+            // 
+            this.labelEarthlivingPerCastR.AutoSize = true;
+            this.labelEarthlivingPerCastR.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingPerCastR.Name = "labelEarthlivingPerCastR";
+            this.labelEarthlivingPerCastR.Size = new System.Drawing.Size(89, 13);
+            this.labelEarthlivingPerCastR.TabIndex = 314;
+            this.labelEarthlivingPerCastR.Text = "(Per Riptide Cast)";
+            this.labelEarthlivingPerCastR.Visible = false;
+            // 
+            // labelEarthlivingHPSCH
+            // 
+            this.labelEarthlivingHPSCH.AutoSize = true;
+            this.labelEarthlivingHPSCH.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSCH.Name = "labelEarthlivingHPSCH";
+            this.labelEarthlivingHPSCH.Size = new System.Drawing.Size(110, 13);
+            this.labelEarthlivingHPSCH.TabIndex = 315;
+            this.labelEarthlivingHPSCH.Text = "(By Chain Heal Spam)";
+            this.labelEarthlivingHPSCH.Visible = false;
+            // 
+            // labelEarthlivingHPSHW
+            // 
+            this.labelEarthlivingHPSHW.AutoSize = true;
+            this.labelEarthlivingHPSHW.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSHW.Name = "labelEarthlivingHPSHW";
+            this.labelEarthlivingHPSHW.Size = new System.Drawing.Size(126, 13);
+            this.labelEarthlivingHPSHW.TabIndex = 316;
+            this.labelEarthlivingHPSHW.Text = "(By Healing Wave Spam)";
+            this.labelEarthlivingHPSHW.Visible = false;
+            // 
+            // labelEarthlivingHPSLHW
+            // 
+            this.labelEarthlivingHPSLHW.AutoSize = true;
+            this.labelEarthlivingHPSLHW.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSLHW.Name = "labelEarthlivingHPSLHW";
+            this.labelEarthlivingHPSLHW.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelEarthlivingHPSLHW.Size = new System.Drawing.Size(160, 13);
+            this.labelEarthlivingHPSLHW.TabIndex = 317;
+            this.labelEarthlivingHPSLHW.Text = "(By Lesser Healing Wave Spam)";
+            this.labelEarthlivingHPSLHW.Visible = false;
+            // 
+            // labelEarthlivingHPSr
+            // 
+            this.labelEarthlivingHPSr.AutoSize = true;
+            this.labelEarthlivingHPSr.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSr.Name = "labelEarthlivingHPSr";
+            this.labelEarthlivingHPSr.Size = new System.Drawing.Size(91, 13);
+            this.labelEarthlivingHPSr.TabIndex = 318;
+            this.labelEarthlivingHPSr.Text = "(By Riptide Spam)";
+            this.labelEarthlivingHPSr.Visible = false;
+            // 
+            // textBoxEarthlivingEHPS
+            // 
+            this.textBoxEarthlivingEHPS.Location = new System.Drawing.Point(555, 590);
+            this.textBoxEarthlivingEHPS.MaxLength = 10;
+            this.textBoxEarthlivingEHPS.Name = "textBoxEarthlivingEHPS";
+            this.textBoxEarthlivingEHPS.ReadOnly = true;
+            this.textBoxEarthlivingEHPS.Size = new System.Drawing.Size(58, 20);
+            this.textBoxEarthlivingEHPS.TabIndex = 320;
+            this.textBoxEarthlivingEHPS.Visible = false;
+            // 
+            // labelEarthlivingEHPS
+            // 
+            this.labelEarthlivingEHPS.AutoSize = true;
+            this.labelEarthlivingEHPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEarthlivingEHPS.ForeColor = System.Drawing.Color.Olive;
+            this.labelEarthlivingEHPS.Location = new System.Drawing.Point(477, 593);
+            this.labelEarthlivingEHPS.Name = "labelEarthlivingEHPS";
+            this.labelEarthlivingEHPS.Size = new System.Drawing.Size(72, 13);
+            this.labelEarthlivingEHPS.TabIndex = 321;
+            this.labelEarthlivingEHPS.Text = "AVG eHPS:";
+            this.labelEarthlivingEHPS.Visible = false;
+            // 
+            // pictureBoxEarthTotem
+            // 
+            this.pictureBoxEarthTotem.Location = new System.Drawing.Point(245, 468);
+            this.pictureBoxEarthTotem.Name = "pictureBoxEarthTotem";
+            this.pictureBoxEarthTotem.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxEarthTotem.TabIndex = 322;
+            this.pictureBoxEarthTotem.TabStop = false;
+            this.pictureBoxEarthTotem.Visible = false;
+            // 
+            // pictureBoxWaterTotem
+            // 
+            this.pictureBoxWaterTotem.Location = new System.Drawing.Point(245, 502);
+            this.pictureBoxWaterTotem.Name = "pictureBoxWaterTotem";
+            this.pictureBoxWaterTotem.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxWaterTotem.TabIndex = 323;
+            this.pictureBoxWaterTotem.TabStop = false;
+            this.pictureBoxWaterTotem.Visible = false;
+            // 
+            // pictureBoxFireTotem
+            // 
+            this.pictureBoxFireTotem.Location = new System.Drawing.Point(450, 468);
+            this.pictureBoxFireTotem.Name = "pictureBoxFireTotem";
+            this.pictureBoxFireTotem.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxFireTotem.TabIndex = 324;
+            this.pictureBoxFireTotem.TabStop = false;
+            this.pictureBoxFireTotem.Visible = false;
+            // 
+            // pictureBoxAirTotem
+            // 
+            this.pictureBoxAirTotem.Location = new System.Drawing.Point(450, 502);
+            this.pictureBoxAirTotem.Name = "pictureBoxAirTotem";
+            this.pictureBoxAirTotem.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxAirTotem.TabIndex = 325;
+            this.pictureBoxAirTotem.TabStop = false;
+            this.pictureBoxAirTotem.Visible = false;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3221,6 +3378,20 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1048, 917);
+            this.Controls.Add(this.pictureBoxAirTotem);
+            this.Controls.Add(this.pictureBoxFireTotem);
+            this.Controls.Add(this.pictureBoxWaterTotem);
+            this.Controls.Add(this.pictureBoxEarthTotem);
+            this.Controls.Add(this.labelEarthlivingEHPS);
+            this.Controls.Add(this.textBoxEarthlivingEHPS);
+            this.Controls.Add(this.labelEarthlivingHPSr);
+            this.Controls.Add(this.labelEarthlivingHPSLHW);
+            this.Controls.Add(this.labelEarthlivingHPSHW);
+            this.Controls.Add(this.labelEarthlivingHPSCH);
+            this.Controls.Add(this.labelEarthlivingPerCastR);
+            this.Controls.Add(this.labelEarthlivingCastLHW);
+            this.Controls.Add(this.labelEarthlivingCastHW);
+            this.Controls.Add(this.labelEarthlivingPerCastCH);
             this.Controls.Add(this.labelMp5ManaGainEffects);
             this.Controls.Add(this.labelMP5ManaSpenders);
             this.Controls.Add(this.checkBoxMp5RunicManaInjector);
@@ -3506,6 +3677,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Rapture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5CleanseSpirit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5RunicManaPotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEarthTotem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWaterTotem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFireTotem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAirTotem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3777,6 +3952,20 @@
         public System.Windows.Forms.CheckBox checkBoxMp5RunicManaInjector;
         private System.Windows.Forms.Label labelMP5ManaSpenders;
         private System.Windows.Forms.Label labelMp5ManaGainEffects;
+        private System.Windows.Forms.Label labelEarthlivingPerCastCH;
+        private System.Windows.Forms.Label labelEarthlivingCastHW;
+        private System.Windows.Forms.Label labelEarthlivingCastLHW;
+        private System.Windows.Forms.Label labelEarthlivingPerCastR;
+        private System.Windows.Forms.Label labelEarthlivingHPSCH;
+        private System.Windows.Forms.Label labelEarthlivingHPSHW;
+        private System.Windows.Forms.Label labelEarthlivingHPSLHW;
+        private System.Windows.Forms.Label labelEarthlivingHPSr;
+        private System.Windows.Forms.TextBox textBoxEarthlivingEHPS;
+        private System.Windows.Forms.Label labelEarthlivingEHPS;
+        private System.Windows.Forms.PictureBox pictureBoxEarthTotem;
+        private System.Windows.Forms.PictureBox pictureBoxWaterTotem;
+        private System.Windows.Forms.PictureBox pictureBoxFireTotem;
+        private System.Windows.Forms.PictureBox pictureBoxAirTotem;
     }
 }
 

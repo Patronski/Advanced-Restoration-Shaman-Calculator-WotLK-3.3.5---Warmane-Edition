@@ -143,6 +143,36 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Air_Totem_Nature_Resistance_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Air_Totem_Nature_Resistance_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Air_Totem_Windfury_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Air_Totem_Windfury_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Air_Totem_Wrath_of_Air_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Air_Totem_Wrath_of_Air_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Ancestral_AwakeningH {
             get {
                 object obj = ResourceManager.GetObject("Ancestral_AwakeningH", resourceCulture);
@@ -211,6 +241,16 @@ namespace App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CallOfElements {
+            get {
+                object obj = ResourceManager.GetObject("CallOfElements", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream CH {
@@ -235,6 +275,26 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Cleanse_SpiritH {
             get {
                 object obj = ResourceManager.GetObject("Cleanse_SpiritH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CleanseSpirit {
+            get {
+                object obj = ResourceManager.GetObject("CleanseSpirit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CleansingTotem {
+            get {
+                object obj = ResourceManager.GetObject("CleansingTotem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -281,6 +341,36 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap EarthTotem {
+            get {
+                object obj = ResourceManager.GetObject("EarthTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EarthTotemStoneskin {
+            get {
+                object obj = ResourceManager.GetObject("EarthTotemStoneskin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EarthTotemStrength {
+            get {
+                object obj = ResourceManager.GetObject("EarthTotemStrength", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Emerald_Vigor {
             get {
                 object obj = ResourceManager.GetObject("Emerald_Vigor", resourceCulture);
@@ -303,6 +393,56 @@ namespace App.Properties {
         public static System.IO.UnmanagedMemoryStream file_example_WAV_1MG {
             get {
                 return ResourceManager.GetStream("file_example_WAV_1MG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FireResistanceTotem {
+            get {
+                object obj = ResourceManager.GetObject("FireResistanceTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FireTotemFlametongue {
+            get {
+                object obj = ResourceManager.GetObject("FireTotemFlametongue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FlametongueTotem {
+            get {
+                object obj = ResourceManager.GetObject("FlametongueTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FrostResistanceTotem {
+            get {
+                object obj = ResourceManager.GetObject("FrostResistanceTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FrostTotemResistance {
+            get {
+                object obj = ResourceManager.GetObject("FrostTotemResistance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -421,6 +561,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Healing_WayH {
             get {
                 object obj = ResourceManager.GetObject("Healing_WayH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap HealingStreamTotem {
+            get {
+                object obj = ResourceManager.GetObject("HealingStreamTotem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -609,6 +759,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ManaSpringTotem {
+            get {
+                object obj = ResourceManager.GetObject("ManaSpringTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Moonkin_Aura {
             get {
                 object obj = ResourceManager.GetObject("Moonkin_Aura", resourceCulture);
@@ -642,6 +802,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Nature_s_SwiftnessH {
             get {
                 object obj = ResourceManager.GetObject("Nature_s_SwiftnessH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap NatureResistanceTooltip {
+            get {
+                object obj = ResourceManager.GetObject("NatureResistanceTooltip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -886,6 +1056,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap StoneskinTotem {
+            get {
+                object obj = ResourceManager.GetObject("StoneskinTotem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Talents {
             get {
                 object obj = ResourceManager.GetObject("Talents", resourceCulture);
@@ -1019,6 +1199,56 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Tree_of_Life {
             get {
                 object obj = ResourceManager.GetObject("Tree_of_Life", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Water_Totem_Cleaansing_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Water_Totem_Cleaansing_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Water_Totem_Fire_Resistance_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Water_Totem_Fire_Resistance_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Water_Totem_Mana_Spring_Totem {
+            get {
+                object obj = ResourceManager.GetObject("Water_Totem_Mana_Spring_Totem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WaterTotemHealing {
+            get {
+                object obj = ResourceManager.GetObject("WaterTotemHealing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WindfuryTotemTooltip {
+            get {
+                object obj = ResourceManager.GetObject("WindfuryTotemTooltip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

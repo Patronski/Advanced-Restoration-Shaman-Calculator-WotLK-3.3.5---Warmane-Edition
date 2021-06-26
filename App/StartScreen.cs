@@ -24,16 +24,16 @@ namespace App
 
         private void InitialiseTooltips()
         {
-            var toolTip = new ToolTip();
-            toolTip.InitialDelay = 50;
-            toolTip.ReshowDelay = 50;
-            toolTip.AutoPopDelay = 15000;
-            toolTip.SetToolTip(pictureBox5, "Statistic");
-            toolTip.SetToolTip(pictureBox4, "Download");
-            toolTip.SetToolTip(pictureBox1, "Restoration Shaman Guide");
-            toolTip.SetToolTip(pictureBox3, "Warmane Home");
+            //var toolTip = new ToolTip();
+            //toolTip.InitialDelay = 50;
+            //toolTip.ReshowDelay = 50;
+            //toolTip.AutoPopDelay = 15000;
+            //toolTip.SetToolTip(pictureBox5, "Statistic");
+            //toolTip.SetToolTip(pictureBox4, "Download");
+            //toolTip.SetToolTip(pictureBox1, "Restoration Shaman Guide");
+            //toolTip.SetToolTip(pictureBox3, "Warmane Home");
 
-            CustomTooltipEasy myToolTip = new CustomTooltipEasy();
+            CustomTooltipForPictures myToolTip = new CustomTooltipForPictures();
 
             myToolTip.InitialDelay = 50;
             myToolTip.ReshowDelay = 50;

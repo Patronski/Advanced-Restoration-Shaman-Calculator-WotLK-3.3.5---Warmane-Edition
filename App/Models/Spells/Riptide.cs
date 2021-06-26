@@ -199,5 +199,17 @@ namespace App.Models.Spells
 
             return (int?)result;
         }
+
+        public override int CalculateEarthlivingEHPS()
+        {
+            var is2PT8Equiped = Modifiers
+                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+
+            int cooldown = is2PT8Equiped ? 5 : 6;
+
+            var formula = Player.Instance.EarthlivingAvgHpsRP / cooldown;
+
+            return (int)formula;
+        }
     }
 }

@@ -150,7 +150,8 @@ namespace App.Models.Spells
                 Player.Instance.Mp5CallOfElements +
                 Player.Instance.Mp5CleanseSpirit +
                 Player.Instance.Mp5TotemsCount +
-                Player.Instance.Mp5TotemicRecall;
+                Player.Instance.Mp5TotemicRecall +
+                Player.Instance.Mp5TotalESHCasts;
 
             var result = totalSomething * 0.05 * 600;
             return result;
