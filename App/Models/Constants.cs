@@ -8,6 +8,9 @@
         public const double BaseCriticalMultiplier = 1.50;
 
         public const double MetagemCritMiltiplier = 1.03d;
+        
+        public const string ProgramName = "[WotLK] PvE Restoration Shaman Calculator v2.1";
+
 
         public const string SpellHST = "Healing Stream Totem";
         public const string SpellChainHeal = "Chain Heal";

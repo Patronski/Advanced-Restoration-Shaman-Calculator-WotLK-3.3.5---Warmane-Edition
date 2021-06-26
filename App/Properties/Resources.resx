@@ -118,209 +118,308 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Riptide_s_consumption" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Riptide's consumption.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Wrath_of_Air_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wrath of Air Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Revitalizing_Skyflare_Diamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Revitalizing Skyflare Diamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hellscream_s_Warsong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hellscream's Warsong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Lesser_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Lesser Healing Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_Waves__Haste_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal Waves (Haste).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chained_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chained Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dqsno_Gore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dqsno_Gore1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lqvo_Gore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lqvo_Gore1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Moonkin_Aura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Moonkin Aura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tree_of_Life" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tree of Life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bloodlust" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bloodlust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Moonkin_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Moonkin Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Riptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Riptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_Waves__Critical_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal Waves (Critical).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Healing_Stream_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Healing Stream Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blessing_of_the_Eternals" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blessing of the Eternals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Earth_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Earth Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Earthliving_Weapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Earthliving Weapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Chain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of Chain Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Emerald_Vigor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Emerald Vigor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_Mastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal Mastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lqvo Dolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lqvo Dolu1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Talents" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Talents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Dqsno_Dolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dqsno_Dolu1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ancestral_AwakeningH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ancestral AwakeningH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ancestral_HealingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ancestral HealingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ancestral_KnowledgeH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ancestral KnowledgeH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blessing_of_the_EternalsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blessing of the EternalsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cleanse_SpiritH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cleanse SpiritH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Healing_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Healing FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Healing_WayH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Healing WayH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Chain_HealH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Chain HealH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_Healing_WaveH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved Healing WaveH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Improved_ShieldsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved ShieldsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Nature_s_BlessingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nature's BlessingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Nature_s_SwiftnessH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nature's SwiftnessH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PurificationH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PurificationH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Restorative_TotemsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Restorative TotemsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RiptideH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RiptideH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Thundering_StrikesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thundering StrikesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_ForceH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal ForceH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_MasteryH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal MasteryH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tidal_WavesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tidal WavesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CH.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="EarthL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EarthL.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ES.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Tidal_MasteryH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal MasteryH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HST" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HST.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RunicManaInjector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RunicManaInjector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CallOfElements" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CallOfElements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Improved_Water_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Improved_Water_ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LHW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LHW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Improved_Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OFF_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OFF_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Hellscream_s_Warsong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hellscream's Warsong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ON_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ON_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CleansingTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleansingTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Emerald_Vigor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Emerald Vigor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SpellCHain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellCHain_Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Improved_Healing_WaveH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Healing WaveH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SpellEarthliving" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellEarthliving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ManaSpringTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ManaSpringTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dqsno_Gore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dqsno_Gore1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SpellEarth_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SpellEarth_Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SpellHealing_Stream_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellHealing_Stream_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Improved_Chain_HealH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Chain HealH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SpellHealing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellHealing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Restorative_TotemsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restorative TotemsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SpellLesser_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellLesser_Healing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SpellRiptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpellRiptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wow_cursor_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wow cursor hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph_of_Healing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Glyph_of_MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wow_cursor_hand_croped" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wow cursor hand croped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glyph_of_Chain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Chain Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OFF_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OFF_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wow_cursor_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wow cursor hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Air_Totem_Nature_Resistance_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Nature_Resistance_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FrostTotemResistance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FrostTotemResistance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancestral_KnowledgeH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral KnowledgeH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Moonkin_Aura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Moonkin Aura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blessing_of_the_EternalsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blessing of the EternalsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LHW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LHW.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tidal_Waves__Haste_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal Waves (Haste).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellHealing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellHealing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT8_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT8_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bloodlust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bloodlust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_Mastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal Mastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotemStrength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotemStrength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_ShieldsH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved ShieldsH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellEarthliving" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellEarthliving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WaterTotemHealing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WaterTotemHealing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ON_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ON_S.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Glyph_of_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph_of_Healing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Improved_Moonkin_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved Moonkin Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Air_Totem_Windfury_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Windfury_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Innervate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Innervate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glyph_of_Lesser_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Lesser Healing Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PurificationH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PurificationH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NatureResistanceTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NatureResistanceTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GotN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotN.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Glyph_of_Riptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Riptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nature_s_SwiftnessH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nature's SwiftnessH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Berserking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Berserking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Mana_Tide_TotemH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mana Tide TotemH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancestral_AwakeningH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral AwakeningH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Revitalizing_Skyflare_Diamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Revitalizing Skyflare Diamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wrath_of_Air_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wrath of Air Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Revitalize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Revitalize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotemStoneskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotemStoneskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CleanseSpirit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleanseSpirit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Air_Totem_Wrath_of_Air_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Air_Totem_Wrath_of_Air_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WSh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WSh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellRiptide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellRiptide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Talents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Talents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tree_of_Life" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tree of Life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glyph_of_Earth_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Earth Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WShSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WShSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GotNPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ES.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RunicManaPotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RunicManaPotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Totem_of_Forest_Growth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of Forest Growth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FireTotemFlametongue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FireTotemFlametongue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blessing_of_the_Eternals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blessing of the Eternals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HELP_rtf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HELP.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="StoneskinTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StoneskinTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_ForceH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal ForceH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_Totem_Cleaansing_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_Totem_Cleaansing_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rapture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rapture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lqvo Dolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lqvo Dolu1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Healing_FocusH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Healing FocusH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glyph_of_Earthliving_Weapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Earthliving Weapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Replenishment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Replenishment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_Waves__Critical_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal Waves (Critical).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CH.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FlametongueTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlametongueTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpellCHain_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellCHain_Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Riptide_s_consumption" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Riptide's consumption.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Totem_of_Misery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of Misery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tidal_WavesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tidal WavesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file_example_WAV_1MG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file_example_WAV_1MG.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Chained_Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chained Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cleanse_SpiritH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cleanse SpiritH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_2pT8_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2pT8_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,161 +427,56 @@
   <data name="_2pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_4pT8_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4pT8_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SpellHealing_Stream_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellHealing_Stream_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_4pT9_Bonus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4pT9_Bonus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ST" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file_example_WAV_1MG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file_example_WAV_1MG.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WSh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WSh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WShSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WShSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Berserking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Berserking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Glyph_of_MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Glyph of MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GotN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GotN.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GotNPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GotN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Totem_of_Forest_Growth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Totem of Forest Growth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Totem_of_Misery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Totem of Misery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Totem_of_the_Bay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Totem of the Bay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_2P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_2P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_4P_T10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4P T10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_4P_T7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4P T7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Innervate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Innervate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Replenishment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Replenishment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sound-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sound_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sound-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Improved_Water_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Improved_Water_ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HELP_rtf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HELP.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  <data name="Nature_s_BlessingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nature's BlessingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RiptideH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RiptideH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earth_ShieldH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earth ShieldH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Totemic_Recall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Totemic Recall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rapture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rapture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FrostResistanceTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FrostResistanceTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Revitalize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Revitalize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WindfuryTotemTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WindfuryTotemTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RunicManaInjector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RunicManaInjector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Glyph_of_Healing_Stream_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glyph of Healing Stream Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RunicManaPotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RunicManaPotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Air_Totem_Nature_Resistance_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Air_Totem_Nature_Resistance_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Air_Totem_Windfury_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Air_Totem_Windfury_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Air_Totem_Wrath_of_Air_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Air_Totem_Wrath_of_Air_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CallOfElements" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CallOfElements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CleanseSpirit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CleanseSpirit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CleansingTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CleansingTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EarthTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EarthTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EarthTotemStoneskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EarthTotemStoneskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EarthTotemStrength" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EarthTotemStrength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Thundering_StrikesH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thundering StrikesH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FireResistanceTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FireResistanceTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FireTotemFlametongue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FireTotemFlametongue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FlametongueTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FlametongueTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FrostResistanceTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FrostResistanceTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FrostTotemResistance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FrostTotemResistance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Healing_WayH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Healing WayH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HealingStreamTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HealingStreamTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ManaSpringTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ManaSpringTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ancestral_HealingH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancestral HealingH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NatureResistanceTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NatureResistanceTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Totem_of_the_Bay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Totem of the Bay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StoneskinTotem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StoneskinTotem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WaterTotemHealing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WaterTotemHealing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Water_Totem_Cleaansing_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Water_Totem_Cleaansing_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Water_Totem_Fire_Resistance_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Water_Totem_Fire_Resistance_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -490,7 +484,16 @@
   <data name="Water_Totem_Mana_Spring_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Water_Totem_Mana_Spring_Totem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WindfuryTotemTooltip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WindfuryTotemTooltip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HST.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SpellLesser_Healing_Wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpellLesser_Healing_Wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lqvo_gore_Blizzard_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lqvo_gore_Blizzard_Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Changelog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Changelog.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
 </root>

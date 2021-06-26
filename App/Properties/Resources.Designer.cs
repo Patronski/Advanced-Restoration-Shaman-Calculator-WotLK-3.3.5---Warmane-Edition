@@ -270,6 +270,20 @@ namespace App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
+        ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+        ///\pard\sa200\sl276\slmult1\ul\b\f0\fs22\lang9 Version 2.1 (June 26, 2021):\par
+        ///\ulnone\b0 - Added \b eHPS\b0  calculations for \b Earthliving by Chain Heal, Healing Wave, Lesser Healing Wave and Riptide spam\f1\lang1026  \b0 (separately for each \f0\lang1033 spell\f1\lang1026 )\f0\lang9\par
+        ///- Added new tooltips\par
+        ///- Fixed an issue with not corr [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Changelog {
+            get {
+                return ResourceManager.GetString("Changelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Cleanse_SpiritH {
@@ -739,9 +753,9 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Lqvo_Gore {
+        public static System.Drawing.Bitmap lqvo_gore_Blizzard_Logo {
             get {
-                object obj = ResourceManager.GetObject("Lqvo_Gore", resourceCulture);
+                object obj = ResourceManager.GetObject("lqvo_gore_Blizzard_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

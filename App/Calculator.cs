@@ -57,6 +57,7 @@ namespace App
 
         private void AdjustComponentProperties()
         {
+            Text = Constants.ProgramName;
             this.checkBoxBloodlust.Text = Constants.ModBloodlust;
             this.checkBoxEmeraldVigor.Text = Constants.ModEmeraldVigor;
             this.checkBoxGlyphOfEarthShield.Text = Constants.ModGlyphESH;
@@ -204,10 +205,11 @@ namespace App
             {
                 this.textBoxHasteRating.Text = "";
             }
-            if (value > 3000)
+            var maxCap = 4000;
+            if (value > maxCap)
             {
-                value = 3000;
-                this.textBoxHasteRating.Text = "3000";
+                value = maxCap;
+                this.textBoxHasteRating.Text = maxCap.ToString();
             }
             Player.Instance.HasteRating = value;
 
@@ -482,10 +484,11 @@ namespace App
             {
                 this.textBoxIntellect.Text = "";
             }
-            if (value > 3500)
+            var maxCap = 4000;
+            if (value > maxCap)
             {
-                value = 3500;
-                this.textBoxIntellect.Text = "3500";
+                value = maxCap;
+                this.textBoxIntellect.Text = maxCap.ToString();
             }
             Player.Instance.Intellect = value;
 
@@ -501,10 +504,11 @@ namespace App
             {
                 this.textBoxCriticalRating.Text = "";
             }
-            if (value > 2200)
+            var maxCap = 3000;
+            if (value > maxCap)
             {
-                value = 2200;
-                this.textBoxCriticalRating.Text = "2200";
+                value = maxCap;
+                this.textBoxCriticalRating.Text = maxCap.ToString();
             }
             Player.Instance.CriticalRating = value;
 

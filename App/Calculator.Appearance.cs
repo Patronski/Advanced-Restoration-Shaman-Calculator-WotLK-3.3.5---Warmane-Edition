@@ -400,7 +400,6 @@ namespace App
             textBoxMp5CHPM.Hide();
             textBoxMp5Crit.Hide();
             textBoxMp5LHWPM.Hide();
-            textBoxMp5Percent.Hide();
             textBoxMp5RPM.Hide();
             textBoxMp5TotalCrit.Hide();
             textBoxMP5TimeDec.Hide();
@@ -423,8 +422,6 @@ namespace App
             labelMP5HWPM.Hide();
             labelMp5Min.Hide();
             labelMp5Mp5S.Hide();
-            labelMp5Percent.Hide();
-            labelMp5rightPercent.Hide();
             labelMp5RightTotalCrit.Hide();
             labelMp5RPM.Hide();
             labelMp5Sec.Hide();
@@ -804,7 +801,6 @@ namespace App
                     textBoxMp5CHPM.Show();
                     textBoxMp5Crit.Show();
                     textBoxMp5LHWPM.Show();
-                    textBoxMp5Percent.Show();
                     textBoxMp5RPM.Show();
                     textBoxMp5TotalCrit.Show();
                     textBoxMP5TimeDec.Show();
@@ -827,8 +823,6 @@ namespace App
                     labelMP5HWPM.Show();
                     labelMp5Min.Show();
                     labelMp5Mp5S.Show();
-                    labelMp5Percent.Show();
-                    labelMp5rightPercent.Show();
                     labelMp5RightTotalCrit.Show();
                     labelMp5RPM.Show();
                     labelMp5Sec.Show();
@@ -972,7 +966,6 @@ namespace App
             textBoxMp5LHWPM.Text = Player.Instance.Mp5LHWPM.ToString();
             textBoxMp5CHPM.Text = Player.Instance.Mp5CHPM.ToString();
             textBoxMp5Crit.Text = Player.Instance.Mp5Crit.ToString();
-            textBoxMp5Percent.Text = Player.Instance.Mp5Percent.ToString();
             textBoxMp5TotalCrit.Text = Player.Instance.Mp5TotalCrit.ToString();
             textBoxMp5Totems.Text = Player.Instance.Mp5Totems.ToString();
             textBoxMp5Innervates.Text = Player.Instance.Mp5Innervates.ToString();

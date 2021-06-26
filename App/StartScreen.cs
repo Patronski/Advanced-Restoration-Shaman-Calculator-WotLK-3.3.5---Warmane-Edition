@@ -10,14 +10,15 @@ namespace App
         public StartScreen()
         {
             InitializeComponent();
+            Text = Constants.ProgramName;
             soundPlayer.PlaySound("on");
 
             InitialiseTooltips();
-            var cur = new Cursor(Properties.Resources.wow_cursor_hand_croped.GetHicon());
+            var cur = new Cursor(Resources.wow_cursor_hand_croped.GetHicon());
             this.Cursor = cur;
             buttonTier10.Cursor = cur;
             textBox3.Cursor = cur;
-            textBox2.Cursor = cur;
+            buttonVersion.Cursor = cur;
         }
 
         private CustomSoundPlayer soundPlayer = new CustomSoundPlayer();
@@ -126,26 +127,6 @@ namespace App
             //this.Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.warmane.com/");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://forum.warmane.com/showthread.php?t=323638");
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.warmane.com/download");
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.warmane.com/information");
-        }
-
         private void linkOpenSource_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Patronski/Advanced-Restoration-Shaman-Calculator-WotLK-3.3.5---Warmane-Edition");
@@ -155,6 +136,19 @@ namespace App
         {
             this.Hide();
             soundPlayer.PlaySound("off");
+        }
+
+        private void buttonVersion_Click(object sender, EventArgs e)
+        {
+            var location = this.DesktopLocation;
+
+            if (Forms.Instance.FormVersion == null || Forms.Instance.FormVersion.IsDisposed)
+            {
+                Forms.Instance.FormVersion = new FormVersion();
+            }
+
+            Forms.Instance.FormVersion.DesktopLocation = location;
+            Forms.Instance.FormVersion.Show();
         }
     }
 }

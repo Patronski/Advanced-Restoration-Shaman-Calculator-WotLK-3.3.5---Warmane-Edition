@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>App</RootNamespace>
-    <AssemblyName>[WotLK] PvE Restoration Shaman Calculator v2.0</AssemblyName>
+    <AssemblyName>[WotLK] PvE Restoration Shaman Calculator v2.1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Calculator.Appearance.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVersion.Designer.cs">
+      <DependentUpon>FormVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Info.cs">
       <SubType>Form</SubType>
@@ -159,6 +165,9 @@
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormVersion.resx">
+      <DependentUpon>FormVersion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,11 +194,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StartScreen.oldEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Changelog.rtf" />
     <None Include="Resources\Glyph of Earthliving.png" />
   </ItemGroup>
   <ItemGroup>
@@ -548,6 +561,7 @@
     <None Include="Resources\Air_Totem_Wrath_of_Air_Totem.png" />
     <None Include="Resources\NatureResistanceTooltip.png" />
     <None Include="Resources\WindfuryTotemTooltip.png" />
+    <None Include="Resources\lqvo_gore_Blizzard_Logo.gif" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

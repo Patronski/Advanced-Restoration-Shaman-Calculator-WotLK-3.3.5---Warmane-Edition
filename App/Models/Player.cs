@@ -190,7 +190,6 @@ namespace App.Models
         public double? Mp5LHWPM { get; set; }
         public double? Mp5CHPM { get; set; }
         public double? Mp5Crit { get; set; }
-        public double? Mp5Percent { get; set; }
         public double Mp5TotalCrit { get; set; }
         public double Mp5Totems { get; set; }
         public int Mp5TotemsCount { get; set; }

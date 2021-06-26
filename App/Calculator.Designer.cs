@@ -181,12 +181,9 @@
             this.labelMP5LHWPM = new System.Windows.Forms.Label();
             this.labelMp5CHPM = new System.Windows.Forms.Label();
             this.textBoxMp5Crit = new System.Windows.Forms.TextBox();
-            this.textBoxMp5Percent = new System.Windows.Forms.TextBox();
             this.textBoxMp5TotalCrit = new System.Windows.Forms.TextBox();
             this.labelMp5Crit = new System.Windows.Forms.Label();
             this.labelMp5Mp5S = new System.Windows.Forms.Label();
-            this.labelMp5Percent = new System.Windows.Forms.Label();
-            this.labelMp5rightPercent = new System.Windows.Forms.Label();
             this.labelMp5TotalCritLeft = new System.Windows.Forms.Label();
             this.labelMp5RightTotalCrit = new System.Windows.Forms.Label();
             this.checkBox4PT10Bonus = new System.Windows.Forms.CheckBox();
@@ -1996,7 +1993,7 @@
             // 
             // textBoxMp5Crit
             // 
-            this.textBoxMp5Crit.Location = new System.Drawing.Point(460, 543);
+            this.textBoxMp5Crit.Location = new System.Drawing.Point(460, 581);
             this.textBoxMp5Crit.MaxLength = 10;
             this.textBoxMp5Crit.Name = "textBoxMp5Crit";
             this.textBoxMp5Crit.ReadOnly = true;
@@ -2004,19 +2001,9 @@
             this.textBoxMp5Crit.TabIndex = 192;
             this.textBoxMp5Crit.Visible = false;
             // 
-            // textBoxMp5Percent
-            // 
-            this.textBoxMp5Percent.Location = new System.Drawing.Point(460, 581);
-            this.textBoxMp5Percent.MaxLength = 10;
-            this.textBoxMp5Percent.Name = "textBoxMp5Percent";
-            this.textBoxMp5Percent.ReadOnly = true;
-            this.textBoxMp5Percent.Size = new System.Drawing.Size(58, 20);
-            this.textBoxMp5Percent.TabIndex = 193;
-            this.textBoxMp5Percent.Visible = false;
-            // 
             // textBoxMp5TotalCrit
             // 
-            this.textBoxMp5TotalCrit.Location = new System.Drawing.Point(460, 622);
+            this.textBoxMp5TotalCrit.Location = new System.Drawing.Point(460, 620);
             this.textBoxMp5TotalCrit.MaxLength = 10;
             this.textBoxMp5TotalCrit.Name = "textBoxMp5TotalCrit";
             this.textBoxMp5TotalCrit.ReadOnly = true;
@@ -2028,7 +2015,7 @@
             // 
             this.labelMp5Crit.AutoSize = true;
             this.labelMp5Crit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5Crit.Location = new System.Drawing.Point(279, 546);
+            this.labelMp5Crit.Location = new System.Drawing.Point(279, 584);
             this.labelMp5Crit.Name = "labelMp5Crit";
             this.labelMp5Crit.Size = new System.Drawing.Size(175, 13);
             this.labelMp5Crit.TabIndex = 195;
@@ -2039,40 +2026,18 @@
             // 
             this.labelMp5Mp5S.AutoSize = true;
             this.labelMp5Mp5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5Mp5S.Location = new System.Drawing.Point(520, 547);
+            this.labelMp5Mp5S.Location = new System.Drawing.Point(520, 585);
             this.labelMp5Mp5S.Name = "labelMp5Mp5S";
             this.labelMp5Mp5S.Size = new System.Drawing.Size(40, 13);
             this.labelMp5Mp5S.TabIndex = 196;
             this.labelMp5Mp5S.Text = "MP5S";
             this.labelMp5Mp5S.Visible = false;
             // 
-            // labelMp5Percent
-            // 
-            this.labelMp5Percent.AutoSize = true;
-            this.labelMp5Percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5Percent.Location = new System.Drawing.Point(361, 585);
-            this.labelMp5Percent.Name = "labelMp5Percent";
-            this.labelMp5Percent.Size = new System.Drawing.Size(93, 13);
-            this.labelMp5Percent.TabIndex = 197;
-            this.labelMp5Percent.Text = "and it becomes";
-            this.labelMp5Percent.Visible = false;
-            // 
-            // labelMp5rightPercent
-            // 
-            this.labelMp5rightPercent.AutoSize = true;
-            this.labelMp5rightPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5rightPercent.Location = new System.Drawing.Point(520, 585);
-            this.labelMp5rightPercent.Name = "labelMp5rightPercent";
-            this.labelMp5rightPercent.Size = new System.Drawing.Size(393, 13);
-            this.labelMp5rightPercent.TabIndex = 198;
-            this.labelMp5rightPercent.Text = "% as effective as MP5S according to item budget (1 crit = 0.5 mp5s)";
-            this.labelMp5rightPercent.Visible = false;
-            // 
             // labelMp5TotalCritLeft
             // 
             this.labelMp5TotalCritLeft.AutoSize = true;
             this.labelMp5TotalCritLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5TotalCritLeft.Location = new System.Drawing.Point(250, 625);
+            this.labelMp5TotalCritLeft.Location = new System.Drawing.Point(250, 623);
             this.labelMp5TotalCritLeft.Name = "labelMp5TotalCritLeft";
             this.labelMp5TotalCritLeft.Size = new System.Drawing.Size(204, 13);
             this.labelMp5TotalCritLeft.TabIndex = 199;
@@ -2083,7 +2048,7 @@
             // 
             this.labelMp5RightTotalCrit.AutoSize = true;
             this.labelMp5RightTotalCrit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(520, 626);
+            this.labelMp5RightTotalCrit.Location = new System.Drawing.Point(520, 624);
             this.labelMp5RightTotalCrit.Name = "labelMp5RightTotalCrit";
             this.labelMp5RightTotalCrit.Size = new System.Drawing.Size(40, 13);
             this.labelMp5RightTotalCrit.TabIndex = 200;
@@ -3499,12 +3464,9 @@
             this.Controls.Add(this.textBoxAvgHpmManyTargets);
             this.Controls.Add(this.labelMp5RightTotalCrit);
             this.Controls.Add(this.labelMp5TotalCritLeft);
-            this.Controls.Add(this.labelMp5rightPercent);
-            this.Controls.Add(this.labelMp5Percent);
             this.Controls.Add(this.labelMp5Mp5S);
             this.Controls.Add(this.labelMp5Crit);
             this.Controls.Add(this.textBoxMp5TotalCrit);
-            this.Controls.Add(this.textBoxMp5Percent);
             this.Controls.Add(this.textBoxMp5Crit);
             this.Controls.Add(this.labelMp5CHPM);
             this.Controls.Add(this.labelMP5LHWPM);
@@ -3658,7 +3620,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.0";
+            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Calculator_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).EndInit();
@@ -3842,12 +3804,9 @@
         private System.Windows.Forms.Label labelMP5LHWPM;
         private System.Windows.Forms.Label labelMp5CHPM;
         private System.Windows.Forms.TextBox textBoxMp5Crit;
-        private System.Windows.Forms.TextBox textBoxMp5Percent;
         private System.Windows.Forms.TextBox textBoxMp5TotalCrit;
         private System.Windows.Forms.Label labelMp5Crit;
         private System.Windows.Forms.Label labelMp5Mp5S;
-        private System.Windows.Forms.Label labelMp5Percent;
-        private System.Windows.Forms.Label labelMp5rightPercent;
         private System.Windows.Forms.Label labelMp5TotalCritLeft;
         private System.Windows.Forms.Label labelMp5RightTotalCrit;
         public System.Windows.Forms.CheckBox checkBox4PT10Bonus;

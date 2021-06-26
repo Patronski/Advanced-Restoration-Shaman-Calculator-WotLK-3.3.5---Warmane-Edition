@@ -32,7 +32,6 @@
             this.buttonTier10 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,6 +62,7 @@
             this.transparentControl4 = new App.Models.TransparentControl();
             this.transparentControl3 = new App.Models.TransparentControl();
             this.transparentControl1 = new App.Models.TransparentControl();
+            this.buttonVersion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,21 +112,6 @@
     "oncho Patronski\r\ndoncho.patronski@gmail.com";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)), true);
-            this.textBox2.Location = new System.Drawing.Point(1366, 12);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(41, 27);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "v2.0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::App.Properties.Resources.Dqsno_Dolu;
@@ -156,7 +141,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::App.Properties.Resources.Lqvo_Gore;
+            this.pictureBox3.Image = global::App.Properties.Resources.lqvo_gore_Blizzard_Logo;
             this.pictureBox3.Location = new System.Drawing.Point(32, 200);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(478, 272);
@@ -424,14 +409,30 @@
             this.transparentControl1.TabIndex = 15;
             this.transparentControl1.Text = "transparentControl1";
             // 
+            // buttonVersion
+            // 
+            this.buttonVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(192)))), ((int)(((byte)(69)))));
+            this.buttonVersion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonVersion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonVersion.FlatAppearance.BorderSize = 4;
+            this.buttonVersion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVersion.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonVersion.Location = new System.Drawing.Point(1352, 12);
+            this.buttonVersion.Name = "buttonVersion";
+            this.buttonVersion.Size = new System.Drawing.Size(55, 34);
+            this.buttonVersion.TabIndex = 41;
+            this.buttonVersion.Text = "v2.1";
+            this.buttonVersion.UseVisualStyleBackColor = false;
+            this.buttonVersion.Click += new System.EventHandler(this.buttonVersion_Click);
+            // 
             // StartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(176)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1439, 766);
+            this.Controls.Add(this.buttonVersion);
             this.Controls.Add(this.linkOpenSource);
             this.Controls.Add(this.transparentControl2);
             this.Controls.Add(this.transparentControl24);
@@ -460,7 +461,6 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -469,7 +469,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.0";
+            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartScreen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -487,7 +487,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -517,5 +516,6 @@
         private Models.TransparentControl transparentControl24;
         private Models.TransparentControl transparentControl2;
         private System.Windows.Forms.LinkLabel linkOpenSource;
+        private System.Windows.Forms.Button buttonVersion;
     }
 }

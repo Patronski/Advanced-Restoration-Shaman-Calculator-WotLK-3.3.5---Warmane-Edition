@@ -101,12 +101,6 @@ namespace App.Models.Spells
             return Math.Round(r, 4);
         }
 
-        public override double? CalculateMp5Percent()
-        {
-            var r = (Player.Instance.Mp5Crit ?? 0) * 200;
-            return Math.Round(r, 2);
-        }
-
         public override double CalculateMp5TotalCrit()
         {
             var r = Player.Instance.CriticalPercent * 45.91 * (Player.Instance.Mp5Crit ?? 0);
@@ -224,7 +218,6 @@ namespace App.Models.Spells
             Player.Instance.Mp5LHWPM = CalculateMp5LHWPM();
             Player.Instance.Mp5CHPM = CalculateMp5CHPM();
             Player.Instance.Mp5Crit = CalculateMp5Crit();
-            Player.Instance.Mp5Percent = CalculateMp5Percent();
             Player.Instance.Mp5TotalCrit = CalculateMp5TotalCrit();
             Player.Instance.Mp5Totems = CalculateMp5Totems();
             Player.Instance.Mp5Innervates = CalculateMp5Innervates();
