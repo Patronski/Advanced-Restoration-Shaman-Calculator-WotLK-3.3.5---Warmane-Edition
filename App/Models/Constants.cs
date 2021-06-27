@@ -57,10 +57,10 @@
         public static string Mod4PT9Bonus = "4P/T9 Bonus";
         public static string Mod4PT10Bonus = "4P/T10 Bonus";
 
-        public const string LabelAvgHps = "AVG eHPS:";
-        public const string LabelAvgHpsHealingWave = "AVG AA eHPS:";
-        public const string LabelAvgHps1Plus = "+1% AVG eHPS:";
-        public const string LabelChainHealAvgHotEhps = "AVG HOT eHPS:";
+        public const string LabelAvgHps = "AVG (r)HPS:";
+        public const string LabelAvgHpsHealingWave = "AVG AA (r)HPS:";
+        public const string LabelAvgHps1Plus = "+1% AVG (r)HPS:";
+        public const string LabelChainHealAvgHotEhps = "AVG HOT (r)HPS:";
 
         public const string None = "None";
         public const string AirTotemWrath = "Wrath of Air Totem";

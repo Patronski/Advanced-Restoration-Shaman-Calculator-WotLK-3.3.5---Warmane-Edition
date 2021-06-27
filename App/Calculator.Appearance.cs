@@ -34,16 +34,16 @@ namespace App
             checkBoxSteamcallersTotem.Tag = Resources.ST;
 
             myToolTip.SetToolTip(checkBoxTreeOfLife, "Tree of life");
-            checkBoxTreeOfLife.Tag = Resources.Tree_of_Life;
+            checkBoxTreeOfLife.Tag = Resources.IDA___TOL;
 
             myToolTip.SetToolTip(checkBoxHellscream, "checkBoxHellscream");
-            checkBoxHellscream.Tag = Resources.Hellscream_s_Warsong;
+            checkBoxHellscream.Tag = Resources.ICC_BUFF;
 
             myToolTip.SetToolTip(labelEmeraldVigor, "labelEmeraldVigor");
-            labelEmeraldVigor.Tag = Resources.Emerald_Vigor;
+            labelEmeraldVigor.Tag = Resources.VDW_BUFF;
 
             myToolTip.SetToolTip(checkBoxEmeraldVigor, "some name");
-            checkBoxEmeraldVigor.Tag = Resources.Emerald_Vigor;
+            checkBoxEmeraldVigor.Tag = Resources.VDW_BUFF;
 
             myToolTip.SetToolTip(checkBoxRiptidesConsumption, "some name");
             checkBoxRiptidesConsumption.Tag = Resources.Riptide_s_consumption;
@@ -61,10 +61,10 @@ namespace App
             checkBoxWrathOfTheAirTotem.Tag = Resources.Wrath_of_Air_Totem;
 
             myToolTip.SetToolTip(checkBoxSwiftRetributionHaste, "some name");
-            checkBoxSwiftRetributionHaste.Tag = Resources.Improved_Moonkin_Form;
+            checkBoxSwiftRetributionHaste.Tag = Resources.HASTE_BUFF;
 
             myToolTip.SetToolTip(checkBoxBloodlust, "some name");
-            checkBoxBloodlust.Tag = Resources.Bloodlust;
+            checkBoxBloodlust.Tag = Resources.Shaman_Blood___Hero;
 
             myToolTip.SetToolTip(checkBox2PT10Bonus, "some name");
             checkBox2PT10Bonus.Tag = Resources._2P_T10;
@@ -109,10 +109,10 @@ namespace App
             checkBox4PT10Bonus.Tag = Resources._4P_T10;
 
             myToolTip.SetToolTip(checkBoxBerserking, "mod");
-            checkBoxBerserking.Tag = Resources.Berserking;
+            checkBoxBerserking.Tag = Resources.Berserking__Troll_;
 
             myToolTip.SetToolTip(checkBoxGlyphOfManaTideTotem, "mod");
-            checkBoxGlyphOfManaTideTotem.Tag = Resources.Mana_Tide_TotemH;
+            checkBoxGlyphOfManaTideTotem.Tag = Resources.Glyph_of_MTT;
 
             myToolTip.SetToolTip(checkBoxMetaInsightfulEarthsiegeDiamond, "mod");
             checkBoxMetaInsightfulEarthsiegeDiamond.Tag = Resources.IED;
@@ -155,6 +155,15 @@ namespace App
 
             myToolTip.SetToolTip(checkBoxMp5RunicManaInjector, "mod");
             checkBoxMp5RunicManaInjector.Tag = Resources.RunicManaInjector;
+
+            myToolTip.SetToolTip(labelMp5BloodlustHeroism, "mod");
+            labelMp5BloodlustHeroism.Tag = Resources.Bloodlust;
+
+            myToolTip.SetToolTip(labelMp5CallOfElements, "mod");
+            labelMp5CallOfElements.Tag = Resources.CallOfElements;
+
+            myToolTip.SetToolTip(labelMP5CleanseSpirit, "mod");
+            labelMP5CleanseSpirit.Tag = Resources.CleanseSpirit;
         }
 
         private void SelectSpellImage(Spell selectedSpell)
@@ -389,7 +398,6 @@ namespace App
             labelAvgGlyphOfHealingWave.Hide();
             labeAvgHps2.Hide();
             labeEarthlivingHps3.Hide();
-            labeEarthlivingHps5.Hide();
             labelAvgAAHps2.Hide();
             labelEarthlivingHps1.Hide();
             labelAvgHealingEarthliving.Hide();

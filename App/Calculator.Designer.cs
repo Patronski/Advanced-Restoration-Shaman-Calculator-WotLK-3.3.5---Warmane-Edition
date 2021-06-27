@@ -138,7 +138,6 @@
             this.labelAvgGlyphOfHealingWave = new System.Windows.Forms.Label();
             this.textBoxGlyphOfHealingWave = new System.Windows.Forms.TextBox();
             this.textBoxEarthlivingAvgHpsTotal = new System.Windows.Forms.TextBox();
-            this.labeEarthlivingHps5 = new System.Windows.Forms.Label();
             this.labeEarthlivingHps3 = new System.Windows.Forms.Label();
             this.labeAvgHps2 = new System.Windows.Forms.Label();
             this.labelAvgAAHps2 = new System.Windows.Forms.Label();
@@ -1177,11 +1176,11 @@
             this.labelAvgHps.AutoSize = true;
             this.labelAvgHps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHps.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgHps.Location = new System.Drawing.Point(372, 351);
+            this.labelAvgHps.Location = new System.Drawing.Point(367, 351);
             this.labelAvgHps.Name = "labelAvgHps";
-            this.labelAvgHps.Size = new System.Drawing.Size(72, 13);
+            this.labelAvgHps.Size = new System.Drawing.Size(77, 13);
             this.labelAvgHps.TabIndex = 100;
-            this.labelAvgHps.Text = "AVG eHPS:";
+            this.labelAvgHps.Text = "AVG (r)HPS:";
             this.labelAvgHps.Visible = false;
             // 
             // textBoxAvgHps
@@ -1199,11 +1198,11 @@
             this.labelAvgHotHps.AutoSize = true;
             this.labelAvgHotHps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHotHps.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgHotHps.Location = new System.Drawing.Point(342, 393);
+            this.labelAvgHotHps.Location = new System.Drawing.Point(337, 393);
             this.labelAvgHotHps.Name = "labelAvgHotHps";
-            this.labelAvgHotHps.Size = new System.Drawing.Size(102, 13);
+            this.labelAvgHotHps.Size = new System.Drawing.Size(107, 13);
             this.labelAvgHotHps.TabIndex = 102;
-            this.labelAvgHotHps.Text = "AVG HOT eHPS:";
+            this.labelAvgHotHps.Text = "AVG HOT (r)HPS:";
             this.labelAvgHotHps.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelAvgHotHps.Visible = false;
             // 
@@ -1243,7 +1242,7 @@
             // labelChainedHeal2
             // 
             this.labelChainedHeal2.AutoSize = true;
-            this.labelChainedHeal2.Location = new System.Drawing.Point(367, 408);
+            this.labelChainedHeal2.Location = new System.Drawing.Point(336, 412);
             this.labelChainedHeal2.Name = "labelChainedHeal2";
             this.labelChainedHeal2.Size = new System.Drawing.Size(77, 13);
             this.labelChainedHeal2.TabIndex = 105;
@@ -1325,7 +1324,7 @@
             // labelForOneTarget
             // 
             this.labelForOneTarget.AutoSize = true;
-            this.labelForOneTarget.Location = new System.Drawing.Point(372, 413);
+            this.labelForOneTarget.Location = new System.Drawing.Point(367, 413);
             this.labelForOneTarget.Name = "labelForOneTarget";
             this.labelForOneTarget.Size = new System.Drawing.Size(113, 13);
             this.labelForOneTarget.TabIndex = 115;
@@ -1359,7 +1358,7 @@
             // labelSpamOn1Target1
             // 
             this.labelSpamOn1Target1.AutoSize = true;
-            this.labelSpamOn1Target1.Location = new System.Drawing.Point(375, 413);
+            this.labelSpamOn1Target1.Location = new System.Drawing.Point(368, 413);
             this.labelSpamOn1Target1.Name = "labelSpamOn1Target1";
             this.labelSpamOn1Target1.Size = new System.Drawing.Size(127, 13);
             this.labelSpamOn1Target1.TabIndex = 118;
@@ -1369,7 +1368,7 @@
             // labelSpamOnDifferent1
             // 
             this.labelSpamOnDifferent1.AutoSize = true;
-            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(372, 371);
+            this.labelSpamOnDifferent1.Location = new System.Drawing.Point(367, 371);
             this.labelSpamOnDifferent1.Name = "labelSpamOnDifferent1";
             this.labelSpamOnDifferent1.Size = new System.Drawing.Size(164, 13);
             this.labelSpamOnDifferent1.TabIndex = 119;
@@ -1381,11 +1380,11 @@
             this.labelAvgAAeHps.AutoSize = true;
             this.labelAvgAAeHps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgAAeHps.ForeColor = System.Drawing.Color.Blue;
-            this.labelAvgAAeHps.Location = new System.Drawing.Point(352, 434);
+            this.labelAvgAAeHps.Location = new System.Drawing.Point(347, 434);
             this.labelAvgAAeHps.Name = "labelAvgAAeHps";
-            this.labelAvgAAeHps.Size = new System.Drawing.Size(92, 13);
+            this.labelAvgAAeHps.Size = new System.Drawing.Size(97, 13);
             this.labelAvgAAeHps.TabIndex = 122;
-            this.labelAvgAAeHps.Text = "AVG AA eHPS:";
+            this.labelAvgAAeHps.Text = "AVG AA (r)HPS:";
             this.labelAvgAAeHps.Visible = false;
             // 
             // textBoxAvgAAeHps
@@ -1416,11 +1415,11 @@
             this.labelHot.AutoSize = true;
             this.labelHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelHot.ForeColor = System.Drawing.Color.DarkGreen;
-            this.labelHot.Location = new System.Drawing.Point(366, 194);
+            this.labelHot.Location = new System.Drawing.Point(364, 195);
             this.labelHot.Name = "labelHot";
-            this.labelHot.Size = new System.Drawing.Size(37, 13);
+            this.labelHot.Size = new System.Drawing.Size(77, 13);
             this.labelHot.TabIndex = 125;
-            this.labelHot.Text = "HOT:";
+            this.labelHot.Text = "TICK (HOT):";
             this.labelHot.Visible = false;
             // 
             // textBoxAncestralAwaceningFrom
@@ -1496,9 +1495,9 @@
             this.labelAvgGlyphOfHealingWave.ForeColor = System.Drawing.Color.DarkGreen;
             this.labelAvgGlyphOfHealingWave.Location = new System.Drawing.Point(289, 214);
             this.labelAvgGlyphOfHealingWave.Name = "labelAvgGlyphOfHealingWave";
-            this.labelAvgGlyphOfHealingWave.Size = new System.Drawing.Size(72, 13);
+            this.labelAvgGlyphOfHealingWave.Size = new System.Drawing.Size(77, 13);
             this.labelAvgGlyphOfHealingWave.TabIndex = 136;
-            this.labelAvgGlyphOfHealingWave.Text = "AVG eHPS:";
+            this.labelAvgGlyphOfHealingWave.Text = "AVG (r)HPS:";
             this.labelAvgGlyphOfHealingWave.Visible = false;
             // 
             // textBoxGlyphOfHealingWave
@@ -1522,28 +1521,16 @@
             this.textBoxEarthlivingAvgHpsTotal.TabIndex = 144;
             this.textBoxEarthlivingAvgHpsTotal.Visible = false;
             // 
-            // labeEarthlivingHps5
-            // 
-            this.labeEarthlivingHps5.AutoSize = true;
-            this.labeEarthlivingHps5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labeEarthlivingHps5.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps5.Location = new System.Drawing.Point(520, 434);
-            this.labeEarthlivingHps5.Name = "labeEarthlivingHps5";
-            this.labeEarthlivingHps5.Size = new System.Drawing.Size(132, 13);
-            this.labeEarthlivingHps5.TabIndex = 145;
-            this.labeEarthlivingHps5.Text = "+1% AVG Total eHPS:";
-            this.labeEarthlivingHps5.Visible = false;
-            // 
             // labeEarthlivingHps3
             // 
             this.labeEarthlivingHps3.AutoSize = true;
             this.labeEarthlivingHps3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeEarthlivingHps3.ForeColor = System.Drawing.Color.Olive;
-            this.labeEarthlivingHps3.Location = new System.Drawing.Point(361, 434);
+            this.labeEarthlivingHps3.Location = new System.Drawing.Point(349, 434);
             this.labeEarthlivingHps3.Name = "labeEarthlivingHps3";
-            this.labeEarthlivingHps3.Size = new System.Drawing.Size(83, 13);
+            this.labeEarthlivingHps3.Size = new System.Drawing.Size(95, 13);
             this.labeEarthlivingHps3.TabIndex = 147;
-            this.labeEarthlivingHps3.Text = "AVG Healing:";
+            this.labeEarthlivingHps3.Text = "AVG (r)Healing:";
             this.labeEarthlivingHps3.Visible = false;
             // 
             // labeAvgHps2
@@ -1551,11 +1538,11 @@
             this.labeAvgHps2.AutoSize = true;
             this.labeAvgHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeAvgHps2.ForeColor = System.Drawing.Color.Olive;
-            this.labeAvgHps2.Location = new System.Drawing.Point(372, 393);
+            this.labeAvgHps2.Location = new System.Drawing.Point(367, 393);
             this.labeAvgHps2.Name = "labeAvgHps2";
-            this.labeAvgHps2.Size = new System.Drawing.Size(72, 13);
+            this.labeAvgHps2.Size = new System.Drawing.Size(77, 13);
             this.labeAvgHps2.TabIndex = 148;
-            this.labeAvgHps2.Text = "AVG eHPS:";
+            this.labeAvgHps2.Text = "AVG (r)HPS:";
             this.labeAvgHps2.Visible = false;
             // 
             // labelAvgAAHps2
@@ -1563,11 +1550,11 @@
             this.labelAvgAAHps2.AutoSize = true;
             this.labelAvgAAHps2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgAAHps2.ForeColor = System.Drawing.Color.Blue;
-            this.labelAvgAAHps2.Location = new System.Drawing.Point(352, 392);
+            this.labelAvgAAHps2.Location = new System.Drawing.Point(347, 392);
             this.labelAvgAAHps2.Name = "labelAvgAAHps2";
-            this.labelAvgAAHps2.Size = new System.Drawing.Size(92, 13);
+            this.labelAvgAAHps2.Size = new System.Drawing.Size(97, 13);
             this.labelAvgAAHps2.TabIndex = 154;
-            this.labelAvgAAHps2.Text = "AVG AA eHPS:";
+            this.labelAvgAAHps2.Text = "AVG AA (r)HPS:";
             this.labelAvgAAHps2.Visible = false;
             // 
             // labelAvgHealingEarthliving
@@ -1575,11 +1562,11 @@
             this.labelAvgHealingEarthliving.AutoSize = true;
             this.labelAvgHealingEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHealingEarthliving.ForeColor = System.Drawing.Color.Olive;
-            this.labelAvgHealingEarthliving.Location = new System.Drawing.Point(466, 544);
+            this.labelAvgHealingEarthliving.Location = new System.Drawing.Point(454, 544);
             this.labelAvgHealingEarthliving.Name = "labelAvgHealingEarthliving";
-            this.labelAvgHealingEarthliving.Size = new System.Drawing.Size(83, 13);
+            this.labelAvgHealingEarthliving.Size = new System.Drawing.Size(95, 13);
             this.labelAvgHealingEarthliving.TabIndex = 156;
-            this.labelAvgHealingEarthliving.Text = "AVG Healing:";
+            this.labelAvgHealingEarthliving.Text = "AVG (r)Healing:";
             this.labelAvgHealingEarthliving.Visible = false;
             // 
             // labelEarthlivingHps1
@@ -1587,11 +1574,11 @@
             this.labelEarthlivingHps1.AutoSize = true;
             this.labelEarthlivingHps1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEarthlivingHps1.ForeColor = System.Drawing.Color.Olive;
-            this.labelEarthlivingHps1.Location = new System.Drawing.Point(361, 351);
+            this.labelEarthlivingHps1.Location = new System.Drawing.Point(349, 351);
             this.labelEarthlivingHps1.Name = "labelEarthlivingHps1";
-            this.labelEarthlivingHps1.Size = new System.Drawing.Size(83, 13);
+            this.labelEarthlivingHps1.Size = new System.Drawing.Size(95, 13);
             this.labelEarthlivingHps1.TabIndex = 157;
-            this.labelEarthlivingHps1.Text = "AVG Healing:";
+            this.labelEarthlivingHps1.Text = "AVG (r)Healing:";
             this.labelEarthlivingHps1.Visible = false;
             // 
             // checkBox2PT9Bonus
@@ -1681,17 +1668,17 @@
             this.labelAvgHpm.AutoSize = true;
             this.labelAvgHpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHpm.ForeColor = System.Drawing.Color.Indigo;
-            this.labelAvgHpm.Location = new System.Drawing.Point(578, 351);
+            this.labelAvgHpm.Location = new System.Drawing.Point(566, 351);
             this.labelAvgHpm.Name = "labelAvgHpm";
-            this.labelAvgHpm.Size = new System.Drawing.Size(67, 13);
+            this.labelAvgHpm.Size = new System.Drawing.Size(79, 13);
             this.labelAvgHpm.TabIndex = 166;
-            this.labelAvgHpm.Text = "AVG HPM:";
+            this.labelAvgHpm.Text = "AVG (r)HPM:";
             this.labelAvgHpm.Visible = false;
             // 
             // labelFor1Target
             // 
             this.labelFor1Target.AutoSize = true;
-            this.labelFor1Target.Location = new System.Drawing.Point(578, 371);
+            this.labelFor1Target.Location = new System.Drawing.Point(566, 371);
             this.labelFor1Target.Name = "labelFor1Target";
             this.labelFor1Target.Size = new System.Drawing.Size(71, 13);
             this.labelFor1Target.TabIndex = 169;
@@ -1812,11 +1799,11 @@
             this.labelMp5TimeLength.AutoSize = true;
             this.labelMp5TimeLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMp5TimeLength.ForeColor = System.Drawing.Color.Black;
-            this.labelMp5TimeLength.Location = new System.Drawing.Point(284, 138);
+            this.labelMp5TimeLength.Location = new System.Drawing.Point(280, 138);
             this.labelMp5TimeLength.Name = "labelMp5TimeLength";
-            this.labelMp5TimeLength.Size = new System.Drawing.Size(77, 13);
+            this.labelMp5TimeLength.Size = new System.Drawing.Size(81, 13);
             this.labelMp5TimeLength.TabIndex = 175;
-            this.labelMp5TimeLength.Text = "Time length:";
+            this.labelMp5TimeLength.Text = "Time Length:";
             this.labelMp5TimeLength.Visible = false;
             // 
             // labelMp5TotalRiptides
@@ -2529,11 +2516,11 @@
             this.labelAvgHpm2.AutoSize = true;
             this.labelAvgHpm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgHpm2.ForeColor = System.Drawing.Color.Indigo;
-            this.labelAvgHpm2.Location = new System.Drawing.Point(578, 393);
+            this.labelAvgHpm2.Location = new System.Drawing.Point(566, 393);
             this.labelAvgHpm2.Name = "labelAvgHpm2";
-            this.labelAvgHpm2.Size = new System.Drawing.Size(67, 13);
+            this.labelAvgHpm2.Size = new System.Drawing.Size(79, 13);
             this.labelAvgHpm2.TabIndex = 250;
-            this.labelAvgHpm2.Text = "AVG HPM:";
+            this.labelAvgHpm2.Text = "AVG (r)HPM:";
             this.labelAvgHpm2.Visible = false;
             // 
             // textBoxAvgHpmOneTarget
@@ -2549,7 +2536,7 @@
             // labelSpamOnDifferent3
             // 
             this.labelSpamOnDifferent3.AutoSize = true;
-            this.labelSpamOnDifferent3.Location = new System.Drawing.Point(578, 371);
+            this.labelSpamOnDifferent3.Location = new System.Drawing.Point(566, 371);
             this.labelSpamOnDifferent3.Name = "labelSpamOnDifferent3";
             this.labelSpamOnDifferent3.Size = new System.Drawing.Size(164, 13);
             this.labelSpamOnDifferent3.TabIndex = 251;
@@ -2559,7 +2546,7 @@
             // labelSpamOn1Target3
             // 
             this.labelSpamOn1Target3.AutoSize = true;
-            this.labelSpamOn1Target3.Location = new System.Drawing.Point(578, 413);
+            this.labelSpamOn1Target3.Location = new System.Drawing.Point(566, 413);
             this.labelSpamOn1Target3.Name = "labelSpamOn1Target3";
             this.labelSpamOn1Target3.Size = new System.Drawing.Size(127, 13);
             this.labelSpamOn1Target3.TabIndex = 253;
@@ -2614,7 +2601,7 @@
             // 
             this.labelGlyphOfHealingWave.AutoSize = true;
             this.labelGlyphOfHealingWave.Enabled = false;
-            this.labelGlyphOfHealingWave.Location = new System.Drawing.Point(290, 236);
+            this.labelGlyphOfHealingWave.Location = new System.Drawing.Point(284, 234);
             this.labelGlyphOfHealingWave.Name = "labelGlyphOfHealingWave";
             this.labelGlyphOfHealingWave.Size = new System.Drawing.Size(123, 13);
             this.labelGlyphOfHealingWave.TabIndex = 259;
@@ -3200,7 +3187,7 @@
             // labelEarthlivingPerCastCH
             // 
             this.labelEarthlivingPerCastCH.AutoSize = true;
-            this.labelEarthlivingPerCastCH.Location = new System.Drawing.Point(466, 564);
+            this.labelEarthlivingPerCastCH.Location = new System.Drawing.Point(454, 564);
             this.labelEarthlivingPerCastCH.Name = "labelEarthlivingPerCastCH";
             this.labelEarthlivingPerCastCH.Size = new System.Drawing.Size(108, 13);
             this.labelEarthlivingPerCastCH.TabIndex = 311;
@@ -3210,7 +3197,7 @@
             // labelEarthlivingCastHW
             // 
             this.labelEarthlivingCastHW.AutoSize = true;
-            this.labelEarthlivingCastHW.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingCastHW.Location = new System.Drawing.Point(454, 564);
             this.labelEarthlivingCastHW.Name = "labelEarthlivingCastHW";
             this.labelEarthlivingCastHW.Size = new System.Drawing.Size(124, 13);
             this.labelEarthlivingCastHW.TabIndex = 312;
@@ -3220,7 +3207,7 @@
             // labelEarthlivingCastLHW
             // 
             this.labelEarthlivingCastLHW.AutoSize = true;
-            this.labelEarthlivingCastLHW.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingCastLHW.Location = new System.Drawing.Point(454, 564);
             this.labelEarthlivingCastLHW.Name = "labelEarthlivingCastLHW";
             this.labelEarthlivingCastLHW.Size = new System.Drawing.Size(158, 13);
             this.labelEarthlivingCastLHW.TabIndex = 313;
@@ -3230,7 +3217,7 @@
             // labelEarthlivingPerCastR
             // 
             this.labelEarthlivingPerCastR.AutoSize = true;
-            this.labelEarthlivingPerCastR.Location = new System.Drawing.Point(466, 566);
+            this.labelEarthlivingPerCastR.Location = new System.Drawing.Point(454, 564);
             this.labelEarthlivingPerCastR.Name = "labelEarthlivingPerCastR";
             this.labelEarthlivingPerCastR.Size = new System.Drawing.Size(89, 13);
             this.labelEarthlivingPerCastR.TabIndex = 314;
@@ -3240,7 +3227,7 @@
             // labelEarthlivingHPSCH
             // 
             this.labelEarthlivingHPSCH.AutoSize = true;
-            this.labelEarthlivingHPSCH.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSCH.Location = new System.Drawing.Point(472, 613);
             this.labelEarthlivingHPSCH.Name = "labelEarthlivingHPSCH";
             this.labelEarthlivingHPSCH.Size = new System.Drawing.Size(110, 13);
             this.labelEarthlivingHPSCH.TabIndex = 315;
@@ -3250,7 +3237,7 @@
             // labelEarthlivingHPSHW
             // 
             this.labelEarthlivingHPSHW.AutoSize = true;
-            this.labelEarthlivingHPSHW.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSHW.Location = new System.Drawing.Point(472, 613);
             this.labelEarthlivingHPSHW.Name = "labelEarthlivingHPSHW";
             this.labelEarthlivingHPSHW.Size = new System.Drawing.Size(126, 13);
             this.labelEarthlivingHPSHW.TabIndex = 316;
@@ -3260,7 +3247,7 @@
             // labelEarthlivingHPSLHW
             // 
             this.labelEarthlivingHPSLHW.AutoSize = true;
-            this.labelEarthlivingHPSLHW.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSLHW.Location = new System.Drawing.Point(472, 613);
             this.labelEarthlivingHPSLHW.Name = "labelEarthlivingHPSLHW";
             this.labelEarthlivingHPSLHW.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelEarthlivingHPSLHW.Size = new System.Drawing.Size(160, 13);
@@ -3271,7 +3258,7 @@
             // labelEarthlivingHPSr
             // 
             this.labelEarthlivingHPSr.AutoSize = true;
-            this.labelEarthlivingHPSr.Location = new System.Drawing.Point(477, 613);
+            this.labelEarthlivingHPSr.Location = new System.Drawing.Point(472, 613);
             this.labelEarthlivingHPSr.Name = "labelEarthlivingHPSr";
             this.labelEarthlivingHPSr.Size = new System.Drawing.Size(91, 13);
             this.labelEarthlivingHPSr.TabIndex = 318;
@@ -3293,11 +3280,11 @@
             this.labelEarthlivingEHPS.AutoSize = true;
             this.labelEarthlivingEHPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEarthlivingEHPS.ForeColor = System.Drawing.Color.Olive;
-            this.labelEarthlivingEHPS.Location = new System.Drawing.Point(477, 593);
+            this.labelEarthlivingEHPS.Location = new System.Drawing.Point(472, 593);
             this.labelEarthlivingEHPS.Name = "labelEarthlivingEHPS";
-            this.labelEarthlivingEHPS.Size = new System.Drawing.Size(72, 13);
+            this.labelEarthlivingEHPS.Size = new System.Drawing.Size(77, 13);
             this.labelEarthlivingEHPS.TabIndex = 321;
-            this.labelEarthlivingEHPS.Text = "AVG eHPS:";
+            this.labelEarthlivingEHPS.Text = "AVG (r)HPS:";
             this.labelEarthlivingEHPS.Visible = false;
             // 
             // pictureBoxEarthTotem
@@ -3506,7 +3493,6 @@
             this.Controls.Add(this.labelAvgAAHps2);
             this.Controls.Add(this.labeAvgHps2);
             this.Controls.Add(this.labeEarthlivingHps3);
-            this.Controls.Add(this.labeEarthlivingHps5);
             this.Controls.Add(this.textBoxEarthlivingAvgHpsTotal);
             this.Controls.Add(this.textBoxGlyphOfHealingWave);
             this.Controls.Add(this.labelAvgGlyphOfHealingWave);
@@ -3760,7 +3746,6 @@
         private System.Windows.Forms.Label labelAvgGlyphOfHealingWave;
         private System.Windows.Forms.TextBox textBoxGlyphOfHealingWave;
         private System.Windows.Forms.TextBox textBoxEarthlivingAvgHpsTotal;
-        private System.Windows.Forms.Label labeEarthlivingHps5;
         private System.Windows.Forms.Label labeEarthlivingHps3;
         private System.Windows.Forms.Label labeAvgHps2;
         private System.Windows.Forms.Label labelAvgAAHps2;

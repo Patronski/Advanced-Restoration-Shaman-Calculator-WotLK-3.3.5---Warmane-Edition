@@ -562,6 +562,12 @@
     <None Include="Resources\NatureResistanceTooltip.png" />
     <None Include="Resources\WindfuryTotemTooltip.png" />
     <None Include="Resources\lqvo_gore_Blizzard_Logo.gif" />
+    <None Include="Resources\HASTE BUFF.png" />
+    <None Include="Resources\ICC BUFF.png" />
+    <None Include="Resources\IDA - TOL.png" />
+    <None Include="Resources\Shaman Blood - Hero.png" />
+    <None Include="Resources\VDW BUFF.png" />
+    <None Include="Resources\Berserking %28Troll%29.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

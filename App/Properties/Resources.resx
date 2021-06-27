@@ -496,4 +496,22 @@
   <data name="Changelog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Changelog.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
+  <data name="Berserking__Troll_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Berserking (Troll).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HASTE_BUFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HASTE BUFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICC_BUFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICC BUFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IDA___TOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IDA - TOL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shaman_Blood___Hero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shaman Blood - Hero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VDW_BUFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VDW BUFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

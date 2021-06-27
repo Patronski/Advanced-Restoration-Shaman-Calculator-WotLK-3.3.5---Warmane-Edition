@@ -213,6 +213,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Berserking__Troll_ {
+            get {
+                object obj = ResourceManager.GetObject("Berserking__Troll_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Blessing_of_the_Eternals {
             get {
                 object obj = ResourceManager.GetObject("Blessing_of_the_Eternals", resourceCulture);
@@ -272,10 +282,10 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
         ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
-        ///\pard\sa200\sl276\slmult1\ul\b\f0\fs22\lang9 Version 2.1 (June 26, 2021):\par
-        ///\ulnone\b0 - Added \b eHPS\b0  calculations for \b Earthliving by Chain Heal, Healing Wave, Lesser Healing Wave and Riptide spam\f1\lang1026  \b0 (separately for each \f0\lang1033 spell\f1\lang1026 )\f0\lang9\par
+        ///\pard\sa200\sl276\slmult1\ul\b\f0\fs22\lang9 Version 2.1 (June 27, 2021):\par
+        ///\ulnone\b0 - Added \b (r)HPS\b0  calculations for \b Earthliving by Chain Heal, Healing Wave, Lesser Healing Wave and Riptide spam\f1\lang1026  \b0 (separately for each \f0\lang1033 spell\f1\lang1026 )\f0\lang9\par
         ///- Added new tooltips\par
-        ///- Fixed an issue with not corr [rest of string was truncated]&quot;;.
+        ///- Fixed an issue with not co [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Changelog {
             get {
@@ -562,6 +572,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap HASTE_BUFF {
+            get {
+                object obj = ResourceManager.GetObject("HASTE_BUFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Healing_FocusH {
             get {
                 object obj = ResourceManager.GetObject("Healing_FocusH", resourceCulture);
@@ -648,6 +668,26 @@ namespace App.Properties {
         public static System.IO.UnmanagedMemoryStream HW {
             get {
                 return ResourceManager.GetStream("HW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ICC_BUFF {
+            get {
+                object obj = ResourceManager.GetObject("ICC_BUFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IDA___TOL {
+            get {
+                object obj = ResourceManager.GetObject("IDA___TOL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -970,6 +1010,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Shaman_Blood___Hero {
+            get {
+                object obj = ResourceManager.GetObject("Shaman_Blood___Hero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Sound_off {
             get {
                 object obj = ResourceManager.GetObject("Sound_off", resourceCulture);
@@ -1213,6 +1263,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Tree_of_Life {
             get {
                 object obj = ResourceManager.GetObject("Tree_of_Life", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap VDW_BUFF {
+            get {
+                object obj = ResourceManager.GetObject("VDW_BUFF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
