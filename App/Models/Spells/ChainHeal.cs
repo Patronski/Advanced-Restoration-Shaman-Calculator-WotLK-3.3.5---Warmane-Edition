@@ -33,6 +33,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new FourPiecesT10Bonus());
             this.Modifiers.Add(new Berserking());
             this.Modifiers.Add(new GlyphOfEarthliving());
+            this.Modifiers.Add(new FocusMagic());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }
@@ -164,7 +165,7 @@ namespace App.Models.Spells
             var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
-            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
+            double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
@@ -190,7 +191,7 @@ namespace App.Models.Spells
             var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
-            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
+            double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
@@ -259,7 +260,7 @@ namespace App.Models.Spells
             var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
-            double coefficientHaste = is4PT8 ? 0.435 : 0.4;
+            double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 

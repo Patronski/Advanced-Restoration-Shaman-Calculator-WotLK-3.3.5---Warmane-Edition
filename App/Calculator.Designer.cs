@@ -302,6 +302,7 @@
             this.pictureBoxWaterTotem = new System.Windows.Forms.PictureBox();
             this.pictureBoxFireTotem = new System.Windows.Forms.PictureBox();
             this.pictureBoxAirTotem = new System.Windows.Forms.PictureBox();
+            this.checkBoxFocusMagic = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmeraldVigor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Totems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMp5Inervates)).BeginInit();
@@ -508,7 +509,7 @@
             // 
             this.checkBoxGlyphOfEarthShield.AutoSize = true;
             this.checkBoxGlyphOfEarthShield.Enabled = false;
-            this.checkBoxGlyphOfEarthShield.Location = new System.Drawing.Point(12, 564);
+            this.checkBoxGlyphOfEarthShield.Location = new System.Drawing.Point(12, 587);
             this.checkBoxGlyphOfEarthShield.Name = "checkBoxGlyphOfEarthShield";
             this.checkBoxGlyphOfEarthShield.Size = new System.Drawing.Size(125, 17);
             this.checkBoxGlyphOfEarthShield.TabIndex = 27;
@@ -520,7 +521,7 @@
             // 
             this.checkBoxGyphOfHST.AutoSize = true;
             this.checkBoxGyphOfHST.Enabled = false;
-            this.checkBoxGyphOfHST.Location = new System.Drawing.Point(12, 587);
+            this.checkBoxGyphOfHST.Location = new System.Drawing.Point(12, 610);
             this.checkBoxGyphOfHST.Name = "checkBoxGyphOfHST";
             this.checkBoxGyphOfHST.Size = new System.Drawing.Size(90, 17);
             this.checkBoxGyphOfHST.TabIndex = 28;
@@ -532,7 +533,7 @@
             // 
             this.checkBoxGlyphOfLHW.AutoSize = true;
             this.checkBoxGlyphOfLHW.Enabled = false;
-            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(12, 610);
+            this.checkBoxGlyphOfLHW.Location = new System.Drawing.Point(12, 633);
             this.checkBoxGlyphOfLHW.Name = "checkBoxGlyphOfLHW";
             this.checkBoxGlyphOfLHW.Size = new System.Drawing.Size(93, 17);
             this.checkBoxGlyphOfLHW.TabIndex = 29;
@@ -578,7 +579,7 @@
             // 
             this.checkBox2PT10Bonus.AutoSize = true;
             this.checkBox2PT10Bonus.Enabled = false;
-            this.checkBox2PT10Bonus.Location = new System.Drawing.Point(12, 503);
+            this.checkBox2PT10Bonus.Location = new System.Drawing.Point(12, 526);
             this.checkBox2PT10Bonus.Name = "checkBox2PT10Bonus";
             this.checkBox2PT10Bonus.Size = new System.Drawing.Size(96, 17);
             this.checkBox2PT10Bonus.TabIndex = 34;
@@ -624,7 +625,7 @@
             // 
             this.checkBoxTidalWavesCrit.AutoSize = true;
             this.checkBoxTidalWavesCrit.Enabled = false;
-            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(12, 327);
+            this.checkBoxTidalWavesCrit.Location = new System.Drawing.Point(12, 350);
             this.checkBoxTidalWavesCrit.Name = "checkBoxTidalWavesCrit";
             this.checkBoxTidalWavesCrit.Size = new System.Drawing.Size(197, 17);
             this.checkBoxTidalWavesCrit.TabIndex = 39;
@@ -1221,7 +1222,7 @@
             this.checkBoxGlyphChainHeal.AutoSize = true;
             this.checkBoxGlyphChainHeal.Enabled = false;
             this.checkBoxGlyphChainHeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphChainHeal.Location = new System.Drawing.Point(12, 633);
+            this.checkBoxGlyphChainHeal.Location = new System.Drawing.Point(12, 656);
             this.checkBoxGlyphChainHeal.Name = "checkBoxGlyphChainHeal";
             this.checkBoxGlyphChainHeal.Size = new System.Drawing.Size(120, 17);
             this.checkBoxGlyphChainHeal.TabIndex = 103;
@@ -1266,7 +1267,7 @@
             this.checkBoxMetaRevitalizingSkyflareDiamond.AutoSize = true;
             this.checkBoxMetaRevitalizingSkyflareDiamond.Enabled = false;
             this.checkBoxMetaRevitalizingSkyflareDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMetaRevitalizingSkyflareDiamond.Location = new System.Drawing.Point(12, 763);
+            this.checkBoxMetaRevitalizingSkyflareDiamond.Location = new System.Drawing.Point(12, 786);
             this.checkBoxMetaRevitalizingSkyflareDiamond.Name = "checkBoxMetaRevitalizingSkyflareDiamond";
             this.checkBoxMetaRevitalizingSkyflareDiamond.Size = new System.Drawing.Size(166, 17);
             this.checkBoxMetaRevitalizingSkyflareDiamond.TabIndex = 107;
@@ -1289,7 +1290,7 @@
             this.checkBoxGlyphOfEarthliving.AutoSize = true;
             this.checkBoxGlyphOfEarthliving.Enabled = false;
             this.checkBoxGlyphOfEarthliving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfEarthliving.Location = new System.Drawing.Point(12, 679);
+            this.checkBoxGlyphOfEarthliving.Location = new System.Drawing.Point(12, 702);
             this.checkBoxGlyphOfEarthliving.Name = "checkBoxGlyphOfEarthliving";
             this.checkBoxGlyphOfEarthliving.Size = new System.Drawing.Size(161, 17);
             this.checkBoxGlyphOfEarthliving.TabIndex = 109;
@@ -1402,7 +1403,7 @@
             this.checkBoxGlyphOfRiptide.AutoSize = true;
             this.checkBoxGlyphOfRiptide.Enabled = false;
             this.checkBoxGlyphOfRiptide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfRiptide.Location = new System.Drawing.Point(12, 656);
+            this.checkBoxGlyphOfRiptide.Location = new System.Drawing.Point(12, 679);
             this.checkBoxGlyphOfRiptide.Name = "checkBoxGlyphOfRiptide";
             this.checkBoxGlyphOfRiptide.Size = new System.Drawing.Size(101, 17);
             this.checkBoxGlyphOfRiptide.TabIndex = 124;
@@ -1479,7 +1480,7 @@
             this.checkBoxGlyphOfHealingWave.AutoSize = true;
             this.checkBoxGlyphOfHealingWave.Enabled = false;
             this.checkBoxGlyphOfHealingWave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfHealingWave.Location = new System.Drawing.Point(12, 702);
+            this.checkBoxGlyphOfHealingWave.Location = new System.Drawing.Point(12, 725);
             this.checkBoxGlyphOfHealingWave.Name = "checkBoxGlyphOfHealingWave";
             this.checkBoxGlyphOfHealingWave.Size = new System.Drawing.Size(136, 17);
             this.checkBoxGlyphOfHealingWave.TabIndex = 135;
@@ -1585,7 +1586,7 @@
             // 
             this.checkBox2PT9Bonus.AutoSize = true;
             this.checkBox2PT9Bonus.Enabled = false;
-            this.checkBox2PT9Bonus.Location = new System.Drawing.Point(12, 457);
+            this.checkBox2PT9Bonus.Location = new System.Drawing.Point(12, 480);
             this.checkBox2PT9Bonus.Name = "checkBox2PT9Bonus";
             this.checkBox2PT9Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox2PT9Bonus.TabIndex = 159;
@@ -1597,7 +1598,7 @@
             // 
             this.checkBox4PT7Bonus.AutoSize = true;
             this.checkBox4PT7Bonus.Enabled = false;
-            this.checkBox4PT7Bonus.Location = new System.Drawing.Point(12, 388);
+            this.checkBox4PT7Bonus.Location = new System.Drawing.Point(12, 411);
             this.checkBox4PT7Bonus.Name = "checkBox4PT7Bonus";
             this.checkBox4PT7Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT7Bonus.TabIndex = 160;
@@ -1609,7 +1610,7 @@
             // 
             this.checkBoxSteamcallersTotem.AutoSize = true;
             this.checkBoxSteamcallersTotem.Enabled = false;
-            this.checkBoxSteamcallersTotem.Location = new System.Drawing.Point(12, 893);
+            this.checkBoxSteamcallersTotem.Location = new System.Drawing.Point(12, 916);
             this.checkBoxSteamcallersTotem.Name = "checkBoxSteamcallersTotem";
             this.checkBoxSteamcallersTotem.Size = new System.Drawing.Size(121, 17);
             this.checkBoxSteamcallersTotem.TabIndex = 161;
@@ -1621,7 +1622,7 @@
             // 
             this.checkBox4PT8Bonus.AutoSize = true;
             this.checkBox4PT8Bonus.Enabled = false;
-            this.checkBox4PT8Bonus.Location = new System.Drawing.Point(12, 434);
+            this.checkBox4PT8Bonus.Location = new System.Drawing.Point(12, 457);
             this.checkBox4PT8Bonus.Name = "checkBox4PT8Bonus";
             this.checkBox4PT8Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT8Bonus.TabIndex = 162;
@@ -1633,7 +1634,7 @@
             // 
             this.checkBox2PT8Bonus.AutoSize = true;
             this.checkBox2PT8Bonus.Enabled = false;
-            this.checkBox2PT8Bonus.Location = new System.Drawing.Point(12, 411);
+            this.checkBox2PT8Bonus.Location = new System.Drawing.Point(12, 434);
             this.checkBox2PT8Bonus.Name = "checkBox2PT8Bonus";
             this.checkBox2PT8Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox2PT8Bonus.TabIndex = 163;
@@ -1645,7 +1646,7 @@
             // 
             this.checkBox4PT9Bonus.AutoSize = true;
             this.checkBox4PT9Bonus.Enabled = false;
-            this.checkBox4PT9Bonus.Location = new System.Drawing.Point(12, 480);
+            this.checkBox4PT9Bonus.Location = new System.Drawing.Point(12, 503);
             this.checkBox4PT9Bonus.Name = "checkBox4PT9Bonus";
             this.checkBox4PT9Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox4PT9Bonus.TabIndex = 164;
@@ -2046,7 +2047,7 @@
             // 
             this.checkBox4PT10Bonus.AutoSize = true;
             this.checkBox4PT10Bonus.Enabled = false;
-            this.checkBox4PT10Bonus.Location = new System.Drawing.Point(12, 526);
+            this.checkBox4PT10Bonus.Location = new System.Drawing.Point(12, 549);
             this.checkBox4PT10Bonus.Name = "checkBox4PT10Bonus";
             this.checkBox4PT10Bonus.Size = new System.Drawing.Size(96, 17);
             this.checkBox4PT10Bonus.TabIndex = 203;
@@ -2058,7 +2059,7 @@
             // 
             this.labelTierBonus.AutoSize = true;
             this.labelTierBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTierBonus.Location = new System.Drawing.Point(9, 347);
+            this.labelTierBonus.Location = new System.Drawing.Point(9, 370);
             this.labelTierBonus.Name = "labelTierBonus";
             this.labelTierBonus.Size = new System.Drawing.Size(80, 15);
             this.labelTierBonus.TabIndex = 204;
@@ -2068,7 +2069,7 @@
             // 
             this.labelGlyphs.AutoSize = true;
             this.labelGlyphs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGlyphs.Location = new System.Drawing.Point(9, 546);
+            this.labelGlyphs.Location = new System.Drawing.Point(9, 569);
             this.labelGlyphs.Name = "labelGlyphs";
             this.labelGlyphs.Size = new System.Drawing.Size(54, 15);
             this.labelGlyphs.TabIndex = 205;
@@ -2078,7 +2079,7 @@
             // 
             this.labelMetaGem.AutoSize = true;
             this.labelMetaGem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMetaGem.Location = new System.Drawing.Point(9, 745);
+            this.labelMetaGem.Location = new System.Drawing.Point(9, 768);
             this.labelMetaGem.Name = "labelMetaGem";
             this.labelMetaGem.Size = new System.Drawing.Size(84, 15);
             this.labelMetaGem.TabIndex = 206;
@@ -2088,7 +2089,7 @@
             // 
             this.checkBox2PT7Bonus.AutoSize = true;
             this.checkBox2PT7Bonus.Enabled = false;
-            this.checkBox2PT7Bonus.Location = new System.Drawing.Point(12, 365);
+            this.checkBox2PT7Bonus.Location = new System.Drawing.Point(12, 388);
             this.checkBox2PT7Bonus.Name = "checkBox2PT7Bonus";
             this.checkBox2PT7Bonus.Size = new System.Drawing.Size(90, 17);
             this.checkBox2PT7Bonus.TabIndex = 207;
@@ -2101,7 +2102,7 @@
             this.checkBoxGlyphOfManaTideTotem.AutoSize = true;
             this.checkBoxGlyphOfManaTideTotem.Enabled = false;
             this.checkBoxGlyphOfManaTideTotem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGlyphOfManaTideTotem.Location = new System.Drawing.Point(12, 725);
+            this.checkBoxGlyphOfManaTideTotem.Location = new System.Drawing.Point(12, 748);
             this.checkBoxGlyphOfManaTideTotem.Name = "checkBoxGlyphOfManaTideTotem";
             this.checkBoxGlyphOfManaTideTotem.Size = new System.Drawing.Size(152, 17);
             this.checkBoxGlyphOfManaTideTotem.TabIndex = 209;
@@ -2114,7 +2115,7 @@
             this.checkBoxMetaInsightfulEarthsiegeDiamond.AutoSize = true;
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Enabled = false;
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMetaInsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(12, 786);
+            this.checkBoxMetaInsightfulEarthsiegeDiamond.Location = new System.Drawing.Point(12, 809);
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Name = "checkBoxMetaInsightfulEarthsiegeDiamond";
             this.checkBoxMetaInsightfulEarthsiegeDiamond.Size = new System.Drawing.Size(166, 17);
             this.checkBoxMetaInsightfulEarthsiegeDiamond.TabIndex = 210;
@@ -2402,7 +2403,7 @@
             // 
             this.labelTotems.AutoSize = true;
             this.labelTotems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTotems.Location = new System.Drawing.Point(9, 806);
+            this.labelTotems.Location = new System.Drawing.Point(9, 829);
             this.labelTotems.Name = "labelTotems";
             this.labelTotems.Size = new System.Drawing.Size(58, 15);
             this.labelTotems.TabIndex = 237;
@@ -2412,7 +2413,7 @@
             // 
             this.checkBoxTotemOfForestGrowth.AutoSize = true;
             this.checkBoxTotemOfForestGrowth.Enabled = false;
-            this.checkBoxTotemOfForestGrowth.Location = new System.Drawing.Point(12, 847);
+            this.checkBoxTotemOfForestGrowth.Location = new System.Drawing.Point(12, 870);
             this.checkBoxTotemOfForestGrowth.Name = "checkBoxTotemOfForestGrowth";
             this.checkBoxTotemOfForestGrowth.Size = new System.Drawing.Size(137, 17);
             this.checkBoxTotemOfForestGrowth.TabIndex = 238;
@@ -2424,7 +2425,7 @@
             // 
             this.checkBoxTotemOfTheBay.AutoSize = true;
             this.checkBoxTotemOfTheBay.Enabled = false;
-            this.checkBoxTotemOfTheBay.Location = new System.Drawing.Point(12, 824);
+            this.checkBoxTotemOfTheBay.Location = new System.Drawing.Point(12, 847);
             this.checkBoxTotemOfTheBay.Name = "checkBoxTotemOfTheBay";
             this.checkBoxTotemOfTheBay.Size = new System.Drawing.Size(107, 17);
             this.checkBoxTotemOfTheBay.TabIndex = 239;
@@ -2436,7 +2437,7 @@
             // 
             this.checkBoxTotemOfMisery.AutoSize = true;
             this.checkBoxTotemOfMisery.Enabled = false;
-            this.checkBoxTotemOfMisery.Location = new System.Drawing.Point(12, 870);
+            this.checkBoxTotemOfMisery.Location = new System.Drawing.Point(12, 893);
             this.checkBoxTotemOfMisery.Name = "checkBoxTotemOfMisery";
             this.checkBoxTotemOfMisery.Size = new System.Drawing.Size(101, 17);
             this.checkBoxTotemOfMisery.TabIndex = 240;
@@ -2610,7 +2611,7 @@
             // 
             // pictureBoxReset
             // 
-            this.pictureBoxReset.Location = new System.Drawing.Point(972, 841);
+            this.pictureBoxReset.Location = new System.Drawing.Point(972, 865);
             this.pictureBoxReset.Name = "pictureBoxReset";
             this.pictureBoxReset.Size = new System.Drawing.Size(64, 64);
             this.pictureBoxReset.TabIndex = 262;
@@ -2619,7 +2620,7 @@
             // 
             // pictureBoxInfo
             // 
-            this.pictureBoxInfo.Location = new System.Drawing.Point(878, 841);
+            this.pictureBoxInfo.Location = new System.Drawing.Point(878, 865);
             this.pictureBoxInfo.Name = "pictureBoxInfo";
             this.pictureBoxInfo.Size = new System.Drawing.Size(64, 64);
             this.pictureBoxInfo.TabIndex = 261;
@@ -2628,7 +2629,7 @@
             // 
             // pictureBoxHome
             // 
-            this.pictureBoxHome.Location = new System.Drawing.Point(688, 841);
+            this.pictureBoxHome.Location = new System.Drawing.Point(688, 865);
             this.pictureBoxHome.Name = "pictureBoxHome";
             this.pictureBoxHome.Size = new System.Drawing.Size(64, 64);
             this.pictureBoxHome.TabIndex = 260;
@@ -2638,7 +2639,7 @@
             // 
             // pictureBoxSound
             // 
-            this.pictureBoxSound.Location = new System.Drawing.Point(783, 841);
+            this.pictureBoxSound.Location = new System.Drawing.Point(783, 865);
             this.pictureBoxSound.Name = "pictureBoxSound";
             this.pictureBoxSound.Size = new System.Drawing.Size(64, 64);
             this.pictureBoxSound.TabIndex = 258;
@@ -3323,13 +3324,26 @@
             this.pictureBoxAirTotem.TabStop = false;
             this.pictureBoxAirTotem.Visible = false;
             // 
+            // checkBoxFocusMagic
+            // 
+            this.checkBoxFocusMagic.AutoSize = true;
+            this.checkBoxFocusMagic.Enabled = false;
+            this.checkBoxFocusMagic.Location = new System.Drawing.Point(12, 327);
+            this.checkBoxFocusMagic.Name = "checkBoxFocusMagic";
+            this.checkBoxFocusMagic.Size = new System.Drawing.Size(87, 17);
+            this.checkBoxFocusMagic.TabIndex = 326;
+            this.checkBoxFocusMagic.Text = "Focus Magic";
+            this.checkBoxFocusMagic.UseVisualStyleBackColor = true;
+            this.checkBoxFocusMagic.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1048, 917);
+            this.ClientSize = new System.Drawing.Size(1048, 941);
+            this.Controls.Add(this.checkBoxFocusMagic);
             this.Controls.Add(this.pictureBoxAirTotem);
             this.Controls.Add(this.pictureBoxFireTotem);
             this.Controls.Add(this.pictureBoxWaterTotem);
@@ -3910,6 +3924,7 @@
         private System.Windows.Forms.PictureBox pictureBoxWaterTotem;
         private System.Windows.Forms.PictureBox pictureBoxFireTotem;
         private System.Windows.Forms.PictureBox pictureBoxAirTotem;
+        private System.Windows.Forms.CheckBox checkBoxFocusMagic;
     }
 }
 

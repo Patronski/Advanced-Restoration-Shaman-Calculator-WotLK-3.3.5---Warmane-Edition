@@ -99,6 +99,7 @@
     <Compile Include="Models\Forms.cs" />
     <Compile Include="Models\Modifier.cs" />
     <Compile Include="Models\Modifiers\Berserking.cs" />
+    <Compile Include="Models\Modifiers\FocusMagic.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\FourPiecesT8Bonus.cs" />
@@ -568,6 +569,7 @@
     <None Include="Resources\Shaman Blood - Hero.png" />
     <None Include="Resources\VDW BUFF.png" />
     <None Include="Resources\Berserking %28Troll%29.png" />
+    <None Include="Resources\Focus_Magic.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

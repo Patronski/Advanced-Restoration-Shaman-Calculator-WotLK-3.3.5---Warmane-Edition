@@ -21,6 +21,7 @@ namespace App.Models.Spells
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new TotemOfForestGrowth());
             this.Modifiers.Add(new TotemOfMisery());
+            this.Modifiers.Add(new FocusMagic());
 
             modifierNames = this.Modifiers.Select(x => x.Display).ToList();
         }

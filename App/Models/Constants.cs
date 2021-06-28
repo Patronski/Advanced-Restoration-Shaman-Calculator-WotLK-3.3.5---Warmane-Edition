@@ -30,6 +30,7 @@
         public const string ModGlyphHST = "Glyph of Healing Stream Totem";
         public const string ModHellscream = "Hellscream's Warsong / Strength of Wrynn";
         public const string ModMoonkin = "Moonkin Aura / Elemental Oath";
+        public const string ModFocusMagic = "Focus Magic";
         public const string Mod2PT10Bonus_RapidCurrents = "2P/T10 (Rapid Currents)";
         public const string ModRapidConsumption = "Riptides Consumption (Chain Heal)";
         public const string ModSwiftRetrubution = "Swift Retribution / Improved Moonkin Form";

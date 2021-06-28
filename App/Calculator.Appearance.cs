@@ -164,6 +164,9 @@ namespace App
 
             myToolTip.SetToolTip(labelMP5CleanseSpirit, "mod");
             labelMP5CleanseSpirit.Tag = Resources.CleanseSpirit;
+
+            myToolTip.SetToolTip(checkBoxFocusMagic, "mod");
+            checkBoxFocusMagic.Tag = Resources.Focus_Magic;
         }
 
         private void SelectSpellImage(Spell selectedSpell)

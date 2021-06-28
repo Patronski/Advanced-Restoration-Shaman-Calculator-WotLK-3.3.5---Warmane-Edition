@@ -453,6 +453,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Focus_Magic {
+            get {
+                object obj = ResourceManager.GetObject("Focus_Magic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap FrostResistanceTotem {
             get {
                 object obj = ResourceManager.GetObject("FrostResistanceTotem", resourceCulture);
