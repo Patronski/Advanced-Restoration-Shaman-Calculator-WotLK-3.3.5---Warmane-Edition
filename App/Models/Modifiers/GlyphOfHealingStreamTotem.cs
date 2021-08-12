@@ -4,10 +4,8 @@
     {
         public GlyphOfHealingStreamTotem()
         {
-            Display = Constants.ModGlyphHST;
+            Name = Constants.ModGlyphHST;
             Value = 1.2;
-
-            InitCheckBox();
         }
 
         public override void Modify()

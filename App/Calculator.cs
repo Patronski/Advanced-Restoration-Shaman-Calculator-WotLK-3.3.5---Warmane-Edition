@@ -57,21 +57,8 @@ namespace App
 
         private void AdjustComponentProperties()
         {
-            Text = Constants.ProgramName;
-            this.checkBoxBloodlust.Text = Constants.ModBloodlust;
-            this.checkBoxEmeraldVigor.Text = Constants.ModEmeraldVigor;
-            this.checkBoxGlyphOfEarthShield.Text = Constants.ModGlyphESH;
-            this.checkBoxGlyphOfLHW.Text = Constants.ModGlyphLHW;
-            this.checkBoxGyphOfHST.Text = Constants.ModGlyphHST;
-            this.checkBoxHellscream.Text = Constants.ModHellscream;
-            this.checkBoxMoonkinForm.Text = Constants.ModMoonkin;
-            this.checkBox2PT10Bonus.Text = Constants.Mod2PT10Bonus_RapidCurrents;
-            this.checkBoxRiptidesConsumption.Text = Constants.ModRapidConsumption;
-            this.checkBoxSwiftRetributionHaste.Text = Constants.ModSwiftRetrubution;
-            this.checkBoxTidalWaves.Text = Constants.ModTidalWavesHaste;
-            this.checkBoxTidalWavesCrit.Text = Constants.ModTidalWavesCrit;
-            this.checkBoxTreeOfLife.Text = Constants.ModTreeOfLife;
-            this.checkBoxWrathOfTheAirTotem.Text = Constants.ModWrathOfTheAirTotem;
+            Text = Constants.ProgramName + " " + Constants.ProgramVersion;
+
             pictureBoxSpellEarthliving.Image = Resources.SpellEarthliving;
             if (Player.Instance.MuteSound)
             {
@@ -122,58 +109,129 @@ namespace App
 
         private void InitialiseComboBoxAirTotems()
         {
-            comboBoxAirTotems.Items.Add(new Totem { Name = Constants.AirTotemWrath, Mana = 483,
-                Icon = Resources.Air_Totem_Wrath_of_Air_Totem, Tooltip = Resources.Wrath_of_Air_Totem });
+            comboBoxAirTotems.Items.Add(new Totem
+            {
+                Name = Constants.AirTotemWrath,
+                Mana = 483,
+                Icon = Resources.Air_Totem_Wrath_of_Air_Totem,
+                Tooltip = Resources.Wrath_of_Air_Totem
+            });
 
-            comboBoxAirTotems.Items.Add(new Totem { Name = Constants.AirTotemWindfury, Mana = 483,
-                Icon = Resources.Air_Totem_Windfury_Totem, Tooltip = Resources.WindfuryTotemTooltip });
+            comboBoxAirTotems.Items.Add(new Totem
+            {
+                Name = Constants.AirTotemWindfury,
+                Mana = 483,
+                Icon = Resources.Air_Totem_Windfury_Totem,
+                Tooltip = Resources.WindfuryTotemTooltip
+            });
 
-            comboBoxAirTotems.Items.Add(new Totem { Name = Constants.AirTotemResistance, Mana = 351,
-                Icon = Resources.Air_Totem_Nature_Resistance_Totem, Tooltip = Resources.NatureResistanceTooltip });
+            comboBoxAirTotems.Items.Add(new Totem
+            {
+                Name = Constants.AirTotemResistance,
+                Mana = 351,
+                Icon = Resources.Air_Totem_Nature_Resistance_Totem,
+                Tooltip = Resources.NatureResistanceTooltip
+            });
 
-            comboBoxAirTotems.Items.Add(new Totem { Name = Constants.None, Mana = 0,
-                Icon = null, Tooltip = null });
+            comboBoxAirTotems.Items.Add(new Totem
+            {
+                Name = Constants.None,
+                Mana = 0,
+                Icon = null,
+                Tooltip = null
+            });
         }
 
         private void InitialiseComboBoxEarthTotems()
         {
-            comboBoxEarthTotems.Items.Add(new Totem { Name = Constants.EarthTotemStrength, Mana = 439,
-                Icon = Resources.EarthTotemStrength, Tooltip = Resources.EarthTotem });
+            comboBoxEarthTotems.Items.Add(new Totem
+            {
+                Name = Constants.EarthTotemStrength,
+                Mana = 439,
+                Icon = Resources.EarthTotemStrength,
+                Tooltip = Resources.EarthTotem
+            });
 
-            comboBoxEarthTotems.Items.Add(new Totem { Name = Constants.EarthTotemStoneskin, Mana = 439,
-                Icon = Resources.EarthTotemStoneskin, Tooltip = Resources.StoneskinTotem });
+            comboBoxEarthTotems.Items.Add(new Totem
+            {
+                Name = Constants.EarthTotemStoneskin,
+                Mana = 439,
+                Icon = Resources.EarthTotemStoneskin,
+                Tooltip = Resources.StoneskinTotem
+            });
 
-            comboBoxEarthTotems.Items.Add(new Totem { Name = Constants.None, Mana = 0,
-                Icon = null, Tooltip = null });
+            comboBoxEarthTotems.Items.Add(new Totem
+            {
+                Name = Constants.None,
+                Mana = 0,
+                Icon = null,
+                Tooltip = null
+            });
         }
 
         private void InitialiseComboBoxWaterTotems()
         {
-            comboBoxWaterTotems.Items.Add(new Totem { Name = Constants.WaterTotemHealing, Mana = 131
-                , Icon = Resources.WaterTotemHealing, Tooltip = Resources.HealingStreamTotem });
+            comboBoxWaterTotems.Items.Add(new Totem
+            {
+                Name = Constants.WaterTotemHealing,
+                Mana = 131
+                ,
+                Icon = Resources.WaterTotemHealing,
+                Tooltip = Resources.HealingStreamTotem
+            });
 
-            comboBoxWaterTotems.Items.Add(new Totem { Name = Constants.WaterTotemMana, Mana = 175,
-                Icon = Resources.Water_Totem_Mana_Spring_Totem, Tooltip = Resources.ManaSpringTotem });
+            comboBoxWaterTotems.Items.Add(new Totem
+            {
+                Name = Constants.WaterTotemMana,
+                Mana = 175,
+                Icon = Resources.Water_Totem_Mana_Spring_Totem,
+                Tooltip = Resources.ManaSpringTotem
+            });
 
-            comboBoxWaterTotems.Items.Add(new Totem { Name = Constants.WaterTotemResistance, Mana = 351,
-                Icon = Resources.Water_Totem_Fire_Resistance_Totem, Tooltip = Resources.FireResistanceTotem });
+            comboBoxWaterTotems.Items.Add(new Totem
+            {
+                Name = Constants.WaterTotemResistance,
+                Mana = 351,
+                Icon = Resources.Water_Totem_Fire_Resistance_Totem,
+                Tooltip = Resources.FireResistanceTotem
+            });
 
-            comboBoxWaterTotems.Items.Add(new Totem { Name = Constants.WaterTotemCleansing, Mana = 351,
-                Icon = Resources.Water_Totem_Cleaansing_Totem, Tooltip = Resources.CleanseSpirit });
+            comboBoxWaterTotems.Items.Add(new Totem
+            {
+                Name = Constants.WaterTotemCleansing,
+                Mana = 351,
+                Icon = Resources.Water_Totem_Cleaansing_Totem,
+                Tooltip = Resources.CleanseSpirit
+            });
 
             comboBoxWaterTotems.Items.Add(new Totem { Name = Constants.None, Mana = 0, Icon = null, Tooltip = null });
         }
 
         private void InitialiseComboBoxFireTotems()
         {
-            comboBoxFireTotems.Items.Add(new Totem { Name = Constants.FireTotemFlametongue, Mana = 483,
-                Icon = Resources.FireTotemFlametongue, Tooltip = Resources.FlametongueTotem });
+            comboBoxFireTotems.Items.Add(new Totem
+            {
+                Name = Constants.FireTotemFlametongue,
+                Mana = 483,
+                Icon = Resources.FireTotemFlametongue,
+                Tooltip = Resources.FlametongueTotem
+            });
 
-            comboBoxFireTotems.Items.Add(new Totem { Name = Constants.FireTotemResistance, Mana = 351,
-                Icon = Resources.FrostTotemResistance, Tooltip = Resources.FrostResistanceTotem });
+            comboBoxFireTotems.Items.Add(new Totem
+            {
+                Name = Constants.FireTotemResistance,
+                Mana = 351,
+                Icon = Resources.FrostTotemResistance,
+                Tooltip = Resources.FrostResistanceTotem
+            });
 
-            comboBoxFireTotems.Items.Add(new Totem { Name = Constants.None, Mana = 0,
-                Icon = null, Tooltip = null });
+            comboBoxFireTotems.Items.Add(new Totem
+            {
+                Name = Constants.None,
+                Mana = 0,
+                Icon = null,
+                Tooltip = null
+            });
         }
 
         private void textBoxSpellPower_TextChanged(object sender, EventArgs e)
@@ -229,7 +287,7 @@ namespace App
 
             soundPlayer.PlaySound(selectedSpell.Name);
 
-            //selectedSpell.EnableDisableModifiers(checkBoxes);
+            //selectedSpell.EnableDisableModifiers(checkBoxes); its not needed
             EnableControllsAtStart();
             EnableDisableControlls();
 
@@ -259,9 +317,10 @@ namespace App
                 Player.Instance.Modifiers[check.Text] = check.Checked;
 
                 AdjustEmeraldVigor(check);
+                AdjustTallentCriticalDepression(check);
                 AdjustChainHeal(check);
 
-                selectedSpell?.CalculateOnModifierChange(check.Text, check.Checked);
+                selectedSpell?.CalculateOnModifierChange(check.Name, check.Checked);
 
                 DisplayOnGlyphOfHealingWave();
                 EnableDisableControlls();
@@ -282,17 +341,26 @@ namespace App
 
         private void AdjustEmeraldVigor(CheckBox check)
         {
-            if (check.Text == Constants.ModEmeraldVigor)
+            if (check.Name == Constants.ModEmeraldVigor)
             {
-                if (check.Checked)
+                numericUpDownEmeraldVigor.Enabled = check.Checked;
+                if (numericUpDownEmeraldVigor.Enabled)
                 {
-                    numericUpDownEmeraldVigor.Enabled = true;
+                    Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
                 }
                 else
                 {
-                    numericUpDownEmeraldVigor.Enabled = false;
+                    Player.Instance.EmeraldVigorNumber = 0;
                 }
-                Player.Instance.EmeraldVigorNumber = (int)numericUpDownEmeraldVigor.Value;
+            }
+        }
+
+        private void AdjustTallentCriticalDepression(CheckBox check)
+        {
+            if (check.Name == Constants.ModTCD)
+            {
+                numericUpDownTCD.Enabled = check.Checked;
+                Player.Instance.TallentsCriticalDepression = (int)numericUpDownTCD.Value;
             }
         }
 
@@ -331,7 +399,7 @@ namespace App
             {
                 if (check.Enabled && check.Checked)
                 {
-                    result.Add(check.Text);
+                    result.Add(check.Name);
                 }
             }
             return result;
@@ -838,6 +906,18 @@ namespace App
             {
                 var number = (int)((NumericUpDown)sender).Value;
                 Player.Instance.Mp5RunicManaPotion = number;
+                selectedSpell?.Calculate();
+                DisplayHealing();
+            }
+            skipEventChanged = false;
+        }
+
+        private void numericUpDownTCD_ValueChanged(object sender, EventArgs e)
+        {
+            if (!skipEventChanged)
+            {
+                var number = (int)((NumericUpDown)sender).Value;
+                Player.Instance.TallentsCriticalDepression = number;
                 selectedSpell?.Calculate();
                 DisplayHealing();
             }

@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF636B1-8E3E-4817-ADF4-7ED3DA2856D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>App</RootNamespace>
-    <AssemblyName>[WotLK] PvE Restoration Shaman Calculator v2.1</AssemblyName>
+    <AssemblyName>[WotLK] PvE Restoration Shaman Calculator v2.2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -86,9 +86,6 @@
       <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Constants.cs" />
-    <Compile Include="Models\CustomizedToolTip.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Models\CustomSoundPlayer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,12 +104,14 @@
     <Compile Include="Models\Modifiers\GlyphOfManaTideTotem.cs" />
     <Compile Include="Models\Modifiers\MetaInsightfulEarthsiegeDiamond.cs" />
     <Compile Include="Models\Modifiers\SteamcallersTotemBonus.cs" />
+    <Compile Include="Models\Modifiers\TalentsCriticalDepression.cs" />
     <Compile Include="Models\Modifiers\TotemOfForestGrowth.cs" />
     <Compile Include="Models\Modifiers\TotemOfMisery.cs" />
     <Compile Include="Models\Modifiers\TotemOfTheBay.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT10Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT7Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesT8Bonus.cs" />
+    <Compile Include="Models\Modifiers\TwoPiecesTier6Bonus.cs" />
     <Compile Include="Models\Modifiers\TwoPiecesTier9Bonus.cs" />
     <Compile Include="Models\Modifiers\BloodlustHeroism.cs" />
     <Compile Include="Models\Modifiers\EmeraldVigor.cs" />
@@ -570,6 +569,8 @@
     <None Include="Resources\VDW BUFF.png" />
     <None Include="Resources\Berserking %28Troll%29.png" />
     <None Include="Resources\Focus_Magic.png" />
+    <None Include="Resources\2P_T6.png" />
+    <None Include="Resources\Talents_Critical_Depression.png" />
     <Content Include="shaman_pc8_icon.ico" />
   </ItemGroup>
   <ItemGroup>

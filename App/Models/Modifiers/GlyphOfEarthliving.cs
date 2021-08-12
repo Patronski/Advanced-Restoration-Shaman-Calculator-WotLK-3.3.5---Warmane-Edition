@@ -4,7 +4,7 @@
     {
         public GlyphOfEarthliving()
         {
-            Display = Constants.ModGlyphOfEarthliving;
+            Name = Constants.ModGlyphOfEarthliving;
         }
     }
 }

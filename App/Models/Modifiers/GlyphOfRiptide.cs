@@ -4,7 +4,7 @@
     {
         public GlyphOfRiptide()
         {
-            Display = Constants.ModGlyphOfRiptide;
+            Name = Constants.ModGlyphOfRiptide;
         }
     }
 }

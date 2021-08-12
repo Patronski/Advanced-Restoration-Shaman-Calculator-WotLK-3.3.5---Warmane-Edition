@@ -147,7 +147,7 @@ namespace App.Models
 
             Player.Instance.CastingTime = CalculateCastingTime();
 
-            Modifiers.FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked)?.Modify();
+            Modifiers.FirstOrDefault(x => x.Name == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked)?.Modify();
 
             Player.Instance.EarthlivingAvgHpsCH = CalculateEarthlivingAvgHpsCH();
             Player.Instance.EarthlivingAvgHpsHW = CalculateEarthlivingAvgHpsHW();
@@ -191,7 +191,7 @@ namespace App.Models
             Player.Instance.EarthlivingEHPS = CalculateEarthlivingEHPS();
 
             Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false)
+                .FirstOrDefault(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked == false)
                 ?.Modify();
         }
 
@@ -202,7 +202,7 @@ namespace App.Models
         {
             foreach (var modifier in Modifiers)
             {
-                if (modifier.IsCheckBoxChecked && modifier.Display != Constants.ModTidalWavesHaste)
+                if (modifier.IsCheckBoxChecked && modifier.Name != Constants.ModTidalWavesHaste)
                 {
                     modifier.Modify();
                 }
@@ -213,7 +213,7 @@ namespace App.Models
         {
             foreach (var modifier in this.Modifiers)
             {
-                if (checkedModifierNames.Contains(modifier.Display))
+                if (checkedModifierNames.Contains(modifier.Name))
                 {
                     modifier.IsCheckBoxChecked = true;
                 }
@@ -228,7 +228,7 @@ namespace App.Models
         {
             foreach (var check in checks)
             {
-                if (this.modifierNames.Contains(check.Text))
+                if (this.modifierNames.Contains(check.Name))
                 {
                     check.Enabled = true;
                 }
@@ -239,7 +239,7 @@ namespace App.Models
         {
             foreach (var modifier in Modifiers)
             {
-                if (modName == modifier.Display)
+                if (modName == modifier.Name)
                 {
                     if (isChecked != modifier.IsCheckBoxChecked)
                     {

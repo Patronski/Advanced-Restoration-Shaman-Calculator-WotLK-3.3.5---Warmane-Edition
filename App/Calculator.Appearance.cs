@@ -102,6 +102,9 @@ namespace App
             myToolTip.SetToolTip(checkBox4PT7Bonus, "mod");
             checkBox4PT7Bonus.Tag = Resources._4P_T7;
 
+            myToolTip.SetToolTip(checkBox2PT6Bonus, "mod");
+            checkBox2PT6Bonus.Tag = Resources._2P_T6;
+
             myToolTip.SetToolTip(checkBox2PT7Bonus, "mod");
             checkBox2PT7Bonus.Tag = Resources._2P_T7;
 
@@ -167,6 +170,12 @@ namespace App
 
             myToolTip.SetToolTip(checkBoxFocusMagic, "mod");
             checkBoxFocusMagic.Tag = Resources.Focus_Magic;
+
+            myToolTip.SetToolTip(labelTCD, "mod");
+            labelTCD.Tag = Resources.Talents_Critical_Depression;
+
+            myToolTip.SetToolTip(checkBoxTCD, "mod");
+            checkBoxTCD.Tag = Resources.Talents_Critical_Depression;
         }
 
         private void SelectSpellImage(Spell selectedSpell)
@@ -220,6 +229,10 @@ namespace App
             {
                 labelEmeraldVigor.Enabled = true;
             }
+            if (!labelTCD.Enabled)
+            {
+                labelTCD.Enabled = true;
+            }
             labelSpellPower.Enabled = true;
             textBoxSpellPower.Enabled = true;
             labelHaste.Enabled = true;
@@ -230,6 +243,10 @@ namespace App
             if (checkBoxEmeraldVigor.Checked == true)
             {
                 numericUpDownEmeraldVigor.Enabled = true;
+            }
+            if (checkBoxTCD.Checked == true)
+            {
+                numericUpDownTCD.Enabled = true;
             }
             if (checkBoxGlyphOfHealingWave.Checked)
             {

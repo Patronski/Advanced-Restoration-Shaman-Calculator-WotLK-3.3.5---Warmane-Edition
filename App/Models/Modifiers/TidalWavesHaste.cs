@@ -6,11 +6,9 @@ namespace App.Models.Modifiers
     {
         public TidalWavesHaste()
         {
-            Display = Constants.ModTidalWavesHaste;
+            Name = Constants.ModTidalWavesHaste;
 
             Value = 25;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

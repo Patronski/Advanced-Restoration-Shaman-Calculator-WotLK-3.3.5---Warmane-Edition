@@ -4,9 +4,7 @@
     {
         public FourPiecesT8Bonus()
         {
-            Display = Constants.Mod4PT8Bonus;
-
-            this.InitCheckBox();
+            Name = Constants.Mod4PT8Bonus;
         }
     }
 }

@@ -4,9 +4,8 @@
     {
         public TwoPiecesT9Bonus()
         {
-            Display = Constants.Mod2PT9Bonus;
+            Name = Constants.Mod2PT9Bonus;
             Value = 1.2;
-            this.InitCheckBox();
         }
 
         public override void Modify()

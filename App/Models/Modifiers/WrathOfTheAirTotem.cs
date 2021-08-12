@@ -4,11 +4,9 @@
     {
         public WrathOfTheAirTotem()
         {
-            Display = Constants.ModWrathOfTheAirTotem;
+            Name = Constants.ModWrathOfTheAirTotem;
 
             Value = 1.05;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

@@ -28,8 +28,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new SwiftRetribution());
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -53,9 +54,9 @@ namespace App.Models.Spells
         public override int? CalculateAverageHPS()
         {
             var isGlyphOfRiptide = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
             var is2PT8Equiped = Modifiers
-                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
 
             int cooldown = is2PT8Equiped ? 5 : 6;
 
@@ -78,7 +79,7 @@ namespace App.Models.Spells
         public override int? CalculateAverageHotHPS()
         {
             var is2PT8Equiped = Modifiers
-                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
 
             int cooldown = is2PT8Equiped ? 5 : 6;
             int hotMultiplier = is2PT8Equiped ? 1 : 2;
@@ -92,7 +93,7 @@ namespace App.Models.Spells
         public override int? CalculateAverageAAHPS()
         {
             var is2PT8Equiped = Modifiers
-                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
 
             int cooldown = is2PT8Equiped ? 500 : 600;
 
@@ -142,12 +143,12 @@ namespace App.Models.Spells
 
         public override double CalculateAvgHpm()
         {
-            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Name == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
             var multiplier = mod2Pt7 ? 5.35 : 4.92;
 
             // {Rip HIT * [Crtit% / 100 * 1.5 + (1 - Crit% / 100)] + [5 * Rip TICK]} / [751 - (Crit% * 4.92 )]
             var isGlyphOfRiptide = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfRiptide && x.IsCheckBoxChecked);
 
             var critChance = Player.Instance.CriticalPercent;
             var critValue = Player.Instance.CriticalMultiplier;
@@ -192,7 +193,7 @@ namespace App.Models.Spells
         public override int? CalculateEarthlivingAvgHpsRP()
         {
             var isGlyphOfEarthliving = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
 
             double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
 
@@ -204,7 +205,7 @@ namespace App.Models.Spells
         public override int CalculateEarthlivingEHPS()
         {
             var is2PT8Equiped = Modifiers
-                .Any(x => x.Display == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod2PT8Bonus && x.IsCheckBoxChecked);
 
             int cooldown = is2PT8Equiped ? 5 : 6;
 

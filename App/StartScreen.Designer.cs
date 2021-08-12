@@ -421,7 +421,7 @@
             this.buttonVersion.Name = "buttonVersion";
             this.buttonVersion.Size = new System.Drawing.Size(55, 34);
             this.buttonVersion.TabIndex = 41;
-            this.buttonVersion.Text = "v2.1";
+            this.buttonVersion.Text = "v2.2";
             this.buttonVersion.UseVisualStyleBackColor = false;
             this.buttonVersion.Click += new System.EventHandler(this.buttonVersion_Click);
             // 
@@ -469,7 +469,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.1";
+            this.Text = "[WotLK] PvE Restoration Shaman Calculator v2.2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartScreen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

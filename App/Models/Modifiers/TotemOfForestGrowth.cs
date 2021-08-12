@@ -4,9 +4,7 @@
     {
         public TotemOfForestGrowth()
         {
-            Display = Constants.ModTotemOfForestGrowth;
-
-            this.InitCheckBox();
+            Name = Constants.ModTotemOfForestGrowth;
         }
     }
 }

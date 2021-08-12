@@ -4,7 +4,7 @@
     {
         public GlyphOfManaTideTotem()
         {
-            Display = Constants.ModGlyphOfManaTideTotem;
+            Name = Constants.ModGlyphOfManaTideTotem;
         }
     }
 }

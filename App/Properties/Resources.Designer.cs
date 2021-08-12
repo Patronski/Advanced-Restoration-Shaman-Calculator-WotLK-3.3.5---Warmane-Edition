@@ -73,6 +73,16 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _2P_T6 {
+            get {
+                object obj = ResourceManager.GetObject("_2P_T6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _2P_T7 {
             get {
                 object obj = ResourceManager.GetObject("_2P_T7", resourceCulture);
@@ -283,9 +293,9 @@ namespace App.Properties {
         ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
         ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
         ///\pard\sa200\sl276\slmult1\ul\b\f0\fs22\lang9 Version 2.1 (June 27, 2021):\par
-        ///\ulnone\b0 - Added \b (r)HPS\b0  calculations for \b Earthliving by Chain Heal, Healing Wave, Lesser Healing Wave and Riptide spam\f1\lang1026  \b0 (separately for each \f0\lang1033 spell\f1\lang1026 )\f0\lang9\par
-        ///- Added new tooltips\par
-        ///- Fixed an issue with not co [rest of string was truncated]&quot;;.
+        ///\ulnone\b0 - Added \b (r)HPS\b0  calculations for \b Earthliving by Chain Heal, Healing Wave, Lesser Healing Wave and Riptide spam\f1\lang1026  \b0 (separately for each \f0\lang1033 spell\f1\lang1026 )\par
+        ///\f0\lang9 - Added \b Focus Magic \b0 as a Crit Modifier.\par
+        ///- [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Changelog {
             get {
@@ -1143,6 +1153,16 @@ namespace App.Properties {
         public static System.Drawing.Bitmap Talents {
             get {
                 object obj = ResourceManager.GetObject("Talents", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Talents_Critical_Depression {
+            get {
+                object obj = ResourceManager.GetObject("Talents_Critical_Depression", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

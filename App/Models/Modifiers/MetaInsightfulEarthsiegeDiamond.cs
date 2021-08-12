@@ -4,9 +4,7 @@
     {
         public MetaInsightfulEarthsiegeDiamond()
         {
-            Display = Constants.ModMetaInsightfulEarthsiegeDiamond;
-
-            this.InitCheckBox();
+            Name = Constants.ModMetaInsightfulEarthsiegeDiamond;
         }
     }
 }

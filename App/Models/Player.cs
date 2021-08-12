@@ -27,6 +27,7 @@ namespace App.Models
         {
             Modifiers = new Dictionary<string, bool>();
             ModifierNames = new List<string>();
+            CriticalPercent = Constants.BaseCriticalPercent;
         }
 
         public void Recalculate()
@@ -54,6 +55,7 @@ namespace App.Models
         public int MP5S { get; set; }
 
         public int EmeraldVigorNumber { get; set; }
+        public int TallentsCriticalDepression { get; set; }
 
         private int hasteRating;
 
@@ -94,7 +96,26 @@ namespace App.Models
             return percent > 100 ? 100 : percent;
         }
 
-        public double CriticalPercent { get; set; } = Constants.BaseCriticalPercent;
+        private double criticalPercent;
+        public double CriticalPercent 
+        {
+            get
+            {
+                if (criticalPercent > 100)
+                {
+                    return 100d;
+                }
+                else if (criticalPercent < 0)
+                {
+                    return 0d;
+                }
+                else return criticalPercent;
+            }
+            set
+            {
+                criticalPercent = value;
+            }
+        } 
 
         private double criticalPercentInitial;
 
@@ -112,8 +133,6 @@ namespace App.Models
         }
 
         public double CriticalMultiplier { get; set; } = Constants.BaseCriticalMultiplier;
-
-        public bool isCritModified;
 
         public double? CastingTime { get; set; }
 

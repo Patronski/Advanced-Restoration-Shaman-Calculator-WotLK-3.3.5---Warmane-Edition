@@ -28,8 +28,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new Berserking());
             this.Modifiers.Add(new GlyphOfEarthliving());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -114,7 +115,7 @@ namespace App.Models.Spells
 
         public override double CalculateAvgHpm()
         {
-            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Name == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
 
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100)));
@@ -130,7 +131,7 @@ namespace App.Models.Spells
         public override int? CalculateEarthlivingAvgHpsLHW()
         {
             var isGlyphOfEarthliving = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
 
             double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
 

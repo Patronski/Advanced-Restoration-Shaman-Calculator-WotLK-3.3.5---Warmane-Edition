@@ -4,10 +4,8 @@
     {
         public GlyphOfLesserHealingWave()
         {
-            Display = Constants.ModGlyphLHW;
+            Name = Constants.ModGlyphLHW;
             Value = 1.2;
-
-            InitCheckBox();
         }
 
         public override void Modify()

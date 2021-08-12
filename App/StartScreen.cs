@@ -10,7 +10,8 @@ namespace App
         public StartScreen()
         {
             InitializeComponent();
-            Text = Constants.ProgramName;
+            Text = Constants.ProgramName + " " + Constants.ProgramVersion;
+            this.buttonVersion.Text = Constants.ProgramVersion;
             soundPlayer.PlaySound("on");
 
             InitialiseTooltips();

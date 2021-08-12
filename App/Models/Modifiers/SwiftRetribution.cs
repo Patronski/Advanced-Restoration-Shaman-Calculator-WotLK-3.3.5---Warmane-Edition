@@ -4,11 +4,9 @@
     {
         public SwiftRetribution()
         {
-            Display = Constants.ModSwiftRetrubution;
+            Name = Constants.ModSwiftRetrubution;
 
             Value = 1.03;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

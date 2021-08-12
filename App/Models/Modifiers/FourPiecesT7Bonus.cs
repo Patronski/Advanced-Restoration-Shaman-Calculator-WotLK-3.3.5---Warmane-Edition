@@ -4,9 +4,8 @@
     {
         public FourPiecesT7Bonus()
         {
-            Display = Constants.Mod4PT7Bonus;
+            Name = Constants.Mod4PT7Bonus;
             Value = 1.05;
-            this.InitCheckBox();
         }
 
         public override void Modify()

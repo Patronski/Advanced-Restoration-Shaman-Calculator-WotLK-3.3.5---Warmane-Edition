@@ -6,11 +6,9 @@ namespace App.Models.Modifiers
     {
         public HellscreamsWarsong()
         {
-            Display = Constants.ModHellscream;
+            Name = Constants.ModHellscream;
 
             Value = 1.3;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

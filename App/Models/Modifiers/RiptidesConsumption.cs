@@ -4,11 +4,9 @@
     {
         public RiptidesConsumption()
         {
-            Display = Constants.ModRapidConsumption;
+            Name = Constants.ModRapidConsumption;
 
             Value = 1.25;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

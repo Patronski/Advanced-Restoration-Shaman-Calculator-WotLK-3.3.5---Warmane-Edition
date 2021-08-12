@@ -6,11 +6,9 @@ namespace App.Models.Modifiers
     {
         public TidalMastery()
         {
-            Display = Constants.ModTidalMastery;
+            Name = Constants.ModTidalMastery;
 
             Value = 5;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

@@ -4,9 +4,7 @@
     {
         public TotemOfMisery()
         {
-            Display = Constants.ModTotemOfMisery;
-
-            this.InitCheckBox();
+            Name = Constants.ModTotemOfMisery;
         }
     }
 }

@@ -6,9 +6,8 @@ namespace App.Models.Modifiers
     {
         public FourPiecesT9Bonus()
         {
-            Display = Constants.Mod4PT9Bonus;
+            Name = Constants.Mod4PT9Bonus;
             Value = 5;
-            this.InitCheckBox();
         }
 
         public override void Modify()

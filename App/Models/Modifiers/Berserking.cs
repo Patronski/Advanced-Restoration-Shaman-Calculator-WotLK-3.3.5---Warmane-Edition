@@ -4,9 +4,8 @@
     {
         public Berserking()
         {
-            Display = Constants.ModBerserking;
+            Name = Constants.ModBerserking;
             Value = 1.2;
-            InitCheckBox();
         }
 
         public override void Modify()

@@ -6,9 +6,7 @@ namespace App.Models.Modifiers
     {
         public EmeraldVigor()
         {
-            Display = Constants.ModEmeraldVigor;
-
-            InitCheckBox();
+            Name = Constants.ModEmeraldVigor;
         }
 
         public override void Modify()

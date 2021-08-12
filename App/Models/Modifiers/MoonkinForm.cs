@@ -6,11 +6,9 @@ namespace App.Models.Modifiers
     {
         public MoonkinForm()
         {
-            Display = Constants.ModMoonkin;
+            Name = Constants.ModMoonkin;
 
             Value = 5;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

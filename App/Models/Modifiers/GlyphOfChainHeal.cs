@@ -4,7 +4,7 @@
     {
         public GlyphOfChainHeal()
         {
-            Display = Constants.ModGlyphOfChainHeal;
+            Name = Constants.ModGlyphOfChainHeal;
         }
 
         public override void Modify()

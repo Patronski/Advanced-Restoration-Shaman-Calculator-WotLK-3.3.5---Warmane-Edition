@@ -4,9 +4,7 @@
     {
         public SteamcallersTotemBonus()
         {
-            Display = Constants.ModSteamcallersTotem;
-
-            this.InitCheckBox();
+            Name = Constants.ModSteamcallersTotem;
         }
     }
 }

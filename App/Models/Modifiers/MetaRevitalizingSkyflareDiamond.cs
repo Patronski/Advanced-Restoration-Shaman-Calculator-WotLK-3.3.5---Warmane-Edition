@@ -4,7 +4,7 @@
     {
         public MetaRevitalizingSkyflareDiamond()
         {
-            Display = Constants.ModMetaRevitalizingSkyflareDiamond;
+            Name = Constants.ModMetaRevitalizingSkyflareDiamond;
             Value = 1.03;
         }
 

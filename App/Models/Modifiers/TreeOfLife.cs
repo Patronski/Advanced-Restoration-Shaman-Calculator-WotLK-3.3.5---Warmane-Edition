@@ -6,11 +6,9 @@ namespace App.Models.Modifiers
     {
         public TreeOfLife()
         {
-            Display = Constants.ModTreeOfLife;
+            Name = Constants.ModTreeOfLife;
 
             Value = 1.06;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

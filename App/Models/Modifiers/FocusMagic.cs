@@ -10,11 +10,9 @@ namespace App.Models.Modifiers
     {
         public FocusMagic()
         {
-            Display = Constants.ModFocusMagic;
+            Name = Constants.ModFocusMagic;
 
             Value = 3;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

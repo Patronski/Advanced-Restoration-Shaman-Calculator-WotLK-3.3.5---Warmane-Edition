@@ -4,7 +4,7 @@
     {
         public GlyphOfHealingWave()
         {
-            Display = Constants.ModGlyphOfHealingWave;
+            Name = Constants.ModGlyphOfHealingWave;
         }
     }
 }

@@ -34,16 +34,18 @@ namespace App.Models.Spells
             this.Modifiers.Add(new Berserking());
             this.Modifiers.Add(new GlyphOfEarthliving());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
+            this.Modifiers.Add(new TwoPiecesTier6Bonus());
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
         {
             var isSteamcallerTotem = Modifiers
-                .Any(x => x.Display == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
             var isTotemOfTheBay = Modifiers
-                .Any(x => x.Display == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
 
             int a = isSteamcallerTotem ? 243 : 0;
             a = isTotemOfTheBay ? 102 : a;
@@ -56,9 +58,9 @@ namespace App.Models.Spells
         public override int? CalculateTarget1HitTo()
         {
             var isSteamcallerTotem = Modifiers
-                .Any(x => x.Display == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModSteamcallersTotem && x.IsCheckBoxChecked);
             var isTotemOfTheBay = Modifiers
-                .Any(x => x.Display == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTotemOfTheBay && x.IsCheckBoxChecked);
 
             int a = isSteamcallerTotem ? 243 : 0;
             a = isTotemOfTheBay ? 102 : a;
@@ -104,7 +106,7 @@ namespace App.Models.Spells
             var hot = (int)(Player.Instance.Crit1Avg * 0.25 / 3);
 
             var is4PiecesEquiped = Modifiers
-                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
             if (!is4PiecesEquiped) hot = 0;
 
@@ -115,7 +117,7 @@ namespace App.Models.Spells
         {
             var hot = (int)(Player.Instance.Crit2Avg * 0.25 / 3);
             var is4PiecesEquiped = Modifiers
-                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
             if (!is4PiecesEquiped) hot = 0;
 
@@ -126,7 +128,7 @@ namespace App.Models.Spells
         {
             var hot = (int)(Player.Instance.Crit3Avg * 0.25 / 3);
             var is4PiecesEquiped = Modifiers
-                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
             if (!is4PiecesEquiped) hot = 0;
 
@@ -138,10 +140,10 @@ namespace App.Models.Spells
             var hot = (int)(Player.Instance.Crit4Avg * 0.25 / 3);
 
             var is4PiecesEquiped = Modifiers
-                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
             var isGlyphOfChainHeal = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
 
             if (!is4PiecesEquiped || !isGlyphOfChainHeal) hot = 0;
 
@@ -150,7 +152,7 @@ namespace App.Models.Spells
 
         public override double? CalculateCastingTime()
         {
-            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
+            var is4PT8 = Modifiers.Any(x => x.Name == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double baseCastingTime = is4PT8 ? 2.3 : 2.5;
 
@@ -162,7 +164,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHPS()
         {
-            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
+            var is4PT8 = Modifiers.Any(x => x.Name == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
             double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;
@@ -174,7 +176,7 @@ namespace App.Models.Spells
                 * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100));
 
             var isGlyphOfChainHeal = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
 
             var result = (int)(formula + formula * 0.6 + formula * 0.36 + formula * 0.216);
 
@@ -188,7 +190,7 @@ namespace App.Models.Spells
 
         public override int? CalculateAverageHotHPS()
         {
-            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
+            var is4PT8 = Modifiers.Any(x => x.Name == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
             double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;
@@ -196,7 +198,7 @@ namespace App.Models.Spells
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
             var isGlyphOfChainHeal = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
 
             var formula = (1 + hastePercent / 100) 
                 * (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4) 
@@ -204,7 +206,7 @@ namespace App.Models.Spells
                 * Player.Instance.CriticalPercent / 100;
 
             var is4PT10Equiped = Modifiers
-                .Any(x => x.Display == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.Mod4PT10Bonus && x.IsCheckBoxChecked);
 
             if (!is4PT10Equiped) formula = 0;
 
@@ -213,8 +215,9 @@ namespace App.Models.Spells
 
         public override double CalculateAvgHpm()
         {
-            var isGlyphOfChainHeal = Modifiers.Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
-            var isTotemOfForestGrowth = Modifiers.Any(x => x.Display == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
+            var isGlyphOfChainHeal = Modifiers.Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+            var isTotemOfForest = Modifiers.Any(x => x.Name == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
+            var is2PT6 = Modifiers.Any(x => x.Name == Constants.Mod2PT6Bonus && x.IsCheckBoxChecked);
 
             var avgHit = Player.Instance.Hit1Avg + Player.Instance.Hit2Avg + Player.Instance.Hit3Avg;
 
@@ -223,7 +226,19 @@ namespace App.Models.Spells
                 avgHit += Player.Instance.Hit4Avg;
             }
 
-            var totemModifier = isTotemOfForestGrowth ? 719 : 793;
+            var manaChainHeal = 793;
+            if (isTotemOfForest && is2PT6)
+            {
+                manaChainHeal = 643;
+            }
+            else if (isTotemOfForest)
+            {
+                manaChainHeal = 719;
+            }
+            else if (is2PT6)
+            {
+                manaChainHeal = 709;
+            }
 
             var result = avgHit * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
                 (1 - Player.Instance.CriticalPercent / 100));
@@ -233,7 +248,7 @@ namespace App.Models.Spells
             result += (Player.Instance.AvgHot1 + Player.Instance.AvgHot2 + Player.Instance.AvgHot3 + Player.Instance.AvgHot4)
                 * 3 * Player.Instance.CriticalPercent / 100;
 
-            result /= totemModifier;
+            result /= manaChainHeal;
 
             return Math.Round(result ?? 0, 1);
         }
@@ -241,9 +256,9 @@ namespace App.Models.Spells
         public override int? CalculateEarthlivingAvgHpsCH()
         {
             var isGlyphOfChainHeal = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
             var isGlyphOfEarthliving = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
 
             double a = isGlyphOfChainHeal ? 4 : 3;
             double b = isGlyphOfEarthliving ? 0.25 : 0.2;
@@ -257,7 +272,7 @@ namespace App.Models.Spells
 
         public override int CalculateEarthlivingEHPS()
         {
-            var is4PT8 = Modifiers.Any(x => x.Display == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
+            var is4PT8 = Modifiers.Any(x => x.Name == Constants.Mod4PT8Bonus && x.IsCheckBoxChecked);
 
             double hasteBorder = is4PT8 ? 130 : 150;
             double coefficientHaste = is4PT8 ? 0.4347826 : 0.4;

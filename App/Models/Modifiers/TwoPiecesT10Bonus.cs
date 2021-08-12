@@ -4,9 +4,7 @@
     {
         public TwoPiecesT10Bonus()
         {
-            Display = Constants.Mod2PT10Bonus_RapidCurrents;
-
-            this.InitCheckBox();
+            Name = Constants.Mod2PT10Bonus_RapidCurrents;
         }
     }
 }

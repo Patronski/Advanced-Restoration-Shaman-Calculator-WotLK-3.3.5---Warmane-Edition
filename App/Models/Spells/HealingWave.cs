@@ -30,8 +30,9 @@ namespace App.Models.Spells
             this.Modifiers.Add(new Berserking());
             this.Modifiers.Add(new GlyphOfEarthliving());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -64,7 +65,7 @@ namespace App.Models.Spells
         public override int? CalculateAverageHPS()
         {
             var isTidalWaves = Modifiers
-                .Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
 
             double hastePercent;
             double multiplier;
@@ -88,7 +89,7 @@ namespace App.Models.Spells
         public override int? CalculateAverageHotHPS()
         {
             var isTidalWaves = Modifiers
-                .Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
 
             double hastePercent;
             double multiplier;
@@ -145,22 +146,25 @@ namespace App.Models.Spells
         public override int? CalculateAvgGlyphOfHealingWave()
         {
             var isGlyphOfHealingWave = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfHealingWave && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfHealingWave && x.IsCheckBoxChecked);
             if (!isGlyphOfHealingWave) return 0;
 
             var result = CalculateAverageHPS() * 0.2;
+
+            result *= Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
+                (1 - Player.Instance.CriticalPercent / 100);
 
             return (int?)result;
         }
 
         public override double CalculateAvgHpm()
         {
-            var isGlyphHealingWave = Modifiers.FirstOrDefault(x => x.Display == Constants.ModGlyphOfHealingWave).IsCheckBoxChecked;
+            var isGlyphHealingWave = Modifiers.FirstOrDefault(x => x.Name == Constants.ModGlyphOfHealingWave).IsCheckBoxChecked;
 
-            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Name == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
             var multiplier = mod2Pt7 ? 5.35 : 4.92;
 
-            var isTotemOfMisery = Modifiers.Any(x => x.Display == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
+            var isTotemOfMisery = Modifiers.Any(x => x.Name == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
             var totemModifier = isTotemOfMisery ? 969 : 1044;
 
             var result = (Player.Instance.Hit1Avg * (Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier +
@@ -181,7 +185,7 @@ namespace App.Models.Spells
         public override int? CalculateEarthlivingAvgHpsHW()
         {
             var isGlyphOfEarthliving = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfEarthliving && x.IsCheckBoxChecked);
 
             double multiplier = isGlyphOfEarthliving ? 0.25 : 0.2;
 
@@ -192,7 +196,7 @@ namespace App.Models.Spells
 
         public override int CalculateEarthlivingEHPS()
         {
-            var isTidalWaves = Modifiers.Any(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+            var isTidalWaves = Modifiers.Any(x => x.Name == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
 
             double hasteBorder = isTidalWaves ? 75 : 150;
             double coefficientHaste = isTidalWaves ? 0.57143 : 0.4;

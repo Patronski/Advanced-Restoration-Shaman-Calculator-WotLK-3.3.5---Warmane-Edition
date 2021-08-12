@@ -4,9 +4,7 @@
     {
         public TotemOfTheBay()
         {
-            Display = Constants.ModTotemOfTheBay;
-
-            this.InitCheckBox();
+            Name = Constants.ModTotemOfTheBay;
         }
     }
 }

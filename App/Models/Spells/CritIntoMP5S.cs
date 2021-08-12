@@ -22,8 +22,10 @@ namespace App.Models.Spells
             this.Modifiers.Add(new TotemOfForestGrowth());
             this.Modifiers.Add(new TotemOfMisery());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
+            this.Modifiers.Add(new TwoPiecesTier6Bonus());
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()
@@ -81,7 +83,7 @@ namespace App.Models.Spells
 
         public override double? CalculateMp5Crit()
         {
-            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Display == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
+            var mod2Pt7 = Modifiers.FirstOrDefault(x => x.Name == Constants.Mod2PT7Bonus).IsCheckBoxChecked;
             var multiplier = mod2Pt7 ? 5.35 : 4.92;
 
             //RPM * 0.00971 + HWPM * 0.00971 + LHWPM * 0.005826 + CHPM * 0.002913
@@ -111,7 +113,7 @@ namespace App.Models.Spells
         public override double CalculateMp5Totems()
         {
             var isGlyphOfManaTideTotem = Modifiers
-                .Any(x => x.Display == Constants.ModGlyphOfManaTideTotem && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModGlyphOfManaTideTotem && x.IsCheckBoxChecked);
 
             var rezult = Player.Instance.Mana * (isGlyphOfManaTideTotem ? 0.28d : 0.24d) * Player.Instance.Mp5TotemsCount;
             return Math.Round(rezult);
@@ -131,7 +133,7 @@ namespace App.Models.Spells
         public override double CalculateMp5Diamond()
         {
             var isInsightfulDiamond = Modifiers
-                .Any(x => x.Display == Constants.ModMetaInsightfulEarthsiegeDiamond && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModMetaInsightfulEarthsiegeDiamond && x.IsCheckBoxChecked);
             if (!isInsightfulDiamond)
             {
                 return 0;
@@ -169,14 +171,30 @@ namespace App.Models.Spells
         public override int CalculateMp5TotalManaSpent()
         {
             var isTotemOfMisery = Modifiers
-                .Any(x => x.Display == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTotemOfMisery && x.IsCheckBoxChecked);
             var isTotemOfForest = Modifiers
-                .Any(x => x.Display == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
+                .Any(x => x.Name == Constants.ModTotemOfForestGrowth && x.IsCheckBoxChecked);
+            var is2PT6 = Modifiers
+                .Any(x => x.Name == Constants.Mod2PT6Bonus && x.IsCheckBoxChecked);
+
+            var manaChainHeal = 793;
+            if (isTotemOfForest && is2PT6)
+            {
+                manaChainHeal = 643;
+            }
+            else if (isTotemOfForest)
+            {
+                manaChainHeal = 719;
+            }
+            else if (is2PT6)
+            {
+                manaChainHeal = 709;
+            }
 
             var result = Player.Instance.Mp5TotalRiptides * 751 +
                 Player.Instance.Mp5TotalHW * (isTotemOfMisery ? 969 : 1044) +
                 Player.Instance.Mp5TotalLHW * 626 +
-                Player.Instance.Mp5TotalCHCasts * (isTotemOfForest ? 719 : 793) +
+                Player.Instance.Mp5TotalCHCasts * manaChainHeal +
                 Player.Instance.Mp5TotalESHCasts * 626 +
                 Player.Instance.Mp5BloodlustHeroism * 1142 +
                 Player.Instance.Mp5SelectedTotemTotalMana * Player.Instance.Mp5CallOfElements +
@@ -207,7 +225,7 @@ namespace App.Models.Spells
             ModifyWithModifiers();
 
             var modifier = Modifiers
-                .FirstOrDefault(x => x.Display == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
+                .FirstOrDefault(x => x.Name == Constants.ModTidalWavesHaste && x.IsCheckBoxChecked);
             if (modifier != null)
             {
                 modifier.Modify();

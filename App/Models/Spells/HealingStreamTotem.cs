@@ -22,9 +22,10 @@ namespace App.Models.Spells
             this.Modifiers.Add(new SwiftRetribution());
             this.Modifiers.Add(new BloodlustHeroism());
             this.Modifiers.Add(new FocusMagic());
+            this.Modifiers.Add(new TalentsCriticalDepression());
 
 
-            modifierNames = this.Modifiers.Select(x => x.Display).ToList();
+            modifierNames = this.Modifiers.Select(x => x.Name).ToList();
         }
 
         public override int CalculateTarget1HitFrom()

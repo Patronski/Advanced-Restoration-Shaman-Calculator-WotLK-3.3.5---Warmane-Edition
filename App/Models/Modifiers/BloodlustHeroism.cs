@@ -6,8 +6,7 @@ namespace App.Models.Modifiers
     {
         public BloodlustHeroism()
         {
-            Display = Constants.ModBloodlust;
-            InitCheckBox();
+            Name = Constants.ModBloodlust;
         }
 
         public override void Modify()

@@ -4,11 +4,9 @@
     {
         public RapidCurrents()
         {
-            Display = Constants.Mod2PT10Bonus_RapidCurrents;
+            Name = Constants.Mod2PT10Bonus_RapidCurrents;
 
             Value = 1.2;
-
-            this.InitCheckBox();
         }
 
         public override void Modify()

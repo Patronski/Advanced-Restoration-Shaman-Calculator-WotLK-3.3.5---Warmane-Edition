@@ -4,10 +4,8 @@
     {
         public GlyphOfEarthShield()
         {
-            Display = Constants.ModGlyphESH;
+            Name = Constants.ModGlyphESH;
             Value = 1.2;
-
-            InitCheckBox();
         }
 
         public override void Modify()
