@@ -13,16 +13,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalPercent = Player.Instance.CriticalPercent - Player.Instance.TallentsCriticalDepression;
-
-            if (Player.Instance.CriticalPercent > 100)
-            {
-                Player.Instance.CriticalPercent = 100;
-            }
-            if (Player.Instance.CriticalPercent < 0)
-            {
-                Player.Instance.CriticalPercent = 0;
-            }
+            Player.Instance.CriticalPercent = Player.Instance.RealCriticalPercent - Player.Instance.TallentsCriticalDepression;
         }
     }
 }

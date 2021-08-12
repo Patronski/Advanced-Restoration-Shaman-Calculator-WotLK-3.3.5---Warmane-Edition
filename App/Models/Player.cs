@@ -115,7 +115,8 @@ namespace App.Models
             {
                 criticalPercent = value;
             }
-        } 
+        }
+        public double RealCriticalPercent { get { return criticalPercent; } }
 
         private double criticalPercentInitial;
 
