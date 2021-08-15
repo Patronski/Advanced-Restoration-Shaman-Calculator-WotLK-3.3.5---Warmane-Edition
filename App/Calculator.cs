@@ -690,7 +690,6 @@ namespace App
             this.textBoxIntellect.Text = "";
             this.textBoxMP5S.Text = "";
             textBoxHasteRating.Text = "";
-            Player.Instance.CriticalPercentInitial = 0;
             textBoxCriticalRating.Text = "";
 
             // reset controlls for spell MP5S

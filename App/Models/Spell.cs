@@ -131,7 +131,7 @@ namespace App.Models
             {
                 sumOfModifierValues += item.Value;
             }
-            Player.Instance.CriticalPercentInitial = newCritValue - sumOfModifierValues;
+            Player.Instance.CriticalPercent = newCritValue - sumOfModifierValues;
         }
 
         public virtual void Calculate()

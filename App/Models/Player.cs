@@ -86,14 +86,13 @@ namespace App.Models
             {
                 criticalRating = value;
                 CriticalPercent = CalculateCriticalPercent();
-                CriticalPercentInitial = CriticalPercent;
             }
         }
 
         private double CalculateCriticalPercent()
         {
             var percent = Math.Floor(criticalRating / 45.91 * 100) / 100 + Constants.BaseCriticalPercent + (Math.Floor(Intellect / 166.6667 * 100) / 100);
-            return percent > 100 ? 100 : percent;
+            return percent;
         }
 
         private double criticalPercent;
@@ -117,21 +116,6 @@ namespace App.Models
             }
         }
         public double RealCriticalPercent { get { return criticalPercent; } }
-
-        private double criticalPercentInitial;
-
-        public double CriticalPercentInitial
-        {
-            get
-            {
-                return criticalPercentInitial;
-            }
-            set
-            {
-                criticalPercentInitial = value;
-                CriticalPercent = value;
-            }
-        }
 
         public double CriticalMultiplier { get; set; } = Constants.BaseCriticalMultiplier;
 

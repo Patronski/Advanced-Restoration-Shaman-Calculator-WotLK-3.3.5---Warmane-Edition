@@ -12,7 +12,7 @@ namespace App.Models.Modifiers
 
         public override void Modify()
         {
-            Player.Instance.CriticalPercent = Player.Instance.CriticalPercent + Value;
+            Player.Instance.CriticalPercent = Player.Instance.RealCriticalPercent + Value;
         }
     }
 }

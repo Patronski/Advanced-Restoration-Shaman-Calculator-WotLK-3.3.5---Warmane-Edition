@@ -171,9 +171,9 @@ namespace App.Models.Spells
 
             var hastePercent = (Player.Instance.HastePercent > hasteBorder) ? hasteBorder : Player.Instance.HastePercent;
 
-            var formula = (((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier)
+            var formula = ((Player.Instance.CriticalPercent / 100 * Player.Instance.CriticalMultiplier)
                 + (1 - Player.Instance.CriticalPercent / 100))
-                * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100));
+                * Player.Instance.Hit1Avg * coefficientHaste * (1 + hastePercent / 100);
 
             var isGlyphOfChainHeal = Modifiers
                 .Any(x => x.Name == Constants.ModGlyphOfChainHeal && x.IsCheckBoxChecked);
