@@ -5,7 +5,7 @@
         public GlyphOfHealingStreamTotem()
         {
             Name = Constants.ModGlyphHST;
-            Value = 1.2;
+            Value = 1.138;
         }
 
         public override void Modify()
