@@ -1,7 +1,7 @@
 # Thank you for being here!
 The idea for the program was given by Radosvet Milchev, a.k.a. Teamy in Warmane servers. He is a bad ass wow gamer in pve world. Mostly playing Resto Shaman, Holy Paladin, which of course are max geared.
 
-Developing is done by Doncho Patronski, who is me. This is my first real Windows Forms application(.Net). The project is bigger than I expected, a lot of controlls and classes, especially the main form. I am glad that I managed to make some abstractions and automations with Reflection.
+Developing is done by Doncho Patronski, who is me. This is my first real Windows Forms application(.Net). The project is bigger than I expected, a lot of controlls and classes, especially the main form. I am glad that I managed to make some abstractions and automations with Reflection. Also I incidentally put a Design Pattern without knowing for it, called "Template method". It is implemented inside Calculate method in Spell class and I can say that it is in the core of the logic here. 
 
 ## Input
 In the calculator can be inserted a character's data like **Intellect**, **Bonus Healing**(spell power), **Haste Rating**, **Crit Rating**, **Mana regen**. Also there are a lot of options for Haste, Crit, Tier Bonuses, Glyphs, Meta Gems, Totems and other modifiers.
