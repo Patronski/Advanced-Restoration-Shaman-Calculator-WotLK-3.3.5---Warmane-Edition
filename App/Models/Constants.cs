@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public const int BaseMana = 4116;
+        public const int BaseMana = 4396; // before was 4116
 
         public const double BaseCriticalPercent = 16.2;
         public const double BaseCriticalMultiplier = 1.50;
@@ -10,7 +10,7 @@
         public const double MetagemCritMiltiplier = 1.03d;
         
         public const string ProgramName = "[WotLK] PvE Restoration Shaman Calculator";
-        public const string ProgramVersion = "v2.2";
+        public const string ProgramVersion = "v2.3";
 
         public const string SpellHST = "Healing Stream Totem";
         public const string SpellChainHeal = "Chain Heal";

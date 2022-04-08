@@ -46,7 +46,15 @@ namespace App.Models
             set
             {
                 intellect = value;
-                Mana = Constants.BaseMana + intellect * 15;
+                if (intellect > 20)
+                {
+                    Mana = Constants.BaseMana + (intellect - 20) * 15 + 20;
+                }
+                else
+                {
+                    Mana = Constants.BaseMana + intellect;
+                }
+                
                 CriticalPercent = CalculateCriticalPercent();
             }
         }
